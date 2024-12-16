@@ -1,0 +1,26 @@
+{
+  "rationale": "The Da Vinci HRex IG focuses on improving data exchange between payers and providers within the US healthcare system, using FHIR R4 and building upon US Core profiles. This aligns it with administrative/financial processes, specifically insurance and billing, and targets the US realm with a mixed data source primarily involving EHR and payer systems.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Insurance and Billing"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other",
+    "EHR-Centric",
+    "Payer-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

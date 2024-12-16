@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on defining a standard way for systems to subscribe to and receive notifications about changes to healthcare documents, using FHIR R4. It's primarily concerned with data exchange and workflow support, enabling real-time notifications in a RESTful environment. The IG is an IHE profile, which has a broad international scope, and it is focused on EHR data.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Document and Message Exchange"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

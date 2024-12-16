@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on standardizing terminology for use in Danish municipalities, encompassing healthcare and social care concepts. It uses FHIR CodeSystems and ValueSets, specifically referencing Danish frameworks like FSIII and FFB. While it has a clinical focus, it is designed for a broader municipal context with the goal of improving data interoperability.",
+  "Primary Domain": [
+    "General Clinical Care",
+    "Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Modeling",
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Denmark)"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

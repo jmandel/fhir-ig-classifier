@@ -577,3 +577,135 @@ fatal: could not read Username for 'https://github.com': terminal prompts disabl
 [2024-12-16T22:37:20.451Z] HL7_SLASH_CDA-core-sd: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
 [2024-12-16T22:37:21.292Z] IHE_SLASH_RAD.IRA: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
 [2024-12-16T22:37:21.381Z] IHE_SLASH_RAD.IRA: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:55:09.956Z] IHE_SLASH_ITI.Finance : Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:55:09.957Z] IHE_SLASH_ITI.Finance : Processing failed: No such file or directory
+[2024-12-16T22:55:16.112Z] HL7_SLASH_smp: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/smp repos/HL7_SLASH_smp
+Cloning into 'repos/HL7_SLASH_smp'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:55:16.112Z] HL7_SLASH_smp: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/smp repos/HL7_SLASH_smp
+Cloning into 'repos/HL7_SLASH_smp'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:26.334Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.334Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:58:26.335Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.335Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:58:26.335Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.335Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T22:58:26.678Z] hspc_SLASH_core: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/hspc/core repos/hspc_SLASH_core
+Cloning into 'repos/hspc_SLASH_core'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:26.678Z] hspc_SLASH_core: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/hspc/core repos/hspc_SLASH_core
+Cloning into 'repos/hspc_SLASH_core'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:26.679Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.679Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T22:58:26.693Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.693Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:58:26.697Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.697Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T22:58:26.704Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.705Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T22:58:26.705Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.705Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T22:58:26.825Z] HL7_SLASH_patient-reported-outcomes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.825Z] HL7_SLASH_patient-reported-outcomes: Processing failed: No such file or directory
+[2024-12-16T22:58:26.825Z] HL7_SLASH_PhCP: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.825Z] HL7_SLASH_PhCP: Processing failed: No such file or directory
+[2024-12-16T22:58:26.837Z] HL7_SLASH_coordinated-registry-network: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.838Z] HL7_SLASH_coordinated-registry-network: Processing failed: No such file or directory
+[2024-12-16T22:58:26.848Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.848Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:58:26.848Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.848Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:58:26.861Z] hl7ch_SLASH_ig-template: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:26.861Z] hl7ch_SLASH_ig-template: Processing failed: No such file or directory
+[2024-12-16T22:58:27.063Z] ahdis_SLASH_ch-atc: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:27.063Z] ahdis_SLASH_ch-atc: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:27.252Z] ahdis_SLASH_ch-orf: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:27.252Z] ahdis_SLASH_ch-orf: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:27.302Z] HL7_SLASH_cdisc-lab: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:27.302Z] HL7_SLASH_cdisc-lab: Processing failed: No such file or directory
+[2024-12-16T22:58:27.366Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:27.366Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:58:27.367Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:58:27.367Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:58:27.670Z] HL7_SLASH_cdisc-map: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:27.670Z] HL7_SLASH_cdisc-map: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:27.863Z] HL7_SLASH_icsr-ae-reporting: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/icsr-ae-reporting repos/HL7_SLASH_icsr-ae-reporting
+Cloning into 'repos/HL7_SLASH_icsr-ae-reporting'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:27.863Z] HL7_SLASH_icsr-ae-reporting: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/icsr-ae-reporting repos/HL7_SLASH_icsr-ae-reporting
+Cloning into 'repos/HL7_SLASH_icsr-ae-reporting'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.241Z] HL7_SLASH_covid19library: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/covid19library repos/HL7_SLASH_covid19library
+Cloning into 'repos/HL7_SLASH_covid19library'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.241Z] HL7_SLASH_covid19library: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/covid19library repos/HL7_SLASH_covid19library
+Cloning into 'repos/HL7_SLASH_covid19library'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.471Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/fhir-central-cancer-registry-reporting repos/HL7_SLASH_fhir-central-cancer-registry-reporting
+Cloning into 'repos/HL7_SLASH_fhir-central-cancer-registry-reporting'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.472Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/fhir-central-cancer-registry-reporting repos/HL7_SLASH_fhir-central-cancer-registry-reporting
+Cloning into 'repos/HL7_SLASH_fhir-central-cancer-registry-reporting'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.687Z] HL7_SLASH_fhir-health-care-surveys-reporting: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/fhir-health-care-surveys-reporting repos/HL7_SLASH_fhir-health-care-surveys-reporting
+Cloning into 'repos/HL7_SLASH_fhir-health-care-surveys-reporting'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.687Z] HL7_SLASH_fhir-health-care-surveys-reporting: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/fhir-health-care-surveys-reporting repos/HL7_SLASH_fhir-health-care-surveys-reporting
+Cloning into 'repos/HL7_SLASH_fhir-health-care-surveys-reporting'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.896Z] HL7_SLASH_fhir-medmorph-research-dex: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/fhir-medmorph-research-dex repos/HL7_SLASH_fhir-medmorph-research-dex
+Cloning into 'repos/HL7_SLASH_fhir-medmorph-research-dex'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:28.896Z] HL7_SLASH_fhir-medmorph-research-dex: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/HL7/fhir-medmorph-research-dex repos/HL7_SLASH_fhir-medmorph-research-dex
+Cloning into 'repos/HL7_SLASH_fhir-medmorph-research-dex'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:29.305Z] medcomdk_SLASH_dk-medcom-homecareobservation: Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/medcomdk/dk-medcom-homecareobservation repos/medcomdk_SLASH_dk-medcom-homecareobservation
+Cloning into 'repos/medcomdk_SLASH_dk-medcom-homecareobservation'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:29.305Z] medcomdk_SLASH_dk-medcom-homecareobservation: Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/medcomdk/dk-medcom-homecareobservation repos/medcomdk_SLASH_dk-medcom-homecareobservation
+Cloning into 'repos/medcomdk_SLASH_dk-medcom-homecareobservation'...
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+[2024-12-16T22:58:54.183Z] IHE_SLASH_ITI.Finance : Failed to clone repository: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/IHE/ITI.Finance  repos/IHE_SLASH_ITI.Finance 
+fatal: destination path 'repos/IHE_SLASH_ITI.Finance' already exists and is not an empty directory.
+
+[2024-12-16T22:58:54.184Z] IHE_SLASH_ITI.Finance : Processing failed: Command failed: GIT_TERMINAL_PROMPT=0 git clone --depth 1 https://github.com/IHE/ITI.Finance  repos/IHE_SLASH_ITI.Finance 
+fatal: destination path 'repos/IHE_SLASH_ITI.Finance' already exists and is not an empty directory.
+
+[2024-12-16T22:58:54.257Z] HL7_SLASH_smp: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T22:58:54.258Z] HL7_SLASH_smp: Processing failed: Repository not found or not accessible

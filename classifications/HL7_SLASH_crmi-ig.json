@@ -1,0 +1,27 @@
+{
+  "rationale": "The crmi-ig focuses on the management of FHIR-based knowledge artifacts, including profiles, value sets, and decision support rules. It provides a framework for their creation, sharing, and implementation. It is based on FHIR R4, and aims to define data models and workflows for knowledge artifacts.",
+  "Primary Domain": [
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Modeling",
+    "Workflow Support",
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

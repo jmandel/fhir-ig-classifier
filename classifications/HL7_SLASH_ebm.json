@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG focuses on representing and exchanging scientific knowledge related to evidence-based medicine, including research findings, clinical guidelines, and related knowledge assets. It uses FHIR resources and profiles for representing key aspects of EBM knowledge, such as citations, study designs, research findings, assessments, and recommendations. It aims to improve interoperability and reusability of EBM knowledge using FHIR.",
+  "Primary Domain": [
+    "Research",
+    "Clinical Trials"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Knowledge Representation",
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

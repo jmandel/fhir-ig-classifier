@@ -1,0 +1,31 @@
+{
+  "rationale": "The RAD.IRA IG focuses on synchronizing various applications used in medical reporting, which falls under clinical care, specifically radiology. It leverages FHIR R5 for its resources and defines workflows and data exchange mechanisms to improve coordination between these applications. It is also designed to be applicable to any region, and does not appear to be normative.",
+  "Primary Domain": [
+    "Specialty Care",
+    "Radiology",
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R5"
+  ],
+  "Scope/Purpose": [
+    "Workflow Support",
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Device-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

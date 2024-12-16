@@ -1,0 +1,26 @@
+{
+  "rationale": "This IG focuses on defining how FHIR applications describe their capabilities, using terminological definitions for features and enabling clients to query these. It uses FHIR resources like CapabilityStatement, OperationDefinition and Parameters and is intended for developers and system administrators, not directly impacting patient care.",
+  "Primary Domain": [
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Modeling",
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

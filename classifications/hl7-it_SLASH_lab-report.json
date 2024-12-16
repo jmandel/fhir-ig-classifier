@@ -1,0 +1,27 @@
+{
+  "rationale": "The IG focuses on standardizing lab reports for electronic exchange within Italy, using FHIR R4. It defines profiles for resources like DiagnosticReport and Observation, and uses ISTAT codes for specific Italian requirements. It aims to improve interoperability between different healthcare providers in Italy.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Italy"
+  ],
+  "Data Source": [
+    "Laboratory-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on extending FHIR to handle data formats beyond standard FHIR resources, particularly JSON and XML, using logical models. It introduces extensions for type handling, extension management, and customizing JSON and XML serialization, making it primarily an infrastructure/foundational component.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Terminology and Value Sets"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Modeling",
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,3 +1,4 @@
+import { Command } from 'commander';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { exec } from 'child_process';
@@ -9,11 +10,17 @@ import fetch from 'node-fetch';
 const execAsync = promisify(exec);
 const contextDir = 'context';
 
-const inputFile = process.argv[2];
-if (!inputFile) {
-  console.error('Please provide the input file path as an argument.');
-  process.exit(1);
-}
+const program = new Command();
+
+program
+  .name('fhir-ig-classifier')
+  .description('Analyzes and classifies FHIR Implementation Guides')
+  .requiredOption('-i, --input <path>', 'path to input JSON file')
+  .option('-f, --full-context', 'use full context file for classification instead of just the analysis', false)
+  .version('1.0.0');
+
+program.parse();
+const options = program.opts();
 
 const vertexAI = new VertexAI({
   project: "fhir-org-starter-project",
@@ -113,8 +120,7 @@ async function createContextMenuFile(repoDir: string, repo: string, org: string)
         await processDirectory(fullPath);
       } else if (entry.isFile() && allowedExtensions.includes(path.extname(entry.name))) {
         const content = await fs.readFile(fullPath, 'utf-8');
-        const relativePath = path.relative(inputDir, fullPath);
-        const entryContent = `File: ${relativePath}\n\n${content}\n\n---\n\n`;
+        const entryContent = `File: ${fullPath}\n\n${content}\n\n---\n\n`;
         const entrySize = Buffer.byteLength(entryContent, 'utf-8');
 
         if (currentSize + entrySize < maxSize) {
@@ -240,7 +246,31 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
 
 -   **US Realm:** IGs specifically designed for the US healthcare context.
 -   **Universal Realm:** IGs intended for international use.
--   **Other Regions (please specify):** IGs tailored to specific countries or regions (if applicable; name the country or region).
+-   **National Jurisdictions:** Including but not limited to:
+    -   Australia
+    -   Belgium
+    -   Brazil
+    -   Canada
+    -   Denmark
+    -   Finland
+    -   France
+    -   Germany
+    -   India
+    -   Italy
+    -   Japan
+    -   Netherlands
+    -   New Zealand
+    -   Norway
+    -   Singapore
+    -   Sweden
+    -   Switzerland
+    -   United Kingdom
+    -   [Other national jurisdictions as applicable]
+-   **Regional:**
+    -   European Union
+    -   Nordic Council
+    -   Asia-Pacific Region
+    -   [Other regional groupings as applicable]
 
 ## Axis 5: Data Source
 
@@ -257,23 +287,36 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
 -   **Draft/Trial Use:** IGs in development or early stages of implementation.
 -   **Normative/Standard:** IGs that have been formally balloted and approved as standards.
 
-## Example Output
+---
 
-\`\`\`json
-{
-  "repoName": {
-    "Primary Domain": ["Clinical Care", "Specialty Care", "Cardiology"],
-    "HL7 Standard": ["FHIR", "FHIR R4"],
-    "Scope/Purpose": ["Data Exchange", "Workflow Support"],
-    "Geographic Scope": ["US Realm"],
-    "Data Source": ["EHR-Centric"],
-    "Maturity Level": ["Draft/Trial Use"]
-  }
-}
-\`\`\`
+## Understanding Data Modeling vs. Data Exchange in FHIR IGs**
+
+FHIR IGs often address both *how data is structured* (data modeling) and *how that data is shared* (data exchange). It's important to differentiate these two aspects:
+
+**Data Modeling:**
+
+*   **Focus:** Defines the structure, content, and relationships of healthcare information *independent* of how it's transmitted. It's about creating a standardized representation of the data itself.
+*   **Key Elements in an IG:**
+    *   **Profiles:**  These are the core of data modeling in FHIR. Profiles constrain and extend base FHIR resources (like \`Patient\`, \`Observation\`, \`Condition\`) to meet specific use cases. They define which elements are required, what value sets to use, and any specific rules for how the data should be structured.
+    *   **Extensions:**  Custom additions to FHIR resources to capture information not covered by the base standard.
+    *   **Value Sets and Code Systems:** Standardized vocabularies and codes used within the profiles to ensure consistent meaning of data.
+    *   **Logical Models:** Conceptual representations of the data, often used in the design phase before creating profiles.
+
+**Data Exchange:**
+
+*   **Focus:** Defines the mechanisms, protocols, and workflows for transmitting healthcare information between systems. It's about *how* data is shared, not just what it looks like.
+*   **Key Elements in an IG:**
+    *   **APIs (Application Programming Interfaces):** Specifications for how systems interact to send and receive data (e.g., RESTful APIs, messaging).
+    *   **Operations:** Specific actions that can be performed on FHIR resources (e.g., \`$submit-data\`, \`$process-message\`).
+    *   **Transactions and Messages:** Definitions of how FHIR resources are bundled together for exchange (e.g., using \`Bundle\` resources).
+    *   **Security and Privacy:** Guidelines for secure data transmission (e.g., authentication, authorization, encryption).
+    *   **Workflows:** Descriptions of the steps involved in exchanging data, including the roles of different actors (e.g., sender, receiver, intermediary).
+    *   **Search Parameters:** Definitions of how systems can query for specific data within FHIR resources.
+    *   **Capability Statements:** Descriptions of the data exchange capabilities supported by different systems.
+
 `;
 
-async function classifyRepo(repo: string, org: string, analysis: string) {
+async function classifyRepo(repo: string, org: string, analysis: string, useFullContext: boolean = false) {
   const formattedName = getFormattedName(org, repo);
   const classificationPath = path.join('classifications', `${formattedName}.json`);
 
@@ -286,10 +329,21 @@ async function classifyRepo(repo: string, org: string, analysis: string) {
     // Classification doesn't exist, continue with generation
   }
 
+  let contentToClassify = analysis;
+  
+  if (useFullContext) {
+    const contextFilePath = path.join(contextDir, `${formattedName}_context.md`);
+    try {
+      contentToClassify = await fs.readFile(contextFilePath, 'utf-8');
+    } catch (error) {
+      console.warn(`Warning: Could not read context file for ${repo}, falling back to analysis`);
+    }
+  }
+
   const classificationPrompt = `
 ${classificationScheme}
 
-Based on the following analysis of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Provide the output as a JSON object with the following structure, where each array can contain one or more values:
+Based on the following ${useFullContext ? 'content' : 'analysis'} of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Provide the output as a JSON object with the following structure, where each array can contain one or more values:
 {
   "rationale": "A brief (2-3 sentences) explanation of why these classifications apply, citing specific evidence from the analysis",
   "Primary Domain": ["one or more categories/subcategories from most specific to most general"],
@@ -303,7 +357,7 @@ Based on the following analysis of the FHIR Implementation Guide "${repo}", clas
 Each array should contain all relevant values from the classification scheme, from most specific to most general. The rationale should explain the key evidence that led to these classifications. Do not include any markdown formatting or explanation text, just output the JSON object.
 
 Analysis:
-${analysis}
+${contentToClassify}
 `;
 
   const request = {
@@ -339,7 +393,7 @@ ${analysis}
 }
 
 async function main() {
-  const data = JSON.parse(await fs.readFile(inputFile, 'utf-8'));
+  const data = JSON.parse(await fs.readFile(options.input, 'utf-8'));
   const githubUrls: string[] = [];
 
   for (const guide of data.guides) {
@@ -360,10 +414,10 @@ async function main() {
 
           const contextFilePath = path.join(contextDir, `${formattedName}_context.md`);
           const analysis = await analyzeRepo(contextFilePath, repo, org);
-          await classifyRepo(repo, org, analysis);
+          await classifyRepo(repo, org, analysis, options.fullContext);
         } catch (error) {
           await logIssue(org, repo, `Processing failed: ${error.message}`);
-          continue; // Continue with next repo even if this one fails
+          continue;
         }
       }
     }
@@ -373,4 +427,7 @@ async function main() {
   githubUrls.forEach(url => console.log(url));
 }
 
-main().catch(console.error);
+// Only run if this is the main module
+if (require.main === module) {
+  main().catch(console.error);
+}

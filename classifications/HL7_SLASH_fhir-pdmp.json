@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG focuses on standardizing the exchange of prescription drug monitoring program (PDMP) data, which falls under clinical care and medication management. It uses FHIR R4 profiles and operations, targeting data exchange and workflow support. The IG is designed for the US context and EHR-centric data, and it is currently in a draft/trial use phase.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "rationale": "This IG focuses on reporting healthcare data to the NHSN for data quality measurement, which directly aligns with public health surveillance and reporting. It is built using FHIR R4, specifically for data exchange purposes within the US healthcare system, using EHR data and is currently in a trial use stage.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

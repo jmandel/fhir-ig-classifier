@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on standardizing the exchange of value-based performance reports between payers and providers using FHIR R4, specifically for financial, quality, and utilization metrics. It is designed for the US healthcare context and is currently in the draft/trial use stage, focusing on data exchange.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Value-Based Performance Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Payer-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "rationale": "The IG focuses on representing fetal data using FHIR resources, specifically the Patient resource with a 'fetalStatus' extension and RelatedPerson resources. This addresses the need for consistent data exchange in obstetrics and child health, particularly between EHRs, ultrasound, and lab systems. It uses standard FHIR resources and profiles, and clarifies how to relate data to the correct subject (mother, fetus, or pregnancy).",
+  "Primary Domain": [
+    "Clinical Care",
+    "Specialty Care",
+    "Obstetrics"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Laboratory-Centric",
+    "Device-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

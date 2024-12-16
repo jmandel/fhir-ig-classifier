@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG defines extensions to FHIR resources for use in the European REALM, specifically focusing on data exchange and interoperability within healthcare settings. It provides standardized ways to add extra information to FHIR resources, particularly for medication and document management, and supports multiple FHIR versions.",
+  "Primary Domain": [
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4",
+    "FHIR R4B"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Europe)"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

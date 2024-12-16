@@ -1,0 +1,29 @@
+{
+  "rationale": "The PCC.ODH IG focuses on standardizing occupational data within healthcare using FHIR R4, aiming to support clinical care, public health reporting, and population health by enabling structured data exchange and workflow support. It is a derivative of a US-specific standard, but intended for international use, primarily utilizing data from EHRs.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Public Health"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

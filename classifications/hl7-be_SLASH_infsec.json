@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG focuses on pseudonymization and data integrity for the Belgian eHealth platform, aligning with security and privacy concerns. It uses FHIR extensions and profiles to standardize data handling, and its primary purpose is to enable secure data exchange within a specific national context.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Security and Privacy"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Security & Privacy",
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify)",
+    "Belgium"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on defining the structure and format for the Austrian Patient Summary using FHIR, building upon the HL7® Austria FHIR® Core profiles and ensuring IPS conformity. It aims to facilitate data exchange and interoperability within the Austrian healthcare context, making it primarily a data exchange focused implementation guide.",
+  "Primary Domain": [
+    "General Clinical Care",
+    "Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Austria"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

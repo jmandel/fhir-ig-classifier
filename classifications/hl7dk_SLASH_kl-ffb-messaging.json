@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG focuses on social care and support within the Danish context, specifically for the FFB (likely a local authority). It defines profiles for FHIR resources to enable electronic communication of orders and related information between authorities and service providers. The IG is based on FHIR R4 and defines specific extensions, code systems, and value sets tailored to this domain, aiming for interoperability.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Care Plans"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Denmark"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

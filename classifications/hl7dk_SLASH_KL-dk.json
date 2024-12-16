@@ -1,0 +1,27 @@
+{
+  "rationale": "The IG focuses on standardizing the exchange of health and social care data within Danish municipalities, encompassing areas such as home care, nursing, and rehabilitation, which falls under clinical care. It utilizes FHIR R4 and defines data models and profiles, and is specific to Denmark.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Denmark)"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "rationale": "This IG focuses on enabling individuals to receive, store, and share their health information digitally, using FHIR resources within verifiable credentials. It defines a workflow for issuing and verifying these credentials, incorporating security and privacy mechanisms.",
+  "Primary Domain": [
+    "General Clinical Care",
+    "Patient Engagement",
+    "Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Security & Privacy"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Patient-Generated",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

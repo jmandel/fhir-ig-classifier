@@ -1,0 +1,27 @@
+{
+  "rationale": "The IG defines base profiles and extensions for FHIR resources commonly used in Sweden, making it applicable to the Swedish healthcare context. It focuses on data exchange, defining profiles, extensions, and value sets, and is based on the FHIR R4 standard. The target users are system developers and healthcare organizations.",
+  "Primary Domain": [
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Sweden"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

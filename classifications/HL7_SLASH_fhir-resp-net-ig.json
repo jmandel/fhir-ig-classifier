@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on automating the reporting of respiratory virus hospitalizations for public health surveillance, leveraging FHIR R4 and various US-specific profiles like US Core and USPHPL. The goal is to improve data exchange between healthcare facilities and public health agencies, using EHR data as the primary source and focusing on data exchange and workflow support.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

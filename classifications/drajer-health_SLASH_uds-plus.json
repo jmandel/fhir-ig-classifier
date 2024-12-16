@@ -1,0 +1,27 @@
+{
+  "rationale": "The UDS+ IG focuses on standardizing data submission from health centers to HRSA using FHIR APIs for patient-level data, aligning with public health reporting needs. It utilizes FHIR R4 and related IGs (US Core, Bulk Data Access, SMART App Launch, QI Core, DEQM) and standardizes data exchange to enable more granular and automated reporting. It is primarily designed for use in the US and relies on EHR data.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

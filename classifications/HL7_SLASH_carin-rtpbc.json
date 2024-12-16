@@ -1,0 +1,26 @@
+{
+  "rationale": "The carin-rtpbc IG focuses on providing patients with real-time prescription cost information within the US healthcare system, utilizing FHIR R4 for data exchange. This aligns it with Clinical Care (specifically Patient Engagement), the FHIR standard, a Data Exchange and Workflow Support scope, the US Realm, and EHR/Payer-centric data sources, as the analysis indicates.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Patient Engagement"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Payer-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

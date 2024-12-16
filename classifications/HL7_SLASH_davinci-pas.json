@@ -1,0 +1,25 @@
+{
+  "rationale": "The Da Vinci PAS IG focuses on streamlining prior authorization, a key administrative and financial process within US healthcare.  It leverages FHIR R4 for this purpose and aims to improve data exchange and workflow related to this process between providers (EHR-centric) and payers. It's currently in Trial Use, indicating its maturity level.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Prior Authorization"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Payer-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

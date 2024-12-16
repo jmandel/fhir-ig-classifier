@@ -256,6 +256,17 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
 
 async function classifyRepo(repo: string, org: string, analysis: string) {
   const formattedName = getFormattedName(org, repo);
+  const classificationPath = path.join('classifications', `${formattedName}.json`);
+
+  // Check if classification already exists
+  try {
+    await fs.access(classificationPath);
+    console.log(`Reusing existing classification for ${formattedName}`);
+    return;
+  } catch (err) {
+    // Classification doesn't exist, continue with generation
+  }
+
   const classificationPrompt = `
 ${classificationScheme}
 

@@ -1,0 +1,3 @@
+[submodule "ig-registry"]
+	path = ig-registry
+	url = https://github.com/FHIR/ig-registry

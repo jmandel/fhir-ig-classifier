@@ -1,0 +1,25 @@
+{
+  "rationale": "The v2-to-fhir IG focuses on converting HL7 v2 messages to FHIR, which is essential for interoperability across various clinical settings. This aligns with the broader 'Infrastructure & Foundational' domain, as it supports data exchange between systems using different standards. The IG's use of FHIR ConceptMaps and its relevance to healthcare interoperability initiatives further support these classifications.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Document and Message Exchange"
+  ],
+  "HL7 Standard": [
+    "Cross-Paradigm",
+    "FHIR",
+    "FHIR R4",
+    "v2"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

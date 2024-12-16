@@ -1,0 +1,25 @@
+{
+  "rationale": "The 'dental-data-exchange' IG focuses on standardizing dental information exchange between dental and medical providers, using FHIR R4 profiles and value sets. It leverages existing US Core and C-CDA on FHIR standards, indicating a US focus and a draft/trial use maturity level as it's built upon evolving standards.",
+  "Primary Domain": [
+    "Clinical Care",
+    "Specialty Care",
+    "Dental"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

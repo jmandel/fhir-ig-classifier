@@ -1,0 +1,24 @@
+{
+  "rationale": "The UTG IG focuses on standardizing terminology management within the HL7 ecosystem, impacting data exchange across various HL7 standards like FHIR, v2, and v3. This standardization is crucial for infrastructure and foundational aspects of interoperability, particularly terminology and value sets, which are essential for data exchange across various domains and use cases.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Terminology and Value Sets"
+  ],
+  "HL7 Standard": [
+    "Cross-Paradigm",
+    "FHIR"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Knowledge Representation"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

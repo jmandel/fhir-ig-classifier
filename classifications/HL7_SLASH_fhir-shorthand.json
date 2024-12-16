@@ -1,0 +1,23 @@
+{
+  "rationale": "The FHIR Shorthand IG focuses on tooling for creating FHIR Implementation Guides, which are essential for developing interoperable healthcare systems. This places it within the 'Infrastructure & Foundational' domain, specifically under 'Document and Message Exchange' as it deals with the creation of specifications for FHIR-based communication. It is tied to the FHIR standard and aims to improve the process of creating these guides, falling under the 'Data Modeling' and 'Workflow Support' purposes.  Its intended use is global ('Universal Realm') and not tied to a specific data source ('Mixed/Other'). As an actively used tool, it's considered 'Normative/Standard'.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Document and Message Exchange"
+  ],
+  "HL7 Standard": [
+    "FHIR"
+  ],
+  "Scope/Purpose": [
+    "Data Modeling",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "rationale": "The 'fhir-order-catalog' IG focuses on standardizing the exchange of information about medical devices, medications, and lab services, which are key components of clinical care workflows. It leverages FHIR R4 resources and profiles to achieve this. While it has implications for various stakeholders, its primary impact is on the technical implementation and interoperability within clinical settings, rather than being specific to a particular region or data source.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

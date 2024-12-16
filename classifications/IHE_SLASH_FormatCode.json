@@ -1,0 +1,24 @@
+{
+  "rationale": "The FormatCode IG focuses on standardizing document formats for healthcare data exchange, aligning with HL7's broader infrastructure goals and using FHIR R4 for implementation. It aims for universal applicability, though it has strong ties to IHE, a US-based initiative. It does not specify a particular data source and is currently in draft status.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Document and Message Exchange"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Infrastructure & Foundational"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

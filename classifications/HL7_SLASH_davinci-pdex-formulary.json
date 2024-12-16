@@ -1,0 +1,23 @@
+{
+  "rationale": "The Da Vinci PDex Formulary IG focuses on exchanging US drug formulary information between payers and other stakeholders, using FHIR R4 to standardize data exchange for improved transparency and consumer choice. This relates to administrative and financial processes within the US healthcare system, specifically insurance and billing.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Insurance and Billing"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Payer-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

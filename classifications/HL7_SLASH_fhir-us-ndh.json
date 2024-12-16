@@ -1,0 +1,29 @@
+{
+  "rationale": "The IG focuses on creating a national directory of healthcare providers and services in the US, using FHIR R4. It defines profiles, extensions, and search parameters for data exchange, and includes security elements. It aims to support interoperability among various healthcare stakeholders.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Provider Directories",
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling",
+    "Security & Privacy"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

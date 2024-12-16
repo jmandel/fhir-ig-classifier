@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG focuses on communication between healthcare providers in Denmark, aiming to replace older standards with a FHIR R4-based approach for secure data exchange. It defines profiles for various FHIR resources to support a specific workflow of care communication and is intended for use within the Danish healthcare system.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Denmark"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

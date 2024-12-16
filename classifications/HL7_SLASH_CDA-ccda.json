@@ -1,0 +1,29 @@
+{
+  "rationale": "The IG focuses on standardizing CDA documents for clinical notes, specifically for US healthcare. It provides templates for various clinical document types, aiming for interoperable exchange of clinical information between healthcare systems. It is based on CDA R2, but published as FHIR StructureDefinitions, and aligns with USCDI and ONC requirements.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "Cross-Paradigm",
+    "CDA",
+    "FHIR",
+    "FHIR R5"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

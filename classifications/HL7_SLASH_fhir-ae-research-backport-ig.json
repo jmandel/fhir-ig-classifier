@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG focuses on standardizing adverse event data collection and reporting within clinical research using FHIR, which involves various users like researchers and regulatory authorities. The IG's data source is mixed, including EHRs and patient-generated data.",
+  "Primary Domain": [
+    "Research",
+    "Clinical Trials"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other",
+    "EHR-Centric",
+    "Patient-Generated"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

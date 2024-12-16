@@ -1,0 +1,27 @@
+{
+  "rationale": "The dk-medcom-core IG defines core FHIR profiles for use in Danish healthcare, focusing on data exchange for patients, organizations, encounters, and practitioners. It is based on FHIR R4, uses profiles and extensions for Danish specific identifiers, and aims to improve interoperability within the Danish healthcare system. It's intended for use by IT vendors and healthcare professionals in Denmark.",
+  "Primary Domain": [
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Denmark)"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

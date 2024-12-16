@@ -46,10 +46,24 @@ async function logIssue(org: string, repo: string, error: any) {
 
 async function cloneOrPullRepo(repoUrl: string, repoDir: string, org: string, repo: string) {
   try {
+    // First check if repo exists using HEAD request
+    const checkUrl = `https://api.github.com/repos/${org}/${repo}`;
+    const { stdout } = await execAsync(`curl -I -s ${checkUrl}`);
+    
+    if (stdout.includes('HTTP/2 404')) {
+      throw new Error('Repository not found');
+    }
+
+    // Check if already cloned locally
     await fs.access(repoDir);
     console.log(`Updating repository: ${repoUrl}`);
     await execAsync('git pull', { cwd: repoDir });
   } catch (error) {
+    if (error.message === 'Repository not found') {
+      await logIssue(org, repo, `Repository not found: ${repoUrl}`);
+      throw error;
+    }
+    
     try {
       console.log(`Cloning repository: ${repoUrl}`);
       await execAsync(`git clone --depth 1 ${repoUrl} ${repoDir}`);

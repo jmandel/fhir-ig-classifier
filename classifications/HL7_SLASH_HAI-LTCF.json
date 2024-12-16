@@ -1,0 +1,24 @@
+{
+  "rationale": "The HAI-LTCF IG focuses on electronically reporting Healthcare-Associated Infections from Long Term Care Facilities to the National Healthcare Safety Network (NHSN) for public health surveillance. It leverages FHIR R4 for data exchange and aligns with US Core data standards and NHSN reporting requirements, indicating a US-centric focus on public health reporting from EHR systems.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

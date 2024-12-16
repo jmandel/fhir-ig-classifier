@@ -1,0 +1,25 @@
+{
+  "rationale": "The CHMED20AF IG focuses on exchanging medication information (Medication Card and Prescription) within the Swiss healthcare system using FHIR R4, aligning with Swiss eHealth standards. This places it under Clinical Care, specifically Medication Management, with a Geographic Scope of Switzerland.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Switzerland)"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

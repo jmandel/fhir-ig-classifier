@@ -1,0 +1,25 @@
+{
+  "rationale": "The \"ch-emed\" FHIR IG focuses on medication management within the Swiss healthcare system, using FHIR R4 profiles and extensions. It aims to improve interoperability between healthcare actors and align with Swiss regulations, making it specific to the Swiss context and primarily impacting clinical workflows related to medication.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Switzerland)"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

@@ -1,12 +1,24 @@
-```json
 {
-  "au-fhir-base": {
-    "Primary Domain": ["Infrastructure & Foundational"],
-    "HL7 Standard": ["FHIR", "FHIR R4"],
-    "Scope/Purpose": ["Data Modeling", "Terminology and Value Sets", "Data Exchange"],
-    "Geographic Scope": ["Other Regions (Australia)"],
-    "Data Source": ["Mixed/Other"], 
-    "Maturity Level": ["Normative/Standard"] 
-  }
+  "rationale": "The \"au-fhir-base\" Implementation Guide focuses on standardizing healthcare data representation in Australia using FHIR, indicating a primary focus on Infrastructure and Foundational aspects by defining a base for other Australian FHIR IGs. It leverages the FHIR R4 standard and aims to improve data exchange within the Australian healthcare system, suggesting a scope of Data Exchange and a geographic scope of \"Other Regions (Australia)\".  It's designed as a foundational standard applicable across different data sources and is currently in normative/standard status as it's published as a standard for use.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Terminology and Value Sets"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Australia)"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
 }
-```

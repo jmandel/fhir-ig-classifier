@@ -1,12 +1,23 @@
-```json
 {
-  "US-Core": {
-    "Primary Domain": ["Clinical Care", "General Clinical Care"],
-    "HL7 Standard": ["FHIR", "FHIR R4"],
-    "Scope/Purpose": ["Data Exchange", "Data Modeling"],
-    "Geographic Scope": ["US Realm"],
-    "Data Source": ["EHR-Centric"],
-    "Maturity Level": ["Normative/Standard"] 
-  }
+  "rationale": "The US Core IG focuses on standardizing healthcare data exchange in the US, aligning with the USCDI and using FHIR profiles. This indicates a focus on general clinical data exchange within the US healthcare context, using FHIR standards.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
 }
-```

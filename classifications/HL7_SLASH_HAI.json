@@ -1,12 +1,24 @@
-```json
 {
-  "HAI": {
-    "Primary Domain": ["Public Health", "Disease Reporting"],
-    "HL7 Standard": ["FHIR", "FHIR R4"], 
-    "Scope/Purpose": ["Data Exchange", "Workflow Support"],
-    "Geographic Scope": ["US Realm"],
-    "Data Source": ["EHR-Centric"], 
-    "Maturity Level": ["Draft/Trial Use"] 
-  }
+  "rationale": "The HAI IG focuses on electronically reporting Healthcare Associated Infections (HAIs) to the CDC's NHSN, a public health surveillance system. It leverages FHIR R4 and aligns with existing CDA standards to improve data exchange for national HAI tracking and analysis, primarily within the US.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4",
+    "Cross-Paradigm"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
 }
-```

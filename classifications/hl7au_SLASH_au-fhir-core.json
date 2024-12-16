@@ -1,29 +1,24 @@
-```json
 {
-  "au-fhir-core": {
-    "Primary Domain": [
-      "Clinical Care",
-      "General Clinical Care"
-    ],
-    "HL7 Standard": [
-      "FHIR",
-      "FHIR R4" 
-    ],
-    "Scope/Purpose": [
-      "Data Exchange",
-      "Data Modeling",
-      "Workflow Support" 
-    ],
-    "Geographic Scope": [
-      "Other Regions (Australia)" 
-    ],
-    "Data Source": [
-      "EHR-Centric",
-      "Mixed/Other" 
-    ],
-    "Maturity Level": [
-      "Normative/Standard" 
-    ]
-  }
+  "rationale": "The AU Core FHIR Implementation Guide focuses on standardizing core digital health information exchange in Australia using FHIR, specifically targeting clinical data and workflows within the Australian healthcare context.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Australia)"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
 }
-```

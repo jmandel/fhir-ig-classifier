@@ -1,12 +1,24 @@
-```json
 {
-  "nzbase": {
-    "Primary Domain": ["Infrastructure & Foundational"],
-    "HL7 Standard": ["FHIR", "FHIR R4"],
-    "Scope/Purpose": ["Data Exchange", "Data Modeling"],
-    "Geographic Scope": ["Other Regions (New Zealand)"],
-    "Data Source": ["Mixed/Other"], 
-    "Maturity Level": ["Draft/Trial Use"] 
-  }
+  "rationale": "The nzbase IG focuses on establishing a standardized framework for exchanging healthcare information in New Zealand using FHIR. It defines extensions and terminology specific to the New Zealand healthcare context, indicating a focus on general clinical care within the country. The use of FHIR and its alignment with national standards like NHI and HPI confirms its relevance to the New Zealand healthcare system.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (New Zealand)"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
 }
-```

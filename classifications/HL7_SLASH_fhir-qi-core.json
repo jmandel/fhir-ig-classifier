@@ -1,12 +1,26 @@
-```json
 {
-  "fhir-qi-core": {
-    "Primary Domain": ["Clinical Care", "General Clinical Care", "Clinical Decision Support"],
-    "HL7 Standard": ["FHIR", "FHIR R4"],
-    "Scope/Purpose": ["Data Exchange", "Data Modeling", "Knowledge Representation"],
-    "Geographic Scope": ["US Realm"],
-    "Data Source": ["EHR-Centric"],
-    "Maturity Level": ["Normative/Standard"] 
-  }
+  "rationale": "The QI-Core IG focuses on standardizing healthcare data for quality improvement, including quality measurement and clinical decision support, using FHIR R4 profiles. It's developed in the US and aligns with USCDI and US Core, primarily targeting EHR data for this purpose.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Clinical Decision Support"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling",
+    "Knowledge Representation"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
 }
-```

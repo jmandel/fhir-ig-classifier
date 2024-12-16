@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on enabling federated queries for healthcare provider directories using FHIR standards, specifically defining profiles for resources like Practitioner, Organization, and Location and defining search parameters. It aims to improve data exchange and interoperability within the healthcare administrative and financial domain, primarily targeting organizations that need to exchange directory information.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Provider Directories"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

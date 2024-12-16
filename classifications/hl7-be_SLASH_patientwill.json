@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG focuses on recording and exchanging patient will directives, such as DNR orders, within the Belgian healthcare context using FHIR profiles. It specifies terminologies (CodeSystems and ValueSets) and constraints for the Consent resource to standardize the representation of these directives.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Patient Engagement"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Belgium)"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Patient-Generated"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

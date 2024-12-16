@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG focuses on standardizing the representation of sex and gender information in healthcare, directly impacting clinical care and patient records. It uses FHIR extensions and provides guidance for multiple HL7 standards, aiming for data exchange and interoperability.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Patient Engagement"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4",
+    "Cross-Paradigm"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

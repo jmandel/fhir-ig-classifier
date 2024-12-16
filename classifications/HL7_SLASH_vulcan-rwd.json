@@ -1,0 +1,27 @@
+{
+  "rationale": "The vulcan-rwd IG focuses on defining a minimal set of FHIR resources and elements from EHRs for clinical research, particularly retrospective analysis of existing data. It uses FHIR R4, aims for data exchange, is intended for the US Realm, and uses EHR data. It is also explicitly stated to be in development or early stages of implementation.",
+  "Primary Domain": [
+    "Research",
+    "Real-World Data"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

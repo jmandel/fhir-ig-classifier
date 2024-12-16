@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG focuses on standardizing vital signs observations using FHIR, which falls under the 'Clinical Care' domain, specifically 'General Clinical Care' as it applies across various clinical settings. The IG is built upon the FHIR R4 standard, aims for 'Data Exchange', is primarily designed for the 'US Realm', focuses on data from 'EHR' and patient-generated sources and is currently in 'Draft/Trial Use'.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Patient-Generated"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

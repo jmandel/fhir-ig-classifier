@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG focuses on standardizing healthcare directory data using FHIR profiles and RESTful APIs, aiming to facilitate interoperability among organizations that manage provider, organization, and service information. It explicitly defines data exchange mechanisms, security, and validation, and is used in the US healthcare context, and is intended to support the exchange of data from different sources.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Provider Directories"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling",
+    "Security & Privacy"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG focuses on standardizing the exchange of healthcare directory data (providers, organizations, services) using FHIR R4, primarily for data exchange and workflow support. It is designed for the US healthcare system and is primarily concerned with data originating from EHR and payer systems, and is currently in a draft/trial use stage.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Provider Directories"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Payer-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

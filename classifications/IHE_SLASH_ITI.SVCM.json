@@ -1,0 +1,27 @@
+{
+  "rationale": "The ITI.SVCM IG focuses on standardizing access to terminologies (codes, value sets, mappings) using FHIR R4 resources and RESTful interactions. It's designed for systems needing to retrieve and use these terminologies, and it simplifies the process of data sharing and interoperability through defined transactions and a lightweight approach. It leverages existing terminologies like LOINC and SNOMED CT.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Terminology and Value Sets"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

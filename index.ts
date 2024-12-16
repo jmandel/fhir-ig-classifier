@@ -113,7 +113,8 @@ async function createContextMenuFile(repoDir: string, repo: string, org: string)
         await processDirectory(fullPath);
       } else if (entry.isFile() && allowedExtensions.includes(path.extname(entry.name))) {
         const content = await fs.readFile(fullPath, 'utf-8');
-        const entryContent = `File: ${fullPath}\n\n${content}\n\n---\n\n`;
+        const relativePath = path.relative(inputDir, fullPath);
+        const entryContent = `File: ${relativePath}\n\n${content}\n\n---\n\n`;
         const entrySize = Buffer.byteLength(entryContent, 'utf-8');
 
         if (currentSize + entrySize < maxSize) {

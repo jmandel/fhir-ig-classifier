@@ -1,0 +1,29 @@
+{
+  "rationale": "The IG focuses on standardizing Care Plan data for patients with multiple chronic conditions using FHIR R4 profiles. It reuses and constrains US Core profiles, defining specific data elements and workflows for care planning. The IG is intended for use within the US healthcare context.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Care Plans"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

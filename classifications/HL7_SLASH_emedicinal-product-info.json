@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on defining a standard for exchanging electronic product information (ePI) for medicinal products, directly impacting the use of medications by healthcare professionals and consumers. It builds on FHIR and defines profiles for resources specific to ePI, such as `AdministrableProductDefinition` and `MedicinalProductDefinition`, and uses value sets for standardized terminologies.",
+  "Primary Domain": [
+    "Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on defining how EHR systems manage the lifecycle of health records using FHIR, specifically the Provenance and AuditEvent resources. It aims to standardize the capture of metadata related to actions taken on health records, ensuring changes are tracked and auditable, and is explicitly based on ISO/HL7 standards.",
+  "Primary Domain": [
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Modeling",
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

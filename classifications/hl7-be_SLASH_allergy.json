@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG focuses on standardizing the representation and exchange of allergy and intolerance information, specifically for the Belgian healthcare system, using a FHIR profile. It is designed for data exchange between systems, including EHRs, and is explicitly tailored to a specific region.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Belgium"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Patient-Generated"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

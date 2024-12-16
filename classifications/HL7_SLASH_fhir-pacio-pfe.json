@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG focuses on standardizing the exchange of functioning and engagement data, specifically within post-acute care settings and is based on FHIR R4 using US Core profiles. It aims to support data exchange and workflow by providing a unified set of profiles for representing observations related to functioning and engagement, and is intended for use in the US Realm.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Patient-Generated"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

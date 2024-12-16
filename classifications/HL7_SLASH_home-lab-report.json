@@ -1,0 +1,28 @@
+{
+  "rationale": "This IG focuses on reporting at-home lab test results, primarily leveraging FHIR R4 and US Core profiles. It's designed for data exchange between digital platforms, health systems, and public health agencies, with a US-centric scope, and is currently in draft/trial use.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Patient-Generated",
+    "Laboratory-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

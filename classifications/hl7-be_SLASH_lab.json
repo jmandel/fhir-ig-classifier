@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on the exchange of laboratory reports, fitting under the Clinical Care domain, specifically for clinical data originating from labs.  It uses FHIR R4 and defines profiles, extensions, and naming systems for interoperability, making it a data exchange and data modeling focused IG. The IG is tailored for the Belgian healthcare context and uses national identifiers and is in Draft/Trial Use.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Belgium)"
+  ],
+  "Data Source": [
+    "Laboratory-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

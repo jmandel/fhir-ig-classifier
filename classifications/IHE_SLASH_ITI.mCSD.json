@@ -1,0 +1,26 @@
+{
+  "rationale": "The ITI.mCSD IG focuses on enabling the discovery of care services resources using FHIR R4, primarily for data exchange and workflow support in a distributed environment. It is intended for international use, primarily uses data from EHRs, and is currently in draft/trial use.",
+  "Primary Domain": [
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "rationale": "This IG focuses on standardizing data exchange for medicolegal death investigations (MDI), involving systems like MDI case management, toxicology labs, and vital records, aligning with public health and administrative reporting needs. It uses FHIR R4 and defines profiles for resources like Composition, DiagnosticReport, Observation, and Patient, specifically for MDI data, aiming for data exchange and interoperability.",
+  "Primary Domain": [
+    "Public Health",
+    "Administrative & Financial"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Laboratory-Centric",
+    "Registry-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

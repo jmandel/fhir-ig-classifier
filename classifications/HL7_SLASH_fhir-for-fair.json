@@ -1,0 +1,23 @@
+{
+  "rationale": "The IG focuses on using FHIR to implement FAIR principles for health data, particularly for research purposes, emphasizing metadata and data exchange. It aims to improve data reusability and interoperability within the research community and is based on FHIR standards.",
+  "Primary Domain": [
+    "Research"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

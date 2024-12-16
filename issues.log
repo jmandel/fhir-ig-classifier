@@ -124,3 +124,338 @@ fatal: Authentication failed for 'https://github.com/ahdis/ch-orf/'
 [2024-12-16T22:01:17.238Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
 [2024-12-16T22:01:17.663Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
 [2024-12-16T22:01:17.663Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:10:15.486Z] HL7_SLASH_cdisc-map: Repository not found: https://github.com/HL7/cdisc-map
+[2024-12-16T22:10:15.487Z] HL7_SLASH_cdisc-map: Processing failed: Repository not found
+[2024-12-16T22:10:58.197Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:10:58.197Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:10:58.604Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:10:58.604Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:10:59.029Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:10:59.029Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T22:10:59.178Z] hspc_SLASH_core: Repository not found: https://github.com/hspc/core
+[2024-12-16T22:10:59.178Z] hspc_SLASH_core: Processing failed: Repository not found
+[2024-12-16T22:10:59.627Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:10:59.627Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T22:11:00.374Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:00.375Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:11:01.213Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:01.213Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T22:11:02.125Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:02.125Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T22:11:02.569Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:02.569Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T22:11:11.923Z] HL7_SLASH_patient-reported-outcomes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:11.923Z] HL7_SLASH_patient-reported-outcomes: Processing failed: No such file or directory
+[2024-12-16T22:11:12.268Z] HL7_SLASH_PhCP: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:12.268Z] HL7_SLASH_PhCP: Processing failed: No such file or directory
+[2024-12-16T22:11:12.971Z] HL7_SLASH_coordinated-registry-network: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:12.971Z] HL7_SLASH_coordinated-registry-network: Processing failed: No such file or directory
+[2024-12-16T22:11:13.960Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:13.960Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:11:14.315Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:14.315Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:11:15.304Z] hl7ch_SLASH_ig-template: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:15.304Z] hl7ch_SLASH_ig-template: Processing failed: No such file or directory
+[2024-12-16T22:11:18.790Z] ahdis_SLASH_ch-atc: Failed to clone/pull repository: Command failed: git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-atc/'
+
+[2024-12-16T22:11:18.790Z] ahdis_SLASH_ch-atc: Processing failed: Command failed: git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-atc/'
+
+[2024-12-16T22:11:19.962Z] ahdis_SLASH_ch-orf: Failed to clone/pull repository: Command failed: git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-orf/'
+
+[2024-12-16T22:11:19.962Z] ahdis_SLASH_ch-orf: Processing failed: Command failed: git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-orf/'
+
+[2024-12-16T22:11:21.912Z] HL7_SLASH_cdisc-lab: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:21.912Z] HL7_SLASH_cdisc-lab: Processing failed: No such file or directory
+[2024-12-16T22:11:25.018Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:25.018Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:11:25.371Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:11:25.371Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:11:34.951Z] HL7_SLASH_cdisc-map: Failed to clone/pull repository: Command failed: git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/cdisc-map/'
+
+[2024-12-16T22:11:34.951Z] HL7_SLASH_cdisc-map: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/cdisc-map/'
+
+[2024-12-16T22:12:50.337Z] HL7_SLASH_icsr-ae-reporting: Repository not found: https://github.com/HL7/icsr-ae-reporting
+[2024-12-16T22:12:50.338Z] HL7_SLASH_icsr-ae-reporting: Processing failed: Repository not found
+[2024-12-16T22:14:57.788Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:57.789Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:14:57.789Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:57.789Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:14:57.791Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:57.791Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T22:14:59.642Z] hspc_SLASH_core: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/hspc/core repos/hspc_SLASH_core
+Cloning into 'repos/hspc_SLASH_core'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/hspc/core/'
+
+[2024-12-16T22:14:59.642Z] hspc_SLASH_core: Processing failed: Command failed: git clone --depth 1 https://github.com/hspc/core repos/hspc_SLASH_core
+Cloning into 'repos/hspc_SLASH_core'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/hspc/core/'
+
+[2024-12-16T22:14:59.643Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.643Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T22:14:59.656Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.656Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:14:59.659Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.659Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T22:14:59.665Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.665Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T22:14:59.665Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.665Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T22:14:59.765Z] HL7_SLASH_patient-reported-outcomes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.765Z] HL7_SLASH_patient-reported-outcomes: Processing failed: No such file or directory
+[2024-12-16T22:14:59.765Z] HL7_SLASH_PhCP: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.765Z] HL7_SLASH_PhCP: Processing failed: No such file or directory
+[2024-12-16T22:14:59.776Z] HL7_SLASH_coordinated-registry-network: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.776Z] HL7_SLASH_coordinated-registry-network: Processing failed: No such file or directory
+[2024-12-16T22:14:59.787Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.787Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:14:59.787Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.787Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:14:59.797Z] hl7ch_SLASH_ig-template: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:14:59.797Z] hl7ch_SLASH_ig-template: Processing failed: No such file or directory
+[2024-12-16T22:15:00.817Z] ahdis_SLASH_ch-atc: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-atc/'
+
+[2024-12-16T22:15:00.817Z] ahdis_SLASH_ch-atc: Processing failed: Command failed: git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-atc/'
+
+[2024-12-16T22:15:01.603Z] ahdis_SLASH_ch-orf: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-orf/'
+
+[2024-12-16T22:15:01.603Z] ahdis_SLASH_ch-orf: Processing failed: Command failed: git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-orf/'
+
+[2024-12-16T22:15:01.641Z] HL7_SLASH_cdisc-lab: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:15:01.641Z] HL7_SLASH_cdisc-lab: Processing failed: No such file or directory
+[2024-12-16T22:15:01.695Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:15:01.695Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:15:01.696Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:15:01.696Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:15:02.630Z] HL7_SLASH_cdisc-map: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/cdisc-map/'
+
+[2024-12-16T22:15:02.630Z] HL7_SLASH_cdisc-map: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/cdisc-map/'
+
+[2024-12-16T22:15:03.806Z] HL7_SLASH_icsr-ae-reporting: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/icsr-ae-reporting repos/HL7_SLASH_icsr-ae-reporting
+Cloning into 'repos/HL7_SLASH_icsr-ae-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/icsr-ae-reporting/'
+
+[2024-12-16T22:15:03.807Z] HL7_SLASH_icsr-ae-reporting: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/icsr-ae-reporting repos/HL7_SLASH_icsr-ae-reporting
+Cloning into 'repos/HL7_SLASH_icsr-ae-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/icsr-ae-reporting/'
+
+[2024-12-16T22:15:46.826Z] HL7_SLASH_covid19library: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/covid19library repos/HL7_SLASH_covid19library
+Cloning into 'repos/HL7_SLASH_covid19library'...
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/HL7/covid19library/'
+
+[2024-12-16T22:15:46.826Z] HL7_SLASH_covid19library: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/covid19library repos/HL7_SLASH_covid19library
+Cloning into 'repos/HL7_SLASH_covid19library'...
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/HL7/covid19library/'
+
+[2024-12-16T22:18:13.674Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Failed to clone repository: Repository not found
+[2024-12-16T22:18:13.674Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Processing failed: Repository not found
+[2024-12-16T22:18:13.741Z] HL7_SLASH_fhir-health-care-surveys-reporting: Failed to clone repository: Repository not found
+[2024-12-16T22:18:13.741Z] HL7_SLASH_fhir-health-care-surveys-reporting: Processing failed: Repository not found
+[2024-12-16T22:18:13.804Z] HL7_SLASH_fhir-medmorph-research-dex: Failed to clone repository: Repository not found
+[2024-12-16T22:18:13.805Z] HL7_SLASH_fhir-medmorph-research-dex: Processing failed: Repository not found
+[2024-12-16T22:19:16.888Z] cqframework_SLASH_opioid-mme-r4: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:16.999Z] cqframework_SLASH_opioid-mme-r4: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:19.280Z] HL7_SLASH_fhircast-docs: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:19.399Z] HL7_SLASH_fhircast-docs: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:20.303Z] IHE_SLASH_ITI.MHDS: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:20.432Z] IHE_SLASH_ITI.MHDS: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:21.429Z] IHE_SLASH_ITI.mCSD: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:21.532Z] IHE_SLASH_ITI.mCSD: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:22.864Z] IHE_SLASH_ITI.MHD: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:22.975Z] IHE_SLASH_ITI.MHD: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:24.092Z] IHE_SLASH_ITI.BasicAudit: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:24.179Z] IHE_SLASH_ITI.BasicAudit: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:25.219Z] IHE_SLASH_RAD.IMR: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:25.312Z] IHE_SLASH_RAD.IMR: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:26.380Z] hl7-be_SLASH_core: Error analyzing repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:26.456Z] hl7-be_SLASH_core: Error classifying repo: ClientError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: gemini-experimental. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+[2024-12-16T22:19:27.952Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:19:27.952Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:19:27.953Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:19:27.953Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:19:27.953Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:19:27.953Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+
+[2024-12-16T22:23:49.776Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:23:49.776Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:23:49.776Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:23:49.776Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:23:49.777Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:23:49.777Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T22:24:07.209Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:24:07.210Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:24:07.210Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:24:07.211Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:24:07.211Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:24:07.211Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T22:25:44.893Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:25:44.893Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:25:44.894Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:25:44.894Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:25:44.894Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:25:44.894Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T22:25:59.058Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:25:59.059Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T22:25:59.059Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:25:59.059Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:25:59.059Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:25:59.059Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T22:26:16.106Z] hspc_SLASH_core: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/hspc/core repos/hspc_SLASH_core
+Cloning into 'repos/hspc_SLASH_core'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/hspc/core/'
+
+[2024-12-16T22:26:16.107Z] hspc_SLASH_core: Processing failed: Command failed: git clone --depth 1 https://github.com/hspc/core repos/hspc_SLASH_core
+Cloning into 'repos/hspc_SLASH_core'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/hspc/core/'
+
+[2024-12-16T22:26:16.107Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.107Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T22:26:16.122Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.122Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T22:26:16.124Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.124Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T22:26:16.131Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.131Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T22:26:16.131Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.131Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T22:26:16.230Z] HL7_SLASH_patient-reported-outcomes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.231Z] HL7_SLASH_patient-reported-outcomes: Processing failed: No such file or directory
+[2024-12-16T22:26:16.231Z] HL7_SLASH_PhCP: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.231Z] HL7_SLASH_PhCP: Processing failed: No such file or directory
+[2024-12-16T22:26:16.240Z] HL7_SLASH_coordinated-registry-network: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.240Z] HL7_SLASH_coordinated-registry-network: Processing failed: No such file or directory
+[2024-12-16T22:26:16.252Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.252Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:26:16.252Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.252Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:26:16.264Z] hl7ch_SLASH_ig-template: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:16.264Z] hl7ch_SLASH_ig-template: Processing failed: No such file or directory
+[2024-12-16T22:26:17.404Z] ahdis_SLASH_ch-atc: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-atc/'
+
+[2024-12-16T22:26:17.404Z] ahdis_SLASH_ch-atc: Processing failed: Command failed: git clone --depth 1 https://github.com/ahdis/ch-atc repos/ahdis_SLASH_ch-atc
+Cloning into 'repos/ahdis_SLASH_ch-atc'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-atc/'
+
+[2024-12-16T22:26:18.653Z] ahdis_SLASH_ch-orf: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-orf/'
+
+[2024-12-16T22:26:18.653Z] ahdis_SLASH_ch-orf: Processing failed: Command failed: git clone --depth 1 https://github.com/ahdis/ch-orf repos/ahdis_SLASH_ch-orf
+Cloning into 'repos/ahdis_SLASH_ch-orf'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/ahdis/ch-orf/'
+
+[2024-12-16T22:26:18.693Z] HL7_SLASH_cdisc-lab: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:18.693Z] HL7_SLASH_cdisc-lab: Processing failed: No such file or directory
+[2024-12-16T22:26:18.745Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:18.745Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T22:26:18.746Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T22:26:18.746Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T22:26:19.800Z] HL7_SLASH_cdisc-map: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/cdisc-map/'
+
+[2024-12-16T22:26:19.800Z] HL7_SLASH_cdisc-map: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/cdisc-map repos/HL7_SLASH_cdisc-map
+Cloning into 'repos/HL7_SLASH_cdisc-map'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/cdisc-map/'
+
+[2024-12-16T22:26:20.714Z] HL7_SLASH_icsr-ae-reporting: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/icsr-ae-reporting repos/HL7_SLASH_icsr-ae-reporting
+Cloning into 'repos/HL7_SLASH_icsr-ae-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/icsr-ae-reporting/'
+
+[2024-12-16T22:26:20.714Z] HL7_SLASH_icsr-ae-reporting: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/icsr-ae-reporting repos/HL7_SLASH_icsr-ae-reporting
+Cloning into 'repos/HL7_SLASH_icsr-ae-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/icsr-ae-reporting/'
+
+[2024-12-16T22:26:22.318Z] HL7_SLASH_covid19library: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/covid19library repos/HL7_SLASH_covid19library
+Cloning into 'repos/HL7_SLASH_covid19library'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/covid19library/'
+
+[2024-12-16T22:26:22.319Z] HL7_SLASH_covid19library: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/covid19library repos/HL7_SLASH_covid19library
+Cloning into 'repos/HL7_SLASH_covid19library'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/covid19library/'
+
+[2024-12-16T22:26:23.527Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/fhir-central-cancer-registry-reporting repos/HL7_SLASH_fhir-central-cancer-registry-reporting
+Cloning into 'repos/HL7_SLASH_fhir-central-cancer-registry-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/fhir-central-cancer-registry-reporting/'
+
+[2024-12-16T22:26:23.527Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/fhir-central-cancer-registry-reporting repos/HL7_SLASH_fhir-central-cancer-registry-reporting
+Cloning into 'repos/HL7_SLASH_fhir-central-cancer-registry-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/fhir-central-cancer-registry-reporting/'
+
+[2024-12-16T22:26:24.361Z] HL7_SLASH_fhir-health-care-surveys-reporting: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/fhir-health-care-surveys-reporting repos/HL7_SLASH_fhir-health-care-surveys-reporting
+Cloning into 'repos/HL7_SLASH_fhir-health-care-surveys-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/fhir-health-care-surveys-reporting/'
+
+[2024-12-16T22:26:24.361Z] HL7_SLASH_fhir-health-care-surveys-reporting: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/fhir-health-care-surveys-reporting repos/HL7_SLASH_fhir-health-care-surveys-reporting
+Cloning into 'repos/HL7_SLASH_fhir-health-care-surveys-reporting'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/fhir-health-care-surveys-reporting/'
+
+[2024-12-16T22:26:25.073Z] HL7_SLASH_fhir-medmorph-research-dex: Failed to clone repository: Command failed: git clone --depth 1 https://github.com/HL7/fhir-medmorph-research-dex repos/HL7_SLASH_fhir-medmorph-research-dex
+Cloning into 'repos/HL7_SLASH_fhir-medmorph-research-dex'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/fhir-medmorph-research-dex/'
+
+[2024-12-16T22:26:25.074Z] HL7_SLASH_fhir-medmorph-research-dex: Processing failed: Command failed: git clone --depth 1 https://github.com/HL7/fhir-medmorph-research-dex repos/HL7_SLASH_fhir-medmorph-research-dex
+Cloning into 'repos/HL7_SLASH_fhir-medmorph-research-dex'...
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/HL7/fhir-medmorph-research-dex/'
+

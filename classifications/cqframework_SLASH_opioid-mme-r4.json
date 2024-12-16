@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG is focused on calculating the Morphine Milligram Equivalent (MME) for opioid medications, a clinical activity for patient safety. It uses FHIR R4 to standardize data exchange and workflows related to medication requests for MME calculation. The IG is intended for use in the US, given its reliance on CDC guidelines and its usage of RxNorm.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Knowledge Representation"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "rationale": "The 'fhir-pacio-functional-status' IG focuses on exchanging functional status data during transitions between post-acute care settings, directly impacting patient care coordination and workflows. It leverages FHIR R4 profiles and aligns with US regulations like the IMPACT Act, indicating its US-centric scope and relevance to clinical care, specifically in the post-acute domain.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Care Coordination"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

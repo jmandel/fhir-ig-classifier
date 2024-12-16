@@ -1,0 +1,26 @@
+{
+  "rationale": "The IG focuses on standardizing the exchange of cancer pathology data for public health reporting, specifically in the US. It leverages FHIR R4 to define profiles and data structures for transmitting pathology information from EHRs and LISs to cancer registries. The IG is currently in development and aims to improve interoperability and data quality compared to previous HL7 V2 or CDA approaches.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Laboratory-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

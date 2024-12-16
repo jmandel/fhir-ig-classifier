@@ -1,0 +1,25 @@
+{
+  "rationale": "The 'fhir-specialty-rx' IG focuses on exchanging patient data, including clinical and insurance information, between prescribers and pharmacies/specialty hubs to streamline specialty medication fulfillment. This aligns with the Clinical Care domain, specifically Medication Management. It utilizes FHIR R4 and defines workflows and data exchange mechanisms, primarily within the US healthcare context.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

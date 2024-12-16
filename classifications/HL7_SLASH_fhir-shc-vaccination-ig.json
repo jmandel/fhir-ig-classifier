@@ -1,0 +1,24 @@
+{
+  "rationale": "This IG focuses on representing vaccination and lab testing data using FHIR profiles within SMART Health Cards, primarily for public health purposes like outbreak response. It defines specific profiles for FHIR resources and aims for interoperable data exchange, using EHR-centric data while focusing on a US context.",
+  "Primary Domain": [
+    "Public Health",
+    "Disease Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Security & Privacy"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

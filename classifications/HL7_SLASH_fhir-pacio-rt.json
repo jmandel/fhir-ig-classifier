@@ -1,0 +1,25 @@
+{
+  "rationale": "This IG focuses on structuring long-term post-acute care admissions using FHIR R4, specifically defining a new ReassessmentTimepointsEncounter profile. It is primarily intended for data exchange and workflow support in US post-acute care settings, drawing data from EHRs and is currently in draft/trial use.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

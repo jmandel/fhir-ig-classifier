@@ -1,0 +1,26 @@
+{
+  "rationale": "This IG focuses on representing and exchanging Advance Directive Information (ADI), which directly relates to patient care and care coordination. It leverages FHIR R4 for this data exchange, and its scope includes defining data models and workflows for this process. It is primarily designed for the US healthcare context, involves EHR data, and is currently in a draft stage.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Care Plans"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

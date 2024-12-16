@@ -1,0 +1,24 @@
+{
+  "rationale": "The CQL IG focuses on standardizing the representation and exchange of clinical knowledge for use in Clinical Decision Support (CDS) and Clinical Quality Measurement (CQM), making it relevant to both clinical care and potentially research domains. It's built on FHIR and defines a new language (CQL) and logical model (ELM), thus primarily focusing on knowledge representation and data modeling. The IG is sponsored by the ONC S&I Framework and developed under the HL7 Clinical Quality Framework Initiative, indicating a US-centric scope, though the standard itself could be used more broadly. While it mentions EHRs, the data model independence suggests it can work with various data sources. The IG is a formal HL7 standard, suggesting a normative maturity level.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Clinical Decision Support"
+  ],
+  "HL7 Standard": [
+    "FHIR"
+  ],
+  "Scope/Purpose": [
+    "Knowledge Representation",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

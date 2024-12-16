@@ -1,0 +1,29 @@
+{
+  "rationale": "This IG defines foundational FHIR profiles, code systems, and value sets for the Belgian eHealth ecosystem, focusing on core resources like Patient and Practitioner. It's designed for data exchange and to support workflow by standardizing data elements, and is specific to the Belgian healthcare context. It is in a draft state, being a new implementation guide.",
+  "Primary Domain": [
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify)",
+    "Belgium"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

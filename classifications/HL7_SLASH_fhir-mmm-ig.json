@@ -1,0 +1,25 @@
+{
+  "rationale": "This IG focuses on standardizing maternal and child health data for research, specifically using FHIR R4 and the CQF. It aims to support data exchange and workflow for measure evaluation in the US context, primarily utilizing data from EHRs.",
+  "Primary Domain": [
+    "Research",
+    "Real-World Data"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

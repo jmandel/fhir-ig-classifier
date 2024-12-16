@@ -1,0 +1,23 @@
+{
+  "rationale": "The FHIR UDAP Security IG primarily focuses on defining secure and standardized methods for data exchange, specifically within the context of FHIR. It's designed to enhance security and privacy for applications accessing healthcare data, aligning with OAuth 2.0 and OpenID Connect. Although it doesn't specify a geographic scope, it aligns with US initiatives like Carequality and the CARIN Alliance. The IG supports data from various sources by securing the exchange process. It is labeled as a trial-use IG, indicating it's still in the development phase.",
+  "Primary Domain": [
+    "Infrastructure & Foundational",
+    "Security and Privacy"
+  ],
+  "HL7 Standard": [
+    "FHIR"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Security & Privacy"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

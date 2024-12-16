@@ -1,0 +1,27 @@
+{
+  "rationale": "The FHIR Subscription Backport IG focuses on enhancing real-time data exchange between healthcare systems using the FHIR standard. It enables older FHIR R4/R4B servers to utilize the newer R5 topic-based subscription model, improving the efficiency and scalability of notifications for various clinical events. This aligns with the broader goals of improving clinical workflows and data sharing within the healthcare domain.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4",
+    "FHIR R5",
+    "Cross-Paradigm"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

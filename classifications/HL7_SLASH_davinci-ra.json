@@ -1,0 +1,26 @@
+{
+  "rationale": "This IG focuses on standardizing risk adjustment coding gap reporting between payers and providers, using FHIR R4 for data exchange. It supports a specific administrative and financial process related to risk adjustment, using data primarily from EHRs, and is currently in a draft state.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Risk Adjustment"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Payer-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

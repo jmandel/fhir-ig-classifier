@@ -1,0 +1,26 @@
+{
+  "rationale": "The 'fhir-sdoh-clinicalcare' IG focuses on exchanging SDOH information to enhance care coordination and patient well-being, aligning with the Clinical Care domain. It utilizes FHIR resources and leverages established standards like LOINC and SNOMED CT, primarily for data exchange related to SDOH within the US healthcare context, as evidenced by its alignment with US Core profiles and HIPAA. The IG's status as a Standard for Trial Use (STU) signifies its maturity level.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Care Coordination"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

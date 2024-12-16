@@ -1,0 +1,30 @@
+{
+  "rationale": "The RAD.IMR IG focuses on standardizing diagnostic reports with interactive multimedia, specifically for radiology using FHIR resources. It defines transactions for storing, finding, and retrieving these reports, primarily benefiting healthcare professionals who access these reports and indirectly patients who benefit from improved communication.",
+  "Primary Domain": [
+    "Clinical Care",
+    "Specialty Care",
+    "Radiology"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Device-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

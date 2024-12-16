@@ -1,0 +1,23 @@
+{
+  "rationale": "VRCL is focused on standardizing vital records data (births, deaths, fetal deaths), which falls under Public Health. It leverages FHIR R4 and aims to improve data exchange and modeling for these records, specifically within the US. It's currently in draft status as indicated by its STU2 version.",
+  "Primary Domain": [
+    "Public Health"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

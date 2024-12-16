@@ -4,6 +4,7 @@ import { exec } from 'child_process';
 import { promisify } from 'util';
 import { VertexAI } from "@google-cloud/vertexai";
 import { appendFile } from 'fs/promises';
+import fetch from 'node-fetch';
 
 const execAsync = promisify(exec);
 const contextDir = 'context';
@@ -20,7 +21,7 @@ const vertexAI = new VertexAI({
 });
 
 const generativeModel = vertexAI.getGenerativeModel({
-  model: "gemini-pro-experimental",
+  model: "gemini-2.0-flash-exp",
   generation_config: {
     temperature: 0.7,
   }
@@ -46,29 +47,32 @@ async function logIssue(org: string, repo: string, error: any) {
 
 async function cloneOrPullRepo(repoUrl: string, repoDir: string, org: string, repo: string) {
   try {
-    // First check if repo exists using HEAD request
-    const checkUrl = `https://api.github.com/repos/${org}/${repo}`;
-    const { stdout } = await execAsync(`curl -I -s ${checkUrl}`);
-    
-    if (stdout.includes('HTTP/2 404')) {
-      throw new Error('Repository not found');
-    }
-
     // Check if already cloned locally
     await fs.access(repoDir);
-    console.log(`Updating repository: ${repoUrl}`);
-    await execAsync('git pull', { cwd: repoDir });
+    console.log(`Repository already exists: ${repoUrl}`);
+    return;
   } catch (error) {
-    if (error.message === 'Repository not found') {
-      await logIssue(org, repo, `Repository not found: ${repoUrl}`);
-      throw error;
-    }
-    
+    // Repo doesn't exist locally, check if it exists on GitHub before cloning
     try {
+      const checkUrl = `https://api.github.com/repos/${org}/${repo}`;
+      const response = await fetch(checkUrl, {
+        headers: {
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      
+      const data = await response.json();
+      
+      if (!data || data.message === 'Not Found') {
+        throw new Error('Repository not found or not accessible');
+      } else {
+        console.log(`Repository exists: ${repoUrl}`, data);
+      }
+
       console.log(`Cloning repository: ${repoUrl}`);
       await execAsync(`git clone --depth 1 ${repoUrl} ${repoDir}`);
     } catch (cloneError) {
-      await logIssue(org, repo, `Failed to clone/pull repository: ${cloneError.message}`);
+      await logIssue(org, repo, `Failed to clone repository: ${cloneError.message}`);
       throw cloneError;
     }
   }
@@ -317,14 +321,17 @@ ${analysis}
       classification = classification.replace(/```json\n?/, '').replace(/\n?```$/, '');
     }
     
-    // Validate JSON and format it
+    // Parse JSON, add metadata, and reformat
     const jsonObj = JSON.parse(classification);
+    jsonObj.meta = {
+      model: generativeModel.model
+    };
     const formattedJson = JSON.stringify(jsonObj, null, 2);
     
     console.log(`Classification for ${repo}:\n`, formattedJson);
 
     await fs.mkdir('classifications', { recursive: true });
-    await fs.writeFile(path.join('classifications', `${formattedName}.json`), formattedJson);
+    await fs.writeFile(classificationPath, formattedJson);
   } catch (error) {
     await logIssue(org, repo, `Error classifying repo: ${error}`);
   }
@@ -335,8 +342,8 @@ async function main() {
   const githubUrls: string[] = [];
 
   for (const guide of data.guides) {
-    if (guide['ci-build'] && guide['ci-build'].startsWith('http://build.fhir.org/ig/')) {
-      const parts = guide['ci-build'].replace('http://build.fhir.org/ig/', '').split('/');
+    if (guide['ci-build'] && guide['ci-build'].match(/^https?:\/\/build\.fhir\.org\/ig\//)) {
+      const parts = guide['ci-build'].replace(/^https?:\/\/build\.fhir\.org\/ig\//, '').split('/');
       if (parts.length >= 2) {
         const org = parts[0];
         const repo = parts[1];

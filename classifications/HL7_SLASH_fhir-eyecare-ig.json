@@ -1,0 +1,26 @@
+{
+  "rationale": "The IG focuses on standardizing ophthalmic data using FHIR for interoperability, which falls under clinical care, specifically specialty care for ophthalmology. It is based on the FHIR standard and aims to facilitate data exchange and workflow support. The IG is intended for use in the US and primarily uses data from EHRs.",
+  "Primary Domain": [
+    "Clinical Care",
+    "Specialty Care",
+    "Ophthalmology"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

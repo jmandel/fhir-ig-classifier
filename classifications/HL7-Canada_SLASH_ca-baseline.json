@@ -1,0 +1,27 @@
+{
+  "rationale": "The ca-baseline IG aims to establish a common set of FHIR profiles for use in Canada to improve interoperability, focusing on data exchange and workflow support. It is a foundational IG intended for Canadian implementers and vendors, and it builds upon other existing FHIR standards.",
+  "Primary Domain": [
+    "Infrastructure & Foundational"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Canada"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

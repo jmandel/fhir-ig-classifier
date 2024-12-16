@@ -70,7 +70,7 @@ async function cloneOrPullRepo(repoUrl: string, repoDir: string, org: string, re
       }
 
       console.log(`Cloning repository: ${repoUrl}`);
-      await execAsync(`git clone --depth 1 ${repoUrl} ${repoDir}`);
+      await execAsync(`GIT_TERMINAL_PROMPT=0 git clone --depth 1 ${repoUrl} ${repoDir}`);
     } catch (cloneError) {
       await logIssue(org, repo, `Failed to clone repository: ${cloneError.message}`);
       throw cloneError;

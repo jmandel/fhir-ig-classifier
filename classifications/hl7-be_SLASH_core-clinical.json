@@ -1,0 +1,27 @@
+{
+  "rationale": "The IG focuses on defining FHIR profiles for clinical data exchange within the Belgian healthcare system, aiming to standardize the representation of clinical information like problems, observations, and encounters. It is based on the FHIR standard and tailored to Belgian requirements, including specific code systems, value sets, and extensions. The primary purpose is interoperability and structured data exchange.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (please specify): Belgium"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

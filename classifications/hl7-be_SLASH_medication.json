@@ -1,0 +1,31 @@
+{
+  "rationale": "This IG focuses on standardizing medication dispense and record information in Belgium, indicating a focus on clinical care, specifically medication management. It utilizes FHIR R4 and aims at data exchange to support workflows between providers and systems. The IG is specifically tailored for the Belgian context and focuses on data originating from EHRs and pharmacy systems. It is currently in a draft/trial stage.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "Other Regions (Belgium)"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Laboratory-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp"
+  }
+}

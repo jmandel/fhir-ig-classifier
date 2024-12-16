@@ -1,0 +1,12 @@
+```json
+{
+  "nzbase": {
+    "Primary Domain": ["Infrastructure & Foundational"],
+    "HL7 Standard": ["FHIR", "FHIR R4"],
+    "Scope/Purpose": ["Data Exchange", "Data Modeling"],
+    "Geographic Scope": ["Other Regions (New Zealand)"],
+    "Data Source": ["Mixed/Other"], 
+    "Maturity Level": ["Draft/Trial Use"] 
+  }
+}
+```

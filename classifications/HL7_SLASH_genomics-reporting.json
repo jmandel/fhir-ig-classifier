@@ -1,0 +1,12 @@
+```json
+{
+  "genomics-reporting": {
+    "Primary Domain": ["Clinical Care", "Specialty Care", "General Clinical Care", "Research"], 
+    "HL7 Standard": ["FHIR", "FHIR R4"],
+    "Scope/Purpose": ["Data Exchange", "Knowledge Representation", "Data Modeling"],
+    "Geographic Scope": ["Universal Realm"],
+    "Data Source": ["Laboratory-Centric", "EHR-Centric"],
+    "Maturity Level": ["Normative/Standard"] 
+  }
+}
+```

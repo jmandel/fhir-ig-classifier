@@ -1,0 +1,12 @@
+```json
+{
+  "au-fhir-base": {
+    "Primary Domain": ["Infrastructure & Foundational"],
+    "HL7 Standard": ["FHIR", "FHIR R4"],
+    "Scope/Purpose": ["Data Modeling", "Terminology and Value Sets", "Data Exchange"],
+    "Geographic Scope": ["Other Regions (Australia)"],
+    "Data Source": ["Mixed/Other"], 
+    "Maturity Level": ["Normative/Standard"] 
+  }
+}
+```

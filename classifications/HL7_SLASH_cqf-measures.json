@@ -1,0 +1,26 @@
+{
+  "rationale": "The cqf-measures IG focuses on representing eCQMs using FHIR R4, primarily for quality reporting and performance evaluation in the US healthcare context. It leverages QI-Core profiles (derived from US Core) and CQL for defining measure logic, indicating a focus on data exchange and workflow support related to quality measurement data originating from EHRs.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Clinical Decision Support"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Knowledge Representation"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

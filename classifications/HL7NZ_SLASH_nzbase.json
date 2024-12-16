@@ -1,5 +1,5 @@
 {
-  "rationale": "The nzbase IG focuses on establishing a standardized framework for exchanging healthcare information in New Zealand using FHIR. It defines extensions and terminology specific to the New Zealand healthcare context, indicating a focus on general clinical care within the country. The use of FHIR and its alignment with national standards like NHI and HPI confirms its relevance to the New Zealand healthcare system.",
+  "rationale": "The nzbase Implementation Guide focuses on establishing a standardized framework for exchanging healthcare information in New Zealand using FHIR. It defines extensions and terminology specific to the New Zealand healthcare context, primarily for use with EHR data. This suggests a focus on general clinical care within the New Zealand healthcare system.",
   "Primary Domain": [
     "Clinical Care",
     "General Clinical Care"

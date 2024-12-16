@@ -1,5 +1,5 @@
 {
-  "rationale": "The US Core IG focuses on standardizing healthcare data exchange in the US, aligning with the USCDI and using FHIR profiles. This indicates a focus on general clinical data exchange within the US healthcare context, using FHIR standards.",
+  "rationale": "The US Core IG focuses on standardizing healthcare data exchange in the US, specifically aligning with the USCDI and using FHIR profiles. It aims to improve interoperability and support various clinical workflows, primarily using data from EHRs.",
   "Primary Domain": [
     "Clinical Care",
     "General Clinical Care"
@@ -9,7 +9,8 @@
     "FHIR R4"
   ],
   "Scope/Purpose": [
-    "Data Exchange"
+    "Data Exchange",
+    "Data Modeling"
   ],
   "Geographic Scope": [
     "US Realm"

@@ -1,5 +1,5 @@
 {
-  "rationale": "The AU Core FHIR Implementation Guide focuses on standardizing core digital health information exchange in Australia using FHIR, specifically targeting clinical data and workflows within the Australian healthcare context.",
+  "rationale": "AU Core is a FHIR R4-based implementation guide focused on standardizing core clinical and administrative information exchange in the Australian healthcare context. It defines data elements, profiles, and API interactions to enable interoperability between healthcare systems, primarily for EHR-centric data.",
   "Primary Domain": [
     "Clinical Care",
     "General Clinical Care"

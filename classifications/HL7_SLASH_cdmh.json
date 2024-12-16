@@ -1,0 +1,25 @@
+{
+  "rationale": "The cdmh IG focuses on harmonizing observational research data from various sources (PCORNet, i2b2/ACT, OMOP, Sentinel) into FHIR for research purposes, particularly patient-centered outcomes research. It leverages the BRIDG model and aligns with the US Core profiles and FDA requirements, indicating a US research focus.",
+  "Primary Domain": [
+    "Research",
+    "Real-World Data"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Data Modeling"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "Registry-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

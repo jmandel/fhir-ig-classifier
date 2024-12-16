@@ -1,0 +1,25 @@
+{
+  "rationale": "The BSeR IG focuses on streamlining the referral process between healthcare providers (specifically to community-based organizations) using FHIR R4, primarily in the US. It aims to improve care coordination and communication, thus falling under Clinical Care and impacting workflows through standardized data exchange.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Care Coordination"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

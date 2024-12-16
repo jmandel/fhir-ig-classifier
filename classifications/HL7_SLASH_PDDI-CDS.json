@@ -1,0 +1,25 @@
+{
+  "rationale": "The PDDI-CDS IG focuses on improving drug-drug interaction alerts within EHR workflows during medication ordering, using FHIR, CDS Hooks, and CQL. This firmly places it within Clinical Care, specifically Medication Management, with a reliance on FHIR R4. The scope is primarily Workflow Support and Data Exchange, targeting a US Realm audience (implied by HIPAA compliance) and relying on EHR-centric data. Its status as an implementation guide indicates a Draft/Trial Use maturity level.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Medication Management"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Workflow Support",
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

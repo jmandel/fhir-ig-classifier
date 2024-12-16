@@ -1,0 +1,26 @@
+{
+  "rationale": "The SMART App Launch IG focuses on enabling third-party applications to securely connect to and interact with EHR systems using FHIR, primarily for exchanging patient data within a clinical care context. It leverages FHIR R4 and aims to improve healthcare workflows and data access, particularly in the US.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Patient Engagement"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support",
+    "Security & Privacy"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

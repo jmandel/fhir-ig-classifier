@@ -1,0 +1,23 @@
+{
+  "rationale": "The ITI.PIXm IG focuses on exchanging patient identity information between mobile apps and a central manager, which falls under administrative and financial processes. It leverages FHIR R4 and RESTful APIs, primarily for data exchange. The scope is universal, the data source is mixed (mobile apps and central manager), and its maturity level is likely draft/trial use as it's an implementation guide.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Provider Directories"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

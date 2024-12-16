@@ -1,0 +1,25 @@
+{
+  "rationale": "The ITI.mXDE IG focuses on extracting specific clinical data elements from documents like discharge summaries and prescriptions, making them available as FHIR resources. This aligns with the 'Data Exchange' and 'Workflow Support' purposes within the 'Clinical Care' domain. It leverages FHIR R4 and is applicable in various settings, suggesting a 'Universal Realm' scope.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric",
+    "Mixed/Other"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

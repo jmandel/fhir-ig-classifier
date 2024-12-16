@@ -122,8 +122,19 @@ async function createContextMenuFile(repoDir: string, repo: string, org: string)
 
 async function analyzeRepo(contextFilePath: string, repo: string, org: string) {
   try {
-    const content = await fs.readFile(contextFilePath, 'utf-8');
     const formattedName = getFormattedName(org, repo);
+    const analysisPath = path.join('analysis', `${formattedName}.md`);
+
+    // Check if analysis already exists
+    try {
+      const existingAnalysis = await fs.readFile(analysisPath, 'utf-8');
+      console.log(`Reusing existing analysis for ${formattedName}`);
+      return existingAnalysis;
+    } catch (err) {
+      // Analysis doesn't exist, continue with generation
+    }
+
+    const content = await fs.readFile(contextFilePath, 'utf-8');
 
     const request = {
       systemInstruction: "You are a health information technology expert.",
@@ -137,10 +148,10 @@ async function analyzeRepo(contextFilePath: string, repo: string, org: string) {
 
     const response = await generativeModel.generateContent(request);
     let analysis = response.response.candidates?.[0].content.parts[0].text || "";
-    console.log('Initial Analysis:', analysis);
+    console.log('Generated new analysis:', analysis);
 
     await fs.mkdir('analysis', { recursive: true });
-    await fs.writeFile(path.join('analysis', `${formattedName}.md`), analysis);
+    await fs.writeFile(analysisPath, analysis);
     return analysis;
 
   } catch (error) {
@@ -248,12 +259,21 @@ async function classifyRepo(repo: string, org: string, analysis: string) {
   const classificationPrompt = `
 ${classificationScheme}
 
-Based on the following analysis of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Provide the output in JSON format, including all applicable categories for each axis.
+Based on the following analysis of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Provide the output as a JSON object with the following structure, where each array can contain one or more values:
+{
+  "rationale": "A brief (2-3 sentences) explanation of why these classifications apply, citing specific evidence from the analysis",
+  "Primary Domain": ["one or more categories/subcategories from most specific to most general"],
+  "HL7 Standard": ["one or more applicable standards/versions"],
+  "Scope/Purpose": ["one or more applicable purposes"],
+  "Geographic Scope": ["one or more applicable scopes"],
+  "Data Source": ["one or more applicable sources"],
+  "Maturity Level": ["one or more applicable levels"]
+}
+
+Each array should contain all relevant values from the classification scheme, from most specific to most general. The rationale should explain the key evidence that led to these classifications. Do not include any markdown formatting or explanation text, just output the JSON object.
 
 Analysis:
 ${analysis}
-
-JSON Output:
 `;
 
   const request = {
@@ -264,11 +284,22 @@ JSON Output:
 
   try {
     const response = await generativeModel.generateContent(request);
-    const classification = response.response.candidates?.[0].content.parts[0].text || "";
-    console.log(`Classification for ${repo}:\n`, classification);
+    let classification = response.response.candidates?.[0].content.parts[0].text || "{}";
+    
+    // Clean up the response to ensure it's valid JSON
+    classification = classification.trim();
+    if (classification.startsWith('```json')) {
+      classification = classification.replace(/```json\n?/, '').replace(/\n?```$/, '');
+    }
+    
+    // Validate JSON and format it
+    const jsonObj = JSON.parse(classification);
+    const formattedJson = JSON.stringify(jsonObj, null, 2);
+    
+    console.log(`Classification for ${repo}:\n`, formattedJson);
 
     await fs.mkdir('classifications', { recursive: true });
-    await fs.writeFile(path.join('classifications', `${formattedName}.json`), classification);
+    await fs.writeFile(path.join('classifications', `${formattedName}.json`), formattedJson);
   } catch (error) {
     await logIssue(org, repo, `Error classifying repo: ${error}`);
   }

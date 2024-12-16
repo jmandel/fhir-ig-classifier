@@ -1,0 +1,25 @@
+{
+  "rationale": "The ITI.PDQm Implementation Guide focuses on exchanging patient demographics using FHIR resources, primarily for integration with mobile and web applications. It aims to improve data access for healthcare providers and application developers, aligning with the Clinical Care domain and a US-centric focus due to its relation to IHE profiles and security standards commonly used in the US.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Patient Summaries"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

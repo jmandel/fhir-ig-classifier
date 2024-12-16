@@ -1,0 +1,24 @@
+{
+  "rationale": "The Da Vinci DEQM IG focuses on exchanging clinical quality measure data between providers and payers/registries for quality reporting and value-based care, primarily within the US healthcare context using FHIR R4. This aligns it with the Administrative & Financial domain (due to its focus on quality reporting and value-based care, which have financial implications) and the US Realm. It also strongly emphasizes data exchange and workflow support.",
+  "Primary Domain": [
+    "Administrative & Financial",
+    "Value-Based Performance Reporting"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange",
+    "Workflow Support"
+  ],
+  "Geographic Scope": [
+    "US Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Draft/Trial Use"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "rationale": "The fhir-ips IG focuses on sharing a minimal set of patient data for unplanned care, particularly in cross-border scenarios, which makes it fall under General Clinical Care within the broader Clinical Care domain. It leverages the FHIR R4 standard to achieve this. Its purpose is primarily Data Exchange, ensuring common understanding of the information.  It aims for international use (Universal Realm), as indicated by its name and alignment with ISO standards. The data source is primarily EHR-centric, as it represents a summary of existing patient information. Its alignment with ISO standards suggests a level of maturity beyond draft status.",
+  "Primary Domain": [
+    "Clinical Care",
+    "General Clinical Care",
+    "Patient Summaries"
+  ],
+  "HL7 Standard": [
+    "FHIR",
+    "FHIR R4"
+  ],
+  "Scope/Purpose": [
+    "Data Exchange"
+  ],
+  "Geographic Scope": [
+    "Universal Realm"
+  ],
+  "Data Source": [
+    "EHR-Centric"
+  ],
+  "Maturity Level": [
+    "Normative/Standard"
+  ]
+}

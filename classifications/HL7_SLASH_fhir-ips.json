@@ -1,0 +1,33 @@
+{
+  "rationale": "The International Patient Summary (IPS) Implementation Guide (IG) is designed to provide a standardized, minimal, and non-exhaustive set of clinical data for international use, primarily in unplanned, cross-border care scenarios. The core functionality of this IG revolves around defining a FHIR-based structure for representing this patient summary data.\n\n**Data Modeling:** The IPS IG defines numerous FHIR profiles that constrain existing FHIR resources to fit the specific needs of the IPS dataset. These profiles include `Composition-uv-ips`, `Patient-uv-ips`, `Condition-uv-ips`, `AllergyIntolerance-uv-ips`, `MedicationStatement-uv-ips`, `MedicationRequest-uv-ips`, `Immunization-uv-ips`, and many others. Each profile specifies which elements are mandatory (Must Support), defines cardinality constraints, and establishes bindings to specific terminologies (e.g., SNOMED CT, LOINC, UCUM). The IG also defines new value sets and code systems tailored to the IPS, such as `AllergyIntoleranceUvIps`, `ProblemsUvIps`, and `VaccinesUvIps`.\n\n**Data Exchange:** While the primary focus is on data modeling, the IG also touches upon data exchange mechanisms. It defines a `$summary` operation on the `Patient` resource, which returns an IPS document `Bundle`. This operation suggests a method for generating and accessing IPS documents, although it doesn't mandate a specific implementation. The IG also references the `$docref` operation from the International Patient Access guide, providing another potential avenue for accessing IPS documents.\n\n**Terminology:** The IG emphasizes the use of structured terminologies, particularly SNOMED CT, LOINC, and UCUM. It defines numerous value sets that leverage these terminologies, ensuring semantic interoperability across different systems and jurisdictions. The IG also addresses the challenge of multilingual support by extending the `Coding` data type to include translations.\n\n**Geographic Scope:** As the name suggests, the IPS IG is intended for international use. It explicitly states its applicability to the \"Universal Realm\" and defines a jurisdiction of \"World.\" The IG also acknowledges the existence of national adaptations and encourages implementers to consider emerging best practices from different countries.\n\n**Stakeholders:** The primary stakeholders for this IG are technical implementers, particularly EHR vendors and health IT development teams responsible for building systems that can generate and consume IPS documents. Healthcare provider organizations, especially clinical care teams involved in cross-border care, are also key stakeholders. Public health organizations may utilize the IPS for surveillance and reporting, although this is not the primary focus. Standards organizations, including HL7 International and national affiliates, are involved in the development and maintenance of the IG.\n\nIn summary, the IPS IG primarily focuses on defining a standardized data model for representing a minimal, international patient summary using FHIR. It also provides some guidance on data exchange mechanisms and emphasizes the use of structured terminologies to ensure semantic interoperability. The IG is intended for a global audience, with a particular focus on supporting unplanned, cross-border care.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.9,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Standards Organizations": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Public Health Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

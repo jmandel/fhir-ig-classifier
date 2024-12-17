@@ -1,0 +1,38 @@
+{
+  "rationale": "The SMART App Launch Framework IG primarily focuses on defining a standardized, secure authorization protocol for third-party applications to connect to Electronic Health Record (EHR) data. It supports various app architectures and use cases, including patient and provider apps launched from within or outside an EHR system. \n\nThe IG specifies how apps can obtain authorization to access FHIR resources via OAuth 2.0, including details on app registration, launch sequences (standalone and EHR-initiated), and the process of obtaining and refreshing access tokens. It defines the structure and content of authorization requests and responses, including parameters like `response_type`, `client_id`, `redirect_uri`, `scope`, `state`, `aud`, `code_challenge`, and `code_challenge_method`. \n\nAdditionally, the IG addresses security and privacy considerations, outlining requirements for app protection, support for \"public\" and \"confidential\" apps, and considerations for PKCE and CORS support. It also defines the use of scopes to specify the level of access an app is requesting, including scopes for FHIR resources, context data, and identity data. The IG further describes how launch context is negotiated and communicated between the EHR and the app, enabling the app to receive relevant information such as the current patient or encounter. \n\nFinally, the IG includes details on token introspection, allowing resource servers to validate access tokens and understand their associated scopes and context. It also provides guidance on best practices for app and server developers, as well as considerations for scope consent and app architecture choices.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Security and Privacy": 0.9,
+      "Clinical Care > General Clinical Care > Clinical Decision Support": 0.3,
+      "Clinical Care > General Clinical Care > Patient Engagement": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "FHIR > FHIR R5": 0.3,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Security & Privacy": 0.9,
+      "Data Exchange": 0.8,
+      "Workflow Support": 0.4,
+      "Data Modeling": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8,
+      "National Jurisdictions > United States": 0.4
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.9,
+      "Technical Implementers > Health IT Development Teams": 0.9,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "rationale": "The MyCareNet FHIR Implementation Guide primarily focuses on defining the structure and content for exchanging healthcare information related to physiotherapy and speech therapy eAgreement requests within the Belgian healthcare system. It establishes specific profiles for FHIR resources like Claim, ClaimResponse, ServiceRequest, and Bundle to facilitate these eAgreement processes. \n\nThe IG defines several custom extensions, such as `be-ext-mycarenet-item-patientfee` and `be-ext-mycarenet-item-reimbursement`, to capture specific financial information relevant to the Belgian context. It also creates new value sets and code systems, including `agreement-types`, `annex-types`, `decision-values`, and `nihdi-physiotherapy-pathologysituationcode`, to standardize the terminology used in these exchanges. The IG specifies the use of FHIR Bundle resources to encapsulate messages related to eAgreement requests, responses, and consultations, defining profiles like `be-eagreementdemand` and `be-eagreementconsultreply`. \n\nFurthermore, the IG outlines the use of FHIR SearchParameters, such as `be-sp-claimresponse-preAuthRef` and `be-sp-claimresponse-subType`, to enable efficient querying of ClaimResponse resources. It also includes invariants to enforce data integrity and consistency within the defined profiles. The presence of numerous example instances, such as `Bundle/ex01` through `Bundle/ex32`, demonstrates the practical application of these profiles in various scenarios related to physiotherapy and speech therapy eAgreement workflows. The IG's focus on defining profiles, extensions, value sets, and code systems, along with its emphasis on structuring FHIR Bundles for message exchange, indicates a strong emphasis on data modeling and data exchange within the specific context of Belgian eAgreement processes.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Prior Authorization": 0.9,
+      "Clinical Care > Specialty Care > Physiotherapy": 0.6,
+      "Clinical Care > Specialty Care > Dental": 0.3,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Belgium": 0.95
+    },
+    "Stakeholders": {
+      "Administrative Organizations > Insurance Companies": 0.7,
+      "Administrative Organizations > Health Plans": 0.7,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Public Health Organizations > Public Health Agencies": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

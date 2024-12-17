@@ -1,0 +1,31 @@
+{
+  "rationale": "The C-CDA on FHIR Implementation Guide primarily focuses on defining FHIR profiles that represent C-CDA documents and sections, and providing mappings between C-CDA and FHIR. It profiles the FHIR Composition resource to represent various C-CDA document types, such as Care Plan, Consultation Note, Continuity of Care Document, etc. It leverages existing US Core profiles for coded data within these documents where applicable. The IG also includes mappings between C-CDA templates and FHIR resources for specific clinical domains like Allergies, Encounters, Immunizations, Medications, Notes, Patient, Problems, Procedures, Results, Social History, and Vital Signs. These mappings detail how elements from C-CDA templates translate to FHIR resource elements and vice-versa. The IG emphasizes the use of FHIR Documents paradigm, requiring Composition resources and their references to be packaged in a FHIR Bundle with `Bundle.type = document`. It also provides guidance on handling various technical aspects like identifiers, time/dates, coding, quantities, provenance, and narrative text conversion between C-CDA and FHIR. The IG does not define new document exchange mechanisms beyond what is already defined in FHIR and US Core. It aims to facilitate interoperability between C-CDA and FHIR, addressing the common clinical data exchange needs in the US healthcare context. The IG is intended for implementers familiar with both C-CDA and FHIR, and it acknowledges the differences in syntax, methodologies, and value sets between the two standards.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Cross-Version Mapping": 0.95,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.9,
+      "Cross-Paradigm": 0.8
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.5
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

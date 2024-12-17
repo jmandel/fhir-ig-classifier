@@ -1,0 +1,35 @@
+{
+  "rationale": "The Vital Records Death Reporting (VRDR) FHIR Implementation Guide is focused on defining the standards for electronic death registration, specifically the exchange of mortality data between jurisdictions and the National Center for Health Statistics (NCHS). Analyzing the provided content, the VRDR IG primarily defines FHIR profiles, extensions, value sets, and code systems to represent death record information. It specifies how death data should be structured and coded for consistent exchange. The IG also defines bundles for transmitting death records and coded content, such as the `DeathCertificateDocument` and `CauseOfDeathCodedContentBundle`. \n\nThe IG's core functionality revolves around data modeling, as it creates numerous FHIR profiles for various aspects of death reporting, including decedent demographics, death investigation, death certification, and decedent disposition. These profiles define the structure and content of the data elements involved in death registration. While the IG does not define specific operations or APIs, it does specify the structure of bundles used for data exchange, indicating a focus on data exchange mechanisms. The IG also includes mappings to existing Inter-Jurisdictional Exchange (IJE) formats, demonstrating its role in standardizing data exchange. \n\nGeographically, the VRDR IG is specific to the United States, as it is based on the U.S. Standard Certificate of Death and references NCHS reporting requirements. The IG is built upon FHIR R4 and includes dependencies on other FHIR IGs like US Core and the Vital Records Common Library. The stakeholders for this IG include jurisdictional vital records offices, NCHS, EHR vendors, and other entities involved in the death registration process. The IG's content is primarily targeted at technical implementers responsible for developing systems that can generate and process death record data according to the defined standards.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.9,
+      "Clinical Care > General Clinical Care > Death Certification": 0.8,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.6,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.95
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.9,
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Standards Organizations": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

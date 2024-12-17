@@ -1,0 +1,33 @@
+{
+  "rationale": "The Da Vinci Value-Based Performance Reporting Implementation Guide (VBPR) focuses on standardizing the exchange of value-based performance reports between payers and providers. These reports contain data on financial, utilization, and quality metrics, as defined in value-based contracts. \n\n**Data Modeling:** The IG defines three core profiles: `VBP MeasureReport`, `VBP Quality MeasureReport`, and `VBP Measure`. The `VBP MeasureReport` is the primary resource, representing the overall performance report. It references `VBP Quality MeasureReport` instances for quality measure data and a `VBP Measure` instance for contract-level information. These profiles define the structure and data elements of the reports, including performance metrics, payment streams, baselines, service periods, and stratification. The IG also defines several extensions to support specific data elements like alternate measure scores, payment streams, and program models. Value sets are defined for performance metrics, payment streams, HCPLAN framework categories, and other relevant concepts, providing a standardized vocabulary for reporting. \n\n**Data Exchange:** The IG specifies that the reports are exchanged using FHIR, with a focus on the `MeasureReport` resource. It defines capability statements for both client and server actors, outlining the expected interactions and supported search parameters. The primary exchange mechanism is through FHIR transactions, allowing providers to retrieve reports from payers. \n\n**Geographic Scope:** The IG explicitly states its jurisdiction as the United States, indicating its primary focus on the US healthcare system. \n\n**Stakeholders:** The primary stakeholders are payers and providers involved in value-based contracts. Payers generate the reports, while providers consume them to understand their performance and financial incentives. The IG also benefits EHR vendors and other technical implementers by providing a standard format for exchanging these reports. \n\n**Standard:** The IG is based on FHIR R4 and leverages profiles from US Core and other Da Vinci IGs, such as DEQM. It also references the CQF Measures IG for composite measure representation.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial": 0.9,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Administrative Organizations > Insurance Companies": 0.8,
+      "Administrative Organizations > Health Plans": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

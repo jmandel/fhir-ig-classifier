@@ -1,0 +1,35 @@
+{
+  "rationale": "The cdmh Implementation Guide is focused on creating a standardized way to represent and exchange data from various Common Data Models (CDMs) using FHIR. Its primary purpose is to define mappings between four specific CDMs (PCORnet, i2b2/ACT, OMOP, and Sentinel) and FHIR resources/profiles. The IG specifies how data elements in these CDMs should be represented in FHIR, including the use of existing US Core profiles and the creation of new profiles and extensions where necessary. It also provides guidance on handling date/time representations and vocabulary mappings. The IG does not define new code systems or value sets but relies on existing ones from US Core and the FHIR standard. The main artifact produced by this IG is a set of mappings that can be used to build translators for converting data between the CDMs and FHIR. The IG also includes a capability statement for a \"Result Translator\" component, which is responsible for performing the CDM-to-FHIR translation. The IG is intended to facilitate research by enabling researchers to query multiple research networks with disparate data models using a single, standardized approach. It is also designed to be used in conjunction with other related IGs, such as DAF-Research, to support a broader learning health system infrastructure. The IG is primarily targeted at technical implementers, such as EHR vendors and system integrators, who will be responsible for building the translators and other components needed to implement the mappings. It also has implications for healthcare provider organizations, public health organizations, and administrative organizations that are involved in research and data sharing.",
+  "scores": {
+    "Functional Domain": {
+      "Research": 0.9,
+      "Infrastructure & Foundational": 0.35
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.5
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Public Health Organizations > Research Platforms": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Administrative Organizations > Healthcare Administrators": 0.3,
+      "Public Health Organizations > Public Health Agencies": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

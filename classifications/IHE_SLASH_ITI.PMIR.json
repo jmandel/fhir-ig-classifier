@@ -1,0 +1,34 @@
+{
+  "rationale": "The ITI PMIR (Patient Master Identity Registry) Implementation Guide defines a system for managing patient identities using FHIR. Its primary focus is on establishing a \"golden record\" or \"Patient Master Identity\" for each patient within a specific domain. This IG specifies two core transactions: \"Mobile Patient Identity Feed [ITI-93]\" and \"Subscribe to Patient Updates [ITI-94]\".\n\nITI-93 defines how patient identity information is created, updated, deleted, and merged. It uses FHIR messages containing a MessageHeader and a Bundle of Patient resources to communicate these changes. The Bundle includes details on the operation performed (create, update, delete, merge) and the affected Patient resources. The merge operation is particularly important for patient safety, as it allows for the consolidation of duplicate patient records.\n\nITI-94 defines a subscription mechanism, allowing systems to receive updates when patient identities change. It uses the FHIR Subscription resource to specify the criteria for updates, such as subscribing to all Patient updates or only updates related to a specific Patient or Organization. The Patient Identity Registry is responsible for managing these subscriptions and sending out notifications via ITI-93 when relevant changes occur.\n\nPMIR also leverages the PIXm and PDQm profiles for querying patient information. The Patient Identity Registry actor is required to support both PIXm and PDQm, allowing other systems to search for patients based on identifiers or demographics. This ensures that systems can locate the correct patient master identity even if they only have partial information.\n\nIn essence, PMIR provides a framework for maintaining a consistent and accurate view of patient identities across a healthcare ecosystem. It defines the data model for patient identities, the mechanisms for exchanging this data, and a subscription model for keeping systems up-to-date. The focus is on FHIR as the underlying standard, and it is designed for environments where a single, authoritative patient identity is desired.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.95,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Public Health Organizations > Registry Systems": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "rationale": "The Da Vinci PDex Plan Net Implementation Guide (IG) defines a FHIR-based interface for health insurers to publish their insurance plans, associated networks, and participating organizations and providers. The IG is primarily focused on data modeling and exchange, defining profiles and extensions based on FHIR R4 to represent provider directory information. It is designed for use within the United States and targets stakeholders involved in administrative and financial processes, particularly insurance companies, health plans, and technical implementers like EHR vendors and system integrators. The IG does not address clinical care, public health, or research domains directly. It focuses on defining how provider directory data should be structured and exchanged, rather than on clinical workflows or decision support. The IG includes profiles for key resources like Organization, Practitioner, Location, HealthcareService, Endpoint, InsurancePlan, and OrganizationAffiliation, along with search parameters and capability statements. It also defines extensions to capture additional information relevant to provider directories, such as accessibility, communication proficiency, and network participation. The IG references US Core profiles where applicable but also introduces new profiles and extensions tailored to the specific needs of representing payer provider networks. The primary purpose of this IG is to standardize the representation and exchange of provider directory data among payers, enabling third-party applications to access and utilize this information for consumers and providers.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Insurance and Billing": 0.9,
+      "Administrative & Financial > Provider Directories": 0.9,
+      "Infrastructure & Foundational > Terminology and Value Sets": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.8,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Administrative Organizations > Insurance Companies": 0.9,
+      "Administrative Organizations > Health Plans": 0.9,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > System Integrators": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

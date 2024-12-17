@@ -1,0 +1,35 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-military-service\" focuses on defining the structure and content for representing military service history and veteran status within the FHIR framework. It establishes profiles and extensions to capture relevant information, such as military service episodes, deployment history, military occupation, and veteran status verification. \n\nThe IG primarily focuses on data modeling, defining specific profiles like `MilitaryServiceEpisode`, `DeploymentHistoryEpisode`, and `MilitaryOccupation`, which are based on the FHIR `Observation` resource. It also defines the `USVeteran` profile, extending the `US Core Patient` profile, and introduces the `USVeteranStatus` extension to indicate veteran status confirmation. These profiles specify data elements, cardinality, and terminology bindings to ensure consistent representation of military service data.\n\nWhile the IG mentions a custom operation (`$veteranStatus`) and references US Core conformance requirements for data exchange, its core contribution lies in defining the data model for military service history. It specifies how to structure information about deployments, occupations, discharge status, and separation reasons using FHIR resources and extensions. The IG also outlines terminology requirements, identifying gaps in existing terminologies like SNOMED CT and proposing extensions or mappings to value sets from sources like the CDC's Occupational Data for Health (ODH).\n\nGeographically, the IG is scoped to the United States, as indicated by its title, jurisdiction, and references to US regulatory requirements (Title 38 Veteran Benefits) and the US Department of Veterans Affairs (VA). It aims to harmonize requirements from the VA and CDC to support administrative and clinical workflows related to veterans' health.\n\nIn summary, this IG's primary function is to define a standardized data model for representing military service history and veteran status within the FHIR ecosystem, with a focus on data modeling and terminology, tailored for the US context.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.3,
+      "Administrative & Financial": 0.3,
+      "Infrastructure & Foundational": 0.4
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Terminology and Value Sets": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Administrative Organizations > Insurance Companies": 0.3,
+      "Standards Organizations": 0.7
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

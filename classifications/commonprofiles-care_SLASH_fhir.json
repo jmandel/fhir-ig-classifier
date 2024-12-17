@@ -1,0 +1,35 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) defines a set of common profiles, extensions, and value sets for use within the Swedish healthcare ecosystem. The core functionality of this IG is to establish a standardized approach to representing key healthcare entities and concepts using FHIR resources. \n\nThe IG defines \"Lite\" profiles for Patient, Practitioner, and Organization resources. These profiles are designed for lightweight use cases, such as including minimal information about these entities when referenced by other resources. For example, the `OrganizationSECommonsLite` profile includes constraints for representing essential organization details like name, HSA ID (for healthcare organizations), and organization ID (for companies). It also defines slices for indicating whether an organization is a \"care unit\" or \"care provider\" according to Swedish definitions, using SNOMED CT codes. The `PatientSECommonsLite` profile focuses on patient identification, supporting identifiers like personnummer, samordningsnummer, and nationellt reservnummer, with specific validation rules for each. The `PractitionerSECommonsLite` profile similarly provides a minimal representation of practitioners, including their HSA ID and basic contact information.\n\nAdditionally, the IG defines a `ServiceRequestSelfReferralSECommonsLite` profile to support self-referral use cases, including nationally defined chief complaints. It mandates fields like authoredOn and performer, and restricts reasonCode to a single value from a specific SNOMED CT value set. The IG also includes profiles for `QuestionnaireSECommonsLite` and `QuestionnaireResponseSECommonsLite`, which provide a basic structure for questionnaires and their responses, with constraints specific to the Swedish context. \n\nFurthermore, the IG defines an extension called `HsaHierarchy` to represent an organization's place in the Swedish HSA hierarchy, with specific levels for \"HSA Vårdgivare\" (care provider) and \"HSA Vårdenhet\" (care unit). It also includes invariants to validate the format of identifiers like personnummer, samordningsnummer, and organisationsnummer.\n\nIn summary, this IG primarily focuses on data modeling, defining profiles and extensions to standardize the representation of core healthcare entities and concepts within the Swedish context. It also touches upon data exchange by providing examples of how these profiles can be used in resources like ServiceRequest and QuestionnaireResponse.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.6,
+      "Clinical Care > Specialty Care": 0.3,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Sweden": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Standards Organizations": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Public Health Organizations": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

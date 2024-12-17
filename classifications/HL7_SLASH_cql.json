@@ -1,0 +1,31 @@
+{
+  "rationale": "The Clinical Quality Language (CQL) Implementation Guide defines a high-level language for expressing clinical knowledge, particularly for Clinical Decision Support (CDS) and Clinical Quality Measurement (CQM). It focuses on providing a human-readable, yet precise, syntax for representing clinical logic. The core of the specification is the Expression Logical Model (ELM), a canonical, syntax-independent representation of logic that can be used to express the knowledge in any given artifact. ELM is informed by compiler design best practices and serves as a basis for sharing logic in a verifiable and computable way. The specification also introduces CQL, a domain-specific language targeted at measure and decision support artifact authors. CQL can be rendered in the canonical representation provided by ELM. The specification is designed to be data model independent, meaning that CQL and ELM have no explicit dependencies on any particular data model. The primary purpose of this IG is to define a language for representing clinical knowledge that can be used in both CDS and CQM domains. It defines a grammar (CQL) and an abstract syntax tree (ELM) for representing this knowledge. It also specifies how to translate between CQL and ELM. The IG does not define specific data exchange mechanisms but focuses on the representation of the logic itself. It is intended for use by clinical domain experts, measure and decision support artifact authors, and implementers of systems that create and use knowledge artifacts. The IG is primarily concerned with knowledge representation and does not focus on specific clinical domains or specialties. It is intended for use in a broad range of healthcare applications, including quality measurement, decision support, and other areas where formal representation of clinical knowledge is needed. The IG is developed and maintained by HL7's Clinical Decision Support Work Group, co-sponsored by the Clinical Quality Information Work Group.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.4,
+      "Infrastructure & Foundational": 0.8
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.3
+    },
+    "Scope/Purpose": {
+      "Knowledge Representation": 0.95,
+      "Data Modeling": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8,
+      "National Jurisdictions > United States": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Standards Organizations > Standards Development Organizations": 0.9,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

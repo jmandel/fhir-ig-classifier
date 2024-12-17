@@ -1,0 +1,35 @@
+{
+  "rationale": "The PHD Implementation Guide primarily focuses on defining how to represent data from Personal Health Devices (PHDs) in FHIR. It provides detailed specifications for mapping IEEE 11073-20601 and Bluetooth SIG GHS objects and attributes to FHIR resources, particularly Observations. \n\nThe IG defines a code system for mapping ASN.1 BITs measurements to FHIR, as FHIR lacks native support for this data type. It also specifies how to handle various types of measurements, including numeric, coded, sample array, string, and compound values. \n\nAdditionally, the IG addresses time synchronization issues, as PHDs often have unreliable clocks. It introduces the concept of a Coincident Time Stamp Observation to compare the timelines of the PHD and the PHG (Personal Health Gateway), which is responsible for translating and uploading PHD data. \n\nFurthermore, the IG provides guidance on representing device information, including system identifiers, transport addresses, and device properties. It also covers patient information, emphasizing the importance of protecting Personally Identifiable Information (PII) in remote patient monitoring scenarios. \n\nOverall, the PHD Implementation Guide aims to standardize the representation of PHD data in FHIR, enabling interoperability and facilitating the use of PHD data in various healthcare applications, such as electronic medical records, clinical decision support, and medical data archiving.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.7,
+      "Clinical Care > General Clinical Care": 0.4
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.6,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Standards Organizations": 0.5,
+      "Public Health Organizations": 0.3,
+      "Administrative Organizations": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

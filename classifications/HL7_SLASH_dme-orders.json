@@ -1,0 +1,32 @@
+{
+  "rationale": "This IG focuses on defining a framework for exchanging post-acute orders, specifically for Durable Medical Equipment (DME) and Home Health Services, between ordering providers, rendering providers, and optional intermediaries. It defines FHIR profiles for resources like `DeviceRequest`, `ServiceRequest`, `MedicationRequest`, `Task`, `Bundle`, and `MessageHeader` to standardize the content and structure of these orders. It also specifies two communication patterns: RESTful exchange using `Task` and messaging using `MessageHeader` and `Bundle`. The IG outlines workflows for order creation, updates, and cancellations, accommodating both direct communication and interactions involving an intermediary. While it references US Core for some profiles, it primarily defines its own set of profiles tailored to the specific needs of post-acute order exchange. It emphasizes the use of FHIR R4 and includes extensions for prior authorization, appropriate use, and medical review information. The IG is designed to improve the efficiency and accuracy of post-acute order processing, reducing delays and ensuring that patients receive timely care. It explicitly scopes out patient-directed care and services other than DME and Home Health, focusing on provider-to-provider communication. The IG also addresses security and privacy by referencing the Da Vinci HRex IG's guidelines.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.6,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.6
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Administrative Organizations > Insurance Companies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "rationale": "The `ch-epr-term` FHIR Implementation Guide primarily focuses on defining terminology artifacts for use within the Swiss healthcare system, particularly in the context of the Swiss electronic patient record (EPR). It defines Code Systems, Value Sets, Concept Maps, and Naming Systems. These artifacts are based on FHIR R4 and are intended for use within Switzerland (CH). \n\nThe guide includes terminology from various domains, including core profiles, exchange formats, and specific areas like allergy/intolerance, vaccinations, and eTOC. It incorporates terminology from CH Core and other exchange formats, indicating a focus on data modeling and standardization within the Swiss context. The guide also includes mappings between different code systems, such as SNOMED CT and Swissmedic codes, further emphasizing its role in data modeling and interoperability within Switzerland. \n\nThe guide's content suggests that it is primarily aimed at technical implementers, such as EHR vendors and system integrators, who need to implement these terminologies in their systems. It also serves stakeholders in standards organizations and government agencies involved in defining and regulating healthcare data standards in Switzerland. The guide's focus on terminology suggests that it is less directly relevant to clinical care teams or public health organizations, although the defined terminologies would ultimately be used in systems that support these stakeholders. \n\nWhile the guide references other IGs and standards, its core functionality is the creation of new terminology artifacts, not data exchange mechanisms or workflow support. Therefore, it scores highly in the \"Data Modeling\" category under \"Scope/Purpose\" and less so in other categories like \"Data Exchange\" or \"Workflow Support.\"",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Terminology and Value Sets": 0.95
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 1
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.95
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Switzerland": 1
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Technical Implementers > System Integrators": 0.6,
+      "Standards Organizations > Government Agencies": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

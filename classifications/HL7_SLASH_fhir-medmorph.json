@@ -1,0 +1,36 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-medmorph\" defines a reference architecture (RA) for automating data exchange between EHRs and public health agencies or research organizations. It focuses on minimizing the burden on data sources (like EHRs) while making data more accessible for public health and research purposes. The guide specifies how to use FHIR R4 to define \"Knowledge Artifacts\" that describe the events, conditions, and actions (ECA rules) for triggering data extraction and reporting. These artifacts are machine-processable and use FHIR resources like PlanDefinition, Library, ValueSet, Bundle, MessageHeader, Organization, Location, and Endpoint. The guide also outlines how to use FHIR messaging for report submission, leveraging Bundles and MessageHeaders. It references other IGs like US Core, Bulk Data Access, and SMART App Launch for backend services authorization, but focuses on defining its own architecture for automating data exchange. The MedMorph RA IG itself does not define specific content for any particular use case but provides a framework for other \"content IGs\" to build upon. It emphasizes the use of FHIR APIs for data access and exchange, and it outlines workflows for provisioning, notification, report creation, and data submission. The guide also touches on security and privacy considerations, including the use of a \"Trust Service Provider\" for de-identification or pseudonymization. The primary focus is on defining a reusable architecture and workflows for automating data exchange, rather than specifying the exact data elements or profiles for a specific use case. The guide is intended to be used in the United States and aligns with US regulations and standards, but it also aims to be generalizable to other contexts.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.7,
+      "Research": 0.6,
+      "Infrastructure & Foundational": 0.8
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.8,
+      "Data Modeling": 0.4,
+      "Workflow Support": 0.8,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Public Health Organizations > Public Health Agencies": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

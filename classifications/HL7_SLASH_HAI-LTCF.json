@@ -1,0 +1,37 @@
+{
+  "rationale": "The HAI-LTCF FHIR Implementation Guide is focused on enabling the electronic submission of Healthcare Associated Infection (HAI) data from Long-Term Care Facilities (LTCFs) to the National Healthcare Safety Network (NHSN) at the CDC. It defines FHIR profiles and questionnaires for two specific types of reports: a single-person event report for laboratory-identified MDRO or CDI events, and a population summary report for MDRO and CDI LabID event reporting. The IG specifies the structure and content of these reports using FHIR Questionnaires and QuestionnaireResponses, mapping them to corresponding CDA templates. It leverages existing standards like US Core for patient data and references value sets from the Value Set Authoring Center (VSAC). The primary goal is to standardize data collection and exchange, reducing reporting burden and improving data quality. The IG is designed for use within the United States, aligning with NHSN requirements and CDC guidelines. It targets software developers building systems for HAI data reporting, as well as healthcare providers and public health agencies involved in infection surveillance and prevention in LTCFs.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.8,
+      "Clinical Care > General Clinical Care > Medication Management": 0.3,
+      "Clinical Care > General Clinical Care": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.95
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.9,
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Standards Organizations > Government Agencies": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.5,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Public Health Organizations > Disease Surveillance Teams": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

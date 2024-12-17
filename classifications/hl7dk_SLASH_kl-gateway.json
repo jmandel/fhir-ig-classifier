@@ -1,0 +1,35 @@
+{
+  "rationale": "The kl-gateway FHIR Implementation Guide primarily focuses on defining the structure and content of data exchanged between Danish municipalities and the KL Gateway, a central hub for collecting and forwarding healthcare data. The IG specifies a \"CareDeliveryReport\" which is a FHIR Bundle containing resources representing a snapshot of a citizen's health and social care information. This includes data related to conditions, goals, planned interventions, completed interventions, encounters, and observations. The IG defines profiles for each of these resource types, restricting them to the specific data elements required for reporting to the KL Gateway. These profiles are based on the Danish core profiles and align with the FSIII standard for eldercare and health data. The IG also includes examples of how to structure and populate these resources for different scenarios, such as home care and nursing. The IG emphasizes the use of specific codes from FSIII and other relevant code systems. It also defines validation rules to ensure data quality and consistency. The IG is designed to facilitate a transition to a simplified version of FSIII, allowing for a hybrid approach during the transition period. The IG also introduces a new resource called \"GeneralEncounter\" which will eventually replace the existing \"Encounter\" resource. The IG is intended for use by technical implementers, such as EHR vendors and system integrators, who are responsible for developing systems that can exchange data with the KL Gateway. It is also relevant to healthcare provider organizations, public health organizations, and standards organizations involved in the development and implementation of health information exchange standards in Denmark.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Standards Organizations > Government Agencies": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.5,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

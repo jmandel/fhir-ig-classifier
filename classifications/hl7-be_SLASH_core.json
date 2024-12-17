@@ -1,0 +1,34 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) defines a set of core profiles and extensions for use within the Belgian healthcare system. It primarily focuses on establishing a common foundation for interoperability by defining data models and constraints on existing FHIR resources. \n\nThe IG specifies profiles for key resources like Patient, Practitioner, Organization, Location, and DocumentReference, tailoring them to the Belgian context with specific identifiers, code systems, and extensions. For example, the BePatient profile mandates the use of the Belgian National Registry number (SSIN) and includes extensions for birth place and nationality. Similarly, the BePractitioner profile requires the NIHDI identifier, unique to Belgian healthcare professionals. \n\nFurthermore, the IG defines several custom extensions, such as BeExtCodeableConcept and BeExtCodeableReference, to address specific data representation needs within the Belgian healthcare system. It also establishes a set of value sets and code systems, including BeCivilState and BeContactPerson, to ensure consistent use of terminology. \n\nThe IG's emphasis on data modeling is evident in the detailed specifications for each profile, including constraints on cardinality, data types, and value sets. While it does touch upon data exchange through the inclusion of DocumentReference and Communication profiles, the primary focus is on defining the structure and content of the data itself. \n\nGeographically, the IG is clearly scoped for Belgium, as indicated by the use of Belgian-specific identifiers, code systems, and the canonical URL referencing the Belgian eHealth platform. The stakeholders targeted by this IG include technical implementers like EHR vendors and system integrators, as well as healthcare provider organizations and administrative bodies within Belgium.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.8,
+      "Clinical Care > General Clinical Care": 0.4,
+      "Administrative & Financial": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Belgium": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > System Integrators": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.5,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "rationale": "The Da Vinci Prior Authorization Support (PAS) FHIR Implementation Guide primarily focuses on streamlining the prior authorization process within the United States healthcare system. It defines a set of FHIR profiles, operations, and workflows to enable electronic submission and processing of prior authorization requests. \n\nConcretely, this IG defines:\n\n1.  **Data Models:** Profiles like `PASClaim`, `PASClaimResponse`, `PASRequestBundle`, and `PASResponseBundle` specify the structure and content of prior authorization requests and responses using FHIR resources. These profiles constrain existing FHIR resources (e.g., `Claim`, `ClaimResponse`, `Bundle`) and introduce extensions to capture data elements specific to the prior authorization process, often driven by X12 278 requirements.\n2.  **Operations:** The `Claim-submit` operation defines how a prior authorization request (represented as a `PASRequestBundle`) is submitted to a payer or intermediary system. The `Claim-inquiry` operation allows for querying the status of previously submitted prior authorization requests.\n3.  **Workflows:** The IG outlines the sequence of interactions between provider systems, intermediaries, and payer systems, including handling of pended responses, updates to requests, and cancellation of requests. It leverages FHIR's `Subscription` resource to enable asynchronous notification of changes to prior authorization status.\n4.  **Terminology Bindings:** The IG specifies value sets and code systems to be used for various data elements within the defined profiles, often referencing X12 code systems to ensure compatibility with existing standards.\n5.  **Conformance Requirements:** CapabilityStatements define the expected capabilities of client (EHR) and server (intermediary) systems implementing the IG.\n\nPAS does not define new clinical data models beyond what is needed for prior authorization. It focuses on the administrative and financial aspects of healthcare, specifically the process of obtaining approval from payers before delivering certain services or items. While it references clinical resources (e.g., `ServiceRequest`, `MedicationRequest`), it does so to link the prior authorization request to the underlying clinical need, not to define new clinical data exchange standards. The IG is tightly scoped to the US healthcare context, as evidenced by its references to HIPAA regulations, X12 standards, and US-specific identifiers (e.g., NPI).",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Prior Authorization": 0.95
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.8,
+      "Data Modeling": 0.7,
+      "Workflow Support": 0.5
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Administrative Organizations > Insurance Companies": 0.8,
+      "Administrative Organizations > Health Plans": 0.8,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-identity-matching-ig\" primarily focuses on defining standards and best practices for digital identity verification and patient matching in healthcare. It establishes requirements for verifying the identity of individuals and organizations, and it profiles the FHIR patient `$match` operation for cross-organizational use. \n\n\nThe IG emphasizes the importance of identity assurance levels (IALs) and describes how to achieve them in typical healthcare settings. It introduces intermediate IALs (1.2-1.8) not currently specified by NIST but intended to align with NIST 800-63-3 Digital Identity Guidelines. The IG also defines requirements for Digital Identifiers and Enterprise Identifiers, outlining their use in person matching. \n\n\nRegarding patient matching, the IG extends the HL7 FHIR patient `$match` operation for cross-organizational use by authorized parties. It provides guidance on using verified matching attributes, managing Digital Identifiers, and interpreting match results. The IG also introduces the concept of weighted input information, assigning values to specific patient data elements to improve matching accuracy. \n\n\nFurthermore, the IG addresses security and privacy considerations, although it acknowledges that these are generally out of scope. It specifies conditions for sharing personally identifiable information (PII) and emphasizes the need for explicit end-user authorization in patient-initiated workflows. The IG also touches upon exception handling and benchmarking, inviting feedback from the community on these topics. \n\n\nIn terms of artifacts, the IG defines several FHIR profiles, including `IDI-Patient`, `IDI-Patient-L0`, `IDI-Patient-L1`, and `FASTIDUDAPPerson`. It also defines the `$IDI-match` operation, which extends the standard `$match` operation with additional constraints. The IG includes examples of these profiles and operations to illustrate their usage. \n\n\nOverall, the \"fhir-identity-matching-ig\" provides a comprehensive framework for digital identity and patient matching in healthcare, aiming to enhance interoperability and data exchange across organizations.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.6,
+      "Infrastructure & Foundational": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.8,
+      "Security & Privacy": 0.3,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.8,
+      "Standards Organizations": 0.7
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

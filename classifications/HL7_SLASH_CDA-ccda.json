@@ -1,0 +1,31 @@
+{
+  "rationale": "This implementation guide (IG) defines constraints for the Clinical Document Architecture (CDA) standard, specifically focusing on creating templates for various clinical document types. The primary focus is on defining new templates and modifying existing ones within the CDA framework, aligning with updates for USCDI elements. \n\nThe IG introduces new templates like \"Advance Directive Existence Observation\" and deprecates others like \"Advance Directive Organizer.\" It also replaces and changes existing templates, such as updating \"EncounterActivity\" and modifying \"GenderIdentityObservation.\" These changes involve adjusting code bindings, adding new entries, and updating section templates. \n\nKey aspects include updating the USCDI Table, terminology, and addressing various tracker issues related to CDA. The guide emphasizes data modeling within the CDA context, defining how data should be structured and represented using CDA templates. It also touches upon data exchange by standardizing the format and content of clinical documents for interoperability. \n\nGeographically, the guide is tailored for the United States, as indicated by references to USCDI and US Realm templates. The stakeholders primarily include technical implementers like EHR vendors and healthcare provider organizations, particularly clinical care teams involved in creating and using clinical documentation. \n\nThe guide does not focus on specific clinical specialties but rather provides a general framework applicable across various clinical settings. It does not delve into knowledge representation or workflow support in detail but concentrates on the structural and semantic aspects of clinical documents.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "CDA": 1,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Standards Organizations": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

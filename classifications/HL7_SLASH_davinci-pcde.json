@@ -1,0 +1,33 @@
+{
+  "rationale": "The Da Vinci PCDE (Payer Coverage Decision Exchange) Implementation Guide focuses on facilitating the exchange of information between payers to ensure continuity of care when a patient transitions from one health plan to another. It defines a standardized mechanism for transferring \"current active treatments\" and related information from a prior payer to a new payer. \n\nThe IG defines specific FHIR profiles, extensions, code systems, value sets, and operations to support this data exchange. The core artifact is the \"Coverage Transition Document,\" a FHIR document (Bundle) containing a Composition resource and other resources grouped into sections. This document includes information about active treatments, prior coverage, supporting clinical data, and other relevant documentation. \n\nThe IG leverages FHIR R4 and builds upon other IGs like US Core, HRex, PDex, and PAS. It defines a workflow where the new payer initiates a request for the Coverage Transition Document using a Task resource, optionally using a Subscription to monitor the Task's progress. The original payer then assembles the document and updates the Task. The new payer retrieves the document and uses it to inform their utilization management process. \n\nWhile the IG mentions clinical aspects and references clinical data, its primary focus is on the administrative process of transferring coverage-related information between payers. It emphasizes data modeling (defining the structure and content of the Coverage Transition Document) and data exchange (defining the workflow and interactions for requesting and retrieving the document). The IG is specifically designed for the US healthcare system, as indicated by references to US Core, CMS, and ONC.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial": 0.8,
+      "Clinical Care > General Clinical Care": 0.35
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.85,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Administrative Organizations > Health Plans": 0.9,
+      "Administrative Organizations > Insurance Companies": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.3,
+      "Standards Organizations": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

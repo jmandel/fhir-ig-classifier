@@ -1,0 +1,33 @@
+{
+  "rationale": "The au-fhir-pd Implementation Guide primarily focuses on defining a set of FHIR profiles and related artifacts to support the creation and operation of provider directories within the Australian healthcare context. \n\nThe core functionality of this IG revolves around defining specific profiles for key resources like Organization, Practitioner, PractitionerRole, HealthcareService, Location, and Endpoint. These profiles are tailored to the Australian context, incorporating relevant identifiers (e.g., HPI-O, HPI-I, Medicare Provider Number) and addressing schemes. The IG mandates specific data elements within these profiles as \"MUST SUPPORT,\" ensuring that systems implementing the guide can reliably exchange and process this essential information.\n\nFurthermore, the IG specifies search parameters for each of these resource types, enabling clients to query provider directories based on various criteria such as name, identifier, location, and service type. It also defines the expected behavior for search operations, including support for chained searches and the `_include` parameter.\n\nIn addition to data modeling and search capabilities, the IG addresses the use of these resources in the context of secure messaging. It outlines how Endpoints should be associated with PractitionerRoles and HealthcareServices to facilitate the delivery of messages. The IG also provides guidance on generating HL7 V2 messages based on the information contained in the FHIR resources.\n\nFinally, the IG touches upon the concept of federated directories, where multiple directory services can be combined to provide a unified view. It defines requirements for federated services, such as support for paging and the ability to handle identity conflicts.\n\nOverall, the au-fhir-pd IG provides a comprehensive framework for building and interacting with provider directories in Australia, with a strong emphasis on data modeling, search, and secure messaging.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Provider Directories": 0.95,
+      "Infrastructure & Foundational > Document and Message Exchange": 0.35
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.8,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Australia": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

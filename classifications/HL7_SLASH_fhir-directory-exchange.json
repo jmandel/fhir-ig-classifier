@@ -1,0 +1,35 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-directory-exchange\" primarily focuses on defining the structure and exchange mechanisms for a national healthcare directory. Analyzing the provided content:\n\n-   **sushi-config.yaml**: This file outlines the configuration for the IG, including metadata like the canonical URL, version, name, title, status, publisher, description, jurisdiction, license, and FHIR version. It also specifies dependencies on other IGs (hl7.fhir.us.core and hl7.fhir.us.directory-query) and defines the menu structure for the IG's documentation.\n\n-   **bulk-data.md**: This file details the specifics of bulk data extraction and subscriptions for the healthcare directory. It describes how to request an entire copy of all content or changes since a specific point in time, using FHIR's `$export` operation. It also proposes a mechanism for handling deleted items and discusses the use of the `List` resource for filtering resources. The document outlines the format of the bulk data extract (nd-json) and the process for starting, tracking, retrieving, and finishing the extract.\n\n-   **capstatements.md**: This file lists the CapabilityStatements defined for the IG, which outline the conformance requirements for the Validated Healthcare Directory and Client applications.\n\n-   **conformance.md**: This file outlines the conformance requirements for the Validated Healthcare Directory, including supported FHIR profiles, RESTful operations, and search parameters.\n\n-   **downloads.md**: This file provides links to download the package file, schematrons, examples, and a downloadable copy of the entire IG.\n\n-   **general-guidance.md**: This file provides background information on healthcare directories, their scope, and use cases. It also discusses the ONC/FHA Healthcare Directory effort, the relation to the Da Vinci PlanNet Directory, and the FHIR At Scale Taskforce (FAST) effort. It outlines various use cases for healthcare directories and describes the relationships between resources used in the IG.\n\n-   **technical-guidance.md**: This file presents a concept diagram of a central source of national directory data and describes the exchange API for obtaining data from a Verified National Directory. It discusses attestation, validation, verification, exchange, and query processes. It also addresses restricted content and redundancy/ambiguity across resources.\n\n-   **searchparameters.md**: This file lists the search parameters defined for the IG.\n\nBased on this analysis, the IG is primarily concerned with defining a national healthcare directory, focusing on data exchange mechanisms, data modeling for directory-related resources, and conformance requirements. It leverages FHIR R4 and is intended for use in the United States.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Provider Directories": 0.9,
+      "Infrastructure & Foundational > Data Exchange": 0.6,
+      "Infrastructure & Foundational > Document and Message Exchange": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.8,
+      "Data Modeling": 0.7,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Administrative Organizations > Healthcare Administrators": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

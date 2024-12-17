@@ -1,0 +1,34 @@
+{
+  "rationale": "The CH CRL (Cancer Registry) FHIR Implementation Guide defines a set of FHIR resources, profiles, extensions, and value sets to support cancer registration in Switzerland. It primarily focuses on data modeling for cancer cases, specifying the structure and content of cancer reports. \n\nThe IG defines a cancer report as a FHIR document (Bundle) containing a Composition resource that references other resources representing various aspects of a cancer case. These resources include Patient, Organization, Practitioner, Condition, Observation, Procedure, Specimen, and DiagnosticReport. The IG defines specific profiles for these resources, constraining their elements and value sets to align with the requirements of the Swiss National Cancer Registration Ordinance (OCR). \n\nThe IG also defines extensions to capture additional data elements not present in the core FHIR resources. For example, it defines extensions for capturing the ICD-O-3 behavior, laterality, and histological grade of a tumor. It also defines extensions for capturing TNM staging information, including the cTNM, pTNM, and y-prefix. \n\nFurthermore, the IG defines or references several value sets to ensure consistent coding of data elements. These value sets include the Swiss extension of ICD-10-GM for diagnosis coding, ICD-O-3 for topography and morphology coding, and several NKRS (National Agency for Cancer Registration) code systems for capturing specific cancer-related data elements. \n\nWhile the IG primarily focuses on data modeling, it also touches upon data exchange by defining the cancer report as a FHIR document, which can be exchanged using FHIR's document exchange mechanisms. However, it does not define specific APIs or operations for data exchange. The IG also includes a use case illustrating the process of cancer registration, which implicitly defines a workflow. \n\nIn summary, the CH CRL IG is a comprehensive specification for representing cancer registration data in FHIR, primarily focusing on data modeling with some elements of data exchange and workflow support.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Oncology": 0.9,
+      "Research": 0.3,
+      "Public Health": 0.6
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Switzerland": 0.9
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Registry Systems": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Standards Organizations > Government Agencies": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

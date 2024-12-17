@@ -1,0 +1,35 @@
+{
+  "rationale": "The \"emedicinal-product-info\" FHIR Implementation Guide (IG) primarily focuses on defining the structure and content of electronic Product Information (ePI) for medicinal products. It specifies how to represent ePI using FHIR resources, including narrative content, document metadata, medicinal product details, organization information, and clinical use data. The IG outlines three types of ePI documents: Type 1 (narrative content and basic medicinal product list), Type 2 (narrative content and product information), and Type 3 (narrative, product information, and structured clinical use information). \n\nThe IG defines profiles for 13 FHIR resources: List, Bundle, Composition, Binary, Organization, RegulatedAuthorization, MedicinalProductDefinition, AdministrableProductDefinition, ManufacturedItemDefinition, Ingredient, SubstanceDefinition, PackagedProductDefinition, and ClinicalUseDefinition. These profiles specify the data elements, code systems, and value sets to be used for creating ePI documents. The IG also provides guidance on best practices for display names, images, section headings, accessibility, and semi-structured text. \n\nWhile the IG references external standards and terminologies, its core function is to define the data model and structure for ePI documents using FHIR. It aims to establish a common and interoperable standard for exchanging medicinal product information across international healthcare jurisdictions. The IG is intended to be a baseline from which other region-specific ePI implementation guides can be derived.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Medication Management": 0.9,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R5": 0.95,
+      "FHIR": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Administrative Organizations > Insurance Companies": 0.3,
+      "Administrative Organizations > Health Plans": 0.3,
+      "Administrative Organizations": 0.3,
+      "Public Health Organizations > Public Health Agencies": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

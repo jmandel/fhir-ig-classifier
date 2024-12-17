@@ -1,0 +1,42 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-us-ph-library\" defines a set of reusable FHIR profiles, extensions, value sets, and code systems specifically tailored for public health use cases within the United States. Its primary function is to establish a standardized library of data models and terminologies that can be referenced by other, more specialized, public health IGs, promoting consistency and reducing redundancy across implementations. \n\nThe IG's content is heavily focused on data modeling, defining numerous profiles for core public health concepts like conditions, encounters, observations, and entities such as patients, organizations, and locations. It also defines architectural profiles related to data exchange, including bundles, message definitions, and endpoints. A significant portion of the IG is dedicated to terminology, with profiles for value sets, code systems, and libraries that support computable and executable definitions. \n\nWhile the IG touches upon data exchange mechanisms through its architectural profiles, its core strength lies in defining the structure and content of public health data. It establishes a foundation for interoperability by standardizing the \"what\" of data exchange, rather than the \"how.\" The IG's artifacts are intended for use by a wide range of stakeholders, including EHR vendors, public health agencies, and standards organizations. It is explicitly designed to align with US Core, reusing its profiles where possible and only adding constraints or new profiles when necessary for public health needs. The IG's geographic scope is primarily the United States, as indicated by its title, jurisdiction, and reliance on US-specific terminologies and standards.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.9,
+      "Infrastructure & Foundational": 0.8,
+      "Clinical Care > General Clinical Care": 0.4,
+      "Research": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Knowledge Representation": 0.6,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Standards Organizations": 0.9,
+      "Public Health Organizations": 0.8,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Technical Implementers > System Integrators": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.4,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

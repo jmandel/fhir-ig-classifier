@@ -1,0 +1,37 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-us-ndh\" primarily focuses on establishing a national directory infrastructure in the US. It defines a comprehensive set of FHIR artifacts, including profiles, extensions, search parameters, and terminologies, to create a robust directory data model. The core of this IG is the definition of base artifacts and the National Directory API artifacts. The base artifacts provide a foundational data model, while the National Directory API artifacts constrain these base artifacts to define methods for exchanging national directory information with local directories. This includes a FHIR API and a scheduled exchange operation, encompassing subscriptions and bulk data export. \n\n\nThe IG also provides guidance on attestation, detailing how individuals and organizations can contribute data to the national directory, and verification, describing how attested data is checked for accuracy. It further defines Local Directory API artifacts, which constrain the base artifacts and outline optional capability statements for various use cases that local directories might support. \n\n\nBased on the content, the IG is heavily focused on data modeling and exchange, defining how data should be structured and how it can be shared between a national directory and local directories. It also touches upon security and privacy considerations, particularly in the context of data exchange. The geographic scope is clearly centered on the United States, and the primary stakeholders include technical implementers, healthcare provider organizations, and administrative organizations involved in managing and using directory information. The IG is based on FHIR R4 and is intended to be used by a wide range of stakeholders, including EHR vendors, healthcare providers, and administrative organizations.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial": 0.5,
+      "Infrastructure & Foundational": 0.7
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 1
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.9,
+      "Security & Privacy": 0.3,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 1
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Administrative Organizations > Health Plans": 0.4,
+      "Administrative Organizations > Healthcare Administrators": 0.5,
+      "Standards Organizations > Government Agencies": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

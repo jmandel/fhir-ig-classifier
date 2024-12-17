@@ -1,0 +1,37 @@
+{
+  "rationale": "The ITI mXDE Implementation Guide primarily focuses on defining a mechanism for extracting data elements from structured documents and making them accessible through FHIR-based queries. It introduces a new Provenance profile to link extracted data elements back to their source documents, enabling traceability and contextual understanding. The IG specifies the behavior of two actors: the Data Element Extractor and the Clinical Data Consumer. The Data Element Extractor is responsible for accessing documents, extracting data elements, and creating Provenance resources. The Clinical Data Consumer retrieves data elements and uses the associated Provenance to access the source documents. The IG defines requirements for these actors, including their grouping with other actors from profiles like QEDm, MHD, and XDS. It also outlines deployment models for integrating mXDE into various document sharing infrastructures. The core functionality revolves around defining how data is modeled (Provenance profile) and exchanged (through QEDm queries and document retrieval). The IG does not define specific clinical data models or workflows but rather provides a framework for accessing and linking data elements and documents.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.8,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Standards Organizations": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Public Health Organizations": 0.3,
+      "Administrative Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

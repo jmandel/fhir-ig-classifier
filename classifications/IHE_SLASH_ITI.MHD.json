@@ -1,0 +1,34 @@
+{
+  "rationale": "The ITI.MHD Implementation Guide defines a set of actors and transactions for enabling mobile access to health documents. It focuses on providing a simplified, RESTful API for document sharing, leveraging FHIR as the underlying standard. The core functionality revolves around publishing documents (Provide Document Bundle [ITI-65], Simplified Publish [ITI-105], Generate Metadata [ITI-106]), querying for document metadata (Find Document Lists [ITI-66], Find Document References [ITI-67]), and retrieving documents (Retrieve Document [ITI-68]).\n\nThe IG defines specific profiles for DocumentReference, List, and Bundle resources, mapping them to XDS metadata concepts. It also specifies CapabilityStatements for each actor, outlining the required and optional transactions. Security considerations are addressed, referencing other IHE profiles like ATNA and IUA. The IG supports various options, including Comprehensive Metadata, XDS on FHIR, UnContained Reference, Simplified Publish, and Generate Metadata, allowing for flexibility in implementation based on specific use cases and environments.\n\nITI.MHD primarily targets technical implementers, such as EHR vendors and system integrators, who are responsible for building systems that support document sharing. It also impacts healthcare provider organizations, public health organizations, and administrative organizations by enabling standardized data exchange. The IG is designed to be used in conjunction with other IHE profiles, particularly those related to document sharing (XDS, XCA, XDR) and patient identity management (PIXm, PDQm). The geographic scope is primarily focused on the Universal Realm, although it can be adapted for national or regional use.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Document and Message Exchange": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

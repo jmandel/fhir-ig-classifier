@@ -1,0 +1,36 @@
+{
+  "rationale": "The cqf-measures Implementation Guide (IG) defines how to represent quality measures using FHIR and CQL. Analyzing the provided content, we can determine the following:\n\n*   **Functional Domain:** The IG focuses on defining how to represent quality measures, which are used to assess and improve the quality of clinical care. It also touches upon the broader quality improvement ecosystem, which includes clinical decision support, public health reporting, and research. However, the primary focus is on enabling the computable representation and exchange of quality measures, making \"Clinical Care > General Clinical Care\" the most applicable domain. The IG also defines profiles and extensions related to measure representation, terminology services, and capability statements for measure repositories, which fall under \"Infrastructure & Foundational\".\n\n*   **HL7 Standard:** The IG explicitly states it is built upon FHIR R4 and uses FHIR resources like Measure and Library. It also references the Clinical Quality Language (CQL) for defining measure logic, which is closely tied to FHIR. Therefore, \"FHIR > FHIR R4\" is the most applicable standard.\n\n*   **Scope/Purpose:** The IG defines profiles for FHIR resources (e.g., Measure, Library), extensions, and terminology to represent quality measures. It also provides guidance on using CQL for measure logic and defines capability statements for measure repositories. This indicates a strong focus on \"Data Modeling\" and \"Knowledge Representation\". While it touches upon data exchange through capability statements, the primary focus is on defining the structure and content of quality measures, not the mechanisms for exchange.\n\n*   **Geographic Scope:** The IG is developed by HL7 and references US-specific initiatives like eCQMs and the eCQI Resource Center. It also mentions US Core and QI-Core profiles. This suggests a focus on the \"National Jurisdictions > United States\", although the concepts could be adapted for other regions.\n\n*   **Stakeholders:** The IG is intended for measure developers, software developers of measure authoring tools, implementers of quality measures, and organizations involved in quality reporting. This includes \"Technical Implementers\" like EHR vendors and system integrators, \"Healthcare Provider Organizations\" like hospital IT departments and clinical care teams, and \"Standards Organizations\" like government agencies and SDOs. It also indirectly impacts \"Public Health Organizations\" through the use of quality measures in public health reporting.\n\nBased on this analysis, the cqf-measures IG primarily focuses on defining the structure, content, and representation of quality measures using FHIR and CQL, with a strong emphasis on data modeling and knowledge representation within the context of general clinical care and infrastructure in the United States.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Infrastructure & Foundational": 0.6,
+      "Research": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Knowledge Representation": 0.8,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Standards Organizations > Government Agencies": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

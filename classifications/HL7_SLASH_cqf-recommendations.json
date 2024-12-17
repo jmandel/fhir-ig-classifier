@@ -1,0 +1,35 @@
+{
+  "rationale": "The \"cqf-recommendations\" FHIR Implementation Guide (IG) defines a framework for creating and sharing Clinical Practice Guidelines (CPGs) using FHIR. It focuses on representing clinical knowledge in a computable format, enabling the development of decision support systems that can be integrated into clinical workflows. \n\n\nThe IG defines several key artifacts:\n\n1.  **Profiles:** It defines numerous profiles on FHIR resources like PlanDefinition, ActivityDefinition, and Task to represent various aspects of CPGs, such as recommendations, strategies, pathways, and activities. These profiles specify how these resources should be used to represent CPG content, including eligibility criteria, enrollment processes, and clinical actions.\n2.  **Extensions:** It defines extensions to add metadata and semantics specific to CPGs, such as the strength of a recommendation, the quality of evidence, and the rationale behind a recommendation.\n3.  **Code Systems and Value Sets:** It defines code systems and value sets to represent concepts specific to CPGs, such as activity types, case feature types, and recommendation directions.\n4.  **Operations:** It defines operations like `PlanDefinition/$apply` to support the application of CPGs to specific patient data, generating care plans or recommendations.\n5.  **Activity Flow:** It defines a detailed activity flow that describes how activities within a CPG transition through different phases (proposal, plan, order, event) using FHIR's request and event patterns. This flow specifies the valid state transitions for various request and event resources.\n6.  **Conceptual Knowledge Architecture:** It outlines a conceptual architecture that separates concerns into Case, Plan, and Workflow, providing a framework for representing patient state, clinical decision-making, and care delivery processes.\n7.  **Knowledge Representation:** It describes different levels of knowledge representation, from narrative guidelines to computable artifacts, and defines tiers of functionality (data, logic, user interface).\n8.  **Agile CPG Development:** It advocates for an agile approach to CPG development, emphasizing cross-functional teams, iterative development, and the use of real-world data.\n\n\nThe IG does not focus on a specific clinical specialty but provides a general framework applicable to various clinical domains. It primarily targets technical implementers, such as EHR vendors and system integrators, as well as healthcare provider organizations and standards organizations involved in developing and implementing CPGs. The IG is based on FHIR R4 and is intended for international use, although some examples may be specific to the United States.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational": 0.5
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Knowledge Representation": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.7,
+      "Data Exchange": 0.4
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8,
+      "National Jurisdictions > United States": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

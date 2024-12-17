@@ -1,0 +1,32 @@
+{
+  "rationale": "The Bulk Data Access IG primarily focuses on defining a standardized mechanism for exporting large datasets from a FHIR server. It specifies three core OperationDefinitions: system-level export, group-level export, and patient-level export. These operations allow clients to request bulk data exports asynchronously. The IG defines the parameters for these operations, including `_outputFormat`, `_since`, `_type`, `_elements`, `patient`, `includeAssociatedData`, and `_typeFilter`. It also specifies the format of the status responses, including in-progress, error, and complete statuses. The complete status response includes a JSON manifest with metadata and links to the generated bulk data files in NDJSON format. The IG defines how clients can retrieve these files and handle attachments. Additionally, it addresses security and privacy considerations, recommending the use of SMART Backend Services Authorization and TLS. The IG also provides guidance on server capability documentation, outlining key aspects that servers should document to clarify their implementation choices. While the IG references other standards and IGs, its core contribution is the definition of the bulk data export operations, parameters, and response formats.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Document and Message Exchange": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Administrative Organizations > Health Plans": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

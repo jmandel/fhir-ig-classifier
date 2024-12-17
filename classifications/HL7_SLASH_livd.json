@@ -1,0 +1,35 @@
+{
+  "rationale": "The LIVD (LOINC for In Vitro Diagnostics) Implementation Guide primarily focuses on defining a standardized format for publishing and exchanging mappings between vendor-specific IVD test codes and LOINC codes. It also includes mappings for coded result values to LOINC or SNOMED CT codes. \n\n**Functional Domain:** The IG's core function is to facilitate the accurate mapping of IVD test codes to LOINC codes, which are used in clinical care for identifying laboratory tests. While it touches upon administrative aspects through streamlining the mapping process, its primary focus is on the clinical domain, specifically laboratory medicine. It does not directly address public health or research-specific concerns, although accurate LOINC mapping can indirectly benefit these areas.\n\n**HL7 Standard:** The IG explicitly states it is based on the FHIR standard, specifically FHIR R4. It defines FHIR profiles for various resources like Bundle, Composition, DeviceDefinition, ObservationDefinition, ConceptMap, CodeSystem, and ValueSet to represent the LIVD catalog and its components.\n\n**Scope/Purpose:** The IG's main purpose is data modeling, as it defines the structure and content of the LIVD catalog, including how IVD test codes, LOINC codes, and coded result values are represented and related. It also has a data exchange aspect, as it specifies a format for publishing and exchanging this information, although it does not define specific APIs or protocols. The IG touches upon knowledge representation by including LOINC and SNOMED CT codes and their properties, but its primary focus is not on representing clinical knowledge or guidelines.\n\n**Geographic Scope:** The IG acknowledges contributions from various international organizations and individuals, suggesting a broader scope. However, it specifically mentions the involvement of US agencies like the FDA, CDC, NLM, CMS, and ONC, indicating a strong focus on the US context. It also references the IICC, an international consortium, but the emphasis on US regulations and standards suggests a national scope with potential for international adaptation.\n\n**Stakeholders:** The IG is primarily targeted at technical implementers, such as EHR vendors and device manufacturers, who need to implement the LIVD format for publishing and consuming LOINC mappings. It is also relevant to healthcare provider organizations, particularly laboratory systems teams, who will use the LIVD catalog to configure their LIS and map IVD test codes to LOINC. Standards organizations, like HL7, are also stakeholders as they are involved in the development and maintenance of the IG. While the IG does not directly address patient-facing stakeholders, accurate LOINC mapping can indirectly benefit patients by improving the accuracy and interoperability of their laboratory results.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Medication Management": 0.3,
+      "Clinical Care > General Clinical Care": 0.7,
+      "Clinical Care > Specialty Care > Laboratory": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Knowledge Representation": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > Device Manufacturers": 0.8,
+      "Healthcare Provider Organizations > Laboratory Systems Teams": 0.9,
+      "Standards Organizations": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

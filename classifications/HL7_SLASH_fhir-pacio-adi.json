@@ -1,0 +1,35 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-pacio-adi\" focuses on defining the technical specifications for representing and exchanging Advance Directive Information (ADI) using FHIR. The guide defines several FHIR profiles, extensions, value sets, and other artifacts to support this goal.\n\nSpecifically, the guide defines profiles for representing patient-authored advance directives (PACP) and portable medical orders (PMO), including Composition, DocumentReference, Observation, Goal, CarePlan, and ServiceRequest resources. It also defines extensions to capture additional information relevant to advance directives, such as clauses, jurisdiction, and version numbers. The guide specifies value sets for concepts like healthcare agent decisions, intervention preferences, and documentation types. It also includes guidance on document structure, digital signatures, and security considerations.\n\nIn terms of functional domains, the guide primarily addresses clinical care, with a focus on representing patient preferences and medical orders. It also touches on administrative aspects by defining structures for document management and exchange. The guide is based on FHIR R4 and is intended for use in the United States, as indicated by the canonical URL and jurisdiction. The primary stakeholders are technical implementers, such as EHR vendors and system integrators, as well as healthcare provider organizations involved in advance care planning. The guide's main purpose is to facilitate data modeling and exchange, enabling interoperability between systems that create, store, and consume advance directive information.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.3,
+      "Security & Privacy": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Technical Implementers > System Integrators": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

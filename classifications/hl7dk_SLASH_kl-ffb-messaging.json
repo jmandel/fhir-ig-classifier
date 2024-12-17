@@ -1,0 +1,35 @@
+{
+  "rationale": "The `kl-ffb-messaging` FHIR Implementation Guide defines a system for exchanging messages related to social care planning and coordination in Denmark, specifically focusing on the \"Fælles Faglige Begrebsmodel\" (FFB) or Common Conceptual Model. \n\n**Core Functionality:**\n\n1.  **Messaging Framework:** The IG establishes a messaging framework based on FHIR's `Bundle` and `MessageHeader` resources. It defines a specific message event code (`ffb-order`) for orders related to care plans and related information.\n2.  **Order Message Structure:** It defines a profile (`KLMessagingFFBOrderMessage`) for order messages, which are `Bundle` resources of type `message`. These messages contain a `MessageHeader` and various resources related to the order, such as `CarePlan`, `InformationGathering`, `Account`, and `DocumentReference`.\n3.  **Care Plan and Related Resources:** The IG defines profiles for `CarePlan` (`KLMessagingFFBOrderCarePlan`) and related resources like `Intervention` (`KLMessagingFFBIntervention`), `CitizenObjective` (`KLMessagingFFBCitizenObjective`), `InterventionPurpose` (`KLMessagingFFBInterventionPurpose`), `InterventionGoal` (`KLMessagingFFBInterventionGoal`), `TargetGroup` (`KLMessagingFFBTargetGroup`), and `Condition` (`KLMessagingFFBCondition`). These profiles adapt the standard FHIR resources to the specific needs of the FFB model.\n4.  **Information Gathering:** It defines a profile for `InformationGathering` (`KLMessagingFFBInformationGathering`), which represents the assessment of the citizen. This includes references to `Evaluation` (`KLMessagingFFBEvaluation`) and `MatterOfInterest` (`KLMessagingFFBMatterOfInterest`) resources.\n5.  **Citizen and Related Persons:** The IG defines profiles for representing citizens (`KLMessagingFFBCitizen`), related persons (`KLMessagingFFBRelatedPerson`), and guardians (`KLMessagingFFBGuardian`). It also includes a profile for `Consent` (`KLMessagingFFBConsent`) related to information sharing.\n6.  **Organizations:** It defines profiles for organizations involved in the messaging process, including sending and receiving organizations (`KLMessagingFFBOrganization`), participating organizations (`KLMessagingFFBParticipatingOrganization`), and account owners (`KLMessagingFFBAccountOwner`).\n7.  **Account and Document Reference:** The IG includes profiles for `Account` (`KLMessagingFFBAccount`) to handle financial aspects and `DocumentReference` (`KLMessagingFFBDocumentReference`) for referencing attachments.\n8.  **Terminology:** It defines several code systems and value sets specific to FFB messaging, including relationship types, guardianship forms, consent policies, and participant roles.\n9.  **Extensions:** The IG defines extensions for specific data elements like acting municipality (`KLMessagingFFBActingMunicipalityExtension`), guardianship form (`KLMessagingFFBGuardianshipFormExtension`), and participation description (`KLMessagingFFBParticipationDescriptionExtension`).\n\n**Overall, the `kl-ffb-messaging` IG provides a comprehensive framework for exchanging structured information related to social care planning and coordination in Denmark, leveraging FHIR's messaging capabilities and adapting its resources to the FFB model.**",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Administrative & Financial": 0.3,
+      "Infrastructure & Foundational": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.85,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 0.9
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Public Health Organizations > Public Health Agencies": 0.6,
+      "Administrative Organizations > Healthcare Administrators": 0.5,
+      "Technical Implementers > System Integrators": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

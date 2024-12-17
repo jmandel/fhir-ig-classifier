@@ -1,0 +1,33 @@
+{
+  "rationale": "The `patientwill` Implementation Guide defines a set of FHIR resources, profiles, extensions, value sets, and code systems to represent patient directives and wills within the Belgian healthcare context. It focuses on capturing patient preferences regarding medical treatments, end-of-life care, and research participation. \n\nThe core artifact is the `BePatientWill` profile, derived from the FHIR `Consent` resource. This profile specifies how to represent various aspects of a patient's will, including the type of directive (category), the specific directive code, the date and time of recording, the patient involved, and optional supporting evidence. It also defines extensions like `BeExtSimpleNote` for adding notes and `BeExtRecorder` to identify the person recording the will. \n\nAdditionally, the IG defines two code systems: `BeCSPatientWillCategory` for categorizing patient wills (e.g., resuscitation, euthanasia, organ donation) and `BeCSPatientWillCode` for specific directive codes (e.g., DNR, no hospitalization, blood transfusion refusal). These code systems are used within the corresponding value sets `BeVSPatientWillCategory` and `BeVSPatientWillCode`. \n\nThe IG also includes a logical model, `BeModelPatientWill`, which outlines the structure and data elements for representing patient wills in a more abstract way. This model serves as a blueprint for the `BePatientWill` profile. \n\nFinally, the `patientwill1` instance provides an example of how to use the `BePatientWill` profile to represent a specific patient's directive, in this case, a \"Do Not Resuscitate\" order. \n\nOverall, this IG primarily focuses on data modeling, defining the structure and content of patient will information using FHIR resources and profiles. It also touches upon data exchange by specifying how this information can be represented and shared using FHIR. The IG is specifically tailored for the Belgian context, as indicated by the use of Belgian-specific identifiers, code systems, and jurisdictions.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Belgium": 0.95
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Patient-Facing Stakeholders > Patients": 0.5,
+      "Patient-Facing Stakeholders > Family Members": 0.3,
+      "Patient-Facing Stakeholders > Care Coordinators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "rationale": "The DK MedCom CareCommunication IG defines a FHIR-based standard for exchanging care communication messages within the Danish healthcare system. This IG focuses primarily on data modeling and exchange, defining a set of FHIR profiles and resources to structure and transmit care-related information. \n\nThe core of the IG is the `MedComCareCommunicationMessage` profile, which is a specialized Bundle for carrying care communication messages. This message includes a `MedComCareCommunicationMessageHeader` (based on MessageHeader) and a `MedComCareCommunication` resource (based on Communication), along with other supporting resources like `MedComCorePatient`, `MedComCorePractitionerRole`, and `MedComMessagingOrganization`. \n\nThe `MedComCareCommunication` profile specifies the structure of the actual care communication content, including category, topic, priority, message segments (text and attachments), and optional references to more specific sender and recipient entities. The IG also defines constraints and invariants to ensure data quality and consistency, such as requiring a category code from a nationally agreed list and specifying the format of message segment identifiers. \n\nFurthermore, the IG defines a `MedComCareCommunicationProvenance` profile to track the history and activity of the communication, including references to previous messages in the case of replies or forwarding. It also includes examples demonstrating various message flows and scenarios, such as new messages, replies, forwarded messages, and messages with different types of content. \n\nIn summary, this IG establishes a comprehensive framework for exchanging care communication messages in a structured and interoperable manner within the Danish healthcare context, primarily focusing on defining the data model and exchange mechanisms for these messages.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Technical Implementers > System Integrators": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.4,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "rationale": "The PDDI-CDS FHIR Implementation Guide is focused on providing clinical decision support (CDS) for potential drug-drug interactions (PDDIs). It leverages FHIR, CDS Hooks, and CQL to deliver actionable alerts within the electronic health record (EHR) during computerized provider order entry (CPOE). \n\nThe IG defines two primary use cases: CDS at the time of order selection (`order-select`) and CDS at the time of order signing (`order-sign`). It provides detailed guidance on implementing these use cases, including the use of prefetch templates to optimize performance and the handling of duplicate alerts. The IG also discusses a third use case: CDS at the time a clinician opens a patient record (`patient-view`).\n\nThe IG includes two example knowledge artifacts: Warfarin + NSAIDs and Digoxin + Cyclosporine. These artifacts demonstrate how to represent PDDI knowledge using a minimal information model and how to translate that knowledge into executable logic using CQL. The artifacts are structured using FHIR resources such as `PlanDefinition`, `Library`, `CarePlan`, and `RequestGroup`.\n\nThe IG emphasizes the importance of using standardized terminologies (e.g., RxNorm, LOINC, SNOMED CT) and provides a framework for creating and managing value sets. It also includes test data and examples to facilitate testing and verification.\n\nBased on the content, this IG primarily focuses on defining the technical specifications for a PDDI CDS service, including the use of CDS Hooks, FHIR resources, and CQL. It defines how the service should be invoked, what data it should receive, and how it should respond. It also defines the structure and content of the knowledge artifacts used by the service. The IG is intended for use in the United States, as indicated by the use of US-specific terminologies and the focus on Meaningful Use incentives.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Clinical Decision Support": 0.9,
+      "Clinical Care > General Clinical Care > Medication Management": 0.7
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.8,
+      "Knowledge Representation": 0.7,
+      "Workflow Support": 0.6
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

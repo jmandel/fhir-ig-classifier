@@ -1,0 +1,39 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) titled \"Cancer Pathology Data Sharing\" focuses on defining FHIR profiles and resources to facilitate the exchange of cancer pathology data. Its primary purpose is to standardize the representation and sharing of cancer pathology reports, particularly synoptic reports, between Laboratory Information Systems (LIS), Electronic Health Record (EHR) systems, and Central Cancer Registries (CCR). \n\nThe IG defines 6 core FHIR profiles: US Pathology Exchange Content Bundle, US Pathology Composition, US Pathology Diagnostic Report, US Pathology Specimen, US Pathology Service Request, and US Pathology Related Practitioner Role. These profiles are built upon existing FHIR R4 and US Core profiles, adding constraints and extensions specific to cancer pathology reporting. The IG also defines a value set (US Pathology Provider Types) and a code system (US Pathology Code System) to represent specific concepts within the cancer pathology domain. \n\nThe IG's content indicates a strong emphasis on data modeling, as it defines specific profiles and data elements for representing cancer pathology information. It also supports data exchange by specifying how these resources can be bundled and transmitted. While the IG mentions alignment with IHE SDC on FHIR for data capture, its primary focus is on the subsequent exchange and representation of that data. The IG is designed for the US realm, as evidenced by its references to NAACCR standards and US Core profiles. It primarily targets technical implementers, such as EHR vendors and system integrators, as well as healthcare provider organizations involved in cancer care and reporting. Public health organizations, particularly central cancer registries, are also key stakeholders. The IG explicitly states its basis on FHIR R4 and its alignment with NAACCR Volume V, which traditionally uses HL7 v2 messages, indicating a move towards FHIR-based interoperability in this domain.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Oncology": 0.9,
+      "Public Health": 0.6,
+      "Research": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Public Health Organizations > Public Health Agencies": 0.7,
+      "Technical Implementers > System Integrators": 0.6,
+      "Public Health Organizations > Registry Systems": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Healthcare Provider Organizations > Laboratory Systems Teams": 0.4,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

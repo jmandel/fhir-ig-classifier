@@ -1,0 +1,38 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) titled \"dental-data-exchange\" primarily focuses on defining FHIR resources and profiles to facilitate the exchange of dental information. The core functionality revolves around creating a standardized data model for dental referrals and consultations, enabling interoperability between dental and medical systems. \n\nThe IG defines 7 FHIR profiles: Dental Bundle, Dental Referral Note, Dental Service Request, Dental Consult Note, Dental Condition, Dental Finding, and Dental Communication. These profiles are built upon existing US Core and C-CDA on FHIR profiles, extending them with dental-specific elements. The IG also defines 6 value sets related to dental concepts, such as Dental Reason For Referral, Dental Observation Codes, Dental Anatomy, Oral Cavity Area, Tooth Identification, and Dental Category. These value sets provide standardized terminology for representing dental data within the defined profiles.\n\nThe IG outlines four use cases demonstrating the exchange of dental information in different scenarios: Medical to Dental Referral, Dental to Medical Consult, Dental to Dental (Endodontist) Referral, and Dental (Endodontist) to Dental (General Dentist) Consult. These use cases illustrate how the defined profiles and value sets can be used to represent real-world dental workflows.\n\nFurthermore, the IG provides best practices for populating bi-directional medical/dental and dental/dental exchanges, emphasizing the appropriate use of the Dental Finding, Dental Condition, and US Core Condition profiles. It also offers guidance on incorporating SNODENT concepts, planned procedures using CDT and CPT, handling dental images, referral identifiers, UDI details, caries risk assessment, and patient self-management goals.\n\nIn essence, this IG establishes a framework for structured dental data exchange using FHIR, focusing on data modeling, defining specific profiles and value sets, and providing guidance for implementation. While it touches upon data exchange mechanisms and workflows, its primary contribution is the definition of a standardized data model for dental information.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Dental": 0.9,
+      "Clinical Care > General Clinical Care > Care Plans": 0.3,
+      "Clinical Care > General Clinical Care > Medication Management": 0.3,
+      "Clinical Care > General Clinical Care > Patient Engagement": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.6,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Public Health Organizations > Research Platforms": 0.3,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

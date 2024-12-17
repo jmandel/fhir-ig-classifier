@@ -1,0 +1,36 @@
+{
+  "rationale": "The Structured Data Capture (SDC) Implementation Guide primarily focuses on defining standards and specifications for capturing structured data within electronic health records (EHRs), particularly through the use of FHIR Questionnaires. \n\n**Key Artifacts and Specifications:**\n\n1.  **Profiles:** The IG defines numerous profiles on core FHIR resources like Questionnaire, QuestionnaireResponse, ValueSet, and CodeSystem. These profiles constrain and extend the base resources to meet SDC requirements, such as specifying how data elements are mapped, how forms are rendered, and how data extraction is performed.\n2.  **Extensions:** A significant portion of the IG is dedicated to defining custom FHIR extensions. These extensions cover various aspects of form behavior, including:\n    *   **Form population:** `itemPopulationContext`, `initialExpression`, `candidateExpression`\n    *   **Form rendering:** `itemControl`, `choiceOrientation`, `rendering-style`, `itemMedia`, `choiceColumn`\n    *   **Form behavior:** `enableWhenExpression`, `answerExpression`, `calculatedExpression`, `entryMode`\n    *   **Data extraction:** `itemExtractionContext`, `definitionExtract`, `definitionExtractValue`, `templateExtract`, `observationExtract`\n3.  **Operations:** The IG defines several custom operations to support SDC workflows, including:\n    *   `$populate`: Pre-populates a QuestionnaireResponse based on a Questionnaire and available data.\n    *   `$assemble`: Assembles a modular Questionnaire into a single, usable form.\n    *   `$extract`: Extracts data from a QuestionnaireResponse into other FHIR resources.\n    *   `$next-question`: Supports adaptive questionnaires by determining the next question to display based on previous answers.\n4.  **Search Parameters:** Custom search parameters are defined to enable efficient searching and retrieval of SDC-related resources.\n5.  **Capability Statements:** The IG includes capability statements for various SDC actors (e.g., Form Filler, Form Manager, Form Receiver), outlining the expected capabilities of each role.\n\n**Focus:**\n\nThe SDC IG is heavily focused on data modeling, defining the structure and constraints of FHIR resources used for structured data capture. It also addresses data exchange through the defined operations and capability statements. While it touches upon workflow support and security/privacy, these are not its primary focus. The IG is designed to be used internationally, although some examples and value sets may reference specific national jurisdictions.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.9,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.6,
+      "Workflow Support": 0.3,
+      "Security & Privacy": 0.25
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8,
+      "National Jurisdictions > United States": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Public Health Organizations > Research Platforms": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

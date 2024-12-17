@@ -1,0 +1,34 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) is focused on enabling the electronic submission of Healthcare Associated Infection (HAI) reports to the National Healthcare Safety Network (NHSN) at the CDC. The IG defines a library of FHIR profiles, specifically Questionnaire and QuestionnaireResponse profiles, to structure the data for these reports. It includes profiles for both single-person reports and population summary reports. The IG also defines specific Questionnaire instances for various report types, such as Late Onset Sepsis/Meningitis Denominator, Outpatient Procedure Component Denominator for Procedure, and others. These Questionnaires are designed to mirror the actual NHSN forms, soliciting information relevant to HAI surveillance. The IG provides mappings between FHIR QuestionnaireResponse elements and CDA elements, indicating a focus on interoperability between different HL7 standards. It also includes value sets for standardizing codes used in the reports. The primary goal is to standardize the data format and exchange mechanisms for HAI reporting, facilitating automated data collection and submission to the NHSN. The IG is developed in collaboration with the CDC and HL7, targeting software developers who want to enable their systems for reporting HAI data to the NHSN. It is intended for use within the United States, aligning with the geographic scope of the NHSN.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.9,
+      "Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.8
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.9,
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Technical Implementers > Health IT Development Teams": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

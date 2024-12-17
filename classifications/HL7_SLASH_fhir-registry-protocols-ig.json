@@ -1,0 +1,35 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-registry-protocols-ig\" primarily focuses on defining a standardized process and associated technical artifacts to facilitate the extraction and submission of clinical data to registries. It establishes a framework for registries to specify their data requirements using FHIR logical models and enables healthcare provider organizations to automate the collection and transformation of this data into a FHIR Bundle for submission. \n\nThe IG defines five key transactions: Create/Update Registry Definition (CURD), Search for and Retrieve Registry Submission Definitions (SRRD), Create/Update Registry Submission (CURS), Retrieve Registry Submission Data (RRSD), and Validate Registry Submission (VRS). These transactions outline the interactions between various actors, including the Registry Submission Definition Creator, Registry Submission Definition Repository, Registry Submitter, Registry Submission Data Source, and Registry Submission Consumer. \n\nFurthermore, the IG specifies the structure and content of the Registry Logical Model using the FHIR StructureDefinition resource. It mandates the inclusion of mappings to standard artifacts like FHIR resources, CDA documents, and HL7 V2 messages, enabling the automated extraction of data from diverse sources. The IG also defines the structure of the Submission Bundle, which is a FHIR Bundle of type \"Collection\" containing a MessageHeader, a US Core Patient resource, and other resources as dictated by the registry's data dictionary. \n\nWhile the IG references other standards and IGs like US Core, MedMorph, and UDS+, its core contribution lies in defining the process, actors, transactions, and data models for registry data extraction and submission, rather than merely referencing or depending on existing standards.",
+  "scores": {
+    "Functional Domain": {
+      "Research": 0.8,
+      "Infrastructure & Foundational": 0.4
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.5
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Registry Systems": 0.9,
+      "Public Health Organizations > Research Platforms": 0.8,
+      "Standards Organizations": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

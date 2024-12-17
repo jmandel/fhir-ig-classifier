@@ -1,0 +1,35 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) defines how to represent and exchange catalogs of orderable items, specifically focusing on medical devices and medications. \n\nThe IG introduces two methods for structuring catalogs: one where the catalog references its items (Composition.section.entry), and another where items reference the catalog header (DeviceDefinition.extension). It defines profiles like `Catalog`, `CatalogHeader`, `DeviceModel`, `DrugKnowledge`, and `DrugPackage` to structure the data within these catalogs. \n\nFor devices, the `DeviceModel` profile extends `DeviceDefinition` to include details like identifiers (UDI, secondary identifiers), manufacturer, model number, classifications (GMDN, SNOMED, EMDN), packaging, safety characteristics, and properties. It also includes mappings to jurisdictional databases like GUDID and EUDAMED. \n\nFor medications, the `DrugKnowledge` profile extends `MedicationKnowledge` to include details like intended jurisdiction, indications, dosing guidelines, medicine classifications (ATC, SNOMED), packaging costs, and ingredients. The `DrugPackage` profile extends `PackagedProductDefinition` to describe the packaging of medications. \n\nThe IG also specifies how to search and retrieve devices from the catalog, outlining one-step and two-step search approaches using `DeviceDefinition` and supporting resources. It provides examples of search queries for listing catalogs, retrieving device details, etc. \n\nFinally, the IG includes capability statements for custodians of device, drug, and lab service catalogs, outlining the expected RESTful behaviors and supported profiles. It also defines an extension `CatalogReference` to link catalog items to their respective catalogs.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Dental": 0.35,
+      "Clinical Care > General Clinical Care > Medication Management": 0.3,
+      "Infrastructure & Foundational": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R5": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.6,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Standards Organizations": 0.4,
+      "Technical Implementers > System Integrators": 0.4,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.3,
+      "Technical Implementers > Health IT Development Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

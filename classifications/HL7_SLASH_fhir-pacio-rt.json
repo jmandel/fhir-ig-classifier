@@ -1,0 +1,33 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-pacio-rt\" defines a mechanism for structuring post-acute care encounters into smaller, more manageable time blocks called \"Re-Assessment Timepoints.\" This IG primarily focuses on defining a new profile for the FHIR Encounter resource, named `ReassessmentTimepointsEncounter`. This profile extends the `USCoreEncounterProfile` and introduces specific elements and constraints to represent these timepoints. \n\nThe core artifact created by this IG is the `ReassessmentTimepointsEncounter` profile. This profile mandates elements like `identifier`, `status`, `type` (defining the entity structuring the timepoint, e.g., payer, provider), `serviceType` (representing the driving assessment, e.g., MDS, OASIS), `subject` (the patient), `period` (start and end of the timepoint), `reasonCode`, `location`, and `partOf` (linking to the parent encounter). It also defines `Must Support` elements like `statusHistory`, `classHistory`, `episodeOfCare`, `participant`, `diagnosis`, and `serviceProvider`. \n\nAdditionally, the IG defines an extension `BasedOnClinicalImpression` to link the `ReassessmentTimepointsEncounter` to `ClinicalImpression` resources, which represent formal assessments performed at the start or end of the timepoint. The IG also defines several code systems and value sets to support the new elements introduced in the `ReassessmentTimepointsEncounter` profile, such as `TimepointEntityCodeSystem`, `TimepointServiceTypeCodeSystem`, `TimepointStatusValueSet`, and `TimepointClassValueSet`. \n\nFurthermore, the IG specifies mandatory and optional search parameters for querying `ReassessmentTimepointsEncounter` resources, including `part-of`, `date`, `patient`, `episode-of-care`, `based-on`, `diagnosis`, `reason-reference`, `service-provider`, and `status`. The IG also provides example instances of various resources, including `Patient`, `Practitioner`, `Organization`, `Location`, `EpisodeOfCare`, `Condition`, `Observation`, `ClinicalImpression`, and `Encounter`, demonstrating how to use the `ReassessmentTimepointsEncounter` profile in a real-world scenario. \n\nIn essence, this IG creates a data model for representing Re-Assessment Timepoints within the context of post-acute care encounters, along with the necessary supporting artifacts like extensions, code systems, value sets, search parameters, and examples.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Administrative Organizations > Insurance Companies": 0.3,
+      "Administrative Organizations > Health Plans": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

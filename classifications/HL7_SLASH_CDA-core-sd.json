@@ -1,0 +1,33 @@
+{
+  "rationale": "The CDA-core-sd Implementation Guide primarily focuses on defining the structure and representation of CDA documents using FHIR logical models. It provides detailed specifications for various CDA classes and V3 data types as FHIR StructureDefinition instances. The guide's main purpose is to support the creation of CDA-based specifications, such as Consolidated CDA, by offering a standardized way to represent CDA elements in FHIR. It includes guidance on creating CDA documents, discusses semantic interoperability, and provides information on validation using FHIR validators. Additionally, it incorporates approved SDTC extensions and offers an example of a CDA document. The guide emphasizes that it does not replace the original CDA specification but rather serves as a complementary resource for representing CDA in FHIR. It also includes sections on narrative block representation, an overview of CDA concepts, and details on conformance, extensibility, and context. The guide is intended for technical implementers, healthcare provider organizations, and standards organizations involved in the development and implementation of CDA-based systems.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.95
+    },
+    "HL7 Standard": {
+      "Cross-Paradigm": 0.9,
+      "CDA": 0.8,
+      "FHIR": 0.5
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.95,
+      "Data Exchange": 0.35
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > System Integrators": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.9,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

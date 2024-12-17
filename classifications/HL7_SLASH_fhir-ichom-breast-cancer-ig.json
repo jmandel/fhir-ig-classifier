@@ -1,0 +1,32 @@
+{
+  "rationale": "The `fhir-ichom-breast-cancer-ig` implementation guide is focused on defining a standardized representation of the ICHOM Breast Cancer Patient-Centered Outcome Measure Set using FHIR. The core of this IG is the creation of FHIR profiles and questionnaires that capture the data elements specified in the ICHOM set. \n\n**Data Modeling:** The IG defines numerous FHIR profiles that constrain core FHIR resources (e.g., Patient, Condition, Observation, Procedure) to represent specific data elements from the ICHOM set. These profiles include mappings to the ICHOM data dictionary, ensuring a clear link between the FHIR representation and the original ICHOM variables. Examples include profiles for `BodyHeight`, `BodyWeight`, `PrimaryBreastCancerCondition`, `Histotype`, `TNMPrimaryTumorStage`, various treatment procedures, and many more. These profiles define the structure and content of the data to be collected, including value sets for coded elements.\n\n**Questionnaires:** The IG also defines FHIR Questionnaires for collecting patient-reported and clinical-reported outcomes. These questionnaires are organized based on the timing of data collection (e.g., baseline, 6-month follow-up, annual follow-up) and the source of the data. The questionnaires include items that map directly to the ICHOM variables, ensuring that the collected data aligns with the ICHOM set. The questionnaires leverage FHIR's capabilities for defining complex data collection forms, including conditional logic and data validation.\n\n**Terminology:** The IG defines several ValueSets and CodeSystems to represent coded data elements from the ICHOM set. These terminologies ensure that the data collected using the profiles and questionnaires is standardized and interoperable. Examples include ValueSets for `HistologicalTypeVS`, `GermlineMutationVS`, `GradingVS`, `TNMPrimaryTumorVS`, and many more.\n\n**Data Exchange:** While the IG does not define specific interaction patterns or APIs, it lays the groundwork for data exchange by providing a standardized FHIR representation of the ICHOM set. The use of FHIR profiles and questionnaires enables systems to collect and share data in a consistent and interoperable manner. The IG also includes example instances of the defined profiles and questionnaires, demonstrating how the data can be represented in FHIR.\n\n**Geographic Scope:** The IG is intended for international use, as indicated by the `jurisdiction` set to \"World\" in the `sushi-config.yaml` file. This aligns with the global scope of the ICHOM standard sets.\n\n**Stakeholders:** The primary stakeholders for this IG are healthcare provider organizations, clinical care teams, and technical implementers such as EHR vendors and system integrators. These stakeholders will use the IG to implement systems that collect and exchange data based on the ICHOM Breast Cancer set.\n\nIn summary, the `fhir-ichom-breast-cancer-ig` is a comprehensive implementation guide that defines a standardized FHIR representation of the ICHOM Breast Cancer set, enabling interoperable data collection and exchange for measuring patient-centered outcomes in breast cancer care.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Oncology": 0.9,
+      "Research": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Knowledge Representation": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Research Platforms": 0.3,
+      "Standards Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

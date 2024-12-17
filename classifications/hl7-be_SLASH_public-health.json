@@ -1,0 +1,37 @@
+{
+  "rationale": "The `public-health` Implementation Guide (IG) primarily focuses on defining the structure and exchange mechanisms for cancer screening data within the Belgian healthcare system. It establishes a framework for tracking the scheduling, performance, results, and follow-up of cancer screenings. \n\nThe IG defines several key artifacts:\n\n1.  **Logical Models:** It introduces two logical models: `BeModelPopulationScreening` to represent a single screening episode and `BeModelPopulationScreeningPlan` for a patient's overall screening plan for a specific cancer type. These models outline the core data elements required for each screening event, including patient details, screening type, invitation details, participation information, results, and follow-up recommendations.\n\n2.  **FHIR Profiles:** The IG defines FHIR profiles for core resources involved in the screening process, such as `Appointment`, `Encounter`, `ServiceRequest`, and `Observation`. These profiles constrain and extend the base FHIR resources to align with the specific requirements of the Belgian public health context. For example, the `BePopulationScreeningAppointment` profile specifies the structure for representing screening appointments, while the `BePopulationScreeningObservation` profile defines how screening results are captured.\n\n3.  **Value Sets and Code Systems:** The IG defines value sets and code systems to standardize the terminology used within the profiles. For instance, `BeVSPopulationScreeningType` lists the types of cancer screenings covered, and `BeVSPopulationScreeningResultVS` provides codes for screening results.\n\n4.  **Transaction Definition:** The IG outlines a single transaction for submitting or updating screening information. This transaction involves a `Screening Information Provider` sending a `Bundle` of resources (e.g., `Appointment`, `Encounter`, `Observation`) to a `Screening Information Receiver`.\n\n5.  **Guidance:** The IG provides guidance on linking resources within a screening episode (e.g., using `CarePlan` or `Composition`) and ensuring resource uniqueness through business identifiers.\n\nIn essence, this IG establishes a data model and exchange mechanism for cancer screening information, leveraging FHIR resources and profiles to ensure interoperability within the Belgian public health domain. It focuses on defining *what* data to exchange and *how* to structure it, with some guidance on the exchange process itself.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.9,
+      "Clinical Care > Specialty Care > Oncology": 0.6,
+      "Clinical Care > General Clinical Care > Medication Management": 0.25,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Belgium": 0.95
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Technical Implementers > Health IT Development Teams": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.4,
+      "Public Health Organizations > Disease Surveillance Teams": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

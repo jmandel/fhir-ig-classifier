@@ -1,0 +1,36 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) primarily focuses on defining how to represent and exchange data obtained from acute care point-of-care medical devices (PoCDs) using FHIR resources. The IG specifies mappings between the IEEE 11073 standard's Domain Information Model (DIM) and FHIR resources, detailing how device data, including measurements and device metadata, should be structured within FHIR. It emphasizes the creation of FHIR profiles for Device, DeviceMetric, and Observation resources to capture detailed information about device structure, function, and measurements. The IG also provides guidance on using transaction bundles for efficient data transfer. While it touches upon data exchange mechanisms, its core contribution lies in defining the data model for representing complex device information in FHIR. The IG is intended for use in professional healthcare settings, particularly in acute care, and is designed to be consistent with the Personal Health Device IG, indicating a broader scope within the Devices On FHIR project. It references the IHE Patient Care Device (PCD) profiles, suggesting an alignment with existing standards for device data communication. The IG's focus on acute care devices and its detailed specifications for data modeling suggest a strong emphasis on clinical care, particularly in specialized settings where detailed device data is crucial. The inclusion of mappings from HL7 V2 to FHIR indicates an effort to bridge different HL7 standards, although the primary focus remains on FHIR. The IG does not explicitly define workflows but provides the necessary data structures to support them. It does not specify a particular geographic scope but aims for broad applicability, as indicated by its alignment with international standards like IEEE 11073.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Clinical Care > Specialty Care": 0.3,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.6
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > System Integrators": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Technical Implementers > Device Manufacturers": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.4,
+      "Public Health Organizations > Research Platforms": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

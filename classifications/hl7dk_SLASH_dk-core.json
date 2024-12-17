@@ -1,0 +1,33 @@
+{
+  "rationale": "The dk-core FHIR Implementation Guide (IG) primarily focuses on defining a set of core FHIR profiles, extensions, and value sets tailored to the Danish healthcare context. It establishes a foundation for interoperability within Denmark by specifying how common healthcare concepts should be represented using FHIR resources. \n\nThe IG's core function is data modeling. It creates numerous profiles that constrain core FHIR resources like Patient, Observation, Organization, Practitioner, Condition, and RelatedPerson to align with Danish requirements and practices. These profiles define specific usage patterns, mandatory elements, and terminology bindings. For example, the DkCorePatient profile mandates the use of Danish CPR and eCPR identifiers and specifies how to represent marital status according to Danish conventions. The DkCoreObservation profile defines multiple slices for Observation.code.coding to accommodate various code systems used in Denmark, such as NPU, LOINC, IEEE, and SNOMED CT. \n\nFurthermore, the IG defines several extensions to capture Danish-specific data elements not covered by the base FHIR specification. Examples include extensions for municipality codes, regional subdivision codes, and condition-specific attributes like \"ConditionLastAssertedDate\" and \"NotFollowedAnymore\".\n\nWhile the IG does not specify a FHIR API, it provides guidance on data exchange by referencing relevant code systems and value sets for various domains. It also includes examples of FHIR Bundles that demonstrate how data can be exchanged using the defined profiles, such as the \"ContinuaBundleWithDevice\" example for home blood pressure monitoring.\n\nIn terms of geographic scope, the IG is explicitly designed for use within Denmark, as indicated by its title, description, and the use of Danish-specific identifiers, code systems, and terminology. It references Danish legislation, standards, and organizations throughout.\n\nThe IG's content suggests that its primary stakeholders are technical implementers, particularly EHR vendors and health IT development teams, who need to build systems that comply with Danish healthcare data exchange requirements. It also targets healthcare provider organizations, especially their IT and clinical care teams, who need to understand how data is structured and exchanged within the Danish context. Additionally, standards organizations and government agencies involved in defining and governing healthcare data standards in Denmark are relevant stakeholders.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational": 0.6
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Standards Organizations > Government Agencies": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

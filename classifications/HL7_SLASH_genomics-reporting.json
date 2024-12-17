@@ -1,0 +1,36 @@
+{
+  "rationale": "The FHIR Genomics Reporting Implementation Guide (IG) defines a set of FHIR profiles, extensions, value sets, and operations specifically tailored for representing and exchanging clinical genomics data. The core functionality of this IG revolves around structuring genomic test results, including variants, genotypes, haplotypes, and their associated clinical implications. \n\n**Functional Domain:** The IG primarily falls under the **Clinical Care > Specialty Care > Clinical Genomics** domain, as it provides detailed guidance on reporting genomic findings relevant to patient diagnosis, prognosis, and treatment. It also touches upon **Research** by providing structures that can be used for collecting and analyzing genomic data in research settings. The IG defines profiles for representing pharmacogenomic information, which links it to **Clinical Care > General Clinical Care > Medication Management**. \n\n**HL7 Standard:** The IG is explicitly based on **FHIR R4**, as indicated by the `fhirVersion: 4.0.1` entry in the `sushi-config.yaml` file. The IG defines numerous FHIR profiles, which are specific to FHIR R4.\n\n**Scope/Purpose:** The primary focus of the IG is **Data Modeling**, as it defines a comprehensive set of profiles for representing various aspects of genomic data, including variants, haplotypes, genotypes, and their clinical implications. It also supports **Data Exchange** by defining operations for querying and retrieving genomic data. Additionally, the IG addresses **Knowledge Representation** by providing structures for representing clinical knowledge related to genomic findings, such as therapeutic implications and diagnostic implications. The IG also defines security and privacy extensions, indicating a focus on **Security & Privacy**.\n\n**Geographic Scope:** The IG is designated as **Universal Realm**, as indicated by the `jurisdiction` entry in the `sushi-config.yaml` file, which is set to \"World\".\n\n**Stakeholders:** The IG is relevant to a wide range of stakeholders, including **Healthcare Provider Organizations** (specifically **Clinical Care Teams** and **Laboratory Systems Teams**), **Technical Implementers** (such as **EHR Vendors** and **Health IT Development Teams**), and **Standards Organizations**. The IG also defines profiles and operations that are relevant to **Public Health Organizations** and **Research Platforms**.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Clinical Genomics": 0.9,
+      "Research": 0.4,
+      "Clinical Care > General Clinical Care > Medication Management": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4,
+      "Knowledge Representation": 0.4,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Laboratory Systems Teams": 0.6,
+      "Standards Organizations": 0.5,
+      "Technical Implementers > Health IT Development Teams": 0.4,
+      "Public Health Organizations > Research Platforms": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

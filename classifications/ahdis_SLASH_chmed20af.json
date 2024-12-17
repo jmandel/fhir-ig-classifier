@@ -1,0 +1,33 @@
+{
+  "rationale": "The CHMED Implementation Guide defines a FHIR-based format for exchanging medication information, specifically focusing on the eMediplan standard used in Switzerland. It creates two primary document types: Medication Card (CARD) and Medication Prescription (PRE). The Medication Card document provides a comprehensive overview of a patient's current medications, while the Medication Prescription document details a healthcare professional's prescription for a patient. \n\nThis IG defines several profiles for resources like Bundle, Composition, MedicationStatement, and MedicationRequest, tailored to these document types. It also includes profiles for Observations related to patient health concerns, such as the first day of the last menstruation, premature birth, time of gestation, risks, body weight, and body height. Additionally, it defines general profiles for PractitionerRole, Practitioner, Organization, and Medication resources. A significant portion of the IG is dedicated to defining a complex dosage structure, mapping the ChMed23A Posology model to FHIR Dosage. This involves defining extensions for Posology Detail Object Type and Timed Dosage Object Type, along with numerous examples illustrating various dosage scenarios. The IG also includes value sets and code systems for risk categories, risks, units of measure, routes of administration, and methods of administration, sourced from the INDEX database by HCI Solutions AG. The use cases section provides examples of how these documents can be used in practice, further clarifying the IG's purpose and scope. The IG is built on FHIR R4 and is intended for use within the Swiss healthcare system, specifically referencing the eMediplan standard and the CH EMED exchange format.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Medication Management": 0.95,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Switzerland": 0.95
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.5,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.3,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

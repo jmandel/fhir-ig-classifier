@@ -1,0 +1,31 @@
+{
+  "rationale": "The FHIR Shorthand (FSH) Implementation Guide primarily defines a domain-specific language for creating HL7 FHIR artifacts. It specifies the syntax and semantics of the FSH language, which is used to define profiles, extensions, value sets, code systems, instances, invariants, mappings, and rule sets. The guide provides detailed descriptions of language constructs, including declarations, keywords, and various types of rules (e.g., assignment, binding, cardinality, contains, flag, include, insert, path, type). It also specifies how to define aliases, code systems with hierarchical codes, extensions with context, instances with usage, invariants with severity and expressions, logical models with characteristics, mappings with source and target, profiles with parents, resources with custom structures, rule sets with parameters, and value sets with include and exclude rules. The guide includes a formal grammar defined in ANTLR and provides numerous examples to illustrate the use of FSH. It does not directly deal with clinical care, public health, research, or administrative/financial domains, but rather focuses on the infrastructure and foundational aspects of creating FHIR implementation guides. The guide is based on the FHIR standard and supports FHIR R4 and R5, with some features marked as trial use. It is intended for a universal audience, although it mentions US Core as an example. The primary stakeholders are technical implementers, such as EHR vendors and system integrators, who are involved in developing and maintaining FHIR implementation guides. The guide also indirectly supports standards organizations and healthcare provider organizations by providing a standardized way to define FHIR artifacts.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR": 0.9,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.3,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Technical Implementers": 0.9,
+      "Standards Organizations": 0.7,
+      "Healthcare Provider Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

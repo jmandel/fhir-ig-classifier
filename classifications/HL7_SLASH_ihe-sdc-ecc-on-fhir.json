@@ -1,0 +1,35 @@
+{
+  "rationale": "The \"IHE SDC/electronic Cancer Protocols (eCPs) on FHIR\" Implementation Guide (IG) defines a method for representing and exchanging structured data captured from IHE SDC forms, specifically electronic Cancer Protocols (eCPs), using FHIR resources. The core of this IG is the mapping of IHE SDC elements to FHIR, primarily focusing on `Observation` resources to capture question-answer pairs. It defines profiles for `DiagnosticReport`, `DocumentReference`, and `Observation` resources tailored to this purpose. The `DiagnosticReport` profile outlines how to structure a report derived from an SDC form, while the `DocumentReference` profile specifies how to share an IHE SDC form (blank or filled) within FHIR. The `Observation` profile is central, detailing how to represent SDC questions, answers, sections, and list items as FHIR `Observation` resources, including handling parent-child relationships and additional response fields. The IG also provides guidance on using `ConceptMap` resources to map SDC IDs to standardized terminologies like SNOMED CT, enhancing semantic interoperability. It emphasizes the use of `Observation.code` to represent SDC question IDs and `Observation.value[x]` for answers, with specific instructions for different question types. The IG supports both Observation-based and Definition-based data extraction, although the latter is less detailed. It also touches upon the use of Structure Maps for complex mappings. The IG is designed to be Universal Realm but acknowledges the need for implementers to apply other standards like US-Core. It aims to facilitate public health reporting, quality measurement, clinical guideline concordance evaluation, and auto-population of future forms.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Oncology": 0.9,
+      "Clinical Care > General Clinical Care": 0.4,
+      "Public Health": 0.3,
+      "Research": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.4,
+      "Public Health Organizations > Registry Systems": 0.4,
+      "Standards Organizations > Standards Development Organizations": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

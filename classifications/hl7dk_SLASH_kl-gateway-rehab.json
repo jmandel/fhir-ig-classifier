@@ -1,0 +1,32 @@
+{
+  "rationale": "The `kl-gateway-rehab` FHIR Implementation Guide (IG) defines a system for Danish municipalities to report rehabilitation data related to section 140 of the Danish Health Act to the KL Gateway. This data pertains to rehabilitation services provided to citizens following hospital stays, focusing on physiotherapy and related interventions. \n\nThe IG specifies a set of FHIR profiles that constrain standard FHIR resources to represent specific data elements relevant to this reporting process. These profiles include:\n\n1.  **`klgateway-140-citizen`**: Represents the citizen receiving rehabilitation, including their CPR number, deceased status, and the managing organization (municipality).\n2.  **`klgateway-140-organization`**: Represents organizations involved in the process, such as hospitals sending service requests or providers delivering services. It primarily focuses on organization identifiers (SOR or FK-org codes).\n3.  **`klgateway-140-servicerequest`**: Represents a request for rehabilitation (GGOP) received by the municipality, typically from a hospital. It includes details like the requesting organization, the type of rehabilitation requested, the date of the request, and the planned start date of the intervention.\n4.  **`klgateway-140-focus-condition`**: Represents a diagnosis code received from the hospital as part of the rehabilitation request, using SKS (ICD10) codes.\n5.  **`klgateway-140-condition`**: Represents FSIII condition codes relevant to the citizen's rehabilitation, reported as long as the condition is active for a living citizen receiving section 140 rehabilitation.\n6.  **`klgateway-140-planned-intervention`**: Represents a planned rehabilitation intervention for a citizen, using FSIII intervention codes. It includes details like the intervention type, delivery method (individual or group), start and stop times, and the organization delivering the intervention.\n7.  **`klgateway-140-care-plan`**: Represents a rehabilitation care plan for a citizen, grouping multiple planned interventions with a common schedule. It includes details like the type of care plan, start and stop times, the organization delivering the intervention, and the reason for cancellation if applicable.\n8.  **`klgateway-140-encounter`**: Represents an encounter between a citizen and the rehabilitation staff, including the type of encounter (e.g., home visit, ambulatory), start and end times, and a reference to the care plan or planned intervention being delivered.\n9.  **`klgateway-140-delivery-report`**: A FHIR Bundle that groups together instances of the above resources for reporting to the KL Gateway. It includes one `klgateway-140-citizen` and any other resources that have changed since the last report.\n\nThese profiles define the structure and content of the data to be exchanged, including mandatory and optional elements, data types, and value sets. The IG also provides examples of how these profiles can be used to represent different stages of a citizen's rehabilitation journey.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Clinical Care > Specialty Care > Rehabilitation": 0.95
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 1
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

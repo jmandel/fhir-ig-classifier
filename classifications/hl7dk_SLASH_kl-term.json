@@ -1,0 +1,35 @@
+{
+  "rationale": "The `kl-term` Implementation Guide primarily focuses on defining terminology resources, specifically CodeSystems and ValueSets, for use within Danish municipalities. These terminology resources cover various aspects of healthcare and social care, including condition codes, observation codes, intervention codes, and other related concepts. \n\nThe guide defines two primary CodeSystems: `NPU`, which contains codes for laboratory tests and clinical observations used in Danish municipalities, and `KLCommonproprietary`, which includes proprietary codes associated with KLCommonCareSocial. \n\nFurthermore, the guide defines numerous ValueSets that group related codes from various systems, including FSIII, FFB, SNOMED CT, and the aforementioned `NPU` and `KLCommonproprietary` CodeSystems. These ValueSets cover a wide range of concepts, such as condition codes for home care, nursing, therapy, and prevention; observation codes for vital signs, functional observations, and pain scores; intervention codes for nursing, home care, training, and prevention; and codes related to encounters, services, consent, care plans, goals, evaluations, and follow-up. \n\nThe guide also includes ValueSets for severity levels, change values for goals, target measure codes, and codes related to the source of information. The ValueSets are designed to support various aspects of healthcare and social care documentation and communication within Danish municipalities, including the assessment of patient conditions, the planning and delivery of interventions, and the evaluation of outcomes. \n\nOverall, the `kl-term` Implementation Guide serves as a comprehensive resource for terminology related to healthcare and social care in Danish municipalities, providing a standardized set of codes and concepts for use in various clinical and administrative contexts.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Terminology and Value Sets": 0.95,
+      "Clinical Care > General Clinical Care": 0.4,
+      "Public Health": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 1
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "rationale": "The Da Vinci Payer Data Exchange (PDex) Implementation Guide (IG) is focused on enabling payers to create a member's health history using clinical resources based on US Core profiles. This IG supports multiple versions of US Core, specifically 3.1.1, 6.1.0, and 7.0.0, which are based on FHIR R4. The primary goal is to facilitate data exchange between payers, providers, and third-party applications, authorized by the member. \n\nThis IG defines several specific interactions, including provider-requested exchange using CDS Hooks and SMART-on-FHIR, member-authorized health plan to health plan exchange, and member-authorized health plan to third-party application exchange. It also includes support for prior authorization information exchange. The IG emphasizes the use of existing HL7 FHIR profiles, such as those from US Core and HRex, and defines new profiles only when necessary. \n\nKey aspects of this IG include:\n\n1.  **Data Mapping:** Guidance on mapping claims and clinical information to FHIR resources, with a focus on US Core profiles.\n2.  **Capability Statements:** Definitions of expected capabilities for PDex servers, including support for various FHIR profiles, RESTful operations, and search parameters.\n3.  **Data Exchange Scenarios:** Coverage of various scenarios, including provider-requested exchange, health plan exchange, and member-authorized exchanges.\n4.  **Security and Privacy:** Emphasis on secure data exchange, referencing the HRex IG's security and privacy guidelines.\n5.  **Provenance:** Requirements for handling data provenance to maintain traceability.\n6.  **Bulk Data Exchange:** Support for bulk data exchange using the Bulk FHIR API specification, particularly for payer-to-payer and provider access scenarios.\n7.  **Member Consent:** Mechanisms for obtaining and managing member consent for data sharing, including support for opt-out options in the Provider Access API.\n\nIn summary, the PDex IG provides a comprehensive framework for payers to exchange member health data with various stakeholders using FHIR-based standards, with a strong focus on leveraging existing profiles and ensuring secure and privacy-compliant interactions.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Insurance and Billing": 0.4,
+      "Administrative & Financial > Prior Authorization": 0.4,
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational > Cross-Version Mapping": 0.3,
+      "Infrastructure & Foundational > Document and Message Exchange": 0.5
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.8,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Administrative Organizations > Health Plans": 0.9,
+      "Administrative Organizations > Insurance Companies": 0.9,
+      "Public Health Organizations > Research Platforms": 0.3,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.7
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,28 +1,34 @@
 {
-  "rationale": "This IG defines profiles for several core FHIR resources, including AllergyIntolerance, Condition, Encounter, Immunization, Location, Medication, MedicationRequest, Observation (for vital signs, diagnostic results, and pathology results), Organization, Patient, Practitioner, PractitionerRole, Procedure, and Smoking Status. These profiles are based on the Australian Core Data for Interoperability (AUCDI) requirements and are intended for use within the Australian healthcare context. The IG also defines two actors, Requester and Responder, and their associated CapabilityStatements, which specify the RESTful API interactions and search parameters supported by each actor. The IG focuses on data modeling by defining profiles and extensions, and data exchange by specifying capability statements and search parameters. The IG is specifically designed for the Australian healthcare context, and it is currently in ballot status.",
-  "Primary Domain": [
-    "General Clinical Care",
-    "Clinical Care"
-  ],
-  "HL7 Standard": [
-    "FHIR"
-  ],
-  "Scope/Purpose": [
-    "Data Modeling",
-    "Data Exchange"
-  ],
-  "Geographic Scope": [
-    "Australia",
-    "National Jurisdictions"
-  ],
-  "Data Source": [
-    "EHR-Centric"
-  ],
-  "Maturity Level": [
-    "Normative/Standard"
-  ],
+  "rationale": "The \"au-fhir-core\" Implementation Guide (IG) defines a set of FHIR profiles, extensions, terminology bindings, capability statements, and actor definitions to facilitate interoperability within the Australian healthcare context. It builds upon the AU Base IG and aligns with international standards like US Core and International Patient Access. \n\nThe IG's primary focus is on data modeling, defining specific profiles for various clinical and administrative resources such as Patient, Practitioner, Organization, Location, Condition, AllergyIntolerance, Procedure, Immunization, MedicationRequest, and several Observation types (e.g., Blood Pressure, Body Height, Body Weight). These profiles establish constraints and requirements for representing core digital health information, including mandatory elements, must-support elements, and terminology bindings. The IG also defines extensions specific to the Australian context, such as \"AU Core Sex Assigned At Birth\".\n\nFurthermore, the IG specifies data exchange mechanisms through capability statements for \"AU Core Requester\" and \"AU Core Responder\" actors. These capability statements outline the expected RESTful interactions, search parameters, and supported operations for each actor. The IG also provides guidance on representing communication preferences, body site information, and medicine information, including medicinal product identification using Australian Medicines Terminology (AMT).\n\nGeographically, the IG is specific to Australia, as indicated by its name and its focus on Australian standards and terminology. It is intended for use by various stakeholders, including technical implementers (EHR vendors, system integrators), healthcare provider organizations, public health organizations, administrative organizations, and standards organizations. The IG aims to improve interoperability and data exchange within the Australian healthcare ecosystem by providing a common set of profiles and guidelines for implementing FHIR.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Clinical Care > Specialty Care": 0.3,
+      "Infrastructure & Foundational": 0.4
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Security & Privacy": 0.25,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Australia": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Standards Organizations": 0.4,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.3
+    }
+  },
   "meta": {
-    "model": "gemini-2.0-flash-exp",
+    "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
     }

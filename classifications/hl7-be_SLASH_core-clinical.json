@@ -1,0 +1,36 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) titled \"Transversal Clinical Core\" defines a set of FHIR resources, profiles, extensions, value sets, and code systems tailored for use within the Belgian healthcare context. \n\n**Data Modeling:** The IG establishes several profiles on core clinical resources like `Condition` (renamed `BeProblem`), `Observation` (including a specialized `BeScoreResult` for scores), `Procedure`, `Encounter`, `CarePlan`, `ServiceRequest`, `Goal`, `ClinicalImpression`, and `Appointment`. These profiles constrain and extend the base FHIR resources to meet specific Belgian requirements, such as mandating certain data elements, restricting code systems, and specifying references to other Belgian profiles. It also defines new logical models for some of these resources. The `BeObservationCodeableConcept` profile provides guidance on using LOINC and SNOMED-CT for observation coding. The IG also defines extensions like `BeExtLaterality` and `BeExtProblemOriginType` to capture additional context.\n\n**Value Sets and Code Systems:** The IG defines several value sets (`BeVSBodySite`, `BeVSLaterality`, `BeVSProblemCategory`, `BeVSProblemCode`, `BeVSProblemOriginType`, `BeVSReactionManifestationCode`, `BeVSScore`, `BeVSScoreCategory`) and corresponding code systems (`BeCSBodySite`, `BeCSProblemCategory`, `BeCSProblemOriginType`, `BeCSScore`, `BeCSScoreCategory`) to standardize terminology used within the profiles. These value sets often reference SNOMED CT or define custom codes with multilingual designations.\n\n**Scope and Purpose:** The primary focus is on data modeling, defining how clinical information should be structured and represented using FHIR. While it implicitly supports data exchange by defining standardized representations, the IG does not explicitly define APIs or messaging interactions. The presence of profiles like `BeScoreResult` suggests a focus on representing clinical knowledge and supporting clinical workflows, particularly around assessments and scoring.\n\n**Geographic and Stakeholder Context:** The IG is explicitly scoped for Belgium, as indicated by the canonical URL, jurisdiction codes, and references to Belgian organizations like the eHealth Platform. The intended stakeholders include healthcare provider organizations (especially clinical care teams), technical implementers (like EHR vendors), and potentially public health organizations involved in data collection and analysis within Belgium.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Clinical Care > Specialty Care": 0.3,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3,
+      "Workflow Support": 0.3,
+      "Knowledge Representation": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Belgium": 1
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Public Health Organizations": 0.3,
+      "Standards Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

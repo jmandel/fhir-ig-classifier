@@ -1,0 +1,38 @@
+{
+  "rationale": "The Vulcan Schedule Implementation Guide (IG) defines a standard way to represent a Clinical Study Schedule of Activities (SoA) using FHIR resources. The SoA is a crucial part of a clinical trial protocol, outlining planned study visits and the activities to be performed at each visit. This IG focuses on defining the structure and relationships between these planned activities using FHIR's PlanDefinition and ActivityDefinition resources. \n\nThe core of the IG is the specification of how to model the SoA using FHIR. It defines profiles like ResearchStudySoa, StudyProtocolSoa, StudyVisitSoa, and StudyActivitySoa, which constrain the standard FHIR resources to represent the SoA's components. The IG also introduces an extension, AcceptableOffsetRangeSoa, to handle visit windowing, allowing flexibility in scheduling while maintaining a target date. The IG provides detailed examples based on the H2Q-MC-LZZT study, demonstrating how to represent the study plan, visits, and activities using the defined profiles. It also includes a section on aligning the FHIR SoA model with the CDISC Operational Data Model (ODM), a common standard for representing clinical trial data, to facilitate interoperability between systems. The IG addresses investigational product (IP) administration, outlining how to use FHIR medication resources to record IP use and relate it to other study activities. \n\nIn essence, this IG provides a blueprint for representing a clinical study's SoA in FHIR, focusing on the definitional aspects of planned activities and their relationships. It aims to enable the exchange and implementation of SoA information in healthcare and clinical research systems, promoting interoperability and automation in clinical trial execution.",
+  "scores": {
+    "Functional Domain": {
+      "Research": 0.95,
+      "Clinical Care > General Clinical Care": 0.3,
+      "Infrastructure & Foundational": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Public Health Organizations > Research Platforms": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Technical Implementers > System Integrators": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Technical Implementers > Health IT Development Teams": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

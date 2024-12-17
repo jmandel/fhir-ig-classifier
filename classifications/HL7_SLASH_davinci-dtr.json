@@ -1,0 +1,36 @@
+{
+  "rationale": "The Da Vinci Documentation Templates and Rules (DTR) Implementation Guide (IG) primarily focuses on defining how payer documentation requirements can be represented using FHIR Questionnaires and how these requirements can be executed within a provider context. The IG leverages the Structured Data Capture (SDC) specification for defining the structure and behavior of Questionnaires, including features like adaptive forms. It also utilizes Clinical Quality Language (CQL) for expressing logic to pre-populate QuestionnaireResponses with data from Electronic Health Records (EHRs) and for guiding the flow of questions in adaptive forms. \n\nThe DTR IG defines two main types of Questionnaires: Standard Questionnaires and Adaptive Questionnaires. Standard Questionnaires contain all possible questions and logic upfront, while Adaptive Questionnaires expose questions incrementally based on previous answers using the `$next-question` operation. The IG also specifies operations like `$questionnaire-package` for retrieving Questionnaire packages from payers and `$log-questionnaire-errors` for reporting errors encountered during Questionnaire processing.\n\nThis IG is designed to work in conjunction with other Da Vinci IGs, such as Coverage Requirements Discovery (CRD) and Prior Authorization Support (PAS). CRD helps determine if documentation is required for a particular service, while DTR facilitates the collection of that documentation. PAS then uses the collected information for prior authorization requests. The DTR IG also addresses security and privacy considerations, emphasizing the need to limit data access to only what is necessary for the specific documentation requirements.\n\nIn summary, the DTR IG provides a framework for standardizing the representation and execution of payer documentation requirements using FHIR, with a focus on minimizing provider burden through automation and integration with EHR systems.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.5,
+      "Administrative & Financial": 0.4,
+      "Infrastructure & Foundational": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.6,
+      "Data Exchange": 0.4,
+      "Knowledge Representation": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Administrative Organizations > Insurance Companies": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Technical Implementers > Health IT Development Teams": 0.4,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

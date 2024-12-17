@@ -1,0 +1,35 @@
+{
+  "rationale": "The Immunization Decision Support Forecast (ImmDS) Implementation Guide is focused on standardizing the interface for querying a clinical decision support (CDS) engine to obtain a patient's evaluated immunization history and forecast. The IG defines a FHIR operation, `$immds-forecast`, which takes an assessment date, patient resource, and immunization history as input parameters. It returns ImmunizationEvaluation resources representing the evaluated history and an ImmunizationRecommendation resource representing the forecast. \n\nThe IG defines four core FHIR profiles: `ImmDSPatient`, `ImmDSImmunization`, `ImmDSImmunizationEvaluation`, and `ImmDSImmunizationRecommendation`. These profiles constrain the standard FHIR resources to meet the specific needs of immunization forecasting. For example, the `ImmDSPatient` profile mandates the patient's birth date, while the `ImmDSImmunizationEvaluation` profile requires fields like `targetDisease`, `doseStatus`, and `doseStatusReason`. The `ImmDSImmunizationRecommendation` profile specifies elements such as `vaccineCode`, `forecastStatus`, and `dateCriterion` to represent the recommended immunizations.\n\nAdditionally, the IG defines several value sets and code systems to standardize the terminology used in the profiles and operation. These include `TargetDisease`, `ForecastStatus`, `ForecastReason`, and `StatusReason`. The `TargetDisease` value set lists vaccine-preventable diseases using SNOMED CT codes. The `ForecastStatus` and `ForecastReason` code systems provide standardized codes and descriptions for the status and rationale of the forecast, respectively. The `StatusReason` code system offers reasons for the evaluation status of an immunization event.\n\nThe IG also includes example instances of the defined profiles and operation parameters, demonstrating how to use the `$immds-forecast` operation with sample data. These examples showcase the structure and content of the input and output parameters, including the patient resource, immunization history, evaluated history, and forecast.\n\nOverall, the ImmDS IG primarily focuses on data modeling and data exchange, defining the structure and content of the data exchanged between systems and the mechanism for that exchange. It also touches on workflow support by outlining use cases for integrating the standardized interface into existing workflows, such as EHR queries to IIS and public health functions.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.7,
+      "Clinical Care > General Clinical Care > Immunization": 0.6,
+      "Clinical Care > General Clinical Care > Clinical Decision Support": 0.5
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.95
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Disease Surveillance Teams": 0.5,
+      "Technical Implementers > System Integrators": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

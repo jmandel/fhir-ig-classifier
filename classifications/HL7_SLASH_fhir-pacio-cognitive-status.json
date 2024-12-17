@@ -1,0 +1,32 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-pacio-cognitive-status\" focuses on defining FHIR profiles and extensions to represent cognitive and mental status assessments. The core artifacts it creates are FHIR resource profiles, extensions, and value sets. \n\nThe IG defines the `CognitiveStatusCollection` profile for representing a set of cognitive status observations, the `CognitiveStatus` profile for individual observations, and the `PriorLevelOfCognitiveFunction` profile for summarizing prior cognitive function. These profiles are based on the FHIR `Observation` resource and constrain it for the specific use case of cognitive assessments. The IG also defines the `UseOfDevice` profile, based on `DeviceUseStatement`, to capture the use of assistive devices during assessments.\n\nAdditionally, the IG defines extensions like `ObservationEventLocation` to specify where an observation occurred and `DevicePatientUsed` to link to a `UseOfDevice` instance. It also creates a `PACIOFunctioningCategoryCS` code system and a corresponding `PACIOFunctioningCategoryVS` value set to categorize observations as related to \"functioning\".\n\nThe IG provides examples of how to use these profiles and extensions to represent various standardized assessments like BIMS, CAM, MoCA, and PHQ-9, demonstrating how to map assessment questions and answers to FHIR elements. It emphasizes the use of LOINC codes to identify specific assessments and questions.\n\nWhile the IG mentions data exchange scenarios and references other standards like US Core, its primary focus is on data modeling – defining the structure and content of cognitive assessment data using FHIR. It does not define specific APIs or operations for data exchange, but rather provides the building blocks for such exchanges.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Registry Systems": 0.3,
+      "Public Health Organizations > Research Platforms": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

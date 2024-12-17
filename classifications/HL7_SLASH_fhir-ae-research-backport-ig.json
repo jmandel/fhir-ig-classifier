@@ -1,0 +1,33 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) primarily focuses on defining profiles and extensions for representing Adverse Events (AEs) within the context of clinical research, particularly in relation to the Vulcan accelerator project. The core functionality of this IG revolves around creating a standardized data model for capturing and exchanging AE data, leveraging the FHIR AdverseEvent resource as a foundation. \n\nThe IG defines a specific profile, `AdverseEventClinicalResearch`, which extends the base FHIR `AdverseEvent` resource. This profile introduces several custom extensions to capture research-specific aspects of AEs, such as `expected-in-research-study`, `caused-subject-to-discontinue-study`, `seriousness-criteria`, `ae-grade`, and `research-subject-ref`. These extensions enhance the base resource to meet the specific needs of clinical research data collection and reporting.\n\nAdditionally, the IG defines several value sets and code systems to support the consistent use of terminology within the defined profiles and extensions. These include value sets for AE status, type, contributing factors, mitigating actions, seriousness criteria, and participant functions. The IG also provides examples of how to use the defined profiles and extensions in various clinical trial scenarios, including pre-market and post-market AE reporting, as well as specific examples related to cancer clinical trials.\n\nWhile the IG references external standards and guidelines, such as FDA E2B(R3) and CDISC, its primary focus is on defining a FHIR-based data model for AE representation in clinical research. It does not define new mechanisms for data exchange but rather specifies how AE data should be structured and represented using FHIR resources and extensions. The IG also touches upon security considerations by referencing the FHIR Core security guidance but does not define new security mechanisms.",
+  "scores": {
+    "Functional Domain": {
+      "Research": 0.85,
+      "Clinical Care": 0.35
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.6
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Research Platforms": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Standards Organizations": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

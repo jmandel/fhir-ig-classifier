@@ -1,0 +1,36 @@
+{
+  "rationale": "The ITI.PDQm Implementation Guide defines a profile for querying patient demographics, primarily targeting mobile and lightweight applications. It specifies two main transactions: \"Mobile Patient Demographics Query [ITI-78]\" and \"Patient Demographics Match [ITI-119]\". ITI-78 uses FHIR's search capabilities, while ITI-119 leverages the FHIR $match operation for more sophisticated matching. \n\nThe IG defines specific actors (Patient Demographics Consumer and Supplier) and their interactions. It mandates support for various search parameters and outlines expected behaviors for different query scenarios. The Patient Demographics Supplier must support ITI-78, while ITI-119 is optional. The Consumer must implement at least one of these transactions. The IG also includes detailed security considerations, referencing ATNA and IUA profiles, and mandates audit event logging for both actors.\n\nRegarding data modeling, the IG defines a \"PDQm Patient Profile\" constraining the FHIR Patient resource. This profile mandates the presence of identifiers and sets MustSupport flags on several elements. It also includes an extension for mother's maiden name. For ITI-119, it defines input and output parameter profiles, again based on FHIR resources. The output is a Bundle of Patient resources, potentially including OperationOutcome resources for errors or warnings.\n\nIn terms of data exchange, the IG specifies the use of RESTful interactions, with support for both JSON and XML encodings. It details the HTTP methods (GET and POST) and paths for the transactions. It also addresses response format handling and error scenarios. The IG emphasizes the use of FHIR's search and read interactions for ITI-78 and the $match operation for ITI-119.\n\nWhile the primary focus is on data exchange and modeling, the IG also touches upon workflow support by defining the interactions between the actors and outlining different use cases. It does not, however, define complex workflows or state transitions. The IG is designed for broad applicability, as indicated by its jurisdiction set to the \"World\" region code, suggesting a universal realm scope. However, the examples and some references imply a potential focus on or origin in the United States.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.9,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.3,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Standards Organizations": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

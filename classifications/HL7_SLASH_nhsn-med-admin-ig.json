@@ -1,0 +1,33 @@
+{
+  "rationale": "The NHSN Medication Administration IG primarily focuses on defining FHIR profiles for reporting inpatient medication administration data related to COVID-19. It specifies four new FHIR R4 profiles: Composition - Inpatient Medication Administration, Condition - Lab Confirmed COVID-19, Condition - Suspected COVID-19, and Observation - Laboratory SARS COVID-19. These profiles constrain existing US Core and base FHIR resources to meet NHSN's reporting requirements. The IG's scope is limited to inpatient settings and clinician-administered medication events, excluding other settings like emergency departments or outpatient clinics. The primary goal is to standardize the electronic submission of patient-level medication administration data to the NHSN, leveraging existing EHR workflows. The IG is designed for the US realm and targets stakeholders involved in public health surveillance, particularly during the COVID-19 pandemic. It emphasizes data modeling by defining specific profiles and data elements, but also touches on data exchange by outlining the use of a Document Bundle for data submission. The IG is a collaborative effort between HL7 International's Pharmacy Work Group and the NHSN, aiming to improve the accuracy and efficiency of medication exposure reporting in US healthcare.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Medication Management": 0.8,
+      "Public Health": 0.7,
+      "Clinical Care > General Clinical Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Public Health Organizations": 0.4,
+      "Healthcare Provider Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

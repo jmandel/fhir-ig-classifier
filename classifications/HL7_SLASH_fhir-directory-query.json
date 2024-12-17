@@ -1,0 +1,33 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-directory-query\" primarily focuses on defining the query capabilities for a National Healthcare Directory. It specifies how clients can search for and retrieve information about healthcare providers, organizations, locations, services, and other related entities. \n\nThe IG defines a set of CapabilityStatements that outline the conformance requirements for servers implementing the query interface. These CapabilityStatements specify the supported FHIR resource profiles, search parameters, and interactions. The IG also includes guidance on using FHIR's bulk data export and subscription mechanisms for retrieving large datasets or receiving updates. \n\nWhile the IG references other standards and profiles (like US Core), its core purpose is to define the query interface itself. It does not create new resource profiles or extensions, but rather specifies how existing FHIR resources should be used in the context of directory queries. The IG is primarily targeted at technical implementers, such as EHR vendors and system integrators, who need to build systems that can interact with a National Healthcare Directory. \n\nThe IG's scope is centered around data exchange, specifically enabling clients to query a directory server for information. It defines the search parameters and expected behavior of the server when responding to these queries. The IG also touches on security considerations, requiring the use of SMART Backend Services Authorization for authentication and authorization. \n\nGeographically, the IG is focused on the United States, as indicated by its name and the use of US-specific identifiers and terminology. However, the underlying principles and mechanisms could be adapted for use in other national or regional contexts. \n\nIn summary, the \"fhir-directory-query\" IG is a technical specification for building a query interface to a National Healthcare Directory. It defines the expected behavior of servers and clients, the supported search parameters, and the use of FHIR resources and interactions in this context.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Provider Directories": 0.95,
+      "Infrastructure & Foundational > Data Exchange": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

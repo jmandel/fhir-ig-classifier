@@ -1,0 +1,37 @@
+{
+  "rationale": "The `ch-core` FHIR Implementation Guide (IG) defines a set of core FHIR profiles, extensions, and value sets tailored for use within the Swiss healthcare system, particularly in the context of the Swiss Electronic Patient Record (EPR). \n\n**Functional Domain:** The IG primarily focuses on infrastructure and foundational elements, providing core data models and specifications that can be used across various clinical and administrative domains. It defines profiles for core resources like Patient, Practitioner, Organization, Location, and Composition, which are fundamental to many healthcare workflows. While it does not define specialty-specific clinical content, it does include base profiles for general clinical care resources like MedicationStatement, Condition, AllergyIntolerance, Immunization, and ServiceRequest, derived from exchange formats. It also touches upon administrative aspects by defining profiles for Coverage and addressing identifiers relevant to billing and insurance.\n\n**HL7 Standard:** The IG is explicitly based on FHIR R4, as indicated in the `sushi-config.yaml` file. It does not define any elements related to other HL7 standards like CDA, v2, or v3.\n\n**Scope/Purpose:** The primary purpose of this IG is data modeling. It defines numerous profiles that constrain core FHIR resources and data types to meet Swiss requirements. It also defines extensions to capture Switzerland-specific data elements, such as eCH standards for postal addresses, contact information, and personal data. While it includes an example of a document bundle, the focus is on defining the structure and content of the resources within the document rather than the exchange mechanism itself. The IG also provides guidance on using SNOMED CT codes from the Swiss Extension and representing EPR documents in a readable format.\n\n**Geographic Scope:** The IG is specifically designed for use within Switzerland, as indicated by its name, the publisher (HL7 Switzerland), and the numerous references to Swiss-specific standards and regulations (e.g., EPR, eCH standards, BFS variables). It defines profiles and extensions tailored to the Swiss context, including identifiers like the EPR-SPID, AHVN13, and GLN, as well as Swiss-specific address formats and contact details.\n\n**Stakeholders:** The primary stakeholders for this IG are technical implementers, particularly EHR vendors and system integrators responsible for implementing FHIR-based systems in Switzerland. It also targets healthcare provider organizations, especially their IT departments and integration teams, who need to ensure their systems conform to Swiss requirements. Public health organizations may also find it relevant for reporting and surveillance purposes. Standards organizations, including HL7 Switzerland and government agencies, are also key stakeholders involved in the development and governance of the IG.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.9,
+      "Clinical Care > General Clinical Care": 0.4,
+      "Administrative & Financial": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3,
+      "Security & Privacy": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Switzerland": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Standards Organizations > Government Agencies": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

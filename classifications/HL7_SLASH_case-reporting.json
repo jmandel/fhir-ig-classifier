@@ -1,0 +1,38 @@
+{
+  "rationale": "The FHIR Implementation Guide \"case-reporting\" defines specifications for electronic case reporting (eCR), focusing on the exchange of initial case reports (eICRs) and reportability responses (RRs). \n\n**Functional Domain:** The IG primarily supports public health by enabling the reporting of reportable conditions from healthcare providers to public health agencies. It also touches upon clinical care by defining data elements relevant to patient care and clinical workflows, such as patient demographics, pregnancy status, and provider information. However, the core focus is on facilitating public health surveillance and response. The IG also defines data elements and workflows relevant to research, such as defining data elements to be collected for research purposes (e.g., clinical trials, registries). Finally, the IG defines data elements and workflows relevant to administrative and financial processes, such as defining data elements to be collected for insurance and billing purposes.\n\n**HL7 Standard:** The IG is based on the FHIR standard, specifically FHIR R4. It defines FHIR profiles and extensions for eICRs, RRs, and the electronic Reporting and Surveillance Distribution (eRSD) transaction. It also references US Core profiles. The change log indicates an update to FHIR R4.\n\n**Scope/Purpose:** The IG focuses on both data modeling and data exchange. It defines data models and profiles for eICRs and RRs, specifying the structure and content of these documents. It also defines the mechanisms for exchanging these documents, including FHIR messaging and RESTful transactions. The eRSD transaction supports the distribution of reporting guidance and parameters, including trigger code value sets and reporting rules. The IG also defines workflows and interactions between systems or actors, such as the process for determining reportability and routing eICRs to the appropriate public health agencies.\n\n**Geographic Scope:** The IG is primarily focused on the United States, as evidenced by the involvement of US organizations like the CDC, CSTE, and ASTHO. It references US-specific standards like USCDI and US Core. However, it also aims to support multi-jurisdictional reporting, suggesting a broader scope that could potentially be adapted for other national jurisdictions.\n\n**Stakeholders:** The IG is relevant to a wide range of stakeholders, including public health agencies, healthcare providers, EHR vendors, and standards development organizations. It is designed to facilitate communication and data exchange between these stakeholders to support public health surveillance and response.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.9,
+      "Clinical Care > General Clinical Care": 0.4,
+      "Research": 0.3,
+      "Administrative & Financial": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.8,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.9,
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.6,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Technical Implementers > Health IT Development Teams": 0.5,
+      "Public Health Organizations > Disease Surveillance Teams": 0.4,
+      "Administrative Organizations > Healthcare Administrators": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

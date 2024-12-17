@@ -1,0 +1,31 @@
+{
+  "rationale": "The Bidirectional Services eReferral (BSeR) FHIR Implementation Guide (IG) is focused on enabling the electronic exchange of service referrals between healthcare providers and community-based organizations (CBOs). The core functionality of this IG revolves around defining FHIR profiles and specifying transaction patterns for referral requests and feedback. \n\nThe IG defines several custom FHIR profiles based on FHIR R4, including profiles for ReferralTask, ReferralServiceRequest, ReferralFeedbackComposition, and various supporting information resources. These profiles constrain and extend base FHIR resources to meet the specific needs of bidirectional service referrals. The IG also defines batch query bundles for retrieving use-case-specific supporting information, demonstrating a focus on data modeling for referral content.\n\nWhile the IG outlines transaction patterns and transport options (push and notify/pull), the primary emphasis is on defining the structure and content of the referral data rather than the exchange mechanisms themselves. The IG covers six specific use cases related to chronic health conditions, indicating a focus on general clinical care and potentially some specialty care areas like diabetes prevention and arthritis management. The specified actors and interaction diagrams suggest a strong emphasis on workflow support, particularly for referral initiation, acceptance, and feedback.\n\nThe IG is a U.S. Realm specification, developed under the HL7 Public Health Work Group with sponsorship from Patient Care and Clinical Quality Information work groups. It is intended for use by EHR vendors, CBOs, HIEs, and other technical implementers involved in referral exchanges. The IG also acknowledges the IHE 360X and HL7 Gravity projects, indicating collaboration and alignment with broader interoperability efforts. The inclusion of batch query bundles and the ability to adapt to additional use cases demonstrate a focus on extensibility and reuse.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.7,
+      "Data Exchange": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "rationale": "The CRMI IG defines profiles, operations, capability statements, and guidance to facilitate the content management lifecycle for authoring, publishing, distribution, and implementation of FHIR knowledge artifacts. It focuses on the management of FHIR resources as knowledge artifacts, providing a framework for their lifecycle. The IG specifies how to structure and manage these artifacts, including defining metadata, versioning, and dependencies. It defines operations like $package and $data-requirements for managing and distributing these artifacts. It also provides guidance on using CQL within FHIR, defining conformance requirements for libraries, data models, code systems, value sets, and other terminology aspects. The IG defines various profiles for different types of knowledge artifacts, categorizing them into shareable, computable, publishable, and executable. It also defines extensions to support various aspects of knowledge artifact definition, packaging, and implementation. The CRMI IG does not focus on specific clinical domains but rather provides a general infrastructure for managing FHIR-based knowledge artifacts. It does not define specific clinical guidelines or measures but rather the framework for managing them.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.95,
+      "Clinical Care > General Clinical Care > Clinical Decision Support": 0.3,
+      "Research": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.4,
+      "Knowledge Representation": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Standards Organizations > Standards Development Organizations": 0.9,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

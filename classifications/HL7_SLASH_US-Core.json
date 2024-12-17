@@ -1,28 +1,32 @@
 {
-  "rationale": "The US Core Implementation Guide defines a set of profiles, extensions, and value sets for use in the US healthcare context. It focuses on data modeling by defining profiles that constrain and extend base FHIR resources, such as Patient, Observation, and Condition. It also addresses data exchange by specifying search parameters and operations. The IG is based on FHIR R4 and is specifically designed for the US Realm. The data sources are primarily EHR-centric, and the maturity level is currently at the ballot stage.",
-  "Primary Domain": [
-    "General Clinical Care",
-    "Clinical Care"
-  ],
-  "HL7 Standard": [
-    "FHIR",
-    "FHIR R4"
-  ],
-  "Scope/Purpose": [
-    "Data Modeling",
-    "Data Exchange"
-  ],
-  "Geographic Scope": [
-    "US Realm"
-  ],
-  "Data Source": [
-    "EHR-Centric"
-  ],
-  "Maturity Level": [
-    "Draft/Trial Use"
-  ],
+  "rationale": "The US Core Implementation Guide is focused on defining the minimum conformance requirements for accessing patient data using FHIR. It is based on FHIR Version R4 and references the ONC 2015 Edition Common Clinical Data Set (CCDS) and ONC U.S. Core Data for Interoperability (USCDI) v1. The guide provides profiles, extensions, and value sets to standardize data exchange. The primary purpose is data modeling, defining core data models or profiles for specific domains or use cases. It also touches upon data exchange by defining search parameters and operations. The guide is intended for use in the US Realm and is primarily targeted towards technical implementers, such as EHR vendors and health IT development teams. It also defines guidance for specific clinical areas, such as clinical notes and medication lists. The guide does not focus on specialty care but rather provides a foundation for general clinical care across various settings. It also includes some aspects of infrastructure and foundational elements, such as security and terminology. The guide is heavily focused on data modeling, defining profiles, extensions, and value sets to represent patient data. It also touches upon data exchange by defining search parameters and operations, but the primary focus is on the structure and representation of the data itself. The guide also includes guidance on security and privacy, but it is not the main focus. The guide is intended for use in the United States and is developed by HL7 International, specifically the Cross-Group Projects workgroup. The primary stakeholders are technical implementers, such as EHR vendors and health IT development teams, as well as healthcare provider organizations, particularly their IT departments and clinical care teams. The guide also mentions the Argonaut pilot implementations, indicating a focus on real-world implementation and testing.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.5,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
+      "Standards Organizations": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5
+    }
+  },
   "meta": {
-    "model": "gemini-2.0-flash-exp",
+    "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
     }

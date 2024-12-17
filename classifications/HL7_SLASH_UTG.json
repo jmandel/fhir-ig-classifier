@@ -1,0 +1,31 @@
+{
+  "rationale": "The Unified Terminology Governance (UTG) Implementation Guide, based on the provided file structure, primarily focuses on defining and managing terminology resources. This includes CodeSystems, ValueSets, and NamingSystems. The IG appears to manage these resources across different HL7 standards (v2, v3, and FHIR), as indicated by the 'external' directory structure. The 'unified' directory suggests an effort to create a consolidated set of terminology resources. The 'retired' directory indicates that the IG also manages the lifecycle of these resources, including deprecation or retirement. The presence of a 'release-tracking' directory suggests that the IG is versioned and managed over time. The IG's core purpose is to provide a centralized and standardized approach to terminology governance, which is crucial for ensuring consistency and interoperability in healthcare data exchange. The IG does not appear to define any specific clinical workflows, data exchange mechanisms, or security protocols. It is primarily concerned with the definition, management, and governance of terminology resources.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Terminology and Value Sets": 0.95
+    },
+    "HL7 Standard": {
+      "Cross-Paradigm": 0.7,
+      "FHIR": 0.3,
+      "v2": 0.25,
+      "v3": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.7
+    },
+    "Stakeholders": {
+      "Standards Organizations": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

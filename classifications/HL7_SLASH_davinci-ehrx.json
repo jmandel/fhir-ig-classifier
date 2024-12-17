@@ -1,0 +1,35 @@
+{
+  "rationale": "The Da Vinci Health Record Exchange (HRex) Implementation Guide (IG) primarily focuses on defining a common framework and library of FHIR elements that can be used across multiple Da Vinci IGs. It specifies FHIR profiles, operations, and constraints that are common across more than a single use case, promoting consistency and reusability. The IG emphasizes data modeling, defining profiles for resources like Consent, Coverage, Organization, PractitionerRole, Provenance, and Task. These profiles are designed to be use-case independent but are specifically tied to the HRex scope, which includes US payer and provider data exchange with each other and other covered entities under HIPAA, including their business associates. It also includes data exchange with the patient/member. The exchanges are typically ones that are 'of interest' in value-based care. The IG also defines the \"member-match\" operation, which allows for the resolution of a member's identity on a target payer's system. Additionally, it provides guidance on security and privacy, task-based queries, and dynamic registration for SMART apps. The IG is built on FHIR R4 and references US Core profiles, making it heavily reliant on FHIR for data modeling and exchange. While it touches upon various functional domains, its core purpose is to establish a foundational layer for other Da Vinci IGs, rather than directly addressing specific clinical or administrative workflows. The artifacts defined in this IG are intended to be reused across multiple Da Vinci IGs, and thus it does not focus on a specific geographic realm or stakeholder group, although it is developed under the auspices of HL7 International and primarily targets the US healthcare market.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.9,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Security & Privacy": 0.3,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Standards Organizations": 0.5,
+      "Administrative Organizations > Insurance Companies": 0.4,
+      "Administrative Organizations > Health Plans": 0.4,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.3,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "rationale": "The IHE ITI Non-patient File Sharing (NPFS) Implementation Guide defines a mechanism for sharing files that are not directly related to a specific patient. The core functionality revolves around defining how to submit, update, search, and retrieve these non-patient files. \n\n**Submit File [ITI-87]** defines how a File Source actor can create, update, or replace files and their associated metadata (DocumentReference) on a File Manager. This involves defining the structure of FHIR Bundle resources used for these operations, including constraints on the DocumentReference and Binary resources. \n\n**Search File [ITI-88]** defines how a File Consumer can query the File Manager for DocumentReference resources based on various search parameters. This transaction specifies the allowed search parameters and the expected response format. \n\n**Update DocumentReference [ITI-89]** defines how a File Source can update the metadata (DocumentReference) of an existing file on the File Manager. \n\n**Retrieve File [ITI-109]** defines how a File Consumer can retrieve a specific file from the File Manager, given its URL from a DocumentReference. \n\nThe IG also defines CapabilityStatements for the File Source, File Consumer, and File Manager actors, outlining the specific capabilities each actor must support. Additionally, it specifies AuditEvent profiles for recording security-relevant events related to these transactions. The IG provides examples of the FHIR resources used in these transactions, including DocumentReference, Binary, and Bundle resources. The primary focus is on defining the structure and exchange mechanisms for non-patient files, with specific guidance given for workflow definitions, privacy domain policies, and stylesheets.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.9,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Standards Organizations": 0.5,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

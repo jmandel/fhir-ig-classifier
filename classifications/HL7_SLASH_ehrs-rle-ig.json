@@ -1,0 +1,32 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) defines how to represent Record Lifecycle Events (RLEs) within an Electronic Health Record System (EHR-S) using FHIR resources. It primarily focuses on creating profiles for `Provenance` and `AuditEvent` resources to capture the metadata associated with various RLEs, such as origination, amendment, attestation, access, and others, as defined in the ISO/HL7 10781 EHR-S Functional Model. The IG specifies the structure and content of these FHIR resources, including mandatory elements (W5 metadata) like who, what, when, where, and why for each event. It also provides a conformance statement outlining the operations that a conforming EHR system must support. The IG emphasizes the importance of maintaining a complete audit trail of actions performed on health records, ensuring data integrity and trustworthiness. It defines how to link `AuditEvent` and `Provenance` resources to other FHIR resources representing the actual health data being managed. The IG also includes tables mapping RLEs to CRUD operations and detailing the FHIR resource elements used to capture event metadata. It provides downloadable packages containing the full IG, definitions, and examples in various formats (XML, JSON, TTL).",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.95
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R5": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Workflow Support": 0.7,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.9,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.8,
+      "Standards Organizations > Standards Development Organizations": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Technical Implementers > System Integrators": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) primarily focuses on defining the structure and content for representing allergy and intolerance information within the Belgian healthcare context. It establishes a specific profile `BeAllergyIntolerance` derived from the base FHIR `AllergyIntolerance` resource. This profile mandates specific data elements, value sets, and extensions relevant to the Belgian healthcare system. \n\nThe IG defines a new extension `BeExtAllergyType` to capture the type of allergy or intolerance, which is intended to replace a similar extension in FHIR R5. It also creates several value sets, including `BeAllergyIntoleranceCode`, `BeCausativeAgent`, `BeNoAllergy`, `BeRiskManifestation`, and `BeExposureRoute`, to standardize the coding of various aspects of allergy and intolerance information. These value sets primarily utilize SNOMED CT codes, with some custom codes for specific Belgian requirements. \n\nFurthermore, the IG specifies a naming system `BeNSAllergy` for uniquely identifying allergy records within Belgium. It provides guidance on using identifiers, representing causative agents (differentiating between medication and non-medication related), handling allergy types, identifying recorders, and managing dates related to onset and reactions. \n\nThree example instances (`allergyintolerance1`, `allergyintolerance2`, `allergyintolerance3`) are provided to demonstrate the practical application of the `BeAllergyIntolerance` profile. These examples showcase how to populate various data elements, including extensions, clinical status, verification status, category, code, patient, recorded date, recorder, asserter, and reactions. \n\nIn summary, this IG focuses on data modeling by defining a specific profile, extensions, and value sets to standardize the representation of allergy and intolerance information in Belgium. It also touches upon data exchange by providing guidance on identifiers and referencing external resources. The primary stakeholders are healthcare provider organizations, particularly clinical care teams, and technical implementers like EHR vendors who need to implement these specifications for interoperability within the Belgian healthcare system.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Belgium": 0.95
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Standards Organizations > Standards Development Organizations": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "rationale": "The Da Vinci Coverage Requirements Discovery (CRD) Implementation Guide (IG) primarily focuses on defining a mechanism for healthcare providers to discover payer coverage requirements during the clinical workflow. It leverages CDS Hooks to enable real-time queries to payer systems, allowing providers to determine if prior authorization is needed, what documentation is required, and if alternative therapies are recommended or mandated. \n\nThis IG defines extensions to CDS Hooks to support configuration options, allowing providers to customize the types of information received. It also defines new response types, including the ability to directly return coverage information and prior authorization numbers as part of a CRD response. The IG specifies profiles for various FHIR resources used in the context of CDS Hooks calls, including resources like ServiceRequest, MedicationRequest, and Appointment. These profiles often build upon US Core profiles, adding constraints specific to the CRD use case. The IG also addresses security and privacy considerations, emphasizing the importance of secure communication and appropriate use of patient data. \n\nWhile the IG references other standards like US Core and HRex, its core contribution lies in defining the specific interactions, data models, and workflows for coverage requirements discovery using CDS Hooks. It establishes a framework for real-time communication between provider systems and payer systems, aiming to reduce administrative burden and improve the efficiency of the prior authorization process. The IG's focus on defining new extensions, response types, and profiles for FHIR resources within the context of CDS Hooks demonstrates its primary function as a data modeling and data exchange specification.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial": 0.9,
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.7,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.9,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Administrative Organizations > Insurance Companies": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Public Health Organizations > Registry Systems": 0.3,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

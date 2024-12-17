@@ -1,0 +1,35 @@
+{
+  "rationale": "The \"MOHW_TWCoreIG_Build\" FHIR Implementation Guide (IG) primarily focuses on defining a set of FHIR profiles, extensions, value sets, and code systems tailored to the specific needs of Taiwan's healthcare system. It builds upon FHIR R4 and references international standards like IPS and US Core, adapting them to the Taiwanese context. \n\nThe IG defines 63 profiles, including 40 at FMM level 1, 6 at FMM level 2, and 17 at FMM level 3. These profiles cover a wide range of clinical and administrative domains, including patient demographics, allergies, conditions, medications, procedures, observations, and more. It also defines 13 extensions specific to Taiwan, such as extensions for Taiwanese address components and identifier suffixes. \n\nFurthermore, the IG specifies numerous value sets and code systems, primarily based on Taiwan's national terminology services. These include mappings between Taiwanese code systems and international standards like SNOMED CT and LOINC. The IG also includes capability statements outlining the expected functionality of FHIR servers implementing the guide, as well as search parameters and operation definitions for various resources. \n\nWhile the IG references other standards and IGs, its core function is to define a set of Taiwan-specific data models and terminologies for use within the Taiwanese healthcare system. It provides concrete guidance for implementers on how to structure and represent healthcare data using FHIR, with a focus on data modeling and terminology standardization.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Clinical Care > Specialty Care": 0.4,
+      "Infrastructure & Foundational": 0.6,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Terminology": 0.8,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Taiwan": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Standards Organizations": 0.8,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

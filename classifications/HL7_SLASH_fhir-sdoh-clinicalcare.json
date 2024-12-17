@@ -1,0 +1,35 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-sdoh-clinicalcare\" focuses on defining standards for exchanging Social Determinants of Health (SDOH) data within the context of clinical care. It defines numerous FHIR profiles, value sets, and code systems to represent SDOH concepts, including assessments, goals, service requests, and tasks. The IG emphasizes the use of standardized assessment instruments and provides guidance on representing assessment data using QuestionnaireResponse and Observation resources. It also supports workflows for referrals to community-based organizations (CBOs) and interactions with patient applications. The IG leverages the StructureMap resource to define rules for generating Observations and Conditions from QuestionnaireResponse. It defines capability statements for various actors, including referral sources, referral recipients, and coordination platforms. The IG's primary focus is on data modeling (defining profiles and value sets) and data exchange (defining workflows and interactions between systems). It also touches upon knowledge representation by providing guidance on representing assessment instrument data and generating Observations and Conditions. The IG is based on FHIR R4 and is intended for use in the United States, aligning with the Gravity Project's goals. It primarily targets technical implementers, such as EHR vendors and system integrators, as well as healthcare provider organizations, particularly clinical care teams involved in SDOH data collection and exchange.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.9,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.8,
+      "Workflow Support": 0.6,
+      "Knowledge Representation": 0.4,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > System Integrators": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

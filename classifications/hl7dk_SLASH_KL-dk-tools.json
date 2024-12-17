@@ -1,0 +1,32 @@
+{
+  "rationale": "The \"KL-dk-tools\" FHIR Implementation Guide (IG) primarily focuses on defining FHIR profiles and resources for use within Danish municipalities. It specifies a set of questionnaires and observations tailored to the needs of healthcare and social care data exchange in this context. \n\nThe IG defines two main types of resources: Questionnaires and Observations. The Questionnaires are based on standardized instruments like EQ-5D and WHO-5, adapted for the Danish context. The Observations cover a range of clinical measurements, including vital signs (blood pressure, heart rate, respiration rate, temperature, oxygen saturation), physical measurements (height, weight), and functional assessments (6-minute walk test, chair stand test). It also includes observations derived from the EQ-5D and WHO-5 questionnaires, as well as observations related to pain assessment (VAS, VRS) and urine analysis (UrinStix). \n\nThese resources are designed to capture data related to patient health status, functional abilities, and well-being. The IG emphasizes the use of standardized terminologies like SNOMED CT and LOINC, but also defines custom value sets and codes specific to the Danish context. It includes extensions for specifying the source of information (findingInformer) and the technique used for obtaining measurements. The IG also provides guidance on how to represent the data in FHIR, including mappings between the Danish information model and the FHIR profiles. \n\nOverall, the \"KL-dk-tools\" IG provides a comprehensive framework for representing and exchanging healthcare data within Danish municipalities, focusing on standardized questionnaires and observations relevant to clinical care and social care settings. It leverages FHIR as the underlying standard, while incorporating Danish-specific requirements and terminologies.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.9,
+      "Infrastructure & Foundational": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 1
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.9,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Public Health Organizations > Disease Surveillance Teams": 0.3,
+      "Public Health Organizations > Research Platforms": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

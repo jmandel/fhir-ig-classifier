@@ -1,0 +1,33 @@
+{
+  "rationale": "The SMART Web Messaging IG defines a mechanism for web-based SMART apps to communicate with the EHR system that launched them, primarily focusing on enhancing the user experience and enabling workflow integration. It leverages the HTML5 `window.postMessage` API to facilitate this communication. The IG specifies several message types, including `status.*` for connection establishment, `ui.*` for influencing the EHR's user interface (e.g., closing the app or navigating to another activity), `scratchpad.*` for interacting with temporary FHIR resources in the EHR's \"scratchpad\", and `fhir.http` for making FHIR API calls through the messaging channel. The `ui.launchActivity` message type utilizes an \"Activity Catalog\" defined within the IG, which outlines common EHR navigation points and parameters for each activity. The `scratchpad.*` messages allow apps to create, read, update, and delete temporary FHIR resources, enabling scenarios like managing a clinician's \"shopping cart\" of orders. The `fhir.http` message type allows apps to send FHIR requests to the EHR server, effectively acting as a proxy for direct FHIR API calls. The IG also defines an authorization model using OAuth scopes in the `messaging/` category, granting apps access to specific message groups. The IG is designed for compatibility with FHIR R4 and above, and it explicitly mentions alignment with CDS Hooks for certain workflows.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational": 0.6
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Workflow Support": 0.8,
+      "Data Modeling": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.9,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > System Integrators": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "rationale": "This FHIR Implementation Guide (IG) primarily focuses on defining the structure and content of medication-related information for exchange within the Belgian healthcare system. It establishes a framework for representing medication records, including concepts like Medication Line and Medication Dispense. \n\nThe IG specifies several key artifacts:\n\n1.  **Logical Models:** It defines logical models such as `BEModelMedicationDispense` and `BEModelMedicationLine`, which outline the data elements and relationships for representing medication dispenses and medication lines, respectively. These models serve as blueprints for the structure of medication-related data.\n2.  **Profiles:** The IG includes profiles like `BeMedicationDispense`, which constrain the base FHIR `MedicationDispense` resource to align with Belgian requirements. This profile specifies cardinality, data types, and value sets for various elements within the `MedicationDispense` resource.\n3.  **Terminology:** It defines value sets (`MedicationExposureCategoryVS`, `MedicationLineOrigintypeVS`) and code systems (`MedicationLineOrigintype`) to standardize the terminology used within the medication domain. It also references external code systems like SNOMED CT.\n4.  **Examples:** The IG provides numerous example instances of the `MedicationDispense` resource (`example-dispense-communitypharmacy-1med`, `medicationdispense-example-2`, etc.), demonstrating how to populate the resource with data conforming to the defined profiles and terminology.\n5.  **Use Cases and Scenarios:** It outlines various use cases related to medication records and dispenses, such as consulting a medication record, updating a medication record, registering a dispense, and consulting dispenses. These use cases are further illustrated with scenarios that provide additional context and considerations for implementation.\n6.  **Requirements:** The IG lists specific requirements for medication records, such as the ability to include detailed process information or summary information, the need to capture different aggregation approaches, and the importance of reflecting the status of medication information.\n\nBased on these artifacts, the IG's primary function is to define a data model for medication information exchange in Belgium, leveraging FHIR resources and extending them to meet specific national needs. It also touches upon data exchange mechanisms by describing use cases and providing examples, but the core focus remains on the structure and content of the data itself.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Medication Management": 0.95
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.35,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Belgium": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Technical Implementers > Health IT Development Teams": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

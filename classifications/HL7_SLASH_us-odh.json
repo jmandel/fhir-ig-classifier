@@ -1,0 +1,31 @@
+{
+  "rationale": "The US-ODH (Occupational Data for Health) Implementation Guide is primarily focused on defining FHIR profiles to represent occupational data within a patient's medical record. This data is intended to enhance clinical care by providing insights into a patient's work history and its potential impact on their health. The IG specifies profiles for capturing employment status, retirement date, combat zone periods, past or present job details (occupation, industry, work classification, work schedule, job duties, occupational hazards, employer information, related subject for household members, and start/end dates), and usual work information (usual occupation, usual industry, usual occupation duration, related subject for household members, and start date). These profiles are designed to be incorporated into broader IGs and are not intended as a standalone composition. The IG explicitly states it is not designed for billing or administrative purposes. The IG is based on FHIR R4.0.1 and while designed for the US Realm, it aims to support international needs as well. The IG includes downloadable examples in XML, JSON, and TTL formats, indicating a focus on practical implementation. The content and structure are intended to inform clinical care, support population health, and contribute to public health activities, but the primary focus is on clinical care.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Public Health": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

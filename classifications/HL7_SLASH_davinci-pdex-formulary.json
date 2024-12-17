@@ -1,0 +1,38 @@
+{
+  "rationale": "The DaVinci PDex Formulary Implementation Guide (IG) defines a FHIR interface for health insurers to expose drug formulary information. This IG focuses on enabling consumers to understand drug costs and compare drug coverage across different insurance plans. \n\nThe core functionality of this IG revolves around defining a set of FHIR profiles and extensions to represent formulary data. Specifically, it defines the `PayerInsurancePlan` profile to represent health insurance products, including coverage benefits and cost-sharing structures. It also defines the `Formulary` profile, which provides general information about a formulary and acts as an organizing construct. The `FormularyItem` profile describes a drug's relationship to a formulary, including its tier, prior authorization requirements, and other coverage constraints. Finally, the `FormularyDrug` profile provides information about a prescribable drug, including its RxNorm code and dose form.\n\nIn addition to these profiles, the IG defines several search parameters to facilitate querying formulary data. These parameters allow users to search for insurance plans based on coverage type, formulary coverage, and coverage area. They also enable searching for formulary items based on formulary, drug tier, and pharmacy benefit type. Furthermore, users can search for formulary drugs by name or code.\n\nThe IG also outlines two access methods: an authenticated API for accessing formulary data integrated with protected health information (PHI) or personally identifiable information (PII), and an unauthenticated API for exchanging formulary data without any PHI or PII. It also provides draft guidance on using the Bulk Data IG for retrieving large sets of formulary data.\n\nOverall, the DaVinci PDex Formulary IG provides a comprehensive framework for representing and exchanging formulary information using FHIR. It focuses on data modeling and exchange mechanisms to support the use cases of understanding drug costs and comparing drug coverage across different insurance plans.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Insurance and Billing": 0.9,
+      "Administrative & Financial > Prior Authorization": 0.3,
+      "Clinical Care > General Clinical Care > Medication Management": 0.8,
+      "Infrastructure & Foundational > Terminology and Value Sets": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Administrative Organizations > Insurance Companies": 0.9,
+      "Administrative Organizations > Health Plans": 0.9,
+      "Patient-Facing Stakeholders > Patients": 0.8,
+      "Patient-Facing Stakeholders > Family Members": 0.8,
+      "Patient-Facing Stakeholders > Care Coordinators": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

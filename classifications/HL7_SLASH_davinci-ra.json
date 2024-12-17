@@ -1,0 +1,34 @@
+{
+  "rationale": "The Da Vinci Risk Adjustment (davinci-ra) FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of risk adjustment coding gap data between payers and providers. Analyzing the provided content, the IG defines several key artifacts:\n\n1.  **Capability Statements:** It defines capability statements for both client and server actors involved in risk adjustment reporting and data submission. These statements outline the expected behaviors and operations supported by each actor, such as querying for Risk Adjustment Coding Gap Reports or submitting data via the $submit-data operation.\n2.  **MeasureReport Profiles:** It defines a \"Risk Adjustment Coding Gap Report\" profile based on the FHIR MeasureReport resource. This profile specifies how to represent coding gaps, including condition category codes, suspect types, evidence status, and hierarchical status. It also defines a \"Risk Adjustment Data Exchange MeasureReport\" profile for providers to submit clinical data back to payers.\n3.  **Measure Profile:** It defines a \"Risk Adjustment Model Measure\" profile to represent information about specific risk adjustment models (e.g., CMS-HCC V24).\n4.  **Group Profile:** It defines a \"Patient Group\" profile to represent groups of patients for bulk data operations.\n5.  **Extensions:** It defines several extensions to augment the MeasureReport resource, such as \"Condition Category Remark\" (ccRemark) to allow providers to add remarks to coding gaps, \"Condition Category Type\" (ccType), \"Evidence Status\", \"Evidence Status Date\", and \"Hierarchical Status\".\n6.  **Operation Definition:** It defines a draft operation, $ra.evaluate-measure, for evaluating digital Condition Categories (dCCs) to generate Risk Adjustment Coding Gap Reports.\n7.  **Terminology:** It defines value sets and code systems for concepts like suspect type, evidence status, hierarchical status, and condition category remark codes.\n8.  **Workflows:** It outlines workflows for generating, querying, and annotating Risk Adjustment Coding Gap Reports, as well as submitting data to payers.\n9.  **PATCH Profile:** It defines a profile for using the PATCH operation to send Condition Category remarks.\n\nBased on these artifacts, the IG's primary function is to facilitate the exchange of risk adjustment data, particularly coding gaps, between payers and providers to improve the accuracy and completeness of risk adjustment processes.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial > Risk Adjustment": 0.9,
+      "Administrative & Financial > Value-Based Performance Reporting": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.7,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Administrative Organizations > Insurance Companies": 0.8,
+      "Administrative Organizations > Health Plans": 0.8,
+      "Administrative Organizations > Healthcare Administrators": 0.4,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

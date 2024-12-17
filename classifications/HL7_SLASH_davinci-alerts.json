@@ -1,0 +1,32 @@
+{
+  "rationale": "The Da Vinci Unsolicited Notifications Implementation Guide (IG) defines a framework for sending notifications triggered by events impacting patient care, particularly focusing on real-time exchange of information relevant to value-based or risk-based services. The core functionality of this IG revolves around defining a standardized approach for creating and exchanging these notifications using FHIR messaging. \n\nSpecifically, the IG defines:\n\n1.  **Notification Message Structure:** It establishes a common FHIR message Bundle format for all notifications, including a mandatory MessageHeader resource that identifies the notification's purpose (e.g., admission, discharge, transfer) and references other relevant resources like Encounter, Patient, Practitioner, Location, Condition, and Coverage. These resources are profiled to meet the specific needs of the defined use cases.\n2.  **Transactions and Operations:** It specifies the use of the FHIR `$process-message` operation for \"pushing\" these unsolicited notification messages directly to Recipients and Intermediaries. It outlines the expected behavior of Senders, Intermediaries, and Recipients in this process, including error handling and reliable delivery.\n3.  **Use Case Definition:** It demonstrates the application of the framework through a detailed use case for admission, transfer, and discharge notifications. This includes defining specific profiles for MessageHeader, Encounter, Condition, and Coverage resources tailored to this use case, along with example message bundles.\n4.  **Security and Privacy:** It provides guidance on security and privacy considerations, referencing the HRex Security and Privacy specification and recommending the use of SMART Backend Services for authorization.\n5.  **Conformance:** It includes CapabilityStatements that define the conformance expectations for Senders, Receivers, and Intermediaries, specifying the supported profiles, operations, and search parameters.\n\nIn essence, this IG creates a blueprint for building interoperable systems that can generate and consume unsolicited notifications in a consistent and predictable manner, leveraging FHIR's messaging capabilities and resource model. It focuses on defining the structure of the notification messages, the mechanisms for their exchange, and the roles and responsibilities of the involved actors, while leaving the specific business rules and workflows surrounding notification triggering to the implementers.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "rationale": "The PACIO Personal Functioning and Engagement (PFE) Implementation Guide (IG) is focused on defining a framework for representing and exchanging observations related to an individual's functioning. The IG is built around the concept of health domains based on the International Classification of Functioning, Disability, and Health (ICF) categories. \n\nThe core artifacts defined in this IG are FHIR profiles, value sets, and code systems. The profiles primarily define how to represent observations related to functioning, including both individual observations (using the `pfe-observation-single` profile) and collections of observations (using the `pfe-collection` profile). These profiles are based on US Core Observation profiles but add constraints to support the PFE framework, such as requiring a category code of \"functioning\" and supporting an additional category to specify the ICF-based health domain. The IG also defines a `pfe-narrative-history-of-status` profile for representing narrative summaries of a patient's prior functioning. \n\nThe value sets defined in this IG are central to its purpose. They provide a mapping of health and health-related domains to ICF categories and enumerate codes (primarily LOINC) for observations within each domain. These domain-based value sets are intended to be used to populate the `Observation.code` element when the `Observation.category` indicates a specific domain. The IG also defines a code system (`pfe-category-cs`) for the ICF-based health domains. \n\nWhile the IG provides guidance on structured data capture using FHIR Questionnaire and QuestionnaireResponse resources, it does not define specific questionnaires or assessment instruments. Instead, it focuses on how to map observations from various assessments into the PFE framework using the defined profiles and value sets. The IG also includes a capability statement (`pacio-pfe-cap`) that outlines the expected capabilities of systems conforming to the guide. \n\nIn summary, the PFE IG creates concrete artifacts in the form of FHIR profiles, value sets, and code systems to enable the representation and exchange of observations related to personal functioning and engagement, organized around ICF-based health domains. The primary focus is on data modeling (defining the structure and content of observations) and data exchange (providing a framework for interoperability), with an emphasis on leveraging existing standards like US Core and LOINC.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.9,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.25
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Research Platforms": 0.3,
+      "Public Health Organizations > Registry Systems": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "rationale": "The `dk-medcom-hospitalnotification` FHIR Implementation Guide (IG) defines a system for exchanging hospital notifications in Denmark. This IG focuses on creating a standardized way to inform municipalities about patient hospitalizations, including admissions, leaves, and discharges. \n\nThe core of this IG is the definition of a `HospitalNotification` message, built using FHIR resources and profiles. It specifies a `MedComHospitalNotificationMessage` profile, which is a constrained `MedComMessagingMessage`. This message contains a `MedComHospitalNotificationMessageHeader`, which further constrains the `MedComMessagingMessageHeader` to specify details like the event code (`hospital-notification-message`) and disallowing carbon-copy destinations. The message also includes a `MedComHospitalNotificationEncounter` profile, derived from `MedComCoreEncounter`, which carries the clinical information about the hospitalization, such as status, class, start/end times, and leave periods. \n\nAdditionally, the IG defines specific constraints and extensions, such as `MedComHospitalNotificationLeavePeriodExtension` for managing leave periods, and extensions for requesting and specifying the recipient of a report of admission. It also references other MedCom IGs like `MedCom Core`, `MedCom Messaging`, and `MedCom Terminology` for foundational elements and value sets. The IG provides detailed guidance on timestamps, IDs, and includes several simplified examples of different hospital notification scenarios, such as 'Start hospital stay - admitted', 'Start leave', 'End leave', 'End hospital stay', 'Deceased', and 'Cancellation'.\n\nIn essence, this IG establishes a data model and exchange mechanism for hospital notifications within the Danish healthcare system, leveraging FHIR messaging and profiling capabilities to ensure interoperability and consistency in communication between hospitals and municipalities.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.5
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Denmark": 1
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.9,
+      "Public Health Organizations > Public Health Agencies": 0.8,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

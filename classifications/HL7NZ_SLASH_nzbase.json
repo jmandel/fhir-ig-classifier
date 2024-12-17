@@ -1,29 +1,30 @@
 {
-  "rationale": "This IG primarily defines a set of FHIR extensions and value sets specific to New Zealand. It includes extensions for various purposes, such as recording additional practitioner authorisations, alias types, building names, conditions on practice, death dates, domicile codes, educational qualifications, funded programs, information sources, long-term conditions, messaging addresses, NZ citizenship, NZ ethnicity, NZ geocodes, NZ residency status, NZePS medication indicators, PHOs, practitioner role creators and status reasons, registration status, scope of practice, sex at birth, and suburb. These extensions are applied to various FHIR resources like Patient, Practitioner, Location, Organization, Condition, MedicationRequest, and PractitionerRole. The IG also defines value sets and code systems for these extensions, such as those for ACC patient occupations, additional practitioner authorisations, alias types, contact point purposes, coverage categories and types, datum codes, death date information sources, DHBs, domicile codes, ethnicities, funded programs, information sources, Iwi, Maori descent, NZ citizenship and residency statuses, PHOs, practitioner role status reasons, registration statuses, and scopes of practice. The IG does not define any workflows or data exchange mechanisms, focusing instead on data modeling and terminology.",
-  "Primary Domain": [
-    "General Clinical Care",
-    "Infrastructure & Foundational"
-  ],
-  "HL7 Standard": [
-    "FHIR"
-  ],
-  "Scope/Purpose": [
-    "Data Modeling",
-    "Knowledge Representation"
-  ],
-  "Geographic Scope": [
-    "National Jurisdictions",
-    "New Zealand"
-  ],
-  "Data Source": [
-    "EHR-Centric",
-    "Mixed/Other"
-  ],
-  "Maturity Level": [
-    "Draft/Trial Use"
-  ],
+  "rationale": "The `nzbase` FHIR Implementation Guide primarily focuses on defining a set of New Zealand-specific extensions, profiles, and terminology artifacts for use within the FHIR framework. It establishes foundational elements for interoperability within the New Zealand healthcare context, rather than focusing on a specific clinical domain. The IG defines numerous extensions to represent NZ-specific data elements, such as ethnicity, domicile code, and various identifiers like the NHI. It also includes profiles for core FHIR resources like Patient, Practitioner, Location, and Organization, incorporating these extensions. The terminology section defines ValueSets and CodeSystems for NZ-specific codes, including ethnicity, iwi, and various administrative codes. The IG's scope is primarily data modeling, defining the structure and content of FHIR resources for the NZ context. It also touches upon data exchange by defining identifiers and providing guidance on their use. The geographic scope is explicitly limited to New Zealand, as indicated by the canonical URL, publisher information, and the content of the defined extensions and terminology. The primary stakeholders are technical implementers, particularly EHR vendors and system integrators, who will use this IG to ensure their systems are compliant with NZ requirements. It also indirectly impacts healthcare provider organizations and public health agencies by standardizing data representation. The IG is based on FHIR R4 and is intended for use within the New Zealand healthcare system.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.8
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > New Zealand": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > System Integrators": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Standards Organizations": 0.4,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.3,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
   "meta": {
-    "model": "gemini-2.0-flash-exp",
+    "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
     }

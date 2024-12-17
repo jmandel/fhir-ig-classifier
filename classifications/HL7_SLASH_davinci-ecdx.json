@@ -1,0 +1,35 @@
+{
+  "rationale": "The Da Vinci Clinical Data Exchange (CDex) Implementation Guide (IG) is designed to facilitate the exchange of clinical data between providers and payers (or other providers). It focuses on defining FHIR-based transactions to support various use cases, including requesting attachments for claims and prior authorization, requesting documentation for payer operations, and exchanging data between providers. \n\nThis IG defines several key artifacts:\n\n1.  **CapabilityStatements:** These define the expected capabilities of different systems (Data Consumer Client, Data Consumer Server, Data Source Client, Data Source Server) to comply with the IG.\n2.  **Profiles:** Several profiles are defined, including those for Task-based data requests, attachment requests, and signature representation. These profiles constrain the base FHIR resources to meet the specific needs of CDex transactions.\n3.  **Operations:** The `$submit-attachment` operation is defined for sending attachments to payers.\n4.  **Terminology:** ValueSets and CodeSystems are defined to support specific concepts like purpose of use (POU) and attachment codes.\n5.  **Examples:** Numerous examples are provided to illustrate the various transactions and scenarios supported by the IG.\n\nCDex supports three main transaction approaches:\n\n1.  **Direct Query:** Using standard FHIR RESTful search for direct data retrieval.\n2.  **Task-Based Approach:** Using the FHIR Task resource for asynchronous requests, often involving human intervention.\n3.  **Attachments:** Using FHIR to request and send attachments for claims and prior authorizations, supporting both solicited and unsolicited workflows.\n\nCDex also addresses security and privacy considerations, including the use of digital signatures for data integrity and non-repudiation. The IG leverages other Da Vinci IGs like HRex and US Core, providing additional context and constraints for specific use cases.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Administrative & Financial": 0.7,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 1
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.6,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Administrative Organizations > Insurance Companies": 0.7,
+      "Administrative Organizations > Health Plans": 0.7,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

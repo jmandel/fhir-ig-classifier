@@ -1,0 +1,33 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-us-mcc\" focuses on defining FHIR R4 profiles, structures, extensions, transactions, and value sets necessary for representing, querying, and exchanging Care Plan information, particularly for patients with multiple chronic conditions (MCC). It emphasizes the creation of a consensus-driven dynamic plan that integrates multiple interventions proposed by various providers for multiple conditions. The IG specifically addresses the needs of patients with conditions such as Chronic Kidney Disease, Type 2 diabetes mellitus, cardiovascular disease, chronic pain, and Long Covid. It defines 21 foundation profiles that conform to US Core Profiles, adding constraints or extensions relevant to their representation within a dynamic FHIR care plan. The IG also includes guidance on aggregating care plan information, emphasizing the use of FHIR profiles and API features. It supports querying for patient data across providers, capturing patient health concerns, and aggregating data for uses beyond the point of care. The IG is designed to be a planning tool, an educational resource, and a technical specification, addressing the needs of programmers, business analysts, and technology decision-makers. It also includes a plain language summary to make the guide accessible to non-technical readers. The IG builds on US Core, adhering to its conformance requirements and general guidance. It also provides specific guidance on representing Social Determinants of Health (SDOH) data within the MCC Care Plan, leveraging value sets developed by the Gravity Project. The IG defines how to represent coded content to support care planning activities, focusing on the needs of patients with multiple chronic conditions, and provides technical artifacts to assist programmers in implementing standards-based FHIR APIs.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.9,
+      "Clinical Care > Specialty Care > Cardiology": 0.3,
+      "Clinical Care > Specialty Care > Nephrology": 0.3,
+      "Research": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.6,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Standards Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

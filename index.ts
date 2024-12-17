@@ -21,6 +21,11 @@ program
     'classify using full IG content instead of AI-generated analysis',
     false
   )
+  .option(
+    '--filter <name>',
+    'only process IGs whose names (lowercase) contain all these parts (split on /)',
+    ''
+  )
   .version('1.0.0');
 
 program.parse();
@@ -32,7 +37,7 @@ const vertexAI = new VertexAI({
 });
 
 const generativeModelConfig = {
-  model: "gemini-2.0-flash-exp",
+  model: "gemini-exp-1206",
   generation_config: {
     temperature: 0,
   }
@@ -192,7 +197,7 @@ async function createContextFile(repoDir: string, repo: string, org: string) {
         return scoreB - scoreA; // Higher scores first
       }
       
-      // If scores are equal, sort by path
+      // If scores are equal, sort by ,path
       return a.path.localeCompare(b.path);
     });
 
@@ -274,7 +279,7 @@ async function analyzeRepo(contextFilePath: string, repo: string, org: string) {
 
 const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 IGs
 
-## Axis 1: Primary Domain
+## Axis 1: Primary Functional Domain
 
 -   **Clinical Care:** IGs focused on direct patient care, care coordination, and clinical workflows.
     -   **Specialty Care:** IGs tailored to specific medical specialties.
@@ -323,15 +328,15 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
 
 ## Axis 3: Scope/Purpose
 
--   **Data Exchange:** IGs primarily focused on standardizing data elements and formats for interoperability.
--   **Workflow Support:** IGs defining workflows and interactions between systems or actors.
--   **Knowledge Representation:** IGs focused on representing clinical knowledge, guidelines, or decision support logic.
+-   **Data Exchange:** IGs primarily focused on standardizing mechanisms for interoperability.
 -   **Data Modeling:** IGs defining core data models or profiles for specific domains or use cases.
+      Note: Data Modeling IGs focus on *what* the data looks like (profiles, extensions, value sets), while Data Exchange IGs focus on *how* data is shared (APIs, operations, transactions).
+-   **Knowledge Representation:** IGs focused on representing clinical knowledge, guidelines, or decision support logic.
 -   **Security & Privacy:** IGs defining security and privacy mechanisms for data exchange.
+-   **Workflow Support:** IGs defining workflows and interactions between systems or actors.
 
 ## Axis 4: Geographic Scope
 
--   **US Realm:** IGs specifically designed for the US healthcare context.
 -   **Universal Realm:** IGs intended for international use.
 -   **National Jurisdictions:** Including but not limited to:
     -   Australia
@@ -352,6 +357,7 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
     -   Sweden
     -   Switzerland
     -   United Kingdom
+    -   United States
     -   [Other national jurisdictions as applicable]
 -   **Regional:**
     -   European Union
@@ -359,47 +365,47 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
     -   Asia-Pacific Region
     -   [Other regional groupings as applicable]
 
-## Axis 5: Data Source
+## Axis 5: Stakeholders
 
--   **EHR-Centric:** IGs primarily focused on data originating from Electronic Health Records.
--   **Patient-Generated:** IGs focused on data collected directly from patients (e.g., through apps, devices).
--   **Payer-Centric:** IGs primarily focused on data originating from payers.
--   **Laboratory-Centric:** IGs primarily focused on data originating from laboratories.
--   **Device-Centric:** IGs primarily focused on data originating from medical devices.
--   **Registry-Centric:** IGs primarily focused on data originating from registries.
--   **Mixed/Other:** IGs that involve data from multiple sources or don't fit neatly into the above categories.
+-   **Technical Implementers:**
+    -   EHR Vendors
+    -   Device Manufacturers
+    -   Analytics Providers
+    -   System Integrators
+    -   Health IT Development Teams
 
-## Axis 6: Maturity Level
+-   **Healthcare Provider Organizations:**
+    -   Hospital IT Departments
+    -   Health System Integration Teams
+    -   Clinical Care Teams
+    -   Laboratory Systems Teams
+    -   Quality Management Teams
 
--   **Draft/Trial Use:** IGs in development or early stages of implementation.
--   **Normative/Standard:** IGs that have been formally balloted and approved as standards.
+-   **Public Health Organizations:**
+    -   Public Health Agencies
+    -   Disease Surveillance Teams
+    -   Epidemiologists
+    -   Registry Systems
+    -   Research Platforms
 
----
+-   **Administrative Organizations:**
+    -   Insurance Companies
+    -   Health Plans
+    -   Benefits Management Systems
+    -   Claims Processing Teams
+    -   Healthcare Administrators
 
-## Distinguishing "Data Modeling" vs. "Data Exchange" in FHIR IGs**
+-   **Standards Organizations:**
+    -   Government Agencies
+    -   Standards Development Organizations
+    -   Certification Bodies
 
-FHIR IGs often address both *how data is structured* (data modeling) and *how that data is shared* (data exchange). It's important to differentiate these two aspects:
+-   **Patient-Facing Stakeholders:**
+    -   Patients
+    -   Family Members
+    -   Patient Advocates
+    -   Care Coordinators
 
-**Data Modeling:**
-
-*   **Focus:** Defines the structure, content, and relationships of healthcare information *independent* of how it's transmitted. It's about creating a standardized representation of the data itself.
-*   **Key Elements in an IG:**
-    *   **Profiles:**  These are the core of data modeling in FHIR. Profiles constrain and extend base FHIR resources (like \`Patient\`, \`Observation\`, \`Condition\`) to meet specific use cases. They define which elements are required, what value sets to use, and any specific rules for how the data should be structured.
-    *   **Extensions:**  Custom additions to FHIR resources to capture information not covered by the base standard.
-    *   **Value Sets and Code Systems:** Standardized vocabularies and codes used within the profiles to ensure consistent meaning of data.
-    *   **Logical Models:** Conceptual representations of the data, often used in the design phase before creating profiles.
-
-**Data Exchange:**
-
-*   **Focus:** Defines the mechanisms, protocols, and workflows for transmitting healthcare information between systems. It's about *how* data is shared, not just what it looks like.
-*   **Key Elements in an IG:**
-    *   **APIs (Application Programming Interfaces):** Specifications for how systems interact to send and receive data (e.g., RESTful APIs, messaging).
-    *   **Operations:** Specific actions that can be performed on FHIR resources (e.g., \`$submit-data\`, \`$process-message\`).
-    *   **Transactions and Messages:** Definitions of how FHIR resources are bundled together for exchange (e.g., using \`Bundle\` resources).
-    *   **Security and Privacy:** Guidelines for secure data transmission (e.g., authentication, authorization, encryption).
-    *   **Workflows:** Descriptions of the steps involved in exchanging data, including the roles of different actors (e.g., sender, receiver, intermediary).
-    *   **Search Parameters:** Definitions of how systems can query for specific data within FHIR resources.
-    *   **Capability Statements:** Descriptions of the data exchange capabilities supported by different systems.
 
 `;
 
@@ -432,25 +438,44 @@ ${classificationScheme}
 
 Based on the following ${useFullContext ? 'content' : 'analysis'} of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Focus specifically on what this IG defines or specifies - not what it references or depends on.
 
-For example:
-- If an IG mentions genomics but doesn't define any genomics-specific profiles/extensions, don't classify it under genomics
-- If an IG depends on US Core but is actually defining dental profiles, classify it under dental care
-- If an IG references multiple clinical specialties but only defines profiles for cardiology, classify it under cardiology
+Classification Guidelines:
+1. Score each category's applicability from 0 (not applicable) to 1.0 (perfectly applicable)
+2. ONLY output scores >= 0.25; completely omit any categories scoring below 0.25
+3. Use general categories when multiple sub-categories are represented:
+   - If an IG defines profiles for cardiology (0.8), oncology (0.7), and ophthalmology (0.6), score "Clinical Care > Specialty Care" as 0.8
+   - If it only defines cardiology profiles, score "Clinical Care > Specialty Care > Cardiology" as 0.9
+4. More specific matches should get higher scores:
+   - A pure cardiology IG would score "Clinical Care > Specialty Care > Cardiology" as 0.9-1.0
+   - An IG that touches on cardiology among other things might score it 0.3-0.5
 
-Provide the output as a JSON object with the following structure:
+Provide the output as a JSON object with the following structure, OMITTING any categories scoring below 0.25:
 {
-  "rationale": "A 100-200 word explanation of specifically why this IG is classified as it is; for each classification decsion, justifying the choice by citing specific language, profiles, extensions, or other guidance from the IG",
-  "Primary Domain": ["one or more categories/subcategories from most specific to most general, based on what the IG defines"],
-  "HL7 Standard": ["the standard(s) this IG actually creates artifacts for"],
-  "Scope/Purpose": ["the primary purpose of the artifacts this IG defines"],
-  "Geographic Scope": ["the jurisdictions this IG's artifacts are specifically designed for"],
-  "Data Source": ["the primary sources of the data this IG's artifacts are designed to capture/exchange"],
-  "Maturity Level": ["the current maturity level of this IG"]
+  "rationale": "~300 word markdown-formatted analysis thinking through the core functionality",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Cardiology": 0.9,
+      "Clinical Care > General Clinical Care": 0.4
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6
+    }
+  }
 }
 
-Each array should contain all relevant values from the classification scheme, from most specific to most general. The rationale should focus on the concrete artifacts and specifications this IG creates. Do not include any markdown formatting or explanation text, just output the JSON object.
+Sort scores within each category from highest to lowest. Each path should be written from general to specific (e.g., "Clinical Care > Specialty Care > Cardiology"). Use ">" to separate levels in the hierarchy. The rationale should focus on the concrete artifacts and specifications this IG creates. Do not include any markdown formatting or explanation text, just output the JSON object.
 
-Analysis:
+Content:
 ${contentToClassify}
 `;
 
@@ -487,6 +512,7 @@ ${contentToClassify}
 async function main() {
   const data = JSON.parse(await fs.readFile(options.input, 'utf-8'));
   const githubUrls: string[] = [];
+  const filterParts = options.filter.toLowerCase().split('/').filter(Boolean);
 
   for (const guide of data.guides) {
     if (guide['ci-build'] && guide['ci-build'].match(/^https?:\/\/build\.fhir\.org\/ig\//)) {
@@ -494,6 +520,15 @@ async function main() {
       if (parts.length >= 2) {
         const org = parts[0];
         const repo = parts[1];
+
+        // Skip if filter is active and doesn't match
+        if (filterParts.length > 0) {
+          const igName = `${org}/${repo}`.toLowerCase();
+          if (!filterParts.every(part => igName.includes(part))) {
+            continue;
+          }
+        }
+
         const formattedName = getFormattedName(org, repo);
         const repoUrl = `https://github.com/${org}/${repo}`;
         const repoDir = path.join('repos', formattedName);

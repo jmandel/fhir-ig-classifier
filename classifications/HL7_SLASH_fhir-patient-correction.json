@@ -1,0 +1,36 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-patient-correction\" defines a standardized approach for patients to request corrections to their medical records and for healthcare organizations to respond to those requests. It focuses on establishing a FHIR-based communication protocol for submitting correction requests, tracking their progress, and handling disagreements. \n\nThe IG defines specific FHIR profiles, including `PatientCorrectionBundle`, `PatientCorrectionCommunication`, and `PatientCorrectionTask`. These profiles extend the base FHIR resources (Bundle, Communication, and Task) to support the patient correction workflow. The `PatientCorrectionBundle` is used to package the correction request, which includes a `PatientCorrectionCommunication` resource detailing the specific request. The `PatientCorrectionTask` resource is used by the healthcare provider (Fulfiller) to track the status and progress of the correction request. \n\nThe IG also defines an operation, `$correction-request`, which is used to initiate the correction request process. This operation takes a `PatientCorrectionBundle` as input and is expected to result in the creation of a `PatientCorrectionTask` on the Fulfiller's system. \n\nFurthermore, the IG outlines various use cases, including scenarios where a correction request is accepted, denied, partially accepted, or updated. It also addresses the situation where a patient disagrees with a denial and provides a mechanism for logging that disagreement. \n\nThe IG emphasizes the importance of security and privacy, referencing the SMART App Launch Framework and other security guidelines. It also provides guidance on the use of specific status codes and business statuses to convey the state of the correction request process. \n\nIn essence, this IG focuses on defining the data model, interactions, and workflows necessary to facilitate a standardized, FHIR-based approach to patient-initiated medical record corrections. It does not delve into the specifics of how healthcare organizations internally process these requests but rather concentrates on the interoperable exchange of information between patients and providers.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Patient Engagement": 0.9,
+      "Administrative & Financial": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.8,
+      "Workflow Support": 0.7
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Patient-Facing Stakeholders > Patients": 0.9,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Patient-Facing Stakeholders > Care Coordinators": 0.5,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Patient-Facing Stakeholders > Family Members": 0.3,
+      "Patient-Facing Stakeholders > Patient Advocates": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-ae-research-ig\" focuses on standardizing the representation and exchange of Adverse Event (AE) data within the context of clinical research. Its primary goal is to facilitate the capture and reporting of AEs, particularly serious adverse events (SAEs), in a manner consistent with regulatory requirements. The IG defines a core set of FHIR profiles, extensions, and value sets to model AE data elements, drawing upon existing standards like FDA E2B(R3), CDISC, and ICH guidelines. \n\nThe IG specifies the AdverseEventClinicalResearch profile, which extends the base FHIR AdverseEvent resource. This profile includes extensions like `ae-severity`, `ae-grade`, `caused-subject-to-discontinue-study`, and `seriousness-criteria`. It also defines constraints and bindings for elements like `seriousness`, `outcome`, and `suspectEntity.causality`. The IG provides detailed guidance on representing AE data, including the use of specific code systems and value sets for concepts like severity, grade, seriousness criteria, outcome, and causality relatedness. \n\nFurthermore, the IG outlines workflows for collecting and reporting AEs in both pre-market and post-market clinical trials, demonstrating how the defined profiles can be used in practice. It includes several examples illustrating different AE scenarios, such as a significant adverse event in a clinical trial, an AE report using the FDA MedWatch 3500A form, and non-serious AE reports. These examples showcase the application of the AdverseEventClinicalResearch profile and its associated extensions and value sets. The IG also addresses security considerations, referencing the FHIR Core security guidance and emphasizing the need for use-case-specific security details.",
+  "scores": {
+    "Functional Domain": {
+      "Research": 0.9,
+      "Clinical Care > General Clinical Care": 0.35,
+      "Clinical Care > Specialty Care > Oncology": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "FHIR > FHIR R5": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.5,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.6,
+      "National Jurisdictions > United States": 0.3
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Research Platforms": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Standards Organizations": 0.5,
+      "Public Health Organizations > Public Health Agencies": 0.4,
+      "Administrative Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

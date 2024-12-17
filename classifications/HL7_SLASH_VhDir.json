@@ -1,0 +1,38 @@
+{
+  "rationale": "The VhDir Implementation Guide defines a set of FHIR profiles and extensions for creating a validated healthcare directory. The core functionality of this IG is to define the structure and content of FHIR resources used to represent entities within a healthcare directory, such as practitioners, organizations, locations, services, insurance plans, and networks. \n\nThe IG specifies how these resources should be populated, including mandatory elements, value sets, and extensions. It also defines search parameters to query the directory. The primary focus is on data modeling, defining the structure of resources like Organization, Practitioner, Location, PractitionerRole, HealthcareService, Endpoint, InsurancePlan, and Network. It also defines how to represent validation information using the VerificationResult resource and restrictions using a profile of the Consent resource.\n\nWhile the IG defines how data should be structured, it also touches upon data exchange mechanisms, particularly through the definition of search parameters and capability statements. It mentions the use of RESTful interactions and references the SMART Backend Services Authorization Guide for security. The IG also briefly discusses bulk data and subscriptions, although these sections are marked as needing further development.\n\nGeographically, the IG is intended for international use but was developed under a US initiative (ONC Healthcare Directory Initiative). It mentions alignment with US Core and expects different jurisdictions to design implementations according to their requirements. The examples provided often reference US entities and locations.\n\nRegarding stakeholders, the IG is primarily aimed at technical implementers, such as EHR vendors and health IT development teams, who would be responsible for implementing the defined profiles and APIs. It also targets healthcare provider organizations, public health organizations, and administrative organizations that would use or contribute to a validated healthcare directory. The IG is built upon FHIR R4 and defines profiles and extensions for this version.",
+  "scores": {
+    "Functional Domain": {
+      "Administrative & Financial": 0.6,
+      "Infrastructure & Foundational": 0.35,
+      "Clinical Care > General Clinical Care": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.6,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Administrative Organizations > Insurance Companies": 0.4,
+      "Administrative Organizations > Health Plans": 0.4,
+      "Standards Organizations > Standards Development Organizations": 0.4,
+      "Public Health Organizations > Public Health Agencies": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

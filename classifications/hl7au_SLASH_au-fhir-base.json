@@ -1,29 +1,34 @@
 {
-  "rationale": "This IG primarily focuses on defining data models and foundational elements for the Australian healthcare context. It introduces new profiles such as 'AU Base Service Request' and modifies existing ones like 'AU Base Patient', 'AU Base RelatedPerson', and 'AU Base Practitioner' by adding extensions for 'Individual Pronouns', 'Person Recorded Sex Or Gender', and 'Australian Veteran Status'. It also defines new extensions like 'Australian Veteran Status' and 'Name Context', along with associated value sets and code systems. The IG also includes search parameters for 'AustralianIndigenousStatus', 'EncounterDischargeDisposition', and 'GenderIdentity'. The changes to existing profiles and the introduction of new profiles, extensions, value sets, code systems, and search parameters are all focused on data modeling for the Australian context. While it does include search parameters, the primary focus is on defining the structure and content of the data itself, not the mechanisms for exchanging it.",
-  "Primary Domain": [
-    "General Clinical Care",
-    "Infrastructure & Foundational"
-  ],
-  "HL7 Standard": [
-    "FHIR",
-    "FHIR R4"
-  ],
-  "Scope/Purpose": [
-    "Data Modeling"
-  ],
-  "Geographic Scope": [
-    "Australia",
-    "National Jurisdictions"
-  ],
-  "Data Source": [
-    "EHR-Centric",
-    "Mixed/Other"
-  ],
-  "Maturity Level": [
-    "Draft/Trial Use"
-  ],
+  "rationale": "The \"au-fhir-base\" Implementation Guide primarily focuses on defining foundational FHIR resources, profiles, extensions, value sets, and code systems tailored for the Australian healthcare context. It establishes a baseline for representing common Australian-specific concepts within FHIR, such as identifiers (e.g., Medicare Card Number, HPI-I), terminology (e.g., Australian Indigenous Status, Australian States and Territories), and extensions (e.g., Australian Veteran Status, Name Context). \n\nThe IG's core function is data modeling, as it defines numerous profiles on base FHIR resources like Patient, Practitioner, RelatedPerson, Organization, Location, and others. These profiles incorporate Australian-specific extensions and terminology bindings, providing a standardized way to represent common data elements within these resources. For example, the AU Base Patient profile includes extensions for Australian Indigenous Status, Date of Arrival in Australia, and Person Recorded Sex Or Gender, along with bindings to Australian-specific value sets. \n\nWhile the IG does not explicitly define message exchange mechanisms or workflows, it lays the groundwork for interoperability by standardizing the structure and content of data. It also includes a few search parameters, which hints at a data exchange aspect, although this is not the primary focus. The IG is based on FHIR R4 and is intended for use within the Australian realm, as indicated by the numerous references to Australian jurisdictions, identifiers, and terminology. \n\nThe target audience includes technical implementers like EHR vendors and system integrators, as well as healthcare provider organizations and public health agencies that need to implement FHIR-based systems in Australia. The IG also serves as a reference for standards organizations and government agencies involved in defining healthcare data standards. The inclusion of guidance pages on sex, gender, and related concepts suggests an awareness of patient-facing stakeholders, although the primary focus remains on technical implementation.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.95,
+      "Clinical Care > General Clinical Care": 0.5,
+      "Administrative & Financial": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Terminology & Value Sets": 0.8,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Australia": 0.95
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.7,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.5,
+      "Technical Implementers > System Integrators": 0.5,
+      "Administrative Organizations > Healthcare Administrators": 0.3
+    }
+  },
   "meta": {
-    "model": "gemini-2.0-flash-exp",
+    "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
     }

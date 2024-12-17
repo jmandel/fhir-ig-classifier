@@ -1,37 +1,84 @@
 {
-  "rationale": "The CH EMED (R4) implementation guide focuses on defining the structure and content of various eMedication documents used in Switzerland. These documents include the Medication Treatment Plan, Medication Prescription, Medication Dispense, Pharmaceutical Advice, Medication List, and Medication Card. The guide specifies how these documents are represented using FHIR resources, primarily as Bundles containing a Composition resource and other referenced resources like MedicationStatement, MedicationRequest, MedicationDispense, and Observation. \n\nThe guide defines specific profiles for each document type, detailing the required and optional elements, data types, and value sets to be used. It also provides guidance on dosage representation, repeated dispense, authorship, and the relationships between different eMedication documents. The guide emphasizes the use of UUIDs for identifiers and defines extensions to link related documents and resources. \n\nBased on the artifacts defined within the IG, it is clear that the primary focus is on data modeling, specifically defining the structure and content of eMedication documents using FHIR profiles. It also touches upon data exchange by specifying how these documents are represented as FHIR Bundles, which can be exchanged between systems. The guide is based on FHIR R4 and is intended for use within the Swiss national jurisdiction. It primarily targets healthcare provider organizations, particularly clinical care teams, and technical implementers such as EHR vendors. The content strongly suggests that the primary functional domain is clinical care, with a specific focus on general clinical care, particularly medication management.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.9,
-      "Clinical Care > General Clinical Care > Medication Management": 0.9,
-      "Clinical Care > General Clinical Care > Care Plans": 0.3,
-      "Clinical Care > General Clinical Care > Patient Engagement": 0.3,
-      "Infrastructure & Foundational > Document and Message Exchange": 0.4
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.6,
-      "Workflow Support": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > Switzerland": 1
-    },
-    "Stakeholders": {
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
-      "Standards Organizations > Government Agencies": 0.3,
-      "Standards Organizations > Standards Development Organizations": 0.3
+  "HL7 Standard": {
+    "summary": "The CH EMED Implementation Guide is fundamentally based on FHIR R4 for representing and exchanging medication-related documents within the Swiss EPR. It leverages FHIR resources and profiles extensively, with no reliance on HL7 v2 or v3. While it acknowledges CDA as a predecessor, it does not actively support it. Cross-paradigm integration is limited to referencing IHE Pharmacy profiles, which themselves are based on various HL7 standards.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for the Swiss Electronic Patient Record (EPR) ecosystem, building upon CH Core and CH Term, which provide the Swiss-specific context. It is also mentioned that the IG is specifically designed for Switzerland. Therefore, it is clearly a national guide for Switzerland.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Switzerland": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The CH EMED Implementation Guide focuses on standardizing the exchange of medication-related information within the Swiss Electronic Patient Record (EPR) using FHIR R4. It defines profiles and extensions for various eMedication documents like Medication Treatment Plan, Prescription, Dispense, Pharmaceutical Advice, Medication List, and Medication Card. The primary emphasis is on Medications, with a strong connection to Clinical Data and a document-centric Workflow. Administrative aspects are present but limited to the context of medication management. Identity & Security are implicitly addressed through the EPR context but not explicitly detailed in the IG.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.6,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Medications": 1,
+      "Payment & Financial": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The CH EMED IG primarily focuses on defining FHIR profiles for eMedication documents, making heavy use of Data Profiles and Terminology to achieve its goals. It leverages a document-centric approach for exchange, with limited but clear usage of REST APIs for document creation and retrieval. While not explicitly defining messaging or decision support, it implicitly supports these through document exchange and structured data. Forms & UI are not directly addressed, and Subscriptions are not mentioned. Services are mentioned in the context of document creation and consumption but not explicitly defined as custom operations.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0.2,
+      "Documents": 1,
+      "Forms & UI": 0,
+      "Messaging": 0.2,
+      "REST APIs": 0.6,
+      "Services": 0.4,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The CH EMED IG focuses on the exchange of medication-related documents within the Swiss EPR. Therefore, systems involved in creating, managing, and consuming these documents, such as EHRs, Pharmacy Systems, and potentially PHRs, will be most heavily impacted. Clinical Decision Support systems will also play a significant role in utilizing the standardized medication data. Payer systems have minimal involvement, and research platforms are not directly addressed.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.8,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 1,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.4,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The CH EMED Implementation Guide primarily focuses on enabling healthcare providers to exchange medication information within the Swiss Electronic Patient Record. Clinical Care Teams are the core users, driving the design with their need to create, access, and manage medication-related documents. Patients and Caregivers benefit from improved medication management, while Pharmacists play a key role in dispensing and providing pharmaceutical advice. Public Health and Research are less central but can leverage the standardized data. Government agencies have an oversight role, ensuring compliance and interoperability within the Swiss healthcare system.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

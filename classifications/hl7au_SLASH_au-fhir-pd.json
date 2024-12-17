@@ -1,33 +1,84 @@
 {
-  "rationale": "The au-fhir-pd Implementation Guide primarily focuses on defining a set of FHIR profiles and related artifacts to support the creation and operation of provider directories within the Australian healthcare context. \n\nThe core functionality of this IG revolves around defining specific profiles for key resources like Organization, Practitioner, PractitionerRole, HealthcareService, Location, and Endpoint. These profiles are tailored to the Australian context, incorporating relevant identifiers (e.g., HPI-O, HPI-I, Medicare Provider Number) and addressing schemes. The IG mandates specific data elements within these profiles as \"MUST SUPPORT,\" ensuring that systems implementing the guide can reliably exchange and process this essential information.\n\nFurthermore, the IG specifies search parameters for each of these resource types, enabling clients to query provider directories based on various criteria such as name, identifier, location, and service type. It also defines the expected behavior for search operations, including support for chained searches and the `_include` parameter.\n\nIn addition to data modeling and search capabilities, the IG addresses the use of these resources in the context of secure messaging. It outlines how Endpoints should be associated with PractitionerRoles and HealthcareServices to facilitate the delivery of messages. The IG also provides guidance on generating HL7 V2 messages based on the information contained in the FHIR resources.\n\nFinally, the IG touches upon the concept of federated directories, where multiple directory services can be combined to provide a unified view. It defines requirements for federated services, such as support for paging and the ability to handle identity conflicts.\n\nOverall, the au-fhir-pd IG provides a comprehensive framework for building and interacting with provider directories in Australia, with a strong emphasis on data modeling, search, and secure messaging.",
-  "scores": {
-    "Functional Domain": {
-      "Administrative & Financial > Provider Directories": 0.95,
-      "Infrastructure & Foundational > Document and Message Exchange": 0.35
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.8,
-      "Workflow Support": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > Australia": 0.95
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Technical Implementers > System Integrators": 0.7,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
-      "Standards Organizations > Standards Development Organizations": 0.5
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on creating a provider directory for secure messaging in Australia. It heavily relies on FHIR resources and interactions, with minimal acknowledgment of other HL7 standards. The IG profiles core FHIR resources and defines specific search parameters to facilitate the discovery of healthcare providers and their secure messaging endpoints. It does not utilize CDA, v2, or v3 in a significant way, and its cross-paradigm support is limited to referencing v2 formatting guidance.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Australian healthcare context, focusing on provider directory services for secure messaging. It defines profiles, extensions, and interactions tailored to Australian identifiers and requirements, making it a national guide for Australia.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Australia": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on establishing a standardized provider directory for secure messaging within the Australian healthcare system. It primarily addresses the administrative domain by defining profiles and interactions for core resources like Organization, Practitioner, PractitionerRole, HealthcareService, Location, and Endpoint. The IG emphasizes the use of specific identifiers and secure messaging details to facilitate efficient and reliable communication between healthcare providers. While it touches upon clinical data through references to other IGs, its core purpose is to streamline the discovery and addressing of healthcare providers and services for secure messaging.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This Implementation Guide focuses on establishing a FHIR-based provider directory for secure messaging in Australia. It heavily relies on data profiles and RESTful interactions for searching and retrieving provider information, particularly endpoints for secure messaging. Terminology and value sets are used to ensure consistent coding of identifiers and messaging details. While messaging is a core concern, the IG primarily uses RESTful APIs for data access rather than defining specific messaging interactions. Documents, decision support, forms, and subscriptions are not central to the IG's purpose.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0.2,
+      "REST APIs": 0.8,
+      "Services": 0.4,
+      "Subscriptions": 0,
+      "Terminology": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on establishing a provider directory for secure messaging within the Australian healthcare system. It primarily targets systems involved in managing and accessing provider information and facilitating secure communication. EHR and Clinical Decision Support systems will need to implement search and retrieval functionalities, while secure messaging systems will be crucial for utilizing the Endpoint information. Payer and PHR systems have minimal involvement.",
+    "scores": {
+      "EHR Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling a provider directory for secure messaging within the Australian healthcare system. Its primary goal is to facilitate the discovery and addressing of healthcare providers and services for secure communication. Therefore, the core users are those involved in sending and receiving secure messages, primarily clinical care teams and the systems they use. Healthcare administrators also play a significant role in managing and maintaining the directory information. Government agencies have a strong interest in ensuring standardization and compliance, while public health agencies might leverage the directory for targeted communication. Other groups have a more limited role.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

@@ -1,36 +1,84 @@
 {
-  "rationale": "The FHIR Genomics Reporting Implementation Guide (IG) defines a set of FHIR profiles, extensions, value sets, and operations specifically tailored for representing and exchanging clinical genomics data. The core functionality of this IG revolves around structuring genomic test results, including variants, genotypes, haplotypes, and their associated clinical implications. \n\n**Functional Domain:** The IG primarily falls under the **Clinical Care > Specialty Care > Clinical Genomics** domain, as it provides detailed guidance on reporting genomic findings relevant to patient diagnosis, prognosis, and treatment. It also touches upon **Research** by providing structures that can be used for collecting and analyzing genomic data in research settings. The IG defines profiles for representing pharmacogenomic information, which links it to **Clinical Care > General Clinical Care > Medication Management**. \n\n**HL7 Standard:** The IG is explicitly based on **FHIR R4**, as indicated by the `fhirVersion: 4.0.1` entry in the `sushi-config.yaml` file. The IG defines numerous FHIR profiles, which are specific to FHIR R4.\n\n**Scope/Purpose:** The primary focus of the IG is **Data Modeling**, as it defines a comprehensive set of profiles for representing various aspects of genomic data, including variants, haplotypes, genotypes, and their clinical implications. It also supports **Data Exchange** by defining operations for querying and retrieving genomic data. Additionally, the IG addresses **Knowledge Representation** by providing structures for representing clinical knowledge related to genomic findings, such as therapeutic implications and diagnostic implications. The IG also defines security and privacy extensions, indicating a focus on **Security & Privacy**.\n\n**Geographic Scope:** The IG is designated as **Universal Realm**, as indicated by the `jurisdiction` entry in the `sushi-config.yaml` file, which is set to \"World\".\n\n**Stakeholders:** The IG is relevant to a wide range of stakeholders, including **Healthcare Provider Organizations** (specifically **Clinical Care Teams** and **Laboratory Systems Teams**), **Technical Implementers** (such as **EHR Vendors** and **Health IT Development Teams**), and **Standards Organizations**. The IG also defines profiles and operations that are relevant to **Public Health Organizations** and **Research Platforms**.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > Specialty Care > Clinical Genomics": 0.9,
-      "Research": 0.4,
-      "Clinical Care > General Clinical Care > Medication Management": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.8,
-      "Data Exchange": 0.4,
-      "Knowledge Representation": 0.4,
-      "Security & Privacy": 0.3
-    },
-    "Geographic Scope": {
-      "Universal Realm": 0.9
-    },
-    "Stakeholders": {
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Healthcare Provider Organizations > Laboratory Systems Teams": 0.6,
-      "Standards Organizations": 0.5,
-      "Technical Implementers > Health IT Development Teams": 0.4,
-      "Public Health Organizations > Research Platforms": 0.3
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, using it as the core standard for representing and exchanging genomic testing results. It leverages FHIR resources, defines custom profiles and extensions, and specifies RESTful operations for querying and retrieving data. While it acknowledges and relates to HL7 v2, and uses some terminologies that may also be used in v3, it does not directly support or integrate with CDA, v2, or v3 models.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for international use, supporting diverse healthcare systems without specific national or regional constraints. Although it references the eMERGE program funded by the NHGRI, this mention is specific to the pharmacogenomics section and does not define the overall scope of the guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The genomics-reporting Implementation Guide primarily focuses on standardizing the representation and exchange of clinical genomic testing results using HL7 FHIR. It emphasizes the structured reporting of genomic findings and their clinical implications, making clinical data and diagnostics its core domains. While it touches upon medications in the context of pharmacogenomics and includes some aspects of workflow and research, these are not its central focus.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.4,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.8,
+      "Diagnostics": 1,
+      "Identity & Security": 0.2,
+      "Medications": 0.6,
+      "Payment & Financial": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0.6,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The Genomics Reporting IG primarily focuses on defining data profiles and custom operations for representing and querying genomic data. It heavily relies on terminology standards and utilizes RESTful interactions for data retrieval. While it touches upon decision support through clinical implications, it does not define formal decision support rules. Documents, forms, messaging, and subscriptions are not central to its approach.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0.4,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.8,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the exchange of clinical genomic testing results. Therefore, Lab Systems are the primary implementers, generating the reports. EHR Systems are key consumers, integrating these results into patient records and workflows. Clinical Decision Support systems will heavily rely on this data for personalized medicine recommendations. Research Platforms will also utilize this standardized data for genomic studies. Public Health Systems may use aggregated, de-identified data for population-level genomic surveillance. While patients may benefit from accessing their genomic information, PHR Systems have a limited role in implementing the core functionality of this IG. Pharmacy, Payer, and Imaging Systems are not directly involved in the implementation of this IG.",
+    "scores": {
+      "EHR Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 1,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.4,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The genomics-reporting Implementation Guide primarily serves the needs of Clinical Care Teams by standardizing the exchange of genomic test results, enabling integration with EHRs, and supporting clinical decision-making. Laboratories generating these reports and systems consuming them (EHRs, clinical decision support) are also key users. Research Organizations benefit from the standardized data for research purposes, and Public Health Agencies can leverage the population-level queries. Patients and Caregivers are indirectly served through improved care, while Payers and Government Agencies have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.2
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

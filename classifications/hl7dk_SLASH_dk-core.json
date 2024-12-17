@@ -1,33 +1,84 @@
 {
-  "rationale": "The dk-core FHIR Implementation Guide (IG) primarily focuses on defining a set of core FHIR profiles, extensions, and value sets tailored to the Danish healthcare context. It establishes a foundation for interoperability within Denmark by specifying how common healthcare concepts should be represented using FHIR resources. \n\nThe IG's core function is data modeling. It creates numerous profiles that constrain core FHIR resources like Patient, Observation, Organization, Practitioner, Condition, and RelatedPerson to align with Danish requirements and practices. These profiles define specific usage patterns, mandatory elements, and terminology bindings. For example, the DkCorePatient profile mandates the use of Danish CPR and eCPR identifiers and specifies how to represent marital status according to Danish conventions. The DkCoreObservation profile defines multiple slices for Observation.code.coding to accommodate various code systems used in Denmark, such as NPU, LOINC, IEEE, and SNOMED CT. \n\nFurthermore, the IG defines several extensions to capture Danish-specific data elements not covered by the base FHIR specification. Examples include extensions for municipality codes, regional subdivision codes, and condition-specific attributes like \"ConditionLastAssertedDate\" and \"NotFollowedAnymore\".\n\nWhile the IG does not specify a FHIR API, it provides guidance on data exchange by referencing relevant code systems and value sets for various domains. It also includes examples of FHIR Bundles that demonstrate how data can be exchanged using the defined profiles, such as the \"ContinuaBundleWithDevice\" example for home blood pressure monitoring.\n\nIn terms of geographic scope, the IG is explicitly designed for use within Denmark, as indicated by its title, description, and the use of Danish-specific identifiers, code systems, and terminology. It references Danish legislation, standards, and organizations throughout.\n\nThe IG's content suggests that its primary stakeholders are technical implementers, particularly EHR vendors and health IT development teams, who need to build systems that comply with Danish healthcare data exchange requirements. It also targets healthcare provider organizations, especially their IT and clinical care teams, who need to understand how data is structured and exchanged within the Danish context. Additionally, standards organizations and government agencies involved in defining and governing healthcare data standards in Denmark are relevant stakeholders.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.7,
-      "Infrastructure & Foundational": 0.6
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > Denmark": 0.95
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.7,
-      "Technical Implementers > Health IT Development Teams": 0.7,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
-      "Standards Organizations > Government Agencies": 0.5,
-      "Standards Organizations > Standards Development Organizations": 0.5
+  "HL7 Standard": {
+    "summary": "The dk-core IG is fundamentally based on FHIR, establishing a foundation for FHIR interoperability within the Danish healthcare system. It leverages FHIR resources and extends them with Danish-specific identifiers and terminologies. While it references other standards like SNOMED CT and LOINC, these are integrated within the FHIR framework. The IG does not utilize or reference HL7 v2, v3, or CDA, focusing solely on the FHIR standard for interoperability.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for the Danish healthcare system, addressing interoperability challenges specific to Denmark. It defines core profiles and extensions tailored to the Danish context, including Denmark-specific identifiers and terminologies. The guide is governed by HL7 Denmark and approved by the Danish Health Data Authority, indicating its national scope.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The dk-core IG focuses on establishing a foundation for FHIR interoperability within the Danish healthcare system. It primarily addresses administrative aspects by defining core profiles for patients, organizations, and practitioners, incorporating Denmark-specific identifiers. It also supports the exchange of clinical data like observations and conditions, leveraging standard and Danish-specific terminologies. While not explicitly focused on specific workflows, it implicitly supports standard FHIR interactions for managing these resources. The IG's design emphasizes flexibility and serves as a base for more specialized IGs in the Danish context.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.2,
+      "Research": 0.2,
+      "Workflow": 0.4
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The dk-core IG primarily focuses on defining Data Profiles and Terminology to establish a foundation for FHIR interoperability in Denmark. It leverages REST APIs for standard interactions but does not define custom services or messaging patterns. Decision Support, Documents, Forms & UI, and Subscriptions are not addressed in this IG.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The dk-core IG is foundational for Danish healthcare interoperability, focusing on core FHIR resources and Denmark-specific identifiers and terminologies. It's designed to be implemented by a wide range of systems, especially EHRs, to facilitate data exchange across the healthcare ecosystem. While not directly targeting patient-facing or payer systems, it lays the groundwork for their integration. Clinical Decision Support and Research Platforms will also benefit from the standardized data.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0.6,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0.6,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The dk-core Implementation Guide primarily serves as a foundational layer for interoperability within the Danish healthcare system. It focuses on standardizing core FHIR resources and extending them with Danish-specific identifiers and terminologies. Clinical Care Teams and Healthcare Administrators are the most influential users, as the IG directly impacts data exchange for patient care and operational efficiency. Government Agencies have a significant role in setting standards and regulations, while Public Health Agencies and Research Organizations benefit from standardized data for population health and research purposes. Payers have a limited role, and Patients and Caregivers are not directly involved in the IG's design.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

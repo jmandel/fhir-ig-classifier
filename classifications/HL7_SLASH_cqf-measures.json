@@ -1,36 +1,84 @@
 {
-  "rationale": "The cqf-measures Implementation Guide (IG) defines how to represent quality measures using FHIR and CQL. Analyzing the provided content, we can determine the following:\n\n*   **Functional Domain:** The IG focuses on defining how to represent quality measures, which are used to assess and improve the quality of clinical care. It also touches upon the broader quality improvement ecosystem, which includes clinical decision support, public health reporting, and research. However, the primary focus is on enabling the computable representation and exchange of quality measures, making \"Clinical Care > General Clinical Care\" the most applicable domain. The IG also defines profiles and extensions related to measure representation, terminology services, and capability statements for measure repositories, which fall under \"Infrastructure & Foundational\".\n\n*   **HL7 Standard:** The IG explicitly states it is built upon FHIR R4 and uses FHIR resources like Measure and Library. It also references the Clinical Quality Language (CQL) for defining measure logic, which is closely tied to FHIR. Therefore, \"FHIR > FHIR R4\" is the most applicable standard.\n\n*   **Scope/Purpose:** The IG defines profiles for FHIR resources (e.g., Measure, Library), extensions, and terminology to represent quality measures. It also provides guidance on using CQL for measure logic and defines capability statements for measure repositories. This indicates a strong focus on \"Data Modeling\" and \"Knowledge Representation\". While it touches upon data exchange through capability statements, the primary focus is on defining the structure and content of quality measures, not the mechanisms for exchange.\n\n*   **Geographic Scope:** The IG is developed by HL7 and references US-specific initiatives like eCQMs and the eCQI Resource Center. It also mentions US Core and QI-Core profiles. This suggests a focus on the \"National Jurisdictions > United States\", although the concepts could be adapted for other regions.\n\n*   **Stakeholders:** The IG is intended for measure developers, software developers of measure authoring tools, implementers of quality measures, and organizations involved in quality reporting. This includes \"Technical Implementers\" like EHR vendors and system integrators, \"Healthcare Provider Organizations\" like hospital IT departments and clinical care teams, and \"Standards Organizations\" like government agencies and SDOs. It also indirectly impacts \"Public Health Organizations\" through the use of quality measures in public health reporting.\n\nBased on this analysis, the cqf-measures IG primarily focuses on defining the structure, content, and representation of quality measures using FHIR and CQL, with a strong emphasis on data modeling and knowledge representation within the context of general clinical care and infrastructure in the United States.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.8,
-      "Infrastructure & Foundational": 0.6,
-      "Research": 0.25
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Knowledge Representation": 0.8,
-      "Data Exchange": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7,
-      "Universal Realm": 0.3
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Technical Implementers > Health IT Development Teams": 0.6,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
-      "Standards Organizations > Government Agencies": 0.5,
-      "Standards Organizations > Standards Development Organizations": 0.5,
-      "Public Health Organizations > Public Health Agencies": 0.3
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining and sharing eCQMs using FHIR resources and CQL. It heavily relies on FHIR and incorporates elements of cross-paradigm thinking by integrating CQL. It does not utilize CDA, v2, or v3.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states its primary scope is within the US Realm, focusing on standardized representation of electronic Clinical Quality Measures (eCQMs). While acknowledging broader applicability, the guide is tailored to US-specific needs, including references to CMS quality reporting programs and relevance to US jurisdictions.",
+    "scores": {
+      "Universal Realm": 0.2,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining and representing electronic Clinical Quality Measures (eCQMs) using FHIR, CQL, and QI-Core. It emphasizes the computable and shareable aspects of quality measures, enabling consistent definition and evaluation across different systems. While it touches upon clinical data through data requirements and QI-Core, its core purpose is to standardize the structure and logic of quality measures themselves, rather than broader clinical data exchange or care planning.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.8,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Medications": 0,
+      "Payment & Financial": 0.2,
+      "Public Health": 0.4,
+      "Quality & Reporting": 1,
+      "Research": 0.2,
+      "Workflow": 0.4
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This FHIR Implementation Guide defines a framework for representing electronic Clinical Quality Measures (eCQMs) using FHIR resources, CQL, and QI-Core profiles. It heavily relies on data profiles for `Measure` and `Library` resources, terminology for defining value sets, and decision support through CQL-based logic. REST APIs are used for operations like packaging measures, but the core focus is on defining the structure and content of eCQMs rather than specific API interactions. Messaging, documents, forms, and subscriptions are not central to this IG's purpose.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0.8,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.4,
+      "Services": 0.6,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the standardized representation of eCQMs using FHIR, CQL, and QI-Core. It primarily targets systems involved in authoring, distributing, and evaluating quality measures. EHRs and Clinical Decision Support systems are key implementers, while research platforms and public health systems play important, albeit more specific, roles. Payer systems have a minimal role, primarily in receiving quality measure reports defined by the DEQM IG. PHR, Pharmacy, Lab, and Imaging systems are not directly involved in implementing this IG.",
+    "scores": {
+      "EHR Systems": 0.8,
+      "PHR Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.6,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily targets developers and implementers of quality measures, with a strong emphasis on enabling consistent, computable, and shareable definitions. Clinical care teams and public health agencies have a defined but limited role, while patients, caregivers, and payers are not meaningfully involved.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

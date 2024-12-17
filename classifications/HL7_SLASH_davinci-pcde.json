@@ -1,33 +1,84 @@
 {
-  "rationale": "The Da Vinci PCDE (Payer Coverage Decision Exchange) Implementation Guide focuses on facilitating the exchange of information between payers to ensure continuity of care when a patient transitions from one health plan to another. It defines a standardized mechanism for transferring \"current active treatments\" and related information from a prior payer to a new payer. \n\nThe IG defines specific FHIR profiles, extensions, code systems, value sets, and operations to support this data exchange. The core artifact is the \"Coverage Transition Document,\" a FHIR document (Bundle) containing a Composition resource and other resources grouped into sections. This document includes information about active treatments, prior coverage, supporting clinical data, and other relevant documentation. \n\nThe IG leverages FHIR R4 and builds upon other IGs like US Core, HRex, PDex, and PAS. It defines a workflow where the new payer initiates a request for the Coverage Transition Document using a Task resource, optionally using a Subscription to monitor the Task's progress. The original payer then assembles the document and updates the Task. The new payer retrieves the document and uses it to inform their utilization management process. \n\nWhile the IG mentions clinical aspects and references clinical data, its primary focus is on the administrative process of transferring coverage-related information between payers. It emphasizes data modeling (defining the structure and content of the Coverage Transition Document) and data exchange (defining the workflow and interactions for requesting and retrieving the document). The IG is specifically designed for the US healthcare system, as indicated by references to US Core, CMS, and ONC.",
-  "scores": {
-    "Functional Domain": {
-      "Administrative & Financial": 0.8,
-      "Clinical Care > General Clinical Care": 0.35
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.85,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.4
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
-    },
-    "Stakeholders": {
-      "Administrative Organizations > Health Plans": 0.9,
-      "Administrative Organizations > Insurance Companies": 0.8,
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.3,
-      "Standards Organizations": 0.25
+  "HL7 Standard": {
+    "summary": "This Da Vinci Payer Coverage Decision Exchange (PCDE) Implementation Guide focuses on FHIR R4 for payer-to-payer data exchange, leveraging a document-centric approach with a Task-based workflow. It does not utilize CDA, v2, or v3, and its cross-paradigm support is limited to integrating other FHIR-based IGs.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is part of the Da Vinci project and focuses on payer-to-payer data exchange within the United States healthcare system. It leverages US Core profiles and mentions the Centers for Medicare and Medicaid Services (CMS), indicating a strong alignment with US healthcare regulations and initiatives.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Payer Coverage Decision Exchange (PCDE) IG focuses on facilitating the exchange of coverage transition information between payers when a patient changes insurance. It leverages FHIR R4 and other IGs like HRex and PDex to define a document-based approach, orchestrated by a Task resource, to share active treatment plans and supporting clinical data. While it touches upon clinical data and care planning, its primary driver is administrative, specifically around payer-to-payer communication for continuity of care.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.6,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.6,
+      "Medications": 0.6,
+      "Payment & Financial": 0.4,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This analysis evaluates the Da Vinci Payer Coverage Decision Exchange (PCDE) Implementation Guide's technical approaches. The IG primarily focuses on document exchange orchestrated by a Task resource, with strong emphasis on data profiles and RESTful interactions for document retrieval. Terminology and subscriptions play supporting roles, while decision support, forms, and messaging are not central to the IG's current scope.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 1,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.6,
+      "Subscriptions": 0.4,
+      "Terminology": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci Payer Coverage Decision Exchange (PCDE) IG primarily focuses on payer-to-payer exchange of coverage transition information. EHRs play a supporting role in providing clinical data, while PHRs have minimal involvement. Clinical Decision Support systems may utilize the exchanged information, and Research Platforms could leverage the data for population health studies. Pharmacy, Lab, and Imaging systems are indirectly involved through the clinical data they contribute to the EHR.",
+    "scores": {
+      "EHR Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling payer-to-payer exchange of coverage transition information to ensure continuity of care when patients switch insurance. Therefore, payers are the primary users, driving the IG's design. Clinical care teams and patients benefit indirectly from improved care transitions. Government agencies have a stake in the IG's alignment with interoperability regulations. Public health and research organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.6,
+      "Payers": 1,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

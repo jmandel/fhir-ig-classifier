@@ -1,35 +1,84 @@
 {
-  "rationale": "The Da Vinci Health Record Exchange (HRex) Implementation Guide (IG) primarily focuses on defining a common framework and library of FHIR elements that can be used across multiple Da Vinci IGs. It specifies FHIR profiles, operations, and constraints that are common across more than a single use case, promoting consistency and reusability. The IG emphasizes data modeling, defining profiles for resources like Consent, Coverage, Organization, PractitionerRole, Provenance, and Task. These profiles are designed to be use-case independent but are specifically tied to the HRex scope, which includes US payer and provider data exchange with each other and other covered entities under HIPAA, including their business associates. It also includes data exchange with the patient/member. The exchanges are typically ones that are 'of interest' in value-based care. The IG also defines the \"member-match\" operation, which allows for the resolution of a member's identity on a target payer's system. Additionally, it provides guidance on security and privacy, task-based queries, and dynamic registration for SMART apps. The IG is built on FHIR R4 and references US Core profiles, making it heavily reliant on FHIR for data modeling and exchange. While it touches upon various functional domains, its core purpose is to establish a foundational layer for other Da Vinci IGs, rather than directly addressing specific clinical or administrative workflows. The artifacts defined in this IG are intended to be reused across multiple Da Vinci IGs, and thus it does not focus on a specific geographic realm or stakeholder group, although it is developed under the auspices of HL7 International and primarily targets the US healthcare market.",
-  "scores": {
-    "Functional Domain": {
-      "Infrastructure & Foundational": 0.9,
-      "Administrative & Financial": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.4,
-      "Security & Privacy": 0.3,
-      "Workflow Support": 0.25
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Standards Organizations": 0.5,
-      "Administrative Organizations > Insurance Companies": 0.4,
-      "Administrative Organizations > Health Plans": 0.4,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.3,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+  "HL7 Standard": {
+    "summary": "The Da Vinci HRex IG is fundamentally based on FHIR, defining profiles and operations for data exchange within the FHIR framework. It does not utilize HL7 v2 or v3 directly, nor does it focus on CDA document exchange. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and its definition of profiles and operations that could potentially be mapped to other standards suggests a moderate level of cross-paradigm awareness.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci HRex Implementation Guide is explicitly designed for the US healthcare system, focusing on payer-provider data exchange within the context of value-based care. It references US-specific regulations, initiatives (USCDI, TEFCA), and organizations. It leverages US Core as its foundation and defines profiles and operations tailored to the US healthcare landscape. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Health Record Exchange (HRex) Implementation Guide primarily focuses on facilitating data exchange between payers and providers within the US healthcare system, particularly for value-based care. It emphasizes administrative aspects like member matching and coverage, alongside identity and security through consent management. While it touches upon clinical data exchange, its core purpose revolves around establishing a foundational framework for interoperability rather than deep clinical data modeling or care planning. The IG also supports workflow through asynchronous data requests using Task resources and touches upon payment and financial aspects through its focus on payer-provider interactions.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.8,
+      "Medications": 0,
+      "Payment & Financial": 0.4,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The Da Vinci Health Record Exchange (HRex) IG primarily focuses on defining FHIR profiles and a custom operation ($member-match) to facilitate data exchange between payers and providers. It leverages RESTful interactions, utilizes US Core as a foundation, and introduces mechanisms for asynchronous data requests via Task and endpoint discovery through a .well-known file. Terminology and value sets are used to support specific concepts and data elements. While subscriptions are mentioned in the context of Task monitoring, their usage is limited. Decision support, documents, forms & UI, and messaging are not central to the IG's core purpose.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0.2,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.6,
+      "Subscriptions": 0.4,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci HRex IG primarily focuses on enabling data exchange between payers and providers, with a strong emphasis on payer systems as the core implementers. EHR systems play a crucial role in requesting and consuming data, while PHR systems have a defined but limited role in member-mediated exchange. Clinical Decision Support systems can leverage the exchanged data, and Research Platforms may utilize it for specific studies. Other system types have minimal or no involvement.",
+    "scores": {
+      "EHR Systems": 0.8,
+      "PHR Systems": 0.4,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Da Vinci HRex Implementation Guide primarily focuses on enabling data exchange between payers and providers within the US healthcare system, particularly for value-based care. Therefore, payers and clinical care teams are the core users, with healthcare administrators and government agencies playing significant roles. Patients have a defined but limited role, while public health and research organizations are less directly involved.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.4,
+      "Payers": 1,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

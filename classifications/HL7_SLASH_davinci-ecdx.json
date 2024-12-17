@@ -1,35 +1,84 @@
 {
-  "rationale": "The Da Vinci Clinical Data Exchange (CDex) Implementation Guide (IG) is designed to facilitate the exchange of clinical data between providers and payers (or other providers). It focuses on defining FHIR-based transactions to support various use cases, including requesting attachments for claims and prior authorization, requesting documentation for payer operations, and exchanging data between providers. \n\nThis IG defines several key artifacts:\n\n1.  **CapabilityStatements:** These define the expected capabilities of different systems (Data Consumer Client, Data Consumer Server, Data Source Client, Data Source Server) to comply with the IG.\n2.  **Profiles:** Several profiles are defined, including those for Task-based data requests, attachment requests, and signature representation. These profiles constrain the base FHIR resources to meet the specific needs of CDex transactions.\n3.  **Operations:** The `$submit-attachment` operation is defined for sending attachments to payers.\n4.  **Terminology:** ValueSets and CodeSystems are defined to support specific concepts like purpose of use (POU) and attachment codes.\n5.  **Examples:** Numerous examples are provided to illustrate the various transactions and scenarios supported by the IG.\n\nCDex supports three main transaction approaches:\n\n1.  **Direct Query:** Using standard FHIR RESTful search for direct data retrieval.\n2.  **Task-Based Approach:** Using the FHIR Task resource for asynchronous requests, often involving human intervention.\n3.  **Attachments:** Using FHIR to request and send attachments for claims and prior authorizations, supporting both solicited and unsolicited workflows.\n\nCDex also addresses security and privacy considerations, including the use of digital signatures for data integrity and non-repudiation. The IG leverages other Da Vinci IGs like HRex and US Core, providing additional context and constraints for specific use cases.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.7,
-      "Administrative & Financial": 0.7,
-      "Infrastructure & Foundational": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 1
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.9,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.6,
-      "Security & Privacy": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.9
-    },
-    "Stakeholders": {
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
-      "Administrative Organizations > Insurance Companies": 0.7,
-      "Administrative Organizations > Health Plans": 0.7,
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Public Health Organizations > Public Health Agencies": 0.3
+  "HL7 Standard": {
+    "summary": "The Da Vinci Clinical Data Exchange (CDex) Implementation Guide is fundamentally based on FHIR R4 for defining RESTful interactions and data structures. It does not utilize HL7 v2 or v3 directly, nor does it focus on CDA. While it acknowledges and interacts with X12 standards for claims and prior authorization, this interaction is not a core part of the IG's functionality. The IG does not explicitly aim for cross-paradigm integration, but its relationship with other Da Vinci IGs and its use of US Core suggests some level of indirect integration.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci Clinical Data Exchange (CDex) Implementation Guide is focused on the U.S. healthcare system, as evidenced by its alignment with U.S. programs like CMS initiatives and its relationship with other Da Vinci IGs and US Core. It is designed to facilitate clinical data exchange between providers and payers within the U.S. context, particularly for value-based care.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Clinical Data Exchange (CDex) Implementation Guide focuses on facilitating the exchange of clinical data between providers and payers to support value-based care. It leverages FHIR R4 to define interactions for requesting and sending clinical information, including attachments for claims and prior authorizations. While it touches upon various domains, its primary drive is the efficient exchange of clinical data to support administrative and financial processes within a value-based care context.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The Da Vinci Clinical Data Exchange (CDex) IG primarily focuses on defining FHIR-based interactions for requesting and sending clinical information, especially attachments, between providers and payers. It heavily utilizes data profiles to constrain FHIR resources for its specific use cases and defines a custom operation for attachment submission. The IG also leverages the Task resource for asynchronous workflows and incorporates terminology and value sets to standardize data exchange. While REST APIs are used for direct queries, the Task-based approach and the custom operation are more central to the IG's functionality. Subscriptions are mentioned as an optional feature, and decision support, forms & UI, and messaging are not prominent aspects of this IG.",
+    "scores": {
+      "Data Profiles": 0.8,
+      "Decision Support": 0,
+      "Documents": 0.4,
+      "Forms & UI": 0.2,
+      "Messaging": 0,
+      "REST APIs": 0.6,
+      "Services": 0.8,
+      "Subscriptions": 0.2,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci Clinical Data Exchange (CDex) IG focuses on enabling clinical data exchange between providers and payers, primarily for claims, prior authorization, and other value-based care processes. EHR systems are central to providing the clinical data, while payer systems are the primary consumers. Other systems play supporting roles in specific workflows.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Da Vinci Clinical Data Exchange (CDex) Implementation Guide primarily facilitates data exchange between payers and providers to support value-based care. Therefore, Payers and Clinical Care Teams are the most influential user groups. Healthcare Administrators also play a significant role in implementing and managing these systems. Public Health Agencies and Research Organizations have limited involvement, while Patients and Caregivers are not directly involved in the technical aspects of this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 1,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

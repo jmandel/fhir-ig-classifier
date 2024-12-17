@@ -1,32 +1,84 @@
 {
-  "rationale": "The Bulk Data Access IG primarily focuses on defining a standardized mechanism for exporting large datasets from a FHIR server. It specifies three core OperationDefinitions: system-level export, group-level export, and patient-level export. These operations allow clients to request bulk data exports asynchronously. The IG defines the parameters for these operations, including `_outputFormat`, `_since`, `_type`, `_elements`, `patient`, `includeAssociatedData`, and `_typeFilter`. It also specifies the format of the status responses, including in-progress, error, and complete statuses. The complete status response includes a JSON manifest with metadata and links to the generated bulk data files in NDJSON format. The IG defines how clients can retrieve these files and handle attachments. Additionally, it addresses security and privacy considerations, recommending the use of SMART Backend Services Authorization and TLS. The IG also provides guidance on server capability documentation, outlining key aspects that servers should document to clarify their implementation choices. While the IG references other standards and IGs, its core contribution is the definition of the bulk data export operations, parameters, and response formats.",
-  "scores": {
-    "Functional Domain": {
-      "Infrastructure & Foundational > Document and Message Exchange": 0.9
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.9,
-      "Data Modeling": 0.3
-    },
-    "Geographic Scope": {
-      "Universal Realm": 0.8
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Technical Implementers > Health IT Development Teams": 0.8,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
-      "Public Health Organizations > Public Health Agencies": 0.3,
-      "Administrative Organizations > Health Plans": 0.25
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on defining a standardized approach for bulk data export using FHIR. It heavily relies on FHIR's RESTful API and resource model, utilizing the Asynchronous Request Pattern for managing long-running operations. While it acknowledges other standards like SMART on FHIR for security, it doesn't directly integrate with or depend on HL7 v2, v3, or CDA. The IG does demonstrate a degree of cross-paradigm thinking by leveraging the FHIR Asynchronous Request Pattern, which is a general pattern applicable beyond just FHIR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide defines a standardized approach for bulk data export from FHIR servers. While it references US-specific initiatives like US Core and Blue Button, the guide itself does not explicitly define a specific national or regional scope. The technical specifications are designed for broad applicability, making it primarily a universal guide with some US context.",
+    "scores": {
+      "Universal Realm": 0.8,
+      "National": 0.2,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on defining a standardized approach for bulk data export from FHIR servers. It primarily addresses the technical aspects of requesting, monitoring, and retrieving large datasets, leveraging the FHIR Asynchronous Request Pattern and NDJSON. While it touches upon various healthcare domains through its use cases, its core purpose is to facilitate efficient data transfer, making **Administrative** and **Workflow** its primary focuses. The IG supports use cases in **Clinical Data**, **Public Health**, **Quality & Reporting**, and **Research**, but these are secondary to the core functionality of bulk data export. **Identity & Security** is also important, as it recommends SMART Backend Services Authorization.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0.2,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0.4,
+      "Workflow": 1
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This IG focuses on defining a RESTful API for bulk data export using the FHIR Asynchronous Request Pattern. It leverages custom operations and NDJSON for efficient data transfer. While it doesn't define specific data profiles, it does define a custom extension and a value set for controlling the inclusion of associated data. It primarily relies on RESTful interactions and does not utilize messaging, subscriptions, or document-based approaches. Decision support and forms/UI are outside the scope of this IG.",
+    "scores": {
+      "Data Profiles": 0.2,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 1,
+      "Services": 0.8,
+      "Subscriptions": 0,
+      "Terminology": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling bulk data export from FHIR servers. EHR systems are central, as they are the primary source of data. Payer systems are also key, as they need to export claims data. Clinical Decision Support and Research Platforms will heavily utilize the exported data. Public Health Systems will leverage this for surveillance. PHR systems have minimal involvement, primarily in potentially receiving exported data. Pharmacy, Lab, and Imaging systems are less directly involved but may contribute data to the EHR that is then exported.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0.6,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling efficient bulk data export from FHIR servers. Its design is driven by the needs of developers building systems that need to consume or produce large FHIR datasets. While clinical care teams and patients may indirectly benefit, the IG's core users are those involved in data integration, research, public health, and payer operations. Government agencies may have a role in setting policies that encourage its adoption, but they are not the primary drivers of the IG's design.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

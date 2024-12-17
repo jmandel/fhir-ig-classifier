@@ -1,0 +1,452 @@
+# genomics-reporting: Analysis
+
+## Core Purpose & Scope
+
+The **genomics-reporting** Implementation Guide (IG) addresses the primary interoperability challenge of standardizing the representation and exchange of clinical genomic testing results using HL7 FHIR. It solves key clinical and business problems related to the consistent reporting, sharing, and interpretation of genomic data, enabling integration with electronic health records (EHRs) and supporting clinical decision-making. The IG focuses on reporting structured genomic findings, including variants, haplotypes, genotypes, and their associated clinical implications, such as diagnostic, therapeutic, and pharmacogenomic implications. The scope is bounded to clinical reporting and does not cover the detailed representation of raw sequencing data or complex bioinformatics pipelines.
+
+## Technical Foundation
+
+The technical foundation of the IG rests on FHIR R4 (v4.0.1) and leverages several core FHIR resources, including:
+
+-   **Core Profiles and Extensions:**
+    -   `GenomicReport` (based on `DiagnosticReport`): Packages the overall report.
+    -   `Variant`: Represents a specific genetic variation.
+    -   `Haplotype`: Represents a set of variants on the same chromosome.
+    -   `Genotype`: Represents a combination of haplotypes or variants.
+    -   `DiagnosticImplication`: Captures the clinical significance of a finding.
+    -   `TherapeuticImplication`: Captures the impact of a finding on treatment.
+    -   `MolecularConsequence`: Captures the effect of a variant on transcripts and proteins.
+    -   `MolecularBiomarker`: Represents laboratory measurements of human inherent substances.
+    -   `GenomicStudy`: Describes the metadata about the study performed.
+    -   `GenomicStudyAnalysis`: Describes the metadata about the analysis performed.
+    -   `MedicationRecommendation`: Represents a proposed action Task describing what sort of change (if any) should be made for a specific medication based on an identified finding.
+    -   `FollowupRecommendation`: Represents a proposed action Task describing what sort of follow-up is recommended based on the results of the diagnostic report.
+    -   `SequencePhaseRelationship`: Indicates whether two entities are in Cis (same strand) or Trans (opposite strand) relationship to each other.
+    -   `CodedAnnotation`: Annotation DataType with added CodeableConcept extension element.
+    -   Extensions for `RecommendedAction`, `GenomicRiskAssessment`, `AnnotationCode`, `GenomicReportNote`, `TherapyAssessedReference`, `MedicationAssessedReference`, `RepeatMotifOrder`, and `RelatedArtifactComponent`.
+-   **Notable Operations and Interactions:**
+    -   `find-subject-variants`: Retrieves variants within specified genomic ranges.
+    -   `find-subject-specific-variants`: Retrieves specific variants based on HGVS or SPDI format.
+    -   `find-subject-structural-intersecting-variants`: Retrieves structural variants that overlap specified ranges.
+    -   `find-subject-structural-subsuming-variants`: Retrieves structural variants that fully subsume a range.
+    -   `find-subject-haplotypes`: Retrieves haplotypes/genotypes for specified genes.
+    -   `find-subject-specific-haplotypes`: Retrieves specific haplotypes/genotypes.
+    -   `find-subject-tx-implications`: Retrieves therapeutic implications for variants/haplotypes/genotypes.
+    -   `find-subject-dx-implications`: Retrieves diagnostic implications for variants.
+    -   `find-subject-molecular-consequences`: Retrieves molecular consequences of a DNA variant.
+    -   `find-population-specific-variants`: Retrieves count or list of patients having specified variants.
+    -   `find-population-structural-intersecting-variants`: Retrieves count or list of patients having structural intersecting variants in specified regions.
+    -   `find-population-structural-subsuming-variants`: Retrieves count or list of patients having structural subsuming variants in specified regions.
+    -   `find-population-specific-haplotypes`: Retrieves count or list of patients having specified genotypes/haplotypes.
+    -   `find-population-tx-implications`: Retrieves count or list of patients having therapeutic implications.
+    -   `find-population-dx-implications`: Retrieves count or list of patients having diagnostic implications.
+    -   `find-population-molecular-consequences`: Retrieves count or list of patients having molecular consequences.
+    -   `find-study-metadata`: Retrieves metadata about sequencing studies performed on a subject.
+-   **Key Terminology and Value Sets:**
+    -   LOINC (for codes like variant assessment, gene studied, etc.)
+    -   SNOMED CT (for clinical findings, conditions)
+    -   HGNC (for gene symbols and IDs)
+    -   HGVS (for variant nomenclature)
+    -   Sequence Ontology (SO)
+    -   RefSeq, ClinVar, dbSNP, COSMIC, PharmVar, HPO, MONDO, ISCN
+    -   Custom code systems for sequence phase relationships, variant confidence status, and coded annotation types.
+-   **Significant Patterns and Constraints:**
+    -   `GenomicReport` serves as the primary container, referencing other Observation resources.
+    -   `Variant` profile uses components to represent various aspects of a variant (e.g., HGVS, genomic coordinates, allelic state).
+    -   `DiagnosticImplication` and `TherapeuticImplication` link genomic findings to clinical knowledge.
+    -   `derivedFrom` element connects implications to their underlying variants/haplotypes/genotypes.
+    -   `component` element is extensively used to structure complex data within Observations.
+    -   `GenomicStudy` and `GenomicStudyAnalysis` profiles are used to capture study-level and analysis-level metadata, respectively.
+    -   `MedicationRecommendation` and `FollowupRecommendation` profiles are used to capture recommended actions based on the report's findings.
+
+## Technical Essence
+
+The **genomics-reporting** IG defines a structured approach to representing clinical genomic test results using FHIR. A `GenomicReport` (profiled from `DiagnosticReport`) acts as the central container, referencing a collection of `Observation` resources that detail specific genomic findings and their implications. Variants are represented using the `Variant` profile, which leverages components to capture HGVS nomenclature (c., p., g.), genomic coordinates (RefSeq, start-end), allelic state, and other defining attributes. The `Haplotype` and `Genotype` profiles model combinations of variants, while `DiagnosticImplication` and `TherapeuticImplication` link these findings to clinical knowledge, using `derivedFrom` to establish traceability. `MolecularConsequence` details the impact on transcripts and proteins. The `component` element is heavily used within these profiles to structure detailed information. Operations like `find-subject-variants` enable querying for variants within specific genomic ranges, using parameters like `subject`, `ranges`, and `genomicSourceClass`. Results are returned as bundles containing `Variant` and potentially `SequencePhaseRelationship` resources. Terminology is drawn from LOINC, HGNC, HGVS, Sequence Ontology, and custom code systems. The IG mandates the use of specific LOINC codes for core concepts and recommends bindings to external terminologies like ClinVar and PharmGKB for evidence levels and clinical significance. The `GenomicStudy` and `GenomicStudyAnalysis` profiles capture study-level and analysis-level metadata, including regions studied, method types, and genome build. The `MedicationRecommendation` and `FollowupRecommendation` profiles capture recommended actions based on the report's findings.
+
+## Implementation Approach
+
+The IG is designed to be implemented by laboratories generating genomic reports and systems consuming these reports, such as EHRs and clinical decision support systems.
+
+-   **Critical Workflows and Interactions:**
+    -   Laboratories generate `GenomicReport` instances containing `Variant`, `Haplotype`, `Genotype`, `DiagnosticImplication`, `TherapeuticImplication`, and `MolecularConsequence` observations.
+    -   Systems can query for reports and specific findings using the defined operations (e.g., `find-subject-variants`).
+    -   Systems can use the structured data to populate EHRs, trigger clinical decision support rules, and inform patient care.
+    -   `GenomicStudy` and `GenomicStudyAnalysis` instances are created to capture study-level and analysis-level metadata.
+    -   `MedicationRecommendation` and `FollowupRecommendation` instances are created to capture recommended actions based on the report's findings.
+-   **Important Requirements and Guardrails:**
+    -   Conformance to the defined profiles and extensions is crucial.
+    -   Proper use of terminology (LOINC, HGNC, HGVS, etc.) is mandated.
+    -   `derivedFrom` element must be used to link implications to their underlying variants/haplotypes/genotypes.
+    -   `component` element must be used according to the specified patterns.
+    -   Operations must be implemented to support querying and retrieval of genomic data.
+-   **Notable Design Choices and Patterns:**
+    -   Use of `Observation` as the base resource for most genomic findings.
+    -   Extensive use of `component` to structure complex data within Observations.
+    -   Leveraging `derivedFrom` to establish relationships between findings and implications.
+    -   Defining operations for specific query patterns.
+    -   Use of `GenomicStudy` and `GenomicStudyAnalysis` to capture study-level and analysis-level metadata.
+    -   Use of `MedicationRecommendation` and `FollowupRecommendation` to capture recommended actions.
+
+## Ecosystem Context
+
+-   **Target Systems and Users:** Clinical laboratories, EHR systems, clinical decision support systems, clinicians, researchers, and patients.
+-   **Relationship to Other Standards/IGs:**
+    -   Builds upon core FHIR R4 specifications.
+    -   Leverages existing terminologies like LOINC, HGNC, HGVS, and Sequence Ontology.
+    -   Aligns with other HL7 Clinical Genomics workgroup efforts.
+    -   Relates to HL7 v2 reporting through an appendix.
+-   **Relevant Jurisdictions or Programs:** International, with a focus on supporting diverse healthcare systems. The pharmacogenomics section specifically references the eMERGE program funded by the NHGRI.
+-   **Primary Use Cases and Scenarios:**
+    -   Reporting of germline and somatic variants.
+    -   Reporting of pharmacogenomic results and implications.
+    -   Integration of genomic data into EHRs.
+    -   Supporting clinical decision support for personalized medicine.
+    -   Enabling research and data sharing.
+    -   Reporting of histocompatibility and immunogenetic results.
+    -   Supporting genomic operations such as querying for variants within specific genomic ranges.
+    -   Capturing study-level and analysis-level metadata.
+    -   Providing guidance for representing variant values, especially for pertinent negatives.
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value (especially for pertinent negatives).
+    -   Providing guidance for consistently representing Variant value

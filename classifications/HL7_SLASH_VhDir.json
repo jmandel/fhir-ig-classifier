@@ -1,38 +1,84 @@
 {
-  "rationale": "The VhDir Implementation Guide defines a set of FHIR profiles and extensions for creating a validated healthcare directory. The core functionality of this IG is to define the structure and content of FHIR resources used to represent entities within a healthcare directory, such as practitioners, organizations, locations, services, insurance plans, and networks. \n\nThe IG specifies how these resources should be populated, including mandatory elements, value sets, and extensions. It also defines search parameters to query the directory. The primary focus is on data modeling, defining the structure of resources like Organization, Practitioner, Location, PractitionerRole, HealthcareService, Endpoint, InsurancePlan, and Network. It also defines how to represent validation information using the VerificationResult resource and restrictions using a profile of the Consent resource.\n\nWhile the IG defines how data should be structured, it also touches upon data exchange mechanisms, particularly through the definition of search parameters and capability statements. It mentions the use of RESTful interactions and references the SMART Backend Services Authorization Guide for security. The IG also briefly discusses bulk data and subscriptions, although these sections are marked as needing further development.\n\nGeographically, the IG is intended for international use but was developed under a US initiative (ONC Healthcare Directory Initiative). It mentions alignment with US Core and expects different jurisdictions to design implementations according to their requirements. The examples provided often reference US entities and locations.\n\nRegarding stakeholders, the IG is primarily aimed at technical implementers, such as EHR vendors and health IT development teams, who would be responsible for implementing the defined profiles and APIs. It also targets healthcare provider organizations, public health organizations, and administrative organizations that would use or contribute to a validated healthcare directory. The IG is built upon FHIR R4 and defines profiles and extensions for this version.",
-  "scores": {
-    "Functional Domain": {
-      "Administrative & Financial": 0.6,
-      "Infrastructure & Foundational": 0.35,
-      "Clinical Care > General Clinical Care": 0.25
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.6,
-      "Security & Privacy": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7,
-      "Universal Realm": 0.3
-    },
-    "Stakeholders": {
-      "Technical Implementers > Health IT Development Teams": 0.8,
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
-      "Administrative Organizations > Insurance Companies": 0.4,
-      "Administrative Organizations > Health Plans": 0.4,
-      "Standards Organizations > Standards Development Organizations": 0.4,
-      "Public Health Organizations > Public Health Agencies": 0.3
+  "HL7 Standard": {
+    "summary": "The VhDir IG is fundamentally based on FHIR, leveraging its RESTful API and resource model to define a standardized approach for managing and exchanging validated healthcare directory information. It does not utilize CDA, v2, or v3, and its cross-paradigm integration is limited to leveraging FHIR's capabilities.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The VhDir Implementation Guide, developed under the ONC Healthcare Directory Initiative (HcDir), focuses on creating a standardized, interoperable approach to managing and exchanging validated healthcare directory information. While it mentions the US Core IG and the Argonaut Provider Directory project, it does not explicitly state that it is a national guide for the United States. However, the context of the ONC (Office of the National Coordinator for Health Information Technology) strongly suggests a US national scope. Therefore, it is scored as strongly aligned with the US national jurisdiction.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The VhDir Implementation Guide primarily focuses on establishing a standardized, interoperable approach for managing and exchanging validated healthcare directory information. It emphasizes administrative aspects like provider, organization, and location data, with a strong focus on data accuracy and validation. While it touches upon other domains like workflow and identity, its core purpose revolves around creating a reliable and accessible source of truth for healthcare directory data.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0.4,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.4,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The VhDir IG primarily focuses on defining data models (profiles and extensions) for healthcare directory information and enabling RESTful access to that data. Terminology and value sets are used to support the data models. While the IG mentions attestation using Bundles, it doesn't define a full-fledged messaging or document-based approach. Decision support, forms/UI, and subscriptions are not central to the IG's purpose.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0.2,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0,
+      "Subscriptions": 0,
+      "Terminology": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The VhDir IG primarily focuses on the exchange of validated healthcare directory information. This involves provider organizations, payers, and potentially HIEs/HISPs as core implementers. EHRs will need to integrate with this data for various workflows. Payer systems are central to utilizing validated provider and network data. Public health and research platforms may have limited but defined needs for accessing this directory information. Pharmacy, Lab, and Imaging systems have minimal direct involvement.",
+    "scores": {
+      "EHR Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.4,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The VhDir IG primarily targets organizations that need to consume and utilize validated healthcare directory information. Clinical Care Teams benefit from accurate provider data, but their needs are secondary to those of the organizations managing and exchanging this data. Payers and Healthcare Administrators have a significant stake in the IG due to its impact on credentialing, enrollment, and claims processing. Public Health and Research Organizations have limited involvement, while Government Agencies have a moderate role in oversight and regulation.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

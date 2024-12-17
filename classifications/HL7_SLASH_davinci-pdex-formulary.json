@@ -1,38 +1,84 @@
 {
-  "rationale": "The DaVinci PDex Formulary Implementation Guide (IG) defines a FHIR interface for health insurers to expose drug formulary information. This IG focuses on enabling consumers to understand drug costs and compare drug coverage across different insurance plans. \n\nThe core functionality of this IG revolves around defining a set of FHIR profiles and extensions to represent formulary data. Specifically, it defines the `PayerInsurancePlan` profile to represent health insurance products, including coverage benefits and cost-sharing structures. It also defines the `Formulary` profile, which provides general information about a formulary and acts as an organizing construct. The `FormularyItem` profile describes a drug's relationship to a formulary, including its tier, prior authorization requirements, and other coverage constraints. Finally, the `FormularyDrug` profile provides information about a prescribable drug, including its RxNorm code and dose form.\n\nIn addition to these profiles, the IG defines several search parameters to facilitate querying formulary data. These parameters allow users to search for insurance plans based on coverage type, formulary coverage, and coverage area. They also enable searching for formulary items based on formulary, drug tier, and pharmacy benefit type. Furthermore, users can search for formulary drugs by name or code.\n\nThe IG also outlines two access methods: an authenticated API for accessing formulary data integrated with protected health information (PHI) or personally identifiable information (PII), and an unauthenticated API for exchanging formulary data without any PHI or PII. It also provides draft guidance on using the Bulk Data IG for retrieving large sets of formulary data.\n\nOverall, the DaVinci PDex Formulary IG provides a comprehensive framework for representing and exchanging formulary information using FHIR. It focuses on data modeling and exchange mechanisms to support the use cases of understanding drug costs and comparing drug coverage across different insurance plans.",
-  "scores": {
-    "Functional Domain": {
-      "Administrative & Financial > Insurance and Billing": 0.9,
-      "Administrative & Financial > Prior Authorization": 0.3,
-      "Clinical Care > General Clinical Care > Medication Management": 0.8,
-      "Infrastructure & Foundational > Terminology and Value Sets": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.7,
-      "Workflow Support": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.9
-    },
-    "Stakeholders": {
-      "Administrative Organizations > Insurance Companies": 0.9,
-      "Administrative Organizations > Health Plans": 0.9,
-      "Patient-Facing Stakeholders > Patients": 0.8,
-      "Patient-Facing Stakeholders > Family Members": 0.8,
-      "Patient-Facing Stakeholders > Care Coordinators": 0.8,
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Technical Implementers > Health IT Development Teams": 0.6,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.5
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, defining a RESTful API and profiles for exchanging drug formulary information. It does not use CDA or v2, and while it acknowledges v3 concepts like RxNorm, it doesn't deeply integrate them. Cross-paradigm integration is present in the sense that it leverages other FHIR-based IGs, but not in the sense of bridging FHIR with other HL7 standards like CDA or v2.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci PDEX Formulary Implementation Guide is explicitly designed for use within the United States healthcare system. It references US-specific standards like US Core, aligns with the Da Vinci project's goals for improving data exchange in the US, and addresses the needs of the US healthcare market. Therefore, it is classified as a National IG for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on standardizing the exchange of drug formulary information, primarily between payers and consumers. It leverages FHIR resources like InsurancePlan, Basic, and MedicationKnowledge to represent formulary data, including drug tiers, cost-sharing, and coverage limitations. While it touches upon administrative aspects through insurance plan representation and has implications for medication management, its core purpose is to provide transparent access to formulary information, impacting payment and financial aspects related to prescription drug costs.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Medications": 0.8,
+      "Payment & Financial": 1,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This IG focuses on defining a RESTful API for accessing drug formulary information. It heavily relies on Data Profiles to model the formulary data using InsurancePlan, Basic, and MedicationKnowledge resources, along with custom extensions. Terminology plays a crucial role in identifying drugs (RxNorm) and categorizing formulary-related concepts. REST APIs are the core mechanism for data access, with specific search parameters defined for common queries. While not a primary focus, Services are implied through the use of custom search parameters. Other aspects like Decision Support, Documents, Forms & UI, Messaging, and Subscriptions are not significantly addressed in this IG.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.4,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the exchange of drug formulary information between payers and other stakeholders, primarily patients. Payer systems are central to implementing this IG, as they are the source of formulary data. EHRs and PHRs will need to integrate with this data to provide cost and coverage information to providers and patients. Pharmacy systems may also benefit from this information for medication reconciliation and cost estimation. Clinical Decision Support systems can leverage this data to suggest cost-effective alternatives. Public health and research platforms have minimal involvement.",
+    "scores": {
+      "EHR Systems": 0.6,
+      "PHR Systems": 0.8,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of drug formulary information, primarily between payers and patients/consumers. Payers are the core users as they are responsible for providing and maintaining this data. Patients and their caregivers are key users, benefiting from transparent access to drug cost and coverage information. Clinical care teams also have a significant role, using this information to guide prescribing decisions. Public health agencies and research organizations have a limited role, potentially using aggregated formulary data for population health analysis and research. Government agencies have a minimal role, potentially using this IG to support regulatory oversight of formulary transparency. Healthcare administrators have a minimal role, potentially involved in implementing and managing systems that expose this data.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.8,
+      "Payers": 1,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.2
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

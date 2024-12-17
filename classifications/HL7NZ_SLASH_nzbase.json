@@ -1,32 +1,84 @@
 {
-  "rationale": "The `nzbase` FHIR Implementation Guide primarily focuses on defining a set of New Zealand-specific extensions, profiles, and terminology artifacts for use within the FHIR framework. It establishes foundational elements for interoperability within the New Zealand healthcare context, rather than focusing on a specific clinical domain. The IG defines numerous extensions to represent NZ-specific data elements, such as ethnicity, domicile code, and various identifiers like the NHI. It also includes profiles for core FHIR resources like Patient, Practitioner, Location, and Organization, incorporating these extensions. The terminology section defines ValueSets and CodeSystems for NZ-specific codes, including ethnicity, iwi, and various administrative codes. The IG's scope is primarily data modeling, defining the structure and content of FHIR resources for the NZ context. It also touches upon data exchange by defining identifiers and providing guidance on their use. The geographic scope is explicitly limited to New Zealand, as indicated by the canonical URL, publisher information, and the content of the defined extensions and terminology. The primary stakeholders are technical implementers, particularly EHR vendors and system integrators, who will use this IG to ensure their systems are compliant with NZ requirements. It also indirectly impacts healthcare provider organizations and public health agencies by standardizing data representation. The IG is based on FHIR R4 and is intended for use within the New Zealand healthcare system.",
-  "scores": {
-    "Functional Domain": {
-      "Infrastructure & Foundational": 0.8
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > New Zealand": 0.95
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.7,
-      "Technical Implementers > System Integrators": 0.7,
-      "Technical Implementers > Health IT Development Teams": 0.7,
-      "Standards Organizations": 0.4,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.3,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) is fundamentally based on the FHIR standard, providing a New Zealand-specific foundation for FHIR implementations. It focuses on profiling core FHIR resources and defining extensions to accommodate local requirements, without relying on other HL7 standards like CDA, v2, or v3. While it doesn't explicitly integrate across different HL7 paradigms, its existence within the HL7 ecosystem implies a degree of awareness and potential for future cross-paradigm work.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly focuses on establishing a common foundation for FHIR implementations within New Zealand. It defines NZ-specific identifiers, terminology, and extensions, and is endorsed by HL7 New Zealand and the New Zealand Health Information Standards Organisation (HISO). Therefore, it is clearly a national guide for New Zealand.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > New Zealand": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The nzbase FHIR Implementation Guide primarily focuses on establishing a foundational layer for FHIR implementations within the New Zealand healthcare system. It emphasizes administrative aspects like patient and practitioner demographics, organizational details, and location information, along with core clinical data elements. While it touches upon medications and coverage, its core strength lies in defining NZ-specific identifiers, terminology, and extensions to ensure consistent representation of fundamental healthcare entities across various systems. It does not delve deeply into specific clinical workflows, care planning, or advanced clinical knowledge.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Medications": 0.6,
+      "Payment & Financial": 0.4,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on establishing a foundational layer for FHIR implementations in New Zealand. It achieves this by defining core resource profiles and extensions tailored to the New Zealand healthcare context, with a strong emphasis on data modeling and terminology. While it doesn't explicitly define workflows or complex interactions, it provides the necessary building blocks for various health information exchange scenarios. The IG heavily relies on RESTful interactions for data access and manipulation, but doesn't define custom services or operations. Messaging and subscriptions are not a core part of this foundational IG.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0.2,
+      "REST APIs": 0.8,
+      "Services": 0,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The nzbase FHIR Implementation Guide establishes a foundational framework for FHIR implementations in New Zealand. It focuses on core resources like Patient, Practitioner, Organization, and Location, adding NZ-specific extensions and value sets. This suggests that EHR systems, as the primary consumers and producers of this core data, are the most critical implementers. Other systems like Pharmacy, Lab, and Payer systems will also need significant integration to handle NZ-specific identifiers and data elements. PHR systems will need to display this information, while Clinical Decision Support may leverage some of the standardized data. Public Health and Research systems may utilize aggregated data based on this IG for population-level analysis and studies, but with a more limited scope.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.6,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0.8,
+      "Lab Systems": 0.8,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0.6,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (nzbase) is designed to establish a common foundation for FHIR implementations in New Zealand. It primarily serves the needs of software developers and system integrators building health information systems within the New Zealand healthcare ecosystem. While clinical care teams and other stakeholders will indirectly benefit from the improved interoperability, the IG's design is driven by the technical requirements of system implementation. Government agencies have a significant influence due to the IG's role in national standardization. Public health agencies and research organizations have well-defined needs related to data aggregation and analysis, while payers and healthcare administrators have a more limited role.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

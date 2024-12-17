@@ -1,32 +1,84 @@
 {
-  "rationale": "The Da Vinci Unsolicited Notifications Implementation Guide (IG) defines a framework for sending notifications triggered by events impacting patient care, particularly focusing on real-time exchange of information relevant to value-based or risk-based services. The core functionality of this IG revolves around defining a standardized approach for creating and exchanging these notifications using FHIR messaging. \n\nSpecifically, the IG defines:\n\n1.  **Notification Message Structure:** It establishes a common FHIR message Bundle format for all notifications, including a mandatory MessageHeader resource that identifies the notification's purpose (e.g., admission, discharge, transfer) and references other relevant resources like Encounter, Patient, Practitioner, Location, Condition, and Coverage. These resources are profiled to meet the specific needs of the defined use cases.\n2.  **Transactions and Operations:** It specifies the use of the FHIR `$process-message` operation for \"pushing\" these unsolicited notification messages directly to Recipients and Intermediaries. It outlines the expected behavior of Senders, Intermediaries, and Recipients in this process, including error handling and reliable delivery.\n3.  **Use Case Definition:** It demonstrates the application of the framework through a detailed use case for admission, transfer, and discharge notifications. This includes defining specific profiles for MessageHeader, Encounter, Condition, and Coverage resources tailored to this use case, along with example message bundles.\n4.  **Security and Privacy:** It provides guidance on security and privacy considerations, referencing the HRex Security and Privacy specification and recommending the use of SMART Backend Services for authorization.\n5.  **Conformance:** It includes CapabilityStatements that define the conformance expectations for Senders, Receivers, and Intermediaries, specifying the supported profiles, operations, and search parameters.\n\nIn essence, this IG creates a blueprint for building interoperable systems that can generate and consume unsolicited notifications in a consistent and predictable manner, leveraging FHIR's messaging capabilities and resource model. It focuses on defining the structure of the notification messages, the mechanisms for their exchange, and the roles and responsibilities of the involved actors, while leaving the specific business rules and workflows surrounding notification triggering to the implementers.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.8,
-      "Administrative & Financial": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.9,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.4
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
-      "Public Health Organizations > Public Health Agencies": 0.3
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on building a FHIR-based messaging framework for unsolicited notifications. It heavily relies on FHIR resources and operations, particularly the Bundle and MessageHeader resources, and the $process-message operation. While it acknowledges other HL7 standards, it does not directly utilize or integrate them into its core functionality. The IG's purpose is to define a specific use case within the FHIR ecosystem, making FHIR the foundational standard.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci Unsolicited Notifications Implementation Guide is built upon FHIR R4 and US Core R4, and is explicitly designed to support value-based care within the US healthcare system. It references the Da Vinci project and utilizes US Core profiles, indicating a strong focus on the US context.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Unsolicited Notifications IG focuses on enabling real-time communication of patient care events, primarily admissions, transfers, and discharges, between providers and payers. It leverages FHIR messaging to facilitate care coordination and management. While it touches upon administrative and clinical data aspects, its core purpose revolves around workflow and the timely exchange of event notifications.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Medications": 0,
+      "Payment & Financial": 0.2,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The Da Vinci Unsolicited Notifications IG primarily focuses on defining a FHIR messaging framework for unsolicited notifications, leveraging Data Profiles for structuring the messages and Terminology for defining event types. It utilizes the $process-message operation, which falls under Services, for message transmission. While REST APIs are mentioned in the context of FHIR interactions, the IG's core is not built around defining new RESTful endpoints. Messaging is the central pattern, and Data Profiles are heavily used to define the structure of the notification messages. Decision Support, Documents, Forms & UI, and Subscriptions are not central to this IG's current scope.",
+    "scores": {
+      "Data Profiles": 0.8,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 1,
+      "REST APIs": 0.4,
+      "Services": 0.6,
+      "Subscriptions": 0.2,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci Unsolicited Notifications IG primarily targets EHR systems and Payer systems for real-time communication of patient care events. EHR systems are crucial for generating and consuming these notifications, while Payer systems are key recipients for care coordination and management. Clinical Decision Support systems will benefit from these notifications to provide timely alerts. PHR, Pharmacy, Lab, Imaging, and Research Platforms have limited involvement, while Public Health Systems may have a slightly larger role in future scenarios.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.4,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Da Vinci Unsolicited Notifications IG primarily focuses on enabling real-time communication of patient care events between providers and payers. Clinical Care Teams and Payers are the core users, driving the design and having significant influence. Healthcare Administrators have a well-defined role in implementing and managing the systems. Public Health Agencies and Research Organizations have minimal but clear needs addressed, potentially using the notifications for population health monitoring and research purposes. Patients and Caregivers are not directly involved, and Government Agencies have a limited role in oversight.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

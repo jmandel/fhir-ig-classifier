@@ -1,36 +1,84 @@
 {
-  "rationale": "The ITI.PDQm Implementation Guide defines a profile for querying patient demographics, primarily targeting mobile and lightweight applications. It specifies two main transactions: \"Mobile Patient Demographics Query [ITI-78]\" and \"Patient Demographics Match [ITI-119]\". ITI-78 uses FHIR's search capabilities, while ITI-119 leverages the FHIR $match operation for more sophisticated matching. \n\nThe IG defines specific actors (Patient Demographics Consumer and Supplier) and their interactions. It mandates support for various search parameters and outlines expected behaviors for different query scenarios. The Patient Demographics Supplier must support ITI-78, while ITI-119 is optional. The Consumer must implement at least one of these transactions. The IG also includes detailed security considerations, referencing ATNA and IUA profiles, and mandates audit event logging for both actors.\n\nRegarding data modeling, the IG defines a \"PDQm Patient Profile\" constraining the FHIR Patient resource. This profile mandates the presence of identifiers and sets MustSupport flags on several elements. It also includes an extension for mother's maiden name. For ITI-119, it defines input and output parameter profiles, again based on FHIR resources. The output is a Bundle of Patient resources, potentially including OperationOutcome resources for errors or warnings.\n\nIn terms of data exchange, the IG specifies the use of RESTful interactions, with support for both JSON and XML encodings. It details the HTTP methods (GET and POST) and paths for the transactions. It also addresses response format handling and error scenarios. The IG emphasizes the use of FHIR's search and read interactions for ITI-78 and the $match operation for ITI-119.\n\nWhile the primary focus is on data exchange and modeling, the IG also touches upon workflow support by defining the interactions between the actors and outlining different use cases. It does not, however, define complex workflows or state transitions. The IG is designed for broad applicability, as indicated by its jurisdiction set to the \"World\" region code, suggesting a universal realm scope. However, the examples and some references imply a potential focus on or origin in the United States.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.9,
-      "Administrative & Financial": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95,
-      "Cross-Paradigm": 0.25
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.9,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.3,
-      "Security & Privacy": 0.3
-    },
-    "Geographic Scope": {
-      "Universal Realm": 0.8
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Technical Implementers > Health IT Development Teams": 0.8,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.7,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
-      "Standards Organizations": 0.5,
-      "Public Health Organizations > Public Health Agencies": 0.3
+  "HL7 Standard": {
+    "summary": "The ITI PDQm Implementation Guide is fundamentally based on FHIR, defining RESTful interactions for patient demographic queries. It does not utilize HL7 v2 or v3 messaging, nor does it directly leverage CDA. While it doesn't explicitly integrate multiple HL7 paradigms, its reliance on FHIR and its relationship to other IHE profiles that might use different HL7 standards suggests a minor level of cross-paradigm awareness.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The IHE PDQm Implementation Guide is designed for international use, focusing on providing a standardized, RESTful interface for querying patient demographics using FHIR. It does not specify any national or regional adaptations, making it applicable universally.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The IHE PDQm Implementation Guide focuses on providing a RESTful interface for querying patient demographics, primarily for mobile and web applications. It leverages FHIR R4 and defines two transactions: ITI-78 (search/read) and ITI-119 ($match). The core purpose is to facilitate patient identification and data retrieval, making it heavily reliant on administrative data and identity management. While it touches upon clinical data through patient demographics, its primary focus is not on deep clinical information exchange. Security is addressed through audit event requirements.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.8,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The ITI PDQm Implementation Guide primarily focuses on defining RESTful interactions for querying patient demographics, leveraging FHIR resource profiles and the $match operation. It heavily relies on data profiles to constrain the Patient resource and uses terminology for specific elements like gender. While REST APIs are central to its design, it also incorporates services through the $match operation. Other aspects like decision support, documents, forms, messaging, and subscriptions are not utilized.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.6,
+      "Subscriptions": 0,
+      "Terminology": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI PDQm Implementation Guide focuses on enabling lightweight, RESTful querying of patient demographics using FHIR. It's primarily designed for mobile and web-based applications that need to retrieve patient information efficiently. EHR systems, as the primary source of patient demographics, are central to its implementation. Mobile and web-based applications, including those integrated within EHRs and potentially PHRs, will heavily rely on PDQm for patient identification and data retrieval. Clinical Decision Support systems may utilize PDQm to ensure accurate patient context for alerts and guidance. While less central, Payer, Pharmacy, Lab, and Imaging systems might use PDQm for patient identification in specific workflows. Public Health and Research systems have minimal involvement, primarily related to patient identification if needed.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.2,
+      "Lab Systems": 0.2,
+      "Imaging Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide (PDQm) primarily focuses on enabling mobile and web applications to query patient demographics. Therefore, the core users are developers building these applications, which indirectly serve Clinical Care Teams. Clinical Care Teams benefit significantly from accurate and efficient patient identification. While Patients and Caregivers might indirectly benefit from improved data accuracy, they are not direct users. Public Health and Research Organizations have minimal involvement, as the IG doesn't focus on aggregated data or research-specific needs. Payers and Government Agencies have a limited role, primarily related to potential auditing and regulatory compliance.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.2,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

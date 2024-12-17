@@ -1,34 +1,84 @@
 {
-  "rationale": "This FHIR Implementation Guide (IG) is focused on enabling the electronic submission of Healthcare Associated Infection (HAI) reports to the National Healthcare Safety Network (NHSN) at the CDC. The IG defines a library of FHIR profiles, specifically Questionnaire and QuestionnaireResponse profiles, to structure the data for these reports. It includes profiles for both single-person reports and population summary reports. The IG also defines specific Questionnaire instances for various report types, such as Late Onset Sepsis/Meningitis Denominator, Outpatient Procedure Component Denominator for Procedure, and others. These Questionnaires are designed to mirror the actual NHSN forms, soliciting information relevant to HAI surveillance. The IG provides mappings between FHIR QuestionnaireResponse elements and CDA elements, indicating a focus on interoperability between different HL7 standards. It also includes value sets for standardizing codes used in the reports. The primary goal is to standardize the data format and exchange mechanisms for HAI reporting, facilitating automated data collection and submission to the NHSN. The IG is developed in collaboration with the CDC and HL7, targeting software developers who want to enable their systems for reporting HAI data to the NHSN. It is intended for use within the United States, aligning with the geographic scope of the NHSN.",
-  "scores": {
-    "Functional Domain": {
-      "Public Health": 0.9,
-      "Clinical Care": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95,
-      "Cross-Paradigm": 0.3
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.8
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.9
-    },
-    "Stakeholders": {
-      "Public Health Organizations > Public Health Agencies": 0.9,
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
-      "Standards Organizations > Standards Development Organizations": 0.6,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
-      "Technical Implementers > Health IT Development Teams": 0.5
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR for representing and exchanging HAI reports. It leverages FHIR's Questionnaire and QuestionnaireResponse resources as its core mechanism. While it acknowledges CDA and provides mappings for interoperability, CDA is not central to its approach. v2 and v3 are not directly relevant. Cross-paradigm integration is present in the form of mapping to CDA, but it's not a dominant aspect.",
+    "scores": {
+      "CDA": 0.4,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on standardizing the electronic submission of Healthcare Associated Infection (HAI) reports to the National Healthcare Safety Network (NHSN) of the Centers for Disease Control and Prevention (CDC) in the United States. It leverages US Core profiles and defines NHSN-specific value sets, indicating a national scope within the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the electronic submission of Healthcare Associated Infection (HAI) reports to the National Healthcare Safety Network (NHSN) of the CDC. It primarily leverages the Questionnaire and QuestionnaireResponse resources to model NHSN forms and their completed responses, with a strong emphasis on public health surveillance and quality improvement related to HAIs. While it touches upon administrative aspects like facility and patient identification, its core purpose is to facilitate accurate and timely HAI data reporting for public health purposes.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Medications": 0.2,
+      "Payment & Financial": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.8,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This IG primarily focuses on defining FHIR Questionnaires and QuestionnaireResponses for submitting HAI reports to the CDC's NHSN. It heavily relies on Data Profiles to structure the reports and Terminology to ensure consistent coding. While REST APIs are implied for submission, they are not explicitly defined. Forms & UI are central to the approach, as Questionnaires represent the forms. Decision Support, Documents, Messaging, Services, and Subscriptions are not significantly utilized.",
+    "scores": {
+      "Data Profiles": 0.8,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 1,
+      "Messaging": 0,
+      "REST APIs": 0.4,
+      "Services": 0,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the electronic submission of Healthcare Associated Infection (HAI) reports to the CDC's National Healthcare Safety Network (NHSN) using FHIR. Therefore, EHR systems are central to its implementation, as they will be the primary source of HAI data and responsible for generating and submitting the FHIR QuestionnaireResponse resources. Public Health Systems, specifically the NHSN, will be the primary recipient of the data, making them a core system type. Clinical Decision Support systems may play a role in identifying potential HAIs, and Research Platforms might utilize the aggregated data. Other systems have limited or no involvement.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0,
+      "Public Health Systems": 1,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide primarily focuses on enabling healthcare systems to electronically submit Healthcare Associated Infection (HAI) reports to the CDC's National Healthcare Safety Network (NHSN). The design is driven by the need for standardized, interoperable data exchange between healthcare facilities and public health agencies for surveillance and quality improvement. While clinical care teams provide the source data, the IG's design is primarily influenced by the requirements of public health agencies and the developers implementing the data exchange. Patients have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

@@ -1,37 +1,84 @@
 {
-  "rationale": "The HAI-LTCF FHIR Implementation Guide is focused on enabling the electronic submission of Healthcare Associated Infection (HAI) data from Long-Term Care Facilities (LTCFs) to the National Healthcare Safety Network (NHSN) at the CDC. It defines FHIR profiles and questionnaires for two specific types of reports: a single-person event report for laboratory-identified MDRO or CDI events, and a population summary report for MDRO and CDI LabID event reporting. The IG specifies the structure and content of these reports using FHIR Questionnaires and QuestionnaireResponses, mapping them to corresponding CDA templates. It leverages existing standards like US Core for patient data and references value sets from the Value Set Authoring Center (VSAC). The primary goal is to standardize data collection and exchange, reducing reporting burden and improving data quality. The IG is designed for use within the United States, aligning with NHSN requirements and CDC guidelines. It targets software developers building systems for HAI data reporting, as well as healthcare providers and public health agencies involved in infection surveillance and prevention in LTCFs.",
-  "scores": {
-    "Functional Domain": {
-      "Public Health": 0.8,
-      "Clinical Care > General Clinical Care > Medication Management": 0.3,
-      "Clinical Care > General Clinical Care": 0.25
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.8,
-      "Data Exchange": 0.7,
-      "Workflow Support": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.95
-    },
-    "Stakeholders": {
-      "Public Health Organizations > Public Health Agencies": 0.9,
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
-      "Standards Organizations > Government Agencies": 0.6,
-      "Standards Organizations > Standards Development Organizations": 0.5,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
-      "Public Health Organizations > Disease Surveillance Teams": 0.4
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling electronic submission of Healthcare Associated Infection (HAI) data from Long Term Care Facilities (LTCFs) to the National Healthcare Safety Network (NHSN) using FHIR resources, specifically Questionnaire and QuestionnaireResponse. It leverages US Core profiles and VSAC-defined value sets. While it mentions a parallel CDA IG, its core functionality is entirely based on FHIR. It does not utilize HL7 v2 or v3.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on standardizing the electronic submission of Healthcare Associated Infection (HAI) data from Long Term Care Facilities (LTCFs) to the National Healthcare Safety Network (NHSN) in the United States. It leverages US Core profiles and is relevant to LTCFs participating in the NHSN, indicating a national scope within the US.",
+    "scores": {
+      "Universal Realm": 0,
+      "National": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on streamlining the reporting of Healthcare Associated Infections (HAIs) from Long Term Care Facilities (LTCFs) to the National Healthcare Safety Network (NHSN). It primarily deals with the collection and transmission of clinical data related to MDRO and CDI events, leveraging FHIR Questionnaires and QuestionnaireResponses. While it touches upon administrative aspects like patient demographics and facility information, its core purpose is to facilitate public health surveillance and quality reporting related to HAIs in the LTCF setting.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Medications": 0.2,
+      "Payment & Financial": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.8,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This IG primarily focuses on defining FHIR Questionnaires and QuestionnaireResponses for HAI reporting in LTCFs. It heavily utilizes Data Profiles to structure these resources and Terminology to ensure consistent coding. REST APIs are used for the exchange of these resources. Forms & UI are implied through the use of Questionnaires, but not explicitly defined. Other aspects like Decision Support, Documents, Messaging, Services, and Subscriptions are not central to this IG's approach.",
+    "scores": {
+      "Data Profiles": 0.8,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0.6,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.2,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling Long Term Care Facilities (LTCFs) to electronically submit Healthcare Associated Infection (HAI) data to the National Healthcare Safety Network (NHSN) using FHIR Questionnaires. EHR systems in LTCFs are central to implementing this IG, as they will generate and submit the required reports. The NHSN system, a part of Public Health Systems, is the primary consumer of this data. Clinical Decision Support systems might play a role in identifying potential HAI events, and Research Platforms could utilize the aggregated data. Other systems have minimal or no involvement.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.8,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on streamlining the electronic submission of Healthcare Associated Infection (HAI) data from Long Term Care Facilities (LTCFs) to the National Healthcare Safety Network (NHSN). The design is driven by the needs of Public Health Agencies (specifically the CDC's NHSN) to collect standardized, high-quality data for surveillance and quality improvement. Clinical Care Teams within LTCFs, particularly infection preventionists, are key users responsible for data entry and submission. Government Agencies have a significant role in setting the reporting requirements and overseeing the program. While other groups have a minor role, the IG's core purpose revolves around these three.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

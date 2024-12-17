@@ -1,36 +1,84 @@
 {
-  "rationale": "The DaVinci Data Exchange for Quality Measures (DEQM) Implementation Guide (IG) is focused on enabling the exchange of quality measure data and reporting in a standardized way using FHIR. Analyzing its core functionality:\n\n1.  **Data Exchange:** The IG defines operations like `$submit-data` and `$collect-data` to facilitate the exchange of data of interest between data producers (e.g., providers) and consumers (e.g., payers). These operations are central to the IG's purpose.\n2.  **Measure Reporting:** The IG defines profiles for Individual, Summary, and Subject List MeasureReports. These profiles specify how to structure MeasureReport resources for different reporting scenarios, including defining required elements and extensions.\n3.  **Gaps in Care Reporting:** The IG introduces the `$care-gaps` operation and associated profiles (e.g., `DEQM Gaps In Care Bundle Profile`, `DEQM Gaps In Care Composition Profile`) to identify and report gaps in care based on quality measures. This functionality allows for proactive identification of care needs.\n4.  **Profiles and Extensions:** The IG defines several profiles and extensions to tailor FHIR resources for quality measure data exchange and reporting. These include profiles for `MeasureReport`, `Bundle`, `Composition`, `DetectedIssue`, and extensions like `measureScoring`, `reportingVendor`, and `gapStatus`.\n5.  **Operations:** The IG defines several operations in addition to those mentioned above, including `$evaluate` and `$bulk-submit-data`. These operations support various aspects of quality measure evaluation and data exchange.\n6.  **Terminology:** The IG references specific code systems and value sets relevant to quality measurement, ensuring consistent use of terminology across implementations.\n7.  **Examples:** The IG provides numerous examples demonstrating how to use the defined operations, profiles, and extensions in various scenarios, such as medication reconciliation and colorectal cancer screening.\n\nBased on this analysis, the DEQM IG primarily focuses on defining data models (profiles and extensions), data exchange mechanisms (operations), and reporting structures (MeasureReport types) to support quality measurement and improvement using FHIR.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.7,
-      "Administrative & Financial": 0.4,
-      "Infrastructure & Foundational": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.9,
-      "Data Modeling": 0.9,
-      "Workflow Support": 0.4,
-      "Security & Privacy": 0.25
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.7,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
-      "Administrative Organizations > Insurance Companies": 0.5,
-      "Administrative Organizations > Health Plans": 0.5,
-      "Standards Organizations > Standards Development Organizations": 0.4
+  "HL7 Standard": {
+    "summary": "The DaVinci DEQM IG is fundamentally based on FHIR, using it as the core standard for data exchange and representation. It does not utilize CDA, v2, or v3, focusing solely on FHIR's RESTful approach. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and its interaction with other FHIR-based IGs like US Core and QI-Core demonstrates a commitment to the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Data Exchange for Quality Measures (DEQM) Implementation Guide is explicitly designed for the US healthcare system, focusing on quality measurement and reporting within that context. It references US-specific programs and initiatives, indicating a strong national focus.",
+    "scores": {
+      "Universal Realm": 0,
+      "National": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The DaVinci DEQM Implementation Guide primarily focuses on standardizing the exchange of data for quality measurement and reporting, leveraging FHIR resources and operations. It emphasizes the use of MeasureReport profiles and defines specific workflows for data submission, collection, and gaps in care reporting. While it touches upon administrative aspects and clinical data, its core purpose revolves around quality measurement and reporting within a value-based care context.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.6,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Medications": 0.2,
+      "Payment & Financial": 0.4,
+      "Public Health": 0.2,
+      "Quality & Reporting": 1,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The Data Exchange for Quality Measures (DEQM) IG primarily focuses on defining data exchange patterns for quality measurement using FHIR resources and operations. It heavily relies on Data Profiles to structure MeasureReports and related data, and utilizes REST APIs and Services (custom operations) for data submission and retrieval. Terminology plays a significant role in defining code systems and value sets for quality measures. Decision Support is present in the form of the $care-gaps operation and related profiles, but it's not the central focus. Messaging, Documents, Forms & UI, and Subscriptions are not significantly utilized in this version of the IG.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0.6,
+      "Documents": 0.2,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.8,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The DaVinci DEQM IG primarily focuses on standardizing the exchange of quality measure data between EHR systems and Payer systems. EHR systems are expected to generate and submit quality measure reports, while Payer systems are expected to receive and process them. Clinical Decision Support systems play a key role in identifying care gaps. Other systems have more limited or indirect involvement.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The DaVinci DEQM IG primarily focuses on streamlining quality measure data exchange between healthcare providers and payers to support value-based care initiatives. Clinical Care Teams and Payers are the core users, driving the design and specifications. Healthcare Administrators and Government Agencies have significant influence due to their roles in quality reporting and oversight. Public Health Agencies and Research Organizations have specific needs related to population health and quality improvement research, respectively. Patients and Caregivers have minimal direct involvement in this IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 1,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

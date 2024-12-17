@@ -1,35 +1,84 @@
 {
-  "rationale": "The \"cqf-recommendations\" FHIR Implementation Guide (IG) defines a framework for creating and sharing Clinical Practice Guidelines (CPGs) using FHIR. It focuses on representing clinical knowledge in a computable format, enabling the development of decision support systems that can be integrated into clinical workflows. \n\n\nThe IG defines several key artifacts:\n\n1.  **Profiles:** It defines numerous profiles on FHIR resources like PlanDefinition, ActivityDefinition, and Task to represent various aspects of CPGs, such as recommendations, strategies, pathways, and activities. These profiles specify how these resources should be used to represent CPG content, including eligibility criteria, enrollment processes, and clinical actions.\n2.  **Extensions:** It defines extensions to add metadata and semantics specific to CPGs, such as the strength of a recommendation, the quality of evidence, and the rationale behind a recommendation.\n3.  **Code Systems and Value Sets:** It defines code systems and value sets to represent concepts specific to CPGs, such as activity types, case feature types, and recommendation directions.\n4.  **Operations:** It defines operations like `PlanDefinition/$apply` to support the application of CPGs to specific patient data, generating care plans or recommendations.\n5.  **Activity Flow:** It defines a detailed activity flow that describes how activities within a CPG transition through different phases (proposal, plan, order, event) using FHIR's request and event patterns. This flow specifies the valid state transitions for various request and event resources.\n6.  **Conceptual Knowledge Architecture:** It outlines a conceptual architecture that separates concerns into Case, Plan, and Workflow, providing a framework for representing patient state, clinical decision-making, and care delivery processes.\n7.  **Knowledge Representation:** It describes different levels of knowledge representation, from narrative guidelines to computable artifacts, and defines tiers of functionality (data, logic, user interface).\n8.  **Agile CPG Development:** It advocates for an agile approach to CPG development, emphasizing cross-functional teams, iterative development, and the use of real-world data.\n\n\nThe IG does not focus on a specific clinical specialty but provides a general framework applicable to various clinical domains. It primarily targets technical implementers, such as EHR vendors and system integrators, as well as healthcare provider organizations and standards organizations involved in developing and implementing CPGs. The IG is based on FHIR R4 and is intended for international use, although some examples may be specific to the United States.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.7,
-      "Infrastructure & Foundational": 0.5
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Knowledge Representation": 0.9,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.7,
-      "Data Exchange": 0.4
-    },
-    "Geographic Scope": {
-      "Universal Realm": 0.8,
-      "National Jurisdictions > United States": 0.3
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.7,
-      "Technical Implementers > Health IT Development Teams": 0.7,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
-      "Standards Organizations > Standards Development Organizations": 0.6,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.5
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR, using it as the core framework for representing and exchanging clinical practice guidelines. It heavily relies on FHIR resources, operations, and the Clinical Quality Language (CQL). While it acknowledges other HL7 standards, it doesn't directly integrate or depend on them. Cross-paradigm integration is present in the use of CQL with FHIR, but not with other HL7 standards like v2, v3, or CDA.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on the representation and execution of clinical practice guidelines in a computable format. It leverages core FHIR resources and operations, defines specific profiles and extensions, and uses CQL for expressing clinical logic. While it mentions applicability to any jurisdiction using clinical practice guidelines and references some US initiatives, it does not explicitly state a primary focus on any specific country or region. Therefore, it is best classified as a Universal Realm guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on representing and executing clinical practice guidelines in a computable format. It leverages FHIR resources like PlanDefinition, ActivityDefinition, and Library, along with CQL, to define guideline logic, recommendations, and workflows. The primary goal is to support evidence-based decision-making, quality measurement, and care coordination through standardized, machine-readable guidelines. Therefore, Clinical Knowledge is the core domain, with strong emphasis on Care Planning and Clinical Data to support the guideline execution. Workflow is also important for process coordination, and Quality & Reporting is supported through the integration with quality measures.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.8,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Medications": 0.4,
+      "Payment & Financial": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.6,
+      "Research": 0.6,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This IG focuses on representing and executing clinical practice guidelines in a computable format. It heavily relies on Data Profiles to define the structure of guidelines, recommendations, and related artifacts. Decision Support is a core component, utilizing CQL within Libraries to define eligibility criteria and decision logic. Terminology is important for defining controlled vocabularies used throughout the IG. REST APIs are used, particularly through operations like `$apply` on `PlanDefinition` and `ActivityDefinition`, and `$evaluate` on `Library`. While Forms & UI are present through `Questionnaire`, they are not central to the IG's core purpose. Messaging and Documents are not prominent in this IG. Subscriptions are not explicitly mentioned and are likely not a significant part of the implementation.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 1,
+      "Documents": 0,
+      "Forms & UI": 0.4,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.6,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on computable clinical practice guidelines, primarily impacting EHRs and Clinical Decision Support systems. EHRs will need to integrate the guideline execution and data collection aspects, while CDS systems will be crucial for implementing the logic and recommendations. PHR systems have a minimal role, mainly in potentially displaying patient-specific care plans derived from the guidelines. Payer systems might use the quality measures defined in the IG, giving them a limited role. Pharmacy, Lab, and Imaging systems have minimal direct involvement. Public Health systems could leverage the guidelines for population-level analysis and reporting, resulting in a limited role. Research platforms will be important for developing and evaluating the guidelines, as well as for generating evidence based on their implementation.",
+    "scores": {
+      "EHR Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.4,
+      "Clinical Decision Support": 1,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on creating computable clinical practice guidelines. It primarily targets **Clinical Care Teams** by providing a standardized way to integrate evidence-based recommendations into their workflows. **Guideline developers and informaticians** are also core users, as they are responsible for creating and maintaining these computable guidelines. **Research Organizations** and **Public Health Agencies** are key users, leveraging the IG for quality measurement, research, and population health management. **Payers** and **Government Agencies** have a defined but limited role, primarily in the context of quality reporting and regulation. **Healthcare Administrators** have minimal involvement, as the IG focuses on the technical representation of guidelines rather than organizational implementation. **Patients and Caregivers** are not directly involved in the IG's design or implementation.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

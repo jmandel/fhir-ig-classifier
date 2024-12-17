@@ -1,34 +1,84 @@
 {
-  "rationale": "The ITI PMIR (Patient Master Identity Registry) Implementation Guide defines a system for managing patient identities using FHIR. Its primary focus is on establishing a \"golden record\" or \"Patient Master Identity\" for each patient within a specific domain. This IG specifies two core transactions: \"Mobile Patient Identity Feed [ITI-93]\" and \"Subscribe to Patient Updates [ITI-94]\".\n\nITI-93 defines how patient identity information is created, updated, deleted, and merged. It uses FHIR messages containing a MessageHeader and a Bundle of Patient resources to communicate these changes. The Bundle includes details on the operation performed (create, update, delete, merge) and the affected Patient resources. The merge operation is particularly important for patient safety, as it allows for the consolidation of duplicate patient records.\n\nITI-94 defines a subscription mechanism, allowing systems to receive updates when patient identities change. It uses the FHIR Subscription resource to specify the criteria for updates, such as subscribing to all Patient updates or only updates related to a specific Patient or Organization. The Patient Identity Registry is responsible for managing these subscriptions and sending out notifications via ITI-93 when relevant changes occur.\n\nPMIR also leverages the PIXm and PDQm profiles for querying patient information. The Patient Identity Registry actor is required to support both PIXm and PDQm, allowing other systems to search for patients based on identifiers or demographics. This ensures that systems can locate the correct patient master identity even if they only have partial information.\n\nIn essence, PMIR provides a framework for maintaining a consistent and accurate view of patient identities across a healthcare ecosystem. It defines the data model for patient identities, the mechanisms for exchanging this data, and a subscription model for keeping systems up-to-date. The focus is on FHIR as the underlying standard, and it is designed for environments where a single, authoritative patient identity is desired.",
-  "scores": {
-    "Functional Domain": {
-      "Infrastructure & Foundational": 0.95,
-      "Clinical Care > General Clinical Care": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.9,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.3
-    },
-    "Geographic Scope": {
-      "Universal Realm": 0.9
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Technical Implementers > System Integrators": 0.7,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.6,
-      "Public Health Organizations > Public Health Agencies": 0.3,
-      "Public Health Organizations > Registry Systems": 0.3
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (ITI.PMIR) is heavily reliant on FHIR for its core functionality, using FHIR resources, messaging, and operations to manage patient identities. It does not use CDA, v2, or v3, focusing solely on a FHIR-based approach. While it integrates with other IHE profiles that might use different standards, the PMIR profile itself is strictly FHIR. It acknowledges other IHE profiles, which implies some level of cross-paradigm awareness, but the core implementation is FHIR-only.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The ITI PMIR Implementation Guide focuses on creating a universal standard for managing patient identities, particularly in LMIC and OECD settings. While it mentions these specific contexts, it does not tailor the guide to any specific country or region's regulations or requirements. Therefore, it is best classified as a Universal Realm guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide focuses on establishing a Patient Master Identity Registry (PMIR) to manage and share a single \"golden record\" patient identity across disparate systems. It primarily addresses administrative aspects of patient identity management, including creation, updates, deprecation, and merging of patient identities. While it touches upon identity and security through audit events and authentication requirements, its core purpose revolves around patient identity data rather than clinical data or workflows. It has limited scope in other domains.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This Implementation Guide (IG) defines a FHIR-based Patient Master Identity Registry (PMIR). It heavily relies on **Data Profiles** to define the structure of patient data and **Messaging** to communicate patient identity updates. **Subscriptions** are used to notify consumers of changes. **REST APIs** are used for querying patient data (via PIXm and PDQm). **Terminology** plays a supporting role, primarily using standard FHIR value sets. **Services** are used in the form of defined transactions (ITI-93, ITI-94). **Audit Events** are defined for security and tracking, which can be considered a form of specialized messaging. **Documents** and **Forms & UI** are not directly addressed in this IG. **Decision Support** is not a focus.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0.8,
+      "REST APIs": 0.6,
+      "Services": 0.6,
+      "Subscriptions": 0.8,
+      "Terminology": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI PMIR Implementation Guide focuses on establishing a centralized patient identity registry. EHR systems are central to this, acting as both sources and consumers of patient identity data.  Clinical Decision Support systems will rely on accurate patient identification. Public Health Systems, especially in LMIC/OECD contexts, will benefit from a unified patient view for population health management. Payer and PHR systems have minimal involvement, while Pharmacy, Lab, and Imaging systems have a defined but limited role in consuming patient identity information. Research platforms may utilize the registry for de-identified data, but their role is minimal in the core functionality.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0.4,
+      "Public Health Systems": 0.8,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The ITI.PMIR Implementation Guide primarily focuses on establishing a centralized patient identity registry to manage and share a 'golden record' patient identity. This directly benefits systems that need to consume or contribute to this registry, impacting clinical care teams by providing a consistent patient view. Public health agencies and government bodies also have a stake in ensuring accurate patient data for population health and regulatory purposes. While patients benefit indirectly, they are not the primary drivers of the IG's design.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

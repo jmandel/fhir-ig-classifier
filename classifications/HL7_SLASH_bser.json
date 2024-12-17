@@ -1,31 +1,84 @@
 {
-  "rationale": "The Bidirectional Services eReferral (BSeR) FHIR Implementation Guide (IG) is focused on enabling the electronic exchange of service referrals between healthcare providers and community-based organizations (CBOs). The core functionality of this IG revolves around defining FHIR profiles and specifying transaction patterns for referral requests and feedback. \n\nThe IG defines several custom FHIR profiles based on FHIR R4, including profiles for ReferralTask, ReferralServiceRequest, ReferralFeedbackComposition, and various supporting information resources. These profiles constrain and extend base FHIR resources to meet the specific needs of bidirectional service referrals. The IG also defines batch query bundles for retrieving use-case-specific supporting information, demonstrating a focus on data modeling for referral content.\n\nWhile the IG outlines transaction patterns and transport options (push and notify/pull), the primary emphasis is on defining the structure and content of the referral data rather than the exchange mechanisms themselves. The IG covers six specific use cases related to chronic health conditions, indicating a focus on general clinical care and potentially some specialty care areas like diabetes prevention and arthritis management. The specified actors and interaction diagrams suggest a strong emphasis on workflow support, particularly for referral initiation, acceptance, and feedback.\n\nThe IG is a U.S. Realm specification, developed under the HL7 Public Health Work Group with sponsorship from Patient Care and Clinical Quality Information work groups. It is intended for use by EHR vendors, CBOs, HIEs, and other technical implementers involved in referral exchanges. The IG also acknowledges the IHE 360X and HL7 Gravity projects, indicating collaboration and alignment with broader interoperability efforts. The inclusion of batch query bundles and the ability to adapt to additional use cases demonstrate a focus on extensibility and reuse.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.7,
-      "Clinical Care > Specialty Care": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.7,
-      "Data Exchange": 0.4
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.6,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
-      "Public Health Organizations > Public Health Agencies": 0.3
+  "HL7 Standard": {
+    "summary": "The Bidirectional Services eReferral (BSeR) Implementation Guide is fundamentally based on FHIR, using it as the core standard for defining resources, operations, and interactions. It leverages FHIR's RESTful capabilities and profiling mechanisms to create a standardized approach for exchanging referral information. While it acknowledges other HL7 standards, they are not central to its design or implementation.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Bidirectional Services eReferral (BSeR) Implementation Guide is explicitly stated as a U.S. Realm Specification and is based on reporting specifications in U.S. jurisdictions. It builds upon US Core and references other U.S.-centric standards. Therefore, it is classified as a National Implementation Guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The BSeR Implementation Guide primarily focuses on streamlining the referral process between healthcare providers and community-based organizations, emphasizing workflow management and care coordination. It leverages US Core profiles and defines specific profiles for referral requests and feedback, supporting both push and pull exchange paradigms. While it touches upon clinical data exchange, its core purpose is to facilitate a closed-loop referral system, particularly for chronic health conditions.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.8,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The BSeR IG primarily focuses on defining data profiles and using messaging and REST APIs for referral exchange. It leverages terminology for coding and uses Task resources for workflow management, making it a document and messaging-centric guide with a strong emphasis on data modeling and RESTful interactions. Decision support is not a core focus, and while forms are mentioned, they are not central to the IG's approach.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0.8,
+      "Forms & UI": 0.2,
+      "Messaging": 0.8,
+      "REST APIs": 0.8,
+      "Services": 0.4,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The Bidirectional Services eReferral (BSeR) IG primarily targets systems involved in the referral process, particularly EHRs used by referral initiators and recipients.  It also heavily involves systems that facilitate the exchange of health information, such as HIEs and HINs, which may act as intermediaries. Clinical Decision Support systems are important for guiding referral decisions. PHR systems have a limited role in viewing referral information, while Payer, Pharmacy, Lab, Imaging, and Research systems have minimal to no direct involvement.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0.2,
+      "Imaging Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Bidirectional Services eReferral (BSeR) IG primarily focuses on facilitating communication and coordination between healthcare providers and community-based organizations (CBOs) for chronic condition management. Clinical Care Teams are the core users, driving the design with their need for a closed-loop referral process. Healthcare Administrators and Public Health Agencies have significant influence due to their roles in managing referrals and monitoring population health, respectively. Payers and Research Organizations have specific needs related to reimbursement and data analysis. Patients and Caregivers have a limited role, primarily as the subjects of the referrals. Government Agencies have minimal involvement, mainly concerning regulatory compliance.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.2
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

@@ -1,35 +1,84 @@
 {
-  "rationale": "The LIVD (LOINC for In Vitro Diagnostics) Implementation Guide primarily focuses on defining a standardized format for publishing and exchanging mappings between vendor-specific IVD test codes and LOINC codes. It also includes mappings for coded result values to LOINC or SNOMED CT codes. \n\n**Functional Domain:** The IG's core function is to facilitate the accurate mapping of IVD test codes to LOINC codes, which are used in clinical care for identifying laboratory tests. While it touches upon administrative aspects through streamlining the mapping process, its primary focus is on the clinical domain, specifically laboratory medicine. It does not directly address public health or research-specific concerns, although accurate LOINC mapping can indirectly benefit these areas.\n\n**HL7 Standard:** The IG explicitly states it is based on the FHIR standard, specifically FHIR R4. It defines FHIR profiles for various resources like Bundle, Composition, DeviceDefinition, ObservationDefinition, ConceptMap, CodeSystem, and ValueSet to represent the LIVD catalog and its components.\n\n**Scope/Purpose:** The IG's main purpose is data modeling, as it defines the structure and content of the LIVD catalog, including how IVD test codes, LOINC codes, and coded result values are represented and related. It also has a data exchange aspect, as it specifies a format for publishing and exchanging this information, although it does not define specific APIs or protocols. The IG touches upon knowledge representation by including LOINC and SNOMED CT codes and their properties, but its primary focus is not on representing clinical knowledge or guidelines.\n\n**Geographic Scope:** The IG acknowledges contributions from various international organizations and individuals, suggesting a broader scope. However, it specifically mentions the involvement of US agencies like the FDA, CDC, NLM, CMS, and ONC, indicating a strong focus on the US context. It also references the IICC, an international consortium, but the emphasis on US regulations and standards suggests a national scope with potential for international adaptation.\n\n**Stakeholders:** The IG is primarily targeted at technical implementers, such as EHR vendors and device manufacturers, who need to implement the LIVD format for publishing and consuming LOINC mappings. It is also relevant to healthcare provider organizations, particularly laboratory systems teams, who will use the LIVD catalog to configure their LIS and map IVD test codes to LOINC. Standards organizations, like HL7, are also stakeholders as they are involved in the development and maintenance of the IG. While the IG does not directly address patient-facing stakeholders, accurate LOINC mapping can indirectly benefit patients by improving the accuracy and interoperability of their laboratory results.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care > Medication Management": 0.3,
-      "Clinical Care > General Clinical Care": 0.7,
-      "Clinical Care > Specialty Care > Laboratory": 0.9
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.7,
-      "Knowledge Representation": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7,
-      "Universal Realm": 0.3
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Technical Implementers > Device Manufacturers": 0.8,
-      "Healthcare Provider Organizations > Laboratory Systems Teams": 0.9,
-      "Standards Organizations": 0.6,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.3
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of In Vitro Diagnostic (IVD) test codes and result values using FHIR R4, LOINC, and SNOMED CT. It defines a publication format for IVD manufacturers to share suggested mappings, facilitating consistent adoption by laboratories. The IG heavily relies on FHIR resources and profiles, with no mention or use of HL7 v2, v3, or CDA.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide focuses on standardizing IVD test and result value mappings using LOINC and SNOMED CT, primarily targeting the U.S. (FDA, ONC, CDC) but also acknowledging international relevance. While it mentions an `ext-region` extension, it doesn't specify any particular region other than the U.S. Therefore, it's considered a national guide with a strong focus on the U.S.",
+    "scores": {
+      "Universal Realm": 0.4,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of In Vitro Diagnostic (IVD) test codes and result values using LOINC and SNOMED CT. It defines a publication format for IVD manufacturers to share suggested mappings, primarily impacting the diagnostics domain. While it touches upon administrative aspects through device and organization identification, its core purpose is to improve the consistency and interoperability of diagnostic data.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 1,
+      "Identity & Security": 0.2,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This FHIR Implementation Guide focuses on defining a standardized format for publishing IVD test and result value mappings to LOINC and SNOMED CT using FHIR R4. It heavily relies on Data Profiles and Terminology to achieve its goal. While REST APIs are mentioned as a potential publication method, they are not the primary focus. Other aspects like Decision Support, Documents, Forms & UI, Messaging, Services, and Subscriptions are not utilized in this IG.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0.4,
+      "Services": 0,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the mapping of In Vitro Diagnostic (IVD) test codes and result values to LOINC and SNOMED CT. Therefore, Lab Systems are the primary implementers, with EHRs and Clinical Decision Support systems playing important supporting roles. Other systems have limited or no involvement.",
+    "scores": {
+      "EHR Systems": 0.6,
+      "PHR Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 1,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the mapping of In Vitro Diagnostic (IVD) test codes and result values to LOINC and SNOMED CT. Therefore, the primary users are IVD manufacturers who create and publish these mappings and laboratory personnel who consume them to configure their Laboratory Information Systems (LIS). Other stakeholders, like LIS vendors and terminology providers, also play significant roles. Clinical care teams benefit indirectly from improved data standardization, while public health agencies and research organizations can leverage the standardized data for population health monitoring and research. Payers and government agencies have a less direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

@@ -1,39 +1,84 @@
 {
-  "rationale": "The eLTSS FHIR Implementation Guide primarily focuses on defining a standardized approach to representing and exchanging electronic Long-Term Services and Supports (eLTSS) data using FHIR. The core of this IG is the specification of FHIR profiles, extensions, and value sets to capture essential eLTSS data elements within a CarePlan. \n\nSpecifically, the IG defines new profiles for key FHIR resources like CarePlan, Condition, Goal, Observation, ServiceRequest, Claim, Contract, EpisodeOfCare, Location, Questionnaire, QuestionnaireResponse, and RiskAssessment. These profiles constrain and extend the base FHIR resources to align with the eLTSS data model, ensuring consistent representation of concepts like assessed needs, goals, strengths, preferences, services, providers, and signatures. \n\nAdditionally, the IG introduces new extensions, such as `resource-pertainstogoal`, to establish relationships between different resources and link activities to specific goals. It also defines new value sets for concepts like observation codes, condition categories, and service unit types, providing standardized terminology for eLTSS data. \n\nFurthermore, the IG provides detailed mapping guidance between the eLTSS data elements and the corresponding FHIR elements within the defined profiles. This mapping ensures interoperability and facilitates the exchange of eLTSS data between different systems. \n\nWhile the IG references other IGs like Gravity SDOH and MCC eCare Plan for supplementary guidance, its primary focus is on defining the core data model and exchange mechanisms for eLTSS data using FHIR. It also includes examples and testing guidance to aid implementers in adopting the specified profiles and extensions.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.9,
-      "Clinical Care > General Clinical Care > Care Plans": 0.9,
-      "Clinical Care > General Clinical Care > Patient Engagement": 0.4,
-      "Clinical Care > General Clinical Care > Medication Management": 0.3,
-      "Administrative & Financial > Insurance and Billing": 0.3,
-      "Administrative & Financial > Prior Authorization": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.7,
-      "Workflow Support": 0.4,
-      "Security & Privacy": 0.25
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.8
-    },
-    "Stakeholders": {
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
-      "Technical Implementers > EHR Vendors": 0.7,
-      "Technical Implementers > Health IT Development Teams": 0.6,
-      "Public Health Organizations > Public Health Agencies": 0.3,
-      "Administrative Organizations > Insurance Companies": 0.3,
-      "Administrative Organizations > Health Plans": 0.3
+  "HL7 Standard": {
+    "summary": "The eLTSS IG is fundamentally based on FHIR, using it as the core standard for data representation and exchange. It heavily relies on US Core profiles, which are also FHIR-based. While it acknowledges other HL7 standards, it does not directly utilize or integrate with CDA, v2, or v3. Cross-paradigm integration is minimal, as the focus is primarily within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The eLTSS Implementation Guide is built upon US Core profiles and mentions alignment with US-based initiatives like the Gravity SDOH IG, Da Vinci IGs, and the MCC eCare Plan IG. It also references US agencies like CMS and ACL, and state Medicaid agencies. This strong focus on US-specific standards, programs, and agencies indicates a national scope within the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The eLTSS IG primarily focuses on enabling the creation, sharing, and aggregation of electronic Long-Term Services and Supports (eLTSS) care plans. It leverages FHIR R4 and US Core profiles to define a structured format for representing patient-centered care plans, including assessed needs, goals, services, and other relevant information. While it touches upon administrative, financial, and workflow aspects, its core purpose is to facilitate care planning and coordination in the long-term care domain.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 1,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Medications": 0,
+      "Payment & Financial": 0.4,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.4,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The eLTSS IG primarily focuses on defining data models for exchanging long-term care plans. It heavily relies on Data Profiles and REST APIs for data exchange, with a custom operation for efficient data retrieval. Terminology is important for consistent data representation, and some elements of Services are used through the custom operation. Documents, Forms & UI, Messaging, Decision Support, and Subscriptions are not central to this IG's approach.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0.2,
+      "Messaging": 0,
+      "REST APIs": 0.8,
+      "Services": 0.6,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The eLTSS IG is primarily focused on enabling the creation, sharing, and aggregation of electronic Long-Term Services and Supports (eLTSS) care plans. EHR systems are central to this process, as they will be used to create and manage these plans. Payer systems are also key, as they will need to process claims related to eLTSS services. Case management systems, often used by state agencies, will play an important role in coordinating care and thus require extensive integration. PHR systems will be important for patient engagement, allowing them to access and potentially contribute to their care plans. Public health systems may utilize aggregated eLTSS data for population health monitoring, and clinical decision support systems can leverage eLTSS data to provide tailored guidance. Lab and imaging systems have minimal involvement, while research platforms might use eLTSS data for specific studies, but are not a primary focus.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.8,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0.2,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.6,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The eLTSS IG primarily focuses on enabling the exchange of long-term care plans. This directly impacts Clinical Care Teams and Patients/Caregivers.  Payers and Government Agencies have a significant role due to the involvement of Medicaid and long-term care programs. Public Health and Research Organizations have a lesser, but still defined role in population health monitoring and potential research using aggregated data. Healthcare Administrators have a minimal role, primarily related to system implementation.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 1,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

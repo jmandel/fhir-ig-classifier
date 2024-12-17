@@ -1,35 +1,84 @@
 {
-  "rationale": "The ITI.PIXm Implementation Guide defines a method for cross-referencing patient identifiers in a mobile environment. It specifies two FHIR-based transactions: ITI-83 (Mobile Patient Identifier Cross-reference Query) and ITI-104 (Patient Identity Feed FHIR). \n\nITI-83 defines a FHIR operation, $ihe-pix, for querying a Patient Identifier Cross-reference Manager. This operation allows a consumer to provide a patient identifier from one domain and receive corresponding identifiers from other domains. The request and response are defined using FHIR Parameters resources. The IG specifies the structure of these parameters, including required elements like sourceIdentifier and optional elements like targetSystem. \n\nITI-104 defines a transaction for feeding patient identity information to the Patient Identifier Cross-reference Manager. It uses FHIR's conditional update and delete operations on the Patient resource. The IG defines a profile, PIXm Patient, that specifies the minimum set of elements that the Manager must support. It also defines how to handle adding, revising, resolving duplicates, and removing patient records. \n\nThe IG also includes security considerations, requiring the use of ATNA for audit logging and optionally IUA for authorization. It defines specific AuditEvent profiles for both ITI-83 and ITI-104, detailing the information that should be captured in audit logs. \n\nIn essence, this IG focuses on defining the mechanisms for exchanging and managing patient identifiers in a mobile environment using FHIR. It specifies the data models for requests and responses, the operations to be used, and the security requirements for these interactions. It does not define the internal logic of the Patient Identifier Cross-reference Manager but focuses on the interface it exposes.",
-  "scores": {
-    "Functional Domain": {
-      "Infrastructure & Foundational > Document and Message Exchange": 0.95,
-      "Clinical Care > General Clinical Care > Patient Engagement": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.9,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.3
-    },
-    "Geographic Scope": {
-      "Universal Realm": 0.9
-    },
-    "Stakeholders": {
-      "Technical Implementers > Health IT Development Teams": 0.9,
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Technical Implementers > System Integrators": 0.8,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.7,
-      "Standards Organizations > Standards Development Organizations": 0.6,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
-      "Public Health Organizations > Registry Systems": 0.3
+  "HL7 Standard": {
+    "summary": "The ITI PIXm Implementation Guide primarily leverages FHIR for its RESTful API and resource definitions, making it heavily dependent on the FHIR standard. It does not use CDA or v2, and while it acknowledges v3 through its relationship with PIXV3, it doesn't directly implement v3 concepts. Cross-paradigm integration is present but not central, as it bridges FHIR with other IHE profiles that may use different HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The IHE ITI Patient Identifier Cross-referencing for Mobile (PIXm) profile is designed for international use without jurisdiction-specific constraints. It focuses on providing a RESTful interface for querying and managing patient identifiers, particularly for mobile and lightweight applications. It is not tied to any specific country or region.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The IHE ITI PIXm Implementation Guide primarily focuses on enabling patient identifier cross-referencing for mobile and lightweight applications. It leverages FHIR's RESTful capabilities to define a custom operation for querying a central manager, facilitating the resolution of patient identifiers across different healthcare systems. While it touches upon administrative aspects through patient identity management and updates, its core purpose revolves around establishing a standardized mechanism for identifier translation, thus impacting workflow and data exchange related to patient identity.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The ITI PIXm IG primarily focuses on defining a RESTful API for patient identifier cross-referencing, utilizing a custom FHIR operation (`$ihe-pix`) and leveraging Data Profiles for defining the structure of requests and responses. It also defines a RESTful Patient Identity Feed transaction (ITI-104). Terminology plays a supporting role, mainly relying on standard FHIR and IHE terminologies. While not explicitly using Messaging or Subscriptions, it acknowledges the potential use of other IHE profiles (like PIX, PIXV3, or PMIR) for patient identity feed and update notifications, which might involve these patterns. Decision Support, Documents, and Forms & UI are not central to this IG's scope.",
+    "scores": {
+      "Data Profiles": 0.8,
+      "Decision Support": 0,
+      "Documents": 0,
+      "Forms & UI": 0,
+      "Messaging": 0.2,
+      "REST APIs": 1,
+      "Services": 0.8,
+      "Subscriptions": 0.2,
+      "Terminology": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI PIXm Implementation Guide focuses on patient identifier cross-referencing, primarily for mobile and lightweight applications. EHR systems are central to this process, as they often manage patient records and need to resolve identifiers. Clinical Decision Support systems also play a key role, as they rely on accurate patient identification for providing relevant guidance. Lab and Imaging systems are important as they generate data associated with specific patients, requiring identifier mapping. Pharmacy systems have a moderate role, while PHR, Payer, Public Health, and Research systems have minimal involvement in the core functionality of PIXm.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "Lab Systems": 0.6,
+      "Imaging Systems": 0.6,
+      "Public Health Systems": 0.2,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The ITI PIXm Implementation Guide primarily serves **Clinical Care Teams** and **Healthcare Administrators** by enabling efficient patient identifier cross-referencing, especially for mobile and lightweight applications. While **Patients and Caregivers** benefit indirectly from improved data accuracy and care coordination, their role is minimal. **Payers** and **Public Health Agencies** might have a limited interest in the standardized data exchange facilitated by PIXm. **Research Organizations** and **Government Agencies** are not the primary focus of this IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0,
+      "Government Agencies": 0
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

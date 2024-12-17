@@ -1,36 +1,84 @@
 {
-  "rationale": "The Structured Data Capture (SDC) Implementation Guide primarily focuses on defining standards and specifications for capturing structured data within electronic health records (EHRs), particularly through the use of FHIR Questionnaires. \n\n**Key Artifacts and Specifications:**\n\n1.  **Profiles:** The IG defines numerous profiles on core FHIR resources like Questionnaire, QuestionnaireResponse, ValueSet, and CodeSystem. These profiles constrain and extend the base resources to meet SDC requirements, such as specifying how data elements are mapped, how forms are rendered, and how data extraction is performed.\n2.  **Extensions:** A significant portion of the IG is dedicated to defining custom FHIR extensions. These extensions cover various aspects of form behavior, including:\n    *   **Form population:** `itemPopulationContext`, `initialExpression`, `candidateExpression`\n    *   **Form rendering:** `itemControl`, `choiceOrientation`, `rendering-style`, `itemMedia`, `choiceColumn`\n    *   **Form behavior:** `enableWhenExpression`, `answerExpression`, `calculatedExpression`, `entryMode`\n    *   **Data extraction:** `itemExtractionContext`, `definitionExtract`, `definitionExtractValue`, `templateExtract`, `observationExtract`\n3.  **Operations:** The IG defines several custom operations to support SDC workflows, including:\n    *   `$populate`: Pre-populates a QuestionnaireResponse based on a Questionnaire and available data.\n    *   `$assemble`: Assembles a modular Questionnaire into a single, usable form.\n    *   `$extract`: Extracts data from a QuestionnaireResponse into other FHIR resources.\n    *   `$next-question`: Supports adaptive questionnaires by determining the next question to display based on previous answers.\n4.  **Search Parameters:** Custom search parameters are defined to enable efficient searching and retrieval of SDC-related resources.\n5.  **Capability Statements:** The IG includes capability statements for various SDC actors (e.g., Form Filler, Form Manager, Form Receiver), outlining the expected capabilities of each role.\n\n**Focus:**\n\nThe SDC IG is heavily focused on data modeling, defining the structure and constraints of FHIR resources used for structured data capture. It also addresses data exchange through the defined operations and capability statements. While it touches upon workflow support and security/privacy, these are not its primary focus. The IG is designed to be used internationally, although some examples and value sets may reference specific national jurisdictions.",
-  "scores": {
-    "Functional Domain": {
-      "Infrastructure & Foundational": 0.9,
-      "Clinical Care > General Clinical Care": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Data Exchange": 0.6,
-      "Workflow Support": 0.3,
-      "Security & Privacy": 0.25
-    },
-    "Geographic Scope": {
-      "Universal Realm": 0.8,
-      "National Jurisdictions > United States": 0.3
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Technical Implementers > Health IT Development Teams": 0.7,
-      "Standards Organizations > Standards Development Organizations": 0.6,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.4,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
-      "Public Health Organizations > Research Platforms": 0.25
+  "HL7 Standard": {
+    "summary": "The Structured Data Capture (SDC) Implementation Guide is fundamentally built upon the FHIR standard, utilizing its resources and operations as its core foundation. It does not reference or utilize CDA, v2, or v3 directly. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and its use of standard terminologies like LOINC and SNOMED CT demonstrate a commitment to interoperability within the broader HL7 ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The SDC Implementation Guide is designed for international use without jurisdiction-specific constraints, focusing on standardizing the capture, representation, and exchange of structured data within electronic health records (EHRs) and other health IT systems. Although it mentions US initiatives, particularly ONC's Structured Data Capture project, the guide itself does not specify a particular national or regional scope, and its technical foundation and implementation approach are based on universally applicable FHIR resources and specifications.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The SDC IG primarily focuses on defining a standardized way to capture and extract clinical data using forms (Questionnaires). It leverages FHIR resources and defines extensions to control form behavior, population, and data extraction. While it touches upon administrative aspects through form management, its core is clinical data capture and the associated workflow. It has limited focus on other domains like payment, public health, or research, although it can be used in those contexts.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Medications": 0,
+      "Payment & Financial": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.2,
+      "Research": 0.4,
+      "Workflow": 0.8
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The SDC IG primarily focuses on defining and extending the Questionnaire and QuestionnaireResponse resources to enable structured data capture through forms. It heavily utilizes Data Profiles and Extensions to achieve this, along with custom Services (Operations) for form population, extraction, and assembly. Terminology plays a crucial role in coding questions and answers. While REST APIs are implicitly used for resource interactions, the IG's focus is more on the custom operations. Forms & UI aspects are addressed through rendering extensions, but detailed UI specifications are not the primary focus. Decision Support is present in the form of FHIRPath expressions for enabling logic and calculations, but it's not a core driver. Messaging and Documents are not central to the IG's purpose. Subscriptions are not mentioned.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0.6,
+      "Documents": 0,
+      "Forms & UI": 0.6,
+      "Messaging": 0,
+      "REST APIs": 0.4,
+      "Services": 0.8,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The SDC IG primarily targets systems involved in creating, managing, populating, completing, and extracting data from structured forms. EHR systems are central, as they will often be the primary interface for clinicians interacting with these forms. Clinical Decision Support systems will play a key role in interpreting and acting upon the structured data captured. Research Platforms will heavily utilize SDC for data collection in studies. Public Health Systems will leverage SDC for standardized data reporting. PHR systems may utilize SDC for patient-reported outcomes, but to a lesser extent than EHRs. Payer, Pharmacy, Lab, and Imaging systems have minimal direct involvement.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0,
+      "Imaging Systems": 0,
+      "Public Health Systems": 0.6,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The SDC IG primarily targets developers of health IT systems that handle forms, aiming to standardize data capture and exchange. Clinical Care Teams and Researchers benefit from the structured data, while Public Health Agencies can leverage it for surveillance. Patients indirectly benefit from improved data quality. Payers and Healthcare Administrators have minimal direct involvement. Government Agencies have a moderate interest in the standardization aspect.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

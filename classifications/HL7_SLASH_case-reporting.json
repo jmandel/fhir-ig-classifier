@@ -1,38 +1,84 @@
 {
-  "rationale": "The FHIR Implementation Guide \"case-reporting\" defines specifications for electronic case reporting (eCR), focusing on the exchange of initial case reports (eICRs) and reportability responses (RRs). \n\n**Functional Domain:** The IG primarily supports public health by enabling the reporting of reportable conditions from healthcare providers to public health agencies. It also touches upon clinical care by defining data elements relevant to patient care and clinical workflows, such as patient demographics, pregnancy status, and provider information. However, the core focus is on facilitating public health surveillance and response. The IG also defines data elements and workflows relevant to research, such as defining data elements to be collected for research purposes (e.g., clinical trials, registries). Finally, the IG defines data elements and workflows relevant to administrative and financial processes, such as defining data elements to be collected for insurance and billing purposes.\n\n**HL7 Standard:** The IG is based on the FHIR standard, specifically FHIR R4. It defines FHIR profiles and extensions for eICRs, RRs, and the electronic Reporting and Surveillance Distribution (eRSD) transaction. It also references US Core profiles. The change log indicates an update to FHIR R4.\n\n**Scope/Purpose:** The IG focuses on both data modeling and data exchange. It defines data models and profiles for eICRs and RRs, specifying the structure and content of these documents. It also defines the mechanisms for exchanging these documents, including FHIR messaging and RESTful transactions. The eRSD transaction supports the distribution of reporting guidance and parameters, including trigger code value sets and reporting rules. The IG also defines workflows and interactions between systems or actors, such as the process for determining reportability and routing eICRs to the appropriate public health agencies.\n\n**Geographic Scope:** The IG is primarily focused on the United States, as evidenced by the involvement of US organizations like the CDC, CSTE, and ASTHO. It references US-specific standards like USCDI and US Core. However, it also aims to support multi-jurisdictional reporting, suggesting a broader scope that could potentially be adapted for other national jurisdictions.\n\n**Stakeholders:** The IG is relevant to a wide range of stakeholders, including public health agencies, healthcare providers, EHR vendors, and standards development organizations. It is designed to facilitate communication and data exchange between these stakeholders to support public health surveillance and response.",
-  "scores": {
-    "Functional Domain": {
-      "Public Health": 0.9,
-      "Clinical Care > General Clinical Care": 0.4,
-      "Research": 0.3,
-      "Administrative & Financial": 0.25
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Exchange": 0.8,
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.4
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
-    },
-    "Stakeholders": {
-      "Public Health Organizations > Public Health Agencies": 0.9,
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
-      "Standards Organizations > Standards Development Organizations": 0.6,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
-      "Technical Implementers > Health IT Development Teams": 0.5,
-      "Public Health Organizations > Disease Surveillance Teams": 0.4,
-      "Administrative Organizations > Healthcare Administrators": 0.25
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on electronic case reporting (eCR) using FHIR. It heavily relies on FHIR for its core structure and operations, defining FHIR profiles, extensions, and transactions for eICR, RR, and eRSD. While it acknowledges CDA through its relationship with previous CDA-based IGs, it doesn't actively utilize CDA structures. The IG doesn't use v2 or v3 directly. It demonstrates a degree of cross-paradigm awareness by referencing the relationship to prior CDA work and aiming for future alignment with the US Public Health Library.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on electronic case reporting (eCR) within the United States. It defines FHIR-based transactions for the electronic Initial Case Report (eICR), the Reportability Response (RR), and the electronic Reporting and Surveillance Distribution (eRSD), covering all reportable conditions across all jurisdictions within the United States. It leverages US Core profiles and is designed for the US healthcare ecosystem.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on automating electronic case reporting (eCR) from Electronic Health Records (EHRs) to Public Health Agencies (PHAs). It defines FHIR-based transactions for the electronic Initial Case Report (eICR), the Reportability Response (RR), and the electronic Reporting and Surveillance Distribution (eRSD). The IG heavily emphasizes public health use cases, clinical data exchange for reporting, and workflow automation for reporting processes. It also incorporates elements of clinical knowledge for defining reporting rules and guidelines.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Medications": 0.4,
+      "Payment & Financial": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementation Approach": {
+    "summary": "This IG focuses on automating electronic case reporting (eCR) using FHIR. It heavily relies on Data Profiles to define the structure of eICR and RR documents, and Terminology to specify relevant code systems and value sets. REST APIs and Messaging are both supported for transport. The eRSD uses a constrained PlanDefinition, leveraging aspects of Decision Support to distribute reporting rules. Documents are central to the eICR and RR exchange.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0.6,
+      "Documents": 1,
+      "Forms & UI": 0,
+      "Messaging": 0.8,
+      "REST APIs": 0.8,
+      "Services": 0.2,
+      "Subscriptions": 0.4,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This Implementation Guide focuses on automating electronic case reporting (eCR) from EHRs to Public Health Agencies. Therefore, EHR and Public Health Systems are the primary implementers. Clinical Decision Support systems play a role in triggering and processing reports. Other systems have limited or no involvement.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "Lab Systems": 0.4,
+      "Imaging Systems": 0.2,
+      "Public Health Systems": 1,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on automating electronic case reporting (eCR) between healthcare providers and public health agencies. Therefore, Public Health Agencies are the core users, as the IG is designed to improve the timeliness, completeness, and accuracy of data they receive. Clinical Care Teams are also key users, as they are responsible for generating the eICR and integrating the RR into their workflows. Government Agencies have a significant influence, as they set reporting requirements and oversee public health programs. Healthcare Administrators play a role in implementing and managing the systems involved. Payers and Research Organizations have minimal involvement in the core functionality defined by this IG. Patients and Caregivers are indirectly impacted by improved public health surveillance but are not direct users of the IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

@@ -1,36 +1,84 @@
 {
-  "rationale": "The Da Vinci Documentation Templates and Rules (DTR) Implementation Guide (IG) primarily focuses on defining how payer documentation requirements can be represented using FHIR Questionnaires and how these requirements can be executed within a provider context. The IG leverages the Structured Data Capture (SDC) specification for defining the structure and behavior of Questionnaires, including features like adaptive forms. It also utilizes Clinical Quality Language (CQL) for expressing logic to pre-populate QuestionnaireResponses with data from Electronic Health Records (EHRs) and for guiding the flow of questions in adaptive forms. \n\nThe DTR IG defines two main types of Questionnaires: Standard Questionnaires and Adaptive Questionnaires. Standard Questionnaires contain all possible questions and logic upfront, while Adaptive Questionnaires expose questions incrementally based on previous answers using the `$next-question` operation. The IG also specifies operations like `$questionnaire-package` for retrieving Questionnaire packages from payers and `$log-questionnaire-errors` for reporting errors encountered during Questionnaire processing.\n\nThis IG is designed to work in conjunction with other Da Vinci IGs, such as Coverage Requirements Discovery (CRD) and Prior Authorization Support (PAS). CRD helps determine if documentation is required for a particular service, while DTR facilitates the collection of that documentation. PAS then uses the collected information for prior authorization requests. The DTR IG also addresses security and privacy considerations, emphasizing the need to limit data access to only what is necessary for the specific documentation requirements.\n\nIn summary, the DTR IG provides a framework for standardizing the representation and execution of payer documentation requirements using FHIR, with a focus on minimizing provider burden through automation and integration with EHR systems.",
-  "scores": {
-    "Functional Domain": {
-      "Clinical Care > General Clinical Care": 0.5,
-      "Administrative & Financial": 0.4,
-      "Infrastructure & Foundational": 0.25
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.8,
-      "Workflow Support": 0.6,
-      "Data Exchange": 0.4,
-      "Knowledge Representation": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.8,
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
-      "Administrative Organizations > Insurance Companies": 0.6,
-      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
-      "Technical Implementers > Health IT Development Teams": 0.4,
-      "Standards Organizations > Standards Development Organizations": 0.3
+  "HL7 Standard": {
+    "summary": "The Da Vinci DTR Implementation Guide is fundamentally based on FHIR, using it to define its core structure, operations, and data exchange mechanisms. It leverages FHIR Questionnaires and related resources extensively. While it acknowledges other HL7 standards, they are not directly used or integrated within the IG's scope. The IG does not use v2 or v3, and while it mentions the possibility of integrating with CDA documents in the future, it does not currently support or require CDA. Cross-paradigm integration is not a primary focus, as the IG is firmly rooted in the FHIR paradigm.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci DTR Implementation Guide is explicitly designed for the US healthcare market, as indicated by its reliance on US Core, focus on US-specific processes like prior authorization, and alignment with CMS regulations. Therefore, it is classified as a National Implementation Guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Documentation Templates and Rules (DTR) Implementation Guide primarily focuses on streamlining the exchange of patient documentation between providers and payers, particularly for prior authorization and claims processing. It leverages FHIR Questionnaires and CQL to automate data collection and reduce manual effort. While it touches upon clinical data and workflow, its core purpose is to facilitate administrative and financial processes by enabling payers to define and providers to fulfill documentation requirements in a computable manner.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Medications": 0,
+      "Payment & Financial": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The Da Vinci DTR Implementation Guide focuses on using FHIR Questionnaires to define and manage payer documentation requirements. It leverages Data Profiles for Questionnaires and QuestionnaireResponses, REST APIs for operations like $questionnaire-package and $next-question, and Terminology for standard code systems. Decision Support is incorporated through CQL for pre-population and dynamic form behavior. While not a core focus, Subscriptions are not used, and Messaging is limited. Forms & UI are central to the IG's purpose, and Services are used for custom operations. Documents are not a primary focus.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0.8,
+      "Documents": 0,
+      "Forms & UI": 1,
+      "Messaging": 0.2,
+      "REST APIs": 0.8,
+      "Services": 0.6,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci DTR IG primarily focuses on streamlining documentation exchange between EHR systems and Payer systems for processes like prior authorization. EHR systems will need to implement the IG to support Questionnaire rendering, pre-population, and submission. Payer systems will need to define and serve Questionnaires and process submitted responses. Clinical Decision Support systems play a key role in launching DTR and potentially providing guidance within the documentation process. Other systems have limited or no direct involvement.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0,
+      "Lab Systems": 0.2,
+      "Imaging Systems": 0.2,
+      "Public Health Systems": 0,
+      "Clinical Decision Support": 0.6,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Da Vinci DTR Implementation Guide primarily serves to facilitate the exchange of documentation between Clinical Care Teams and Payers. Clinical Care Teams are the core users, as they are responsible for completing and submitting the documentation. Payers are a key user group, defining the requirements and receiving the submitted data. Healthcare Administrators play a role in configuring systems and managing workflows. Government Agencies have a defined but limited role, as the IG aligns with CMS regulations. Other groups have minimal or no direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0.8,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

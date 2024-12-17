@@ -26,6 +26,15 @@ program
     'only process IGs whose names (lowercase) contain all these parts (split on /)',
     ''
   )
+  .option(
+    '--model <name>',
+    'override the default Vertex AI model name',
+    'gemini-exp-1206'
+  )
+  .option('--force', 'force regeneration of all files (context, analysis, and classification)')
+  .option('--force-context', 'force regeneration of context files')
+  .option('--force-analysis', 'force regeneration of analysis files')
+  .option('--force-classification', 'force regeneration of classification files')
   .version('1.0.0');
 
 program.parse();
@@ -37,7 +46,7 @@ const vertexAI = new VertexAI({
 });
 
 const generativeModelConfig = {
-  model: "gemini-exp-1206",
+  model: options.model,
   generation_config: {
     temperature: 0,
   }
@@ -45,15 +54,36 @@ const generativeModelConfig = {
 const generativeModel = vertexAI.getGenerativeModel(generativeModelConfig);
 
 const analysisPrompt = `# FHIR IG Analysis
-Given the FHIR Implementation Guide (IG) source files above, provide a structured analysis addressing the following questions:
+Analyze this FHIR Implementation Guide (IG) and provide a focused summary of its key aspects. Emphasize concrete specifications while capturing the broader context and significance.
 
-1. What is this IG trying to achieve, in what context, and for whom? Explain its objectives in simple terms.
-2. How does this IG improve upon previous approaches? (Use only information from the input files; avoid speculation.)
-3. What are the key features and technical approaches of this IG?
-4. How does this IG relate to broader healthcare standards and regulations?
-5. Who are the primary users or beneficiaries of this IG, including patients if applicable?
+## Technical Essence
+Write a single dense paragraph that would enable another FHIR expert to recreate this IG's core functionality from scratch. Focus on the essential design decisions, resource patterns, extensions, and technical approaches that define this IG's unique contribution. Include enough specific technical detail that someone could implement a simplified but functionally similar version without access to the original IG. Assume deep FHIR knowledge but no domain expertise.
 
-Provide concise, factual responses to each question based on the content of the IG. Aim for clarity and precision in your analysis. Begin with "# $igName: Analysis" and do not output anything other than the analysis.`;
+## Core Purpose & Scope
+- Primary interoperability challenges this IG addresses
+- Key clinical/business problems it solves
+- Intended scope and boundaries
+
+## Technical Foundation
+Highlight the main technical building blocks:
+- Core profiles and extensions
+- Notable operations and interactions
+- Key terminology and value sets
+- Significant patterns and constraints
+
+## Implementation Approach
+Key aspects of how the IG is meant to be implemented:
+- Critical workflows and interactions
+- Important requirements and guardrails  
+- Notable design choices and patterns
+
+## Ecosystem Context
+- Target systems and users
+- Relationship to other standards/IGs
+- Relevant jurisdictions or programs
+- Primary use cases and scenarios
+
+Provide clear, factual analysis based on explicit content in the IG. Focus on high-impact elements that would be most valuable to implementers and decision makers. Begin with "# $igName: Analysis".`;
 
 async function logIssue(org: string, repo: string, error: any) {
   const timestamp = new Date().toISOString();
@@ -160,6 +190,17 @@ async function createContextFile(repoDir: string, repo: string, org: string) {
   const formattedName = getFormattedName(org, repo);
   const contextFilePath = path.join(contextDir, formattedName + '.md');
 
+  // Skip if context exists and no force flags
+  if (!options.force && !options.forceContext) {
+    try {
+      await fs.access(contextFilePath);
+      console.log(`Context file exists: ${contextFilePath}`);
+      return;
+    } catch (err) {
+      // Context doesn't exist, continue with generation
+    }
+  }
+
   const allowedExtensions = ['.md', '.fsh', '.plantuml', '.yaml', '.yml'];
   const maxSize = 500 * 1024; // 500KB in bytes
 
@@ -219,8 +260,6 @@ async function createContextFile(repoDir: string, repo: string, org: string) {
     // Now sort included files lexicographically by path (except sushi-config stays first)
     const sushiConfigFile = includedFiles[0];
     const sortedIncluded = includedFiles.slice(1)
-    console.log(sortedFiles.map(f => f.path));
-      // .sort((a, b) => a.path.localeCompare(b.path));
     
     // Write files in final order
     let outputContent = '';
@@ -241,14 +280,17 @@ async function analyzeRepo(contextFilePath: string, repo: string, org: string) {
   try {
     const formattedName = getFormattedName(org, repo);
     const analysisPath = path.join('analysis', `${formattedName}.md`);
+    const promptPath = path.join('prompts', `${formattedName}_analysis.txt`);
 
-    // Check if analysis already exists
-    try {
-      const existingAnalysis = await fs.readFile(analysisPath, 'utf-8');
-      console.log(`Reusing existing analysis for ${formattedName}`);
-      return existingAnalysis;
-    } catch (err) {
-      // Analysis doesn't exist, continue with generation
+    // Skip if analysis exists and no force flags
+    if (!options.force && !options.forceAnalysis) {
+      try {
+        const existingAnalysis = await fs.readFile(analysisPath, 'utf-8');
+        console.log(`Reusing existing analysis for ${formattedName}`);
+        return existingAnalysis;
+      } catch (err) {
+        // Analysis doesn't exist, continue with generation
+      }
     }
 
     const content = await fs.readFile(contextFilePath, 'utf-8');
@@ -260,8 +302,9 @@ async function analyzeRepo(contextFilePath: string, repo: string, org: string) {
       ]
     };
 
+    // Save analysis prompt
     await fs.mkdir('prompts', { recursive: true });
-    await fs.writeFile(path.join('prompts', `${formattedName}.txt`), JSON.stringify(request, null, 2));
+    await fs.writeFile(promptPath, JSON.stringify(request, null, 2));
 
     const response = await generativeModel.generateContent(request);
     let analysis = response.response.candidates?.[0].content.parts[0].text || "";
@@ -279,66 +322,18 @@ async function analyzeRepo(contextFilePath: string, repo: string, org: string) {
 
 const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 IGs
 
-## Axis 1: Primary Functional Domain
+## Axis 1: HL7 Standard
 
--   **Clinical Care:** IGs focused on direct patient care, care coordination, and clinical workflows.
-    -   **Specialty Care:** IGs tailored to specific medical specialties.
-        -   Cardiology
-        -   Oncology
-        -   Ophthalmology
-        -   Dental
-        -   Radiology
-    -   **General Clinical Care:** IGs applicable across various clinical settings.
-        -   Patient Summaries
-        -   Care Plans
-        -   Clinical Decision Support
-        -   Medication Management
-        -   Patient Engagement
--   **Public Health:** IGs supporting public health surveillance, reporting, and response.
-    -   Disease Reporting
-    -   Immunization
-    -   Environmental Health
--   **Research:** IGs facilitating clinical research, data collection, and analysis.
-    -   Clinical Trials
-    -   Genomics
-    -   Real-World Data
-    -   Registries
--   **Administrative & Financial:** IGs streamlining administrative and financial processes in healthcare.
-    -   Insurance and Billing
-    -   Prior Authorization
-    -   Provider Directories
-    -   Risk Adjustment
-    -   Value-Based Performance Reporting
--   **Infrastructure & Foundational:** IGs defining core technical specifications, cross-cutting concerns, or foundational elements used by other IGs.
-    -   Security and Privacy
-    -   Terminology and Value Sets
-    -   Document and Message Exchange
-    -   Device Communication
-    -   Cross-Version Mapping
-
-## Axis 2: HL7 Standard
-
--   **FHIR:** IGs based on the Fast Healthcare Interoperability Resources standard.
-    -   FHIR R4
-    -   FHIR R5
 -   **CDA:** IGs based on the Clinical Document Architecture standard.
+-   **Cross-Paradigm:** IGs explicitly designed to support or bridge multiple HL7 standards.
+-   **FHIR:** IGs based on the Fast Healthcare Interoperability Resources standard.
 -   **v2:** IGs based on HL7 Version 2 messaging standard.
 -   **v3:** IGs based on HL7 Version 3 messaging standard.
--   **Cross-Paradigm:** IGs that support or bridge multiple HL7 standards.
 
-## Axis 3: Scope/Purpose
+## Axis 2: Geographic Scope
 
--   **Data Exchange:** IGs primarily focused on standardizing mechanisms for interoperability.
--   **Data Modeling:** IGs defining core data models or profiles for specific domains or use cases.
-      Note: Data Modeling IGs focus on *what* the data looks like (profiles, extensions, value sets), while Data Exchange IGs focus on *how* data is shared (APIs, operations, transactions).
--   **Knowledge Representation:** IGs focused on representing clinical knowledge, guidelines, or decision support logic.
--   **Security & Privacy:** IGs defining security and privacy mechanisms for data exchange.
--   **Workflow Support:** IGs defining workflows and interactions between systems or actors.
-
-## Axis 4: Geographic Scope
-
--   **Universal Realm:** IGs intended for international use.
--   **National Jurisdictions:** Including but not limited to:
+-   **Universal:** IGs explicitly designed for international use, or IGs without any explicit geographic scope.
+-   **National:** IGs explictly documented for use in these jurisdictions:
     -   Australia
     -   Belgium
     -   Brazil
@@ -359,67 +354,73 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
     -   United Kingdom
     -   United States
     -   [Other national jurisdictions as applicable]
--   **Regional:**
+-   **Regional:** IGs explictly documented for use in these jurisdictions:
+    -   Asia-Pacific Region
     -   European Union
     -   Nordic Council
-    -   Asia-Pacific Region
     -   [Other regional groupings as applicable]
 
-## Axis 5: Stakeholders
+## Axis 3: Domain Focus
 
--   **Technical Implementers:**
-    -   EHR Vendors
-    -   Device Manufacturers
-    -   Analytics Providers
-    -   System Integrators
-    -   Health IT Development Teams
+-   **Administrative:** Patient, practitioner, organization, location management
+-   **Care Planning:** Care plans, protocols, clinical pathways, goals
+-   **Clinical Data:** Patient data, observations, clinical findings, risk assessments
+-   **Diagnostics:** Lab results, diagnostic reports, imaging, specimens
+-   **Identity & Security:** Patient/provider identity, access control, consent, audit
+-   **Medications:** Prescriptions, pharmacy, medication administration, immunizations
+-   **Payment & Financial:** Claims, payments, value-based care, financial transactions
+-   **Public Health:** Population health, disease reporting, immunization registries
+-   **Quality & Reporting:** Quality measures, performance metrics, outcomes reporting
+-   **Research:** Clinical trials, registries, research protocols
+-   **Workflow:** Appointments, scheduling, tasks, referrals
 
--   **Healthcare Provider Organizations:**
-    -   Hospital IT Departments
-    -   Health System Integration Teams
-    -   Clinical Care Teams
-    -   Laboratory Systems Teams
-    -   Quality Management Teams
+## Axis 4: Implementation Approach
 
--   **Public Health Organizations:**
-    -   Public Health Agencies
-    -   Disease Surveillance Teams
-    -   Epidemiologists
-    -   Registry Systems
-    -   Research Platforms
+-   **Data Profiles:** Defines core resources and extensions
+-   **Decision Support:** Defines rules and algorithms
+-   **Documents:** Defines document structures and composition
+-   **Forms & UI:** Defines questionnaires and user interfaces
+-   **Messaging:** Defines message structures and patterns
+-   **REST APIs:** Defines RESTful endpoints and search parameters
+-   **Services:** Defines service operations and workflows
+-   **Subscriptions:** Defines subscription types and notification patterns
+-   **Terminology:** Defines value sets and code systems
 
--   **Administrative Organizations:**
-    -   Insurance Companies
-    -   Health Plans
-    -   Benefits Management Systems
-    -   Claims Processing Teams
-    -   Healthcare Administrators
+## Axis 5: Implementers
+-   **EHR Systems:** Electronic Health Record system vendors and developers
+-   **PHR Systems:** Personal Health Record system developers
+-   **Payer Systems:** Healthcare insurance and claims processing systems
+-   **Pharmacy Systems:** Pharmacy management and medication systems
+-   **Lab Systems:** Laboratory information and order management systems
+-   **Imaging Systems:** Radiology and medical imaging systems
+-   **Public Health Systems:** Disease surveillance and reporting systems
+-   **Clinical Decision Support:** Clinical guidance and decision support tools
+-   **Research Platforms:** Clinical research and trial management platforms
 
--   **Standards Organizations:**
-    -   Government Agencies
-    -   Standards Development Organizations
-    -   Certification Bodies
-
--   **Patient-Facing Stakeholders:**
-    -   Patients
-    -   Family Members
-    -   Patient Advocates
-    -   Care Coordinators
-
-
+## Axis 6: Users & Stakeholders
+-   **Clinical Care Teams:** Healthcare providers and clinical staff
+-   **Healthcare Administrators:** Administrative and management staff
+-   **Patients and Caregivers:** Patients, families, and care coordinators
+-   **Payers:** Insurance companies and health plans
+-   **Public Health Agencies:** Public health departments and surveillance teams
+-   **Research Organizations:** Clinical research teams and trial coordinators
+-   **Government Agencies:** Regulatory and oversight organizations
 `;
 
 async function classifyRepo(repo: string, org: string, analysis: string, useFullContext: boolean = false) {
   const formattedName = getFormattedName(org, repo);
   const classificationPath = path.join('classifications', `${formattedName}.json`);
+  const promptPath = path.join('prompts', `${formattedName}_classification.txt`);
 
-  // Check if classification already exists
-  try {
-    await fs.access(classificationPath);
-    console.log(`Reusing existing classification for ${formattedName}`);
-    return;
-  } catch (err) {
-    // Classification doesn't exist, continue with generation
+  // Skip if classification exists and no force flags
+  if (!options.force && !options.forceClassification) {
+    try {
+      await fs.access(classificationPath);
+      console.log(`Reusing existing classification for ${formattedName}`);
+      return;
+    } catch (err) {
+      // Classification doesn't exist, continue with generation
+    }
   }
 
   let contentToClassify = analysis;
@@ -436,56 +437,189 @@ async function classifyRepo(repo: string, org: string, analysis: string, useFull
   const classificationPrompt = `
 ${classificationScheme}
 
-Based on the following ${useFullContext ? 'content' : 'analysis'} of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Focus specifically on what this IG defines or specifies - not what it references or depends on.
+Based on the following ${useFullContext ? 'content' : 'analysis'} of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Focus on what is explicitly stated or directly demonstrated in the IG content.
 
 Classification Guidelines:
-1. Score each category's applicability from 0 (not applicable) to 1.0 (perfectly applicable)
-2. ONLY output scores >= 0.25; completely omit any categories scoring below 0.25
-3. Use general categories when multiple sub-categories are represented:
-   - If an IG defines profiles for cardiology (0.8), oncology (0.7), and ophthalmology (0.6), score "Clinical Care > Specialty Care" as 0.8
-   - If it only defines cardiology profiles, score "Clinical Care > Specialty Care > Cardiology" as 0.9
-4. More specific matches should get higher scores:
-   - A pure cardiology IG would score "Clinical Care > Specialty Care > Cardiology" as 0.9-1.0
-   - An IG that touches on cardiology among other things might score it 0.3-0.5
+1. Score each category from 0 (not applicable) to 1.0 (perfectly applicable) using these criteria:
+   - 1.0: Primary focus with comprehensive coverage (e.g., a medication IG that fully defines medication resources, workflows, and terminology)
+   - 0.8: Major focus with substantial coverage (e.g., defines multiple related resources and implementation patterns)
+   - 0.6: Significant focus with clear specifications (e.g., defines specific profiles and requirements)
+   - 0.4: Moderate focus with direct support (e.g., includes dedicated sections or notable components)
+   - 0.2: Minor but explicit focus (e.g., includes specific requirements or extensions)
+   - 0.0: No focus or only tangential support (e.g., references, inferences, or assumptions only)
 
-Provide the output as a JSON object with the following structure, OMITTING any categories scoring below 0.25:
+2. For hierarchical categories:
+   - Score both parent and child levels when applicable
+   - Example: A FooCountry national IG would score only "National > FooCountry"
+3. Evidence requirements:
+   - Only score categories that are mentioned or demonstrated in the IG
+   - For Geographic Scope: Look for explicit jurisdiction statements
+   - For HL7 Standard: Use the stated FHIR version or standards
+   - For Domain Focus: Consider the domains the IG actively supports
+   - For Implementation: Score only the technical components actually described
+   - For Stakeholders: Include only identified
+
+Provide the output as a JSON object with the following structure:
 {
-  "rationale": "~300 word markdown-formatted analysis thinking through the core functionality",
+  "summary": "One-line statement of this IG's fundamental purpose and reason for existing",
   "scores": {
-    "Functional Domain": {
-      "Clinical Care > Specialty Care > Cardiology": 0.9,
-      "Clinical Care > General Clinical Care": 0.4
+    "HL7 Standard": { // GIST: What base standard(s) does this IG implement or extend?
+      "summary": "Brief explanation of how/why this IG uses these standards",
+      // Score 1.0 for base FHIR IGs, also score other standards if explicitly bridged/supported
+      // CDA: Clinical Document Architecture support or conversion
+      // Cross-Paradigm: Explicitly bridges multiple standards
+      // FHIR: Primary FHIR-based implementation guide
+      // v2: HL7 Version 2 support or conversion
+      // v3: HL7 Version 3 support or conversion
+      "FHIR": 1.0
     },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
+    "Geographic Scope": { // GIST: What is the explicit intended geographic coverage/jurisdiction for implementation?
+      "summary": "Key details about stated geographic applicability and jurisdictional context",
+      // Universal: For IGs designed for international use or without geographic constraints
+      // National: Use "National > CountryName" format for country-specific IGs
+      // Regional: Use "Regional > RegionName" for multi-country regional IGs
+      // Score based on explicitly stated jurisdictions in IG -- populate ONLY ONE GEOGRAPHIC SCOPE.
+      "National > FooCountry": 1.0
     },
-    "Scope/Purpose": {
-      "Data Modeling": 0.8,
-      "Data Exchange": 0.4
+    "Domain Focus": { // GIST: What healthcare domains or business areas does this IG primarily address?
+      "summary": "Key aspects of the healthcare domains this IG addresses",
+      // GIST: Core administrative data and processes for managing healthcare entities
+      // Patient, provider, organization management
+      "Administrative": 0.0,
+      // GIST: Planning and tracking patient treatment over time
+      // Treatment plans, clinical protocols, care pathways, goals
+      "Care Planning": 0.0,
+      // GIST: Direct patient health observations and status
+      // Clinical observations, patient assessments, vital signs, problems/conditions
+      "Clinical Data": 0.0,
+      // GIST: Testing, imaging, and diagnostic procedures/results
+      // Lab tests, imaging studies, diagnostic procedures, results reporting
+      "Diagnostics": 0.0,
+      // GIST: Security, privacy, and identity management
+      // Authentication, authorization, consent management, data privacy
+      "Identity & Security": 0.0,
+      // GIST: Medication management across the full lifecycle
+      // Medication orders, pharmacy workflows, drug codes, administration records
+      "Medications": 0.0,
+      // GIST: Financial and payment-related healthcare processes
+      // Insurance claims, billing codes, payment processing, financial transactions
+      "Payment & Financial": 0.0,
+      // GIST: Population health monitoring and reporting
+      // Disease surveillance, population health monitoring, reportable conditions
+      "Public Health": 0.0,
+      // GIST: Healthcare quality measurement and outcomes tracking
+      // Quality measures, clinical metrics, outcomes reporting, performance indicators
+      "Quality & Reporting": 0.0,
+      // GIST: Clinical research and trial management
+      // Clinical trials, research protocols, study data collection, cohort definitions
+      "Research": 0.0,
+      // GIST: Healthcare process and task management
+      // Appointments, scheduling, clinical tasks, referrals, service requests
+      "Workflow": 0.0
     },
-    "Geographic Scope": {
-      "National Jurisdictions > United States": 0.7
+    "Implementation Approach": { // GIST: What technical mechanisms and patterns does this IG define for implementation?
+      "summary": "Overview of the key technical approaches used in this IG",
+      // GIST: Core data structure definitions and constraints
+      // Resource structure definitions, constraints, extensions, must-support elements
+      "Data Profiles": 0.0,
+      // GIST: Clinical reasoning and automated decision support
+      // Clinical decision support rules, algorithms, knowledge artifacts
+      "Decision Support": 0.0,
+      // GIST: Clinical document structure and exchange
+      // Document templates, compositions, narratives, document bundles
+      "Documents": 0.0,
+      // GIST: User interface and data collection
+      // Questionnaires, structured forms, UI components, display hints
+      "Forms & UI": 0.0,
+      // GIST: Message-based information exchange
+      // Message event definitions, message structures, transport protocols
+      "Messaging": 0.0,
+      // GIST: RESTful API interactions and queries
+      // RESTful endpoints, search parameters, _includes, custom operations
+      "REST APIs": 0.0,
+      // GIST: Service-oriented operations and workflows
+      // Custom operations, service interfaces, workflow definitions
+      "Services": 0.0,
+      // GIST: Event notification and data push patterns
+      // Subscription channels, notification templates, event criteria
+      "Subscriptions": 0.0,
+      // GIST: Code systems and value set definitions
+      // Code systems, value sets, concept maps, terminology bindings
+      "Terminology": 0.0
     },
-    "Stakeholders": {
-      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
-      "Technical Implementers > EHR Vendors": 0.6
+    "Implementers": { // GIST: What types of systems are expected to implement this IG?
+      "summary": "Key points about the systems expected to implement this IG",
+      // GIST: Electronic Health Record systems
+      // Primary care, hospital, and specialty EHR systems
+      "EHR Systems": 0.0,
+      // GIST: Personal Health Record systems
+      // Patient portals and personal health apps
+      "PHR Systems": 0.0,
+      // GIST: Insurance and claims systems
+      // Claims processing, benefits management, prior authorization systems
+      "Payer Systems": 0.0,
+      // GIST: Pharmacy management systems
+      // Retail pharmacy, hospital pharmacy, e-prescribing systems
+      "Pharmacy Systems": 0.0,
+      // GIST: Laboratory information systems
+      // Clinical lab, pathology, and reference lab systems
+      "Lab Systems": 0.0,
+      // GIST: Medical imaging systems
+      // PACS, RIS, and other imaging informatics systems
+      "Imaging Systems": 0.0,
+      // GIST: Public health reporting systems
+      // Disease surveillance, immunization registries, reporting systems
+      "Public Health Systems": 0.0,
+      // GIST: Clinical decision support systems
+      // Order sets, care pathways, clinical guidelines systems
+      "Clinical Decision Support": 0.0,
+      // GIST: Research data platforms
+      // EDC, CTMS, and other research management systems
+      "Research Platforms": 0.0
+    },
+    "Users & Stakeholders": { // GIST: Who are the primary users and stakeholders of implementations?
+      "summary": "Key information about the intended users and stakeholders",
+      // GIST: Healthcare providers and clinical staff
+      // Physicians, nurses, therapists, and other care team members
+      "Clinical Care Teams": 0.0,
+      // GIST: Healthcare organization management
+      // Practice managers, department heads, operations staff
+      "Healthcare Administrators": 0.0,
+      // GIST: Patients and their support network
+      // Patients, families, caregivers, and care coordinators
+      "Patients and Caregivers": 0.0,
+      // GIST: Healthcare insurance organizations
+      // Insurance companies, health plans, claims processors
+      "Payers": 0.0,
+      // GIST: Public health organizations
+      // Health departments, disease surveillance teams
+      "Public Health Agencies": 0.0,
+      // GIST: Clinical research organizations
+      // Research institutions, trial coordinators, data scientists
+      "Research Organizations": 0.0,
+      // GIST: Government regulatory bodies
+      // Health departments, regulatory agencies, policy makers
+      "Government Agencies": 0.0
     }
   }
 }
-
-Sort scores within each category from highest to lowest. Each path should be written from general to specific (e.g., "Clinical Care > Specialty Care > Cardiology"). Use ">" to separate levels in the hierarchy. The rationale should focus on the concrete artifacts and specifications this IG creates. Do not include any markdown formatting or explanation text, just output the JSON object.
 
 Content:
 ${contentToClassify}
 `;
 
   const request = {
+    systemInstruction: "You are a health information technology expert, following the supplied guidelines accurately.",
     contents: [
       { role: 'user', parts: [{ text: classificationPrompt }] },
     ]
   };
 
   try {
+    // Save classification prompt
+    await fs.mkdir('prompts', { recursive: true });
+    await fs.writeFile(promptPath, JSON.stringify(request, null, 2));
+
     const response = await generativeModel.generateContent(request);
     let classification = response.response.candidates?.[0].content.parts[0].text || "{}";
     
@@ -555,9 +689,6 @@ async function main() {
       }
     }
   }
-
-  console.log('GitHub URLs:');
-  githubUrls.forEach(url => console.log(url));
 }
 
 // Only run if this is the main module

@@ -1,36 +1,84 @@
 {
-  "rationale": "The \"au-fhir-base\" Implementation Guide primarily focuses on defining foundational FHIR resources, profiles, extensions, value sets, and code systems tailored for the Australian healthcare context. It establishes a baseline for representing common Australian-specific concepts within FHIR, such as identifiers (e.g., Medicare Card Number, HPI-I), terminology (e.g., Australian Indigenous Status, Australian States and Territories), and extensions (e.g., Australian Veteran Status, Name Context). \n\nThe IG's core function is data modeling, as it defines numerous profiles on base FHIR resources like Patient, Practitioner, RelatedPerson, Organization, Location, and others. These profiles incorporate Australian-specific extensions and terminology bindings, providing a standardized way to represent common data elements within these resources. For example, the AU Base Patient profile includes extensions for Australian Indigenous Status, Date of Arrival in Australia, and Person Recorded Sex Or Gender, along with bindings to Australian-specific value sets. \n\nWhile the IG does not explicitly define message exchange mechanisms or workflows, it lays the groundwork for interoperability by standardizing the structure and content of data. It also includes a few search parameters, which hints at a data exchange aspect, although this is not the primary focus. The IG is based on FHIR R4 and is intended for use within the Australian realm, as indicated by the numerous references to Australian jurisdictions, identifiers, and terminology. \n\nThe target audience includes technical implementers like EHR vendors and system integrators, as well as healthcare provider organizations and public health agencies that need to implement FHIR-based systems in Australia. The IG also serves as a reference for standards organizations and government agencies involved in defining healthcare data standards. The inclusion of guidance pages on sex, gender, and related concepts suggests an awareness of patient-facing stakeholders, although the primary focus remains on technical implementation.",
-  "scores": {
-    "Functional Domain": {
-      "Infrastructure & Foundational": 0.95,
-      "Clinical Care > General Clinical Care": 0.5,
-      "Administrative & Financial": 0.3
-    },
-    "HL7 Standard": {
-      "FHIR > FHIR R4": 0.95
-    },
-    "Scope/Purpose": {
-      "Data Modeling": 0.9,
-      "Terminology & Value Sets": 0.8,
-      "Data Exchange": 0.3
-    },
-    "Geographic Scope": {
-      "National Jurisdictions > Australia": 0.95
-    },
-    "Stakeholders": {
-      "Technical Implementers > EHR Vendors": 0.7,
-      "Technical Implementers > Health IT Development Teams": 0.7,
-      "Standards Organizations > Standards Development Organizations": 0.7,
-      "Healthcare Provider Organizations > Hospital IT Departments": 0.6,
-      "Public Health Organizations > Public Health Agencies": 0.5,
-      "Technical Implementers > System Integrators": 0.5,
-      "Administrative Organizations > Healthcare Administrators": 0.3
+  "HL7 Standard": {
+    "summary": "The AU Base Implementation Guide is fundamentally built upon the FHIR standard, providing a localized foundation for Australian healthcare interoperability. It leverages FHIR's RESTful approach and resource model extensively. While it acknowledges other HL7 standards, it does not directly integrate or depend on them. Cross-paradigm integration is minimal, focusing primarily on FHIR. There is no mention or use of v2 or v3 messaging or models, nor is there any use of CDA.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide explicitly states it is designed for the Australian healthcare context, defining profiles, extensions, terminologies, and identifiers specific to Australia. It is intended to be a foundational layer for other, more specific, IGs within Australia and supports national initiatives like My Health Record. Therefore, it is clearly a national guide for Australia.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Australia": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The AU Base Implementation Guide primarily focuses on establishing a common foundation for representing Australian-specific healthcare concepts within FHIR. It emphasizes administrative aspects like patient and provider identification, along with core clinical data representation, adapted to the Australian context. While it touches upon other domains like medications and diagnostics, its core purpose is to provide a standardized base for administrative and clinical data exchange within Australia, without imposing strict constraints or defining specific workflows.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.4,
+      "Medications": 0.6,
+      "Payment & Financial": 0.2,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementation Approach": {
+    "summary": "The AU Base IG primarily focuses on defining Data Profiles and Terminology relevant to the Australian healthcare context. It provides a foundational layer with localized profiles, extensions, and value sets without imposing strict constraints or defining specific interactions. REST APIs, Services, Messaging, Subscriptions, Decision Support, Documents, and Forms & UI are not the focus of this foundational IG, leaving those aspects to be defined by downstream IGs.",
+    "scores": {
+      "Data Profiles": 1,
+      "Decision Support": 0,
+      "Documents": 0.2,
+      "Forms & UI": 0,
+      "Messaging": 0,
+      "REST APIs": 0,
+      "Services": 0,
+      "Subscriptions": 0,
+      "Terminology": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The AU Base Implementation Guide is foundational for Australian healthcare systems, focusing on defining profiles, extensions, and terminologies specific to the Australian context. It primarily impacts systems that need to represent Australian-specific data and identifiers. EHR systems are central, as they manage core patient and clinical data. Pharmacy, Lab, and Imaging systems require significant integration to handle orders and results with Australian-specific elements. Clinical Decision Support systems will need to adapt to the terminology and data structures defined in AU Base. Payer systems have a limited but clear role in handling coverage and identifiers. Public Health systems will utilize AU Base for reporting and surveillance, while PHR systems have minimal direct interaction. Research platforms will leverage AU Base for data consistency in Australian studies.",
+    "scores": {
+      "EHR Systems": 1,
+      "PHR Systems": 0.2,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.8,
+      "Lab Systems": 0.8,
+      "Imaging Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Clinical Decision Support": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The AU Base Implementation Guide primarily serves as a foundational layer for other, more specific, IGs within the Australian healthcare ecosystem. Its main purpose is to standardize the representation of Australian-specific healthcare concepts in FHIR. Therefore, the primary users are implementers and developers building FHIR solutions. Clinical care teams and other stakeholders will benefit indirectly through improved data exchange and interoperability facilitated by this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
     }
   },
   "meta": {
     "model": "gemini-exp-1206",
     "generation_config": {
       "temperature": 0
-    }
+    },
+    "workerCount": 3
   }
 }

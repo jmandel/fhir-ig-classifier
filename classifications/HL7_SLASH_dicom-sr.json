@@ -1,0 +1,30 @@
+{
+  "rationale": "The DICOM SR to FHIR Resource Mapping IG primarily focuses on defining the mapping between DICOM SR (Structured Reporting) objects, specifically TID 1500 Measurement Reports, and FHIR resources. The core functionality is to provide a standardized way to extract and represent key content from DICOM SR objects as FHIR Observations and related resources. This involves defining specific profiles for FHIR resources like Observation, ImagingSelection, Device, and BodyStructure to capture the relevant information from DICOM SR content items. \n\nThe IG specifies how to map various DICOM SR templates, such as TID 1410, TID 1411, TID 1501, TID 300, TID 1419, TID 1420, and TID 4019, to these FHIR profiles. It details the mapping of DICOM attributes and content items to FHIR resource elements, including coded values, numerical measurements, qualitative evaluations, and references to imaging studies and segments. The IG also addresses the representation of devices involved in the creation of the SR, distinguishing between general equipment and algorithms used for measurements. \n\nFurthermore, it outlines the relationships between the created FHIR resources, such as how Imaging Measurement Group Observations reference child Imaging Measurement and Imaging Qualitative Evaluation Observations. It also covers the mapping of tracking identifiers and finding sites to BodyStructure resources and the use of ImagingSelection resources to represent image regions and segments. The IG provides guidance on handling identifiers for patients, service requests, and imaging studies, assuming these resources already exist in the FHIR server. Overall, the DICOM SR to FHIR Resource Mapping IG aims to facilitate interoperability between DICOM-based imaging systems and FHIR-based healthcare systems by enabling the standardized exchange of imaging measurement data.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Radiology": 0.9,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R5": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Standards Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

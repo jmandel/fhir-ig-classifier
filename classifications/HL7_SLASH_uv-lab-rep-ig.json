@@ -1,0 +1,51 @@
+{
+  "rationale": "The FHIR Implementation Guide \"uv-lab-rep-ig\" focuses on defining the structure and content of laboratory reports within the Universal Realm. It specifies how to represent laboratory reports using FHIR resources, particularly `DiagnosticReport`, `Composition`, and `Observation`. The guide supports two main approaches: a document-based approach using a FHIR document Bundle containing both `Composition` and `DiagnosticReport`, and a non-document approach using `DiagnosticReport` and `Observation`, optionally structured with `Composition`. \n\nThe guide defines several profiles, including `Bundle-uv-lab`, `Composition-uv-lab`, `DiagnosticReport-uv-lab`, and `Observation-resultslab-uv-lab`, to constrain the use of FHIR resources for laboratory reporting. It also defines extensions, such as `DiagnosticReportReference` and `ObservationCertifiedRefMaterialCodeable`, to address specific requirements of laboratory reporting. The guide includes examples of how to represent various laboratory report scenarios, including complete, partial, preliminary, updated, cancelled, and error reports. It also provides guidance on status management for laboratory reports and observations. \n\nThe guide references other HL7 standards, such as IPS, but its primary focus is on defining the structure and content of laboratory reports using FHIR R4. It is intended for a global audience, as indicated by the \"Universal Realm\" scope, but the examples and contributors suggest a strong influence from European projects and initiatives. The guide is designed to be used by technical implementers, such as EHR vendors and system integrators, as well as healthcare provider organizations and public health organizations involved in laboratory reporting.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.8,
+      "Clinical Care > Specialty Care": 0.35,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "FHIR > FHIR R5": 0.3,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.6,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9,
+      "National Jurisdictions > United States": 0.3,
+      "National Jurisdictions > Netherlands": 0.25,
+      "National Jurisdictions > United Kingdom": 0.25,
+      "National Jurisdictions > Italy": 0.25,
+      "National Jurisdictions > Germany": 0.25,
+      "National Jurisdictions > Switzerland": 0.25,
+      "National Jurisdictions > Czech": 0.25,
+      "National Jurisdictions > Spain": 0.25,
+      "National Jurisdictions > Sweden": 0.25,
+      "National Jurisdictions > Portugal": 0.25,
+      "National Jurisdictions > Estonia": 0.25,
+      "National Jurisdictions > Austria": 0.25,
+      "National Jurisdictions > Belgium": 0.25
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Technical Implementers > System Integrators": 0.5,
+      "Standards Organizations": 0.4,
+      "Public Health Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

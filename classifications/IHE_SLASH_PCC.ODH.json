@@ -1,0 +1,33 @@
+{
+  "rationale": "The IHE PCC.ODH Implementation Guide (IG) primarily focuses on defining FHIR profiles and extensions to represent Occupational Data for Health (ODH). This includes structured work information such as employment status, retirement date, combat zone period, past or present job details, and usual work. The IG specifies several StructureDefinition resources, including `odh-OccupationalDataForHealth`, `odh-PastOrPresentJob`, `odh-UsualWork`, `odh-EmploymentStatus`, `odh-RetirementDate`, and `odh-CombatZonePeriod`. These profiles define the data elements, value sets, and constraints for representing occupational data within the social history section of a medical record. The IG also defines extensions like `odh-Employer-extension` and `odh-isCurrentJob-extension` to further qualify occupational data. While the IG mentions the use of ODH for clinical care, population health, and public health reporting, the core content is centered on data modeling. The IG is based on FHIR R4 and is intended for international use, although it is derived from a US-specific HL7 FHIR profile. It includes mappings from the International Classification of Occupations (ISCO08) to the USA Standard Occupational Classification (SOC 2010). The IG is designed to be incorporated into broader IGs and EHR systems, targeting technical implementers like EHR vendors and healthcare provider organizations, particularly clinical care teams. The IG also defines value sets like `obf-datatype-YesNoVS`, `odf-industriesVS`, and `odf-occupationVS` to standardize terminology used in the profiles.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Research": 0.3,
+      "Public Health": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.8,
+      "National Jurisdictions > United States": 0.4
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.7,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Public Health Organizations > Research Platforms": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

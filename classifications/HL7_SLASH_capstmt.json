@@ -1,0 +1,31 @@
+{
+  "rationale": "The Application Feature Framework Implementation Guide (IG) defines a system for describing and querying FHIR interface features and behaviors. It introduces the `FeatureDefinition` logical model to define features, which are essentially named behaviors with associated value types and contexts. These features can be declared within resources like `CapabilityStatement` or `TerminologyCapabilities` using a specific extension structure. The IG also defines an operation, `feature-query`, to enable clients to query servers about supported features. The IG itself defines one feature, `FeatureSupport`, to indicate support for the framework. The primary focus is on enabling applications to describe their FHIR interface capabilities in a granular and flexible manner, allowing for feature negotiation between clients and servers. The IG does not define specific clinical or administrative workflows but provides the infrastructure for describing them. It is based on FHIR R5 and is intended for a global audience, as indicated by the 'World' jurisdiction in the `sushi-config.yaml` file. The IG is primarily targeted at technical implementers, such as EHR vendors and system integrators, who need to understand and implement the feature framework.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR": 0.9,
+      "FHIR > FHIR R5": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.8,
+      "Technical Implementers > System Integrators": 0.8,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Standards Organizations > Standards Development Organizations": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

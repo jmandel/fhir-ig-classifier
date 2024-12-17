@@ -1,0 +1,34 @@
+{
+  "rationale": "The FHIR Implementation Guide \"lab-report\" focuses on defining the structure and content of laboratory reports within the Italian healthcare context, utilizing FHIR R4. It establishes profiles for various resources like `DiagnosticReport`, `Observation`, `Specimen`, `Patient`, `Practitioner`, `Organization`, and others, tailoring them to represent the specific data elements and relationships required for laboratory reporting. The IG also defines new CodeSystems and ValueSets specific to the Italian context, such as those related to administrative regions, healthcare facilities, and laboratory test types. The primary goal is to standardize the data model for laboratory reports, ensuring consistency and interoperability in the exchange of laboratory information. While the IG references external standards like LOINC and SNOMED CT, its core function is to define the specific profiles, extensions, and terminologies needed for Italian laboratory reports. It provides detailed specifications on how data should be structured and coded within these reports, focusing on data modeling rather than the specific mechanisms of data exchange. The IG is intended for use within Italy, as indicated by the jurisdiction and the use of Italian-specific terminologies. The stakeholders include technical implementers like EHR vendors and healthcare provider organizations, particularly clinical care teams involved in laboratory reporting.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Medication Management": 0.3,
+      "Clinical Care > General Clinical Care": 0.8,
+      "Infrastructure & Foundational > Terminology and Value Sets": 0.6
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Italy": 0.95
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.5,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.5,
+      "Standards Organizations > Standards Development Organizations": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

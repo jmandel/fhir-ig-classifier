@@ -1,0 +1,30 @@
+{
+  "rationale": "The `fhir-tools-ig` implementation guide primarily focuses on defining extensions and configurations for working with FHIR logical models and the IG Publisher. It does not define clinical or administrative data models but rather provides tools and specifications for handling various data formats and generating documentation. \n\nSpecifically, it defines extensions for:\n\n1.  **Type Representation in Logical Models:** It introduces extensions to manage type choices in logical models, including `xsi:type` handling and custom type specifiers. These are crucial for accurately representing data structures that deviate from standard FHIR resource formats.\n2.  **Extension Management:** It defines an extension (`elementdefinition-extension-style`) to control how extensions are managed within logical models, offering options like disabling extensions, using FHIR's standard extension mechanism, or allowing named elements as extensions.\n3.  **JSON and XML Format Control:** It provides extensions to customize the representation of data in JSON and XML formats. This includes specifying JSON property names (`elementdefinition-json-name`), handling empty arrays and null values in JSON (`json-empty-behavior`, `json-nullable`), and controlling XML element names, namespaces, and ordering (`elementdefinition-xml-name`, `elementdefinition-namespace`, `structuredefinition-xml-no-order`).\n4.  **Date/Time Formats:** It allows specifying alternative date/time formats beyond the default XML schema format using the `elementdefinition-date-format` extension.\n5.  **Page Factories for IG Publisher:** It defines a mechanism for configuring the IG Publisher to automatically generate pages based on lists of items (e.g., FHIR types, resources, versions). This includes specifying source files, variables for content replacement, output file names, parent pages, and page titles.\n\nThese specifications are primarily targeted at technical implementers who are building tools or systems that interact with FHIR data, particularly those dealing with logical models or using the IG Publisher. The IG does not directly address clinical workflows, patient care, or public health reporting. Instead, it provides foundational tools for managing and documenting FHIR-related data structures and processes.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.3,
+      "FHIR > FHIR R5": 0.3,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers": 0.9,
+      "Standards Organizations": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

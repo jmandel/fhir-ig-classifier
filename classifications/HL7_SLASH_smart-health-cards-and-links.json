@@ -1,0 +1,38 @@
+{
+  "rationale": "The SMART Health Cards and Links FHIR IG primarily focuses on defining the specifications and protocols for creating, issuing, and verifying SMART Health Cards and SMART Health Links. \n\nSMART Health Cards are verifiable digital or printable credentials containing a patient's health information, such as vaccination history or test results. The IG specifies how to represent this clinical data using FHIR resources within a JSON Web Signature (JWS) payload, which is then encoded into a QR code or provided as a downloadable file. The IG defines the structure of the JWS, including required headers and claims, as well as the process for minifying and compressing the payload for efficient storage and transmission. It also specifies how issuers should manage and publish their cryptographic keys for signature verification and how individual Health Cards can be revoked.\n\nSMART Health Links, on the other hand, provide a mechanism for sharing more extensive health information that cannot fit within a single SMART Health Card. The IG defines the structure of a SMART Health Link, which includes a manifest URL, a decryption key, and optional flags for long-term use or passcode protection. It specifies how to encrypt and decrypt the files listed in the manifest and how to handle requests for the manifest and associated files. The IG also provides guidance on polling for changes in long-term SMART Health Links.\n\nIn addition to the core specifications, the IG includes user stories, examples, and frequently asked questions to help implementers understand and use the protocols. It also defines a FHIR operation (`$health-cards-issue`) for requesting and generating SMART Health Cards from FHIR-enabled issuers.\n\nBased on this analysis, the IG can be classified as follows:",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.6,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95,
+      "Cross-Paradigm": 0.3
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Security & Privacy": 0.8,
+      "Data Modeling": 0.5,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > Health IT Development Teams": 0.7,
+      "Technical Implementers > System Integrators": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.4,
+      "Patient-Facing Stakeholders > Patients": 0.4,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Standards Organizations > Standards Development Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

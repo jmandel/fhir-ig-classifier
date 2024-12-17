@@ -1,0 +1,32 @@
+{
+  "rationale": "The `cql-ig` implementation guide is focused on defining how to use Clinical Quality Language (CQL) with FHIR. It defines profiles, operations, and guidance for using CQL both as a query mechanism and as an integrated part of knowledge artifacts. The guide is based on FHIR R4 and is intended for a universal realm, although some examples reference US-specific resources. \n\n\nThe guide defines conformance requirements for representing CQL libraries in FHIR, including library naming, versioning, and the use of namespaces. It also specifies how to map CQL types to FHIR types and how to represent parameters and data requirements in CQL libraries. The guide provides guidance on using expressions, including how to specify expression names and how to use inline expressions. It also covers the use of terminology in CQL, including code systems, value sets, and codes. \n\n\nThe guide defines several operations, including `$cql` for evaluating CQL expressions and `Library/$evaluate` for evaluating CQL libraries. It also defines a capability statement for a CQL evaluation service. The guide includes several examples of how to use CQL with FHIR, including examples of CQL libraries, FHIR resources, and operation invocations. \n\n\nBased on this, the guide is primarily focused on knowledge representation and data modeling, as it defines how to represent CQL logic and associated data requirements in FHIR. It also has a secondary focus on data exchange, as it defines operations for evaluating CQL expressions and libraries. The guide is relevant to technical implementers, such as EHR vendors and system integrators, as well as healthcare provider organizations and standards organizations.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.3,
+      "Infrastructure & Foundational": 0.9
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Knowledge Representation": 0.9,
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.9,
+      "National Jurisdictions > United States": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Technical Implementers > Health IT Development Teams": 0.8,
+      "Standards Organizations > Standards Development Organizations": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

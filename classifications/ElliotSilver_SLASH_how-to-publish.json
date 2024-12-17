@@ -1,0 +1,31 @@
+{
+  "rationale": "This IG is a guide on how to publish FHIR Implementation Guides using the HL7 IG Publisher's `-go-publish` feature. It focuses on the technical aspects of publishing an IG, including setting up the publication environment, preparing the IG for publication, and using the IG Publisher to generate the necessary files for publication. \n\nThe IG's primary function is to provide instructions and guidance on the publication process, rather than defining clinical or administrative workflows. It does not define any specific clinical data models or profiles, but it does provide an example profile of the Patient resource for demonstration purposes. The IG is based on FHIR R4 and is intended for use by technical implementers, such as EHR vendors and system integrators, who are involved in the development and publication of FHIR IGs. \n\nThe IG's scope is primarily focused on data exchange, as it describes the process of making an IG available to the public through a website. It also touches on data modeling, as it discusses the structure of the IG and the use of the ImplementationGuide resource. The IG does not focus on knowledge representation or security and privacy mechanisms. The geographic scope of the IG is not explicitly stated, but it appears to be intended for a general audience, with a slight emphasis on the United States due to the references to FHIR North and the use of the `ca.argentixinfo.howtopub` package id. The primary stakeholders are technical implementers and standards organizations, as they are the ones who will be using the IG Publisher and publishing IGs.",
+  "scores": {
+    "Functional Domain": {
+      "Infrastructure & Foundational > Document and Message Exchange": 0.8
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.9,
+      "Data Modeling": 0.3
+    },
+    "Geographic Scope": {
+      "Universal Realm": 0.6,
+      "National Jurisdictions > United States": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > System Integrators": 0.9,
+      "Technical Implementers > Health IT Development Teams": 0.9,
+      "Standards Organizations > Standards Development Organizations": 0.8,
+      "Technical Implementers > EHR Vendors": 0.5
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-medication-rems-ig\" defines specifications for supporting Risk Evaluation and Mitigation Strategies (REMS) programs for medications. Analyzing the provided content reveals the following:\n\n**Functional Domain:** The IG primarily focuses on **Clinical Care**, specifically **Medication Management**. It addresses how providers interact with REMS Administrator Systems during the ordering of REMS medications and associated patient encounters. It defines information exchanges to support those events, including interactions between the provider and the REMS Administrator, the provider and the pharmacy, and the pharmacist and the REMS Administrator. The goal is to streamline the REMS process, ensure safe medication use, and reduce prescription fulfillment delays. While not directly focused on specialty care, the IG supports workflows related to specific medications, implying an indirect relationship with specialty care areas where these medications are commonly used.\n\n**HL7 Standard:** The IG explicitly states its reliance on **FHIR R4** and utilizes FHIR resources, profiles, and interactions. It also references the use of CDS Hooks and SMART App Launch, both built upon FHIR. The `sushi-config.yaml` file confirms the `fhirVersion` as `4.0.1`.\n\n**Scope/Purpose:** The IG focuses on both **Data Exchange** and **Data Modeling**. It defines how data is exchanged between Provider Systems and REMS Administrator Systems using CDS Hooks and SMART App Launch. It also defines specific profiles for resources like `Task` and provides guidance on populating CDS Hooks response Cards. Additionally, it outlines security and privacy mechanisms for data exchange, and defines workflows and interactions between systems and actors.\n\n**Geographic Scope:** The IG is explicitly scoped to the **United States**, as indicated by the `jurisdiction` field in the `sushi-config.yaml` file and the title \"US Medication Risk Evaluation and Mitigation Strategies (REMS) FHIR IG\". It references US-specific standards like NCPDP SCRIPT and US Core profiles.\n\n**Stakeholders:** The IG is relevant to various stakeholders. **Healthcare Provider Organizations**, particularly **Clinical Care Teams**, are the primary users of the defined workflows and interactions. **Technical Implementers**, such as **EHR Vendors** and **System Integrators**, are responsible for implementing the specified FHIR interactions and profiles. **REMS Administrators** are key stakeholders, as the IG defines how their systems interact with Provider Systems. **Public Health Organizations** may indirectly benefit from improved REMS processes and data collection. **Standards Organizations** like HL7 are involved in the development and maintenance of the IG. Finally, **Patients** are impacted by the improved REMS processes, although the IG does not directly address patient-facing applications.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care > Medication Management": 0.9,
+      "Clinical Care > General Clinical Care": 0.3,
+      "Clinical Care > Specialty Care": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Exchange": 0.8,
+      "Data Modeling": 0.7,
+      "Workflow Support": 0.6,
+      "Security & Privacy": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.9
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.7,
+      "Technical Implementers > System Integrators": 0.6,
+      "Administrative Organizations": 0.3,
+      "Public Health Organizations": 0.3,
+      "Standards Organizations": 0.3,
+      "Patient-Facing Stakeholders > Patients": 0.25
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

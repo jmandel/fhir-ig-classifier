@@ -1,0 +1,32 @@
+{
+  "rationale": "This implementation guide (IG) primarily focuses on defining how to represent a Laboratory Report within the European context using HL7 FHIR. It establishes profiles and mappings to ensure consistency and interoperability in the exchange of laboratory data. \n\nThe IG specifies a set of FHIR profiles, including Composition, DiagnosticReport, Observation, Patient, Specimen, and others, tailored for laboratory reporting. These profiles define the structure and content of the laboratory report, including elements such as patient demographics, order details, specimen information, and test results. \n\nAdditionally, the IG includes concept maps that define the relationships between the statuses used in the DiagnosticReport resource and those used for the Composition. It also provides mappings between the data elements defined in the EU eHN guidelines and the corresponding FHIR elements in the guide. \n\nThe IG addresses various scenarios related to laboratory reporting, such as complete, partial, preliminary, updated, cancelled, and error reports. It also provides guidance on managing laboratory report statuses and their correlation with the statuses of individual observations. \n\nFurthermore, the IG defines actors and obligations to describe the functional requirements for the specified data elements. It includes informative material on obligations to collect feedback on their usage. \n\nOverall, this IG serves as a comprehensive guide for implementing laboratory reporting using FHIR in the European context, promoting harmonization and interoperability among different systems and stakeholders.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > Specialty Care > Laboratory": 0.9,
+      "Clinical Care > General Clinical Care > Medication Management": 0.25
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "Regional > European Union": 0.9
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Public Health Organizations > Public Health Agencies": 0.3,
+      "Standards Organizations > Standards Development Organizations": 0.7
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

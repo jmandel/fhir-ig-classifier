@@ -1,0 +1,35 @@
+{
+  "rationale": "The FHIR Implementation Guide \"fhir-resp-net-ig\" defines specifications for reporting data to the Respiratory Virus Hospitalization Surveillance Network (RESP-NET). It primarily focuses on defining the structure and content of FHIR resources used for reporting cases of respiratory viruses, including influenza, SARS-CoV-2, and RSV. The IG outlines the use of the MedMorph Reference Architecture (RA) for automating the reporting process, leveraging the Health Data Exchange App (HDEA) to collect and transmit data from Data Sources (e.g., EHRs) to Data Receivers (e.g., RESP-NET sites). \n\nThe IG specifies the creation of a Knowledge Artifact by the Data Receiver, which is then used by the HDEA to trigger data collection based on specific events, such as a positive test result or hospital discharge. It defines profiles for various FHIR resources, including a RESP-NET Content Bundle and a RESP-NET Reporting Bundle, to structure the data being reported. The IG also outlines requirements for Data Sources, including support for US Core APIs and specific Subscription mechanisms for notifying the HDEA of relevant events. \n\nFurthermore, the IG details the HDEA's responsibilities, such as processing the Knowledge Artifact, creating Subscriptions, querying for patient data, and generating and submitting the RESP-NET report. It also specifies requirements for the Data Receiver, including the implementation of the $process-message operation for receiving reports. The IG emphasizes the use of SMART on FHIR Backend Services for authorization and outlines specific requirements for each actor in this context. The primary focus is on data modeling and exchange, with specific attention to the structure of the data being reported and the mechanisms for its transmission. The IG is designed for use in the United States and targets stakeholders involved in clinical care, public health surveillance, and health IT implementation.",
+  "scores": {
+    "Functional Domain": {
+      "Public Health": 0.9,
+      "Clinical Care > General Clinical Care": 0.35,
+      "Clinical Care > Specialty Care": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7,
+      "Workflow Support": 0.4
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7
+    },
+    "Stakeholders": {
+      "Public Health Organizations > Public Health Agencies": 0.9,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.5,
+      "Public Health Organizations > Disease Surveillance Teams": 0.5,
+      "Technical Implementers > Health IT Development Teams": 0.4,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

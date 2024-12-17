@@ -1,0 +1,32 @@
+{
+  "rationale": "The IHE PCC.mAPS Implementation Guide primarily focuses on defining the structure and content of an \"Antepartum Summary\" document. This document is designed to aggregate significant events, diagnoses, and plans of care derived from visits over the course of an antepartum episode. The IG specifies the use of FHIR R4 as the underlying standard and leverages the HL7 FHIR International Patient Summary (IPS) as a foundational document. \n\nThe mAPS IG defines a core Composition profile (IHE.PCC.mAPS.Composition) that outlines the required and optional sections within the Antepartum Summary. These sections include Medication Summary, Allergies and Intolerances, Problems, Procedures History, Past Illness History, Social History, Pregnancy History, Immunizations, Results, Advance Directives, Vital Signs, Chief Complaint, Family Medical History, Review of Systems, History of Infection, Physical Exams, Antepartum Education, Payors, and Antepartum Visit Summary Flowsheet. \n\nFor each section, the IG specifies the allowed resource types, often referencing IPS profiles. It also defines several new profiles for observations specific to pregnancy and antepartum care, such as Pregnancy History, Date of First Prenatal Visit, Number of Prenatal Visits, Menstrual Status, Delivery Date estimates, Fetal Gestational Age, and various social history observations relevant to pregnancy. The IG further defines a detailed \"Antepartum Visit Summary Flowsheet Battery\" profile, which includes a set of component observations like Fetal Body Weight, Uterus Fundal Height, Fetal Presentation, Fetal Heart Rate, and others. \n\nWhile the IG mentions actors like \"Content Creator\" and \"Content Consumer\" and references IHE Document Sharing, the primary focus is on data modeling rather than data exchange mechanisms. The IG also includes a US Realm National Extension, indicating a focus on the United States, although it also references the IPS, which is intended for international use. The primary stakeholders are likely to be clinical care teams involved in antepartum care and EHR vendors implementing the specified profiles.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.9,
+      "Clinical Care > Specialty Care > Obstetrics and Gynecology": 0.8
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.95
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > United States": 0.7,
+      "Universal Realm": 0.3
+    },
+    "Stakeholders": {
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Hospital IT Departments": 0.3,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

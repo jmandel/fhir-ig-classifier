@@ -1,0 +1,37 @@
+{
+  "rationale": "The `ig-tooling` FHIR Implementation Guide (IG) primarily focuses on defining profiles and structures for creating an Austrian Patient Summary, conforming to both the International Patient Summary (IPS) and the HL7 Austria FHIR Core Implementation Guide. The IG defines numerous profiles, including `AtIpsAllergyIntolerance`, `AtIpsBundle`, `AtIpsComposition`, `AtIpsCondition`, and many others, each tailored to specific resource types and ensuring alignment with IPS standards through the `imposeProfile` extension. \n\nThe IG's core function is data modeling, specifying how various FHIR resources should be structured and constrained to represent patient data within the Austrian context. It includes detailed specifications for resource elements, such as slicing, cardinality, and value sets. The IG also provides example instances, like `APS-1-no-problems-medication-allergies` and `APS-2-preventive-medical-checkup`, demonstrating the practical application of these profiles.\n\nAdditionally, the IG includes a contest page (`contest.md`) that outlines a competition for visualizing IPS data. This contest aims to engage students and professionals in developing innovative design prototypes for presenting patient summaries, emphasizing the importance of clear and user-friendly data representation. The contest's inclusion indicates a focus on both data modeling and the practical, user-facing aspects of data exchange.\n\nWhile the IG primarily focuses on FHIR R4, it also references the IPS and HL7 Austria FHIR Core, indicating cross-paradigm considerations. The geographic scope is clearly centered on Austria, as evidenced by the jurisdiction, publisher information, and references to Austrian-specific standards and organizations. The stakeholders include technical implementers, healthcare provider organizations, and standards organizations, reflecting the IG's role in defining standards and guidelines for FHIR implementation in Austria.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Clinical Care > General Clinical Care > Patient Summaries": 0.9,
+      "Infrastructure & Foundational": 0.3
+    },
+    "HL7 Standard": {
+      "FHIR": 0.95,
+      "FHIR > FHIR R4": 0.9,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.9,
+      "Data Exchange": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Austria": 0.95,
+      "National Jurisdictions > United States": 0.3
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.8,
+      "Standards Organizations": 0.7,
+      "Standards Organizations > Government Agencies": 0.4,
+      "Standards Organizations > Standards Development Organizations": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

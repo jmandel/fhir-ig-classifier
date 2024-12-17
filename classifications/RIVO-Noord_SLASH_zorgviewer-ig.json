@@ -1,0 +1,35 @@
+{
+  "rationale": "The \"zorgviewer-ig\" implementation guide primarily focuses on defining the technical specifications for a regional healthcare information viewer application within the Netherlands. It outlines the requirements, design, and technical implementation details for enabling data exchange between various healthcare systems, primarily focusing on FHIR STU3. \n\nThe IG defines specific FHIR profiles based on Dutch zib2017 standards, including profiles for Patient, Organization, Practitioner, Condition, Procedure, AllergyIntolerance, Flag, Immunization, LaboratoryTestResult, MedicationRequest, MedicationStatement, DocumentReference, and AuditEvent. It also specifies the use of SMART-on-FHIR for launching the Zorgviewer application from within EHR systems and outlines the necessary scopes for accessing specific FHIR resources. \n\nFurthermore, the IG details the design of the Zorgviewer architecture, including the interaction between different components such as the Zorgviewer Host, Zorgviewer application, Toestemming (Consent) service, Zorgverlener Directory (Provider Directory), and Ontsluiting Bronsysteem (Source System Unlocking). It also addresses security and privacy considerations, including authentication, authorization, and logging, with specific references to NEN 7513 for audit logging. \n\nThe IG includes sequence diagrams illustrating the workflows for launching the Zorgviewer, determining healthcare providers, and querying source systems. It also provides guidance on user interface elements and data mapping for various clinical concepts. The IG mentions specific healthcare systems like Epic, Chipsoft, Topicus, and Nexus, indicating a focus on interoperability with these systems. The geographic scope is clearly centered on the Netherlands, with references to Dutch standards, organizations, and regulations.",
+  "scores": {
+    "Functional Domain": {
+      "Clinical Care > General Clinical Care": 0.7,
+      "Infrastructure & Foundational": 0.4
+    },
+    "HL7 Standard": {
+      "FHIR > FHIR R4": 0.3,
+      "FHIR > FHIR STU3": 0.95,
+      "Cross-Paradigm": 0.25
+    },
+    "Scope/Purpose": {
+      "Data Modeling": 0.8,
+      "Data Exchange": 0.7,
+      "Security & Privacy": 0.4,
+      "Workflow Support": 0.3
+    },
+    "Geographic Scope": {
+      "National Jurisdictions > Netherlands": 0.9
+    },
+    "Stakeholders": {
+      "Technical Implementers > EHR Vendors": 0.6,
+      "Healthcare Provider Organizations > Clinical Care Teams": 0.85,
+      "Healthcare Provider Organizations > Health System Integration Teams": 0.4,
+      "Standards Organizations": 0.3
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
+}

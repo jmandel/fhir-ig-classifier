@@ -16,7 +16,11 @@ program
   .name('fhir-ig-classifier')
   .description('Analyzes and classifies FHIR Implementation Guides')
   .requiredOption('-i, --input <path>', 'path to input JSON file')
-  .option('-f, --full-context', 'use full context file for classification instead of just the analysis', false)
+  .option(
+    '--classify-full-content',
+    'classify using full IG content instead of AI-generated analysis',
+    false
+  )
   .version('1.0.0');
 
 program.parse();
@@ -27,12 +31,13 @@ const vertexAI = new VertexAI({
   location: "us-central1",
 });
 
-const generativeModel = vertexAI.getGenerativeModel({
+const generativeModelConfig = {
   model: "gemini-2.0-flash-exp",
   generation_config: {
-    temperature: 0.7,
+    temperature: 0,
   }
-});
+}
+const generativeModel = vertexAI.getGenerativeModel(generativeModelConfig);
 
 const analysisPrompt = `# FHIR IG Analysis
 Given the FHIR Implementation Guide (IG) source files above, provide a structured analysis addressing the following questions:
@@ -89,55 +94,137 @@ function getFormattedName(org: string, repo: string) {
   return `${org}_SLASH_${repo}`;
 }
 
-async function createContextMenuFile(repoDir: string, repo: string, org: string) {
-  await fs.mkdir(contextDir, { recursive: true });
-  const formattedName = getFormattedName(org, repo);
-  const contextFilePath = path.join(contextDir, `${formattedName}_context.md`);
+interface ContextFile {
+  path: string;
+  content: string;
+}
 
-  const inputDir = path.join(repoDir, 'input');
-  let fileContent = '';
-  const allowedExtensions = ['.md', '.fsh', '.plantuml'];
-  const maxSize = 500 * 1024; // 500KB in bytes
-  let currentSize = 0;
-
-  async function processDirectory(dir: string) {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
-    const sortedEntries = entries
-      .filter(entry => entry.name.toLowerCase() !== 'ignorewarnings.txt')
-      .sort((a, b) => {
-        if (a.isDirectory() && !b.isDirectory()) {
-          return -1;
-        } else if (!a.isDirectory() && b.isDirectory()) {
-          return 1;
-        } else {
-          return a.name.localeCompare(b.name);
-        }
-      });
-
-    for (const entry of sortedEntries) {
-      const fullPath = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        await processDirectory(fullPath);
-      } else if (entry.isFile() && allowedExtensions.includes(path.extname(entry.name))) {
-        const content = await fs.readFile(fullPath, 'utf-8');
-        const entryContent = `File: ${fullPath}\n\n${content}\n\n---\n\n`;
-        const entrySize = Buffer.byteLength(entryContent, 'utf-8');
-
-        if (currentSize + entrySize < maxSize) {
-          fileContent += entryContent;
-          currentSize += entrySize;
-        } else {
-          console.log(`Reached 500KB limit. Stopping file processing.`);
-          return; 
-        }
-      }
-    }
+function getFileScore(file: ContextFile): number {
+  const lowerPath = file.path.toLowerCase();
+  let score = 0;  
+  
+  // Deprioritize temp/archive/draft files
+  if (lowerPath.includes('/temp') || 
+      lowerPath.includes('/archiv') || 
+      lowerPath.includes('/example') || 
+      lowerPath.includes('/draft')) {
+    score -= 10;
   }
 
+  if (lowerPath.includes('/pagecontent')) {
+    score += 10;
+  }
+  
+  // Prioritize by extension
+  const ext = path.extname(lowerPath);
+  switch (ext) {
+    case '.md': score += 3; break;
+    case '.fsh': score += 2; break;
+    case '.plantuml': score += 1; break;
+  }
+
+  return score;
+}
+
+async function collectFiles(dir: string, allowedExtensions: string[]): Promise<ContextFile[]> {
+  const files: ContextFile[] = [];
+  const entries = await fs.readdir(dir, { withFileTypes: true });
+  
+  for (const entry of entries) {
+    if (entry.name.toLowerCase() === 'ignorewarnings.txt') continue;
+    
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      const subDirFiles = await collectFiles(fullPath, allowedExtensions);
+      files.push(...subDirFiles);
+    } else if (entry.isFile() && allowedExtensions.includes(path.extname(entry.name))) {
+      const content = await fs.readFile(fullPath, 'utf-8');
+      const relativePath = fullPath.replace(/^.*?repos\/[^/]+\//, '');
+      files.push({
+        path: fullPath,
+        content: `// File: ${relativePath}\n\n${content}\n\n---\n\n`
+      });
+    }
+  }
+  
+  return files;
+}
+
+async function createContextFile(repoDir: string, repo: string, org: string) {
+  await fs.mkdir(contextDir, { recursive: true });
+  const formattedName = getFormattedName(org, repo);
+  const contextFilePath = path.join(contextDir, formattedName + '.md');
+
+  const allowedExtensions = ['.md', '.fsh', '.plantuml', '.yaml', '.yml'];
+  const maxSize = 500 * 1024; // 500KB in bytes
+
   try {
+    // Collect all files
+    const files: ContextFile[] = [];
+    
+    // Get sushi-config first
+    const rootEntries = await fs.readdir(repoDir, { withFileTypes: true });
+    const sushiConfig = rootEntries.find(entry => 
+      entry.isFile() && 
+      (entry.name === 'sushi-config.yaml' || entry.name === 'sushi-config.yml')
+    );
+
+    if (sushiConfig) {
+      const fullPath = path.join(repoDir, sushiConfig.name);
+      const content = await fs.readFile(fullPath, 'utf-8');
+      files.push({
+        path: fullPath,
+        content: `File: ${fullPath}\n\n${content}\n\n---\n\n`
+      });
+    }
+
+    // Collect files from input directory
+    const inputDir = path.join(repoDir, 'input');
     await fs.access(inputDir);
-    await processDirectory(inputDir);
-    await fs.writeFile(contextFilePath, fileContent);
+    const inputFiles = await collectFiles(inputDir, allowedExtensions);
+    
+    // Sort input files by score and path
+    const sortedFiles = inputFiles.sort((a, b) => {
+      const scoreA = getFileScore(a);
+      const scoreB = getFileScore(b);
+      
+      if (scoreA !== scoreB) {
+        return scoreB - scoreA; // Higher scores first
+      }
+      
+      // If scores are equal, sort by path
+      return a.path.localeCompare(b.path);
+    });
+
+    // First determine which files we can include within size limit
+    let currentSize = files[0]?.content ? Buffer.byteLength(files[0].content, 'utf-8') : 0;
+    const includedFiles: ContextFile[] = files[0] ? [files[0]] : [];
+    
+    for (const file of sortedFiles) {
+      const fileSize = Buffer.byteLength(file.content, 'utf-8');
+      if (currentSize + fileSize < maxSize) {
+        includedFiles.push(file);
+        currentSize += fileSize;
+      } else {
+        console.log(`Reached ${maxSize} byte limit. Stopping file collection.`);
+        break;
+      }
+    }
+
+    // Now sort included files lexicographically by path (except sushi-config stays first)
+    const sushiConfigFile = includedFiles[0];
+    const sortedIncluded = includedFiles.slice(1)
+    console.log(sortedFiles.map(f => f.path));
+      // .sort((a, b) => a.path.localeCompare(b.path));
+    
+    // Write files in final order
+    let outputContent = '';
+    if (sushiConfigFile) {
+      outputContent = sushiConfigFile.content;
+    }
+    outputContent += sortedIncluded.map(f => f.content).join('');
+
+    await fs.writeFile(contextFilePath, outputContent);
     console.log(`Context file created: ${contextFilePath}`);
   } catch (error) {
     await logIssue(org, repo, `Error creating context file: ${error}`);
@@ -289,7 +376,7 @@ const classificationScheme = `# Multi-Axial Hierarchical Classification of HL7 I
 
 ---
 
-## Understanding Data Modeling vs. Data Exchange in FHIR IGs**
+## Distinguishing "Data Modeling" vs. "Data Exchange" in FHIR IGs**
 
 FHIR IGs often address both *how data is structured* (data modeling) and *how that data is shared* (data exchange). It's important to differentiate these two aspects:
 
@@ -332,7 +419,7 @@ async function classifyRepo(repo: string, org: string, analysis: string, useFull
   let contentToClassify = analysis;
   
   if (useFullContext) {
-    const contextFilePath = path.join(contextDir, `${formattedName}_context.md`);
+    const contextFilePath = path.join(contextDir, `${formattedName}.md`);
     try {
       contentToClassify = await fs.readFile(contextFilePath, 'utf-8');
     } catch (error) {
@@ -343,18 +430,25 @@ async function classifyRepo(repo: string, org: string, analysis: string, useFull
   const classificationPrompt = `
 ${classificationScheme}
 
-Based on the following ${useFullContext ? 'content' : 'analysis'} of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Provide the output as a JSON object with the following structure, where each array can contain one or more values:
+Based on the following ${useFullContext ? 'content' : 'analysis'} of the FHIR Implementation Guide "${repo}", classify it according to the multi-axial system above. Focus specifically on what this IG defines or specifies - not what it references or depends on.
+
+For example:
+- If an IG mentions genomics but doesn't define any genomics-specific profiles/extensions, don't classify it under genomics
+- If an IG depends on US Core but is actually defining dental profiles, classify it under dental care
+- If an IG references multiple clinical specialties but only defines profiles for cardiology, classify it under cardiology
+
+Provide the output as a JSON object with the following structure:
 {
-  "rationale": "A brief (2-3 sentences) explanation of why these classifications apply, citing specific evidence from the analysis",
-  "Primary Domain": ["one or more categories/subcategories from most specific to most general"],
-  "HL7 Standard": ["one or more applicable standards/versions"],
-  "Scope/Purpose": ["one or more applicable purposes"],
-  "Geographic Scope": ["one or more applicable scopes"],
-  "Data Source": ["one or more applicable sources"],
-  "Maturity Level": ["one or more applicable levels"]
+  "rationale": "A 100-200 word explanation of specifically why this IG is classified as it is; for each classification decsion, justifying the choice by citing specific language, profiles, extensions, or other guidance from the IG",
+  "Primary Domain": ["one or more categories/subcategories from most specific to most general, based on what the IG defines"],
+  "HL7 Standard": ["the standard(s) this IG actually creates artifacts for"],
+  "Scope/Purpose": ["the primary purpose of the artifacts this IG defines"],
+  "Geographic Scope": ["the jurisdictions this IG's artifacts are specifically designed for"],
+  "Data Source": ["the primary sources of the data this IG's artifacts are designed to capture/exchange"],
+  "Maturity Level": ["the current maturity level of this IG"]
 }
 
-Each array should contain all relevant values from the classification scheme, from most specific to most general. The rationale should explain the key evidence that led to these classifications. Do not include any markdown formatting or explanation text, just output the JSON object.
+Each array should contain all relevant values from the classification scheme, from most specific to most general. The rationale should focus on the concrete artifacts and specifications this IG creates. Do not include any markdown formatting or explanation text, just output the JSON object.
 
 Analysis:
 ${contentToClassify}
@@ -378,9 +472,7 @@ ${contentToClassify}
     
     // Parse JSON, add metadata, and reformat
     const jsonObj = JSON.parse(classification);
-    jsonObj.meta = {
-      model: generativeModel.model
-    };
+    jsonObj.meta = generativeModelConfig;
     const formattedJson = JSON.stringify(jsonObj, null, 2);
     
     console.log(`Classification for ${repo}:\n`, formattedJson);
@@ -410,11 +502,17 @@ async function main() {
         
         try {
           await cloneOrPullRepo(repoUrl, repoDir, org, repo);
-          await createContextMenuFile(repoDir, repo, org);
+          await createContextFile(repoDir, repo, org);
 
-          const contextFilePath = path.join(contextDir, `${formattedName}_context.md`);
-          const analysis = await analyzeRepo(contextFilePath, repo, org);
-          await classifyRepo(repo, org, analysis, options.fullContext);
+          const contextFilePath = path.join(contextDir, `${formattedName}.md`);
+          let analysis = "";
+          
+          // Only generate analysis if we're not using full content
+          if (!options.classifyFullContent) {
+            analysis = await analyzeRepo(contextFilePath, repo, org);
+          }
+          
+          await classifyRepo(repo, org, analysis, options.classifyFullContent);
         } catch (error) {
           await logIssue(org, repo, `Processing failed: ${error.message}`);
           continue;

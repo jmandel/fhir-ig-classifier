@@ -1,24 +1,31 @@
 {
-  "rationale": "The \"au-fhir-base\" FHIR Implementation Guide focuses on standardizing healthcare data representation within Australia using FHIR, specifically tailoring FHIR to the Australian context by incorporating local terminology, identifiers, and data elements relevant to the Australian healthcare system. This indicates a focus on Infrastructure and Foundational aspects by establishing a base for other Australian FHIR IGs.",
+  "rationale": "This IG primarily focuses on defining data models and foundational elements for the Australian healthcare context. It introduces new profiles such as 'AU Base Service Request' and modifies existing ones like 'AU Base Patient', 'AU Base RelatedPerson', and 'AU Base Practitioner' by adding extensions for 'Individual Pronouns', 'Person Recorded Sex Or Gender', and 'Australian Veteran Status'. It also defines new extensions like 'Australian Veteran Status' and 'Name Context', along with associated value sets and code systems. The IG also includes search parameters for 'AustralianIndigenousStatus', 'EncounterDischargeDisposition', and 'GenderIdentity'. The changes to existing profiles and the introduction of new profiles, extensions, value sets, code systems, and search parameters are all focused on data modeling for the Australian context. While it does include search parameters, the primary focus is on defining the structure and content of the data itself, not the mechanisms for exchanging it.",
   "Primary Domain": [
-    "Infrastructure & Foundational",
-    "Terminology and Value Sets"
+    "General Clinical Care",
+    "Infrastructure & Foundational"
   ],
   "HL7 Standard": [
     "FHIR",
     "FHIR R4"
   ],
   "Scope/Purpose": [
-    "Data Modeling",
-    "Data Exchange"
+    "Data Modeling"
   ],
   "Geographic Scope": [
-    "Other Regions (Australia)"
+    "Australia",
+    "National Jurisdictions"
   ],
   "Data Source": [
+    "EHR-Centric",
     "Mixed/Other"
   ],
   "Maturity Level": [
-    "Normative/Standard"
-  ]
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
 }

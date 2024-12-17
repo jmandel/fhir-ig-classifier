@@ -1,24 +1,30 @@
 {
-  "rationale": "AU Core is a FHIR R4-based implementation guide focused on standardizing core clinical and administrative information exchange in the Australian healthcare context. It defines data elements, profiles, and API interactions to enable interoperability between healthcare systems, primarily for EHR-centric data.",
+  "rationale": "This IG defines profiles for several core FHIR resources, including AllergyIntolerance, Condition, Encounter, Immunization, Location, Medication, MedicationRequest, Observation (for vital signs, diagnostic results, and pathology results), Organization, Patient, Practitioner, PractitionerRole, Procedure, and Smoking Status. These profiles are based on the Australian Core Data for Interoperability (AUCDI) requirements and are intended for use within the Australian healthcare context. The IG also defines two actors, Requester and Responder, and their associated CapabilityStatements, which specify the RESTful API interactions and search parameters supported by each actor. The IG focuses on data modeling by defining profiles and extensions, and data exchange by specifying capability statements and search parameters. The IG is specifically designed for the Australian healthcare context, and it is currently in ballot status.",
   "Primary Domain": [
-    "Clinical Care",
-    "General Clinical Care"
+    "General Clinical Care",
+    "Clinical Care"
   ],
   "HL7 Standard": [
-    "FHIR",
-    "FHIR R4"
+    "FHIR"
   ],
   "Scope/Purpose": [
-    "Data Exchange",
-    "Workflow Support"
+    "Data Modeling",
+    "Data Exchange"
   ],
   "Geographic Scope": [
-    "Other Regions (Australia)"
+    "Australia",
+    "National Jurisdictions"
   ],
   "Data Source": [
     "EHR-Centric"
   ],
   "Maturity Level": [
     "Normative/Standard"
-  ]
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
 }

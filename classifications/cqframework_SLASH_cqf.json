@@ -1,9 +1,0 @@
-{
-  "rationale": "The analysis indicates that the provided file is not an HL7 Implementation Guide, but rather an Apache 2.0 license. Therefore, it does not fit into the classification system for IGs. The license pertains to usage rights for software and does not have a direct context in healthcare data exchange, workflows, or clinical standards.",
-  "Primary Domain": [],
-  "HL7 Standard": [],
-  "Scope/Purpose": [],
-  "Geographic Scope": [],
-  "Data Source": [],
-  "Maturity Level": []
-}

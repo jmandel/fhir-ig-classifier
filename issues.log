@@ -709,3 +709,204 @@ fatal: destination path 'repos/IHE_SLASH_ITI.Finance' already exists and is not 
 
 [2024-12-16T22:58:54.257Z] HL7_SLASH_smp: Failed to clone repository: Repository not found or not accessible
 [2024-12-16T22:58:54.258Z] HL7_SLASH_smp: Processing failed: Repository not found or not accessible
+[2024-12-16T23:05:50.637Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:05:50.638Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T23:05:50.639Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:05:50.639Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:05:50.639Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:05:50.640Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T23:05:50.816Z] hspc_SLASH_core: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:05:50.816Z] hspc_SLASH_core: Processing failed: Repository not found or not accessible
+[2024-12-16T23:05:50.816Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:05:50.816Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T23:06:13.745Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:06:13.745Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:06:15.832Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:06:15.832Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T23:06:44.612Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:06:44.612Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T23:06:44.612Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:06:44.613Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T23:11:31.615Z] HL7_SLASH_patient-reported-outcomes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:11:31.616Z] HL7_SLASH_patient-reported-outcomes: Processing failed: No such file or directory
+[2024-12-16T23:11:31.616Z] HL7_SLASH_PhCP: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:11:31.616Z] HL7_SLASH_PhCP: Processing failed: No such file or directory
+[2024-12-16T23:11:47.724Z] HL7_SLASH_coordinated-registry-network: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:11:47.724Z] HL7_SLASH_coordinated-registry-network: Processing failed: No such file or directory
+[2024-12-16T23:12:13.970Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:12:13.970Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T23:12:13.970Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:12:13.970Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T23:12:29.652Z] hl7ch_SLASH_ig-template: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:12:29.652Z] hl7ch_SLASH_ig-template: Processing failed: No such file or directory
+[2024-12-16T23:13:53.987Z] ahdis_SLASH_ch-atc: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:13:53.987Z] ahdis_SLASH_ch-atc: Processing failed: Repository not found or not accessible
+[2024-12-16T23:13:54.056Z] ahdis_SLASH_ch-orf: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:13:54.056Z] ahdis_SLASH_ch-orf: Processing failed: Repository not found or not accessible
+[2024-12-16T23:16:15.605Z] HL7_SLASH_cdisc-lab: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:16:15.606Z] HL7_SLASH_cdisc-lab: Processing failed: No such file or directory
+[2024-12-16T23:17:48.625Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:17:48.625Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T23:17:48.625Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:17:48.626Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T23:21:23.610Z] HL7_SLASH_cdisc-map: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:21:23.610Z] HL7_SLASH_cdisc-map: Processing failed: Repository not found or not accessible
+[2024-12-16T23:21:40.413Z] HL7_SLASH_icsr-ae-reporting: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:21:40.413Z] HL7_SLASH_icsr-ae-reporting: Processing failed: Repository not found or not accessible
+[2024-12-16T23:22:04.327Z] HL7_SLASH_covid19library: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:22:04.327Z] HL7_SLASH_covid19library: Processing failed: Repository not found or not accessible
+[2024-12-16T23:23:14.111Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:23:14.111Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Processing failed: Repository not found or not accessible
+[2024-12-16T23:23:14.176Z] HL7_SLASH_fhir-health-care-surveys-reporting: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:23:14.176Z] HL7_SLASH_fhir-health-care-surveys-reporting: Processing failed: Repository not found or not accessible
+[2024-12-16T23:23:14.242Z] HL7_SLASH_fhir-medmorph-research-dex: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:23:14.242Z] HL7_SLASH_fhir-medmorph-research-dex: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:45.503Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.503Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T23:26:45.504Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.504Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:26:45.504Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.504Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T23:26:45.701Z] hspc_SLASH_core: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:45.701Z] hspc_SLASH_core: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:45.702Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.702Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T23:26:45.711Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.711Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:26:45.714Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.714Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T23:26:45.722Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.722Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T23:26:45.722Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.722Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T23:26:45.822Z] HL7_SLASH_patient-reported-outcomes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.822Z] HL7_SLASH_patient-reported-outcomes: Processing failed: No such file or directory
+[2024-12-16T23:26:45.823Z] HL7_SLASH_PhCP: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.823Z] HL7_SLASH_PhCP: Processing failed: No such file or directory
+[2024-12-16T23:26:45.834Z] HL7_SLASH_coordinated-registry-network: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.834Z] HL7_SLASH_coordinated-registry-network: Processing failed: No such file or directory
+[2024-12-16T23:26:45.846Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.846Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T23:26:45.847Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.847Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T23:26:45.858Z] hl7ch_SLASH_ig-template: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:45.858Z] hl7ch_SLASH_ig-template: Processing failed: No such file or directory
+[2024-12-16T23:26:45.951Z] ahdis_SLASH_ch-atc: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:45.951Z] ahdis_SLASH_ch-atc: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:46.015Z] ahdis_SLASH_ch-orf: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:46.015Z] ahdis_SLASH_ch-orf: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:46.065Z] HL7_SLASH_cdisc-lab: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:46.065Z] HL7_SLASH_cdisc-lab: Processing failed: No such file or directory
+[2024-12-16T23:26:46.134Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:46.134Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-16T23:26:46.134Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:26:46.134Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory
+[2024-12-16T23:26:46.386Z] HL7_SLASH_cdisc-map: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:46.387Z] HL7_SLASH_cdisc-map: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:46.467Z] HL7_SLASH_icsr-ae-reporting: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:46.467Z] HL7_SLASH_icsr-ae-reporting: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:46.561Z] HL7_SLASH_covid19library: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:46.562Z] HL7_SLASH_covid19library: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:46.669Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:46.670Z] HL7_SLASH_fhir-central-cancer-registry-reporting: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:46.745Z] HL7_SLASH_fhir-health-care-surveys-reporting: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:46.745Z] HL7_SLASH_fhir-health-care-surveys-reporting: Processing failed: Repository not found or not accessible
+[2024-12-16T23:26:46.813Z] HL7_SLASH_fhir-medmorph-research-dex: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:26:46.814Z] HL7_SLASH_fhir-medmorph-research-dex: Processing failed: Repository not found or not accessible
+[2024-12-16T23:29:31.052Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:29:31.053Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T23:29:31.054Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:29:31.054Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:29:31.055Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:29:31.055Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T23:29:31.236Z] hspc_SLASH_core: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:29:31.237Z] hspc_SLASH_core: Processing failed: Repository not found or not accessible
+[2024-12-16T23:29:31.238Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:29:31.238Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T23:29:47.949Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:29:47.949Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:29:51.666Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:29:51.667Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T23:30:15.002Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:30:15.002Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T23:30:15.002Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:30:15.003Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T23:32:37.853Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:37.854Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T23:32:37.854Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:37.854Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:32:37.854Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:37.855Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T23:32:38.056Z] hspc_SLASH_core: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:32:38.056Z] hspc_SLASH_core: Processing failed: Repository not found or not accessible
+[2024-12-16T23:32:38.057Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:38.057Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T23:32:38.067Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:38.067Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:32:38.069Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:38.069Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T23:32:38.078Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:38.078Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T23:32:38.078Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:32:38.078Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T23:42:57.909Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:42:57.910Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T23:42:57.912Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:42:57.912Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:42:57.922Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:42:57.926Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T23:42:58.094Z] hspc_SLASH_core: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:42:58.094Z] hspc_SLASH_core: Processing failed: Repository not found or not accessible
+[2024-12-16T23:42:58.099Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:42:58.100Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T23:43:14.681Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:43:14.681Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:43:18.407Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:43:18.407Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T23:43:41.612Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:43:41.612Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T23:43:41.612Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:43:41.613Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T23:50:22.500Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:50:22.501Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T23:50:22.504Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:50:22.508Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:50:22.508Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:50:22.508Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T23:50:22.682Z] hspc_SLASH_core: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:50:22.682Z] hspc_SLASH_core: Processing failed: Repository not found or not accessible
+[2024-12-16T23:50:22.683Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:50:22.683Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T23:50:35.220Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:50:35.220Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:50:38.269Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:50:38.269Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T23:56:35.109Z] HL7_SLASH_sdc-de: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:56:35.110Z] HL7_SLASH_sdc-de: Processing failed: No such file or directory
+[2024-12-16T23:56:35.110Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:56:35.111Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:56:35.112Z] argonautproject_SLASH_data-query: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:56:35.112Z] argonautproject_SLASH_data-query: Processing failed: No such file or directory
+[2024-12-16T23:56:35.287Z] hspc_SLASH_core: Failed to clone repository: Repository not found or not accessible
+[2024-12-16T23:56:35.287Z] hspc_SLASH_core: Processing failed: Repository not found or not accessible
+[2024-12-16T23:56:35.288Z] HL7_SLASH_FHIR-ONC-Meds: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:56:35.289Z] HL7_SLASH_FHIR-ONC-Meds: Processing failed: No such file or directory
+[2024-12-16T23:56:47.311Z] HL7_SLASH_daf-research: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:56:47.311Z] HL7_SLASH_daf-research: Processing failed: No such file or directory
+[2024-12-16T23:56:49.751Z] HL7_SLASH_us-breastcancer: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:56:49.752Z] HL7_SLASH_us-breastcancer: Processing failed: No such file or directory
+[2024-12-16T23:57:10.709Z] argonautproject_SLASH_provider-directory: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:57:10.709Z] argonautproject_SLASH_provider-directory: Processing failed: No such file or directory
+[2024-12-16T23:57:10.710Z] argonautproject_SLASH_scheduling: Error creating context file: ENOENT: No such file or directory
+[2024-12-16T23:57:10.710Z] argonautproject_SLASH_scheduling: Processing failed: No such file or directory
+[2024-12-16T23:57:58.683Z] IHE_SLASH_PCC.QEDm: Error classifying repo: TypeError: undefined is not an object (evaluating '(await generativeModel.generateContent(request)).response.candidates?.[0].content.parts')
+[2024-12-17T00:00:57.931Z] HL7_SLASH_patient-reported-outcomes: Error creating context file: ENOENT: No such file or directory
+[2024-12-17T00:00:57.931Z] HL7_SLASH_patient-reported-outcomes: Processing failed: No such file or directory
+[2024-12-17T00:00:57.932Z] HL7_SLASH_PhCP: Error creating context file: ENOENT: No such file or directory
+[2024-12-17T00:00:57.932Z] HL7_SLASH_PhCP: Processing failed: No such file or directory
+[2024-12-17T00:01:29.866Z] HL7_SLASH_coordinated-registry-network: Error creating context file: ENOENT: No such file or directory
+[2024-12-17T00:01:29.866Z] HL7_SLASH_coordinated-registry-network: Processing failed: No such file or directory
+[2024-12-17T00:01:48.333Z] argonautproject_SLASH_clinicalnotes: Error creating context file: ENOENT: No such file or directory
+[2024-12-17T00:01:48.333Z] argonautproject_SLASH_clinicalnotes: Processing failed: No such file or directory
+[2024-12-17T00:01:48.333Z] argonautproject_SLASH_questionnaire: Error creating context file: ENOENT: No such file or directory
+[2024-12-17T00:01:48.334Z] argonautproject_SLASH_questionnaire: Processing failed: No such file or directory

@@ -1,24 +1,31 @@
 {
-  "rationale": "The nzbase Implementation Guide focuses on establishing a standardized framework for exchanging healthcare information in New Zealand using FHIR. It defines extensions and terminology specific to the New Zealand healthcare context, primarily for use with EHR data. This suggests a focus on general clinical care within the New Zealand healthcare system.",
+  "rationale": "This IG primarily defines a set of FHIR extensions and value sets specific to New Zealand. It includes extensions for various purposes, such as recording additional practitioner authorisations, alias types, building names, conditions on practice, death dates, domicile codes, educational qualifications, funded programs, information sources, long-term conditions, messaging addresses, NZ citizenship, NZ ethnicity, NZ geocodes, NZ residency status, NZePS medication indicators, PHOs, practitioner role creators and status reasons, registration status, scope of practice, sex at birth, and suburb. These extensions are applied to various FHIR resources like Patient, Practitioner, Location, Organization, Condition, MedicationRequest, and PractitionerRole. The IG also defines value sets and code systems for these extensions, such as those for ACC patient occupations, additional practitioner authorisations, alias types, contact point purposes, coverage categories and types, datum codes, death date information sources, DHBs, domicile codes, ethnicities, funded programs, information sources, Iwi, Maori descent, NZ citizenship and residency statuses, PHOs, practitioner role status reasons, registration statuses, and scopes of practice. The IG does not define any workflows or data exchange mechanisms, focusing instead on data modeling and terminology.",
   "Primary Domain": [
-    "Clinical Care",
-    "General Clinical Care"
+    "General Clinical Care",
+    "Infrastructure & Foundational"
   ],
   "HL7 Standard": [
-    "FHIR",
-    "FHIR R4"
+    "FHIR"
   ],
   "Scope/Purpose": [
-    "Data Exchange",
-    "Data Modeling"
+    "Data Modeling",
+    "Knowledge Representation"
   ],
   "Geographic Scope": [
-    "Other Regions (New Zealand)"
+    "National Jurisdictions",
+    "New Zealand"
   ],
   "Data Source": [
-    "EHR-Centric"
+    "EHR-Centric",
+    "Mixed/Other"
   ],
   "Maturity Level": [
     "Draft/Trial Use"
-  ]
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
 }

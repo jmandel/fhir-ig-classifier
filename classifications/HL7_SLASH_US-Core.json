@@ -1,16 +1,16 @@
 {
-  "rationale": "The US Core IG focuses on standardizing healthcare data exchange in the US, specifically aligning with the USCDI and using FHIR profiles. It aims to improve interoperability and support various clinical workflows, primarily using data from EHRs.",
+  "rationale": "The US Core Implementation Guide defines a set of profiles, extensions, and value sets for use in the US healthcare context. It focuses on data modeling by defining profiles that constrain and extend base FHIR resources, such as Patient, Observation, and Condition. It also addresses data exchange by specifying search parameters and operations. The IG is based on FHIR R4 and is specifically designed for the US Realm. The data sources are primarily EHR-centric, and the maturity level is currently at the ballot stage.",
   "Primary Domain": [
-    "Clinical Care",
-    "General Clinical Care"
+    "General Clinical Care",
+    "Clinical Care"
   ],
   "HL7 Standard": [
     "FHIR",
     "FHIR R4"
   ],
   "Scope/Purpose": [
-    "Data Exchange",
-    "Data Modeling"
+    "Data Modeling",
+    "Data Exchange"
   ],
   "Geographic Scope": [
     "US Realm"
@@ -19,6 +19,12 @@
     "EHR-Centric"
   ],
   "Maturity Level": [
-    "Normative/Standard"
-  ]
+    "Draft/Trial Use"
+  ],
+  "meta": {
+    "model": "gemini-2.0-flash-exp",
+    "generation_config": {
+      "temperature": 0
+    }
+  }
 }

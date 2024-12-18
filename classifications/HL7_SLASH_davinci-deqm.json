@@ -10,56 +10,42 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The Data Exchange for Quality Measures (DEQM) Implementation Guide is explicitly designed for the US healthcare system, focusing on quality measurement and reporting within that context. It references US-specific programs and initiatives, indicating a strong national focus.",
+    "summary": "The Data Exchange for Quality Measures (DEQM) Implementation Guide explicitly states it is designed for the US Realm, addressing interoperability challenges specific to quality measurement and reporting in the United States. While acknowledging broader applicability, the primary focus and governance are within the US healthcare ecosystem.",
     "scores": {
       "Universal Realm": 0,
-      "National": 1,
+      "National > United States": 1,
       "Regional": 0
     }
   },
   "Domain Focus": {
-    "summary": "The DaVinci DEQM Implementation Guide primarily focuses on standardizing the exchange of data for quality measurement and reporting, leveraging FHIR resources and operations. It emphasizes the use of MeasureReport profiles and defines specific workflows for data submission, collection, and gaps in care reporting. While it touches upon administrative aspects and clinical data, its core purpose revolves around quality measurement and reporting within a value-based care context.",
+    "summary": "The Data Exchange for Quality Measures (DEQM) Implementation Guide primarily focuses on standardizing the exchange of data for quality measurement and reporting, leveraging FHIR R4. It emphasizes the use of FHIR operations and specific profiles for different reporting scenarios, including individual and summary measure reports, as well as gaps in care reporting. While it touches upon administrative aspects and clinical data, its core purpose revolves around quality reporting and workflow optimization for data exchange between providers and payers.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0.6,
       "Clinical Data": 0.6,
-      "Clinical Knowledge": 0.2,
+      "Clinical Knowledge": 0.4,
       "Diagnostics": 0.2,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0.4,
       "Medications": 0.2,
-      "Payment & Financial": 0.4,
       "Public Health": 0.2,
       "Quality & Reporting": 1,
       "Research": 0,
       "Workflow": 0.8
     }
   },
-  "Implementation Approach": {
-    "summary": "The Data Exchange for Quality Measures (DEQM) IG primarily focuses on defining data exchange patterns for quality measurement using FHIR resources and operations. It heavily relies on Data Profiles to structure MeasureReports and related data, and utilizes REST APIs and Services (custom operations) for data submission and retrieval. Terminology plays a significant role in defining code systems and value sets for quality measures. Decision Support is present in the form of the $care-gaps operation and related profiles, but it's not the central focus. Messaging, Documents, Forms & UI, and Subscriptions are not significantly utilized in this version of the IG.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0.6,
-      "Documents": 0.2,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.8,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The DaVinci DEQM IG primarily focuses on standardizing the exchange of quality measure data between EHR systems and Payer systems. EHR systems are expected to generate and submit quality measure reports, while Payer systems are expected to receive and process them. Clinical Decision Support systems play a key role in identifying care gaps. Other systems have more limited or indirect involvement.",
+    "summary": "The DaVinci DEQM IG focuses on standardizing the exchange of quality measure data between providers and payers, primarily for value-based care programs. EHR systems are central to implementing this IG, as they are the primary source of clinical data used for quality measurement. Payer systems are also key, as they receive and process the quality data for reimbursement and performance evaluation. Clinical Decision Support systems play an important role in identifying and addressing care gaps. Other systems have more limited or indirect involvement.",
     "scores": {
+      "Clinical Decision Support": 0.6,
       "EHR Systems": 1,
-      "PHR Systems": 0.2,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
       "Payer Systems": 0.8,
       "Pharmacy Systems": 0.4,
-      "Lab Systems": 0.4,
-      "Imaging Systems": 0.4,
+      "PHR Systems": 0.2,
       "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.4
+      "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {

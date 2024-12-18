@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining FHIR profiles and extensions for the Swedish healthcare ecosystem. It heavily relies on FHIR for its core structure and functionality, with no significant use of other HL7 standards like CDA, v2, or v3. While it leverages Swedish-specific identifiers and terminologies, it does not explicitly aim for cross-paradigm integration.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the Swedish healthcare system. It defines profiles, extensions, and value sets specific to Sweden, including Swedish identifiers and terminology. It references Swedish base profiles and aims to solve interoperability challenges within the Swedish healthcare ecosystem. Therefore, it is clearly a national guide for Sweden.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Sweden": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on establishing a common set of profiles and extensions for Swedish healthcare, emphasizing administrative aspects like patient, practitioner, and organization identification. It also touches upon clinical data through the ServiceRequest profile and the use of SNOMED CT. The \"Lite\" profiles suggest a focus on streamlined workflows and basic data exchange, rather than complex clinical scenarios. Identity and security are implicitly addressed through the use of standard FHIR security mechanisms and the focus on Swedish-specific identifiers. The IG does not address areas like medications, diagnostics, or detailed care planning.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing data exchange within the Swedish healthcare ecosystem. It defines core profiles and extensions for resources like Patient, Practitioner, Organization, and ServiceRequest, tailored for Swedish-specific identifiers and terminology. The primary systems involved are EHRs, which need to fully implement the IG to ensure interoperability. Other systems like PHR and Pharmacy systems have limited but clear integration requirements, mainly for patient identification and medication-related data exchange. Public Health systems may leverage the standardized data for population health monitoring, while Research Platforms could utilize it for data collection and analysis. Payer systems are not directly involved in the clinical data exchange defined by this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily targets the Swedish healthcare ecosystem, focusing on standardizing data exchange between various healthcare IT systems. Clinical Care Teams are the core users, as the IG directly impacts their ability to access and share patient information, manage referrals, and coordinate care. Healthcare Administrators also have a significant role, as the IG aims to reduce administrative burdens and improve data quality. While Patients and Caregivers are not directly interacting with the IG, they benefit from improved care coordination and potentially easier access to services like self-referrals. Public Health Agencies and Research Organizations have a limited role, potentially using the standardized data for population health analysis and research, respectively. Payers are not directly addressed, and Government Agencies have a minimal role, primarily in setting the context for the IG's development within the Swedish healthcare system.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

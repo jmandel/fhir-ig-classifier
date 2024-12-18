@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR, defining a message-based communication pattern for non-acute care in Denmark. It leverages FHIR resources and profiles extensively. While it acknowledges older standards like DIS91/XDIS91 (likely based on v2 or v3) for backward compatibility in specific scenarios, it doesn't directly integrate with CDA, v2, or v3. Cross-paradigm integration is minimal, primarily focused on bridging the gap between FHIR and the older standards it replaces.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the Danish healthcare system, as indicated by its focus on replacing the older Danish DIS91/XDIS91 standard, its reliance on nationally agreed categories and value sets, its governance by MedCom (a Danish organization), and its stated scope limited to ad-hoc, non-acute care communication in Denmark. Therefore, it is classified as a National Implementation Guide for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling secure, standardized, and interoperable exchange of ad-hoc, non-acute care-related communications within the Danish healthcare system. It primarily addresses the workflow of message-based communication, including sending, replying, and forwarding messages with attachments. While it touches upon clinical data through message content and patient context, its core purpose is to facilitate communication rather than to manage or exchange detailed clinical information. Identity and security are crucial for ensuring the confidentiality and integrity of the exchanged information. The IG is designed for the Danish healthcare context and replaces older communication standards.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling secure, standardized, and interoperable exchange of ad-hoc, non-acute care-related communications in Denmark. It primarily targets EHR systems and other systems used by healthcare providers for patient care and communication. While it doesn't directly involve clinical decision support or research, it does facilitate the exchange of information that could be used by these systems. Payer and public health systems have minimal involvement, while PHR systems might have limited interaction for patient access to communication records.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily targets healthcare providers in Denmark for non-acute care communication, replacing older standards with a FHIR-based approach. Clinical Care Teams are the core users, driving the design with their need for secure, standardized messaging. Healthcare Administrators and Government Agencies (MedCom) have significant influence due to operational and regulatory needs. Public Health Agencies and Research Organizations have minimal involvement, while Patients and Payers have a limited role, primarily as subjects of the communication.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.2,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

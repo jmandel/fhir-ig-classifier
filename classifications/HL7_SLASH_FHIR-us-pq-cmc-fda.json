@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing Pharmaceutical Quality/Chemistry, Manufacturing, and Controls (PQ/CMC) data submission to the FDA using FHIR R5. It heavily relies on FHIR for its core structure and functionality, with no relevance to CDA, v2, or v3. While it doesn't integrate across different HL7 paradigms, it does acknowledge and leverage other HL7 projects, giving it a minimal score in the Cross-Paradigm category.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the submission of Pharmaceutical Quality/Chemistry, Manufacturing, and Controls (PQ/CMC) data to the US Food and Drug Administration (FDA). It explicitly states its purpose and scope within the context of US FDA regulations and processes, making it a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the submission of Pharmaceutical Quality/Chemistry, Manufacturing, and Controls (PQ/CMC) data to the US FDA, primarily for solid oral dosage forms. It leverages FHIR R5 to create a structured, machine-readable format for data exchange, replacing the traditional document-centric approach. The IG's core purpose is to streamline the drug approval process by improving data quality, consistency, and efficiency. While it touches upon medications and administrative aspects related to drug product applications, its primary focus is on the detailed technical specifications of drug substances, manufacturing processes, and quality control.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the submission of Pharmaceutical Quality/Chemistry, Manufacturing, and Controls (PQ/CMC) data to the FDA. Therefore, the primary systems involved are those used by pharmaceutical companies for managing and submitting this data, and the FDA's systems for receiving and reviewing it. Clinical systems like EHRs and PHRs are not directly involved. Research platforms may play a role in generating the data, but the IG's focus is on regulatory submission.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the submission of Pharmaceutical Quality/Chemistry, Manufacturing, and Controls (PQ/CMC) data to the US Food and Drug Administration (FDA). Therefore, the primary users are those involved in preparing and reviewing these submissions, with a strong emphasis on regulatory bodies and pharmaceutical companies. Clinical care teams, patients, and caregivers are not directly involved in the scope of this IG.",
+    "scores": {
+      "Clinical Care Teams": 0,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.8,
+      "Government Agencies": 1
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

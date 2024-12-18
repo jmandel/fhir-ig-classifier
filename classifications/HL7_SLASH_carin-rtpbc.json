@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, defining a RESTful API for real-time pharmacy benefit checks. It leverages FHIR resources and operations extensively. While it acknowledges and adapts concepts from the NCPDP RTPB standard, it doesn't directly utilize HL7 v2, v3, or CDA. Cross-paradigm integration is limited to adapting an external standard (NCPDP) into the FHIR framework.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for the United States, focusing on medications covered under the pharmacy benefit portion of a patient's health insurance within the US. It also references US-specific standards like NCPDP and US Core profiles. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on enabling patients to perform real-time pharmacy benefit checks to understand their medication costs and insurance coverage. It primarily deals with medications, insurance/payment, and some administrative aspects related to patient and provider identification. It leverages clinical data in the form of medication requests but doesn't delve into detailed clinical information or workflows. The IG has a limited scope, focusing on a specific use case within the US healthcare system.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling patients to perform real-time pharmacy benefit checks. Therefore, PHR systems and Payer/Pharmacy Benefit Manager (PBM) systems are central to its implementation. EHRs have a limited role, primarily in providing prescription data. Pharmacy systems play a role in providing pricing information. Public health and research platforms are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 1,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide primarily targets patients and caregivers, empowering them with real-time information about medication costs and coverage under their pharmacy benefits. Payers (insurers/PBMs) are also key users as they are responsible for providing this information. Clinical care teams have a limited role, mainly providing prescription information. Public health agencies, research organizations, and healthcare administrators are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0,
+      "Patients and Caregivers": 1,
+      "Payers": 0.8,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

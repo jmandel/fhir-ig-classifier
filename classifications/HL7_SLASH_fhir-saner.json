@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The SANER IG is fundamentally based on FHIR, using it as the core framework for defining and exchanging situational awareness data. It does not utilize HL7 v2 or v3 directly, nor does it focus on CDA. While it doesn't explicitly integrate across different HL7 paradigms, it does leverage standard terminologies that are used across HL7 standards, indicating some level of cross-paradigm awareness.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR SANER Implementation Guide is designed for international use during public health emergencies, focusing on the exchange of situational awareness information between healthcare facilities and public health agencies. It does not specify a particular national or regional scope, but rather aims to be broadly applicable and adaptable to various contexts. It mentions the use of national core profiles (e.g., US Core, UK Core) to ensure consistency within a region, but this is to support its use within national contexts rather than limit its scope to a specific nation.",
+    "scores": {
+      "Universal Realm": 0.8,
+      "National": 0.2,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The FHIR SANER Implementation Guide primarily focuses on enabling the exchange of situational awareness data between healthcare facilities and public health agencies during emergencies. It leverages FHIR to standardize the representation and reporting of measures related to hospital capacity, resource utilization, and patient impact. While it touches upon clinical data and workflow, its core purpose is to support public health monitoring and response.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.8,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "The FHIR SANER IG focuses on enabling real-time exchange of situational awareness data between healthcare facilities and public health agencies during emergencies. EHR systems are central to collecting and reporting this data, while Public Health Systems are the primary consumers. Payer systems are not directly involved. Clinical Decision Support, Pharmacy, PHR, and Research Platforms have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The SANER IG primarily focuses on facilitating data exchange between healthcare facilities and public health agencies during emergencies. Clinical care teams provide the data, while public health agencies are the primary consumers, driving the IG's design. Government agencies have a significant role in oversight and regulation, and healthcare administrators are involved in implementing and managing the data reporting processes. Research organizations may utilize the data for analysis, while payers and patients/caregivers have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

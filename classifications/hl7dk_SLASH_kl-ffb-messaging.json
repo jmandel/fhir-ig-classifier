@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide defines a message-based approach for exchanging social care orders within the Danish healthcare system, leveraging FHIR R4 as its foundation. It heavily utilizes FHIR resources and profiles, with minimal acknowledgment of v2 and v3 for specific code systems. It does not use CDA and does not explicitly aim for cross-paradigm integration.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Danish healthcare system, focusing on the exchange of social care information based on the Danish \"Fælles Faglige Begrebsmodel\" (FFB). It defines profiles, extensions, and value sets tailored to the Danish context, making it a national IG for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the electronic ordering of social care plans within the Danish healthcare system, leveraging the Fælles Faglige Begrebsmodel (FFB). It primarily addresses the workflow of ordering and managing social care services, with a strong emphasis on care planning and related clinical data. It also touches upon administrative aspects, identity & security, and workflow, but these are secondary to the core focus on care planning and clinical data exchange.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 1,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on the exchange of social care orders within the Danish healthcare system, specifically related to the Fælles Faglige Begrebsmodel (FFB). It primarily involves systems used by municipal authorities and social care providers for ordering and managing care plans. EHR systems are central to managing the care plans and patient data, while payer systems are involved in handling billing information. Public health systems may have a limited role in monitoring population-level trends related to social care. Other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the exchange of social care orders between Danish municipal authorities and social care service providers. Therefore, the core users are the staff within these organizations who are responsible for creating, sending, receiving, and processing these orders. While clinical care teams might indirectly benefit from improved care coordination, their direct involvement in using this IG is limited. Patients and caregivers are not direct users but are the subjects of the information being exchanged. Payers are not directly involved in this message exchange. Public health agencies and research organizations are not the primary focus, although the standardized data could potentially be used for these purposes in the future. Government agencies are involved as they set the regulations and standards that this IG adheres to.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

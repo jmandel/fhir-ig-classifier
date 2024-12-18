@@ -1,9 +1,9 @@
 {
   "HL7 Standard": {
-    "summary": "The CH CRL IG is fundamentally based on FHIR R4, defining a FHIR-based document exchange for cancer registration. It doesn't use CDA, v2, or v3 directly. While it leverages multiple terminologies and maps to mCODE, suggesting some cross-paradigm awareness, this is not a core aspect of the IG's design.",
+    "summary": "The CH CRL IG is fundamentally based on FHIR R4, defining a FHIR-based document exchange for cancer registration. It does not utilize CDA, v2, or v3 directly. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and mapping to mCODE suggests an awareness of the broader HL7 ecosystem.",
     "scores": {
       "CDA": 0,
-      "Cross-Paradigm": 0.4,
+      "Cross-Paradigm": 0.2,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
@@ -13,57 +13,43 @@
     "summary": "The Implementation Guide is explicitly designed for use in Switzerland, aligning with Swiss laws and regulations (NLCR and OCR) and utilizing Swiss-specific code systems (NKRS). It focuses on cancer registration within the Swiss healthcare system.",
     "scores": {
       "Universal Realm": 0,
-      "National > Switzerland": 1,
+      "National": 1,
       "Regional": 0
     }
   },
   "Domain Focus": {
-    "summary": "The CH CRL IG primarily focuses on the standardized exchange of cancer registration data in Switzerland, leveraging FHIR R4 to ensure interoperability between healthcare providers and the national cancer registry. It heavily emphasizes clinical data related to cancer diagnosis, staging, and basic patient demographics, with a strong reliance on established terminologies and custom code systems. While it touches upon administrative aspects related to patient and organization identification, its core purpose revolves around structured clinical data exchange for cancer registration, making it a clinically driven IG with a public health application.",
+    "summary": "The CH CRL Implementation Guide focuses on standardizing cancer registration in Switzerland using FHIR. Its primary goal is to facilitate the exchange of structured cancer data between healthcare providers and the national cancer registry. Therefore, it heavily emphasizes clinical data related to cancer diagnosis, staging, and basic patient information, with a strong reliance on established medical terminologies. While it touches upon administrative aspects for reporting and includes elements of workflow for data submission, its core is the detailed specification of clinical cancer data for registration purposes.",
     "scores": {
       "Administrative": 0.6,
       "Care Planning": 0,
       "Clinical Data": 1,
       "Clinical Knowledge": 0.2,
       "Diagnostics": 0.8,
-      "Identity & Security": 0.4,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0.8,
       "Quality & Reporting": 0.6,
       "Research": 0.4,
       "Workflow": 0.6
     }
   },
-  "Implementation Approach": {
-    "summary": "The CH CRL IG primarily focuses on defining data profiles and terminology for cancer registration, using a document-based approach for data exchange. While REST APIs are not explicitly defined, the submission of a Bundle suggests potential use. Messaging and services are not central to the IG's approach, and decision support is not addressed. Forms & UI are not in scope.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 1,
-      "Forms & UI": 0,
-      "Messaging": 0.2,
-      "REST APIs": 0.4,
-      "Services": 0,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The CH CRL IG focuses on standardized cancer data reporting to the Swiss National Cancer Registry. EHR systems are central to data collection and FHIR resource creation. Lab and Imaging systems provide crucial diagnostic data. Public Health Systems, specifically the cancer registry, are the primary recipients of the data. Clinical Decision Support could leverage the standardized data for improved cancer care, and Research Platforms can utilize the aggregated data for epidemiological studies. Payer and Pharmacy systems have minimal involvement, and PHR systems are not directly addressed in this IG.",
+    "summary": "The CH CRL IG focuses on standardized cancer data reporting from healthcare providers to the Swiss National Cancer Registry. EHR systems are central to this process, with significant involvement from lab and imaging systems for diagnostic data. Public health systems are key recipients of the aggregated data. Research platforms may utilize this standardized data, and clinical decision support systems might leverage it for tailored care recommendations, though to a lesser extent.",
     "scores": {
+      "Clinical Decision Support": 0.4,
       "EHR Systems": 1,
-      "PHR Systems": 0,
-      "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.2,
+      "Imaging Systems": 0.6,
       "Lab Systems": 0.8,
-      "Imaging Systems": 0.8,
-      "Public Health Systems": 1,
-      "Clinical Decision Support": 0.6,
-      "Research Platforms": 0.8
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
     }
   },
   "Users & Stakeholders": {
-    "summary": "This Implementation Guide (IG) primarily focuses on enabling healthcare providers to report cancer cases to the Swiss National Cancer Registry in a standardized FHIR format. Therefore, Clinical Care Teams and Public Health Agencies are the core users. Government Agencies have a strong influence due to the legal requirements driving the IG. Healthcare Administrators have a role in implementing the IG within their institutions, while Research Organizations may utilize the standardized data for research purposes. Payers and Patients/Caregivers have minimal direct involvement.",
+    "summary": "This Implementation Guide (IG) primarily focuses on enabling healthcare providers to report cancer cases to the Swiss National Cancer Registry in a standardized FHIR format. Therefore, Clinical Care Teams and Public Health Agencies are the core users. Government Agencies have a strong influence due to the legal requirements driving the IG. Healthcare Administrators have a role in implementing the IG within their institutions. Research Organizations may utilize the standardized data, and Payers might have a minimal interest in aggregated data. Patients and Caregivers are not directly involved in the data exchange process defined by this IG.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.6,

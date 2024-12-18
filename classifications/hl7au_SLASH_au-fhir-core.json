@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide explicitly states it is designed for the Australian healthcare context, referencing Australian-specific identifiers, terminologies, and initiatives like AUCDI. It builds upon AU Base and focuses on standardizing data exchange within Australia. Therefore, it is classified as a National Implementation Guide for Australia.",
+    "summary": "The Implementation Guide explicitly states it is designed for the Australian healthcare context, referencing Australian-specific identifiers, terminologies, and initiatives like AUCDI. It builds upon AU Base and focuses on standardizing data exchange within Australia.",
     "scores": {
       "Universal Realm": 0,
       "National > Australia": 1,
@@ -18,59 +18,45 @@
     }
   },
   "Domain Focus": {
-    "summary": "The AU Core Implementation Guide primarily focuses on establishing a baseline for interoperability in the Australian healthcare system. It emphasizes the standardization of core administrative and clinical data exchange, leveraging FHIR R4 and AU Base profiles. While it touches upon various domains, its core purpose revolves around defining minimum requirements for representing and exchanging fundamental patient, provider, and clinical information, including demographics, conditions, allergies, medications, immunizations, procedures, and observations. It also places significant emphasis on identity and security through the use of specific identifiers and secure communication protocols.",
+    "summary": "The AU Core Implementation Guide primarily focuses on establishing a baseline for interoperability in the Australian healthcare system by defining profiles and constraints for core administrative and clinical data exchange using FHIR. It emphasizes patient-centric data, including demographics, conditions, allergies, medications, immunizations, procedures, and observations, with a strong emphasis on standardized identifiers and terminology. While it touches upon security and workflow, its core purpose is to ensure consistent representation and exchange of fundamental health information.",
     "scores": {
       "Administrative": 0.8,
       "Care Planning": 0.2,
-      "Clinical Data": 0.8,
-      "Clinical Knowledge": 0,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
       "Diagnostics": 0.6,
-      "Identity & Security": 0.8,
-      "Medications": 0.6,
-      "Payment & Financial": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
       "Public Health": 0.4,
-      "Quality & Reporting": 0,
+      "Quality & Reporting": 0.2,
       "Research": 0,
       "Workflow": 0.4
     }
   },
-  "Implementation Approach": {
-    "summary": "The AU Core IG primarily focuses on defining a set of FHIR resource profiles tailored for the Australian healthcare context, emphasizing data modeling and terminology standardization. It also defines RESTful interactions for these profiles, making REST APIs a key approach. While it touches upon services through custom search parameters and mentions subscriptions in the context of future development, these are not central to its current implementation. Decision support, documents, forms, and messaging are not significantly addressed in this IG.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.4,
-      "Subscriptions": 0.2,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The AU Core Implementation Guide focuses on standardizing the exchange of core digital health information within Australia. It defines a minimum set of requirements for FHIR-based interfaces, primarily impacting systems that handle patient demographics, clinical observations, medications, and other foundational data. EHR systems are central to its implementation, while systems like Pharmacy, Lab, and Imaging have important but more specific roles. Payer systems have minimal involvement, and PHR systems are expected to support patient access to the standardized data.",
+    "summary": "The AU Core Implementation Guide focuses on standardizing core health information exchange within Australia. It heavily impacts EHR systems as the primary source and consumer of this data. Pharmacy and Lab systems are also key, given the focus on medication and observation profiles. Public Health systems will leverage this data for population health, and PHR systems will need to display this information to patients. Payer systems have a minimal role, primarily related to patient identifiers. Research platforms may utilize this standardized data, and Clinical Decision Support systems will need to integrate with the standardized data elements. Imaging systems have a limited role, primarily related to observations.",
     "scores": {
+      "Clinical Decision Support": 0.6,
       "EHR Systems": 1,
-      "PHR Systems": 0.8,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.8,
       "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.6,
-      "Lab Systems": 0.6,
-      "Imaging Systems": 0.6,
-      "Public Health Systems": 0.4,
-      "Clinical Decision Support": 0.8,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.6,
       "Research Platforms": 0.4
     }
   },
   "Users & Stakeholders": {
-    "summary": "The AU Core Implementation Guide primarily targets software vendors and healthcare providers implementing systems for exchanging core health information within Australia. Clinical Care Teams and Healthcare Administrators are key users, driving the need for standardized data exchange. Government Agencies have a significant role in setting standards and regulations, while Public Health Agencies benefit from standardized data for population health monitoring. Patients and Caregivers indirectly benefit from improved data sharing, and Research Organizations may utilize the standardized data for research purposes. Payers have a minimal role in this specific IG.",
+    "summary": "The AU Core Implementation Guide primarily targets software vendors and healthcare providers involved in digital health information exchange within Australia. Clinical Care Teams are the core users, as the IG defines how core health information should be recorded and exchanged, directly impacting their workflows. Software vendors building systems for these teams are also core users. Healthcare Administrators have a significant influence, as the IG impacts data management and interoperability within their organizations. Government Agencies have a significant role in setting standards and regulations, influencing the IG's development. Payers and Public Health Agencies have specific needs related to claims processing and population health monitoring, respectively, that are addressed by the IG. Patients and Caregivers have a defined but limited role, primarily related to data access and communication preferences. Research Organizations have minimal involvement, as the IG focuses on core clinical data exchange rather than research-specific data.",
     "scores": {
-      "Clinical Care Teams": 0.8,
+      "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.8,
-      "Patients and Caregivers": 0.2,
-      "Payers": 0,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.6,
       "Public Health Agencies": 0.6,
-      "Research Organizations": 0.4,
+      "Research Organizations": 0.2,
       "Government Agencies": 0.8
     }
   },

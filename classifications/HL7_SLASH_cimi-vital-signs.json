@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on defining FHIR Observation profiles for vital signs. It heavily relies on FHIR's RESTful API and resource model, with no mention or use of CDA, v2, or v3. While it extends US Core profiles, it doesn't explicitly integrate across different HL7 paradigms.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states its scope is limited to the US realm, building upon US Core profiles and aligning with US-specific initiatives. Therefore, it is classified as a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the representation of vital signs data in FHIR, enabling semantic interoperability and enhancing the context of vital signs observations. It leverages LOINC and UCUM for coding and units, and defines extensions for capturing qualifying information. While it touches upon administrative and workflow aspects, its core purpose is to improve the quality and usability of clinical data, particularly vital signs.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0.6,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing vital signs data in FHIR, primarily impacting EHRs and systems that consume or produce vital signs data.  It emphasizes detailed contextual information, making it relevant for clinical decision support and research. While not directly focused on payers, the standardized data could indirectly improve claims processing. Public health systems could benefit from aggregated, standardized vital signs data.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the representation of vital signs for improved interoperability. Clinical Care Teams are the core users, as they rely on accurate and detailed vital signs data for patient care. Researchers also heavily benefit from the standardized data for analysis. Public Health Agencies can leverage this data for population health monitoring. While Patients and Caregivers may interact with systems using this IG, their influence on its design is less direct. Payers and Healthcare Administrators have a limited role, primarily in ensuring compliance and data exchange. Government Agencies have a minimal role, mainly related to oversight and potential future regulations.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

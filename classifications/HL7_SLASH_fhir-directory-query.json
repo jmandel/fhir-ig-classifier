@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on defining a FHIR-based API for querying a national healthcare directory. It heavily relies on FHIR resources and RESTful interactions, with no significant dependence on CDA, v2, or v3. While it acknowledges other HL7 standards and approaches, its core functionality is solely based on FHIR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for a national healthcare directory, specifically within the context of the US ONC Healthcare Directory Initiative (HcDir) and the Federal Health Architecture (FHA). Therefore, it is classified as a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on establishing a standardized way to query a national healthcare directory using FHIR. It primarily deals with administrative data related to providers, organizations, locations, and services, aiming to improve data accuracy and streamline workflows like referrals and provider selection. While it touches upon identity and security, its core is firmly rooted in the administrative domain, facilitating the exchange of directory information.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on querying a national healthcare directory. EHR systems will need to integrate to query and consume directory information for referrals, care coordination, and provider data management. Payer systems will heavily rely on this for network management, provider data validation, and member enrollment. Public health systems may use it for provider outreach and data aggregation. Pharmacy and Lab systems have limited but defined roles in verifying provider and organization information. Research platforms might use it for identifying potential research sites and collaborators. PHR systems could leverage it for provider search and selection. Clinical Decision Support systems have minimal direct interaction, while Imaging Systems are not involved.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of healthcare directory information, primarily benefiting systems and organizations involved in managing and accessing provider, organization, and service data. Clinical Care Teams and Healthcare Administrators are key users, while Payers and Government Agencies also have significant roles. Patients and Caregivers are explicitly out of scope. Public Health and Research Organizations have limited involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

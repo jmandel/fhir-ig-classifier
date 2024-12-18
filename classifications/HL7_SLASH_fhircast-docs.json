@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (FHIRcast) focuses on real-time UI synchronization and content sharing between healthcare applications. It heavily relies on FHIR for its data model, resource definitions, and interaction patterns. While it acknowledges other standards like CCOW, it doesn't directly integrate with CDA, v2, or v3. It does demonstrate a degree of cross-paradigm thinking by leveraging concepts from WebSub and SMART on FHIR within a FHIR-centric approach.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIRcast Implementation Guide describes a standard for real-time UI synchronization and content sharing between healthcare applications. It does not specify any particular jurisdiction or region, focusing instead on a universal approach to solving a common interoperability challenge. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "FHIRcast primarily focuses on enabling real-time UI synchronization and content sharing between healthcare applications, making Workflow its core domain. It leverages Administrative data like Patient and Encounter for context sharing and touches upon Clinical Data through resources like DiagnosticReport and ImagingStudy. Identity & Security is important for secure communication and session management. While it interacts with clinical data, it doesn't define detailed clinical workflows or knowledge representation, nor does it address areas like medications, insurance, or public health.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "FHIRcast primarily focuses on real-time UI synchronization and content sharing between healthcare applications, particularly within a clinical workflow. EHR systems are central to this, as are systems that display or manipulate clinical data like imaging and lab systems. Clinical Decision Support systems can leverage the synchronized context. Pharmacy and PHR systems have limited involvement, while Payer and Public Health systems are not directly involved. Research platforms might use FHIRcast for data synchronization in specific research workflows.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.8,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (FHIRcast) focuses on real-time UI synchronization and content sharing between healthcare applications, primarily benefiting clinical users. Clinical Care Teams are the core users, as the IG directly addresses their workflow needs. Application developers building these systems are also key users. Patients and Caregivers have a minimal role, while other groups like Payers and Public Health Agencies are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

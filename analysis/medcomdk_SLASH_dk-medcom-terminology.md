@@ -1,0 +1,34 @@
+# dk-medcom-terminology: Analysis
+
+## Core Purpose & Scope
+
+-   **Primary interoperability challenges this IG addresses:** This IG addresses the challenge of standardizing the use of FHIR terminology within the Danish healthcare sector, specifically for MedCom's messaging standards. It aims to ensure consistent and unambiguous exchange of clinical and administrative information by providing a curated set of CodeSystems, ValueSets, and ConceptMaps.
+-   **Key clinical/business problems it solves:** It solves problems related to inconsistent terminology usage, which can lead to misinterpretation of data, errors in clinical decision-making, and difficulties in data aggregation and analysis. By providing a single source of truth for terminology, it improves data quality, patient safety, and the efficiency of healthcare processes. It also enables historical versioning of terminologies without impacting the version of the entire IG.
+-   **Intended scope and boundaries:** The scope is limited to terminologies used in MedCom's FHIR standards, such as CareCommunication, HospitalNotification, and Acknowledgement. It includes both internally defined terminologies and those profiled from external sources. It does not include all terminologies used in the Danish healthcare sector, only those relevant to MedCom's standards.
+
+## Technical Foundation
+
+-   **Core profiles and extensions:** This IG does not define any specific profiles or extensions. It primarily focuses on defining and managing terminologies.
+-   **Notable operations and interactions:** No specific operations or interactions are defined within this IG. It primarily serves as a resource for terminology lookup and download.
+-   **Key terminology and value sets:**
+    -   **CodeSystems:** MedComMessagingActivityCodes, MedComCareCommunicationCategoryCodes, MedComCoreEncounterActCodes, MedComCorePractitionerRolesAutorisationsregistret, MedComCorePractitionerRolesSKSadministrativ, MedComAcknowledgementErrorCodes, MedComMessagingCancellationReason, MedComMessageDefinitionIdentifierSystem, MedComMessageDefinitionType, MedComMessagingSorEdiSystem, MedComMessagingStatisticalCodes, MedComObservationResultGroup, MedComProducentID.
+    -   **ValueSets:** MedComCareCommunicationCategories, MedComCareCommunicationMessageActivities, MedComCareCommunicationRequestPriority, MedComCoreAttachmentMimeTypes, MedComCoreEncounterClass, MedComHospitalNotificationEncounterClass, MedComHospitalNotificationEncounterStatus, MedComCoreInterpretationCodesValueset, MedComCoreObservationStatus, MedComCorePractitionerRoles, MedComMessagingActivityCodes, MedComHospitalNotificationMessageActivities, MedComMessagingDesinationUseCodes, MedComMessagingMessageTypes, MedComMessagingSorEdiValues, MedComObservarionResponesGroupValueSet, MedComObservationValueSet, MedComProducentIDValueSet, NPUObservationCodesValueSet, MedComAcknowledgementIssueDetailValues, MedComConditionListStatus, MedComDiagnosticReportCodesValueset, MedComCoreDiagnosticReportStatus, MedComHomeCareObservationMessageActivities, MedComMessageDefinitionIdentifierSystemVS, MedComMessageDefinitionTypeVS, MedComUseContextCodeSystemVS.
+    -   **ConceptMaps:** MedComMessagingMapFhirToSorEdi.
+-   **Significant patterns and constraints:** The IG follows the standard FHIR approach for defining CodeSystems, ValueSets, and ConceptMaps. It emphasizes the use of Danish language designations for many codes. ValueSets are categorized as either intensional (automatically updated with CodeSystem changes) or extensional (explicitly listed codes, requiring manual updates).
+
+## Technical Essence
+
+This IG establishes a centralized repository of FHIR terminologies for MedCom's messaging standards within the Danish healthcare ecosystem. It defines CodeSystems like `medcom-messaging-activityCodes` for message activities (e.g., `new-message`, `admit-inpatient`) and `medcom-careCommunication-categoryCodes` for care communication categories (e.g., `alcohol-and-drug-treatment`, `home-care-assessment`). ValueSets, such as `medcom-careCommunication-messagingActivities`, are built upon these CodeSystems, often including a subset of codes (e.g., only `new-message` and `reply-message` from `medcom-messaging-activityCodes`). The `MedComMessagingMapFhirToSorEdi` ConceptMap provides a crucial link between FHIR message names (e.g., `care-communication-message`) and their corresponding SOREDI equivalents (e.g., `FDIS91`). The IG leverages standard FHIR resources (CodeSystem, ValueSet, ConceptMap) with a focus on Danish translations and a clear distinction between intensionally and extensionally defined ValueSets to manage updates and versioning effectively.
+
+## Implementation Approach
+
+-   **Critical workflows and interactions:** Systems implementing MedCom's FHIR standards will need to retrieve and utilize the terminologies defined in this IG. This involves looking up codes in CodeSystems, validating data against ValueSets, and potentially using the ConceptMap for translation to/from SOREDI.
+-   **Important requirements and guardrails:** Implementers must ensure they are using the correct and most up-to-date versions of the terminologies. They should be aware of the distinction between intensional and extensional ValueSets and handle updates accordingly. For intensional ValueSets, systems should be prepared to handle new codes added to the underlying CodeSystem.
+-   **Notable design choices and patterns:** The use of separate CodeSystems for different aspects of messaging (e.g., activity codes, category codes) promotes modularity and reusability. The inclusion of Danish designations caters to the specific needs of the Danish healthcare context.
+
+## Ecosystem Context
+
+-   **Target systems and users:** The target systems are those implementing MedCom's FHIR standards for exchanging healthcare information in Denmark. The users are primarily software developers and system integrators responsible for implementing these systems.
+-   **Relationship to other standards/IGs:** This IG complements other MedCom FHIR IGs, such as CareCommunication, HospitalNotification, and Acknowledgement, by providing the necessary terminological foundation. It also relates to the broader Danish healthcare IT infrastructure and standards, including SOREDI.
+-   **Relevant jurisdictions or programs:** This IG is specifically designed for the Danish healthcare sector and is governed by MedCom.
+-   **Primary use cases and scenarios:** The primary use cases involve exchanging standardized messages for various healthcare scenarios, such as care communication, hospital notifications, and acknowledgements. For example, sending a hospital notification message with a standardized activity code (e.g., `admit-inpatient`) and validating it against the corresponding ValueSet.

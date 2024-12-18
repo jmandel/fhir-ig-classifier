@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on the exchange of cognitive and mental status observations using FHIR R4. It heavily relies on FHIR resources and patterns, with no mention of CDA, v2, or v3. While it utilizes LOINC and mentions SNOMED CT, suggesting some cross-paradigm awareness, the core functionality is strictly within the FHIR framework.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on the exchange of cognitive and mental status observations, particularly within the context of post-acute care (PAC) transitions in the United States. It references the IMPACT Act and utilizes US Core profiles, indicating a strong alignment with US healthcare regulations and standards.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on the standardized exchange of cognitive and mental status observations, particularly during transitions of care involving post-acute care (PAC) and Home and Community-Based Services (HCBS). It leverages FHIR resources like Observation and QuestionnaireResponse to represent this clinical data, with a strong emphasis on using LOINC for coding. While it touches upon administrative aspects related to care transitions and workflow, its core purpose is to improve the quality and continuity of care by ensuring the availability of accurate cognitive status information across different settings.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.4,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the exchange of cognitive and mental status observations, primarily during transitions of care involving post-acute care (PAC) and Home and Community-Based Services (HCBS). EHR systems are central to capturing and sharing this data. PAC and HCBS provider systems are also key, as they are both sources and consumers of this information. Patient-facing applications (PHRs) will play a role in providing patients and caregivers access to this data. While not the primary focus, Clinical Decision Support systems could leverage this information for alerts and guidance. Public Health and Research Platforms might utilize aggregated, de-identified data for population health analysis and research purposes, respectively.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the standardized exchange of cognitive and mental status observations during transitions of care, particularly involving post-acute care (PAC) settings. Therefore, Clinical Care Teams are the core users, as they need this information for effective patient care. Patients and Caregivers also have a significant role, as they benefit from improved care coordination and can access this data. Payers and Government Agencies have a role related to compliance and quality measurement, while Public Health Agencies and Research Organizations have a lesser, but still defined, role in utilizing this standardized data.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

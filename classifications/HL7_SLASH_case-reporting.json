@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide (IG) focuses on electronic case reporting (eCR) using FHIR. It heavily relies on FHIR for its core structure and operations, defining FHIR profiles, extensions, and transactions for eICR, RR, and eRSD. While it acknowledges CDA through its relationship with previous CDA-based IGs, it doesn't actively utilize CDA structures. The IG doesn't use v2 or v3 directly. It demonstrates a degree of cross-paradigm awareness by referencing the relationship to prior CDA work and aiming for future alignment with the US Public Health Library.",
+    "summary": "This Implementation Guide (IG) focuses on electronic case reporting (eCR) using FHIR. It heavily relies on FHIR for its core structure and operations, defining FHIR profiles, extensions, and transactions for eICR, RR, and eRSD. While it acknowledges CDA through its relationship with previous CDA-based IGs, it doesn't actively utilize CDA structures. The IG doesn't use v2 or v3 directly. It demonstrates a degree of cross-paradigm awareness by referencing prior CDA work and aiming for future alignment with the US Public Health Library, but its primary focus is on FHIR.",
     "scores": {
       "CDA": 0.2,
       "Cross-Paradigm": 0.4,
@@ -18,7 +18,7 @@
     }
   },
   "Domain Focus": {
-    "summary": "This FHIR Implementation Guide focuses on automating electronic case reporting (eCR) from Electronic Health Records (EHRs) to Public Health Agencies (PHAs). It defines FHIR-based transactions for the electronic Initial Case Report (eICR), the Reportability Response (RR), and the electronic Reporting and Surveillance Distribution (eRSD). The IG heavily emphasizes public health use cases, clinical data exchange for reporting, and workflow automation for reporting processes. It also incorporates elements of clinical knowledge for defining reporting rules and guidelines.",
+    "summary": "This FHIR Implementation Guide focuses on automating electronic case reporting (eCR) from Electronic Health Records (EHRs) to Public Health Agencies (PHAs). It defines FHIR-based transactions for the electronic Initial Case Report (eICR), the Reportability Response (RR), and the electronic Reporting and Surveillance Distribution (eRSD). The primary goal is to improve the timeliness, completeness, and accuracy of case reporting data for public health surveillance, outbreak management, and control. While it touches upon clinical data and workflow, its core is driven by public health needs and the exchange of information between healthcare providers and public health entities.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0.2,
@@ -26,52 +26,38 @@
       "Clinical Knowledge": 0.6,
       "Diagnostics": 0.4,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0.4,
-      "Payment & Financial": 0,
       "Public Health": 1,
       "Quality & Reporting": 0.6,
       "Research": 0,
       "Workflow": 0.8
     }
   },
-  "Implementation Approach": {
-    "summary": "This IG focuses on automating electronic case reporting (eCR) using FHIR. It heavily relies on Data Profiles to define the structure of eICR and RR documents, and Terminology to specify relevant code systems and value sets. REST APIs and Messaging are both supported for transport. The eRSD uses a constrained PlanDefinition, leveraging aspects of Decision Support to distribute reporting rules. Documents are central to the eICR and RR exchange.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0.6,
-      "Documents": 1,
-      "Forms & UI": 0,
-      "Messaging": 0.8,
-      "REST APIs": 0.8,
-      "Services": 0.2,
-      "Subscriptions": 0.4,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "This Implementation Guide focuses on automating electronic case reporting (eCR) from EHRs to Public Health Agencies. Therefore, EHR and Public Health Systems are the primary implementers. Clinical Decision Support systems play a role in triggering and processing reports. Other systems have limited or no involvement.",
+    "summary": "This IG focuses on automating electronic case reporting (eCR) from EHRs to Public Health Agencies. Therefore, EHR and Public Health Systems are the primary implementers. Clinical Decision Support systems play a role in triggering and evaluating reportability. Payer systems have minimal involvement, primarily related to receiving notifications about reportable conditions. Other systems have limited or no involvement.",
     "scores": {
+      "Clinical Decision Support": 0.6,
       "EHR Systems": 1,
-      "PHR Systems": 0,
-      "Payer Systems": 0,
-      "Pharmacy Systems": 0.2,
+      "Imaging Systems": 0,
       "Lab Systems": 0.4,
-      "Imaging Systems": 0.2,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0,
       "Public Health Systems": 1,
-      "Clinical Decision Support": 0.8,
       "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "This FHIR Implementation Guide (IG) primarily focuses on automating electronic case reporting (eCR) between healthcare providers and public health agencies. Therefore, Public Health Agencies are the core users, as the IG is designed to improve the timeliness, completeness, and accuracy of data they receive. Clinical Care Teams are also key users, as they are responsible for generating the eICR and integrating the RR into their workflows. Government Agencies have a significant influence, as they set reporting requirements and oversee public health programs. Healthcare Administrators play a role in implementing and managing the systems involved. Payers and Research Organizations have minimal involvement in the core functionality defined by this IG. Patients and Caregivers are indirectly impacted by improved public health surveillance but are not direct users of the IG.",
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on automating electronic case reporting (eCR) between healthcare providers and public health agencies.  Clinical care teams are the primary generators of the data, while public health agencies are the primary consumers and drivers of the reporting requirements. The IG also impacts EHR vendors and health IT systems that need to implement these standards. Payers and research organizations have a minimal role in this specific IG.",
     "scores": {
       "Clinical Care Teams": 0.8,
       "Healthcare Administrators": 0.4,
       "Patients and Caregivers": 0.2,
       "Payers": 0,
       "Public Health Agencies": 1,
-      "Research Organizations": 0,
-      "Government Agencies": 0.8
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
     }
   },
   "meta": {

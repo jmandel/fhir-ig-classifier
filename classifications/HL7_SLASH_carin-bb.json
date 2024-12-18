@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR R4, defining a RESTful API for consumer access to claims data. It heavily relies on FHIR resources and profiles, particularly ExplanationOfBenefit. While it acknowledges other HL7 standards like US Core (which itself is based on FHIR), it doesn't directly integrate with CDA, v2, or v3. Cross-paradigm integration is limited to leveraging FHIR's capabilities to represent data that might traditionally be found in other formats.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The CARIN Consumer Directed Payer Data Exchange Implementation Guide (CARIN IG for Blue Button®) is explicitly designed for the United States, as evidenced by its alignment with the CMS Interoperability and Patient Access Final Rule, its use of US Core profiles, and its reliance on US-specific code systems. Therefore, it is classified as a National Implementation Guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The CARIN Consumer Directed Payer Data Exchange Implementation Guide (CARIN IG for Blue Button®) primarily focuses on enabling consumers to access their health insurance claims and encounter information via third-party applications, primarily through the ExplanationOfBenefit resource. It leverages FHIR R4 and builds upon US Core profiles, emphasizing financial aspects of healthcare data. While it touches upon administrative, clinical data, and identity & security domains, its core purpose revolves around insurance and financial data exchange.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "The CARIN Blue Button IG focuses on enabling patient access to their claims data through third-party applications. It primarily impacts Payer systems, which are required to expose a FHIR API for this purpose. Consumer-facing applications (represented by PHR Systems) will also play a key role in consuming this data. EHR systems have a minimal role, primarily in the context of potentially receiving patient-shared claims data. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.2,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The CARIN IG for Blue Button® primarily focuses on enabling patients to access their claims data through third-party applications, driven by the CMS Interoperability and Patient Access Final Rule. Payers are key users as they implement the IG to expose the data. Patients and their representatives are the core beneficiaries. Application developers, while not explicitly scored, are also crucial as they build the interfaces for patients to access this data. Government agencies have a significant role due to the regulatory context.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 1,
+      "Payers": 0.8,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

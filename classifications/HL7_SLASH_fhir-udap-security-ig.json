@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on securing FHIR interactions using OAuth 2.0 and UDAP. It heavily relies on FHIR for its core purpose and context, while not directly involving CDA, v2, or v3. It acknowledges other HL7 standards like SMART App Launch and PurposeOfUse, indicating some cross-paradigm awareness.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide primarily focuses on enhancing OAuth 2.0 security for FHIR interactions, particularly in B2B scenarios. While it has a strong technical foundation applicable universally, the document explicitly mentions its relevance to the US healthcare ecosystem, referencing US-specific entities and initiatives like ONC, FAST, TEFCA, and Carequality. This indicates a primary focus on the US jurisdiction.",
+    "scores": {
+      "Universal Realm": 0.2,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on enhancing the security and scalability of OAuth 2.0 for healthcare applications, particularly for secure client registration, authentication, and authorization in cross-organizational scenarios. It leverages UDAP to extend standard OAuth 2.0 flows and does not delve into clinical data modeling or resource content beyond what is necessary for security and access control.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 1,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on securing OAuth 2.0 for FHIR interactions, primarily targeting systems involved in authorization and resource servers. EHR systems will need to integrate with these security mechanisms, while payer and PHR systems may have limited interaction. Clinical Decision Support, Imaging, Lab, Public Health, and Research systems are not directly involved in the core security mechanisms defined by this IG.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide primarily targets application developers and security architects building secure FHIR applications, especially in B2B contexts. Clinical care teams and patients are not direct users, while government agencies and healthcare administrators have a moderate interest in the standardization and security aspects. Payers and public health agencies have minimal direct involvement. Research organizations may find it relevant for secure data access but are not a primary focus.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

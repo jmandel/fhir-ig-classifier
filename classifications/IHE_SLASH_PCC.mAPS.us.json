@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, defining a US-specific Antepartum Summary as a FHIR Composition. It leverages US Core and ODH profiles, along with custom profiles for antepartum-specific observations. While it builds upon IHE mAPS and references the IHE PCC domain, it doesn't directly utilize CDA, v2, or v3. Cross-paradigm integration is present but not a defining feature.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the United States, as indicated by its title (PCC.mAPS.us), its focus on creating a standardized Antepartum Summary for the US Realm, and its use of US Core and ODH profiles. It also references US-specific coding systems and healthcare practices.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on creating a standardized Antepartum Summary for the US Realm. It leverages the FHIR Composition resource to aggregate critical pregnancy data, including observations, conditions, and plans of care. The IG heavily relies on US Core and ODH profiles, along with custom profiles for antepartum-specific data. Its primary goal is to improve care coordination and patient outcomes by providing a comprehensive view of the patient's pregnancy history.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.8,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0.2,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on creating a standardized Antepartum Summary for the US Realm, primarily targeting EHR systems used in obstetric care. It leverages US Core and ODH profiles, along with custom profiles for pregnancy-specific data. While EHRs are central, systems involved in lab testing, pharmacy services, and potentially public health reporting will also need to interact with this data.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on creating a standardized Antepartum Summary for the US Realm. Its primary goal is to improve care coordination and patient outcomes by providing a structured and comprehensive view of a patient's pregnancy history. Therefore, Clinical Care Teams are the core users, with significant influence from Patients and Caregivers, and Public Health Agencies. Other groups have more limited roles.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

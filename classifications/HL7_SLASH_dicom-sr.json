@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG focuses on translating DICOM SR to FHIR, making FHIR the foundational standard. It heavily relies on DICOM (v3 concepts) for its source data and structure, but doesn't use v2 or CDA. Cross-paradigm integration is present but limited to the DICOM-FHIR bridge.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.8
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on the transformation of DICOM Structured Reports to FHIR resources, specifically for imaging measurements and evaluations. It does not specify any particular geographic scope or jurisdiction, and its reliance on international standards like DICOM, HL7 FHIR, SNOMED CT, LOINC, and NCI Thesaurus suggests a universal applicability.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on bridging DICOM Structured Reports (specifically TID 1500 Measurement Reports) with FHIR, primarily for integrating imaging-derived quantitative and qualitative observations into systems that use FHIR. It emphasizes the transformation of DICOM SR data into FHIR Observation resources, along with related resources like ImagingSelection, Device, and BodyStructure. The IG's core purpose is to facilitate the use of imaging data in non-imaging systems, such as EMRs and reporting applications, by providing a standardized mapping from DICOM SR to FHIR.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 1,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.4,
+      "Research": 0.4,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on converting DICOM SR data, specifically TID 1500 Measurement Reports, into FHIR Observation resources and related resources like ImagingSelection and Device. This suggests a strong emphasis on systems that handle imaging data and need to integrate it with FHIR-based systems. EHR systems will be key consumers of this data, while imaging systems will be the primary source. Middleware or integration engines will likely be responsible for the actual transformation.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 1,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG focuses on translating DICOM SR data into FHIR, primarily benefiting systems and users who consume and utilize imaging results. Clinical care teams, particularly those interpreting imaging results, are the core users. Software developers building systems that interact with both DICOM and FHIR are also key. Research organizations can leverage the standardized data for analysis. Public health and government agencies have a minimal role, mainly in promoting interoperability standards.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

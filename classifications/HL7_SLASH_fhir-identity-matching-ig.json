@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on the FHIR standard, leveraging its resources, operations, and RESTful approach to define a specialized patient identity matching process. It does not utilize CDA, v2, or v3 directly, but acknowledges the broader HL7 ecosystem through references to other standards and IGs. The IG demonstrates a focused application of FHIR for a specific use case, with no significant integration across different HL7 paradigms.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on patient identity matching and digital identity management, primarily within the context of the US healthcare system. It references US-specific initiatives like ONC's FAST and TEFCA, and standards like NIST 800-63-3. While it builds upon the universal FHIR standard, the IG's emphasis on US regulations and programs indicates a strong national focus.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on establishing a robust and reliable framework for patient identity matching across different healthcare organizations. It leverages FHIR's `$match` operation and introduces specialized profiles and workflows for identity verification, assurance, and digital identity management. While it touches upon administrative and workflow aspects, its core purpose revolves around accurate patient identification and secure data exchange, making Identity & Security its central domain.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 1,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on patient identity matching and digital identity management, primarily impacting systems involved in patient data exchange and access. EHR systems are central, needing to implement the $IDI-match operation and handle patient identity verification. Payer systems are also key players, using identity matching for claims processing and coverage determination. PHR systems will need to support patient-mediated data access and identity verification workflows. Public health and research systems have limited but clear roles in specific data exchange scenarios. Clinical decision support, imaging, lab, and pharmacy systems are not directly involved in the core functionality of this IG.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on improving patient identity matching across organizations. Therefore, Clinical Care Teams and Healthcare Administrators who need accurate patient data for care coordination and operational efficiency are the core users. Payers also have a significant stake in accurate matching for claims processing and fraud prevention. Public Health Agencies and Research Organizations can benefit from improved data linkage, while Patients and Caregivers benefit indirectly from improved data accuracy and access. Government Agencies have a minimal role, primarily related to alignment with broader initiatives like TEFCA.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The Unified Terminology Governance (UTG) Implementation Guide primarily focuses on managing FHIR terminology resources. It leverages FHIR's resource model and standard interactions but doesn't define new profiles or operations. While it acknowledges v2 and v3 terminology, it doesn't deeply integrate with them. CDA is not relevant to its purpose. Cross-paradigm integration is limited to acknowledging different terminology sources.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Unified Terminology Governance (UTG) Implementation Guide focuses on establishing a framework for managing FHIR terminology resources. It does not specify any particular jurisdiction or program, indicating a universal scope intended for broad application across different FHIR implementations.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The UTG IG focuses on establishing a standardized framework for managing and governing FHIR terminology resources. It primarily addresses the administrative aspects of terminology, including its organization, versioning, and lifecycle management. It does not delve into clinical data, care planning, or specific healthcare domains but rather provides the infrastructure for managing the terminology used within those domains.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "The UTG IG focuses on terminology management within the FHIR ecosystem. It's primarily relevant to systems that manage or heavily rely on FHIR terminology resources. EHR systems will need to integrate with the terminology managed by UTG. Systems that consume or produce standardized clinical data will also benefit. Clinical Decision Support, Lab, Pharmacy, and Public Health systems will need to utilize the standardized terminology. Payer and Research systems may have limited interaction, primarily in ensuring data consistency. PHR systems have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Unified Terminology Governance (UTG) Implementation Guide primarily serves the needs of terminology managers and FHIR implementers by providing a framework for managing and harmonizing terminology resources. While it indirectly benefits other groups like clinical care teams and researchers by ensuring terminology consistency, its core design is driven by the requirements of those directly responsible for terminology governance within the FHIR ecosystem.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

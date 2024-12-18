@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, using the CodeSystem resource as its foundation for representing terminology change sets. It leverages FHIR's extension mechanism extensively to accommodate terminology-specific attributes, particularly for SNOMED CT and LOINC. While it acknowledges other HL7 standards, it doesn't directly integrate or depend on them. The IG demonstrates a strong focus on FHIR's RESTful principles and resource model, making it a pure FHIR implementation.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on representing terminology change sets, particularly for SNOMED CT and LOINC. It does not specify any particular jurisdiction and is designed for broad applicability in any context where standardized terminologies are used. Therefore, it is classified as Universal Realm.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on the representation and exchange of terminology change sets, primarily for CodeSystems like SNOMED CT and LOINC. It defines a ChangeSet profile based on CodeSystem to capture additions, modifications, and deletions of concepts, designations, and properties. It also includes a Provenance profile to track the origin and context of the change set. The IG's primary purpose is to facilitate the consistent and accurate propagation of terminology updates across different systems, supporting terminology management and versioning. Therefore, it heavily emphasizes the structure and semantics of clinical terminologies, making Clinical Knowledge its core domain.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the exchange of terminology change sets, primarily for CodeSystems like SNOMED CT and LOINC. The core systems involved are those that manage and utilize terminologies, such as terminology servers and EHRs. Clinical Decision Support systems also play a key role in consuming these updates. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG is primarily designed for systems and individuals involved in the development, maintenance, and implementation of terminologies, particularly SNOMED CT and LOINC. Clinical users are less directly involved, as the IG focuses on the technical aspects of terminology change management rather than clinical workflows. Payers, patients, and public health agencies have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

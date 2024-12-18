@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on representing clinical trial Schedules of Activities (SoAs) using FHIR resources. It heavily relies on FHIR's RESTful approach and resource definitions, particularly PlanDefinition and ActivityDefinition. While it acknowledges other HL7 standards, it doesn't directly integrate with them, making FHIR the foundational standard for this IG.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on representing clinical study Schedules of Activities (SoAs) using FHIR resources. It does not specify any particular jurisdiction or region, and its design is intended for broad applicability in clinical research settings globally. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on representing and exchanging clinical study Schedule of Activities (SoA) data for clinical research. It leverages FHIR's workflow patterns and resources like PlanDefinition and ActivityDefinition to define the SoA, and resources like CarePlan, ServiceRequest, Encounter, Procedure, and Observation to track its execution. While it touches upon clinical data and workflow aspects, its core purpose is to standardize SoA representation within the clinical research domain, facilitating interoperability between research and EHR systems.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.6,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 1,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation and exchange of clinical study Schedule of Activities (SoA) data, primarily between clinical research systems and EHR systems. It leverages FHIR resources like PlanDefinition and ActivityDefinition to create a structured, interoperable model for SoAs. Therefore, EHR systems and research platforms are the core systems expected to implement this IG, with clinical decision support systems playing a supporting role in utilizing the standardized SoA data.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 1
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the representation and exchange of clinical study Schedule of Activities (SoA) data. Therefore, it primarily targets users involved in clinical research, particularly those bridging the gap between research systems and EHRs. While clinical care teams and patients have a role, it's secondary to the research focus. Payers and public health agencies have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 1,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

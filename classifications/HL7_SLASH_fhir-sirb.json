@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of research study forms for single Institutional Review Board (sIRB) workflows using FHIR resources, particularly Questionnaire and QuestionnaireResponse. It heavily leverages the Structured Data Capture (SDC) IG for form rendering and population logic. The IG is built entirely around FHIR and does not utilize or reference CDA, v2, or v3. While it uses existing HL7 CodeSystems, it does not integrate different HL7 standards beyond FHIR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is designed to facilitate the exchange of research study forms and data between a single Institutional Review Board (sIRB) and multiple relying research institutions, specifically within the context of the revised Common Rule and the NIH policy on single IRB use in the United States. Therefore, it is a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on streamlining the exchange of research study forms and data between a single Institutional Review Board (sIRB) and multiple relying research institutions for multi-site clinical research. It primarily leverages the Questionnaire and QuestionnaireResponse resources, along with SDC extensions, to standardize the process and reduce administrative burden. While it touches upon clinical data through adverse event reporting, its core purpose is to facilitate the administrative and workflow aspects of research ethics review.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 1,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on streamlining multi-site clinical research approvals through standardized exchange of sIRB forms. It primarily targets research management systems and sIRB software, with a strong emphasis on simplifying implementation for smaller institutions. EHR systems may have limited involvement, primarily for data extraction if integrated. Public health and payer systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 1
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on streamlining the exchange of research study forms and data between a single Institutional Review Board (sIRB) and multiple relying research institutions. The core users are research organizations and clinical care teams involved in multi-site clinical trials. The IG aims to reduce administrative burden and improve efficiency in obtaining ethics approvals, driven by requirements from the revised Common Rule and NIH policies. While government agencies set the regulatory context, their direct involvement in the IG's use is limited. Payers and patients have minimal direct interaction with this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 1,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

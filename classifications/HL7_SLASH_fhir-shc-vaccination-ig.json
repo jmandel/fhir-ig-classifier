@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally built upon the FHIR standard to define a constrained set of resources for representing vaccination and infectious disease lab results within SMART Health Cards. It does not utilize CDA, v2, or v3, and its cross-paradigm integration is limited to leveraging FHIR within the SHC framework.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide defines FHIR profiles for SMART Health Cards, focusing on vaccination and infectious disease lab results. While it has international applicability, it includes specific profiles tailored for the United States, indicating a strong alignment with US needs. However, the guide is designed for broader use and is not solely governed by a US entity.",
+    "scores": {
+      "Universal Realm": 0.6,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on enabling the secure and privacy-preserving exchange of vaccination records and infectious disease laboratory test results using SMART Health Cards (SHCs). It prioritizes data minimization and defines constrained FHIR profiles for this purpose. While it touches upon clinical data and identity, its primary driver is the secure and verifiable sharing of specific health information for public health and access control purposes.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
+      "Public Health": 1,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the exchange of vaccination and infectious disease lab results via SMART Health Cards. EHRs will be the primary source of data, making them core implementers. Lab systems are also crucial for providing test results. PHR systems will play a key role in storing and presenting SHCs. Public health systems will utilize this data for population health management. Payer systems have minimal involvement, primarily related to identity assurance. While not directly involved in clinical decision support, the verified data could inform such systems. Imaging systems are not relevant to this IG. Research platforms may use this data, but their role is limited.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on the secure exchange of vaccination and infectious disease testing data via SMART Health Cards (SHCs). The primary users are Issuers (like health systems and labs) who generate the data, Holders (individuals) who present their SHCs, and Verifiers (like travel providers or employers) who validate the information. While Clinical Care Teams might indirectly benefit, the IG is primarily driven by the need for verifiable health status in various public and private settings. Public Health Agencies have a significant stake in the standardization and use of this data for population health management. Patients and Caregivers are key users as they are the subjects of the data and control its presentation. Payers and Research Organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

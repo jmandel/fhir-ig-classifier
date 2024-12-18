@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "The SMART App Launch IG is fundamentally built upon FHIR for data representation and access. It heavily leverages OAuth 2.0 and OpenID Connect for security and authorization, which are not HL7 standards but are crucial to its operation. The IG does not utilize CDA, v2, or v3, focusing solely on the FHIR RESTful paradigm. While it doesn't integrate across different HL7 paradigms, it does bridge the gap between FHIR and external security standards.",
+    "summary": "The SMART App Launch IG is fundamentally built upon FHIR for data representation and access. It heavily utilizes OAuth 2.0 and OpenID Connect for security and authentication, which are not HL7 standards but are integrated into the FHIR ecosystem. The IG does not directly use CDA, v2, or v3, but it does acknowledge the broader HL7 ecosystem by focusing on interoperability within the healthcare domain.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,68 +10,54 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The SMART App Launch Implementation Guide focuses on defining a standardized protocol for securely connecting third-party applications to Electronic Health Record (EHR) data via FHIR APIs. It leverages OAuth 2.0 and OpenID Connect for authorization and authentication, and it does not specify any particular geographic scope. Therefore, it is considered a universal standard.",
+    "summary": "The SMART App Launch Implementation Guide focuses on defining a standardized protocol for securely connecting third-party applications to Electronic Health Record (EHR) data via FHIR APIs. It leverages OAuth 2.0 and OpenID Connect for authentication and authorization, and it is designed for international use without specific jurisdictional constraints, although it acknowledges relevance to jurisdictions promoting health data interoperability like the US.",
     "scores": {
-      "Universal Realm": 1,
-      "National": 0,
+      "Universal Realm": 0.8,
+      "National": 0.2,
       "Regional": 0
     }
   },
   "Domain Focus": {
-    "summary": "The SMART App Launch IG primarily focuses on enabling secure and standardized integration of third-party applications with EHR systems via FHIR APIs. It leverages OAuth 2.0 and OpenID Connect for authentication and authorization, defining specific launch contexts and scopes for granular access control. While it touches upon administrative aspects through app registration and user-access brands, its core purpose revolves around identity, security, and workflow related to app integration. It does not delve into clinical data specifics, care planning, or other healthcare domains beyond facilitating secure access to FHIR resources.",
+    "summary": "The SMART App Launch Implementation Guide primarily focuses on enabling secure and standardized integration of third-party applications with Electronic Health Record (EHR) systems via FHIR APIs. It leverages OAuth 2.0 and OpenID Connect for authentication and authorization, defining specific launch contexts and scopes for granular access control. While it touches upon administrative aspects through app registration and user-access brands, its core purpose revolves around identity, security, and enabling controlled access to clinical data.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0,
-      "Clinical Data": 0.2,
+      "Clinical Data": 0.8,
       "Clinical Knowledge": 0,
       "Diagnostics": 0,
       "Identity & Security": 1,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.8
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The SMART App Launch IG primarily focuses on defining a secure and standardized way for applications to connect to FHIR APIs, authenticate, and access data. It heavily relies on RESTful interactions and OAuth 2.0 for authorization, with a strong emphasis on defining specific scopes and capabilities. Data profiles are used for specific features like app state and user-access brands, and terminology is used to define SMART-specific scopes and capabilities. Other aspects like decision support, documents, forms, messaging, and subscriptions are not central to this IG's purpose.",
-    "scores": {
-      "Data Profiles": 0.4,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 1,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.6
+      "Workflow": 0.6
     }
   },
   "Implementers": {
-    "summary": "The SMART App Launch IG primarily focuses on enabling secure integration of third-party applications with EHR systems via FHIR APIs. EHR systems are central to its implementation, while app developers (which could be part of PHR, Clinical Decision Support, or Research Platforms) are key adopters. Payer, Pharmacy, Lab, Imaging, and Public Health systems have minimal direct involvement.",
+    "summary": "The SMART App Launch IG primarily focuses on enabling secure connections between third-party applications and EHR systems via FHIR APIs. EHR systems are central to its implementation, while Clinical Decision Support and PHR systems are also key beneficiaries. Other systems have limited or no involvement.",
     "scores": {
+      "Clinical Decision Support": 0.8,
       "EHR Systems": 1,
-      "PHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 0,
       "Pharmacy Systems": 0,
-      "Lab Systems": 0,
-      "Imaging Systems": 0,
+      "PHR Systems": 0.8,
       "Public Health Systems": 0,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.8
+      "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "The SMART App Launch IG primarily serves app developers and EHR vendors, enabling secure integration of third-party applications with EHR systems. Clinical Care Teams benefit from the resulting ecosystem of apps, while Patients and Caregivers gain access to their health data through these apps. Government Agencies and Healthcare Administrators have a stake in the adoption and standardization promoted by this IG.",
+    "summary": "The SMART App Launch IG primarily serves app developers and EHR vendors, enabling secure integration of third-party applications with EHR systems. Clinical care teams benefit from the resulting integrated applications, while patients and caregivers gain access to their health data through these apps. Government agencies and healthcare administrators have a stake in the adoption of this IG for promoting interoperability and meeting regulatory requirements. Payers, public health agencies, and research organizations have a less direct but still relevant role.",
     "scores": {
       "Clinical Care Teams": 0.8,
-      "Healthcare Administrators": 0.4,
+      "Healthcare Administrators": 0.6,
       "Patients and Caregivers": 0.6,
-      "Payers": 0,
+      "Payers": 0.2,
       "Public Health Agencies": 0.2,
-      "Research Organizations": 0.2,
-      "Government Agencies": 0.4
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
     }
   },
   "meta": {

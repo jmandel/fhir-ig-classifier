@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on defining a standardized acknowledgement mechanism for MedCom FHIR messages within the Danish healthcare system. It heavily relies on FHIR resources and structures, particularly MessageHeader, OperationOutcome, and Provenance, to ensure reliable message delivery and detailed error reporting. It does not utilize or reference CDA, v2, or v3 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly defines a standard for acknowledgement messages within the MedCom messaging framework in Denmark. It references Danish-specific value sets and code systems, and its primary use cases are centered around ensuring reliable message delivery within the Danish healthcare system. Therefore, it is clearly a national guide for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide primarily focuses on establishing a standardized mechanism for acknowledging the receipt and validation of FHIR messages within the Danish MedCom messaging framework. It ensures reliable message delivery and provides detailed error reporting. Therefore, it heavily emphasizes workflow and administrative aspects related to message exchange, with a secondary focus on identity and security through provenance tracking.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing acknowledgement messages within the Danish MedCom messaging framework. It primarily impacts systems that send and receive FHIR messages within this ecosystem, ensuring reliable communication. EHR systems are central to this, as they are likely the primary senders and receivers of clinical messages. Systems that generate or process these messages will need to implement the acknowledgement mechanism. Payer systems are less relevant as this IG doesn't deal with financial transactions. Public health systems might use this for aggregated data reporting acknowledgements, but it's not a primary focus.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.6,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing acknowledgement messages within the Danish MedCom messaging framework. Its primary purpose is to ensure reliable message delivery and validation. Therefore, the core users are the systems and developers responsible for sending and receiving these messages. Clinical care teams benefit indirectly from the improved reliability of data exchange, but they are not the primary drivers of the IG's design. Government agencies, specifically those overseeing MedCom in Denmark, have a significant interest in the standardization and compliance aspects. Other groups have minimal or no direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

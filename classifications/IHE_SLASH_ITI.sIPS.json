@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG focuses on exchanging HL7 FHIR IPS documents using IHE Document Sharing profiles. Therefore, FHIR is the foundational standard, with some cross-paradigm influence due to the integration with IHE profiles. CDA and v2 are not relevant, and v3 has minimal influence through the IPS's conceptual basis.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on the exchange of the HL7 International Patient Summary (IPS) using IHE Document Sharing profiles. It leverages the HL7 FHIR IPS IG for content and IHE profiles for exchange mechanisms. While it mentions cross-border scenarios, it does not specify any particular country or region, making it applicable globally.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on enabling the exchange of HL7 FHIR International Patient Summary (IPS) documents using IHE Document Sharing profiles. Its primary purpose is to define how the IPS content is communicated within established document sharing infrastructures, particularly for unplanned care scenarios. While it touches upon clinical data through the IPS, its core is the workflow and technical mechanisms for sharing this data.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling the exchange of HL7 FHIR International Patient Summary (IPS) documents using IHE Document Sharing profiles. Therefore, EHR systems are central to its implementation, as they are the primary creators and consumers of patient summaries. PHR systems also play a significant role in making the IPS accessible to patients. While not directly involved in the core exchange process, Clinical Decision Support systems can benefit from the standardized IPS data. Public Health and Research Platforms might utilize aggregated or de-identified IPS data for their purposes, but their involvement is limited in this specific IG. Payer, Pharmacy, Lab, and Imaging systems are not directly involved in the exchange of IPS documents as defined by this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG focuses on enabling the exchange of the HL7 FHIR International Patient Summary (IPS) using IHE Document Sharing profiles. The primary goal is to facilitate the availability of essential patient health information for unplanned care, especially in cross-border scenarios. Therefore, Clinical Care Teams are the core users, as they need access to this information to provide care. Healthcare Administrators are also key users as they manage the systems that implement this exchange. Public Health Agencies and Research Organizations may have specific needs related to population health and research, respectively. Payers and Government Agencies have a less direct role, while Patients and Caregivers benefit indirectly from improved care coordination.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

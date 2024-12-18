@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of patient data for specialty medication fulfillment using FHIR R4. It heavily relies on FHIR resources, operations, and messaging, with no direct dependency on CDA, v2, or v3. While it acknowledges the existence of other standards like NCPDP SCRIPT, it primarily operates within the FHIR ecosystem. It does support both RESTful and messaging paradigms within FHIR, thus showing some cross-paradigm support within the FHIR specification.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is intended for use within the United States healthcare system and addresses the specific needs of the US specialty pharmacy market. It also references the NCPDP SCRIPT standard, which is primarily used in the US. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of information required for specialty medication fulfillment and patient enrollment in related support programs. It leverages FHIR R4 to define profiles, operations, and workflows for sharing patient demographics, clinical data, consent, and coverage information between prescribers, pharmacies, specialty hubs, and pharmaceutical manufacturers. While it touches upon various domains, its core purpose revolves around medications, particularly specialty medications, and the associated administrative and workflow processes.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0.6,
+      "Medications": 1,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on streamlining the exchange of information required for specialty medication fulfillment. It primarily targets EHR systems used by prescribers and systems used by specialty pharmacies, hubs, and manufacturers. While EHRs and Pharmacy systems are central, Payer systems also play a significant role in coverage determination. Clinical Decision Support systems may leverage the standardized data for medication-related alerts. PHR systems could potentially be involved in patient consent management. Public Health and Research systems have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 1,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide focuses on streamlining the exchange of information for specialty medication fulfillment. Therefore, the primary users are those directly involved in prescribing, dispensing, and managing specialty medications. Clinical care teams and specialty pharmacies are the core users, with pharmaceutical manufacturers and potentially payers playing significant roles. Patients have a defined but limited role, primarily related to consent. Public health and research organizations are not directly addressed.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.6,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide (IG) focuses on providing contextualized Potential Drug-Drug Interaction (PDDI) alerts using FHIR, CDS Hooks, and CQL. It heavily relies on FHIR for data representation and exchange, and CDS Hooks for triggering the alerts. While it acknowledges other HL7 standards, it doesn't directly utilize them in its core functionality. The IG is built entirely around the FHIR standard and its ecosystem.",
+    "summary": "This Implementation Guide (IG) focuses on providing contextualized Potential Drug-Drug Interaction (PDDI) alerts using FHIR, CDS Hooks, and CQL. It heavily relies on FHIR for data representation and exchange, and CDS Hooks for triggering the alerts. While it acknowledges other HL7 standards, it doesn't directly utilize or integrate them into its core functionality.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide primarily focuses on improving PDDI alerts within EHRs, leveraging FHIR, CDS Hooks, and CQL. While it is designed to be broadly applicable, it exhibits a strong alignment with US-specific needs and requirements due to the use of US-specific terminology sets (RxNorm, LOINC, SNOMED CT, ICD-10) and references to Meaningful Use incentives. Therefore, it is classified as a National guide with a strong alignment to the United States.",
+    "summary": "The Implementation Guide focuses on improving PDDI alerts within EHRs, leveraging FHIR, CDS Hooks, and CQL. While it has a universal technical foundation, it acknowledges and supports specific US needs through the use of US-specific terminology sets (RxNorm, LOINC, SNOMED CT, ICD-10) and references to Meaningful Use incentives, indicating a strong alignment with the US healthcare context.",
     "scores": {
       "Universal Realm": 0.2,
       "National > United States": 0.8,
@@ -18,48 +18,34 @@
     }
   },
   "Domain Focus": {
-    "summary": "This IG primarily focuses on improving the specificity and clinical relevance of potential drug-drug interaction (PDDI) alerts within EHRs during the medication ordering process. It leverages FHIR, CDS Hooks, and CQL to provide contextualized alerts, aiming to reduce alert fatigue. Therefore, it heavily emphasizes Medications, Clinical Knowledge, and Workflow domains, with a strong connection to Clinical Data for patient-specific context.",
+    "summary": "This IG focuses on improving the specificity and clinical relevance of potential drug-drug interaction (PDDI) alerts within EHRs using FHIR, CDS Hooks, and CQL. It primarily addresses medication ordering and clinical decision support, leveraging clinical data and knowledge to provide actionable alerts. While it touches upon workflow and administrative aspects, its core is driven by medication management and clinical decision support.",
     "scores": {
-      "Administrative": 0.2,
-      "Care Planning": 0.4,
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
       "Clinical Data": 0.8,
-      "Clinical Knowledge": 1,
+      "Clinical Knowledge": 0.8,
       "Diagnostics": 0.2,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 1,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0.4,
       "Research": 0,
-      "Workflow": 0.8
-    }
-  },
-  "Implementation Approach": {
-    "summary": "This IG defines a service-based architecture for contextualized PDDI alerts using FHIR, CDS Hooks, and CQL. It heavily relies on RESTful interactions for communication between the EHR and CDS service, utilizes data profiles for structuring information, and employs terminology standards for precise clinical concepts. Decision support is a core component, leveraging CQL for expressing PDDI logic. While messaging and subscriptions are not directly used, the event-driven nature of CDS Hooks implies a form of event notification. Forms/UI and documents are not central to this IG.",
-    "scores": {
-      "Data Profiles": 0.8,
-      "Decision Support": 1,
-      "Documents": 0,
-      "Forms & UI": 0.2,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.8,
-      "Subscriptions": 0.4,
-      "Terminology": 0.8
+      "Workflow": 0.6
     }
   },
   "Implementers": {
-    "summary": "This IG focuses on integrating a service-based architecture for contextualized PDDI alerts into EHR systems, primarily during the medication ordering process. It leverages CDS Hooks, FHIR, and CQL to provide clinicians with actionable information. Therefore, EHR systems are the core implementers, with Clinical Decision Support systems playing a key role in providing the PDDI logic and alert generation. Other systems have limited or no involvement.",
+    "summary": "This IG focuses on integrating a CDS service into EHR systems to provide contextualized drug-drug interaction alerts during the medication ordering process. EHR systems are the primary implementers, while CDS systems are crucial for providing the alert logic. Pharmacy systems have a defined role in providing medication data. Other systems have minimal or no involvement.",
     "scores": {
+      "Clinical Decision Support": 1,
       "EHR Systems": 1,
-      "PHR Systems": 0.2,
-      "Payer Systems": 0,
-      "Pharmacy Systems": 0.4,
-      "Lab Systems": 0.4,
       "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
       "Public Health Systems": 0,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.2
+      "Research Platforms": 0
     }
   },
   "Users & Stakeholders": {

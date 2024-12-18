@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally built upon FHIR, utilizing its RESTful principles and resource definitions. It heavily leverages CDS Hooks and SMART on FHIR, which are themselves extensions of the FHIR standard, indicating a deep integration with FHIR's ecosystem. While it acknowledges and utilizes US Core profiles, it doesn't directly interact with or depend on v2, v3, or CDA standards. Cross-paradigm integration is present in the sense that it combines different FHIR-based technologies (CDS Hooks, SMART), but not in the broader sense of bridging FHIR with older HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on standardizing data exchange for medications with Risk Evaluation and Mitigation Strategies (REMS) within the United States. It leverages US Core profiles and mentions the FDA REMS programs, indicating a strong national focus on the US healthcare system.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG primarily focuses on streamlining the Risk Evaluation and Mitigation Strategies (REMS) process for medications by standardizing data exchange between Provider Systems and REMS Administrator Systems. It heavily utilizes CDS Hooks and SMART App Launch to integrate REMS workflows into the provider's EHR. The core domain is Medications, with a strong emphasis on Workflow and Clinical Data related to REMS requirements. Identity & Security is also important due to the use of SMART on FHIR. While Administrative aspects are touched upon, they are not the central focus. Care Planning, Clinical Knowledge, Diagnostics, Insurance/Payment, Public Health, Quality & Reporting, and Research are not significantly addressed.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 1,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on integrating REMS medication management into provider workflows using CDS Hooks and SMART on FHIR. EHR systems are central to implementation, with REMS Administrator systems playing a key role. Clinical Decision Support systems are also heavily involved in triggering and processing REMS alerts. Pharmacy systems have a defined but limited role, while other system types have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG primarily focuses on streamlining the interaction between Clinical Care Teams (specifically prescribers) and REMS Administrator Systems. It leverages CDS Hooks and SMART on FHIR to integrate REMS workflows into the provider's EHR. While patients benefit from improved safety and access, their direct interaction with the IG is minimal. Payers and Public Health Agencies are not directly involved. Research Organizations might use the standardized data for analysis, but it's not a primary focus. Government Agencies, particularly the FDA, have a stake in REMS programs, influencing the IG's development.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

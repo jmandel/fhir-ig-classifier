@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on extending FHIR resources and defining custom validation rules. It heavily relies on FHIR's core concepts and mechanisms, such as extensions, FHIRPath, and OperationOutcome. It does not utilize or reference CDA, v2, or v3 standards. While it doesn't explicitly integrate across different HL7 paradigms, it does provide a foundation for extending FHIR, which could potentially be used in conjunction with other HL7 standards in the future.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on defining a framework for FHIR extensions and custom validation rules. It does not specify any particular jurisdiction or region, and its content is applicable universally within the FHIR ecosystem. The mention of HL7 and the HL7 FHIR registry further reinforces its universal scope, as HL7 is an international standards organization.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on extending FHIR resources and defining custom validation rules. It provides a framework for creating and using extensions, with a specific example for indicating interpreter needs. It also defines a mechanism for creating and reporting custom validation rules using FHIRPath and OperationOutcome. While it touches upon administrative aspects through the interpreter extension, its primary focus is on enabling flexible data representation and ensuring data quality through custom validation.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on defining and managing extensions and custom validation rules within the FHIR ecosystem. It's primarily targeted at systems that need to extend FHIR resources beyond the base specification and enforce custom data quality rules. EHR systems are central to this, as they will be the primary consumers and producers of extended resources. Clinical Decision Support systems will leverage the validation rules for data quality checks. Other systems have limited or no direct involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on providing a framework for extending FHIR resources and defining custom validation rules. Therefore, its core users are developers and implementers who need to customize FHIR for specific use cases. While clinical care teams and other stakeholders might indirectly benefit from the improved data quality and flexibility enabled by this IG, they are not the primary drivers of its design.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

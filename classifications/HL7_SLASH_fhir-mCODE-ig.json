@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The mCODE Implementation Guide is fundamentally based on FHIR, defining a core set of oncology data elements using FHIR resources and profiles. It does not utilize HL7 v2 or v3 messaging, nor does it directly leverage CDA. While it integrates with other HL7 standards like the Clinical Genomics Reporting IG, this integration is primarily through FHIR, making the Cross-Paradigm score moderate.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The mCODE Implementation Guide is explicitly designed for the United States, as evidenced by its reliance on US Core profiles and US-specific terminologies like ICD-10-CM. It is sponsored by HL7 and developed in collaboration with US-based organizations. Therefore, it is classified as a National Implementation Guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The mCODE Implementation Guide primarily focuses on defining a minimal set of structured data elements for oncology, making **Clinical Data** its core domain. It leverages FHIR to enhance interoperability in cancer care, with a strong emphasis on representing core clinical observations, findings, and documentation related to cancer diagnosis, staging, genomics, treatment, and outcomes. While it touches upon other domains like **Research** and **Quality & Reporting**, these are secondary to its primary goal of establishing a common data model for clinical data exchange in oncology.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 0,
+      "Quality & Reporting": 0.8,
+      "Research": 0.8,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "The mCODE Implementation Guide primarily targets EHR systems to standardize oncology data representation. It also significantly impacts research platforms and has implications for clinical decision support, lab systems, and public health systems involved in cancer care and surveillance. Pharmacy systems have a defined role in medication management, while payer systems have minimal involvement. PHR systems are not directly addressed.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The mCODE Implementation Guide primarily serves clinical researchers and healthcare providers involved in cancer care by standardizing oncology data elements for interoperability. While clinical care teams and research organizations are the core users, public health agencies and government bodies also have a significant stake in the standardized data for population health and regulatory purposes. Payers and healthcare administrators have a lesser, but still defined role, potentially using the data for quality improvement and cost analysis. Patients have minimal direct involvement, though they benefit indirectly from improved care and research.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 1,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

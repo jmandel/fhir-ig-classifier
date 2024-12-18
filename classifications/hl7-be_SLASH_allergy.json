@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining profiles and extensions for exchanging allergy information within Belgium. It does not utilize HL7 v2 or v3 messaging, nor does it leverage CDA for document exchange. The IG demonstrates a focused application of FHIR resources and operations, with no indication of cross-paradigm integration with other HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the Belgian healthcare system, as evidenced by its focus on standardizing allergy information exchange within Belgium, the use of Belgium-specific profiles (BeAllergyIntolerance, BePatient, etc.), value sets (BeAllergyIntoleranceCode, BeCausativeAgent, etc.), and a unique identifier naming system (BeNSAllergy). It also references the Belgian eHealth platform and national medication coding systems. Therefore, it is classified as a National Implementation Guide for Belgium.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of allergy and intolerance information within the Belgian healthcare system. It primarily addresses the Clinical Data domain, with a strong emphasis on representing patient allergies accurately and consistently. It also touches upon Administrative aspects by involving patient and practitioner information, and has implications for Workflow by facilitating the sharing of allergy data between different healthcare providers. While it mentions potential use in clinical studies, the Research domain is not a primary focus.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing allergy and intolerance information exchange within the Belgian healthcare system. It primarily targets EHR systems for recording and sharing allergy data. Pharmacy systems are also key players for medication allergy checks. Clinical Decision Support systems will leverage this data for alerts, and PHR systems will allow patients to view and potentially contribute to their allergy records. Public health and research platforms may utilize this data in an aggregated, anonymized manner. Payer systems are not directly involved, and imaging/lab systems have minimal interaction.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of allergy and intolerance information within the Belgian healthcare system. Its design is driven by the needs of Clinical Care Teams to ensure patient safety and improve care coordination. While other stakeholders are involved, their influence is less central to the IG's core purpose.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

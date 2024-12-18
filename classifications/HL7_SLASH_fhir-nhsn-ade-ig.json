@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on reporting adverse drug events (ADEs) related to hypoglycemia and hyperglycemia from EHRs to the National Healthcare Safety Network (NHSN). It heavily relies on FHIR resources and RESTful principles for data exchange, with no mention or apparent use of CDA, v2, or v3. While it leverages standard terminologies, it doesn't explicitly integrate across different HL7 paradigms.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is explicitly designed for reporting adverse drug events (specifically hypoglycemia and hyperglycemia) to the National Healthcare Safety Network (NHSN) in the United States. The guide mentions the CDC's NHSN and U.S. hospitals as the relevant jurisdictions and programs, indicating a clear national scope focused on the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardized reporting of inpatient adverse drug events (ADEs), specifically hypoglycemia and hyperglycemia, from EHRs to the National Healthcare Safety Network (NHSN). It leverages FHIR Composition resources to link medication administration and blood glucose data, enabling quality metric calculations and benchmarking for glycemic management. The primary domains are Clinical Data, Quality & Reporting, and Public Health, with supporting roles for Medications and Workflow.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 0.8,
+      "Quality & Reporting": 1,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on reporting inpatient adverse drug events (ADEs) related to hypoglycemia and hyperglycemia from EHR systems to the National Healthcare Safety Network (NHSN). EHR systems are central to this IG, as they are responsible for collecting, structuring, and transmitting the necessary data. Public health systems, specifically the NHSN, are also key recipients of this data. Pharmacy systems play an important role in providing medication administration data, and lab systems provide blood glucose results. Clinical decision support systems could potentially leverage this data for real-time alerts, but the IG primarily focuses on retrospective reporting. Research platforms might utilize the aggregated data for broader studies. Other system types have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling hospitals to report adverse drug events (ADEs) related to hypoglycemia and hyperglycemia to the National Healthcare Safety Network (NHSN). The design is driven by the need for standardized data exchange between EHRs and NHSN, with a strong emphasis on data quality and consistency for accurate reporting and analysis. Clinical care teams indirectly benefit from improved patient safety insights, while public health agencies and government bodies leverage the collected data for surveillance and quality improvement initiatives. Payers and research organizations have a less direct role in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

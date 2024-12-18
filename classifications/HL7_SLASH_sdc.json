@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "The Structured Data Capture (SDC) Implementation Guide is fundamentally built upon the FHIR standard, utilizing its resources and operations as its core foundation. It does not reference or utilize CDA, v2, or v3 directly. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and its use of standard terminologies like LOINC and SNOMED CT demonstrate a commitment to interoperability within the broader HL7 ecosystem.",
+    "summary": "The Structured Data Capture (SDC) Implementation Guide is fundamentally based on FHIR, using its resources and operations as the core mechanism for defining, populating, and extracting data from forms. It does not utilize CDA, v2, or v3 directly, though it acknowledges the existence of other HL7 standards through its use of terminology like LOINC and SNOMED CT, which are also used in other HL7 standards. It does not integrate across different HL7 standards and approaches.",
     "scores": {
       "CDA": 0,
-      "Cross-Paradigm": 0.2,
+      "Cross-Paradigm": 0,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "The SDC Implementation Guide is designed for international use without jurisdiction-specific constraints, focusing on standardizing the capture, representation, and exchange of structured data within electronic health records (EHRs) and other health IT systems. Although it mentions US initiatives, particularly ONC's Structured Data Capture project, the guide itself does not specify a particular national or regional scope, and its technical foundation and implementation approach are based on universally applicable FHIR resources and specifications.",
+    "summary": "The SDC Implementation Guide is designed for international use without jurisdiction-specific constraints, focusing on standardizing the capture, representation, and exchange of structured data within electronic health records (EHRs) and other health IT systems. Although it mentions being primarily driven by US initiatives, particularly ONC's Structured Data Capture project, the guide itself does not specify any national constraints and aims for broader applicability.",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,54 +18,40 @@
     }
   },
   "Domain Focus": {
-    "summary": "The SDC IG primarily focuses on defining a standardized way to capture and extract clinical data using forms (Questionnaires). It leverages FHIR resources and defines extensions to control form behavior, population, and data extraction. While it touches upon administrative aspects through form management, its core is clinical data capture and the associated workflow. It has limited focus on other domains like payment, public health, or research, although it can be used in those contexts.",
+    "summary": "The SDC IG primarily focuses on standardizing the capture, representation, and exchange of structured clinical data through forms, leveraging FHIR's Questionnaire and QuestionnaireResponse resources. It provides a framework for defining form structure, behavior, population, and extraction mechanisms, but does not delve into specific clinical content or workflows. While it touches upon administrative and workflow aspects related to form management, its core purpose is to enable the collection and processing of structured clinical data.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0.2,
       "Clinical Data": 1,
       "Clinical Knowledge": 0.6,
       "Diagnostics": 0.2,
-      "Identity & Security": 0.2,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
-      "Public Health": 0.2,
-      "Quality & Reporting": 0.2,
-      "Research": 0.4,
-      "Workflow": 0.8
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The SDC IG primarily focuses on defining and extending the Questionnaire and QuestionnaireResponse resources to enable structured data capture through forms. It heavily utilizes Data Profiles and Extensions to achieve this, along with custom Services (Operations) for form population, extraction, and assembly. Terminology plays a crucial role in coding questions and answers. While REST APIs are implicitly used for resource interactions, the IG's focus is more on the custom operations. Forms & UI aspects are addressed through rendering extensions, but detailed UI specifications are not the primary focus. Decision Support is present in the form of FHIRPath expressions for enabling logic and calculations, but it's not a core driver. Messaging and Documents are not central to the IG's purpose. Subscriptions are not mentioned.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0.6,
-      "Documents": 0,
-      "Forms & UI": 0.6,
-      "Messaging": 0,
-      "REST APIs": 0.4,
-      "Services": 0.8,
-      "Subscriptions": 0,
-      "Terminology": 0.8
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0.6,
+      "Workflow": 0.6
     }
   },
   "Implementers": {
-    "summary": "The SDC IG primarily targets systems involved in creating, managing, populating, completing, and extracting data from structured forms. EHR systems are central, as they will often be the primary interface for clinicians interacting with these forms. Clinical Decision Support systems will play a key role in interpreting and acting upon the structured data captured. Research Platforms will heavily utilize SDC for data collection in studies. Public Health Systems will leverage SDC for standardized data reporting. PHR systems may utilize SDC for patient-reported outcomes, but to a lesser extent than EHRs. Payer, Pharmacy, Lab, and Imaging systems have minimal direct involvement.",
+    "summary": "The SDC IG primarily focuses on standardizing the capture, representation, and exchange of structured data, particularly through forms, within EHRs and other health IT systems. EHR systems are central to its implementation, as they will be responsible for creating, populating, rendering, and extracting data from SDC-conformant forms. Clinical Decision Support systems will leverage the structured data captured via SDC for providing guidance and alerts. Research Platforms will utilize SDC for standardized data collection in clinical trials. Public Health Systems will benefit from SDC for streamlined reporting and surveillance. PHR systems may incorporate SDC for patient-reported outcomes. While Lab, Imaging, Pharmacy, and Payer systems have minimal direct involvement, they might indirectly interact with data captured through SDC.",
     "scores": {
+      "Clinical Decision Support": 0.6,
       "EHR Systems": 1,
-      "PHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 0,
       "Pharmacy Systems": 0,
-      "Lab Systems": 0,
-      "Imaging Systems": 0,
+      "PHR Systems": 0.4,
       "Public Health Systems": 0.6,
-      "Clinical Decision Support": 0.8,
       "Research Platforms": 0.8
     }
   },
   "Users & Stakeholders": {
-    "summary": "The SDC IG primarily targets developers of health IT systems that handle forms, aiming to standardize data capture and exchange. Clinical Care Teams and Researchers benefit from the structured data, while Public Health Agencies can leverage it for surveillance. Patients indirectly benefit from improved data quality. Payers and Healthcare Administrators have minimal direct involvement. Government Agencies have a moderate interest in the standardization aspect.",
+    "summary": "The SDC IG primarily targets developers and implementers of health IT systems that handle structured data capture through forms. Clinical Care Teams and Researchers benefit from standardized data, while Public Health Agencies can leverage the IG for population health data collection. Patients indirectly benefit from improved data quality. Payers and Healthcare Administrators have minimal direct involvement.",
     "scores": {
-      "Clinical Care Teams": 0.6,
+      "Clinical Care Teams": 0.8,
       "Healthcare Administrators": 0.2,
       "Patients and Caregivers": 0.4,
       "Payers": 0,

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on standardizing the exchange of risk adjustment coding gap information using FHIR. It heavily relies on FHIR's MeasureReport resource and defines specific profiles and extensions for this purpose. While it acknowledges C-CDA for data submission, it doesn't deeply integrate with CDA or v2/v3. The IG demonstrates a commitment to FHIR as its foundational standard and utilizes other HL7 standards minimally.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on risk adjustment within the US healthcare system, specifically for programs like Medicare Advantage that utilize risk adjustment models. It leverages US Core profiles and mentions relevant US legislation. Therefore, it is classified as a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on standardizing the exchange of risk adjustment coding gap information between payers and providers. It leverages the MeasureReport resource to structure the reports and defines extensions for detailed Condition Category information. While it touches upon clinical data submission for gap closure, its primary drive is to improve the efficiency and accuracy of the risk adjustment process, which is fundamentally tied to insurance and payment. The IG also introduces the concept of digital Condition Categories (dCCs) which hints at future integration with clinical knowledge and potentially care pathways, but this is not the core focus of the current version.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.8,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the exchange of risk adjustment coding gap information between payers and providers. EHR systems will need to support viewing and interacting with these reports, while payer systems will be responsible for generating and managing them. Pharmacy and lab systems may provide supporting data, and PHR systems could potentially surface relevant information to patients. Clinical decision support systems may play a role in future implementations involving digital Condition Categories.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of risk adjustment coding gap information between payers and providers. Therefore, Payers and Clinical Care Teams are the core users, driving the design and specifications. Healthcare Administrators also play a significant role due to the impact on operational workflows. Public Health Agencies and Government Agencies have a moderate interest in the improved data quality for population health and regulatory purposes. Patients and Caregivers have a minimal role, while Research Organizations are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 1,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

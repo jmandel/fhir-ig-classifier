@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on creating a regional health information viewer using FHIR STU3. It leverages FHIR's RESTful API and resource model as its foundation, making FHIR the core standard. While it aligns with Dutch ZIB 2017 standards, which may have some relation to v3, the IG does not directly utilize v3 or v2 messaging. CDA is not relevant as the focus is on granular data exchange, not document exchange. Cross-paradigm integration is limited, primarily focusing on FHIR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Zorgviewer IG is explicitly designed for the RIVO-Noord region within the Netherlands. It focuses on enabling a regional health information viewer by defining a constrained FHIR STU3 API for Dutch EHR systems, aligning with Dutch ZIB 2017 standards and referencing other national standards. While it has a national context, the primary scope is regional.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Netherlands": 0.6,
+      "Regional > RIVO-Noord": 1
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Zorgviewer IG focuses on enabling a regional health information viewer in the Netherlands by defining a constrained FHIR STU3 API for Dutch EHR systems. It prioritizes the retrieval and display of clinical data from multiple sources, aligning with Dutch standards (ZIB 2017). While it touches upon administrative aspects and identity & security, its core purpose is to provide a unified view of patient clinical information for healthcare providers, facilitating better-informed clinical decision-making and care coordination.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.6,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The Zorgviewer IG focuses on enabling a regional health information viewer in the Netherlands by defining how EHR systems expose patient data through FHIR APIs. EHR systems are the core implementers, providing data to the viewer. The viewer itself, while not explicitly a category, acts as a key system consuming this data. Pharmacy and Lab systems are important as they contribute crucial data. Public Health and Research may have minimal involvement in data aggregation or analysis. Payers and PHR systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Zorgviewer IG primarily focuses on enabling healthcare providers in the RIVO-Noord region of the Netherlands to access a consolidated view of patient data from various EHR systems. Clinical Care Teams are the core users, driving the design. Healthcare Administrators have a significant role in implementation and regional coordination. Public Health Agencies and Research Organizations have minimal involvement, while Patients and Caregivers are not directly involved in this phase. Payers are not explicitly mentioned, and Government Agencies have a limited role related to compliance with Dutch standards.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on exchanging radiation dose summaries using FHIR resources and operations. It heavily relies on FHIR for its core structure and functionality, with some influence from DICOM for terminology and identifiers. It does not utilize CDA, v2, or v3.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on the exchange of radiation dose summaries, primarily driven by regulations in California and France. While it leverages international standards like DICOM and FHIR, the explicit mention of specific regulations in these two countries suggests a strong focus on their requirements. However, the guide does not explicitly state that it is governed by either of these jurisdictions, and the content is adaptable to other regions with similar needs. Therefore, it is scored as having important jurisdiction-specific content and adaptations for both the US and France, but not exclusively designed for either.",
+    "scores": {
+      "Universal Realm": 0.2,
+      "National > United States": 0.6,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on the exchange of radiation dose summaries from diagnostic imaging procedures. It primarily addresses the need to incorporate minimal dose information into imaging reports, driven by regulatory requirements and clinical documentation needs. The IG defines profiles for representing dose summaries, related observations, and report composition, leveraging FHIR R4 and DICOM terminology. While it touches upon administrative and workflow aspects, its core is centered around clinical data, specifically diagnostic dose information.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on the exchange of radiation dose summaries from dose management systems to other systems, primarily EHRs and RISs, for inclusion in imaging reports. It leverages FHIR R4 and DICOM, defining profiles for dose summaries, reports, indications, devices, and pregnancy status. The primary actors are Dose Management Systems, FHIR Servers, and Radiology Information Systems/EHRs. The IG is driven by regulatory requirements and aims to improve clinical documentation and patient safety.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0.8,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the exchange of radiation dose summaries from dose management systems to other healthcare systems, primarily for inclusion in imaging reports. The design is driven by the needs of clinical care teams, particularly in radiology and nuclear medicine, to comply with regulatory requirements and improve clinical documentation. Government agencies that mandate dose reporting also have a strong influence. While other groups like healthcare administrators and public health agencies have a defined role, their influence is less significant.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

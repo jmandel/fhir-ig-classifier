@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of at-home in-vitro test results using FHIR resources and profiles. It heavily relies on FHIR and US Core, with some consideration for HL7 v2 for backward compatibility with existing systems. CDA and v3 are not relevant to its core purpose.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.4,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is specifically designed for the United States, as evidenced by its reliance on US Core profiles, references to US-specific terminologies and value sets (e.g., US Public Health Pregnancy Status), and its association with the US-based RADx® MARS initiative. It also mentions compatibility with existing public health systems through HL7 v2 translation, further solidifying its national scope.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of at-home in-vitro test results, particularly for public health reporting. While it touches on clinical data and workflow, its primary drive is enabling diagnostics data flow from digital platforms to health systems, with a strong emphasis on public health use cases. The IG leverages US Core profiles and extends them to accommodate the specific needs of at-home testing, including patient-reported data and device identification.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 1,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.8,
+      "Quality & Reporting": 0.2,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of at-home in-vitro test results, primarily from mobile apps to public health systems and potentially EHRs. It leverages US Core profiles and emphasizes public health reporting, particularly for COVID-19. Therefore, Public Health Systems and the apps that collect the data are the most critical implementers, with EHRs playing a secondary role in receiving the reported data. Lab Systems are relevant as the source of truth for test definitions, and PHR systems might be involved in displaying results to patients.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.6,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of at-home in-vitro test results, particularly from mobile apps to public health agencies and EHR systems.  Clinical Care Teams have a significant role as they will receive and utilize the standardized test results. Public Health Agencies are core users as they will leverage the data for surveillance. App developers are also key users, as they will implement the IG's specifications. Patients have a defined but limited role, primarily as the source of the test data. Payers and Research Organizations have minimal involvement in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

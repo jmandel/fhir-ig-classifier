@@ -18,59 +18,45 @@
     }
   },
   "Domain Focus": {
-    "summary": "The US Core Implementation Guide primarily focuses on establishing a baseline for FHIR interoperability in the US, emphasizing the exchange of core clinical data and patient demographics. It provides detailed specifications for representing and accessing this data using FHIR R4 profiles and RESTful interactions. While it touches upon administrative aspects and provides a foundation for other domains, its core purpose is to define a common set of data elements and interactions for basic clinical data exchange.",
+    "summary": "The US Core Implementation Guide primarily focuses on establishing a baseline for FHIR interoperability in the US, emphasizing the exchange of core clinical data and patient demographics. It provides detailed specifications for representing and accessing this data using FHIR R4 profiles and RESTful interactions. While it touches upon administrative aspects and workflow, its core purpose is to facilitate the exchange of clinical data to support various healthcare use cases, including care coordination, quality reporting, and patient engagement. It also has a strong emphasis on identity and security to ensure safe and compliant data exchange.",
     "scores": {
       "Administrative": 0.6,
       "Care Planning": 0.4,
       "Clinical Data": 1,
       "Clinical Knowledge": 0.2,
-      "Diagnostics": 0.6,
-      "Identity & Security": 0.6,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0.8,
-      "Payment & Financial": 0,
       "Public Health": 0.2,
       "Quality & Reporting": 0.4,
       "Research": 0,
-      "Workflow": 0.2
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The US Core Implementation Guide primarily focuses on defining data profiles and RESTful interactions to establish a baseline for FHIR interoperability in the US. It heavily utilizes standard terminologies and emphasizes read access to core clinical data elements. While it mentions a custom operation for retrieving clinical notes, it does not extensively use other advanced FHIR features like messaging, subscriptions, or decision support.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.2,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.4,
-      "Subscriptions": 0,
-      "Terminology": 0.8
+      "Workflow": 0.4
     }
   },
   "Implementers": {
-    "summary": "The US Core Implementation Guide primarily targets EHR systems as the core implementers, focusing on enabling interoperability for essential patient data. PHR systems are also key for patient engagement, while clinical decision support systems play an important role in leveraging the standardized data. Other systems like lab, pharmacy, and imaging have defined but more limited roles in implementing specific data elements. Payer and public health systems have minimal direct involvement, and research platforms are not a primary focus.",
+    "summary": "The US Core Implementation Guide primarily targets EHR systems as the core implementers, focusing on enabling basic interoperability for patient data exchange.  It also heavily involves systems that consume and produce clinical data, such as lab and pharmacy systems. PHR systems are also key for patient engagement. Public health and research platforms have a minimal role, primarily in consuming data standardized by US Core.",
     "scores": {
+      "Clinical Decision Support": 0.4,
       "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.8,
       "PHR Systems": 0.8,
-      "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.6,
-      "Lab Systems": 0.6,
-      "Imaging Systems": 0.4,
       "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0
+      "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "The US Core Implementation Guide primarily focuses on enabling interoperability between healthcare systems within the US. It establishes a baseline for accessing and exchanging core patient data, driven by the needs of clinical care teams and the requirements of government agencies for certification and compliance. While other stakeholders benefit, these two groups have the most significant influence.",
+    "summary": "The US Core Implementation Guide primarily serves to establish a baseline for FHIR interoperability in the US, focusing on core data elements and RESTful interactions. Clinical Care Teams are the primary users, as they need to access and exchange patient data for care coordination. Healthcare Administrators and Government Agencies have significant influence due to the guide's alignment with USCDI and ONC certification. Payers and Public Health Agencies have specific needs related to quality reporting and population health, respectively. Research Organizations have a limited role, and Patients and Caregivers have minimal direct involvement.",
     "scores": {
       "Clinical Care Teams": 1,
-      "Healthcare Administrators": 0.6,
-      "Patients and Caregivers": 0.4,
-      "Payers": 0.2,
-      "Public Health Agencies": 0.4,
-      "Research Organizations": 0.2,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
       "Government Agencies": 0.8
     }
   },

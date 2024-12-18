@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide defines FHIR Shorthand (FSH), a language for creating FHIR artifacts. Therefore, FHIR is the foundational standard. While FSH can be used to describe mappings to other standards, it doesn't directly support or integrate with CDA, v2, or v3. Cross-paradigm integration is acknowledged through mappings but not a core focus.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide defines FHIR Shorthand (FSH), a domain-specific language for creating FHIR artifacts. It is not specific to any country or region, but rather a universal tool for the FHIR community.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide defines FHIR Shorthand (FSH), a language for creating FHIR artifacts and Implementation Guides. It focuses on simplifying the authoring process for FHIR profiles, extensions, value sets, and other IG components. Therefore, it primarily addresses the technical aspects of defining and structuring clinical data and knowledge within the FHIR framework, with a strong emphasis on improving the workflow for IG developers. It does not directly address clinical care, patient management, or other healthcare domains.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.8,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG defines FHIR Shorthand (FSH), a language for creating FHIR artifacts and Implementation Guides. It's primarily targeted at developers and authors of FHIR specifications, not at typical healthcare systems. Therefore, most clinical and administrative systems have no direct involvement. The systems that would implement this are those used for creating and managing FHIR specifications.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide focuses on FHIR Shorthand (FSH), a language for authoring FHIR artifacts. Therefore, the primary users are those involved in creating and maintaining FHIR Implementation Guides. Clinical users, patients, and payers are not directly involved in the use of FSH. Public health and research organizations might benefit indirectly from more standardized IGs, but they are not the target audience. Government agencies might have a slight interest in the standardization aspect, but their involvement is minimal.",
+    "scores": {
+      "Clinical Care Teams": 0,
+      "Healthcare Administrators": 0,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling read-only access to human services directories using FHIR R4. It heavily relies on FHIR for its core structure and functionality, defining profiles and operations based on the FHIR specification. While it acknowledges other HL7 standards like US Core and the DaVinci PDEX Plan Net Provider Directory IG, it doesn't directly integrate with CDA, v2, or v3. The IG's primary purpose is to facilitate data exchange using FHIR's RESTful approach, making it a FHIR-centric guide.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing data exchange for human and social services directories, primarily within the United States. It references US Core profiles, the DaVinci PDEX Plan Net Provider Directory IG, and US-specific regulations like the CMS's Interoperability and Patient Access Final Rule. It also mentions the Administration for Community Living (ACL) Social Care Referrals Challenge, a US-based initiative. Therefore, it is classified as a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the discovery and access of human and social services directories through a standardized API. It primarily addresses the administrative aspects of managing and sharing information about organizations, locations, and services related to social determinants of health (SDOH). While it touches upon clinical data through service descriptions and indirectly supports care planning and workflow, its core purpose is to facilitate the exchange of directory information, making it heavily administrative in nature. Identity and security are addressed through privacy considerations, but not with detailed specifications. The IG does not focus on clinical knowledge, diagnostics, medications, public health, quality reporting, or research.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on enabling read-only access to human and social services directories. It primarily targets EHR systems, payer systems, and PHR systems to facilitate the discovery of community-based organizations (CBOs) and their services. While not directly involving clinical decision support or lab/imaging systems, it has implications for public health by improving access to services addressing social determinants of health. Research platforms may utilize this data for studying the impact of social services on health outcomes.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling the discovery of human and social services through a standardized API. Its primary users are Clinical Care Teams who need to refer patients to community resources and Patients and Caregivers seeking these services directly. Payers also have a significant role as they aim to coordinate care and connect members to social services. CBOs are core to this IG as it enables them to make their services discoverable. Public Health Agencies and Research Organizations may utilize the standardized data for population health analysis and research, but their needs are less central to the IG's design. Government Agencies have a minimal role, primarily related to oversight and regulation.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 1,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

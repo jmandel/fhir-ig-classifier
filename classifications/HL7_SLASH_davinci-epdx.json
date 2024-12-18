@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide is fundamentally based on FHIR, defining a FHIR-based ecosystem for data exchange. It does not use or reference CDA, v2, or v3. While it leverages other HL7 standards like US Core and HRex, which are also FHIR-based, it does not integrate different HL7 paradigms, so the Cross-Paradigm score is low.",
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining a framework for payer data exchange using FHIR resources and APIs. It does not utilize CDA, v2, or v3 in a significant way. Cross-paradigm integration is present in a limited sense, primarily through the use of standard terminologies that might also be used in other HL7 standards, but not in a way that deeply integrates different HL7 paradigms.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The Da Vinci Payer Data Exchange (PDex) Implementation Guide is explicitly designed to address interoperability challenges within the US healthcare system. It is driven by CMS regulations, leverages US Core profiles, and focuses on US-specific use cases like complying with the CMS Interoperability and Patient Access Final Rule. Therefore, it is clearly a national guide for the United States.",
+    "summary": "The Da Vinci Payer Data Exchange (PDex) Implementation Guide is explicitly designed to address interoperability challenges within the US healthcare system, particularly in the context of CMS regulations. It heavily relies on US Core profiles and addresses US-specific regulations like HIPAA. Therefore, it is classified as a National guide for the United States.",
     "scores": {
       "Universal Realm": 0,
       "National > United States": 1,
@@ -18,59 +18,45 @@
     }
   },
   "Domain Focus": {
-    "summary": "The Da Vinci Payer Data Exchange (PDex) IG primarily focuses on enabling the secure and efficient exchange of patient clinical and administrative data between payers, providers, and patients. It leverages FHIR R4, US Core, and HRex profiles, extending them with PDex-specific profiles to handle payer-specific use cases like prior authorization and member-match. While it touches upon clinical data and medications through the use of US Core profiles, its core purpose revolves around administrative data exchange, particularly claims and encounter data (without financial details), to facilitate compliance with CMS regulations, improve care coordination, and empower patient data access. Identity and security are paramount, with OAuth 2.0 and SMART on FHIR mandated for authorization and app integration. Provenance resources are also crucial for tracking data origin and handling. The IG has limited focus on care planning, clinical knowledge, diagnostics, public health, quality reporting, and research.",
+    "summary": "The Da Vinci Payer Data Exchange (PDex) Implementation Guide primarily focuses on enabling the secure and efficient exchange of patient clinical and administrative data between payers, providers, and patients. It leverages FHIR R4, US Core, and HRex profiles, extending them with PDex-specific profiles to handle payer-specific use cases like prior authorization and member-match operations. While it touches upon clinical data and care coordination, its core purpose revolves around administrative data exchange within the payer domain, particularly driven by CMS regulations. Identity and security are paramount, with a strong emphasis on OAuth 2.0, SMART on FHIR, and Provenance resources. Although it supports the exchange of claims-based information, it explicitly excludes financial details, thus limiting its scope in the insurance and payment domain.",
     "scores": {
-      "Administrative": 1,
+      "Administrative": 0.8,
       "Care Planning": 0.2,
-      "Clinical Data": 0.8,
+      "Clinical Data": 0.6,
       "Clinical Knowledge": 0,
       "Diagnostics": 0.2,
       "Identity & Security": 0.8,
-      "Medications": 0.6,
-      "Payment & Financial": 0.4,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0.4,
       "Public Health": 0,
       "Quality & Reporting": 0.4,
       "Research": 0,
       "Workflow": 0.6
     }
   },
-  "Implementation Approach": {
-    "summary": "The Da Vinci Payer Data Exchange (PDex) IG primarily focuses on defining data models and RESTful interactions for secure data exchange between payers, providers, and patients. It heavily relies on FHIR R4, US Core, and HRex profiles, extending them with PDex-specific profiles and operations. While it mentions CDS Hooks, it's being phased out. The IG emphasizes RESTful APIs for both individual and bulk data exchange, with a strong focus on terminology and data provenance using Provenance resources. Messaging and Documents are not central to the IG's core purpose, and Forms & UI are only relevant in the context of SMART on FHIR app integration.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0.2,
-      "Documents": 0,
-      "Forms & UI": 0.4,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.6,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The Da Vinci Payer Data Exchange (PDex) IG primarily focuses on enabling data exchange between payers, providers, and patients. Therefore, payer systems are central to its implementation. EHR systems play a key role in consuming and utilizing the exchanged data for care coordination. PHR systems are important for patient access to their data. While other systems like Pharmacy, Lab, and Imaging might have data included in the exchange, they are not the primary actors. Public Health and Research are less directly involved, though the data exchanged could inform these areas. Clinical Decision Support is relevant due to the legacy CDS Hooks integration, but this is being phased out.",
+    "summary": "The Da Vinci Payer Data Exchange (PDex) IG primarily focuses on data exchange between payers, providers, and patients. Payers are central to its implementation, with significant involvement from EHR systems and PHR applications. Other systems play a smaller role, primarily in consuming data made available through PDex.",
     "scores": {
+      "Clinical Decision Support": 0.4,
       "EHR Systems": 0.8,
-      "PHR Systems": 0.6,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
       "Payer Systems": 1,
       "Pharmacy Systems": 0.2,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0.2,
+      "PHR Systems": 0.8,
       "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.4,
       "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "The Da Vinci Payer Data Exchange (PDex) IG primarily focuses on enabling data exchange between payers, providers, and patients to comply with CMS regulations and improve care coordination. Payers are the core users, as they are responsible for implementing the IG to share data. Providers and patients are key users, benefiting from access to more comprehensive health information. Government agencies have a significant influence due to the regulatory drivers behind the IG. Public health agencies and research organizations have a limited role, primarily in utilizing the standardized data for population health analysis and research, respectively.",
+    "summary": "The Da Vinci Payer Data Exchange (PDex) IG primarily focuses on enabling data exchange between payers, providers, and patients to comply with CMS regulations and improve care coordination. Payers are the core users, driving the IG's design to facilitate data sharing. Providers are key users, influencing the specifications to access comprehensive patient data. Patients are important users, benefiting from increased access to their health information. Government agencies have a significant role due to the regulatory context, while clinical care teams, healthcare administrators, public health agencies, and research organizations have more limited involvement.",
     "scores": {
-      "Clinical Care Teams": 0.8,
+      "Clinical Care Teams": 0.6,
       "Healthcare Administrators": 0.4,
-      "Patients and Caregivers": 0.8,
+      "Patients and Caregivers": 0.6,
       "Payers": 1,
-      "Public Health Agencies": 0.4,
-      "Research Organizations": 0.4,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
       "Government Agencies": 0.8
     }
   },

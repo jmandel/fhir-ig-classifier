@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "This FHIR Implementation Guide, CH Core, is fundamentally based on FHIR R4 and defines profiles and extensions for the Swiss healthcare system, particularly the Swiss Electronic Patient Record (EPR). It leverages FHIR's RESTful principles and resource model extensively. While it acknowledges and uses some v2/v3 code systems for terminology, it does not directly support v2 messaging or v3 RIM-based models. CDA is not a core component, although the IG defines document profiles that could be used to represent CDA-like documents in a FHIR context. Cross-paradigm integration is present in the use of v2/v3 terminologies within a FHIR framework.",
+    "summary": "This FHIR Implementation Guide, CH Core, is fundamentally based on FHIR R4 and defines profiles and extensions for the Swiss healthcare system. It acknowledges v2 and v3 standards for terminology but doesn't integrate them deeply. CDA is acknowledged for document representation but implemented through FHIR resources. Cross-paradigm integration is limited to terminology.",
     "scores": {
       "CDA": 0.2,
-      "Cross-Paradigm": 0.4,
+      "Cross-Paradigm": 0.2,
       "FHIR": 1,
       "v2": 0.2,
       "v3": 0.2
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide explicitly states it is designed for the Swiss healthcare system and the Swiss Electronic Patient Record (EPR). It defines profiles, extensions, and terminologies specific to Switzerland, including Swiss-specific identifiers and adaptations for eCH standards. Therefore, it is clearly a national guide for Switzerland.",
+    "summary": "The Implementation Guide explicitly states it is designed for the Swiss healthcare system and the Swiss Electronic Patient Record (EPR). It defines profiles, extensions, and terminologies specific to Switzerland, including Swiss-specific identifiers and eCH standards. Therefore, it is clearly a national guide for Switzerland.",
     "scores": {
       "Universal Realm": 0,
       "National > Switzerland": 1,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "The CH Core Implementation Guide primarily focuses on establishing a standardized framework for representing and exchanging core patient demographic data, administrative information, and essential clinical concepts within the Swiss healthcare system, particularly for the Swiss Electronic Patient Record (EPR). It heavily emphasizes administrative aspects, patient and provider identity, and the structure of clinical documents, with a secondary focus on medications and some basic clinical data. It does not delve deeply into care planning, clinical knowledge, diagnostics, public health, quality reporting, or research.",
+    "summary": "The CH Core Implementation Guide primarily focuses on establishing a standardized framework for representing and exchanging core patient demographic data, administrative information, and essential clinical concepts within the Swiss healthcare system, particularly in the context of the Swiss Electronic Patient Record (EPR). It heavily emphasizes administrative aspects, patient and provider identity, and the structure of clinical documents. While it touches upon clinical data, medications, and some aspects of workflow, its core purpose revolves around defining the foundational elements for interoperability within the Swiss EPR ecosystem.",
     "scores": {
       "Administrative": 1,
       "Care Planning": 0.2,
       "Clinical Data": 0.6,
       "Clinical Knowledge": 0,
-      "Diagnostics": 0.2,
+      "Diagnostics": 0,
       "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0.2,
       "Medications": 0.6,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
       "Workflow": 0.4
     }
   },
-  "Implementation Approach": {
-    "summary": "CH Core primarily focuses on defining data models through profiles and extensions to represent Swiss-specific healthcare data, particularly for the Swiss Electronic Patient Record (EPR). It heavily relies on terminology for code systems and value sets. While it mentions document structures, it does not define a full API or messaging patterns, nor does it include decision support or forms/UI specifications.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.6,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.2,
-      "Services": 0,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The CH Core Implementation Guide primarily targets systems involved in the Swiss Electronic Patient Record (EPR), focusing on patient demographics, provider information, organizations, and core clinical concepts. EHR systems are central to implementing the IG's full functionality, while PHR, Pharmacy, Lab, and Imaging systems have limited but defined roles. Payer systems have minimal involvement, and Public Health, Clinical Decision Support, and Research Platforms are not directly addressed.",
+    "summary": "The CH Core Implementation Guide focuses on establishing a standardized framework for representing and exchanging core patient demographic, administrative, and essential clinical data within the Swiss Electronic Patient Record (EPR) ecosystem. It primarily targets EHR systems and other systems involved in the EPR, with a strong emphasis on document exchange and patient/provider identification using Swiss-specific identifiers. While it touches upon medication management, its scope does not heavily involve clinical decision support, imaging, lab, payer, or research systems. Public health systems might have a minimal role in consuming aggregated data, and PHR systems could potentially leverage the standardized data for patient access.",
     "scores": {
+      "Clinical Decision Support": 0.2,
       "EHR Systems": 1,
-      "PHR Systems": 0.4,
-      "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.4,
+      "Imaging Systems": 0,
       "Lab Systems": 0.4,
-      "Imaging Systems": 0.4,
-      "Public Health Systems": 0,
-      "Clinical Decision Support": 0,
-      "Research Platforms": 0
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "This FHIR Implementation Guide (CH Core) primarily serves the needs of the Swiss Electronic Patient Record (EPR) ecosystem. Clinical Care Teams are the core users, as the IG defines how clinical data is structured and exchanged. Healthcare Administrators have significant influence due to the focus on administrative data and workflows. Government Agencies have a strong role due to the IG's alignment with Swiss regulations. Public Health Agencies and Research Organizations have limited involvement as the focus is not on population health or research data. Patients and Payers have minimal direct involvement in this IG.",
+    "summary": "This FHIR Implementation Guide (CH Core) primarily serves the needs of systems and individuals interacting with the Swiss Electronic Patient Record (EPR). Clinical Care Teams and Healthcare Administrators are the most important users as they will be creating, managing, and using the standardized data. While Patients and Caregivers benefit from the interoperability, their direct interaction with the IG is limited. Payers, Public Health Agencies, Research Organizations, and Government Agencies have a lesser, but still defined role, primarily in utilizing the standardized data for their respective purposes.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.8,
-      "Patients and Caregivers": 0.2,
+      "Patients and Caregivers": 0.4,
       "Payers": 0.2,
-      "Public Health Agencies": 0.4,
-      "Research Organizations": 0.4,
-      "Government Agencies": 0.8
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
     }
   },
   "meta": {

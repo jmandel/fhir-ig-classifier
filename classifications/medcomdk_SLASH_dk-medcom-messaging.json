@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG defines a FHIR-based messaging framework for the Danish MedCom system. It heavily relies on FHIR resources and structures, particularly Bundle and MessageHeader, to define the message format. It does not use CDA, v2, or v3, focusing solely on FHIR for interoperability. Cross-paradigm integration is minimal, as the IG is entirely within the FHIR paradigm.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide defines a messaging framework specifically for the Danish healthcare system, governed by MedCom. It leverages Danish-specific identifiers (SOR, EAN/GLN) and builds upon other Danish IGs (MedComCore, DK-core). Therefore, it is explicitly designed for national use within Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on establishing a standardized messaging framework for the Danish MedCom system. It primarily addresses the exchange of healthcare information between different organizations, emphasizing message structure, addressing, and provenance. While it touches upon administrative aspects and clinical data through message content, its core purpose is to define the technical foundation for message-based communication, making workflow and administrative domains its primary focus. The IG does not delve deeply into specific clinical domains like care planning, medications, or diagnostics, nor does it address financial or research aspects.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) defines a standardized messaging framework for the Danish MedCom system, focusing on the structure and common elements of messages rather than specific content. It's primarily designed for systems that exchange healthcare data within Denmark, such as EHRs and systems used by various healthcare providers. While it touches upon areas like lab and pharmacy through examples, its core function is message structure, not domain-specific content. Therefore, EHR systems are central to its implementation, with other systems playing supporting roles based on their involvement in message exchange.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing message-based exchange of healthcare data within the Danish healthcare system. It primarily serves the needs of healthcare providers and IT systems involved in exchanging MedCom messages. While other stakeholders might have indirect benefits, the core design is driven by the need for seamless and consistent communication between clinical care teams and their supporting systems. The IG is highly specific to the Danish healthcare context and MedCom standards.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

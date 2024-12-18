@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The ITI DSUBm Implementation Guide is fundamentally based on FHIR, utilizing its RESTful approach and resource definitions. It heavily relies on FHIR's subscription mechanism, extended from the R5 Backport IG. While it acknowledges and integrates with document sharing environments like XDS, it does not directly utilize CDA, v2, or v3 standards. Cross-paradigm integration is present in the sense that it bridges FHIR with existing document sharing paradigms, but not in the sense of directly integrating different HL7 standards within the IG itself.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide, IHE ITI Document Subscription for Mobile (DSUBm), defines a RESTful subscription and notification mechanism for document sharing events. It is built on FHIR R4 and the Subscriptions R5 Backport Implementation Guide. While it mentions applicability in various document sharing environments like MHDS and XDS, it does not specify any particular national or regional jurisdiction. Therefore, it is considered a universal guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The ITI DSUBm Implementation Guide focuses on enabling RESTful applications, particularly in mobile health, to subscribe to and receive notifications about document sharing events. It leverages FHIR R4 and the Subscriptions R5 Backport to define a robust subscription and notification framework. While it touches upon clinical data through document references, its primary focus is on the workflow and administrative aspects of document sharing notifications.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI DSUBm Implementation Guide focuses on enabling RESTful applications, particularly mobile health apps, to subscribe to and receive notifications about document sharing events. It primarily impacts EHR systems and PHR systems, which will need to implement the subscription and notification mechanisms. Clinical Decision Support systems may leverage these notifications for timely alerts. Public Health and Research Platforms might utilize aggregated document sharing data. Other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The ITI.DSUBm Implementation Guide primarily focuses on enabling RESTful applications, particularly in mobile health, to subscribe to and receive notifications about document sharing events. This primarily benefits Clinical Care Teams and Patients/Caregivers by providing timely updates on document availability. While other groups have a role, their influence is less direct.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

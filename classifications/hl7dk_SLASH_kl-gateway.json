@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is heavily based on FHIR, using it as the fundamental framework for data representation and exchange. It leverages FHIR resources and profiles extensively. While it acknowledges and utilizes concepts from FSIII, which has roots in v3, the direct use of v3 or CDA is minimal. Cross-paradigm integration is present in the sense that it bridges FHIR with the existing Danish healthcare data ecosystem, but not in the sense of directly integrating multiple HL7 paradigms. v2 is not relevant to this IG's purpose.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Danish healthcare system, focusing on reporting health and eldercare data from Danish municipalities to the KL Gateway. It leverages Danish core profiles, aligns with the shared information model (FKI) for data in Danish municipalities, and utilizes FSIII as the primary terminology. The explicit mention of Danish municipalities, the use of Danish-specific terminology (FSIII, FKI), and the focus on reporting to a national gateway (KL Gateway) clearly indicate a national scope within Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling standardized reporting of health and eldercare data from Danish municipalities to a central gateway (KL Gateway). It leverages FHIR resources to represent citizen conditions, goals, planned and completed interventions, and follow-up observations, primarily using FSIII and FKI data. The IG's core purpose is to facilitate data aggregation and analysis at a national level, supporting care coordination, quality monitoring, and resource allocation. While it touches upon various healthcare domains, its primary emphasis is on clinical data reporting and workflow related to data submission.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.8,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.8,
+      "Quality & Reporting": 0.8,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling standardized reporting of health and eldercare data from Danish municipalities to a central gateway (KL Gateway). EHR systems within municipalities are the primary implementers, responsible for generating and submitting FHIR bundles containing patient data. Public Health Systems will heavily rely on the aggregated data for monitoring and analysis. Payer Systems might use the data for auditing and quality assessment, but to a lesser extent. Other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling Danish municipalities to report health and eldercare data to the KL Gateway. The primary users are the municipalities themselves, represented by their clinical care teams and healthcare administrators. The IG facilitates standardized data reporting, which is crucial for national-level monitoring and analysis by government agencies and public health agencies. While patients and caregivers are indirectly impacted by improved care coordination, they are not direct users of the IG. Payers and research organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.2,
+      "Government Agencies": 1
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

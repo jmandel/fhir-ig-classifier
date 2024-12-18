@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide is fundamentally based on FHIR to define a standardized way of representing Personal Health Device (PHD) data. It heavily relies on FHIR resources and profiles. While it acknowledges and maps data from IEEE 11073 standards, it doesn't directly use HL7 v2, v3, or CDA. Cross-paradigm integration is present in the sense that it bridges the gap between IEEE 11073 and FHIR, but not within different HL7 standards.",
+    "summary": "This IG is fundamentally built upon FHIR to standardize the representation and exchange of Personal Health Device (PHD) data. It heavily relies on FHIR resources and profiles. While it acknowledges and maps data from IEEE 11073 standards, it doesn't directly use HL7 v2, v3, or CDA. It does demonstrate a degree of cross-paradigm thinking by bridging the IEEE 11073 world with FHIR.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.4,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "This Implementation Guide focuses on standardizing the representation of Personal Health Device (PHD) data in FHIR for international use. It leverages international standards like IEEE 11073 and does not specify any national or regional adaptations.",
+    "summary": "This Implementation Guide focuses on standardizing the representation of Personal Health Device (PHD) data in FHIR for international use. It leverages international standards like IEEE 11073 and does not specify any national or regional adaptations. Therefore, it is classified as \"Universal Realm\".",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "This IG focuses on standardizing the representation of data from Personal Health Devices (PHDs) in FHIR, primarily for remote patient monitoring. It heavily emphasizes clinical data from these devices, with a strong focus on observations and device information. While it touches upon administrative aspects like patient identification, its core purpose is to facilitate the exchange of clinical data between PHDs, gateways, and healthcare systems.",
+    "summary": "This IG focuses on standardizing the representation of data from Personal Health Devices (PHDs) in FHIR, primarily for remote patient monitoring. It heavily emphasizes clinical data from PHDs, defining detailed profiles for various observation types. It also touches upon device management and patient identification, but with a focus on facilitating data exchange rather than comprehensive administrative or security features. While it mentions research as a potential use case, the IG's core design is driven by the need to integrate PHD data into clinical workflows.",
     "scores": {
       "Administrative": 0.4,
-      "Care Planning": 0,
+      "Care Planning": 0.2,
       "Clinical Data": 1,
       "Clinical Knowledge": 0,
-      "Diagnostics": 0.2,
+      "Diagnostics": 0.6,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0.2,
       "Quality & Reporting": 0,
       "Research": 0.4,
       "Workflow": 0.6
     }
   },
-  "Implementation Approach": {
-    "summary": "This IG primarily focuses on defining data models for representing Personal Health Device (PHD) data in FHIR. It heavily relies on resource profiles and terminology to achieve this goal. While REST APIs are used for data exchange, the IG doesn't define specific API interactions beyond conditional creation. Other aspects like decision support, forms, messaging, and subscriptions are not central to its purpose.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "This IG focuses on integrating data from Personal Health Devices (PHDs) into FHIR-based systems, primarily for remote patient monitoring. EHR and Clinical Decision Support systems are key for utilizing this data, while PHR systems play a role in patient engagement. Lab, Imaging, and Payer systems have minimal involvement. Public Health and Research Platforms may utilize aggregated PHD data, leading to some integration requirements.",
+    "summary": "This IG focuses on integrating data from Personal Health Devices (PHDs) into FHIR-based systems, primarily for remote patient monitoring. EHR systems will need to consume and display this data. PHR systems will likely be a source of PHD data and a destination for patients to view their data. Public Health and Research systems may utilize aggregated PHD data. Clinical Decision Support systems could leverage this data for alerts and recommendations, but it's not the primary focus. Lab, Imaging, Pharmacy, and Payer systems are not directly involved.",
     "scores": {
+      "Clinical Decision Support": 0.4,
       "EHR Systems": 0.8,
-      "PHR Systems": 0.6,
-      "Payer Systems": 0,
-      "Pharmacy Systems": 0.2,
-      "Lab Systems": 0,
       "Imaging Systems": 0,
-      "Public Health Systems": 0.4,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.4
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
     }
   },
   "Users & Stakeholders": {
-    "summary": "This Implementation Guide primarily targets developers of Personal Health Gateways (PHGs) and FHIR servers that handle data from Personal Health Devices (PHDs). Clinical Care Teams are the main beneficiaries of the standardized data, enabling them to monitor patients remotely. Patients and Caregivers indirectly benefit from improved care through remote monitoring. Research Organizations can leverage the standardized data for studies involving PHDs. Public Health Agencies and Government Agencies have a minimal role, primarily in the context of broader remote patient monitoring initiatives.",
+    "summary": "This FHIR Implementation Guide (IG) primarily targets developers of Personal Health Gateways (PHGs) and FHIR servers that handle data from Personal Health Devices (PHDs). Clinical Care Teams are the main beneficiaries of the standardized data, enabling them to effectively utilize PHD data in remote patient monitoring. While Patients and Caregivers indirectly benefit from improved care, their direct interaction with the IG is minimal. Public Health Agencies and Research Organizations may utilize the standardized data, but their needs are not the primary drivers. Payers and Healthcare Administrators have a limited role, while Government Agencies may be involved in setting standards or regulations related to PHD data exchange.",
     "scores": {
       "Clinical Care Teams": 0.8,
       "Healthcare Administrators": 0.2,
-      "Patients and Caregivers": 0.6,
-      "Payers": 0,
-      "Public Health Agencies": 0.2,
-      "Research Organizations": 0.6,
-      "Government Agencies": 0.2
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.4
     }
   },
   "meta": {

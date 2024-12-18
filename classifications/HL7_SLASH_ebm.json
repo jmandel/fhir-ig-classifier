@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on representing Evidence-Based Medicine (EBM) concepts within FHIR. It heavily relies on FHIR resources and profiles, with no significant use of other HL7 standards like CDA, v2, or v3. While it doesn't directly integrate different HL7 paradigms, it does bridge FHIR versions (R5 and R6) through extensions, which could be considered a form of cross-paradigm work within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on representing Evidence-Based Medicine (EBM) concepts in a standardized way. It defines profiles, extensions, and value sets for representing scientific knowledge, study designs, statistical findings, and recommendations. While it mentions potential adaptation for specific regions, the primary focus is on creating a universal framework for EBM, applicable globally without specific jurisdictional constraints.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of Evidence-Based Medicine (EBM) concepts within FHIR. It enables the exchange and integration of scientific knowledge, including citations, study designs, statistical findings, certainty assessments, and recommendations. The primary goal is to facilitate the creation, sharing, and reuse of computable knowledge artifacts for clinical decision support, guideline development, and quality measurement. While it touches upon clinical data and workflow, its core is deeply rooted in representing clinical knowledge and research findings in a structured, computable format.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.8,
+      "Research": 1,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of Evidence-Based Medicine (EBM) concepts. It's primarily designed for systems that create, manage, and utilize computable knowledge artifacts. Clinical Decision Support systems are central, as they will directly consume this standardized EBM data. EHRs will need extensive integration to display and utilize this information. Research Platforms will also heavily rely on this IG for managing and analyzing research data. Public Health and Payer systems have minimal involvement, primarily in the context of quality measures and population-level analysis based on EBM principles.",
+    "scores": {
+      "Clinical Decision Support": 1,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation of Evidence-Based Medicine (EBM) concepts within FHIR. Its primary users are those involved in creating, managing, and utilizing computable scientific knowledge, particularly in the context of clinical decision support, guideline development, and research. While clinical care teams may indirectly benefit from the improved availability of evidence-based information, the IG's direct users are primarily researchers, guideline developers, and informaticians. Payers and public health agencies have a lesser, though still relevant, role in utilizing the standardized EBM data for quality measurement and population health analysis.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 1,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

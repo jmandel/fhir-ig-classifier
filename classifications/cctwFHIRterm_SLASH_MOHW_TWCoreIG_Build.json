@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR R4, defining profiles and extensions for Taiwan's healthcare system. It leverages international terminologies like LOINC and SNOMED CT, but does not integrate with CDA, v2, or v3. While it references other FHIR IGs, it does not demonstrate cross-paradigm integration with other HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide is explicitly designed for Taiwan's healthcare system, addressing its specific needs and requirements. It defines profiles, extensions, and terminologies tailored to the Taiwanese context, referencing Taiwan-specific code systems and regulations. The guide is developed and maintained by the Ministry of Health and Welfare (MOHW) of Taiwan and is intended for use within Taiwan's national healthcare system.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Taiwan": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The MOHW_TWCoreIG_Build is a comprehensive FHIR implementation guide focused on establishing a foundation for health data interoperability within Taiwan's healthcare system. It prioritizes the standardization of core clinical data exchange, leveraging FHIR R4 profiles, extensions, and RESTful interactions, with a strong emphasis on search capabilities. It also addresses administrative aspects, identity & security, and workflow considerations, while incorporating Taiwan-specific terminologies and requirements.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.6,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0.8,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The MOHW_TWCoreIG_Build is designed to facilitate interoperability within Taiwan's healthcare system using FHIR R4. It primarily targets EHR systems, requiring them to fully implement the defined profiles and interactions. Lab, Pharmacy, and Public Health systems also play significant roles, requiring extensive integration to exchange data like lab results, medications, and population health information. Payer systems have a defined but limited role, likely related to claims and payment data exchange using standardized formats. Clinical Decision Support, Imaging, PHR, and Research systems have minimal or no direct involvement based on the core focus of this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) is designed to standardize health data exchange within Taiwan's healthcare system. It primarily serves the needs of **Clinical Care Teams** and **Health IT developers** by defining FHIR profiles, extensions, and interactions tailored to the Taiwanese context. **Government Agencies** play a crucial role in driving the adoption and enforcement of the IG. **Public Health Agencies** benefit from standardized data for population health monitoring. **Payers** and **Research Organizations** have a moderate interest, while **Patients and Caregivers** have a minimal direct role, though they ultimately benefit from improved interoperability.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

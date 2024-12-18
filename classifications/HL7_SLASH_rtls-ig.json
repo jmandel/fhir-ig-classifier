@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on using FHIR messaging for real-time location system (RTLS) integration. It heavily relies on FHIR resources and messaging, with no mention of CDA, v2, or v3. While it uses FHIR, which is inherently cross-paradigm, the IG itself doesn't explicitly integrate with other HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide focuses on standardizing the communication of tag location data between a Real-Time Location System (RTLS) and other healthcare systems using FHIR messaging. It does not specify any particular jurisdiction or region, making it applicable universally.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling real-time communication of tag location data from a Real-Time Location System (RTLS) to other healthcare systems. It primarily addresses workflow optimization and asset tracking by standardizing the enrollment, unenrollment, and location update events for tracked tags. While it touches upon administrative aspects through device and location management, its core purpose revolves around facilitating location-based workflows.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on enabling Real-Time Location Systems (RTLS) to share tag location data with other healthcare systems. EHRs and systems that manage assets or need location awareness will be the primary consumers of this data. The IG does not directly involve clinical decision support, lab, imaging, pharmacy, payer, or PHR systems. Public health and research platforms might have limited use cases for this data.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling real-time communication of tag location data from a Real-Time Location System (RTLS) to other healthcare systems. The primary users are those who need to track assets and potentially patients within a healthcare setting. Clinical Care Teams and Healthcare Administrators are the most significant users, as they directly benefit from the improved asset tracking, workflow optimization, and potential patient safety enhancements. Other groups like Public Health Agencies and Research Organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

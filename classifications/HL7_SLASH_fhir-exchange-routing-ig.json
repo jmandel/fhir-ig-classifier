@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally built upon the FHIR standard, defining how to route FHIR RESTful interactions through intermediaries. It does not utilize CDA, v2, or v3, and its cross-paradigm support is limited to acknowledging other FHIR-related standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The implementation guide was initially created for the US Realm but explicitly states it is applicable anywhere it provides value. This suggests a design intended for broader use, with a nod to a specific region. Therefore, it is best classified as Universal Realm.",
+    "scores": {
+      "Universal Realm": 0.8,
+      "National": 0.2,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on enabling transparent routing of FHIR RESTful interactions through intermediaries, essentially defining a workflow pattern for data exchange. It doesn't delve into specific clinical domains but rather provides a technical framework for how systems can communicate via intermediaries without the originator needing to be aware of the intermediary's presence. The IG emphasizes the use of a single public FHIR service base URL for the destination and a passive intermediary model. While it touches upon security by outlining a pass-through model, it doesn't define detailed security protocols. The IG is agnostic to specific clinical data, care planning, or diagnostic processes, focusing instead on the mechanics of FHIR interaction routing.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on routing FHIR RESTful interactions through intermediaries. It primarily impacts systems acting as FHIR clients (originators) and servers (destinations), as well as intermediary systems facilitating the exchange. EHRs are central to this as they often act as both originators and destinations. Payer systems are also heavily involved, often being the destination for data exchange. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide primarily focuses on enabling seamless routing of FHIR interactions through intermediaries, primarily benefiting systems that initiate and receive FHIR requests. Clinical care teams and patients have minimal direct involvement. Payers and providers are key users as they often utilize intermediaries. Public health and research are less directly impacted, while government agencies have a moderate interest in standardization.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

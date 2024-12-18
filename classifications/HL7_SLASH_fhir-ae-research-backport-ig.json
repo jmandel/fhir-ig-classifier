@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, extending the AdverseEvent resource to meet clinical research needs. It does not utilize CDA, v2, or v3 directly, focusing solely on FHIR for data representation and exchange. Cross-paradigm integration is not a primary concern as it operates within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing Adverse Event (AE) data in clinical research, with a strong emphasis on meeting regulatory needs, particularly mentioning the FDA. While it leverages international standards like HL7 FHIR and mentions international guidelines like ICH E2A, the explicit mention of the FDA and its relevance to jurisdictions requiring AE reporting in clinical research suggests a strong alignment with the United States. However, it does not explicitly state that it is governed by the US, and the guide is designed to be broadly applicable to clinical research globally. Therefore, it is scored as strongly aligned with the US but not exclusively designed for it.",
+    "scores": {
+      "Universal Realm": 0.2,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on capturing and standardizing Adverse Event (AE) data in the context of clinical research, enabling the use of real-world data sources like EHRs and PHRs for AE reporting in clinical trials. It leverages FHIR R4 and backports the AdverseEvent resource from R5, defining a specialized AdverseEvent Clinical Research Profile with extensions for research-specific data elements. The IG primarily addresses clinical research needs, with a strong emphasis on workflow and data standardization for regulatory reporting.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.6,
+      "Research": 1,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing Adverse Event (AE) data collection in clinical research, primarily within EHRs and PHRs, for efficient reporting to regulatory bodies. It leverages FHIR R4 and backports the R5 AdverseEvent resource, defining a specialized profile with extensions for research-specific data. Therefore, EHR systems and Research Platforms are central to its implementation, with PHR systems playing a significant role in patient-reported AEs. Public Health Systems may have a minimal role in receiving aggregated AE data for post-market surveillance.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 1
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide primarily targets the needs of clinical research organizations and government agencies involved in regulating and overseeing clinical trials. It focuses on standardizing adverse event data collection from real-world sources for use in clinical research, with a strong emphasis on regulatory compliance. Clinical care teams and patients have a defined but more limited role, primarily as sources of data. Payers and healthcare administrators are not significantly involved.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 1,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

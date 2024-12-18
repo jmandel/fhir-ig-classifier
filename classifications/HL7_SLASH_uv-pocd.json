@@ -6,11 +6,11 @@
       "Cross-Paradigm": 0.4,
       "FHIR": 1,
       "v2": 0.2,
-      "v3": 0.2
+      "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide does not specify any particular national or regional jurisdiction. It references international standards like IEEE 11073 and LOINC, and mentions cooperation with the Personal Health Device IG, suggesting a focus on universal applicability. The 'uv' in the IG's name 'uv-pocd' stands for 'universal' which further supports this.",
+    "summary": "The Implementation Guide does not specify any particular national or regional jurisdiction. It focuses on technical standards like IEEE 11073 and LOINC, which are internationally recognized. Therefore, it is designed for universal use without jurisdiction-specific constraints.",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "This FHIR Implementation Guide focuses on representing and exchanging data from acute care point-of-care medical devices (PoCDs). It leverages a hierarchical device model based on IEEE 11073 and defines profiles for devices, device metrics, and observations. The primary goal is to enable richer data capture for clinical decision support, quality measurement, research, and device management. While it touches upon administrative aspects through device management, its core is clinical data and workflow related to device data integration.",
+    "summary": "This FHIR Implementation Guide focuses on representing and exchanging data from acute care point-of-care medical devices (PoCDs). It leverages a hierarchical device model based on IEEE 11073 and defines profiles for devices, metrics, and observations. The primary goal is to enable richer data capture for clinical decision support, quality measurement, research, and device management. While it touches upon administrative aspects through device management, its core is clinical data from diagnostic devices, with a strong emphasis on accurate and detailed representation of measurements and their context.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0.2,
       "Clinical Data": 1,
-      "Clinical Knowledge": 0.4,
-      "Diagnostics": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0.6,
       "Research": 0.6,
-      "Workflow": 0.8
-    }
-  },
-  "Implementation Approach": {
-    "summary": "This IG primarily focuses on defining data profiles for representing point-of-care medical device data, leveraging a hierarchical device model and detailed observation structures. It heavily relies on RESTful interactions for data exchange and emphasizes the use of specific terminologies like IEEE 11073 MDC, LOINC, and UCUM. While it mentions transaction bundles, it doesn't define custom services or complex decision support rules. Messaging and subscriptions are not in the current scope.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.8
+      "Workflow": 0.6
     }
   },
   "Implementers": {
-    "summary": "This IG focuses on the exchange of data from point-of-care medical devices. EHR systems will need to fully implement it to receive and utilize the device data. Clinical Decision Support systems will heavily rely on this data for alerts and guidance. Lab and Imaging systems are out of scope. Pharmacy systems have minimal involvement. PHR systems are not directly involved as this IG focuses on acute care devices. Payer systems are not involved. Public Health systems may use aggregated data, and Research Platforms will benefit from the detailed device and observation data.",
+    "summary": "This IG focuses on representing and exchanging data from acute care point-of-care medical devices. Therefore, EHR systems are central to its implementation, as they will be the primary consumers of this data. Clinical Decision Support systems will also heavily rely on this data for providing guidance. While not directly involved in the core data exchange, Research Platforms and Public Health Systems can benefit from the standardized data for analysis and monitoring. Pharmacy, Payer, and PHR systems have minimal to no involvement.",
     "scores": {
-      "EHR Systems": 1,
-      "PHR Systems": 0,
-      "Payer Systems": 0,
-      "Pharmacy Systems": 0.2,
-      "Lab Systems": 0,
-      "Imaging Systems": 0,
-      "Public Health Systems": 0.4,
       "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.4,
       "Research Platforms": 0.6
     }
   },
   "Users & Stakeholders": {
-    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the exchange of structured data from point-of-care medical devices in acute care settings. Therefore, Clinical Care Teams and Research Organizations are the most critical users, as they directly benefit from the detailed device data and contextual information. Public Health Agencies and Government Agencies also have a significant stake in the standardization and quality of this data for population health monitoring and regulatory purposes. Payers may have a limited role in utilizing this data for quality measurement and potentially value-based care initiatives. Patients and Caregivers are indirectly impacted through improved care and safety, but are not direct users of the IG. Healthcare Administrators have a moderate interest in device management and operational efficiency aspects.",
+    "summary": "This FHIR Implementation Guide (IG) focuses on the exchange of data from point-of-care medical devices in acute care settings. The primary users are those who need to consume and utilize this detailed device data, such as clinical care teams and research organizations.  Clinical care teams benefit from richer data for decision support, while researchers gain access to detailed device data for analysis.  The IG also serves the needs of those responsible for device management and data quality, such as clinical engineers (captured under Healthcare Administrators). Public health agencies and payers have a less direct role but may benefit from aggregated data for population health analysis and quality measurement, respectively.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.6,
-      "Patients and Caregivers": 0.2,
-      "Payers": 0.4,
-      "Public Health Agencies": 0.8,
-      "Research Organizations": 1,
-      "Government Agencies": 0.8
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.4
     }
   },
   "meta": {

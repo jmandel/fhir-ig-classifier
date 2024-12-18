@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling electronic agreement workflows for physiotherapy and speech therapy within the Belgian MyCareNet platform. It heavily relies on FHIR resources and RESTful interactions, defining specific profiles and extensions for this purpose. While it acknowledges other HL7 standards, it doesn't directly integrate or depend on them. The IG is designed to operate within the FHIR ecosystem, leveraging its core principles and structures.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Belgian healthcare system, focusing on the MyCareNet platform and its electronic agreement processes for physiotherapy and speech therapy. It leverages Belgian eHealth FHIR specifications and defines Belgium-specific profiles, extensions, value sets, and code systems. Therefore, it is clearly a national guide for Belgium.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on streamlining the electronic agreement process for physiotherapy and speech therapy services within the Belgian MyCareNet platform. It primarily deals with the exchange of agreement requests and responses between healthcare providers and insurance organizations, leveraging FHIR resources like Claim and ClaimResponse. While it touches upon clinical data through ServiceRequest and supporting documents, its core is the administrative and financial workflow of agreement management.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the exchange of electronic agreement requests and responses for physiotherapy and speech therapy within the Belgian MyCareNet platform. It primarily involves EHR systems used by healthcare providers and Payer systems used by insurance organizations.  EHR systems will initiate and manage the agreement requests, while Payer systems will process and respond to them.  There's a minimal role for PHR systems to potentially inform patients about agreement statuses.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing electronic agreement requests and responses for physiotherapy and speech therapy within the Belgian MyCareNet platform. The primary users are healthcare providers (specifically physiotherapists and speech therapists) and insurance organizations who are directly involved in the agreement process. Clinical care teams have a core role as they initiate the agreement requests. Payers are also core users as they process and respond to these requests. Healthcare administrators have a significant role in managing the systems and processes related to these agreements. Public health and research organizations have minimal involvement, while government agencies have a limited role in setting the context for the MyCareNet platform.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 1,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG defines the Clinical Quality Language (CQL), a domain-specific language for expressing clinical logic. While it mentions FHIR and its Clinical Reasoning Module, the core of the IG is the language specification itself, not FHIR resources or interactions. It acknowledges other HL7 standards like HQMF and the CDS Knowledge Artifact Specification but doesn't deeply integrate with them. It's designed to be data-model agnostic, making it independent of specific HL7 versions or CDA.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 0.4,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide defines the Clinical Quality Language (CQL), a domain-specific language for expressing clinical knowledge. It is designed for international use without jurisdiction-specific constraints, focusing on a common representation of expression logic independent of any particular data model.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide defines the Clinical Quality Language (CQL), a domain-specific language for expressing clinical knowledge used in Clinical Decision Support (CDS) and Clinical Quality Measurement (CQM). The IG's primary focus is on defining the language and its underlying abstract syntax tree representation (ELM), enabling the sharing and reuse of clinical logic. Therefore, it heavily emphasizes Clinical Knowledge, with a secondary focus on Quality & Reporting and some relevance to Workflow.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.8,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG defines the Clinical Quality Language (CQL) for expressing clinical logic used in Clinical Decision Support (CDS) and Clinical Quality Measurement (CQM). Therefore, systems involved in creating, managing, and executing clinical logic, particularly within CDS and EHR systems, are the primary implementers. Payer systems might use it for quality reporting, and research platforms could leverage it for defining study criteria. Public health systems could use it for population-level quality measures.",
+    "scores": {
+      "Clinical Decision Support": 1,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide defines the Clinical Quality Language (CQL), a language for expressing clinical logic used in Clinical Decision Support (CDS) and Clinical Quality Measurement (CQM). The primary users are those involved in creating and implementing these artifacts, such as clinical domain experts, artifact authors, and developers. The IG focuses on the language itself, not specific FHIR resources, and aims to enable sharing and reuse of clinical logic. Therefore, clinical care teams and patients are less directly involved, while those responsible for quality measurement and decision support systems are the core users.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

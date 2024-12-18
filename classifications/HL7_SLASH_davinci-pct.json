@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The Da Vinci Patient Cost Transparency (PCT) Implementation Guide is fundamentally based on FHIR, using it as the core standard for data representation and exchange. It leverages FHIR's RESTful API and resource model to define the structure and interactions for Good Faith Estimates (GFEs) and Advanced Explanations of Benefits (AEOBs). While it acknowledges other HL7 standards, they are not directly relevant to its core purpose. Cross-paradigm integration is present in a limited sense, as the IG builds upon US Core and HRex, which themselves may incorporate elements from other HL7 standards. However, this integration is not a primary focus of the PCT IG itself.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci Patient Cost Transparency (PCT) Implementation Guide is explicitly designed to meet the requirements of the No Surprises Act in the United States. It leverages US Core and is tailored for the US healthcare market, making it a national guide for the USA.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Patient Cost Transparency (PCT) Implementation Guide primarily focuses on the exchange of financial information between providers and payers to provide patients with cost estimates for healthcare services, driven by the requirements of the No Surprises Act. It leverages FHIR resources like Claim and ExplanationOfBenefit, along with Task for workflow management, to facilitate the submission of Good Faith Estimates (GFEs) and the retrieval of Advanced Explanations of Benefits (AEOBs).",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci Patient Cost Transparency (PCT) IG primarily focuses on the exchange of Good Faith Estimates (GFEs) and Advanced Explanations of Benefits (AEOBs) between providers and payers. Therefore, Payer Systems and EHR/Provider Systems are the most critical implementers. Other systems play a less significant role.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Da Vinci Patient Cost Transparency (PCT) IG primarily focuses on enabling providers to submit Good Faith Estimates (GFEs) to payers and receive Advanced Explanations of Benefits (AEOBs) in return, using FHIR-based standards. This process is driven by the No Surprises Act and aims to improve patient transparency regarding healthcare costs. Therefore, Patients and Caregivers are the core users, with Payers and Clinical Care Teams being key users. Government Agencies have a significant role due to the regulatory nature of the IG. Healthcare Administrators have a defined role in implementing and managing the systems involved. Public Health Agencies and Research Organizations have minimal involvement in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 1,
+      "Payers": 0.8,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

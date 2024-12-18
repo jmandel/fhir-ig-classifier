@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on representing laboratory reports using FHIR R4, with a document-based approach using Bundles, Composition, and DiagnosticReport resources. It leverages FHIR extensively and acknowledges CDA as a potential source for migration. It has minimal reliance on v2 and v3.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is explicitly designed for the European Union, focusing on harmonizing laboratory report exchange within the region. It supports initiatives like the European Health Data Space (EHDS) and MyHealth@EU, and addresses the need for standardized representation of laboratory data across different European countries. Therefore, it is classified as a Regional guide for Europe.",
+    "scores": {
+      "Universal Realm": 0,
+      "National": 0,
+      "Regional > Europe": 1
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation and exchange of laboratory reports within Europe, primarily for in-vitro diagnostics. It leverages FHIR R4 with a document-based approach using Bundles, Composition, and DiagnosticReport resources. The core purpose is to improve interoperability and data quality for clinical decision-making, patient care, and public health surveillance. It heavily emphasizes Diagnostics and Clinical Data, with significant attention to Workflow and Administrative aspects related to laboratory report management.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 1,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.4,
+      "Research": 0.4,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing laboratory reports for exchange within Europe, primarily targeting Lab Systems and EHR Systems. It also has implications for Public Health Systems due to its focus on data comparability and surveillance. While not directly focused on patient interaction, the standardization could indirectly benefit PHR Systems. Research Platforms may also benefit from the standardized data. Payer Systems are not a primary focus, and Clinical Decision Support systems have a limited role in consuming the standardized reports.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 1,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing laboratory report exchange within Europe. Clinical Care Teams and Public Health Agencies are the core users, as the IG directly impacts clinical decision-making and population health monitoring. Healthcare Administrators and Government Agencies have significant influence due to the IG's alignment with European initiatives like EHDS and MyHealth@EU. Payers have a defined but limited role, potentially using the standardized data for claims processing. Research Organizations have minimal involvement, while Patients and Caregivers have a clear need for accessing their lab results, though their influence on the IG's design is limited.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

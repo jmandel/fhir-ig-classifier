@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on representing pharmaceutical analytical procedures using FHIR resources. It heavily relies on FHIR's RESTful approach and core resources like PlanDefinition, ObservationDefinition, and SubstanceDefinition. It does not utilize CDA, v2, or v3, and its cross-paradigm support is limited to leveraging FHIR's capabilities within its own ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on the representation and exchange of structured quality data related to pharmaceutical products and substances. While it mentions relevance to jurisdictions that use CTD submissions (like FDA, EMA), it does not specify a particular country or region as its primary scope. The 'uv' in the title suggests a universal scope. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of analytical procedures used in pharmaceutical quality control, particularly those related to drug products and substances as described in the Common Technical Document (CTD) Module 3. It leverages PlanDefinition, ObservationDefinition, and SubstanceDefinition resources to structure the data, enabling interoperability between pharmaceutical manufacturers, regulatory bodies, and other stakeholders. While it touches upon clinical data and workflow, its core purpose is to define a structured format for representing the knowledge and processes involved in pharmaceutical quality analysis.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0.8,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 0,
+      "Quality & Reporting": 0.8,
+      "Research": 0.4,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation of analytical procedures used in pharmaceutical quality control, primarily for regulatory submissions and data exchange between manufacturers, labs, and regulatory bodies. Therefore, EHR systems have a limited role, while Lab Systems and Payer Systems have more significant involvement.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.2,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the representation and exchange of pharmaceutical analytical procedures, primarily benefiting pharmaceutical manufacturers, quality control personnel, and regulatory agencies. Clinical care teams, patients, and payers are not the primary focus. Public health and research organizations have a moderate interest due to the potential for data analysis and quality assessment.",
+    "scores": {
+      "Clinical Care Teams": 0,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.6,
+      "Government Agencies": 1
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

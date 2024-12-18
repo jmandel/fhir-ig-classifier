@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining profiles and extensions for exchanging cancer screening data in Belgium. It leverages FHIR's RESTful approach and core resources. While it acknowledges other HL7 standards, it doesn't directly integrate or depend on them. The IG demonstrates a commitment to FHIR as its primary standard, with no significant reliance on CDA, v2, or v3. Cross-paradigm integration is minimal, primarily through the use of common terminologies like SNOMED CT.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the Belgian healthcare context, focusing on standardizing the exchange of cancer screening information within Belgium. It references Belgian Core Profiles and is tailored to the specific needs of Belgian cancer screening programs.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of information for population-based cancer screenings in Belgium. It heavily emphasizes public health by defining profiles and workflows for managing screening programs, tracking participation, and reporting results at a population level. While clinical data related to screening results is central, the IG's primary driver is improving public health outcomes through efficient screening program management. Administrative aspects are also important for managing appointments and encounters, and workflow is addressed through the defined transaction for sending screening information.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of cancer screening information in Belgium. It primarily targets systems involved in managing and delivering screening programs, such as public health systems and EHRs. While EHRs will need to integrate and display screening data, public health systems will be responsible for managing the screening programs and exchanging data with other stakeholders. Clinical decision support systems may play a role in generating alerts based on screening results, and research platforms could utilize the standardized data for epidemiological studies. Other systems like pharmacy, imaging, and payer systems have minimal to no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of cancer screening information in Belgium. The primary users are Public Health Agencies and Clinical Care Teams, who need to track screening participation, results, and follow-up. Government Agencies have a significant role in defining the scope and regulations. Healthcare Administrators are involved in implementing the IG within their organizations. Research Organizations may use the standardized data for epidemiological studies. Payers have a limited role, potentially using the data for quality assessment. Patients and Caregivers are indirectly involved, as the IG aims to improve the efficiency of screening programs, ultimately benefiting them.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

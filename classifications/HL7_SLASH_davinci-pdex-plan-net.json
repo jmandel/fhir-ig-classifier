@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR, defining a RESTful API for accessing payer provider directory information. It leverages FHIR resources and search capabilities extensively. While it acknowledges other HL7 standards, it doesn't directly integrate with them. The IG does not use CDA for document exchange, v2 for messaging, or v3 RIM-based models. It does demonstrate a degree of cross-paradigm awareness by referencing and adapting US Core profiles, which themselves may have some v3 influence, but this is indirect.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the US healthcare context, adapting the VHDir IG and aligning with US Core profiles. It addresses US-specific regulations and programs like the Da Vinci Project, making it a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the exchange of health insurance plan and provider network information. It defines a read-only FHIR API for querying payer provider directories, allowing third-party applications to access and display this data. While it touches upon clinical data through references to provider specialties and services, its core purpose revolves around administrative aspects of healthcare, particularly the management of provider networks and insurance plans. Identity and security are addressed minimally, focusing on data consistency and validity rather than access control. The IG has a strong connection to insurance and financial aspects by facilitating the discovery of in-network providers, potentially impacting out-of-network costs.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0.8,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling payers to expose provider directory information via a FHIR API. EHRs will need to integrate to consume this data for referrals and care coordination. Payer systems are central to implementing the IG, while PHR systems may consume the data to help patients find in-network providers. Clinical Decision Support systems might use the data to suggest in-network options. Public Health and Research systems have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling payers to expose their provider network data via a standardized FHIR API. This allows third-party applications to build user-friendly provider directories. Therefore, payers are the core users, as they are responsible for implementing the IG.  Clinical care teams and patients/caregivers benefit significantly from the improved access to provider information, making them key users. Healthcare administrators within payer organizations will also be involved in the implementation. Public health agencies and research organizations have a limited role, primarily in potentially using the data for analysis. Government agencies have a minimal role, mainly related to the regulatory aspects that this IG helps fulfill.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.8,
+      "Payers": 1,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

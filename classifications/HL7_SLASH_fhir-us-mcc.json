@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The FHIR US Multiple Chronic Conditions (MCC) Implementation Guide is fundamentally based on FHIR and extends US Core to facilitate care planning for patients with multiple chronic conditions. It leverages FHIR's RESTful API and resource model, defining profiles, extensions, and interactions based on the FHIR R4 specification. While it acknowledges other HL7 standards, it does not directly utilize or integrate with CDA, v2, or v3. Cross-paradigm integration is limited to referencing other FHIR-based initiatives like US Core and the Gravity Project.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide explicitly states it is for the US, building upon US Core profiles and referencing US-specific programs and organizations like the National Library of Medicine's (NLM) Value Set Authority Center (VSAC). Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The FHIR US Multiple Chronic Conditions (MCC) Implementation Guide primarily focuses on enabling interoperable care planning for patients with multiple chronic conditions. It leverages US Core profiles and defines new profiles, extensions, and value sets to represent and exchange care plan information, emphasizing coded content and resource referencing. While it touches upon clinical data, workflow, and quality reporting, its core purpose is to facilitate dynamic and comprehensive care planning for MCC patients.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 1,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.6,
+      "Research": 0.6,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The FHIR US Multiple Chronic Conditions (MCC) Implementation Guide primarily targets EHR systems for comprehensive care plan management, with significant involvement from PHR systems for patient engagement and Clinical Decision Support for guiding care decisions. Lab and Pharmacy systems play important roles in managing specific aspects of care, while Payer and Research Platforms have limited but defined integration needs. Public Health systems have minimal direct involvement, and Imaging systems are not directly implicated in this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The FHIR US Multiple Chronic Conditions (MCC) Implementation Guide primarily targets the needs of Clinical Care Teams by providing a standardized way to represent and exchange care plan information for patients with multiple chronic conditions. While Patients and Caregivers are central to the care planning process, their role in driving the IG's design is less direct. Healthcare Administrators, Payers, Public Health Agencies, and Research Organizations benefit from the standardized data exchange enabled by the IG, but their influence on its core specifications is secondary. Government Agencies have a minimal role in this specific IG, primarily related to its alignment with broader US healthcare initiatives.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

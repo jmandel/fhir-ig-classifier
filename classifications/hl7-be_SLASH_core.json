@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on establishing a Belgian federal interoperability framework using FHIR. It heavily relies on FHIR for its core structure and operations, while not utilizing other HL7 standards like CDA, v2, or v3. Cross-paradigm integration is minimal, primarily acknowledging the existence of other standards like KMEHR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly defines its scope as the Belgian healthcare context, focusing on federal-level requirements. It utilizes Belgian-specific identifiers, code systems, and naming systems, and defines profiles and extensions tailored to the Belgian healthcare system. Therefore, it is classified as a National Implementation Guide for Belgium.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on establishing a foundational framework for interoperability within the Belgian healthcare system. It primarily addresses administrative aspects by defining core profiles for entities like Patient, Practitioner, Organization, and Location, with a strong emphasis on using Belgian-specific identifiers and code systems. While it touches upon clinical data exchange, its core purpose is to standardize the representation of administrative information to facilitate data exchange and consistency across different healthcare systems in Belgium.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on establishing a foundational framework for interoperability within the Belgian healthcare system. It primarily targets core systems like EHRs that handle patient demographics, practitioner information, and organizational data. Public health systems also play a significant role due to the IG's emphasis on standardized data exchange for reporting. While other systems like Pharmacy and Payer systems might interact with the data defined in this IG, they are not the primary focus.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of core healthcare information within the Belgian healthcare system. It targets interoperability between various systems and stakeholders by defining a common set of profiles and extensions based on the HL7 FHIR standard. Therefore, Clinical Care Teams and Healthcare Administrators are the core users, while Government Agencies and Public Health Agencies have significant influence due to the focus on federal-level requirements and public health reporting. Patients and Caregivers have a minimal role, as the IG does not directly address patient-facing applications. Payers and Research Organizations are not meaningfully involved in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

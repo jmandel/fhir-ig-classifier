@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "The IHE ITI NPFS Implementation Guide is fundamentally based on FHIR, using it as the core standard for defining resources, operations, and interactions. It leverages FHIR's RESTful approach and specific resources like DocumentReference and Binary to manage non-patient files. While it acknowledges other standards like IHE's Basic Audit (BALP), it doesn't directly integrate with CDA, v2, or v3, focusing solely on a FHIR-based solution.",
+    "summary": "The IHE IT Infrastructure Non-Patient File Sharing (NPFS) Implementation Guide is fundamentally based on FHIR R4, using FHIR resources and interactions to define a system for managing non-patient files. It does not use HL7 v2 or v3, nor does it directly leverage CDA. While it does not explicitly integrate across different HL7 paradigms, it does build upon other IHE profiles, which may use other HL7 standards, thus indirectly acknowledging a broader HL7 ecosystem.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "This Implementation Guide focuses on the technical aspects of sharing non-patient files within a healthcare information exchange using FHIR. It does not specify any particular jurisdiction or region, making it universally applicable.",
+    "summary": "The IHE IT Infrastructure Non-Patient File Sharing (NPFS) Implementation Guide focuses on the interoperable exchange of non-patient files within healthcare settings. It leverages FHIR R4 and defines specific profiles, operations, and interactions for managing these files. While it references other IHE profiles and HL7 FHIR, it does not explicitly mention any specific jurisdiction or program, making it universally applicable.",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "The ITI NPFS Implementation Guide focuses on the management and exchange of non-patient files within a healthcare information exchange. It leverages FHIR resources like DocumentReference and Binary to define a standardized mechanism for file submission, update, search, and retrieval. While it touches upon security and workflow aspects, its primary focus is on the administrative task of managing these files, with a strong emphasis on the clinical data related to these non-patient files, such as workflow definitions and stylesheets. It also has a strong focus on the workflow of managing these files.",
+    "summary": "The ITI NPFS Implementation Guide focuses on the management and exchange of non-patient files within a healthcare information exchange. It leverages FHIR resources like DocumentReference and Binary to define a standardized mechanism for file submission, update, search, and retrieval. While it touches upon administrative aspects and identity & security through audit logging, its primary focus is on enabling efficient workflow and managing clinical knowledge represented in non-patient files like workflow definitions and stylesheets.",
     "scores": {
-      "Administrative": 0.8,
+      "Administrative": 0.6,
       "Care Planning": 0.2,
-      "Clinical Data": 0.8,
-      "Clinical Knowledge": 0.6,
+      "Clinical Data": 0,
+      "Clinical Knowledge": 0.8,
       "Diagnostics": 0,
       "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.8
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The ITI NPFS Implementation Guide primarily focuses on defining a RESTful API for managing non-patient files using FHIR resources, particularly DocumentReference and Binary. It heavily relies on data profiles to define the structure and constraints for these resources and transaction bundles. Terminology plays a significant role in categorizing and classifying files. While messaging isn't directly used, the concept of transactions implies a message-like exchange. Decision support, forms, and UI are not within the scope of this IG. Subscriptions are not mentioned.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.8,
-      "Forms & UI": 0,
-      "Messaging": 0.4,
-      "REST APIs": 0.8,
-      "Services": 0.6,
-      "Subscriptions": 0,
-      "Terminology": 0.6
+      "Workflow": 1
     }
   },
   "Implementers": {
-    "summary": "The ITI NPFS Implementation Guide focuses on sharing non-patient files within a healthcare information exchange. This means EHR systems will need to implement it to manage and share files like workflow definitions and policies. Systems that consume these files, like Clinical Decision Support systems, will also need to implement parts of the IG. While PHR and Payer systems are not directly involved, Lab and Imaging systems might need to manage non-patient files related to their operations. Public Health and Research systems have minimal involvement.",
+    "summary": "The IHE IT Infrastructure Non-Patient File Sharing (NPFS) Implementation Guide focuses on managing and exchanging files not directly related to a specific patient, such as clinical workflow definitions, domain policies, and stylesheets. It primarily targets systems within a healthcare information exchange (HIE) that handle these types of files. EHR systems will play a key role in consuming these files, while systems managing clinical workflow definitions, privacy policies, and other non-patient data will be central to its implementation. Clinical Decision Support systems may also utilize these files, and Lab Systems might need to access workflow definitions. Public Health and Research systems have minimal involvement.",
     "scores": {
-      "EHR Systems": 1,
-      "PHR Systems": 0,
-      "Payer Systems": 0,
-      "Pharmacy Systems": 0.2,
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
       "Lab Systems": 0.6,
-      "Imaging Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
       "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
       "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "The ITI.NPFS Implementation Guide primarily targets systems and individuals involved in managing and sharing non-patient files within a healthcare information exchange (HIE) or a healthcare organization. Clinical Care Teams and Patients/Caregivers are not the primary focus. The IG's design is driven by the needs of Healthcare Administrators and the systems they manage. Public Health Agencies and Research Organizations have minimal involvement. Payers are not directly involved. Government Agencies have a defined but limited role in terms of regulation and oversight.",
+    "summary": "This FHIR Implementation Guide (ITI.NPFS) focuses on sharing non-patient files like workflow definitions and policies. The primary users are those managing and consuming these files within a healthcare information exchange. Clinical care teams have a limited role, while patients and caregivers are not directly involved. The IG is relevant to healthcare administrators and government agencies for standardization and regulation.",
     "scores": {
-      "Clinical Care Teams": 0.2,
-      "Healthcare Administrators": 1,
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.8,
       "Patients and Caregivers": 0,
-      "Payers": 0,
+      "Payers": 0.2,
       "Public Health Agencies": 0.2,
       "Research Organizations": 0.2,
-      "Government Agencies": 0.4
+      "Government Agencies": 0.6
     }
   },
   "meta": {

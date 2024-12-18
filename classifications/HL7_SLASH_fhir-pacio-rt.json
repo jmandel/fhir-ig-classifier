@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on structuring post-acute care encounters into timepoints using FHIR resources. It heavily relies on FHIR and extends US Core profiles. It does not use CDA, v2, or v3, and its cross-paradigm support is limited to leveraging existing US Core profiles which may themselves have some cross-paradigm considerations.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide explicitly states it is \"specifically designed for the US Realm\" and builds upon US Core profiles. It also references the PACIO Project, a US-based initiative. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The FHIR Implementation Guide (IG) focuses on structuring extended post-acute care (PAC) encounters into manageable time blocks called \"re-assessment timepoints.\" This structure, built upon US Core Encounter and ClinicalImpression, facilitates improved care coordination, data analysis, auditing, and patient engagement by organizing longitudinal patient data within PAC admissions. While it touches upon various domains, its core purpose revolves around structuring clinical data within a specific workflow context.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.6,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.6,
+      "Research": 0.2,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "The PACIO Re-Assessment Timepoints IG primarily targets EHR systems in post-acute care settings to structure long-term patient data into manageable timepoints. Payer systems are also key players for auditing and billing purposes. Clinical Decision Support systems benefit from the structured data for improved care guidance. While PHR systems have a role in patient engagement, and research platforms can utilize the data for analysis, their involvement is less central. Public health, lab, imaging, and pharmacy systems have minimal to no direct involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on structuring post-acute care (PAC) encounters into re-assessment timepoints to improve data representation and usability. Clinical Care Teams are the core users, as they will directly interact with and benefit from the structured data for care coordination and decision-making. Payers are a key user group, as the IG facilitates streamlined auditing and billing. Healthcare Administrators and Patients/Caregivers also benefit from improved data organization and accessibility. Public Health Agencies and Research Organizations have a defined but limited role, potentially using the structured data for population health analysis and research. Government Agencies have minimal involvement, primarily related to oversight of standards compliance.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

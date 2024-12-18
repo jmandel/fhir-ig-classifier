@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on the FHIR standard, defining a RESTful approach for exchanging health promotion data in Denmark. It leverages FHIR resources and profiles extensively, making FHIR the core standard. While it acknowledges other HL7 standards, it doesn't directly integrate or require them. The IG demonstrates a cross-paradigm approach by utilizing FHIR to represent concepts that might traditionally be found in other HL7 standards, but it doesn't explicitly integrate with them. There is no mention or use of CDA, v2, or v3 in the IG.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Danish healthcare system, focusing on the reporting of §119 health promotion and disease prevention data from municipalities to the KL Gateway. It utilizes Danish-specific code systems (FSIII, SOR, FK-org) and aligns with national standards and core profiles (dk-core). The scope is explicitly limited to the Danish context, making it a national Implementation Guide.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the reporting of health promotion and disease prevention data (under §119) from Danish municipalities to a central gateway (KL Gateway). It leverages Danish-specific code systems and profiles built on top of FHIR and dk-core. The primary goal is to enable consistent data collection for national-level monitoring, evaluation, and planning of public health initiatives. While it touches upon various aspects of healthcare, its core is driven by public health and administrative needs within the Danish context.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.8,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.6,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling Danish municipalities to report health promotion and disease prevention data to a central gateway (KL Gateway). EHR systems within municipalities will be primarily responsible for capturing and structuring the data according to the IG's profiles. Public Health Systems will be the main consumers of this data for monitoring and evaluation. Payer systems are not directly involved, as this IG focuses on reporting rather than billing. Research platforms may utilize the aggregated data for epidemiological studies. PHR systems are not directly involved, as the focus is on reporting from municipalities to a central system, not directly to patients.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily serves the needs of Danish municipalities and the national KL Gateway for reporting and analyzing health promotion and disease prevention data under §119. Clinical care teams within municipalities are the core users, generating the data. Public health agencies and government bodies heavily rely on this data for monitoring, evaluation, and policy-making. While healthcare administrators within municipalities play a role in managing the systems, their influence is less direct than the clinical teams and national agencies. Research organizations may utilize the aggregated data, but the IG is not primarily designed for research purposes. Payers and patients/caregivers have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

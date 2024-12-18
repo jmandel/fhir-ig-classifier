@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of health and social care data within Danish municipalities. It heavily relies on FHIR for its core structure and data representation, defining numerous FHIR profiles and extensions tailored to the specific needs of this context. While it acknowledges and utilizes SNOMED CT and LOINC, it does not directly involve or integrate with HL7 v2, v3, or CDA standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is explicitly designed for the Danish municipal health and social care sector. It defines FHIR profiles and extensions tailored to the specific needs and context of Danish municipalities, referencing Danish code systems and regulations. Therefore, it is clearly a national guide for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the exchange and reporting of clinical data, specifically observations and questionnaires, within the Danish municipal health and social care sector. It leverages FHIR to structure this data, enabling consistent capture and sharing across different systems. While it touches upon administrative aspects through the use of specific code systems and extensions, its core purpose is to facilitate the collection and use of clinical data for quality improvement, reporting, and research.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.8,
+      "Research": 0.6,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of health and social care data within Danish municipalities. It primarily targets EHR systems used in these settings for capturing and sharing observations and questionnaire responses. While EHR systems are central, clinical decision support and research platforms also play significant roles. Public health systems benefit from aggregated data, and lab/pharmacy systems have minimal involvement due to the IG's scope.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily targets the Danish municipal health and social care sector. Its main goal is to standardize data exchange and reporting within this specific context. **Clinical Care Teams** within municipalities are the core users, as they will be directly involved in capturing and using the standardized data. **Healthcare Administrators** in municipalities will also heavily rely on this IG for quality improvement, resource allocation, and reporting. **Public Health Agencies** will benefit from the aggregated data for population health monitoring, although their influence on the IG's design is less direct. **Government Agencies** play a role in setting the broader context and regulations, but their direct involvement in this specific IG is limited. **Research Organizations** can utilize the standardized data for secondary research purposes, but they are not the primary drivers. **Payers** and **Patients/Caregivers** have minimal direct involvement in this IG, as it focuses on data standardization within the municipal care delivery process.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of physical activity data. It heavily relies on FHIR resources and RESTful interactions, building upon US Core and SDOH Clinical Care profiles. It does not utilize HL7 v2, v3, or CDA, and its cross-paradigm support is limited to leveraging existing FHIR-based IGs.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is bounded by the US Realm and builds upon US Core profiles. It also references US-specific terminologies like ICD-10-CM and aligns with USCDI. Therefore, it is clearly designed for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation and exchange of patient physical activity data. It leverages core FHIR resources like Observation, CarePlan, Goal, ServiceRequest, and Task to capture activity levels, create care plans, manage referrals, and track progress. While it touches upon administrative aspects through referral management and workflow coordination, its primary drive is to improve patient care by enabling better tracking and management of physical activity, making Clinical Data and Care Planning its core domains. It also has a strong emphasis on workflow related to referrals and task management.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 1,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0.2,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of physical activity data. It primarily targets EHR systems for recording and managing patient activity levels, goals, and care plans. Patient engagement systems (PHRs) are also key for capturing patient-reported data and facilitating communication. Clinical Decision Support systems will play an important role in providing guidance based on the collected data. While not central, Payer systems may become involved in reimbursement for non-traditional services related to physical activity interventions. Public Health systems could leverage aggregated data for population health monitoring. Research platforms may utilize the standardized data for studies on physical activity and health outcomes. Lab and Imaging systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of physical activity data to improve patient care and facilitate communication among healthcare providers, patients, and non-traditional service providers. Clinical Care Teams are the core users, driving the design with their need to track, manage, and prescribe physical activity. Patients and Caregivers are key users, as the IG emphasizes patient-centered care and their involvement in goal setting and care planning.  Public Health Agencies and Research Organizations have important, well-defined needs related to population health monitoring and intervention evaluation. Payers have a defined but limited role, primarily related to potential reimbursement of non-traditional services. Healthcare Administrators and Government Agencies have minimal but clear needs addressed by the IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR, using it as the core framework for representing and exchanging personal functioning and engagement data. It does not utilize CDA, v2, or v3 directly. While it doesn't explicitly integrate across different HL7 paradigms, it does leverage US Core, which itself is built on FHIR, demonstrating a degree of cross-paradigm influence within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The PACIO Personal Functioning and Engagement (PFE) Implementation Guide is explicitly designed for the US healthcare system. It directly references the IMPACT Act and CMS Promoting Interoperability Programs, which are US-specific regulations and initiatives. It also builds upon the US Core IG. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The PACIO Personal Functioning and Engagement (PFE) IG primarily focuses on representing and exchanging standardized data related to a person's functioning, including body functions, activities, and participation, across post-acute care (PAC) and other settings. It leverages the International Classification of Functioning, Disability, and Health (ICF) framework and FHIR Observation resources to achieve this. While it touches upon administrative aspects and workflow related to transitions of care, its core purpose is to facilitate the exchange of clinical data related to patient functioning, making Clinical Data its primary domain.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.6,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The PACIO Personal Functioning and Engagement (PFE) IG focuses on exchanging standardized data related to a person's functioning in post-acute care and other settings. It primarily targets EHR systems for capturing and sharing this information, with significant implications for systems involved in care transitions and coordination. Payer systems will also need to process this data for claims and quality reporting. While not the primary focus, systems like PHR and Public Health may have limited integration needs.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The PACIO Personal Functioning and Engagement (PFE) IG primarily serves clinical care teams in post-acute care settings by standardizing the exchange of patient functioning data. It also significantly impacts payers due to the IMPACT Act and has a notable role for patients and caregivers by promoting access to their functional information. Public health and research organizations have a defined but limited role, while government agencies have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

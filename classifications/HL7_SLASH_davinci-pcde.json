@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This Da Vinci Payer Coverage Decision Exchange (PCDE) Implementation Guide focuses on FHIR R4 for payer-to-payer data exchange, leveraging a document-centric approach with a Task-based workflow. It does not utilize CDA, v2, or v3, and its cross-paradigm support is limited to integrating other FHIR-based IGs.",
+    "summary": "This Da Vinci Payer Coverage Decision Exchange (PCDE) Implementation Guide focuses on FHIR R4 for payer-to-payer exchange of coverage transition information. It leverages other Da Vinci IGs and US Core, but does not utilize CDA, v2, or v3. While it uses a FHIR document, it's primarily a FHIR-based exchange mechanism.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "This Implementation Guide is part of the Da Vinci project and focuses on payer-to-payer data exchange within the United States healthcare system. It leverages US Core profiles and mentions the Centers for Medicare and Medicaid Services (CMS), indicating a strong alignment with US healthcare regulations and initiatives.",
+    "summary": "This Implementation Guide is part of the Da Vinci project and focuses on payer-to-payer data exchange within the United States healthcare system. It leverages US Core and mentions the Centers for Medicare and Medicaid Services (CMS), indicating a strong alignment with US healthcare regulations and practices.",
     "scores": {
       "Universal Realm": 0,
       "National > United States": 1,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "The Da Vinci Payer Coverage Decision Exchange (PCDE) IG focuses on facilitating the exchange of coverage transition information between payers when a patient changes insurance. It leverages FHIR R4 and other IGs like HRex and PDex to define a document-based approach, orchestrated by a Task resource, to share active treatment plans and supporting clinical data. While it touches upon clinical data and care planning, its primary driver is administrative, specifically around payer-to-payer communication for continuity of care.",
+    "summary": "This IG focuses on enabling payer-to-payer exchange of coverage transition information, primarily driven by the need to ensure continuity of care when patients switch insurance providers. It leverages FHIR R4 and other Da Vinci IGs to define a document-centric approach, orchestrated by a Task resource, for sharing active treatment plans and supporting clinical data. While it touches upon administrative aspects and utilizes clinical data, its core purpose revolves around facilitating a smooth transition of care by providing the new payer with essential information about the patient's ongoing treatments and their coverage under the previous payer.",
     "scores": {
-      "Administrative": 1,
-      "Care Planning": 0.6,
+      "Administrative": 0.6,
+      "Care Planning": 0.8,
       "Clinical Data": 0.8,
       "Clinical Knowledge": 0.2,
       "Diagnostics": 0.4,
       "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 1,
       "Medications": 0.6,
-      "Payment & Financial": 0.4,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
       "Workflow": 0.8
     }
   },
-  "Implementation Approach": {
-    "summary": "This analysis evaluates the Da Vinci Payer Coverage Decision Exchange (PCDE) Implementation Guide's technical approaches. The IG primarily focuses on document exchange orchestrated by a Task resource, with strong emphasis on data profiles and RESTful interactions for document retrieval. Terminology and subscriptions play supporting roles, while decision support, forms, and messaging are not central to the IG's current scope.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 1,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.6,
-      "Subscriptions": 0.4,
-      "Terminology": 0.6
-    }
-  },
   "Implementers": {
-    "summary": "The Da Vinci Payer Coverage Decision Exchange (PCDE) IG primarily focuses on payer-to-payer exchange of coverage transition information. EHRs play a supporting role in providing clinical data, while PHRs have minimal involvement. Clinical Decision Support systems may utilize the exchanged information, and Research Platforms could leverage the data for population health studies. Pharmacy, Lab, and Imaging systems are indirectly involved through the clinical data they contribute to the EHR.",
+    "summary": "This IG focuses on payer-to-payer exchange of coverage transition information, primarily impacting payer systems. EHRs are involved in providing data, and PHR systems might be used for patient authorization. Other systems have minimal or no involvement.",
     "scores": {
+      "Clinical Decision Support": 0,
       "EHR Systems": 0.6,
-      "PHR Systems": 0.2,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 1,
-      "Pharmacy Systems": 0.4,
-      "Lab Systems": 0.4,
-      "Imaging Systems": 0.4,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
       "Public Health Systems": 0,
-      "Clinical Decision Support": 0.6,
-      "Research Platforms": 0.4
+      "Research Platforms": 0
     }
   },
   "Users & Stakeholders": {
-    "summary": "This FHIR Implementation Guide (IG) focuses on enabling payer-to-payer exchange of coverage transition information to ensure continuity of care when patients switch insurance. Therefore, payers are the primary users, driving the IG's design. Clinical care teams and patients benefit indirectly from improved care transitions. Government agencies have a stake in the IG's alignment with interoperability regulations. Public health and research organizations have minimal involvement.",
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling payer-to-payer exchange of coverage transition information to ensure continuity of care when patients switch insurance. The primary users are payers, who need to exchange and process this information. Patients benefit indirectly from smoother care transitions. Clinical care teams have a limited role, while government and public health agencies have minimal involvement.",
     "scores": {
       "Clinical Care Teams": 0.4,
-      "Healthcare Administrators": 0.2,
+      "Healthcare Administrators": 0.6,
       "Patients and Caregivers": 0.6,
       "Payers": 1,
-      "Public Health Agencies": 0,
+      "Public Health Agencies": 0.2,
       "Research Organizations": 0,
-      "Government Agencies": 0.8
+      "Government Agencies": 0.2
     }
   },
   "meta": {

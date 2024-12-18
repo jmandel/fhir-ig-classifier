@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG primarily focuses on establishing a feedback mechanism using GitHub for a project likely related to clinical quality measures or decision support (implied by \"cqf\"). It heavily relies on the FHIR specification for its structure as an Implementation Guide, but doesn't directly utilize other HL7 standards like CDA, v2, or v3. Cross-paradigm integration is minimal, as the focus is on FHIR-based issue tracking.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The provided content does not specify any geographic scope or jurisdiction. It primarily focuses on establishing a feedback mechanism using GitHub's issue tracker for a project likely related to clinical quality frameworks (cqf). Therefore, it is classified as \"Universal Realm\" as it does not indicate any specific national or regional adaptations.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG primarily focuses on establishing a feedback mechanism for a project likely related to clinical quality measures or decision support, using GitHub's issue tracking system. It doesn't define specific clinical data models or workflows but rather provides a platform for community engagement and issue management. Therefore, its strongest connection is to workflow and potentially clinical knowledge, with limited relevance to other domains.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.4,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG primarily focuses on establishing a feedback mechanism for a project likely related to clinical quality measures or decision support, using GitHub's issue tracking system. Therefore, systems involved in clinical quality improvement, decision support, and EHRs are most likely to interact with it. The IG's scope is narrow, focusing on issue tracking rather than defining detailed clinical workflows or data exchange.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 0.6,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG primarily focuses on establishing a feedback mechanism for the \"cqf\" project, likely related to clinical quality measures or decision support, using GitHub's issue tracking system. Therefore, the core users are those directly involved in the development and implementation of this project, with other healthcare stakeholders having a less direct role.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

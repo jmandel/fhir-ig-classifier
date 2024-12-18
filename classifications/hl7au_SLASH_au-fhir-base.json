@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "The AU Base Implementation Guide is fundamentally built upon the FHIR standard, providing a localized foundation for Australian healthcare interoperability. It leverages FHIR's RESTful approach and resource model extensively. While it acknowledges other HL7 standards, it does not directly integrate or depend on them. Cross-paradigm integration is minimal, focusing primarily on FHIR. There is no mention or use of v2 or v3 messaging or models, nor is there any use of CDA.",
+    "summary": "The AU Base Implementation Guide is fundamentally built upon the FHIR standard, providing a localized foundation for Australian healthcare interoperability. It leverages FHIR's RESTful approach and resource model extensively. While it acknowledges other HL7 standards, it doesn't directly integrate with CDA, v2, or v3, and its focus is solely on FHIR. Cross-paradigm integration is minimal, as the IG's scope is confined to FHIR.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The FHIR Implementation Guide explicitly states it is designed for the Australian healthcare context, defining profiles, extensions, terminologies, and identifiers specific to Australia. It is intended to be a foundational layer for other, more specific, IGs within Australia and supports national initiatives like My Health Record. Therefore, it is clearly a national guide for Australia.",
+    "summary": "The FHIR Implementation Guide explicitly states it is designed for the Australian healthcare context, defining base profiles, extensions, terminologies, and identifiers specific to Australia. It supports national initiatives and is intended to be a foundational layer for other Australian-specific IGs.",
     "scores": {
       "Universal Realm": 0,
       "National > Australia": 1,
@@ -18,48 +18,34 @@
     }
   },
   "Domain Focus": {
-    "summary": "The AU Base Implementation Guide primarily focuses on establishing a common foundation for representing Australian-specific healthcare concepts within FHIR. It emphasizes administrative aspects like patient and provider identification, along with core clinical data representation, adapted to the Australian context. While it touches upon other domains like medications and diagnostics, its core purpose is to provide a standardized base for administrative and clinical data exchange within Australia, without imposing strict constraints or defining specific workflows.",
+    "summary": "The AU Base Implementation Guide primarily focuses on establishing a foundational layer for representing Australian-specific healthcare concepts within FHIR. It emphasizes administrative aspects like patient and provider identification, along with core clinical data elements, adapted to the Australian context. While it touches upon various domains, its core purpose is to provide a standardized base for other, more specialized IGs to build upon, rather than defining specific workflows or clinical knowledge.",
     "scores": {
       "Administrative": 0.8,
       "Care Planning": 0.2,
       "Clinical Data": 0.8,
       "Clinical Knowledge": 0,
-      "Diagnostics": 0.6,
+      "Diagnostics": 0.4,
       "Identity & Security": 0.4,
-      "Medications": 0.6,
-      "Payment & Financial": 0.2,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0.4,
       "Public Health": 0.4,
       "Quality & Reporting": 0,
       "Research": 0,
       "Workflow": 0.2
     }
   },
-  "Implementation Approach": {
-    "summary": "The AU Base IG primarily focuses on defining Data Profiles and Terminology relevant to the Australian healthcare context. It provides a foundational layer with localized profiles, extensions, and value sets without imposing strict constraints or defining specific interactions. REST APIs, Services, Messaging, Subscriptions, Decision Support, Documents, and Forms & UI are not the focus of this foundational IG, leaving those aspects to be defined by downstream IGs.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.2,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0,
-      "Services": 0,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The AU Base Implementation Guide is foundational for Australian healthcare systems, focusing on defining profiles, extensions, and terminologies specific to the Australian context. It primarily impacts systems that need to represent Australian-specific data and identifiers. EHR systems are central, as they manage core patient and clinical data. Pharmacy, Lab, and Imaging systems require significant integration to handle orders and results with Australian-specific elements. Clinical Decision Support systems will need to adapt to the terminology and data structures defined in AU Base. Payer systems have a limited but clear role in handling coverage and identifiers. Public Health systems will utilize AU Base for reporting and surveillance, while PHR systems have minimal direct interaction. Research platforms will leverage AU Base for data consistency in Australian studies.",
+    "summary": "The AU Base Implementation Guide primarily focuses on establishing a foundational layer for FHIR implementations within the Australian healthcare ecosystem. It defines core profiles, extensions, and terminologies specific to Australia, aiming to standardize data representation and facilitate interoperability. As such, EHR systems are the core implementers, while other systems will integrate to varying degrees based on their specific roles in the Australian healthcare landscape. Public Health Systems will have a higher score than in a typical IG because of the focus on national initiatives like My Health Record.",
     "scores": {
+      "Clinical Decision Support": 0.2,
       "EHR Systems": 1,
-      "PHR Systems": 0.2,
+      "Imaging Systems": 0.4,
+      "Lab Systems": 0.6,
       "Payer Systems": 0.4,
-      "Pharmacy Systems": 0.8,
-      "Lab Systems": 0.8,
-      "Imaging Systems": 0.8,
-      "Public Health Systems": 0.6,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.6
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {

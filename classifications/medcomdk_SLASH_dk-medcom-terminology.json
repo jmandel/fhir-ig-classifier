@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally built upon FHIR to define and manage terminologies for the Danish healthcare sector, specifically for MedCom's messaging standards. It does not directly utilize CDA, v2, or v3, but acknowledges the need for mapping to SOREDI, which suggests a minimal relationship with older HL7 standards. Cross-paradigm integration is not a primary focus, but the mapping to SOREDI hints at a potential future need.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Danish healthcare sector, focusing on standardizing FHIR terminology for MedCom's messaging standards within Denmark. It includes Danish language designations and references to Danish healthcare IT infrastructure and standards like SOREDI. The guide is governed by MedCom, a Danish organization.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining and managing terminologies for MedCom's messaging standards within the Danish healthcare ecosystem. It provides a centralized repository of CodeSystems, ValueSets, and ConceptMaps to ensure consistent and unambiguous exchange of clinical and administrative information. While it touches upon various domains through its terminology, its core purpose is to establish a standardized vocabulary for healthcare communication, making it heavily reliant on administrative and workflow aspects for message exchange. Clinical data is supported through relevant terminologies, but the IG itself doesn't define clinical data profiles or structures.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing FHIR terminology for MedCom's messaging standards in the Danish healthcare sector. It primarily impacts systems involved in exchanging clinical and administrative information using these standards. EHR systems are central to this exchange, requiring extensive integration. Systems sending or receiving messages, like Pharmacy and Lab systems, will also need significant integration. Payer systems might need to understand the terminology for claims processing, while Public Health systems could use it for data aggregation. Clinical Decision Support systems may leverage the standardized terminology for improved accuracy. Research platforms might use it for data consistency. PHR systems have minimal interaction, primarily needing to display human-readable terms.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily serves as a terminology resource for MedCom's messaging standards within the Danish healthcare sector. Its main users are software developers and system integrators who implement these standards. Clinical care teams and healthcare administrators indirectly benefit from the standardized terminology, which improves data quality and interoperability. Public health agencies and research organizations may utilize the standardized data for analysis, but they are not the primary focus. Patients and caregivers are not directly involved. Payers are not a focus of this IG. Government agencies have a limited role, primarily related to MedCom's governance.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

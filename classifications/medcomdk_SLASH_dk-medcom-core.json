@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, defining core profiles and extensions for the Danish healthcare system. It leverages some v3 concepts for terminology but doesn't use CDA or v2. Cross-paradigm integration is present in a limited way, primarily through the use of v3 codesystems within a FHIR context.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.4
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The dk-medcom-core Implementation Guide is explicitly designed for the Danish healthcare system. It defines core FHIR profiles and extensions tailored to Denmark's specific needs, including mandatory use of national identifiers like CPR, SOR, and LPR3. It serves as a foundation for other MedCom IGs and is governed by MedCom, the Danish national organization for healthcare IT standards. Therefore, it is clearly a national IG for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The dk-medcom-core IG focuses on establishing a common foundation for representing core healthcare entities within the Danish healthcare system. It prioritizes consistent use of identifiers and core data elements to facilitate data exchange and interoperability between various healthcare systems in Denmark. While it touches upon clinical data and diagnostics, its primary role is to provide a base for other MedCom IGs, making administrative and workflow aspects more central to its design.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The dk-medcom-core IG is foundational for data exchange within the Danish healthcare system. It defines core FHIR profiles and extensions for representing fundamental healthcare entities and ensures consistent use of Danish identifiers. EHR systems are central to implementing this IG, as they manage and exchange the core data defined. Other systems like lab, pharmacy, and imaging systems will need to integrate with these core profiles to ensure seamless data flow. Public health systems may leverage this data for population health monitoring, while research platforms might use it for data analysis. Payer systems have minimal involvement, primarily needing to recognize the identifiers used. PHR systems may need to present data conforming to these profiles to patients.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.6,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily targets the Danish healthcare system, focusing on establishing a common foundation for core healthcare entities and facilitating data exchange between various healthcare systems. Clinical Care Teams and the systems they use are the primary drivers, as the IG aims to streamline communication and coordination of care. Healthcare Administrators also have a significant role, as the IG impacts operational efficiency and data management. Public Health Agencies and Government Agencies have important, well-defined needs related to population health monitoring and regulatory oversight, respectively. Payers and Research Organizations have a limited role, while Patients and Caregivers are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

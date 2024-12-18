@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) defines base profiles for FHIR resources in Sweden. It heavily relies on FHIR for its core structure and uses some external code systems from v2 and v3 for specific data elements. It does not utilize CDA and has minimal cross-paradigm integration beyond referencing v2 and v3 code systems.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.4,
+      "v3": 0.4
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide explicitly defines base profiles and extensions for FHIR resources tailored to the Swedish healthcare system. It mandates the use of Swedish-specific identifiers, code systems, and value sets, and includes extensions to capture unique Swedish data elements. The guide is developed and maintained by HL7 Sweden, indicating its official status and governance within the country. Therefore, it is clearly a national Implementation Guide for Sweden.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Sweden": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on establishing a foundational framework for representing core healthcare entities within Sweden. It primarily addresses administrative aspects like patient, practitioner, and organization identification, with a strong emphasis on adapting FHIR resources to Swedish-specific requirements. While it provides the building blocks for clinical data exchange, it does not delve deeply into specific clinical domains or workflows. The IG also touches upon identity and security through the use of security labels.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) defines base profiles and extensions for core FHIR resources in Sweden, focusing on patient, practitioner, organization, and address data. It primarily targets EHR systems and other systems involved in exchanging and managing this core data. While not directly focused on clinical decision support or specific clinical domains, it lays the groundwork for such systems. Public health systems will benefit from the standardized data for reporting and analysis. Payer systems may need to integrate with some aspects, particularly around patient and provider identification. Research platforms can leverage the standardized data for studies. Pharmacy and imaging systems have minimal direct involvement, while PHR systems may need to consume some of the defined data.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on establishing a national framework for FHIR in Sweden by defining base profiles and extensions for core resources. It primarily targets system vendors and healthcare providers involved in health information exchange within Sweden. Clinical care teams and healthcare administrators are the primary drivers, as they need to exchange and manage patient, practitioner, and organization data. Public health agencies and government agencies have a significant role due to the IG's focus on national standards and reporting. Payers and research organizations have a more limited role, while patients and caregivers are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

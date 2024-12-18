@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The International Patient Access (IPA) IG is fundamentally based on FHIR, providing a standardized API for patient-mediated access to health data. It leverages FHIR's RESTful architecture and resource model extensively. While it acknowledges other HL7 standards, it doesn't directly integrate with them, focusing solely on a FHIR-based approach. The IG does not use CDA, v2, or v3, but it does mention the International Patient Summary (IPS) IG, which is a cross-paradigm specification.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide being analyzed, the International Patient Access (IPA) IG, is explicitly designed for global use, aiming to provide a foundational standard for patient-mediated access to health information across different jurisdictions. It does not target a specific country or region but rather seeks to establish a universal approach that can be extended by national or regional specifications. Therefore, it falls under the \"Universal Realm\" category.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The FHIR Implementation Guide (IG) for International Patient Access (IPA) primarily focuses on enabling patients to access their health information through a standardized FHIR API. It emphasizes read-only access to core clinical data, leveraging the SMART App Launch framework for authorization. While it touches upon administrative and workflow aspects, its core is driven by patient-mediated access to clinical data and ensuring secure and standardized access.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The FHIR International Patient Access (IPA) IG primarily focuses on enabling patients to access their health information via a standardized FHIR API. This suggests that EHR systems and PHR systems will be heavily involved. EHR systems will need to expose the defined API, while PHR systems will consume it. Other systems like Clinical Decision Support and Research Platforms might have limited interaction, primarily for data retrieval or integration with patient-facing applications.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The International Patient Access (IPA) IG primarily focuses on enabling patients to access their health information through a standardized FHIR API. Therefore, patients are the core users, with application developers as a key supporting group. Clinical care teams and research organizations benefit from improved data access, while government agencies may leverage the standard for regulatory purposes. Payers and healthcare administrators have a less direct role in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 1,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

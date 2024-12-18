@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) Implementation Guide is fundamentally based on FHIR, leveraging its RESTful API and resource model for exchanging coverage information. It heavily utilizes CDS Hooks, a specification built on top of FHIR, for real-time interactions. While it acknowledges other HL7 standards, they are not central to its core functionality. The IG does not use v2 or v3 messaging, nor does it directly utilize CDA for document exchange. It does, however, demonstrate a degree of cross-paradigm integration by building upon other FHIR-based IGs and specifications.",
+    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) Implementation Guide is fundamentally based on FHIR, leveraging its RESTful API and resource model for exchanging coverage information. It heavily utilizes CDS Hooks, a specification built on top of FHIR, for real-time interactions. While it acknowledges other HL7 standards, they are not central to its core functionality. The IG does not directly use or reference CDA, v2, or v3.",
     "scores": {
       "CDA": 0,
-      "Cross-Paradigm": 0.4,
+      "Cross-Paradigm": 0.2,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "The Da Vinci CRD Implementation Guide is primarily designed for the US healthcare system. It references US Core profiles, utilizes US-specific terminologies (CPT, CMS location codes), aligns with CMS initiatives, and addresses the specific challenges of prior authorization within the US context.",
+    "summary": "The Da Vinci CRD Implementation Guide is explicitly designed for the US healthcare system. It references US Core profiles, utilizes US-specific terminologies (CPT, CMS location codes), aligns with CMS initiatives, and addresses the US-specific problem of prior authorization. Therefore, it is classified as a National IG for the United States.",
     "scores": {
       "Universal Realm": 0,
       "National > United States": 1,
@@ -18,7 +18,7 @@
     }
   },
   "Domain Focus": {
-    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) Implementation Guide primarily focuses on streamlining the process of determining coverage requirements for healthcare services between providers and payers. It leverages CDS Hooks to enable real-time interaction and exchange of coverage information, aiming to reduce administrative burden and improve the efficiency of care delivery. While it touches upon clinical data and workflow aspects, its core purpose revolves around the administrative and financial aspects of healthcare, particularly in the context of prior authorization and coverage determination.",
+    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) IG primarily focuses on streamlining the process of determining coverage requirements for healthcare services between providers and payers. It leverages CDS Hooks to enable real-time interaction and uses FHIR resources and extensions to convey coverage information. While it touches upon clinical data and workflow, its core purpose is to reduce administrative burden and improve the efficiency of coverage determination, making it heavily centered around administrative and financial aspects of healthcare.",
     "scores": {
       "Administrative": 0.8,
       "Care Planning": 0.2,
@@ -26,49 +26,35 @@
       "Clinical Knowledge": 0.6,
       "Diagnostics": 0.2,
       "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 1,
       "Medications": 0.4,
-      "Payment & Financial": 1,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
       "Workflow": 0.6
     }
   },
-  "Implementation Approach": {
-    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) IG primarily focuses on defining a CDS Hooks-based interaction for real-time coverage determination between providers and payers. It heavily relies on Data Profiles to constrain FHIR resources and define extensions for coverage information. REST APIs are used for data retrieval, and Terminology plays a significant role in ensuring consistent coding. While Decision Support is the core driver, the IG itself doesn't define complex decision rules, but rather provides a framework for payers to communicate their rules. Messaging, Documents, Forms & UI, and Subscriptions are not central to the IG's core functionality.",
-    "scores": {
-      "Data Profiles": 0.8,
-      "Decision Support": 1,
-      "Documents": 0,
-      "Forms & UI": 0.2,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0.4,
-      "Subscriptions": 0,
-      "Terminology": 0.6
-    }
-  },
   "Implementers": {
-    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) IG primarily focuses on the interaction between provider systems (like EHRs) and payer systems to determine coverage for healthcare services. EHR systems will need to implement the CDS Hooks and FHIR interactions to query payer systems. Payer systems will need to implement the backend logic to process these queries and respond with coverage information. Clinical Decision Support systems will play a crucial role in presenting the coverage information to clinicians within their workflow. Other systems have limited or no involvement.",
+    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) IG focuses on automating the exchange of coverage information between providers and payers. It leverages CDS Hooks within EHR systems to query payer systems for coverage details, primarily impacting EHRs, Payer Systems, and Clinical Decision Support systems. Other systems have limited or no involvement.",
     "scores": {
-      "EHR Systems": 1,
-      "PHR Systems": 0,
-      "Payer Systems": 0.8,
-      "Pharmacy Systems": 0.2,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0.2,
-      "Public Health Systems": 0,
       "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
       "Research Platforms": 0
     }
   },
   "Users & Stakeholders": {
-    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) Implementation Guide primarily focuses on streamlining the interaction between healthcare providers and payers to determine coverage for services, medications, and devices. It leverages CDS Hooks and FHIR to automate this process, reducing administrative burden and improving the timeliness of care. Therefore, Clinical Care Teams and Payers are the core users, with Healthcare Administrators also playing a significant role. Other groups have a more limited involvement.",
+    "summary": "The Da Vinci Coverage Requirements Discovery (CRD) IG primarily focuses on streamlining the interaction between healthcare providers and payers to determine coverage for services. Clinical Care Teams are the core users, driving the need for real-time coverage information. Payers are key influencers, as their systems and rules dictate the coverage responses. Healthcare Administrators benefit from reduced administrative burden. While other groups have a role, their influence is less significant in this specific IG.",
     "scores": {
       "Clinical Care Teams": 1,
-      "Healthcare Administrators": 0.8,
+      "Healthcare Administrators": 0.6,
       "Patients and Caregivers": 0.2,
-      "Payers": 1,
+      "Payers": 0.8,
       "Public Health Agencies": 0,
       "Research Organizations": 0,
       "Government Agencies": 0.4

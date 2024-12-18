@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling de-identified patient-level data submission for the Uniform Data System (UDS) reporting using FHIR APIs. It heavily relies on FHIR and its ecosystem, including US Core and Bulk Data Access, while not directly utilizing other HL7 standards like CDA, v2, or v3. Cross-paradigm integration is present in a limited sense, primarily through the use of FHIR to represent data that might traditionally be handled by other standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is specifically designed for the Uniform Data System (UDS) reporting requirements of HRSA-funded health centers in the United States. It leverages US Core profiles and aligns with US regulations and programs, indicating a national scope within the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the submission of de-identified patient-level data for the Uniform Data System (UDS) reporting for HRSA-funded health centers. It leverages FHIR APIs and the Bulk Data Access pattern to facilitate this process. While it touches upon various domains, its core purpose is to streamline data submission for public health reporting and quality measurement, with a strong emphasis on data de-identification and security.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0.2,
+      "Public Health": 1,
+      "Quality & Reporting": 0.8,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling de-identified patient-level data submission from health centers to HRSA for UDS reporting. It heavily relies on EHR systems for data extraction and transformation, with a strong emphasis on data de-identification.  EHR systems are the core system type, while systems involved in data transformation and submission play key supporting roles. Public health systems are important for utilizing the aggregated data. Other system types have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling HRSA-funded health centers to submit de-identified patient-level data to HRSA for UDS reporting. Therefore, the core users are the health centers (represented by Clinical Care Teams and Healthcare Administrators) and the data recipient, HRSA (represented by Public Health Agencies and Government Agencies). EHR vendors are also key players as they need to implement the technical specifications. While research organizations might benefit from the aggregated data, they are not the primary drivers of the IG. Patients and Payers have minimal direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 1
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

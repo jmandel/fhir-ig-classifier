@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide (IG) focuses on translating data from various Common Data Models (CDMs) into FHIR R4, primarily leveraging US-Core profiles. It heavily relies on FHIR for its core functionality and does not utilize other HL7 standards like CDA, v2, or v3. While it doesn't directly integrate across different HL7 paradigms, it does bridge the gap between CDM-based research networks and the FHIR ecosystem.",
+    "summary": "This IG is fundamentally built upon FHIR to enable the translation of data from various Common Data Models (CDMs) into a standardized FHIR format. It heavily relies on FHIR resources, profiles, and extensions, particularly leveraging US-Core. While it acknowledges other HL7 standards, its core functionality is solely based on FHIR, with no direct interaction or dependency on CDA, v2, or v3.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The CDMH FHIR IG leverages US-Core profiles and is relevant to the US data infrastructure, indicating a strong alignment with US-specific needs and requirements. It is a multi-agency collaboration led by the FDA, involving NCI, NCATS, ONC, and NLM, further solidifying its national scope within the United States.",
+    "summary": "The CDMH FHIR IG leverages US-Core profiles and is relevant to the US data infrastructure, indicating a strong national focus. It is a multi-agency collaboration led by the FDA and involving other US agencies. Therefore, it is classified as a National Implementation Guide for the United States.",
     "scores": {
       "Universal Realm": 0,
       "National > United States": 1,
@@ -18,56 +18,42 @@
     }
   },
   "Domain Focus": {
-    "summary": "The CDMH FHIR IG focuses on translating observational data from four different Common Data Models (CDMs) into a standardized FHIR format, primarily for research purposes. It heavily leverages US-Core profiles and emphasizes the role of a \"Result Translator\" actor. While it touches upon clinical data and workflow aspects related to research, its core purpose is to facilitate data interoperability and accessibility for research using real-world data.",
+    "summary": "The CDMH FHIR IG focuses on translating observational data from four different Common Data Models (CDMs) into a standardized FHIR format, primarily for research purposes. It leverages US-Core profiles and defines a \"Result Translator\" actor to facilitate this translation. While it touches upon clinical data and workflow aspects related to querying and data retrieval, its core purpose is to enable interoperability and data sharing among research networks.",
     "scores": {
       "Administrative": 0.2,
       "Care Planning": 0,
       "Clinical Data": 0.8,
-      "Clinical Knowledge": 0,
-      "Diagnostics": 0.4,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
       "Identity & Security": 0.2,
-      "Medications": 0.4,
-      "Payment & Financial": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
       "Public Health": 0.4,
       "Quality & Reporting": 0.2,
       "Research": 1,
       "Workflow": 0.6
     }
   },
-  "Implementation Approach": {
-    "summary": "The CDMH FHIR IG focuses on translating data from four different Common Data Models (CDMs) into FHIR, primarily leveraging US-Core profiles and extensions. It defines a \"Result Translator\" actor for this purpose and specifies mappings, data transformations, and mandatory FHIR elements. The IG does not introduce new code systems or value sets, nor does it define decision support rules, forms, messaging, or subscriptions. While it mentions the potential for FHIR API queries on translated data, the core focus is on data transformation rather than interactive API usage.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.4,
-      "Services": 0.6,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The CDMH FHIR IG focuses on translating observational data from four Common Data Models (CDMs) used in research networks into FHIR format, primarily leveraging US-Core profiles. The main actor is a \"Result Translator\" that converts CDM data to FHIR. This IG is crucial for research platforms and systems that interact with them, but less so for traditional clinical systems like EHRs or PHRs.",
+    "summary": "The CDMH FHIR IG focuses on enabling interoperability between research networks using different Common Data Models (CDMs) by translating their data into FHIR. It primarily targets research platforms and systems involved in managing and analyzing clinical research data. While EHRs are indirectly involved as the source of data populating the CDMs, the IG does not mandate direct EHR integration. The IG has minimal relevance to clinical decision support, imaging, lab, payer, pharmacy, PHR, and public health systems in its current scope.",
     "scores": {
-      "EHR Systems": 0.2,
-      "PHR Systems": 0,
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 0,
       "Pharmacy Systems": 0,
-      "Lab Systems": 0,
-      "Imaging Systems": 0,
-      "Public Health Systems": 0.4,
-      "Clinical Decision Support": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
       "Research Platforms": 1
     }
   },
   "Users & Stakeholders": {
-    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling researchers to access and utilize data from various Common Data Models (CDMs) by translating it into a standardized FHIR format. Therefore, Research Organizations are the core users, driving the IG's design. Public Health Agencies and Government Agencies also have significant influence due to their interest in leveraging real-world data for population health and regulatory purposes. Clinical Care Teams and Patients have minimal involvement, as the IG focuses on research data rather than direct patient care or patient-facing applications.",
+    "summary": "This FHIR Implementation Guide (IG) focuses on enabling interoperability between different research networks using Common Data Models (CDMs) by translating their data into a standardized FHIR format. The primary users are researchers who need to query and analyze data from these networks. The IG heavily relies on existing standards like US-Core and is driven by the needs of research organizations and government agencies involved in public health and regulatory oversight.",
     "scores": {
       "Clinical Care Teams": 0.2,
       "Healthcare Administrators": 0.4,
-      "Patients and Caregivers": 0,
+      "Patients and Caregivers": 0.2,
       "Payers": 0,
       "Public Health Agencies": 0.8,
       "Research Organizations": 1,

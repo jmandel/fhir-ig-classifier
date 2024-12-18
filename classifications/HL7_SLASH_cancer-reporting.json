@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on structured cancer pathology data exchange using FHIR R4. It heavily relies on FHIR and US Core profiles, with some consideration for cross-paradigm approaches through its alignment with IHE SDC. It does not utilize CDA, v2, or v3.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for the US Realm, targeting Laboratory Information Systems (LIS), Electronic Health Records (EHRs), and Central Cancer Registries (CCRs) within the United States. It references US Core profiles, the College of American Pathologists' (CAP) electronic Cancer Protocols (eCPs), and the NAACCR Volume V standard, all of which are US-specific. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of structured cancer pathology data between Laboratory Information Systems (LIS), Electronic Health Records (EHRs), and Central Cancer Registries (CCRs). It leverages FHIR R4 and US Core profiles to define a data model based on CAP electronic Cancer Protocols (eCPs) and the NAACCR Volume V standard. The primary goal is to enable interoperable, discrete data exchange for cancer pathology reporting, improving data quality and facilitating research.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.8,
+      "Quality & Reporting": 0.6,
+      "Research": 0.6,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on structured cancer pathology data exchange, primarily involving Lab Systems, EHR Systems, and Public Health Systems (specifically Central Cancer Registries). Lab Systems are the core data source, EHRs act as intermediaries or data consumers, and Public Health Systems are the primary recipients for cancer registry reporting. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 1,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide focuses on transmitting structured cancer pathology data. The primary users are those involved in generating and consuming this data, particularly Laboratory Information Systems, Electronic Health Records, and Central Cancer Registries. Clinical Care Teams benefit from improved data access, while Public Health Agencies and Research Organizations gain access to standardized data for analysis. Government Agencies are involved due to the regulatory aspects of cancer reporting.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

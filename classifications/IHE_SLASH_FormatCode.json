@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG focuses on defining a vocabulary (FormatCode) for identifying the technical format of documents within the IHE ecosystem. It leverages FHIR for defining the CodeSystem and ValueSet but doesn't use other HL7 standards like CDA, v2, or v3 directly. It acknowledges and redirects to the official HL7 v3 CodeSystem for document format codes, indicating a deliberate but minimal interaction with v3.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide defines a vocabulary for identifying the technical format of healthcare documents within the IHE ecosystem. While it references HL7 standards, the primary focus is on IHE-defined codes and profiles. IHE is an international organization, but its profiles and frameworks are often adopted and adapted at national or regional levels. However, this IG is specifically focused on the IHE framework itself, making it most applicable to the \"Universal Realm\" as it is designed for use within the IHE ecosystem regardless of specific national or regional adaptations.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on defining a standardized vocabulary (FormatCode) for identifying the technical format of healthcare documents within the IHE ecosystem. It primarily addresses administrative and workflow aspects related to document exchange, ensuring systems can accurately determine document compatibility. While it touches upon clinical data by enabling the identification of document content profiles, its core purpose is not driven by clinical data management or analysis.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on defining a standardized vocabulary (FormatCode) for identifying the technical format of healthcare documents within the IHE ecosystem. It primarily impacts systems involved in document exchange, particularly those adhering to IHE profiles. EHR systems are central to this exchange, while systems consuming or producing documents (like imaging, lab, and pharmacy systems) will need to understand and utilize the FormatCode. Payer and public health systems have minimal involvement, and research platforms are not directly impacted.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.6,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on defining a standardized vocabulary (FormatCode) for identifying the technical format of healthcare documents within the IHE ecosystem. It primarily serves the needs of system developers and implementers who build systems that exchange and process these documents. Clinical care teams and healthcare administrators may indirectly benefit from improved interoperability, but they are not the primary drivers of this IG. Patients, payers, public health agencies, research organizations, and government agencies have minimal to no direct involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

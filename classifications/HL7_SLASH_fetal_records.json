@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining a standardized way to represent fetal data within the FHIR framework. It heavily relies on FHIR resources and structures, with some acknowledgment of v3 for specific code sets. CDA and v2 are not relevant to its core purpose.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.4
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on representing fetal data within FHIR. It is designed for international use, leveraging standard terminologies like LOINC and SNOMED CT, and does not specify any national or regional adaptations. It references the US BFDR IG but maintains a universal scope.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining a standardized way to represent and exchange fetal data within the FHIR framework, particularly during the prenatal period. It establishes the `IBCMFetalPatient` profile based on the `Patient` resource and emphasizes the relationship between the fetus and the mother. The IG leverages standard terminologies and provides guidance on representing clinical data related to the fetus using common FHIR resources. While it touches upon administrative aspects like patient identification, its core purpose revolves around clinical data representation and exchange.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0.4,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation and exchange of fetal data during the prenatal period. It primarily impacts EHR systems, imaging systems, and lab systems involved in obstetric care. Public health systems also have a significant role in collecting and utilizing this standardized data for vital statistics and population health monitoring. Research platforms may leverage this standardized data for studies related to fetal health and development.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.8,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the representation and exchange of fetal data within the FHIR framework. Its design is driven by the needs of clinical care teams involved in prenatal care and the IT developers supporting them. While other stakeholders like public health agencies and research organizations benefit from the standardized data, their influence on the IG's core design is less direct. Patients and caregivers are indirectly impacted through improved care coordination, but they are not a primary user group. Payers and healthcare administrators have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

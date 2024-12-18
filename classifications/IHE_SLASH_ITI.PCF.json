@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (ITI.PCF) focuses on managing patient privacy consents using FHIR. It heavily relies on FHIR for its core functionality and data representation. While it acknowledges other HL7 standards, they are not central to its purpose. It does not use CDA, v2, or v3, but leverages other IHE profiles that may use them.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This IHE ITI Implementation Guide, Privacy Consent on FHIR (PCF), defines a technical framework for managing and enforcing patient privacy consents within a FHIR-based health information exchange. It leverages existing IHE profiles like IUA and MHDS and does not specify any particular geographic scope, making it universally applicable.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The ITI.PCF Implementation Guide primarily focuses on managing and enforcing patient privacy consents within a FHIR-based health information exchange. It leverages FHIR Consent resources and extends the IUA OAuth flow to enable fine-grained access control based on patient preferences, particularly concerning sensitive data. Therefore, Identity & Security is the core domain, with Clinical Data being a key domain due to the focus on controlling access to specific data elements. Administrative aspects are also important as they relate to managing consent policies and actors.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 1,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0.2,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI PCF Implementation Guide focuses on managing and enforcing patient privacy consents in a FHIR-based environment. It primarily impacts systems involved in storing, managing, and enforcing access to patient data based on consent. EHR systems are central to this process, as they often serve as the primary source of patient data and need to enforce consent restrictions. Systems that manage patient identity and authorization, such as those implementing IUA, are also heavily involved. Payer systems have a defined role related to the purpose of use for payment. PHR systems may need to display and potentially manage consent information. Public health and research platforms may need to respect consent restrictions when accessing data. Clinical decision support, imaging, and lab systems have minimal direct involvement, although they may indirectly be affected by consent restrictions on data access.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide (ITI.PCF) primarily focuses on enabling healthcare providers and system developers to implement fine-grained access control based on patient privacy consents within a FHIR-based environment. Clinical Care Teams and Healthcare Administrators are key users, as they need to ensure compliance with patient consents while managing data access. Patients and Caregivers have a significant influence, as their consent preferences drive the system's design. Payers and Public Health Agencies have specific needs related to data access for payment and population health purposes, respectively. Research Organizations may utilize this IG to manage consent for research data access, while Government Agencies have a minimal role, primarily related to setting regulations that influence consent management.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

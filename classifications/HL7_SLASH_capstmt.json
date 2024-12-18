@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, extending the CapabilityStatement to enable detailed feature negotiation. It does not directly utilize CDA, v2, or v3, but demonstrates a cross-paradigm approach by integrating a custom operation and HTTP header usage within the FHIR framework.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide focuses on defining a framework for describing, declaring, and querying application features related to FHIR interactions. It does not specify any regional or national adaptations, and explicitly states its applicability as global, indicating a universal scope.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on enhancing the FHIR CapabilityStatement to enable detailed feature negotiation between FHIR servers and clients. It introduces a framework for defining, declaring, and querying specific FHIR implementation features, allowing applications to dynamically adapt to server capabilities. While it touches upon administrative aspects through the CapabilityStatement, its core purpose is to improve the technical interoperability of FHIR systems by providing a mechanism for fine-grained feature discovery and negotiation. Therefore, it primarily impacts the workflow and technical aspects of FHIR implementations.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enhancing FHIR interoperability by enabling detailed feature negotiation between FHIR servers and clients. It primarily impacts systems that implement FHIR APIs, particularly EHRs and other systems that act as FHIR servers. Clients, such as CDS systems and potentially PHR systems, will also need to implement the IG to query and adapt to server capabilities. The IG has minimal direct impact on systems like Imaging, Lab, Payer, Pharmacy, and Public Health, although they might indirectly benefit from improved interoperability. Research platforms might utilize this IG for data exchange compatibility.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling detailed communication of FHIR implementation features between systems. Therefore, the core users are the developers building and integrating these systems. Clinical care teams, patients, and caregivers are not directly involved. Payers, public health agencies, research organizations, and government agencies have minimal involvement as the IG is primarily concerned with technical interoperability rather than clinical workflows, data reporting, or regulatory compliance.",
+    "scores": {
+      "Clinical Care Teams": 0,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

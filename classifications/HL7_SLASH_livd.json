@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of In Vitro Diagnostic (IVD) test codes and result values using FHIR R4, LOINC, and SNOMED CT. It defines a publication format for IVD manufacturers to share suggested mappings, facilitating consistent adoption by laboratories. The IG heavily relies on FHIR resources and profiles, with no mention or use of HL7 v2, v3, or CDA.",
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of IVD test codes and result values using FHIR resources and terminologies like LOINC and SNOMED CT. It heavily relies on FHIR for its structure and data exchange, with no mention or use of CDA, v2, or v3.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide focuses on standardizing IVD test and result value mappings using LOINC and SNOMED CT, primarily targeting the U.S. (FDA, ONC, CDC) but also acknowledging international relevance. While it mentions an `ext-region` extension, it doesn't specify any particular region other than the U.S. Therefore, it's considered a national guide with a strong focus on the U.S.",
+    "summary": "The Implementation Guide focuses on standardizing IVD test and result value mappings using LOINC and SNOMED CT, primarily targeting the U.S. (FDA, ONC, CDC) but also acknowledging international relevance. While it mentions an `ext-region` extension, it doesn't specify any particular region, and the primary focus is on the U.S. Therefore, it's considered to have a national scope with a strong alignment to the U.S.",
     "scores": {
       "Universal Realm": 0.4,
       "National > United States": 0.8,
@@ -18,52 +18,38 @@
     }
   },
   "Domain Focus": {
-    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of In Vitro Diagnostic (IVD) test codes and result values using LOINC and SNOMED CT. It defines a publication format for IVD manufacturers to share suggested mappings, primarily impacting the diagnostics domain. While it touches upon administrative aspects through device and organization identification, its core purpose is to improve the consistency and interoperability of diagnostic data.",
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of In Vitro Diagnostic (IVD) test codes and result values using LOINC and SNOMED CT. It leverages FHIR resources like `ObservationDefinition`, `DeviceDefinition`, and `ConceptMap` to create a publication format for IVD manufacturers to share suggested mappings. The primary goal is to improve interoperability and data consistency in the diagnostic domain, particularly for laboratory information systems.",
     "scores": {
-      "Administrative": 0.4,
+      "Administrative": 0.2,
       "Care Planning": 0,
       "Clinical Data": 0.6,
       "Clinical Knowledge": 0.2,
       "Diagnostics": 1,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0.4,
-      "Quality & Reporting": 0.2,
+      "Quality & Reporting": 0.4,
       "Research": 0.2,
       "Workflow": 0.6
     }
   },
-  "Implementation Approach": {
-    "summary": "This FHIR Implementation Guide focuses on defining a standardized format for publishing IVD test and result value mappings to LOINC and SNOMED CT using FHIR R4. It heavily relies on Data Profiles and Terminology to achieve its goal. While REST APIs are mentioned as a potential publication method, they are not the primary focus. Other aspects like Decision Support, Documents, Forms & UI, Messaging, Services, and Subscriptions are not utilized in this IG.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.4,
-      "Services": 0,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "This FHIR Implementation Guide focuses on standardizing the mapping of In Vitro Diagnostic (IVD) test codes and result values to LOINC and SNOMED CT. Therefore, Lab Systems are the primary implementers, with EHRs and Clinical Decision Support systems playing important supporting roles. Other systems have limited or no involvement.",
+    "summary": "This FHIR Implementation Guide focuses on standardizing In Vitro Diagnostic (IVD) test and result code mappings to LOINC and SNOMED CT. Therefore, the primary implementers are IVD manufacturers and Laboratory Information Systems (LIS). EHR systems will benefit from the standardized data, and Clinical Decision Support systems can leverage the consistent lab data. Public Health Systems can also benefit from aggregated, standardized data. Other systems have minimal or no involvement.",
     "scores": {
-      "EHR Systems": 0.6,
-      "PHR Systems": 0,
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 1,
       "Payer Systems": 0,
       "Pharmacy Systems": 0,
-      "Lab Systems": 1,
-      "Imaging Systems": 0,
-      "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
       "Research Platforms": 0.4
     }
   },
   "Users & Stakeholders": {
-    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the mapping of In Vitro Diagnostic (IVD) test codes and result values to LOINC and SNOMED CT. Therefore, the primary users are IVD manufacturers who create and publish these mappings and laboratory personnel who consume them to configure their Laboratory Information Systems (LIS). Other stakeholders, like LIS vendors and terminology providers, also play significant roles. Clinical care teams benefit indirectly from improved data standardization, while public health agencies and research organizations can leverage the standardized data for population health monitoring and research. Payers and government agencies have a less direct involvement.",
+    "summary": "This FHIR Implementation Guide (LIVD) primarily focuses on standardizing the mapping of In Vitro Diagnostic (IVD) test codes and result values to LOINC and SNOMED CT. The core users are IVD manufacturers who create and publish the mappings and laboratory personnel who consume these mappings to configure their Laboratory Information Systems (LIS). Other stakeholders, like LIS vendors and terminology providers, also play significant roles. Clinical care teams benefit indirectly from improved data standardization, while public health agencies and research organizations can leverage the standardized data for population health monitoring and research. Payers and patients have minimal direct involvement.",
     "scores": {
       "Clinical Care Teams": 0.4,
       "Healthcare Administrators": 0.2,

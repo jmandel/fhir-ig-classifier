@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing laboratory report exchange in Belgium using FHIR. It heavily relies on FHIR resources and RESTful interactions, with some acknowledgment of HL7 v2 for specific code systems. It does not utilize CDA or v3, and its cross-paradigm support is limited to referencing v2 code systems.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the Belgian healthcare system, defining national profiles and extensions for laboratory reporting. It references Belgian-specific code systems, naming systems, and the broader Belgian eHealth standards. Therefore, it is classified as a National Implementation Guide for Belgium.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of laboratory reports within the Belgian healthcare system. It heavily emphasizes the representation of diagnostic data, particularly lab results, using FHIR resources like `DiagnosticReport`, `Observation`, and `Specimen`. While it touches upon administrative aspects through patient and provider identification, its core purpose revolves around ensuring consistent and interoperable exchange of laboratory data to improve care coordination and patient safety. It also has implications for public health reporting and research by providing a standardized format for laboratory data.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 1,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0.4,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing laboratory report exchange within the Belgian healthcare system. Therefore, Lab Systems and EHR Systems are the core implementers. Public Health and Research Platforms will also benefit from the standardized data. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 1,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of laboratory reports within the Belgian healthcare system. Therefore, Clinical Care Teams and Healthcare Administrators are the core users, as they directly generate and consume these reports. Public Health Agencies and Research Organizations are also key users, leveraging standardized data for population health and research. Payers and Government Agencies have a more defined but limited role, primarily for oversight and potentially reimbursement. Patients have minimal direct interaction with the IG's technical aspects.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

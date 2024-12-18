@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR, using it as the core standard for representing and exchanging health data metadata to achieve FAIR principles. It does not utilize CDA, v2, or v3 directly, focusing instead on FHIR's RESTful approach. While it doesn't integrate across different HL7 paradigms in a major way, it does acknowledge the broader HL7 ecosystem by referencing and extending existing FHIR resources.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on making health data FAIR (Findable, Accessible, Interoperable, and Reusable) using the HL7 FHIR standard. It does not specify any particular national or regional scope, and instead aims for broad applicability in any jurisdiction that deals with health data sharing and reuse, particularly those adopting FAIR principles. Therefore, it is best classified as a Universal Realm guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on enabling FAIR (Findable, Accessible, Interoperable, and Reusable) principles for health data, particularly in the context of research. It leverages FHIR resources to represent metadata for datasets at both the study and subject levels, facilitating data discovery and reuse. While it touches upon administrative aspects through the use of ResearchStudy and Library resources, its core purpose is to enhance data sharing and collaboration within the research domain. Identity & Security and Workflow are noted as being out of scope for this version.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0,
+      "Research": 1,
+      "Workflow": 0
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on making health data FAIR (Findable, Accessible, Interoperable, and Reusable) by defining how to represent metadata for health datasets using FHIR resources. It primarily targets systems involved in managing and sharing research data, with a strong emphasis on enabling data discovery and reuse. EHR systems play a role in providing the underlying data, while research platforms are key for implementing the IG's full functionality. Public health systems and clinical decision support systems have limited but clear integration requirements for accessing and utilizing FAIR data.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.6,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 1
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (fhir-for-fair) primarily focuses on enabling researchers and data scientists to find, access, and reuse health data by providing a standardized way to describe and share datasets using FHIR. It emphasizes metadata representation for studies and subjects, leveraging FHIR resources and extensions to support FAIR principles. Therefore, Research Organizations are the core users, with Government Agencies and Public Health Agencies also playing significant roles in promoting and utilizing FAIR data. Clinical Care Teams and Patients have minimal direct involvement in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 1,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

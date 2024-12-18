@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining a RESTful API for immunization decision support. It leverages US Core profiles and defines custom operations and code systems. While it acknowledges v2's existence in the ecosystem, it doesn't directly support it. CDA and v3 are not relevant to its core purpose.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the interface for immunization evaluation and forecasting. It explicitly mentions the use of US Core profiles and CVX code system, and states that the jurisdiction is constrained to the United States. Therefore, it is classified as a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the interface for querying Clinical Decision Support (CDS) engines for immunization evaluation and forecasting. It leverages US Core profiles and defines a custom operation, `$immds-forecast`, to facilitate this interaction. The primary goal is to enable interoperability between various healthcare systems and CDS engines, promoting consistent access to immunization decision support. While it touches upon administrative and clinical data aspects, its core revolves around clinical knowledge related to immunization schedules and forecasting, and the workflow of requesting and receiving this information.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the interface for immunization evaluation and forecasting using a FHIR-based API. It primarily targets systems that need to consume or provide immunization decision support, such as EHRs, IIS, and CDS engines. EHRs and CDS systems are central to its implementation, while public health systems play a significant role in utilizing the standardized data. Other systems like PHRs and research platforms have limited involvement.",
+    "scores": {
+      "Clinical Decision Support": 1,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily targets systems and developers integrating with Clinical Decision Support (CDS) engines for immunization forecasting. Clinical Care Teams are the ultimate beneficiaries of accurate forecasts, while Public Health Agencies leverage the standardized data for population health management.  The IG's design is driven by the need for interoperability between systems requesting and providing immunization forecasts, making developers of those systems the core users.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

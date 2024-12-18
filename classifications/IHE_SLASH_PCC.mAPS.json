@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, defining a FHIR-based Antepartum Summary document. It leverages FHIR resources and profiles extensively. While it references IHE profiles and uses a document-based exchange approach, it doesn't directly utilize CDA, v2, or v3. Cross-paradigm integration is present in the sense that it builds upon the IPS, which itself may have connections to other HL7 standards, but this IG's focus is primarily within the FHIR paradigm.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on creating a FHIR-based Antepartum Summary document. While it builds upon the International Patient Summary (IPS) and references IHE profiles, it also includes a US Realm National Extension, indicating a focus on the United States. Therefore, it is classified as a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0.2,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on creating a standardized FHIR-based Antepartum Summary document for sharing pregnancy-related information. It leverages the IPS as a foundation and extends it with specific profiles and observations relevant to the antepartum period. The primary goal is to improve continuity of care and facilitate information exchange between providers, systems, and patients during pregnancy. While it touches upon administrative and workflow aspects, its core is clinical data related to pregnancy, with a strong emphasis on structured observations and care planning.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.8,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0.6,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.4,
+      "Research": 0.6,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on creating and sharing Antepartum Summary documents, primarily within EHR systems and between care providers. It also touches upon public health reporting and patient access through PHRs. While not directly involving clinical decision support, the structured data could inform such systems. Lab and pharmacy systems are relevant due to medication and lab results sections. Payer information is included, but the IG doesn't focus on claims processing. Imaging systems are not a primary focus. Research platforms could utilize the standardized data for studies.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of antepartum care summaries. Its primary goal is to improve continuity of care for pregnant patients by enabling the sharing of comprehensive pregnancy-related data between healthcare providers.  Clinical care teams, particularly those specializing in obstetrics and maternal-fetal medicine, are the core users, as the IG directly addresses their need for a structured and comprehensive summary of a patient's pregnancy. Public health agencies and research organizations also benefit from the standardized data for population health monitoring and research purposes. While patients may indirectly benefit from improved care coordination, their direct interaction with the IG is limited. Payers and healthcare administrators have a less direct role, primarily related to potential improvements in care efficiency and quality reporting.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

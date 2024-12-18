@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The fhir-medmorph IG is heavily reliant on FHIR for its core functionality, defining a RESTful architecture for data exchange and leveraging FHIR resources like PlanDefinition, Bundle, and MessageHeader. It utilizes US Core profiles and aims to be compatible with other FHIR-based IGs. While it acknowledges CDA and mentions its use in content IGs, it doesn't deeply integrate with it. The IG does not use v2 or v3 standards. It demonstrates a cross-paradigm approach by integrating FHIR with other standards like SMART on FHIR and Bulk Data Access, and by aiming for compatibility with other IGs like eCR.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The MedMorph IG is explicitly designed for the US healthcare system, as evidenced by its references to US regulations (ONC, TEFCA), US-specific profiles (US Core, US PH), and its focus on US public health agencies (CDC) and initiatives. The IG leverages US Core profiles and aligns with other US-centric IGs, indicating a strong focus on the US healthcare landscape.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The MedMorph IG focuses on automating the extraction and exchange of electronic health data for public health reporting and research. It defines a reference architecture using FHIR resources like PlanDefinition to represent knowledge artifacts and orchestrate workflows triggered by named events. The IG emphasizes reducing provider burden and improving the timeliness and quality of data for secondary use. While it touches upon clinical data and workflow, its primary drive is enabling data exchange for public health and research, with a strong emphasis on defining the process and rules (clinical knowledge) for that exchange.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.8,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.6,
+      "Research": 1,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The MedMorph IG focuses on automating data exchange between EHRs and public health/research systems. EHRs are central to providing data, while public health and research systems are the primary consumers. Clinical decision support plays a role in triggering events, and pharmacy systems may contribute medication data. Payer systems are out of scope. PHR systems have minimal involvement, primarily in patient consent aspects if applicable.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The MedMorph IG primarily focuses on automating data exchange between healthcare data sources and public health agencies or research organizations. Clinical care teams have a limited role, as the IG aims to minimize their burden. Public health agencies and research organizations are the core users, driving the design for data reporting and analysis. Government agencies have a significant influence due to regulations and oversight. Payers are not directly involved. Patients have a minimal role, primarily related to data access and consent, which are out of scope for this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 1,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

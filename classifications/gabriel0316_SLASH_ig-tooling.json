@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining a FHIR-based profile for the Austrian Patient Summary. It leverages FHIR resources, profiles, and operations. While it acknowledges v2 and v3 code systems, it doesn't directly integrate with v2 messaging or v3 models. CDA is not relevant as the IG focuses on FHIR resources, not CDA documents. Cross-paradigm integration is minimal, primarily acknowledging the existence of other standards through terminology usage.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide defines an Austrian-specific profile for the International Patient Summary (IPS), leveraging the HL7 Austria FHIR Core Implementation Guide. It is explicitly designed for the Austrian healthcare system, referencing Austrian-specific code systems and supported by ELGA GmbH, the Austrian eHealth infrastructure provider. Therefore, it is clearly a national guide for Austria.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Austria": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide focuses on creating a standardized Austrian Patient Summary (Austrian PS) based on the International Patient Summary (IPS) and the HL7® Austria FHIR® Core Implementation Guide. It primarily deals with structuring and exchanging core clinical data, with a strong emphasis on ensuring interoperability within the Austrian healthcare system. While it touches upon administrative and workflow aspects, its core purpose is to define the structure and content of the patient summary document.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the exchange of patient summary information within the Austrian healthcare system, primarily impacting EHR systems that need to generate and consume these summaries. Other systems like Pharmacy, Lab, and PHR systems will also play significant roles in providing data for and utilizing the patient summary. Public Health systems may leverage aggregated, de-identified data from these summaries. Clinical Decision Support systems could potentially use the standardized data for improved alerts and guidance, but the IG doesn't explicitly focus on this. Research platforms might use the data for epidemiological studies or to evaluate the impact of the standardized summaries. Payer systems are not directly involved in the clinical data exchange defined by this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of patient summary information within the Austrian healthcare system, primarily benefiting clinical care teams by providing a consistent format for sharing essential patient data. While other stakeholders like healthcare administrators and government agencies have a role, the core design is driven by the needs of clinicians to improve care coordination and patient safety. The IG's reliance on the International Patient Summary (IPS) and its focus on Austrian-specific requirements further solidify the clinical care teams as the primary users.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

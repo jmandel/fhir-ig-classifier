@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide primarily leverages FHIR to define extensions for representing sex and gender-related information. While it acknowledges and provides guidance for mapping to CDA and V2, its core functionality is built upon FHIR. It demonstrates cross-paradigm support by addressing how these concepts can be represented across FHIR, CDA, and V2.",
+    "scores": {
+      "CDA": 0.4,
+      "Cross-Paradigm": 0.8,
+      "FHIR": 1,
+      "v2": 0.4,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on harmonizing the representation of sex and gender-related information in healthcare systems. It defines FHIR extensions and provides guidance for their use across various HL7 product families. While it mentions jurisdictional needs and acknowledges the US Core Implementation Guide, it primarily aims for a universal approach without specific national or regional adaptations. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining a standardized way to represent sex and gender-related information in healthcare systems, aiming to improve interoperability and patient care, especially for transgender and gender-diverse individuals. It achieves this by introducing FHIR extensions for Gender Identity, Sex Parameter for Clinical Use, Recorded Sex or Gender, Pronouns, and Name to Use. While it touches upon administrative aspects and has implications for clinical data, its core purpose revolves around accurately capturing and exchanging this specific type of clinical information.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.2,
+      "Research": 0.4,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on improving the representation of sex and gender information in healthcare systems. EHR systems are central to implementing the full functionality, while clinical decision support, lab, pharmacy, and PHR systems will need significant integration. Public health and research platforms will also have defined roles. Payer systems have minimal involvement, and imaging systems are not directly impacted.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on improving the representation of sex and gender-related information in healthcare systems. Its design is driven by the needs of clinical care teams to ensure accurate and consistent data for patient care, especially for transgender and gender-diverse individuals.  It also significantly impacts how research organizations and public health agencies collect and analyze data. While patients and caregivers are a core concern, their direct interaction with the IG's technical aspects is limited. Government agencies have a role in regulation and oversight, and payers have a minimal but clear need for accurate data for claims processing. Healthcare administrators have a limited role in implementing and managing systems that adhere to the IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

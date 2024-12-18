@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide, C-CDA R3.0, primarily focuses on defining templates for clinical documents based on the HL7 CDA standard. While it leverages FHIR's tooling for template definition and validation, it does not utilize FHIR resources or APIs for data exchange. It does not directly involve HL7 v2 or v3, but rather builds upon the CDA standard, which itself is part of the broader HL7 v3 family. The IG acknowledges the need for cross-paradigm interoperability by using FHIR tooling to enhance the CDA standard.",
+    "scores": {
+      "CDA": 1,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 0.6,
+      "v2": 0,
+      "v3": 0.8
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is for the \"US Realm\" and references US-specific initiatives like USCDI and TEFCA. It focuses on standardizing clinical documents within the United States healthcare system.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide (C-CDA R3.0) focuses on standardizing the structure and semantics of clinical documents for electronic exchange, primarily within the US Realm. It leverages FHIR StructureDefinitions to define CDA templates, emphasizing interoperability and alignment with USCDI. While it touches upon various healthcare domains, its core purpose revolves around clinical data exchange through structured documents.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.8,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The C-CDA R3.0 IG focuses on standardizing the structure and semantics of clinical documents for electronic exchange, primarily impacting EHR systems that create, exchange, and consume these documents. While other systems may interact with C-CDA data, their involvement is less central to the IG's core purpose.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The C-CDA R3.0 Implementation Guide primarily serves to standardize clinical document exchange, making Clinical Care Teams and EHR vendors the core users. Healthcare Administrators and Government Agencies have significant influence due to the IG's role in interoperability and regulatory compliance. Public Health Agencies and Payers have specific needs addressed by the IG, while Research Organizations and Patients/Caregivers have a more limited role.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,55 @@
+# ITI.MHDS: Analysis
+
+## Core Purpose & Scope
+
+-   **Primary interoperability challenges this IG addresses:** This IG addresses the challenge of establishing a standardized, FHIR-based document sharing ecosystem, replacing legacy IHE profiles like XDS that rely on older technologies. It focuses on enabling interoperable exchange of health documents using FHIR resources and RESTful interactions.
+-   **Key clinical/business problems it solves:** It facilitates seamless sharing of patient health information across different healthcare organizations and systems within a community. This improves care coordination, reduces redundant testing, and empowers patients with better access to their health records. It also provides a framework for managing patient privacy consents within the document sharing ecosystem.
+-   **Intended scope and boundaries:** The scope is limited to defining a FHIR-based document sharing exchange, including a Document Registry actor and its interactions with other IHE profiles. It does not define the internal workings of a health information exchange (HIE) but outlines how various IHE profiles can be orchestrated to achieve document sharing. It also does not cover broader policy issues related to document sharing, focusing instead on the technical interoperability aspects.
+
+## Technical Foundation
+
+-   **Core profiles and extensions:** The IG heavily relies on the [MHD](https://profiles.ihe.net/ITI/MHD/index.html) profile for document publication, discovery, and retrieval. It defines a new **Document Registry** actor, which groups actors from other IHE profiles, including [MHD Document Recipient](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133113-document-recipient) and [Document Responder](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133114-document-responder), [PMIR Patient Identity Consumer](https://profiles.ihe.net/ITI/PMIR/CapabilityStatement-IHE.PMIR.PatientIdentityConsumer.html), [SVCM Terminology Consumer](https://profiles.ihe.net/ITI/SVCM/volume-1.html#1511-svcm-actorstransactions), [mCSD Care Services Selective Consumer](https://profiles.ihe.net/ITI/mCSD/volume-1.html#146111-care-services-selective-consumer), [IUA Authorization Server and Resource Server](https://profiles.ihe.net/ITI/IUA/index.html), [ATNA Secure Node](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1.1.1), [CT Time Client](https://profiles.ihe.net/ITI/TF/Volume1/ch-7.html), and [BALP Audit Creator](https://profiles.ihe.net/ITI/BALP/volume-1.html#152111-audit-creator).
+-   **Notable operations and interactions:** Key interactions include:
+    -   Provide Document Bundle \[ITI-65\] from [MHD Document Source](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133111-document-source) to Document Registry for document publication.
+    -   Find Document Lists \[ITI-66\], Find Document References \[ITI-67\], and Retrieve Document \[ITI-68\] from [MHD Document Consumer](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133112-document-consumer) to Document Registry for document discovery and retrieval.
+    -   Mobile Patient Identity Feed \[ITI-93\] from [PMIR Patient Identity Source](https://profiles.ihe.net/ITI/PMIR/1331_actors_and_transactions.html#133111-patient-identity-source) to Document Registry for patient identity synchronization, particularly merges.
+-   **Key terminology and value sets:** The IG leverages standard FHIR terminology and value sets. It emphasizes the use of community-defined value sets for metadata validation, managed by the grouped [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html) Terminology Consumer.
+-   **Significant patterns and constraints:**
+    -   The Document Registry acts as a central hub for managing document metadata and enforcing access control.
+    -   Comprehensive Metadata Option is required for the [MHD Document Recipient](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133113-document-recipient).
+    -   The Authorization Option mandates the use of [IUA](https://profiles.ihe.net/ITI/IUA/index.html) for access control.
+    -   The Consent Manager Option leverages [IUA](https://profiles.ihe.net/ITI/IUA/index.html) to enforce patient privacy consents, with specific OAuth scopes defined for PurposeOfUse.
+    -   The UnContained Reference Option allows referencing external resources in [mCSD](https://profiles.ihe.net/ITI/mCSD/index.html) and [PMIR](https://profiles.ihe.net/ITI/PMIR/index.html) instead of containing them within DocumentReference.
+
+## Technical Essence
+
+This IG defines a FHIR-based document sharing ecosystem centered around a Document Registry actor. The Document Registry acts as an [MHD Document Recipient](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133113-document-recipient) and [Responder](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133114-document-responder), persisting and managing DocumentReference, List, and Binary resources submitted via ITI-65 transactions. It enforces metadata consistency using community-defined value sets, validated via a grouped [SVCM Terminology Consumer](https://profiles.ihe.net/ITI/SVCM/volume-1.html#1511-svcm-actorstransactions). Patient identity is managed through a grouped [PMIR Patient Identity Consumer](https://profiles.ihe.net/ITI/PMIR/CapabilityStatement-IHE.PMIR.PatientIdentityConsumer.html), which handles patient merges and updates. For access control, the Document Registry acts as an [IUA Resource Server](https://profiles.ihe.net/ITI/IUA/index.html), enforcing OAuth 2.0 tokens issued by an [IUA Authorization Server](https://profiles.ihe.net/ITI/IUA/index.html). Optionally, it can enforce patient privacy consents by requiring specific OAuth scopes indicating PurposeOfUse and patient identity, effectively implementing a simplified consent model. The Document Registry can also leverage an [mCSD Care Services Selective Consumer](https://profiles.ihe.net/ITI/mCSD/volume-1.html#146111-care-services-selective-consumer) to resolve references to external resources like Practitioner and Organization. All transactions are secured using TLS, and audit events are recorded via a grouped [ATNA Secure Node](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1.1.1) and [BALP Audit Creator](https://profiles.ihe.net/ITI/BALP/volume-1.html#152111-audit-creator).
+
+## Implementation Approach
+
+-   **Critical workflows and interactions:**
+    -   Document publication involves an [MHD Document Source](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133111-document-source) sending a Provide Document Bundle \[ITI-65\] transaction to the Document Registry. The Document Registry validates the metadata, persists the resources, and optionally enforces access control and patient privacy consents.
+    -   Document discovery and retrieval involve an [MHD Document Consumer](https://profiles.ihe.net/ITI/MHD/1331_actors_and_transactions.html#133112-document-consumer) sending Find Document Lists \[ITI-66\], Find Document References \[ITI-67\], or Retrieve Document \[ITI-68\] transactions to the Document Registry. The Document Registry returns the requested resources, enforcing access control and patient privacy consents if applicable.
+    -   Patient identity merge involves a [PMIR Patient Identity Source](https://profiles.ihe.net/ITI/PMIR/1331_actors_and_transactions.html#133111-patient-identity-source) sending a Mobile Patient Identity Feed \[ITI-93\] transaction to the Document Registry, which updates the relevant DocumentReference and List resources.
+-   **Important requirements and guardrails:**
+    -   Implementers must adhere to the [MHD](https://profiles.ihe.net/ITI/MHD/index.html) profile for document exchange.
+    -   The Document Registry must be able to validate metadata against community-defined value sets.
+    -   If the Authorization Option is used, the Document Registry must act as an [IUA Resource Server](https://profiles.ihe.net/ITI/IUA/index.html) and enforce OAuth 2.0 tokens.
+    -   If the Consent Manager Option is used, the Document Registry must enforce patient privacy consents based on the defined OAuth scopes.
+    -   If the UnContained Reference Option is used, the Document Registry must be able to resolve references to external resources in [mCSD](https://profiles.ihe.net/ITI/mCSD/index.html) and [PMIR](https://profiles.ihe.net/ITI/PMIR/index.html).
+-   **Notable design choices and patterns:**
+    -   The use of a Document Registry actor to centralize document management and access control.
+    -   The grouping of actors from other IHE profiles to leverage existing functionalities.
+    -   The definition of specific OAuth scopes for PurposeOfUse to support patient privacy consent enforcement.
+
+## Ecosystem Context
+
+-   **Target systems and users:** The target systems are healthcare applications and systems within a document sharing community, such as EHRs, PHRs, and HIE platforms. The target users are healthcare providers, patients, and other authorized individuals who need to access and share health information.
+-   **Relationship to other standards/IGs:** This IG builds upon several other IHE profiles, including [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [PMIR](https://profiles.ihe.net/ITI/PMIR/index.html), [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [mCSD](https://profiles.ihe.net/ITI/mCSD/index.html), [IUA](https://profiles.ihe.net/ITI/IUA/index.html), [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), [CT](https://profiles.ihe.net/ITI/TF/Volume1/ch-7.html), and [BALP](https://profiles.ihe.net/ITI/BALP/index.html). It also relates to other IHE document sharing profiles like [XDS](https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing), providing a FHIR-based alternative. It is compatible with [mXDE](https://profiles.ihe.net/ITI/TF/Volume1/ch-45.html) and [QEDm](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_QEDm.pdf) for enabling data element extraction and access.
+-   **Relevant jurisdictions or programs:** This IG is relevant to any jurisdiction or program that aims to establish a FHIR-based document sharing ecosystem. It aligns with the broader push towards FHIR adoption in healthcare.
+-   **Primary use cases and scenarios:**
+    -   A hospital publishes a patient's discharge summary to the document sharing community, making it accessible to the patient's primary care physician.
+    -   A patient uses a PHR application to retrieve their lab results from the document sharing community.
+    -   A healthcare provider queries the document sharing community for a patient's medical history before making a treatment decision.
+    -   A patient revokes their consent to share certain documents, and the Document Registry enforces this decision by denying access to those documents.
+    -   Two healthcare organizations merge patient records, and the Document Registry updates the relevant DocumentReference and List resources to reflect the new patient identifier.

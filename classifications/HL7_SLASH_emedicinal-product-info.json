@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on using FHIR to standardize electronic Medicinal Product Information (ePI). It heavily relies on FHIR resources and RESTful interactions, defining profiles and operations for ePI exchange. It does not use CDA, v2, or v3, and its cross-paradigm support is limited to referencing other FHIR-based standards like IPS.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing electronic Medicinal Product Information (ePI) for global use. While it acknowledges potential regional adaptations (e.g., USA, EU, Japan), it primarily aims for a universal approach to structuring and exchanging ePI data. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing electronic Medicinal Product Information (ePI) to improve its exchange, access, and use across different systems and stakeholders. It primarily addresses the domain of Medications by providing a structured format for representing detailed product information, including composition, administration, packaging, and clinical use. While it touches upon other domains like Administrative and Identity & Security, its core purpose revolves around enhancing the management and utilization of medication-related data.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 1,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.2,
+      "Research": 0.4,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing electronic Medicinal Product Information (ePI). It's primarily designed for systems that create, manage, and consume medication-related information. EHRs and Pharmacy Systems are central, as they will directly integrate and utilize ePI. Payer Systems have minimal involvement, while Clinical Decision Support, PHR, and Public Health Systems will leverage ePI for enhanced functionality. Research Platforms may utilize ePI data for various studies. Imaging and Lab Systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 1,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing electronic Medicinal Product Information (ePI). Its primary goal is to facilitate the exchange and use of structured ePI data among various stakeholders. The design is heavily influenced by the needs of pharmaceutical companies, regulatory bodies, and healthcare providers who need to create, manage, and utilize this information. Patients are also a key beneficiary, as the IG aims to improve their access to reliable and understandable drug information. While payers and public health agencies have a less direct role, they can benefit from the standardized data for various purposes like formulary management and pharmacovigilance.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.6,
+      "Government Agencies": 1
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

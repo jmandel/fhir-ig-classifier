@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on using FHIR to standardize the representation and exchange of advance directive information. It heavily relies on FHIR's RESTful API and resource model. While it acknowledges CDA and provides guidance for representing CDA-based advance directive documents, it doesn't deeply integrate with CDA's structure or exchange mechanisms. The IG doesn't utilize HL7 v2 or v3 directly, focusing solely on the FHIR paradigm. Cross-paradigm integration is limited to acknowledging and providing a pathway for CDA documents within the FHIR framework.",
+    "scores": {
+      "CDA": 0.4,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR PACIO Advance Directive Interoperability (ADI) Implementation Guide is explicitly designed for use within the United States healthcare system, as indicated by its alignment with US Core profiles and its development under the PACIO project, which focuses on improving post-acute care interoperability in the US. The mention of \"US Realm\" further solidifies its national scope.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The FHIR PACIO Advance Directive Interoperability (ADI) Implementation Guide focuses on standardizing the representation and exchange of advance directive information, including patient goals, preferences, and portable medical orders. It leverages FHIR resources like Composition, DocumentReference, and Consent to create a document-centric model for managing and accessing advance directives. While it touches upon administrative aspects and workflow, its core is driven by enabling person-centered care through the digital exchange of advance directive data.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.8,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The FHIR PACIO Advance Directive Interoperability (ADI) IG primarily focuses on the standardized exchange of advance directive information. Therefore, EHR systems are central to its implementation, as they will be responsible for creating, storing, and sharing these documents. PHR systems will also play a crucial role in enabling patients to create and manage their directives. While not directly involved in processing advance directives, Payer systems might need awareness of their existence for care coordination. Public Health and Research systems have minimal involvement, primarily for aggregated data analysis. Clinical Decision Support systems can leverage advance directives to provide tailored recommendations, and Pharmacy and Lab systems have limited interaction. Imaging systems are not involved.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The FHIR PACIO Advance Directive Interoperability (ADI) Implementation Guide primarily focuses on enabling the exchange and verification of advance directive information. This directly benefits Clinical Care Teams by providing access to crucial patient preferences during critical situations. Patients and Caregivers are also core users as they are the authors and subjects of these directives. While Healthcare Administrators, Payers, Public Health Agencies, Research Organizations, and Government Agencies have a less direct role, they are still impacted by the standardization and accessibility of this information.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 1,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

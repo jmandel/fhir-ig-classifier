@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on representing the ICHOM Breast Cancer Patient-Centered Outcome Measure Set using FHIR resources and questionnaires. It heavily relies on FHIR for its structure and operations, with no significant dependence on other HL7 standards like CDA, v2, or v3. While it does not directly integrate different HL7 paradigms, it does align with other FHIR IGs, demonstrating a degree of cross-paradigm thinking within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of the ICHOM Breast Cancer Patient-Centered Outcome Measure Set using HL7 FHIR. While it mentions alignment with other standards like mCODE, US Core, IPS, IPA, and QI-Core, it does not specify any particular national or regional jurisdiction. The guide is designed for global applicability, as ICHOM is an international organization. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation of the ICHOM Breast Cancer Patient-Centered Outcome Measure Set. It leverages FHIR resources and questionnaires to capture both clinical and patient-reported data, enabling consistent collection, reporting, and benchmarking of breast cancer outcomes. The IG's primary goal is to support value-based healthcare, quality improvement, and research by providing a structured and interoperable way to represent breast cancer data. While it touches upon administrative and workflow aspects, its core is deeply rooted in clinical data and quality reporting, with a strong emphasis on patient-centered outcomes.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.6,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 0.2,
+      "Quality & Reporting": 1,
+      "Research": 0.8,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation of the ICHOM Breast Cancer Patient-Centered Outcome Measure Set. It primarily targets EHR systems for capturing and managing both clinical and patient-reported outcomes.  Clinical research platforms will also play a key role in leveraging this standardized data.  Patient engagement through PHR systems is important for collecting patient-reported outcomes. Public health systems may utilize aggregated, de-identified data for population-level analysis. While not a primary focus, clinical decision support systems could potentially leverage the standardized outcomes data for tailored recommendations. Payer systems might use the outcomes data for value-based care models, but direct integration is not a core focus. Pharmacy and imaging systems have minimal direct involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the collection and exchange of breast cancer patient outcomes data, as defined by the ICHOM Breast Cancer Set. Its design is driven by the need for interoperable data to support clinical care, research, and quality improvement. Clinical care teams and research organizations are the core users, as they will be collecting, using, and analyzing the standardized data. Public health agencies and payers will also benefit from the aggregated, standardized data for population health monitoring and value-based care initiatives, respectively. Patients have a defined role through patient-reported outcomes. Government agencies and healthcare administrators have a less direct but still relevant role in oversight and operational implementation.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 1,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

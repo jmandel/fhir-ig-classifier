@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally built upon FHIR to represent IHE SDC forms, particularly for electronic Cancer Protocols (eCPs). It leverages FHIR resources like Observation, DiagnosticReport, and DocumentReference for data representation and exchange. While it acknowledges IHE SDC, which is based on HL7 v3, the IG itself doesn't directly utilize v3 or CDA. It does not use v2. It demonstrates a degree of cross-paradigm integration by bridging IHE SDC with FHIR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly stated to be a Universal Realm guide, designed for international use without jurisdiction-specific constraints. It focuses on representing IHE Structured Data Capture (SDC) forms, particularly electronic Cancer Protocols (eCPs), using FHIR resources. While it mentions alignment with US-Core, this is presented as an example of a standard it can be used alongside, not as a primary jurisdictional focus.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on representing and exchanging data from IHE Structured Data Capture (SDC) forms, specifically electronic Cancer Protocols (eCPs), using FHIR resources. It leverages `Observation`, `DiagnosticReport`, and `DocumentReference` to capture and transmit structured clinical data, primarily for cancer reporting. While it touches upon quality measurement and public health reporting, its core purpose is the structured representation and exchange of clinical data captured in eCPs. The IG also addresses the workflow of extracting data from SDC forms and mapping it to FHIR, and it includes considerations for identity and security through the use of standard FHIR resources.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.4,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.6,
+      "Research": 0.4,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on representing and exchanging data from IHE SDC forms, specifically electronic Cancer Protocols (eCPs), using FHIR. It primarily targets systems involved in pathology, oncology, and cancer reporting. EHRs will play a central role in implementing and utilizing the extracted data. Lab systems, particularly pathology labs, are key for generating the eCP data. Public health systems will benefit from the standardized reporting enabled by this IG. Research platforms can leverage the structured data for analysis and clinical trials. Clinical decision support systems can utilize the data for guideline concordance evaluation. Pharmacy and imaging systems have minimal involvement. Payer systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG primarily focuses on enabling the exchange and utilization of structured data captured via IHE SDC forms, specifically electronic Cancer Protocols (eCPs), using FHIR. Therefore, Clinical Care Teams, particularly those involved in cancer care and pathology, are the core users. Research Organizations and Public Health Agencies are also key users due to the IG's emphasis on data sharing, analysis, quality measurement, and public health reporting. Government Agencies have a defined role in oversight and regulation, while Payers and Healthcare Administrators have a minimal role. Patients and Caregivers are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing Adverse Event (AE) data in clinical research using FHIR. It heavily relies on the FHIR standard for its core structure and data exchange, with no significant dependence on other HL7 standards like CDA, v2, or v3. While it acknowledges the broader HL7 ecosystem and potential for future integration (e.g., with a MedWatch IG), its current scope is firmly rooted in FHIR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on Adverse Event reporting in clinical research, with a strong emphasis on meeting regulatory requirements. While it leverages core FHIR standards and is designed for broad applicability within the clinical research domain, it explicitly references US FDA regulations and guidelines (e.g., FDA E2B(R3), MedWatch) and anticipates a future MedWatch IG, indicating a strong alignment with US needs. However, it does not explicitly state that it is governed by the US as its primary scope. Therefore, it is scored as 0.8 for National > United States.",
+    "scores": {
+      "Universal Realm": 0.2,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing Adverse Event (AE) data capture and reporting within the context of clinical research. It leverages the core FHIR AdverseEvent resource and extends it with research-specific elements like severity, grade, and seriousness criteria. The IG aims to improve the efficiency and accuracy of AE reporting from real-world data sources like EHRs and PHRs to regulatory authorities, primarily for clinical trials. While it touches upon administrative and workflow aspects, its core is driven by clinical research needs and the associated clinical data.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.6,
+      "Research": 1,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing Adverse Event (AE) data capture and reporting within the context of clinical research, particularly leveraging EHRs and PHRs. It aims to improve efficiency and accuracy for regulatory reporting and safety surveillance. Therefore, EHR and PHR systems are central to its implementation, along with research platforms. Public health systems also play a role in post-market surveillance. While not directly involved in AE reporting, clinical decision support systems could potentially leverage the standardized data. Other systems like imaging, lab, payer, and pharmacy have minimal or no direct involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 1
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing Adverse Event (AE) data capture and reporting within the context of clinical research, particularly leveraging EHRs and PHRs. Its design is driven by the needs of research organizations and regulatory bodies to improve efficiency and accuracy in AE reporting for both pre-market and post-market safety surveillance. While clinical care teams and patients have a role in providing the data, the IG's core purpose is to facilitate data exchange and reporting for research and regulatory purposes.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 1,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

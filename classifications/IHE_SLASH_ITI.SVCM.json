@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The IHE ITI.SVCM Implementation Guide is fundamentally based on HL7 FHIR, defining a RESTful API for terminology management. It does not utilize HL7 v2 or v3 messaging, nor does it focus on CDA document exchange. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR as the sole foundation suggests a focus on that specific standard.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This IHE IT Infrastructure Technical Framework Supplement, Sharing Valuesets, Codes, and Maps (SVCM), defines a standardized, lightweight interface for retrieving uniform nomenclature using HL7 FHIR R4. It does not specify any regional or national adaptations, making it universally applicable.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The ITI.SVCM Implementation Guide focuses on providing a standardized way to access and manage centrally managed terminologies and mappings between code systems using FHIR. Its primary purpose is to ensure consistent and up-to-date terminology usage across healthcare systems. Therefore, it heavily emphasizes the management and retrieval of clinical knowledge in the form of value sets, code systems, and concept maps. While it touches upon identity and security through audit events and ATNA, and workflow through defined operations, these are secondary to its core focus on terminology services.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI.SVCM Implementation Guide focuses on standardized access to terminologies and mappings. EHR systems are the primary consumers, needing to integrate terminology services for consistent data. Clinical Decision Support systems also heavily rely on accurate and up-to-date terminologies. Other systems like Pharmacy, Lab, and Imaging may need to validate or translate codes, while Public Health and Research systems might utilize these services for data analysis and reporting. Payer and PHR systems have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The ITI.SVCM Implementation Guide focuses on standardizing access to and management of terminologies and code mappings. Its primary users are systems that need to consume and utilize these terminologies, such as EHRs and other clinical applications. Therefore, Clinical Care Teams are the core users as their systems will directly interact with the Terminology Repository. Healthcare Administrators have a significant role in implementing and managing the Terminology Repository. Public Health Agencies and Research Organizations may utilize the standardized terminologies for their work, but their influence on the IG's design is less direct. Payers and Patients/Caregivers are not directly involved in the core functionality of this IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

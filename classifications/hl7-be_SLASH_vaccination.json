@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining profiles and extensions for exchanging vaccination information within Belgium. It does not utilize CDA, v2, or v3, and its cross-paradigm support is limited to leveraging FHIR's core principles for interoperability.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is explicitly designed for the Belgian healthcare system, focusing on standardizing the exchange of vaccination information within Belgium. It defines Belgium-specific profiles, extensions, and value sets, and references Belgian code systems. The scope is clearly limited to vaccination events within Belgium.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the exchange of vaccination information within the Belgian healthcare system. It heavily emphasizes clinical data related to vaccination events, including product details, patient information, and provider context. While it touches upon administrative aspects like provider and organization identification, its core purpose is to ensure accurate and complete documentation of vaccination events for clinical use and public health reporting. The IG also includes elements related to workflow, identity & security, and quality & reporting, but these are secondary to the main focus on clinical data and public health.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0.8,
+      "Public Health": 0.8,
+      "Quality & Reporting": 0.4,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing vaccination data exchange in Belgium, primarily through the creation and retrieval of BeVaccination resources based on the FHIR Immunization resource. EHR systems are central to recording and sharing this data. Public health systems are key for surveillance and monitoring. Pharmacy systems play a role in providing vaccine information. Clinical decision support systems will utilize this data for alerts and recommendations. Payer systems have minimal involvement, mainly related to funding information. PHR systems may provide patients access to their vaccination records. Research platforms may use this data for epidemiological studies. Imaging and Lab systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of vaccination information within the Belgian healthcare system. Its primary goal is to improve the accuracy, completeness, and accessibility of vaccination records. Therefore, Clinical Care Teams and Public Health Agencies are the core users, as they directly benefit from and drive the need for this standardization. Government Agencies also play a significant role in enforcing and overseeing the implementation. Patients and Caregivers benefit indirectly from improved care coordination and access to records. Payers and Research Organizations have a minimal role in this specific IG, as it primarily focuses on the clinical and public health aspects of vaccination data.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

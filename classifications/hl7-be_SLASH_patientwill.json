@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on representing patient wills within the Belgian healthcare system using FHIR resources, specifically profiling the Consent resource. It does not utilize CDA, v2, or v3, and its cross-paradigm support is limited to leveraging existing Belgian FHIR profiles.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for the Belgian healthcare system, using Belgian-specific extensions, value sets, and references to Belgian organizations. Therefore, it is classified as a National Implementation Guide for Belgium.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the representation and exchange of patient wills and advance directives within the Belgian healthcare system. It leverages the FHIR Consent resource to document patient preferences regarding medical treatments, resuscitation, hospitalization, and other end-of-life decisions. While it touches upon administrative aspects through patient and recorder identification, its core purpose revolves around care planning and ensuring respect for patient autonomy in critical care situations. It also has a minor focus on clinical data and research through the inclusion of provisions for recording agreement to participate in clinical trials.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 1,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0.2,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the representation and exchange of patient wills and advance directives within the Belgian healthcare system. EHR systems are central to implementing this IG, as they will be the primary systems for recording, storing, and retrieving patient will information. Clinical Decision Support systems will play a key role in alerting clinicians to patient preferences. PHR systems may allow patients to view and potentially manage their wills. Public Health and Research Platforms may utilize aggregated, de-identified data for population-level analysis and research related to end-of-life care preferences and clinical trial participation.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation and exchange of patient wills and advance directives within the Belgian healthcare system. The primary goal is to ensure consistent documentation of patient preferences regarding end-of-life care, improving communication and respect for patient autonomy. Therefore, Clinical Care Teams are the core users, with Patients and Caregivers having significant influence. Other groups have more limited roles, primarily focused on compliance, data access, or specific use cases like clinical trials.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

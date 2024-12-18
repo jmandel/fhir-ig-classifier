@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on creating a national healthcare provider directory using FHIR. It heavily relies on FHIR for its core structure and functionality, with minimal to no relevance to other HL7 standards like CDA, v2, or v3. While it builds upon existing FHIR profiles and interacts with other FHIR-based IGs, it doesn't explicitly integrate across different HL7 paradigms.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide defines a national directory infrastructure for the United States healthcare system. It builds upon FHIR R4 and US Core, and is explicitly designed for use within the US, addressing specific US healthcare programs and challenges.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The fhir-us-ndh IG focuses on establishing a national directory of healthcare providers and services, primarily addressing administrative and workflow aspects related to managing and validating provider demographic information. While it touches upon clinical data through references to services and care teams, its core purpose revolves around creating a unified and interoperable directory infrastructure. Identity and security are also important, with provisions for data restriction and verification. The IG has limited relevance to other domains like medications, diagnostics, or clinical knowledge.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The National Directory of Healthcare Providers & Services (NDH) IG primarily targets systems involved in managing and utilizing provider directory information. EHR systems are central for accessing and updating directory data. Payer systems are key for enrollment and claims processing, requiring extensive integration. Public health systems play an important role in population health management using directory data. PHR systems have minimal but clear integration requirements for provider search. Other systems like Clinical Decision Support, Imaging, Lab, Pharmacy, and Research Platforms have no direct involvement in implementing this IG.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The fhir-us-ndh IG primarily focuses on creating a standardized national directory of healthcare providers and services. This involves defining data structures, APIs, and workflows for managing and validating provider information. Clinical Care Teams benefit from improved referral processes and access to accurate provider data. Healthcare Administrators gain efficiency in managing directory information and reducing redundant data entry. Payers leverage the directory for network management and claims processing. Public Health Agencies can utilize the directory for population health analysis and resource planning. Government Agencies play a crucial role in oversight and regulation of the national directory. While Patients and Caregivers may indirectly benefit from improved provider selection, their direct involvement is minimal. Research Organizations have a limited role, potentially using the directory for study recruitment or data analysis.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

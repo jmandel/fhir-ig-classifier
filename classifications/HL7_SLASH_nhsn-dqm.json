@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on enabling the reporting of digital quality measures (dQMs) to the National Healthcare Safety Network (NHSN) using FHIR. It heavily relies on FHIR for its core functionality and leverages other HL7 standards like US Core, DEQM, and CQF Measures, which themselves are built on FHIR. It does not use or reference CDA, v2, or v3 directly.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for reporting to the National Healthcare Safety Network (NHSN) in the United States, a program of the CDC. It references US Core and is tailored to US healthcare data standards and reporting requirements. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the electronic submission of digital quality measures (dQMs) to the National Healthcare Safety Network (NHSN). It leverages FHIR to standardize data exchange for public health surveillance, particularly for healthcare-associated infections and patient safety events. The IG heavily relies on concepts from quality reporting, clinical data, and public health, while also incorporating elements of workflow and administrative processes.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
+      "Public Health": 1,
+      "Quality & Reporting": 0.8,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling EHRs and other systems to report digital quality measures (dQMs) to the National Healthcare Safety Network (NHSN), a public health surveillance system. EHRs will need to implement the core functionality to extract and format data for reporting. Public Health Systems will be the primary recipients of the reported data. Other systems like Clinical Decision Support and Research Platforms may play supporting roles in data analysis and utilization.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the submission of digital quality measures (dQMs) to the National Healthcare Safety Network (NHSN). Therefore, it primarily targets organizations involved in public health surveillance and quality reporting. Clinical care teams have a role in providing the data, but the IG's design is driven by the needs of public health agencies and the systems that submit data to them. Payers and research organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

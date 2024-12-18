@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is heavily reliant on FHIR for its core functionality, utilizing FHIR resources, operations, and profiles to define the structure and exchange of respiratory virus surveillance data. It leverages other HL7 standards like the MedMorph RA, which builds upon FHIR, and US Core profiles, demonstrating a strong integration with the broader FHIR ecosystem. While it acknowledges and utilizes some cross-paradigm concepts, it does not directly involve or rely on CDA, v2, or v3.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Respiratory Virus Hospitalization Surveillance Network (RESP-NET) within the United States, under the jurisdiction of the U.S. Centers for Disease Control and Prevention (CDC). It leverages US Core and US Public Health Profiles, indicating a strong focus on the US healthcare system. Therefore, it is classified as a National Implementation Guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on automating the collection and reporting of respiratory virus hospitalization data for public health surveillance, specifically for the RESP-NET program. It leverages the MedMorph Reference Architecture, FHIR Subscriptions, and SMART on FHIR to streamline data exchange between healthcare facilities and public health agencies. The IG heavily relies on clinical data retrieval and utilizes workflow automation for report generation and submission. While it touches upon identity and security through SMART on FHIR, its primary driver is public health surveillance.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 1,
+      "Quality & Reporting": 0.4,
+      "Research": 0.2,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on automating the reporting of respiratory virus hospitalization data to public health agencies. It heavily relies on EHR systems for data extraction and utilizes MedMorph architecture for automation. Public health systems are the primary recipients of the reported data. Clinical decision support plays a minor role in identifying potential cases, while research platforms might utilize the collected data. Other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on automating the reporting of respiratory virus hospitalization data to public health agencies. Therefore, Public Health Agencies are the core users, as the IG is designed to meet their specific needs for data collection and analysis. Clinical Care Teams and Healthcare Administrators are key users, as they are responsible for the data sources and systems that will be used to generate the reports. Government Agencies have a significant role in oversight and regulation, while Research Organizations may utilize the collected data for research purposes. Payers and Patients/Caregivers have minimal involvement in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

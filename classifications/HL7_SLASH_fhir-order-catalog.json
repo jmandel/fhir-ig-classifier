@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining a FHIR-based catalog system for medical devices, medications, and lab services. It heavily relies on FHIR resources and RESTful interactions, with no mention or use of CDA, v2, or v3. While it leverages multiple FHIR resources and terminologies, indicating some level of cross-paradigm thinking within the FHIR ecosystem, it doesn't integrate with other HL7 paradigms.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on creating a standardized FHIR-based catalog system for medical devices, medications, and lab services. While it references international terminologies and aligns with both US (GUDID) and European (EUDAMED) device databases, it does not explicitly state a specific national or regional scope. Therefore, it is classified as \"Universal Realm\" with some consideration for US and EU contexts.",
+    "scores": {
+      "Universal Realm": 0.6,
+      "National": 0.2,
+      "Regional": 0.2
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on creating a standardized way to represent and exchange catalogs of orderable healthcare items, primarily medical devices, medications, and laboratory services. It leverages FHIR resources like Composition, DeviceDefinition, MedicationKnowledge, and PlanDefinition to define catalog structure, item details, and search capabilities. While it touches upon administrative aspects through catalog management and indirectly supports clinical data through item descriptions, its core purpose is to facilitate the discovery and selection of orderable items, making it heavily focused on the workflow of item selection and indirectly supporting procurement.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the representation of catalogs for medical devices, medications, and lab services. EHRs will need to integrate with these catalogs for ordering and documentation. Pharmacy and Lab systems will be key in providing and consuming catalog data. While not directly involved in ordering, Clinical Decision Support systems may leverage catalog information for relevant guidance. Payer systems have minimal involvement as the IG doesn't cover billing. Public Health and Research systems have limited interaction, primarily for epidemiological studies or device/drug tracking. PHR systems have minimal involvement, potentially displaying ordered items.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG primarily focuses on standardizing the representation and exchange of orderable items (medical devices, medications, lab services) within healthcare catalogs. It's designed to facilitate efficient discovery, selection, and ordering by providing a common information model and standardized search capabilities. Therefore, the core users are those involved in managing and utilizing these catalogs, such as clinical care teams (for selection) and healthcare administrators (for procurement). Government agencies and device manufacturers also have a significant role in ensuring data consistency and compliance with regulatory requirements. While patients and caregivers might indirectly benefit from improved ordering processes, they are not direct users of this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

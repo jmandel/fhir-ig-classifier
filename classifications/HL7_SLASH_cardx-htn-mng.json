@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on using FHIR to standardize the exchange of Self-Measured Blood Pressure (SMBP) data. It heavily relies on FHIR's Observation resource and RESTful interactions, with no mention or apparent use of CDA, v2, or v3. While it doesn't explicitly integrate across different HL7 paradigms, it does acknowledge and aim to align with other FHIR-based IGs, suggesting a degree of cross-paradigm awareness within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states a \"universal realm approach\" and aims for broad applicability across different geographic regions and healthcare systems. It does not target any specific country or region.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the exchange of Self-Measured Blood Pressure (SMBP) data for hypertension management. It defines profiles for individual and average blood pressure readings, along with associated heart rate, emphasizing the use of LOINC and UCUM. The IG supports workflows for data transmission from devices to intermediaries and then to EHRs, aiming to improve clinical care and remote monitoring. While clinical data is central, elements of workflow and administrative aspects are also present.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0.2,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the exchange of Self-Measured Blood Pressure (SMBP) data, primarily between patients, personal health devices, intermediary platforms, and EHR systems. EHR systems are central to receiving and utilizing this data for clinical care. Personal Health Record (PHR) systems and associated devices play a crucial role in data collection and transmission. Clinical Decision Support systems can leverage this data for alerts and recommendations. Public Health systems may utilize aggregated, de-identified data for population health monitoring. Research platforms could use this data for studies related to hypertension. Payer systems have a minimal role, primarily related to potential reimbursement for SMBP programs. Pharmacy and Imaging systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the standardized exchange of Self-Measured Blood Pressure (SMBP) data.  Clinical Care Teams are the core users, as the IG directly supports their ability to manage hypertension through remote monitoring and data integration into EHRs. Patients and Caregivers are key users, as they are the source of the data and benefit from improved care. Personal Health Intermediaries and Device Gateways are important technical actors. Public Health Agencies and Research Organizations may utilize the standardized data for population health and research purposes, respectively. Payers and Government Agencies have a less direct but still relevant role in the broader context of hypertension management and data standardization.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

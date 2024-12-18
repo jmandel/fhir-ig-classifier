@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide (CHMED) is fundamentally based on FHIR, defining a FHIR-based representation of the Swiss eMediplan. It leverages FHIR resources, profiles, and the document paradigm for medication information exchange. While it acknowledges other HL7 standards, they are not directly relevant to its core purpose. The IG demonstrates a deliberate effort to bridge the gap between the existing eMediplan format and FHIR, showcasing a strong commitment to FHIR as the foundation for interoperability in the Swiss eHealth ecosystem.",
+    "summary": "This Implementation Guide (CHMED) is fundamentally based on FHIR to represent the Swiss eMediplan format. It heavily utilizes FHIR resources, profiles, and the document paradigm. While it acknowledges other HL7 standards, they are not directly relevant to its core purpose. The IG does not use v2 or v3, and while it could be seen as a bridge between a document-centric approach (like CDA) and FHIR, it does not explicitly support or require CDA. Cross-paradigm integration is minimal, primarily focused on bridging the eMediplan format to FHIR.",
     "scores": {
-      "CDA": 0,
-      "Cross-Paradigm": 0.2,
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "The CHMED Implementation Guide is explicitly designed for the Swiss healthcare system, focusing on the exchange of medication information within Switzerland using the eMediplan format. It defines FHIR profiles and extensions tailored to the Swiss context, including references to Swiss-specific code systems and value sets. The guide is directly related to Swiss eHealth initiatives and programs, making it a national guide for Switzerland.",
+    "summary": "The CHMED Implementation Guide is explicitly designed for the Swiss healthcare system, focusing on the exchange of medication information within Switzerland using the eMediplan format. It defines FHIR profiles and extensions tailored to the Swiss context, including references to Swiss-specific standards and regulations. Therefore, it is classified as a National Implementation Guide for Switzerland.",
     "scores": {
       "Universal Realm": 0,
       "National > Switzerland": 1,
@@ -18,7 +18,7 @@
     }
   },
   "Domain Focus": {
-    "summary": "The CHMED Implementation Guide focuses on enabling interoperable exchange of medication information in Switzerland, specifically the eMediplan format, using FHIR. It defines two primary document types: Medication Card and Medication Prescription. While it touches upon some clinical data and administrative aspects related to medication management, its core purpose is to standardize the representation and exchange of medication-related information, making **Medications** its primary domain.",
+    "summary": "The CHMED Implementation Guide focuses on enabling interoperable exchange of medication information in Switzerland, specifically the eMediplan format, using FHIR. It defines FHIR profiles and extensions to represent Medication Card and Medication Prescription documents, mapping the existing eMediplan format to FHIR resources. While it touches upon patient and provider information, its core purpose is to standardize medication data exchange, making **Medications** the primary domain.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0.2,
@@ -26,44 +26,30 @@
       "Clinical Knowledge": 0.2,
       "Diagnostics": 0,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 1,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
       "Workflow": 0.4
     }
   },
-  "Implementation Approach": {
-    "summary": "The CHMED IG focuses on defining FHIR document structures (Medication Card and Medication Prescription) for exchanging medication information based on the Swiss eMediplan format. It heavily relies on data profiles and terminology to map the eMediplan to FHIR resources and uses the `$document` operation for exchange. It leverages extensions to capture eMediplan-specific data. While REST APIs are used for the `$document` operation, the IG doesn't define other custom services or extensively use messaging or subscriptions.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 1,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The CHMED Implementation Guide focuses on the exchange of medication information in Switzerland, specifically the eMediplan format, using FHIR. It primarily targets systems involved in creating, sharing, and consuming medication data, such as EHRs and Pharmacy Systems. Clinical Decision Support systems will also play a significant role in utilizing the standardized medication data. While PHR systems may have some interaction, the focus is more on provider-to-provider exchange. Payer, Lab, Imaging, and Research systems have minimal to no direct involvement.",
+    "summary": "The CHMED Implementation Guide focuses on enabling interoperable exchange of medication information in Switzerland, specifically the eMediplan format, using FHIR. It primarily targets systems involved in medication management, prescription, and patient care within the Swiss healthcare ecosystem. EHR systems are central to implementing this IG, as they will be the primary source and consumer of medication data. Pharmacy systems will also play a crucial role in managing and dispensing medications based on the exchanged information. PHR systems will likely be involved in displaying medication information to patients. Other systems like Clinical Decision Support, Lab, Imaging, Payer, Public Health, and Research Platforms have limited or no direct involvement.",
     "scores": {
+      "Clinical Decision Support": 0.2,
       "EHR Systems": 1,
-      "PHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 0,
       "Pharmacy Systems": 0.8,
-      "Lab Systems": 0,
-      "Imaging Systems": 0,
-      "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0,
       "Research Platforms": 0
     }
   },
   "Users & Stakeholders": {
-    "summary": "The CHMED Implementation Guide primarily focuses on enabling interoperable exchange of medication information within the Swiss healthcare system, specifically targeting the eMediplan format. Clinical Care Teams are the core users, as they generate and consume the Medication Card and Prescription documents. Healthcare Administrators have a significant role in implementing and managing systems that utilize this IG. Patients and Caregivers benefit indirectly through improved medication safety and information access. Payers, Public Health Agencies, Research Organizations, and Government Agencies have limited direct involvement in this specific IG, although they may benefit from the broader standardization efforts.",
+    "summary": "The CHMED Implementation Guide primarily focuses on enabling interoperable exchange of medication information within the Swiss healthcare system, specifically targeting the eMediplan format. Therefore, Clinical Care Teams are the core users, as they are directly involved in creating and using medication lists and prescriptions. Healthcare Administrators have a significant role in implementing and managing systems that utilize this IG. Patients and Caregivers benefit indirectly from improved medication safety and information sharing. Payers, Public Health Agencies, Research Organizations, and Government Agencies have limited direct involvement in this specific IG, although they may benefit from the broader implications of improved data exchange.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.8,

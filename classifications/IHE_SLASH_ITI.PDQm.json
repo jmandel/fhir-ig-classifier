@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "The ITI PDQm Implementation Guide is fundamentally based on FHIR, defining RESTful interactions for patient demographic queries. It does not utilize HL7 v2 or v3 messaging, nor does it directly leverage CDA. While it doesn't explicitly integrate multiple HL7 paradigms, its reliance on FHIR and its relationship to other IHE profiles that might use different HL7 standards suggests a minor level of cross-paradigm awareness.",
+    "summary": "This Implementation Guide (ITI.PDQm) is fundamentally based on FHIR, defining RESTful interactions for patient demographic queries. It does not utilize HL7 v2 or v3 messaging, nor does it directly leverage CDA. While it doesn't explicitly integrate multiple HL7 paradigms, its reliance on FHIR and its relationship to other IHE profiles that might use different HL7 standards suggests a minimal level of cross-paradigm awareness.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The IHE PDQm Implementation Guide is designed for international use, focusing on providing a standardized, RESTful interface for querying patient demographics using FHIR. It does not specify any national or regional adaptations, making it applicable universally.",
+    "summary": "The IHE PDQm Implementation Guide is designed for international use, leveraging FHIR for patient demographic queries. It does not specify any national or regional adaptations, focusing on universal applicability.",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "The IHE PDQm Implementation Guide focuses on providing a RESTful interface for querying patient demographics, primarily for mobile and web applications. It leverages FHIR R4 and defines two transactions: ITI-78 (search/read) and ITI-119 ($match). The core purpose is to facilitate patient identification and data retrieval, making it heavily reliant on administrative data and identity management. While it touches upon clinical data through patient demographics, its primary focus is not on deep clinical information exchange. Security is addressed through audit event requirements.",
+    "summary": "The ITI.PDQm Implementation Guide focuses on providing a lightweight, RESTful interface for querying patient demographics using FHIR. It primarily addresses the need for efficient and secure access to patient information in mobile and web-based applications. The core domain is **Administrative**, specifically patient identity and demographics management. While it touches upon security and workflow, these are primarily in service of the main goal of patient demographic query. Clinical data is limited to demographic information, and other domains like care planning, medications, and diagnostics are not addressed.",
     "scores": {
       "Administrative": 1,
       "Care Planning": 0,
       "Clinical Data": 0.4,
       "Clinical Knowledge": 0,
       "Diagnostics": 0,
-      "Identity & Security": 0.8,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.6
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The ITI PDQm Implementation Guide primarily focuses on defining RESTful interactions for querying patient demographics, leveraging FHIR resource profiles and the $match operation. It heavily relies on data profiles to constrain the Patient resource and uses terminology for specific elements like gender. While REST APIs are central to its design, it also incorporates services through the $match operation. Other aspects like decision support, documents, forms, messaging, and subscriptions are not utilized.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.6,
-      "Subscriptions": 0,
-      "Terminology": 0.6
+      "Workflow": 0.4
     }
   },
   "Implementers": {
-    "summary": "The ITI PDQm Implementation Guide focuses on enabling lightweight, RESTful querying of patient demographics using FHIR. It's primarily designed for mobile and web-based applications that need to retrieve patient information efficiently. EHR systems, as the primary source of patient demographics, are central to its implementation. Mobile and web-based applications, including those integrated within EHRs and potentially PHRs, will heavily rely on PDQm for patient identification and data retrieval. Clinical Decision Support systems may utilize PDQm to ensure accurate patient context for alerts and guidance. While less central, Payer, Pharmacy, Lab, and Imaging systems might use PDQm for patient identification in specific workflows. Public Health and Research systems have minimal involvement, primarily related to patient identification if needed.",
+    "summary": "The ITI PDQm Implementation Guide focuses on querying patient demographics using FHIR, primarily targeting EHR systems and mobile/web applications that need to retrieve patient information. It's less relevant to systems like imaging, lab, or pharmacy, which don't directly manage patient demographics. Payer systems have minimal involvement, while PHR and public health systems have limited integration needs related to patient identification.",
     "scores": {
+      "Clinical Decision Support": 0.2,
       "EHR Systems": 1,
-      "PHR Systems": 0.6,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.2,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0.2,
-      "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.6,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.4,
       "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "This Implementation Guide (PDQm) primarily focuses on enabling mobile and web applications to query patient demographics. Therefore, the core users are developers building these applications, which indirectly serve Clinical Care Teams. Clinical Care Teams benefit significantly from accurate and efficient patient identification. While Patients and Caregivers might indirectly benefit from improved data accuracy, they are not direct users. Public Health and Research Organizations have minimal involvement, as the IG doesn't focus on aggregated data or research-specific needs. Payers and Government Agencies have a limited role, primarily related to potential auditing and regulatory compliance.",
+    "summary": "This Implementation Guide (PDQm) primarily focuses on enabling mobile and web applications to query patient demographics. Therefore, the core users are developers building these applications, which indirectly serve Clinical Care Teams. Clinical Care Teams benefit from streamlined access to patient information, making them a key user group. Healthcare Administrators might have some interest in the standardization aspect, but their role is limited. Patients and Caregivers are indirectly impacted through improved data accuracy but are not direct users. Payers, Public Health Agencies, Research Organizations, and Government Agencies have minimal involvement in the specific scope of this IG.",
     "scores": {
       "Clinical Care Teams": 0.8,
       "Healthcare Administrators": 0.4,
       "Patients and Caregivers": 0.2,
-      "Payers": 0.2,
+      "Payers": 0,
       "Public Health Agencies": 0,
       "Research Organizations": 0,
-      "Government Agencies": 0.4
+      "Government Agencies": 0.2
     }
   },
   "meta": {

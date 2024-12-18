@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is heavily based on FHIR, defining profiles and extensions to standardize the reporting of social care data in Denmark. It does not use HL7 v2 or v3 messaging, nor does it leverage CDA for document exchange. While it aims to align with the Danish core profiles and the shared information model (FKI), it represents a specific subset for reporting, indicating some level of cross-paradigm awareness but not deep integration.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the reporting of social care data within Denmark. It defines profiles, extensions, and workflows tailored to the Danish context, including references to Danish standards (FFB), the shared information model (FKI), and the use of Danish municipalities as the primary actors. The guide explicitly targets the Danish social care ecosystem and its specific needs.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the reporting of social care data from Danish municipalities to a central gateway. It leverages FHIR resources to structure data related to citizen conditions, care plans, interventions, and follow-ups, primarily for reporting and analysis purposes. While it touches upon care planning and clinical data, its core purpose is to facilitate consistent data exchange and aggregation for population-level insights and management information within the Danish social care system.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.8,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.8,
+      "Quality & Reporting": 1,
+      "Research": 0.6,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the standardized reporting of social care data from Danish municipalities to a central gateway. EHR systems used within these municipalities will be the primary implementers, responsible for generating and submitting the `KLReportingFFBDeliveryReport` bundles. Public health systems will play a key role in consuming and analyzing the aggregated data. Research platforms may also utilize this data, and Clinical Decision Support systems might leverage the standardized data for improved care coordination. Other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling Danish municipalities to report social care data to a central gateway. Therefore, the core users are the municipalities (represented in the analysis as Healthcare Administrators) and the central gateway. Public Health Agencies and Research Organizations are also key users as they will utilize the aggregated data. Clinical Care Teams have a defined but limited role, as they are involved in the data collection process, but the IG is not directly designed for their use in delivering care. Government Agencies have a moderate role in setting standards and oversight. Patients and Caregivers, as well as Payers, are not meaningfully involved in this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The Medicolegal Death Investigation (MDI) FHIR Implementation Guide is fundamentally based on FHIR, using it as the core standard for data representation and exchange. It leverages FHIR's RESTful API capabilities and resource model to define how death investigation data should be structured and shared. While it references and profiles other standards like US Core, VRDR, and VRCL, these are built upon FHIR, reinforcing FHIR's foundational role. The IG does not directly utilize CDA, v2, or v3, although it does reference v2 and v3 code systems within the FHIR context. Cross-paradigm integration is present in the sense that it bridges FHIR with existing practices in the MDI domain, but it doesn't explicitly integrate different HL7 paradigms like v2 and v3.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide explicitly states it is a \"US Realm Specification\", indicating it is designed for use within the United States. It references US-specific standards like US Core and Vital Records Death Reporting (VRDR), and mentions the CDC's National Center for Health Statistics (NCHS) as a key stakeholder. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The FHIR Implementation Guide for Medicolegal Death Investigation (MDI) primarily focuses on standardizing the exchange of clinical data related to death investigations between various systems, including MDI case management systems, forensic toxicology labs, and electronic death registration systems. It heavily emphasizes the use of FHIR resources like Composition, DiagnosticReport, and Observation to structure this data. While it touches upon administrative aspects like tracking numbers and organizational details, its core purpose is to facilitate the flow of clinical information for death certification and related processes. Identity and security are addressed with recommendations for secure transport and access control. The IG also supports specific workflows like death certificate review and cremation clearance, and it has a clear connection to public health through its alignment with vital records reporting standards.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.6,
+      "Research": 0.2,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The FHIR MDI IG primarily targets systems involved in medicolegal death investigations, including MDI case management systems, electronic death registration systems, and forensic toxicology LIMS. These systems are crucial for implementing the IG's core functionality. EHR systems play a supporting role in providing patient context, while public health systems benefit from standardized data for surveillance. Other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.8,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The FHIR MDI IG primarily serves professionals involved in medicolegal death investigations, including medical examiners, coroners, death investigators, and forensic toxicologists. These users are responsible for creating, updating, and exchanging death investigation data. Vital records registrars also play a crucial role in the death certificate registration process. Public health agencies benefit from standardized data for surveillance and analysis. While government agencies like the NCHS are key stakeholders, their role is more about oversight and setting standards than direct use of the IG. Payers, patients, and caregivers are not directly involved in the workflows addressed by this IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

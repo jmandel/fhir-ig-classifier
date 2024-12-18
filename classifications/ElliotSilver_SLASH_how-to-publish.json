@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide primarily focuses on the technical process of publishing FHIR IGs using the HL7 IG Publisher. It heavily relies on the FHIR standard and the IG Publisher, which is a tool built around FHIR. Other HL7 standards like CDA, v2, and v3 are not relevant to its core purpose.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on the technical process of publishing FHIR IGs using the HL7 IG Publisher. It does not target any specific jurisdiction or region, but rather provides a universal approach applicable to anyone publishing FHIR IGs.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on the technical process of publishing FHIR Implementation Guides using the HL7 IG Publisher. It's primarily concerned with making IGs publicly accessible, discoverable, and properly versioned. It does not address clinical data exchange or any specific healthcare domain. Therefore, most healthcare domain categories are not applicable.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the technical process of publishing FHIR Implementation Guides using the HL7 IG Publisher. It's primarily aimed at IG authors and doesn't directly involve clinical systems or data exchange. Therefore, most clinical and healthcare systems have no involvement, while systems related to FHIR development and tooling have minimal interaction.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on the technical process of publishing other IGs using the HL7 IG Publisher. Therefore, its primary users are those responsible for creating and publishing IGs, not the end-users of the clinical data exchange defined within those IGs. Clinical care teams, patients, payers, and public health agencies are not directly involved in the process described by this IG. The IG primarily serves the needs of IG authors and developers, with a secondary focus on those managing FHIR infrastructure and registries.",
+    "scores": {
+      "Clinical Care Teams": 0,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

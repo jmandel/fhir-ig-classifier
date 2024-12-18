@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "This analysis evaluates the FHIR QI-Core Implementation Guide's reliance on various HL7 standards. FHIR is the foundational standard, providing the core framework. US Core, built on FHIR, is also deeply integrated. v3 concepts like QDM and vMR are referenced for mapping but not directly implemented, while v2 and CDA are not relevant to the IG's scope.",
+    "summary": "This Implementation Guide, QI-Core, is fundamentally based on FHIR and extends US Core to standardize clinical data representation for quality improvement. It does not directly involve HL7 v2 or v3 messaging, nor does it focus on CDA document exchange. While it acknowledges and maps to models like QDM (which has roots in v3), its core approach is entirely FHIR-centric. The IG does show some cross-paradigm awareness by mapping to QDM and mentioning vMR, but this is not a central aspect of its design.",
     "scores": {
       "CDA": 0,
-      "Cross-Paradigm": 0.6,
+      "Cross-Paradigm": 0.4,
       "FHIR": 1,
       "v2": 0,
-      "v3": 0.4
+      "v3": 0.2
     }
   },
   "Geographic Scope": {
-    "summary": "The FHIR Implementation Guide explicitly states it is designed for the US Realm, building upon US Core profiles and addressing US-specific quality improvement needs. Therefore, it is classified as a National guide for the United States.",
+    "summary": "The QI-Core Implementation Guide explicitly states it is designed for use within the US Realm and builds upon US Core profiles. This indicates a clear national scope focused on the United States.",
     "scores": {
       "Universal Realm": 0,
       "National > United States": 1,
@@ -18,7 +18,7 @@
     }
   },
   "Domain Focus": {
-    "summary": "The QI-Core Implementation Guide primarily focuses on standardizing the representation of clinical data for quality measurement and clinical decision support within the US Realm. It leverages and extends US Core profiles to ensure interoperability and consistency in capturing and exchanging data relevant to quality improvement initiatives. While it touches upon care planning and workflow aspects related to quality improvement, its core purpose revolves around clinical data and its use in quality and reporting.",
+    "summary": "The QI-Core Implementation Guide primarily focuses on standardizing the representation of clinical data for quality measurement and clinical decision support within the US Realm. It leverages FHIR R4 and US Core to define profiles and extensions that facilitate interoperability in quality improvement applications. While it touches upon care planning and workflow, its core purpose revolves around clinical data and its use in quality reporting.",
     "scores": {
       "Administrative": 0.2,
       "Care Planning": 0.6,
@@ -26,51 +26,37 @@
       "Clinical Knowledge": 0.6,
       "Diagnostics": 0.4,
       "Identity & Security": 0.2,
-      "Medications": 0.6,
-      "Payment & Financial": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
       "Public Health": 0.2,
-      "Quality & Reporting": 0.8,
+      "Quality & Reporting": 1,
       "Research": 0.2,
-      "Workflow": 0.4
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The QI-Core IG primarily focuses on defining data profiles based on US Core to standardize clinical data representation for quality improvement. It extensively uses terminology bindings and introduces specific patterns for handling negation. While it mandates RESTful read and search operations, it doesn't define custom services or delve into messaging, subscriptions, documents, forms, or decision support logic.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0.2,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.8
+      "Workflow": 0.6
     }
   },
   "Implementers": {
-    "summary": "The QI-Core IG primarily focuses on standardizing clinical data representation for quality measurement and clinical decision support within the US Realm. EHR systems are central to implementing its full functionality, while Clinical Decision Support systems play a key role. Other systems like Pharmacy, Lab, and Imaging have specific but limited roles in providing data relevant to quality measures. Payer and PHR systems have minimal involvement, and Public Health and Research Platforms are not directly addressed by this IG.",
+    "summary": "The QI-Core IG focuses on standardizing clinical data representation for quality measurement and clinical decision support within the US Realm. It primarily targets EHR systems and CDS systems, requiring them to implement its profiles and extensions. Other systems like lab, pharmacy, and research platforms have important but more specific roles in supporting quality improvement data. Payer and public health systems have minimal direct involvement in implementing the core data representation aspects of this IG.",
     "scores": {
+      "Clinical Decision Support": 1,
       "EHR Systems": 1,
-      "PHR Systems": 0.2,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
       "Payer Systems": 0.2,
       "Pharmacy Systems": 0.6,
-      "Lab Systems": 0.6,
-      "Imaging Systems": 0.4,
-      "Public Health Systems": 0,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.6
     }
   },
   "Users & Stakeholders": {
-    "summary": "The QI-Core Implementation Guide primarily serves the needs of those involved in quality measurement and clinical decision support within the US healthcare system. Clinical Care Teams and Research Organizations are the most significant users, as they directly utilize the standardized data for quality improvement and research. EHR vendors and CDS implementers, categorized under Healthcare Administrators, are also key users as they build systems conforming to QI-Core. Public Health Agencies and Government Agencies have a moderate role in utilizing and overseeing the implementation of these standards. Payers have a defined but limited role, potentially using the standardized data for quality-based payment models. Patients and Caregivers are the least directly involved, although they benefit indirectly from improved quality of care.",
+    "summary": "The QI-Core Implementation Guide primarily serves the needs of developers building quality measurement and clinical decision support systems. Clinical Care Teams and Research Organizations are also key users, as they provide and utilize the data standardized by this IG. Payers and Public Health Agencies have a significant interest in the outcomes of quality improvement initiatives, while Government Agencies are involved in setting standards and regulations related to quality reporting. Patients and Healthcare Administrators have a less direct but still relevant role.",
     "scores": {
-      "Clinical Care Teams": 1,
-      "Healthcare Administrators": 0.8,
-      "Patients and Caregivers": 0,
-      "Payers": 0.4,
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.6,
       "Public Health Agencies": 0.6,
-      "Research Organizations": 1,
+      "Research Organizations": 0.8,
       "Government Agencies": 0.6
     }
   },

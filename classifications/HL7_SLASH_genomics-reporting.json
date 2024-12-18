@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide is fundamentally based on FHIR, using it as the core standard for representing and exchanging genomic testing results. It leverages FHIR resources, defines custom profiles and extensions, and specifies RESTful operations for querying and retrieving data. While it acknowledges and relates to HL7 v2, and uses some terminologies that may also be used in v3, it does not directly support or integrate with CDA, v2, or v3 models.",
+    "summary": "This Implementation Guide is fundamentally based on FHIR, using it as the core standard for representing and exchanging genomic testing results. It does not use CDA, v2, or v3 as foundational elements, though it mentions a relationship to v2 in an appendix. Cross-paradigm integration is acknowledged but not central to the IG's core functionality.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
       "FHIR": 1,
       "v2": 0.2,
-      "v3": 0.2
+      "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide explicitly states it is designed for international use, supporting diverse healthcare systems without specific national or regional constraints. Although it references the eMERGE program funded by the NHGRI, this mention is specific to the pharmacogenomics section and does not define the overall scope of the guide.",
+    "summary": "The Implementation Guide does not explicitly define a specific country or region as its primary scope. Instead, it states that it is designed for international use, supporting diverse healthcare systems. The mention of the eMERGE program funded by the NHGRI suggests a potential alignment with US initiatives, but this is not the primary focus. Therefore, the guide is best classified as \"Universal Realm\".",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,57 +18,43 @@
     }
   },
   "Domain Focus": {
-    "summary": "The genomics-reporting Implementation Guide primarily focuses on standardizing the representation and exchange of clinical genomic testing results using HL7 FHIR. It emphasizes the structured reporting of genomic findings and their clinical implications, making clinical data and diagnostics its core domains. While it touches upon medications in the context of pharmacogenomics and includes some aspects of workflow and research, these are not its central focus.",
+    "summary": "The genomics-reporting Implementation Guide primarily focuses on standardizing the representation and exchange of clinical genomic testing results using HL7 FHIR. It heavily emphasizes the structure of clinical data related to genomics, including variants, haplotypes, genotypes, and their clinical implications. It also touches upon aspects of diagnostics, workflow, and clinical knowledge related to genomic testing. While it mentions research and population-level queries, the core design is driven by clinical reporting needs.",
     "scores": {
       "Administrative": 0.2,
       "Care Planning": 0.4,
       "Clinical Data": 1,
       "Clinical Knowledge": 0.8,
-      "Diagnostics": 1,
+      "Diagnostics": 0.8,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0.6,
-      "Payment & Financial": 0,
       "Public Health": 0.4,
       "Quality & Reporting": 0.4,
       "Research": 0.6,
       "Workflow": 0.6
     }
   },
-  "Implementation Approach": {
-    "summary": "The Genomics Reporting IG primarily focuses on defining data profiles and custom operations for representing and querying genomic data. It heavily relies on terminology standards and utilizes RESTful interactions for data retrieval. While it touches upon decision support through clinical implications, it does not define formal decision support rules. Documents, forms, messaging, and subscriptions are not central to its approach.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0.4,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.8,
-      "Services": 0.8,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "This IG focuses on standardizing the exchange of clinical genomic testing results. Therefore, Lab Systems are the primary implementers, generating the reports. EHR Systems are key consumers, integrating these results into patient records and workflows. Clinical Decision Support systems will heavily rely on this data for personalized medicine recommendations. Research Platforms will also utilize this standardized data for genomic studies. Public Health Systems may use aggregated, de-identified data for population-level genomic surveillance. While patients may benefit from accessing their genomic information, PHR Systems have a limited role in implementing the core functionality of this IG. Pharmacy, Payer, and Imaging Systems are not directly involved in the implementation of this IG.",
+    "summary": "This IG focuses on standardizing the exchange of clinical genomic testing results. Therefore, Lab Systems are the primary implementers, generating the reports. EHR Systems are key consumers, integrating these results into patient records and workflows. Clinical Decision Support systems will heavily rely on this data for personalized medicine recommendations. Research Platforms will also utilize this standardized data. Public Health Systems may use aggregated, de-identified data for population-level genomic surveillance. PHR Systems may display simplified versions of the reports to patients. Pharmacy Systems may leverage pharmacogenomic implications. Imaging and Payer Systems have minimal involvement.",
     "scores": {
-      "EHR Systems": 0.8,
-      "PHR Systems": 0.2,
-      "Payer Systems": 0,
-      "Pharmacy Systems": 0,
-      "Lab Systems": 1,
-      "Imaging Systems": 0,
-      "Public Health Systems": 0.4,
       "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.6
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 1,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.8
     }
   },
   "Users & Stakeholders": {
-    "summary": "The genomics-reporting Implementation Guide primarily serves the needs of Clinical Care Teams by standardizing the exchange of genomic test results, enabling integration with EHRs, and supporting clinical decision-making. Laboratories generating these reports and systems consuming them (EHRs, clinical decision support) are also key users. Research Organizations benefit from the standardized data for research purposes, and Public Health Agencies can leverage the population-level queries. Patients and Caregivers are indirectly served through improved care, while Payers and Government Agencies have minimal direct involvement.",
+    "summary": "The Genomics Reporting IG primarily serves clinical care teams and the organizations that support them, such as EHR vendors and clinical decision support systems. It enables the standardized exchange of genomic test results, facilitating their integration into clinical workflows. While research organizations and public health agencies can benefit from the standardized data, their needs are secondary to the core clinical use case. Patients have an indirect role, benefiting from improved care based on genomic data. Payers and government agencies have minimal direct involvement in this specific IG.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.4,
-      "Patients and Caregivers": 0.6,
-      "Payers": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
       "Public Health Agencies": 0.6,
       "Research Organizations": 0.8,
       "Government Agencies": 0.2

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide primarily leverages FHIR for defining the structure and exchange of medication information in Belgium. It utilizes FHIR resources, profiles, and RESTful interactions as its foundation. While it acknowledges other HL7 standards like the KMEHR Medication Schema (which has roots in v3 and CDA), it does not directly integrate or require them. The IG's focus is on FHIR, with minimal reliance on other HL7 paradigms.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is explicitly designed for the Belgian healthcare context. It defines profiles, extensions, and workflows tailored to Belgian medication management practices, referencing Belgian-specific identifiers (e.g., CNK, VIDIS, DGUID, SGUID), coding systems, and regulations. It also mentions alignment with the KMEHR Medication Schema, a Belgian standard. Therefore, it is clearly a national Implementation Guide for Belgium.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the exchange of medication information within the Belgian healthcare system. It leverages FHIR resources like `MedicationStatement` and `MedicationDispense` to create profiles and extensions specific to the Belgian context, aiming to improve medication reconciliation, enhance patient safety, and support clinical decision-making related to medications. While it touches upon administrative aspects through patient and provider identification, its core purpose revolves around the accurate and consistent representation of medication data.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 1,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing medication information exchange in Belgium. It heavily involves EHR and Pharmacy systems for managing and dispensing medications. Payer systems have a minimal role, primarily for potential billing related to medication dispenses. Public health systems might use aggregated, de-identified data for surveillance, and research platforms could leverage the standardized data for studies. PHR systems are important for patient access to their medication records. Clinical Decision Support systems will benefit from standardized medication data to provide better alerts and guidance. Imaging and Lab systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 1,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing medication information exchange in Belgium. Clinical Care Teams are the core users, as the IG directly impacts their ability to access, manage, and reconcile patient medication records. Healthcare Administrators and Government Agencies have significant influence due to the IG's role in national eHealth initiatives. Payers and Public Health Agencies have well-defined needs related to medication utilization and population health monitoring. Patients and Caregivers have a limited but clear role, benefiting from improved medication safety and access to their medication information. Research Organizations are not a primary focus of this IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

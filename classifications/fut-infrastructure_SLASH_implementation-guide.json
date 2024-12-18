@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining a comprehensive set of FHIR profiles and extensions for the Danish eHealth Infrastructure. It does not directly utilize HL7 v2 or v3, nor does it focus on CDA, although it mentions integration with IHE XDS.b, which can involve CDA documents. The IG acknowledges other standards like IHE MHD and SDC, indicating some level of cross-paradigm awareness, but the primary focus is on FHIR.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for the Danish eHealth Infrastructure, focusing on interoperability within Denmark. It references Danish terminology systems, regulations, and national health data services, indicating a clear national scope.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide focuses on establishing a FHIR-based interoperability framework for the Danish national eHealth infrastructure. It emphasizes care coordination, clinical data exchange, and administrative processes within the Danish healthcare context. The IG leverages core FHIR resources like CarePlan, ServiceRequest, and Observation, along with custom extensions and operations to address specific Danish requirements and workflows. It also touches upon quality reporting and secure messaging, but its primary drive is to facilitate seamless data sharing and care coordination across different healthcare systems in Denmark.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 1,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This Implementation Guide focuses on establishing a FHIR-based infrastructure for interoperability within the Danish healthcare system. It primarily targets EHR systems and other systems involved in care coordination, patient monitoring, and data exchange within the Danish national eHealth context. The IG heavily emphasizes the use of CarePlan, ServiceRequest, and Observation resources, along with custom extensions and operations tailored to Danish requirements. Therefore, EHR systems are central to its implementation, with significant involvement from systems that support care coordination and data exchange.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide (IG) primarily targets the Danish national eHealth infrastructure, focusing on interoperability between healthcare providers, patients, and national health data services. Clinical Care Teams and Healthcare Administrators are the core users, driving the design for care coordination, patient monitoring, and reporting. Patients and Caregivers have a significant role, as the IG aims to improve their engagement and access to health information. Government Agencies have a key influence due to the IG's alignment with Danish regulations and national programs. Public Health Agencies and Payers have specific needs related to data reporting and quality measurement. Research Organizations have a minimal role in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

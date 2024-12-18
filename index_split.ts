@@ -338,7 +338,6 @@ interface ScoreLevel {
 }
 
 interface Category {
-  id: string;
   name: string;
   description: string;
 }
@@ -365,11 +364,11 @@ const classificationConfig: Record<string, AxisConfig> = {
       { value: 0.0, description: "Standard not relevant to this IG's purpose" }
     ],
     categories: [
-      { id: 'CDA', name: 'CDA', description: 'Support for Clinical Document Architecture - structured clinical documents and their exchange' },
-      { id: 'Cross-Paradigm', name: 'Cross-Paradigm', description: 'Integration across different HL7 standards and approaches' },
-      { id: 'FHIR', name: 'FHIR', description: 'RESTful APIs and resources following the FHIR specification' },
-      { id: 'v2', name: 'v2', description: 'Support for HL7 Version 2 messaging and its data structures' },
-      { id: 'v3', name: 'v3', description: 'Alignment with HL7 Version 3 RIM-based models and patterns' }
+      { name: 'CDA', description: 'Support for Clinical Document Architecture - structured clinical documents and their exchange' },
+      { name: 'Cross-Paradigm', description: 'Integration across different HL7 standards and approaches' },
+      { name: 'FHIR', description: 'RESTful APIs and resources following the FHIR specification' },
+      { name: 'v2', description: 'Support for HL7 Version 2 messaging and its data structures' },
+      { name: 'v3', description: 'Alignment with HL7 Version 3 RIM-based models and patterns' }
     ]
   },
 
@@ -385,9 +384,9 @@ const classificationConfig: Record<string, AxisConfig> = {
       { value: 0.0, description: 'Purely universal with no regional adaptation' }
     ],
     categories: [
-      { id: 'Universal Realm', name: 'Universal Realm', description: 'Designed for international use without jurisdiction-specific constraints' },
-      { id: 'National', name: 'National', description: 'Implementation guide for specific country' },
-      { id: 'Regional', name: 'Regional', description: 'Guide for multi-country region or union' }
+      { name: 'Universal Realm', description: 'Designed for international use without jurisdiction-specific constraints' },
+      { name: 'National', description: 'Implementation guide for specific country' },
+      { name: 'Regional', description: 'Guide for multi-country region or union' }
     ],
     scoreExactlyOne: true,
     extraInstructions: [
@@ -416,44 +415,43 @@ const classificationConfig: Record<string, AxisConfig> = {
       { value: 0.0, description: 'Domain not meaningfully addressed in this IG' }
     ],
     categories: [
-      { id: 'Administrative', name: 'Administrative', description: 'Management of healthcare organizations, providers, and patients' },
-      { id: 'Care Planning', name: 'Care Planning', description: 'Structured plans and protocols for patient care delivery' },
-      { id: 'Clinical Data', name: 'Clinical Data', description: 'Core clinical observations, findings, and documentation' },
-      { id: 'Clinical Knowledge', name: 'Clinical Knowledge', description: 'Clinical guidelines, evidence-based rules, and computable medical knowledge including care pathways, decision logic, and clinical evidence representation' },
-      { id: 'Diagnostics', name: 'Diagnostics', description: 'Testing, imaging, and diagnostic assessment processes' },
-      { id: 'Identity & Security', name: 'Identity & Security', description: 'Access control, privacy protection, and consent management' },
-      { id: 'Medications', name: 'Medications', description: 'Drug prescribing, dispensing, and administration' },
-      { id: 'Payment & Financial', name: 'Payment & Financial', description: 'Healthcare costs, claims, and financial transactions' },
-      { id: 'Public Health', name: 'Public Health', description: 'Population-level health monitoring and intervention' },
-      { id: 'Quality & Reporting', name: 'Quality & Reporting', description: 'Healthcare quality measurement and reporting' },
-      { id: 'Research', name: 'Research', description: 'Clinical research, trials, and evidence gathering' },
-      { id: 'Workflow', name: 'Workflow', description: 'Healthcare process coordination and management' }
+      { name: 'Administrative', description: 'Management of healthcare organizations, providers, and patients' },
+      { name: 'Care Planning', description: 'Structured plans and protocols for patient care delivery' },
+      { name: 'Clinical Data', description: 'Core clinical observations, findings, and documentation' },
+      { name: 'Clinical Knowledge', description: 'Clinical guidelines, evidence-based rules, and computable medical knowledge including care pathways, decision logic, and clinical evidence representation' },
+      { name: 'Diagnostics', description: 'Testing, imaging, and diagnostic assessment processes' },
+      { name: 'Identity & Security', description: 'Access control, privacy protection, and consent management' },
+      { name: 'Insurance, Payment & Financial', description: 'Healthcare coverage, costs, claims, or financial transactions' },
+      { name: 'Medications', description: 'Drug prescribing, dispensing, and administration' },
+      { name: 'Public Health', description: 'Population-level health monitoring and intervention' },
+      { name: 'Quality & Reporting', description: 'Healthcare quality measurement and reporting' },
+      { name: 'Research', description: 'Clinical research, trials, and evidence gathering' },
+      { name: 'Workflow', description: 'Healthcare process coordination and management' }
     ]
   },
 
-  'Implementation Approach': {
-    name: 'Implementation Approach',
-    description: 'Analyze this FHIR Implementation Guide and classify its technical implementation approaches.',
-    scoreLevels: [
-      { value: 1.0, description: "Core technical pattern that defines the IG's fundamental approach" },
-      { value: 0.8, description: 'Key technical approach used extensively throughout the IG' },
-      { value: 0.6, description: 'Important technical pattern with specific, well-defined uses' },
-      { value: 0.4, description: 'Technical approach used for specific features but not central' },
-      { value: 0.2, description: 'Technical approach mentioned with limited but clear usage' },
-      { value: 0.0, description: 'Technical approach not meaningfully used in this IG' }
-    ],
-    categories: [
-      { id: 'Data Profiles', name: 'Data Profiles', description: 'Resource definitions and constraints for data modeling' },
-      { id: 'Decision Support', name: 'Decision Support', description: 'Computable clinical knowledge and decision rules' },
-      { id: 'Documents', name: 'Documents', description: 'Structured clinical document definitions and handling' },
-      { id: 'Forms & UI', name: 'Forms & UI', description: 'User interface specifications and questionnaires' },
-      { id: 'Messaging', name: 'Messaging', description: 'Event-based message definitions and patterns' },
-      { id: 'REST APIs', name: 'REST APIs', description: 'RESTful endpoint and interaction definitions' },
-      { id: 'Services', name: 'Services', description: 'Custom operations and service interfaces' },
-      { id: 'Subscriptions', name: 'Subscriptions', description: 'Event notification and subscription patterns' },
-      { id: 'Terminology', name: 'Terminology', description: 'Code system and value set definitions' }
-    ]
-  },
+  // 'Implementation Approach': {
+  //   name: 'Implementation Approach',
+  //   description: 'Analyze this FHIR Implementation Guide and classify its technical implementation approaches.',
+  //   scoreLevels: [
+  //     { value: 1.0, description: "Core technical pattern that defines the IG's fundamental approach" },
+  //     { value: 0.8, description: 'Key technical approach used extensively throughout the IG' },
+  //     { value: 0.6, description: 'Important technical pattern with specific, well-defined uses' },
+  //     { value: 0.4, description: 'Technical approach used for specific features but not central' },
+  //     { value: 0.2, description: 'Technical approach mentioned with limited but clear usage' },
+  //     { value: 0.0, description: 'Technical approach not meaningfully used in this IG' }
+  //   ],
+  //   categories: [
+  //     { name: 'Data Profiles', description: 'Resource definitions and constraints for data modeling' },
+  //     { name: 'Documents', description: 'Structured clinical document definitions and handling that leverage FHIR Composition and DocumentReference resources' },
+  //     { name: 'Forms & UI', description: 'User interface specifications and questionnaires' },
+  //     { name: 'Messaging', description: 'Exchange pattern that leverages FHIR MessageDefinition and MessageHeader resources' },
+  //     { name: 'REST APIs', description: 'RESTful endpoint and interaction definitions' },
+  //     { name: 'Services', description: 'Custom operations and service interfaces that leverage FHIR OperationDefinition and Operation resources' },
+  //     { name: 'Subscriptions', description: 'Real-time notification pattern that leverages FHIR Subscription resource' },
+  //     { name: 'Terminology', description: 'Code system and value set definitions' }
+  //   ]
+  // },
 
   'Implementers': {
     name: 'Implementers',
@@ -467,15 +465,15 @@ const classificationConfig: Record<string, AxisConfig> = {
       { value: 0.0, description: 'System type not involved in implementing this IG' }
     ],
     categories: [
-      { id: 'EHR Systems', name: 'EHR Systems', description: 'Primary clinical documentation and care delivery systems' },
-      { id: 'PHR Systems', name: 'PHR Systems', description: 'Patient-facing health record and engagement systems' },
-      { id: 'Payer Systems', name: 'Payer Systems', description: 'Healthcare payment and claims processing systems' },
-      { id: 'Pharmacy Systems', name: 'Pharmacy Systems', description: 'Medication management and dispensing systems' },
-      { id: 'Lab Systems', name: 'Lab Systems', description: 'Clinical laboratory testing and results systems' },
-      { id: 'Imaging Systems', name: 'Imaging Systems', description: 'Medical imaging and radiology systems' },
-      { id: 'Public Health Systems', name: 'Public Health Systems', description: 'Population health monitoring systems' },
-      { id: 'Clinical Decision Support', name: 'Clinical Decision Support', description: 'Clinical guidance and alert systems' },
-      { id: 'Research Platforms', name: 'Research Platforms', description: 'Clinical research and trial systems' }
+      { name: 'Clinical Decision Support', description: 'Clinical guidance and alert systems' },
+      { name: 'EHR Systems', description: 'Primary clinical documentation and care delivery systems' },
+      { name: 'Imaging Systems', description: 'Medical imaging and radiology systems' },
+      { name: 'Lab Systems', description: 'Clinical laboratory testing and results systems' },
+      { name: 'Payer Systems', description: 'Healthcare payment and claims processing systems' },
+      { name: 'Pharmacy Systems', description: 'Medication management and dispensing systems' },
+      { name: 'PHR Systems', description: 'Patient-facing health record and engagement systems' },
+      { name: 'Public Health Systems', description: 'Population health monitoring systems' },
+      { name: 'Research Platforms', description: 'Clinical research and trial systems' }
     ]
   },
 
@@ -491,13 +489,13 @@ const classificationConfig: Record<string, AxisConfig> = {
       { value: 0.0, description: 'User group not meaningfully involved in this IG' }
     ],
     categories: [
-      { id: 'Clinical Care Teams', name: 'Clinical Care Teams', description: 'Healthcare providers delivering direct patient care' },
-      { id: 'Healthcare Administrators', name: 'Healthcare Administrators', description: 'Organizational and operational managers' },
-      { id: 'Patients and Caregivers', name: 'Patients and Caregivers', description: 'Healthcare recipients and their support networks' },
-      { id: 'Payers', name: 'Payers', description: 'Insurance companies and healthcare payment organizations' },
-      { id: 'Public Health Agencies', name: 'Public Health Agencies', description: 'Population health monitoring organizations' },
-      { id: 'Research Organizations', name: 'Research Organizations', description: 'Clinical research and trial organizations' },
-      { id: 'Government Agencies', name: 'Government Agencies', description: 'Healthcare regulation and oversight bodies' }
+      { name: 'Clinical Care Teams', description: 'Healthcare providers delivering direct patient care' },
+      { name: 'Healthcare Administrators', description: 'Organizational and operational managers' },
+      { name: 'Patients and Caregivers', description: 'Healthcare recipients and their support networks' },
+      { name: 'Payers', description: 'Insurance companies and healthcare payment organizations' },
+      { name: 'Public Health Agencies', description: 'Population health monitoring organizations' },
+      { name: 'Research Organizations', description: 'Clinical research and trial organizations' },
+      { name: 'Government Agencies', description: 'Healthcare regulation and oversight bodies' },
     ]
   }
 };
@@ -525,7 +523,7 @@ function createAxisPrompt(axis: string, content: string): string {
     '{',
     '  "summary": "Brief explanation of the analysis",',
     '  "scores": {',
-    `    ${config.categories.map(cat => `"${cat.id}": number`).join(',\n    ')}`,
+    `    ${config.categories.map(cat => `"${cat.name}": number`).join(',\n    ')}`,
     '  }',
     '}',
     '',
@@ -594,7 +592,7 @@ async function classifyWithWorkers(content: string, maxWorkers = DEFAULT_PARALLE
     'HL7 Standard',
     'Geographic Scope',
     'Domain Focus',
-    'Implementation Approach',
+    // 'Implementation Approach',
     'Implementers',
     'Users & Stakeholders'
   ];

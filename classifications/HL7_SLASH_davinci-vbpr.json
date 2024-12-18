@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The Da Vinci Value-Based Performance Reporting (VBPR) Implementation Guide is fundamentally based on FHIR, utilizing its RESTful API and resource model for exchanging performance reports. It leverages other HL7 standards minimally, primarily for context and potential future integration, but its core functionality is entirely within the FHIR framework.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci Value-Based Performance Reporting (VBPR) Implementation Guide is designed for the US healthcare system, focusing on value-based purchasing programs like Medicare Advantage. It leverages US Core and is tailored to the needs of US healthcare organizations and programs.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Value-Based Performance Reporting (VBPR) Implementation Guide primarily focuses on standardizing the exchange of value-based performance reports between payers and providers. It leverages the MeasureReport resource to represent financial and quality performance data, with a strong emphasis on quality reporting and the financial aspects of value-based contracts. While it touches upon clinical data through quality measures, its core purpose revolves around the administrative and financial aspects of performance reporting in a value-based care context.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.8,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci Value-Based Performance Reporting (VBPR) IG primarily focuses on the standardized exchange of performance reports between payers and providers in value-based contracts. Therefore, Payer and EHR systems are central to its implementation. Clinical Decision Support systems may utilize the reported data, and Public Health and Research Platforms might leverage aggregated data for broader analysis, but their roles are less direct.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Da Vinci Value-Based Performance Reporting (VBPR) IG primarily focuses on standardizing the exchange of performance reports between payers and providers in value-based contracts. Clinical Care Teams and Healthcare Administrators are the core users, as they need these reports for performance monitoring and contract management. Payers are a key user group, as they generate and send these reports. Government Agencies have a significant role due to oversight of value-based programs. Public Health Agencies and Research Organizations have minimal involvement in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

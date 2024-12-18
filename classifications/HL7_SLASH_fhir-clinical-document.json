@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on defining a standard for representing clinical documents in FHIR. It heavily relies on FHIR as its foundation and draws inspiration from CDA for document structure and concepts, while also acknowledging v3 through the use of some value sets derived from it. It does not use v2 and aims to bridge the gap between CDA and FHIR, indicating a cross-paradigm approach.",
+    "scores": {
+      "CDA": 0.8,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on defining a universal standard for representing clinical documents in FHIR. It explicitly states its intention to be a universal realm guide, applicable worldwide, and does not mention any specific national or regional adaptations. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation and exchange of clinical documents within the FHIR ecosystem. It defines a canonical structure for clinical documents using FHIR resources, particularly Bundle and Composition, and provides a bridge between HL7 CDA and FHIR. The primary goal is to ensure consistent and interoperable exchange of clinical documentation, addressing issues arising from diverse existing approaches. While it touches upon various healthcare domains, its core lies in structuring and managing clinical data within documents.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation and exchange of clinical documents. Therefore, EHR systems are the primary implementers. Systems that interact with clinical documents, such as clinical decision support, pharmacy, lab, and imaging systems, will also need to integrate with this IG to varying degrees. Payer systems have minimal involvement, while PHR, public health, and research platforms have limited but clear integration requirements related to document access and data extraction.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the representation and exchange of clinical documents within the FHIR framework. It's designed to facilitate interoperability between systems that create, manage, and consume clinical documents. Therefore, the core users are those involved in the technical implementation and data exchange, with clinical care teams benefiting from the improved data flow. While the IG touches upon aspects relevant to other groups, their involvement is less central to the IG's core purpose.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

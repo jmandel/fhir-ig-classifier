@@ -1,9 +1,9 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide (ch-epr-term) is fundamentally based on FHIR R4 for defining Swiss-specific terminology. It does not utilize CDA, v2, or v3. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and reference to other standards like SNOMED CT suggests a degree of cross-paradigm awareness.",
+    "summary": "This Implementation Guide (ch-epr-term) is fundamentally based on FHIR R4 for defining Swiss-specific terminology. It does not utilize CDA, v2, or v3. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and reference to other standards like SNOMED CT and EDQM, as well as its dependency on `hl7.terminology`, suggests a deliberate effort to support broader HL7 standards where applicable.",
     "scores": {
       "CDA": 0,
-      "Cross-Paradigm": 0.2,
+      "Cross-Paradigm": 0.4,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
@@ -18,59 +18,45 @@
     }
   },
   "Domain Focus": {
-    "summary": "The ch-epr-term IG is primarily focused on defining and standardizing terminology for the Swiss healthcare system, particularly within the context of the Swiss Electronic Patient Record (EPR). It heavily emphasizes the use of Code Systems, Value Sets, and Concept Maps to ensure consistent coding across various systems and exchange formats. While it touches upon clinical data related to vaccinations and allergies, its core purpose is terminology management, making Clinical Data and Medications important but not the central focus. Administrative aspects are present in the form of canton abbreviations and guarantor information, but they are secondary to the main goal of terminology standardization. Identity & Security, Payment & Financial, and Research are not addressed. Public Health is indirectly supported through standardized vaccination terminology. Quality & Reporting is not a primary focus, but standardized terminology can contribute to it. Workflow is not explicitly defined, but the IG implies the use of terminology resources in various healthcare processes.",
+    "summary": "The ch-epr-term IG is primarily focused on defining and standardizing terminology for the Swiss healthcare system, particularly within the context of the Swiss Electronic Patient Record (EPR). It heavily emphasizes the use of Code Systems, Value Sets, and Concept Maps to ensure consistent and interoperable use of clinical terms, especially related to vaccinations and allergies. While it touches upon aspects of clinical data and medications through its terminology definitions, its core purpose is to provide a foundational terminology resource rather than to define workflows, processes, or detailed clinical data exchange mechanisms.",
     "scores": {
-      "Administrative": 0.4,
+      "Administrative": 0.2,
       "Care Planning": 0.2,
       "Clinical Data": 0.6,
-      "Clinical Knowledge": 0.8,
+      "Clinical Knowledge": 0.4,
       "Diagnostics": 0,
       "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0.6,
-      "Payment & Financial": 0,
       "Public Health": 0.4,
-      "Quality & Reporting": 0.2,
+      "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.2
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The ch-epr-term IG is fundamentally focused on defining and standardizing terminology for the Swiss healthcare system, particularly within the context of the Swiss EPR. It heavily relies on FHIR's terminology resources (CodeSystem, ValueSet, ConceptMap) to achieve semantic interoperability. It does not define profiles, operations, or interactions beyond terminology management.",
-    "scores": {
-      "Data Profiles": 0,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0,
-      "Services": 0,
-      "Subscriptions": 0,
-      "Terminology": 1
+      "Workflow": 0
     }
   },
   "Implementers": {
-    "summary": "The ch-epr-term IG is a terminology-focused guide for the Swiss healthcare system, defining Swiss-specific CodeSystems, ValueSets, and ConceptMaps. It's crucial for systems involved in the Swiss EPR and those exchanging clinical data within Switzerland, particularly related to vaccinations and allergies. EHRs will need to fully implement it for consistent terminology, while other systems like Pharmacy, Lab, and Clinical Decision Support will need to integrate with the defined terminology for specific use cases. Payer and Public Health systems have minimal but clear integration requirements for reporting and data analysis. PHR, Imaging, and Research Platforms are not directly involved.",
+    "summary": "The ch-epr-term IG focuses on standardizing terminology within the Swiss healthcare system, particularly for the Swiss Electronic Patient Record (EPR). It defines Swiss-specific Code Systems, Value Sets, and Concept Maps, primarily related to vaccinations and allergies, but also general core concepts. EHR systems are central to implementing this IG, as they will need to utilize the defined terminology for documentation and data exchange. Pharmacy and Public Health systems also play a significant role, especially concerning vaccination data. Clinical Decision Support systems will benefit from standardized terminology for accurate alerts and guidance. While less central, Lab, Imaging, and Research systems may need to incorporate specific terminology elements. Payer and PHR systems have minimal direct involvement.",
     "scores": {
-      "EHR Systems": 1,
-      "PHR Systems": 0,
-      "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.6,
-      "Lab Systems": 0.6,
-      "Imaging Systems": 0,
-      "Public Health Systems": 0.2,
       "Clinical Decision Support": 0.6,
-      "Research Platforms": 0
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.4
     }
   },
   "Users & Stakeholders": {
-    "summary": "This IG focuses on standardizing terminology for the Swiss healthcare system, particularly within the context of the Swiss Electronic Patient Record (EPR). Therefore, the primary users are those who need to ensure consistent use of terminology in systems interacting with the EPR. Clinical care teams and software developers within those systems are the most impacted, while public health agencies and government bodies have a significant stake in ensuring standardization for data aggregation and oversight.",
+    "summary": "This IG focuses on standardizing terminology for the Swiss Electronic Patient Record (EPR) and related systems. Therefore, the primary users are those who need to ensure consistent use of codes and terminology in the Swiss healthcare context. Clinical care teams and software developers within these systems are the most impacted, while public health agencies and government bodies have a significant interest in the standardization for reporting and oversight. Payers and research organizations have a lesser, but still defined role.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.4,
       "Patients and Caregivers": 0.2,
-      "Payers": 0.2,
+      "Payers": 0.4,
       "Public Health Agencies": 0.8,
-      "Research Organizations": 0.6,
+      "Research Organizations": 0.4,
       "Government Agencies": 0.8
     }
   },

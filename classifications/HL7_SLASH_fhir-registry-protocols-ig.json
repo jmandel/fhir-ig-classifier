@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, using it to define registry requirements, structure submissions, and guide data extraction. While it acknowledges and supports mappings to CDA and HL7 v2 for data source integration, these are secondary to the core FHIR-centric approach. Cross-paradigm integration is present but limited to mapping, not deep integration of different HL7 models.",
+    "scores": {
+      "CDA": 0.4,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0.4,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on automating clinical registry data extraction and submission. It leverages FHIR StructureDefinition to define registry requirements and mappings to various standards. While it builds upon US Core and mentions the American College of Cardiology, the guide primarily targets the US healthcare system, as indicated by its references to US Core, NCDR, and the CathPCI registry, making it a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on automating the extraction and submission of clinical data to registries. It leverages FHIR StructureDefinition to define registry requirements and map them to various data sources (FHIR, CDA, HL7 v2). The IG primarily addresses the workflow of data collection, transformation, and submission, with a strong emphasis on clinical data and its use in quality reporting, research, and public health. While it touches upon administrative aspects through patient identification and submitter information, its core purpose revolves around standardizing and streamlining the process of registry data submission.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.6,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0.4,
+      "Public Health": 0.8,
+      "Quality & Reporting": 1,
+      "Research": 0.8,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on automating clinical data extraction and submission to clinical registries. It defines a process for registries to specify their data requirements using FHIR StructureDefinitions and for healthcare providers to automatically collect, format, and submit data. EHR systems are central to this process, as they are the primary source of clinical data. Payer systems are not involved. Public health systems and research platforms can benefit from the standardized registry data. PHR systems have minimal involvement. Pharmacy and lab systems are important data sources, while imaging systems play a smaller role. Clinical decision support systems can leverage registry data but are not the primary focus of this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide primarily focuses on automating clinical data extraction and submission to clinical registries. It defines a process for registries to specify their data requirements using FHIR resources and for healthcare providers to automatically collect and format data for submission. Therefore, the core users are clinical registries (represented by Public Health Agencies and Research Organizations) and the systems that submit data to them (driven by Clinical Care Teams and Healthcare Administrators). Payers and Government Agencies have a less direct but still important role in driving the need for and adoption of such registries.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0.4,
+      "Public Health Agencies": 1,
+      "Research Organizations": 1,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

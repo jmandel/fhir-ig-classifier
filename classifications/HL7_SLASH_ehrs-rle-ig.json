@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on using FHIR resources, specifically AuditEvent and Provenance, to track the lifecycle of electronic health records (EHRs) based on the ISO/HL7 10781 EHR-S FM standard. It heavily relies on FHIR's RESTful architecture and resource definitions. While it acknowledges and builds upon concepts from the EHR-S FM, which has roots in HL7 v3, the IG's implementation is entirely within the FHIR paradigm. There's no mention or use of CDA or v2 messaging.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.4
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on the management of record lifecycle events (RLEs) using FHIR resources, with a strong emphasis on audit and provenance tracking. It does not specify any particular jurisdiction and is designed to be broadly applicable, making it a universal guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on establishing a robust framework for managing the lifecycle of electronic health records (EHRs) and personal health records (PHRs) through detailed audit and provenance tracking. It leverages FHIR's `AuditEvent` and `Provenance` resources to capture comprehensive metadata related to 29 Record Lifecycle Events (RLEs), ensuring data integrity, accountability, and compliance with health information management standards. While it touches upon clinical data through its association with record entries, its core purpose revolves around the administrative and workflow aspects of record management, with a strong emphasis on identity and security through audit trails.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the capture and management of record lifecycle events (RLEs) for EHRs and PHRs using FHIR, primarily through AuditEvent and Provenance resources. EHR and PHR systems are the core implementers, as they are responsible for managing the records and generating the audit trails. Payer systems may have a minimal role in accessing audit information for claims processing. Public health systems might utilize aggregated audit data for population health analysis. Research platforms could leverage the standardized audit data for research purposes, with appropriate de-identification. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the capture and management of the lifecycle of electronic health records (EHRs) and personal health records (PHRs) using FHIR. It primarily targets systems and users involved in managing health records, with a strong emphasis on audit trails, provenance, and data integrity. Therefore, Clinical Care Teams, Healthcare Administrators, and Government Agencies are key users, while Patients and Caregivers have a less direct but still important role. Payers, Public Health Agencies, and Research Organizations have minimal involvement in the core functionality defined by this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

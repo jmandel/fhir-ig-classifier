@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide defines a FHIR-based approach for creating and maintaining a national healthcare directory. It heavily relies on FHIR R4 resources, profiles, and operations, with no significant use of other HL7 standards like CDA, v2, or v3. While it doesn't explicitly mention cross-paradigm integration, the use of FHIR alongside other IGs suggests some level of interoperability across different approaches.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for a national-scale healthcare directory within the United States. It references US-specific initiatives like ONC and FHA, builds upon US Core, and aligns with the needs of the US healthcare ecosystem. Therefore, it is classified as a National IG for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on creating a national healthcare directory in the US by defining a standardized way to attest to, validate, and exchange provider, organization, and location information. It heavily relies on administrative data and utilizes FHIR's core resources and operations for managing this directory. While it touches upon identity and security through consent and restrictions, its primary goal is to ensure the accuracy and reliability of administrative healthcare directory data.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on creating a national, validated healthcare directory using FHIR. It primarily impacts systems that manage and consume provider, organization, and location data. EHRs will need to integrate to consume and potentially contribute to this directory. Payers will be heavily involved in both contributing and consuming data for enrollment, credentialing, and network management. Public health systems may leverage the directory for population health initiatives. PHR systems could use it to help patients find providers. Research platforms might use it for identifying potential study participants or sites. Clinical decision support, imaging, lab, and pharmacy systems have minimal direct involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.8,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide focuses on creating a national healthcare directory with validated provider information. The primary users are those involved in maintaining and using this directory for various healthcare workflows. Clinical care teams have a defined but limited role, primarily as data subjects rather than active users. Patients and caregivers are explicitly out of scope. Payers and government agencies have significant influence due to their roles in directory maintenance and regulation. Public health agencies and research organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

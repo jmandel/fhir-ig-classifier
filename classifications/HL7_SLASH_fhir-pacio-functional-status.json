@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR R4 for exchanging functional status information. It heavily utilizes FHIR resources and RESTful interactions. While it acknowledges other HL7 standards like SDC, it doesn't directly integrate with CDA, v2, or v3. Cross-paradigm integration is limited to referencing SDC for QuestionnaireResponse structure.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on the exchange of functional status information, primarily within the context of US post-acute care settings as driven by the IMPACT Act. It leverages US Core profiles and emphasizes the use of LOINC and SNOMED CT, indicating a strong alignment with US healthcare standards and regulations.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on the standardized exchange of patient functional status information, particularly in post-acute care (PAC) settings and during transitions of care. It leverages FHIR R4 and builds upon US Core, utilizing Observation and QuestionnaireResponse resources to represent assessments and their results. The primary goal is to improve care coordination, quality measurement, and research by enabling seamless sharing of functional status data (mobility, self-care, domestic life) across different healthcare settings. While driven by the IMPACT Act in the US, the IG aims for broader applicability.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.4,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.8,
+      "Research": 0.6,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the exchange of functional status information, primarily in post-acute care settings. EHR systems are central to capturing and sharing this data. Systems involved in care transitions, including those in PAC and HCBS, will need extensive integration. Patient-facing systems may display this information, and research platforms can utilize it for analysis. Public health systems might use aggregated data, while payer systems could use it for quality measurement and payment models. Clinical decision support systems may use functional status to tailor recommendations, but this is not a primary focus of the IG.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the exchange of patient functional status information, particularly during transitions of care in post-acute care (PAC) settings and home- and community-based services (HCBS). Clinical Care Teams, especially those involved in PAC and transitions of care, are the primary drivers. Public Health Agencies and Research Organizations also have a significant stake due to the IG's support for quality measurement and research. Payers and Government Agencies have a moderate interest, primarily due to the IMPACT Act and the need for standardized data. Patients and Caregivers benefit from improved care coordination, but their direct involvement in the IG's design is limited. Healthcare Administrators have a minimal role, primarily focused on system implementation.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

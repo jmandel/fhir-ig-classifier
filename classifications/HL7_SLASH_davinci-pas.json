@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide defines a FHIR-based approach for prior authorization, heavily relying on FHIR resources and operations. While it acknowledges and integrates with X12 for HIPAA compliance, it doesn't use CDA or HL7 v3. It has minimal interaction with HL7 v2. It demonstrates a degree of cross-paradigm integration by bridging FHIR and X12.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Da Vinci Prior Authorization Support (PAS) Implementation Guide is explicitly designed for the United States healthcare system. It addresses the specific challenges of prior authorization within the US, references US-specific regulations like HIPAA and X12 standards, and integrates with other Da Vinci IGs that are also US-focused. The guide's primary goal is to streamline the prior authorization process between providers and payers in the US, making it a clear national-level implementation guide.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The Da Vinci Prior Authorization Support (PAS) IG primarily focuses on streamlining the prior authorization process between providers and payers using FHIR. It leverages the Claim and ClaimResponse resources, extending them to handle X12 mappings and specific PA requirements. While it touches upon clinical data and workflow, its core purpose is to facilitate the administrative and financial aspects of prior authorization, ultimately aiming to reduce burden and improve efficiency in this area.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0.4,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The Da Vinci Prior Authorization Support (PAS) IG primarily focuses on streamlining the prior authorization process between providers and payers. EHR systems are central to initiating and managing PA requests, while payer systems are responsible for processing and responding to them. Intermediaries play a crucial role in translating between FHIR and X12 formats. Pharmacy systems are involved when medications under medical benefits require PA. While not directly involved in the PA process, Clinical Decision Support systems can leverage the information from this IG to provide guidance on PA requirements. PHR systems may offer patients visibility into their PA status. Public health and research platforms have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The Da Vinci Prior Authorization Support (PAS) IG primarily targets the interaction between healthcare providers and payers to streamline the prior authorization process. Clinical Care Teams are the core users, initiating PA requests, while Payers are the key users, receiving and processing them. Healthcare Administrators have a significant role in implementing and managing the systems involved. Public Health Agencies and Research Organizations have minimal involvement, while Government Agencies have a defined but limited role in setting regulations that influence the IG's development.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.8,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

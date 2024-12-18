@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the exchange of PDMP data using FHIR resources and operations. It heavily relies on FHIR and its core concepts, with no significant dependence on CDA, v2, or v3. While it acknowledges other standards like NCPDP SCRIPT and PMIX, it primarily leverages FHIR for its core functionality.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is specifically designed for the United States, focusing on the exchange of patient prescription drug monitoring program (PDMP) data. It references US Core profiles, state PDMP systems, and other US-specific standards like NCPDP SCRIPT, ASAP, and PMIX/NIEM. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the exchange of patient prescription drug monitoring program (PDMP) data, primarily for controlled substances. It defines a standardized method for requesting and retrieving PDMP history, leveraging FHIR resources and operations. The core purpose is to improve patient safety and combat drug misuse by providing prescribers and pharmacists with access to a patient's controlled substance prescription history. While it touches upon administrative aspects like identifying providers and organizations, its primary focus is on medication-related data and facilitating a specific workflow for PDMP data retrieval.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 1,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on enabling EHRs and Pharmacy Systems to query state PDMP systems for patient controlled substance prescription history. Therefore, EHRs, Pharmacy Systems, and the systems managing PDMP data are the core implementers. Clinical Decision Support systems will likely utilize this data, and Payer Systems might have a limited role in providing payment method information. Public Health Systems could leverage aggregated data for population-level monitoring. Other system types have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 1,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling clinical care teams to access and utilize patient prescription drug monitoring program (PDMP) data. Clinical care teams are the core users, as the IG is designed to facilitate their ability to retrieve and review controlled substance prescription history, directly impacting patient care and safety. Public health agencies and government agencies also have a significant stake, as the IG supports their goals of monitoring drug misuse and ensuring compliance with regulations. Payers have a minimal role, primarily related to payment method information. Patients have an indirect role, as the IG aims to improve their safety. Research organizations and healthcare administrators have limited involvement in the specific scope of this IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

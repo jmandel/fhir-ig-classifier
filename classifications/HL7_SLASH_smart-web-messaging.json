@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG focuses on extending SMART on FHIR with a web messaging protocol for enhanced app-EHR interaction. It heavily relies on FHIR for resource representation and leverages its RESTful principles, but doesn't use other HL7 standards like CDA, v2, or v3. It acknowledges the need for integration across different approaches by complementing existing standards like SMART App Launch and CDS Hooks.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide focuses on defining a messaging protocol for SMART apps within EHRs, without specific regional adaptations. It explicitly mentions the jurisdiction as \"World\", indicating a universal scope. Therefore, it is classified as a Universal Realm guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on enabling real-time, bidirectional communication between SMART apps and EHRs using web messaging. It primarily addresses workflow integration and clinical data manipulation within the EHR's context, allowing apps to influence the EHR's UI and interact with draft resources. While it touches upon security and leverages FHIR resources, its core purpose is to enhance the user experience and streamline clinical workflows by enabling tight integration between apps and EHRs.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "The SMART Web Messaging IG primarily focuses on enabling tight integration between EHR systems and SMART apps, allowing for real-time, bidirectional communication and interaction with draft resources. This necessitates deep integration within EHR systems and significant support from apps designed to leverage this functionality. Other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG focuses on enabling tight integration between SMART apps and EHRs, primarily benefiting clinical care teams by streamlining workflows and improving the user experience. App developers and EHR vendors are also key stakeholders. Other groups have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

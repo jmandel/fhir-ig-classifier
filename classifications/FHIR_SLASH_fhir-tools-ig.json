@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally about extending the FHIR IG Publisher to handle logical models and non-FHIR formats. It heavily relies on FHIR's StructureDefinition and extension mechanisms. While it acknowledges and aims to support the representation of formats like CDA, it doesn't directly implement CDA's core principles. It has minimal interaction with v2 or v3. Cross-paradigm integration is present in the sense that it bridges FHIR with other formats, but it's not a primary focus.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on extending the FHIR IG Publisher to handle logical models and non-FHIR resource formats. It is not tied to any specific jurisdiction or program, making it universally applicable.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide focuses on extending the FHIR IG Publisher to handle logical models and non-FHIR resource formats like CDS Hooks and CDA. It primarily addresses technical aspects of data representation and processing within the FHIR ecosystem, rather than specific clinical or business domains. Therefore, it scores highly in areas related to technical infrastructure and data management, but low in domain-specific areas like clinical care, medications, or public health.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0
+    }
+  },
+  "Implementers": {
+    "summary": "This IG is focused on extending the FHIR IG Publisher to handle logical models and non-FHIR resource formats. It's primarily a tool for developers and architects, not directly impacting clinical systems. Therefore, most clinical systems have no involvement, while systems that might need to interface with non-FHIR data formats through the IG Publisher have minimal interaction.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide primarily serves developers and architects building and maintaining FHIR tooling, specifically the IG Publisher. It focuses on extending the publisher's capabilities to handle logical models and non-FHIR resource formats. Therefore, the core users are those involved in FHIR infrastructure development. Clinical users, patients, payers, and public health agencies are not directly involved. Research and government agencies might have a minimal interest in the standardization aspect.",
+    "scores": {
+      "Clinical Care Teams": 0,
+      "Healthcare Administrators": 0,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

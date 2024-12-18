@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR for representing and exchanging medication administration data. It leverages FHIR's RESTful approach and resource model as its core mechanism. While it acknowledges CDA through its relationship with a related CDA IG, it does not directly utilize CDA structures or principles. There's no mention or implication of using HL7 v2 or v3. The IG does demonstrate a degree of cross-paradigm thinking by relating to a CDA IG and building upon US Core, suggesting an awareness of the broader HL7 ecosystem.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for reporting medication administration data to the National Healthcare Safety Network (NHSN) in the United States, particularly for patients with COVID-19. It leverages US Core profiles and is directly related to the Centers for Disease Control and Prevention (CDC) initiatives. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on reporting inpatient medication administration data to the National Healthcare Safety Network (NHSN), particularly for patients with suspected or confirmed COVID-19. Its primary purpose is to support public health surveillance and response during public health emergencies. While it touches upon clinical data and workflow, its core is driven by public health needs and medication administration reporting. It also has a strong focus on administrative aspects related to reporting to a national system.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.8,
+      "Public Health": 1,
+      "Quality & Reporting": 0.6,
+      "Research": 0.2,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on reporting inpatient medication administration data, particularly for COVID-19 patients, to the National Healthcare Safety Network (NHSN). Therefore, EHR systems are central to its implementation, while Public Health Systems are the primary recipients of the data. Pharmacy systems play a crucial role in providing the medication data. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling hospitals to report inpatient medication administration data to the National Healthcare Safety Network (NHSN), particularly for COVID-19 patients. The design is driven by the needs of Public Health Agencies, specifically the CDC, to monitor medication use during public health emergencies. Clinical Care Teams are key users as they generate the data, while Government Agencies have a significant role in oversight and regulation. Research Organizations can leverage the collected data, and Healthcare Administrators are involved in implementing the IG within their institutions.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

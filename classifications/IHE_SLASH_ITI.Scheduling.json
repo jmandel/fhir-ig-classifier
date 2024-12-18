@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on FHIR-based scheduling, making FHIR its foundational standard. It acknowledges v2 through a value set but doesn't integrate it deeply. v3 and CDA are not relevant to its core purpose. Cross-paradigm integration is present but not a primary focus, as it mainly leverages FHIR with some references to other IHE profiles.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide is designed for international use, focusing on FHIR-based scheduling workflows. It does not specify any national or regional adaptations, making it applicable universally. It references IHE profiles and Argonaut Scheduling, but these do not imply a specific geographic scope.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling standardized, cross-organizational, and patient-initiated scheduling of healthcare appointments using FHIR APIs. It primarily addresses the workflow of finding, holding, booking, and managing appointments, with a strong emphasis on interoperability between disparate systems. While it touches upon security and auditing, it does not delve deeply into other domains like clinical data, medications, or financial aspects.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on enabling standardized, cross-organizational, and patient-initiated scheduling of healthcare appointments. EHR systems and patient-facing applications (PHR Systems) are the core implementers, while Clinical Decision Support systems might leverage the scheduling information for relevant alerts. Payer systems have minimal involvement, primarily for potential authorization checks related to scheduled services. Public health and research platforms are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (ITI.Scheduling) primarily focuses on enabling standardized, cross-organizational, and patient-initiated scheduling of healthcare appointments. Therefore, Clinical Care Teams and Patients/Caregivers are the core users, as the IG directly addresses their needs for efficient and patient-centric scheduling. Healthcare Administrators also play a key role, as the IG impacts scheduling workflows and system integrations. Payers have a defined but limited role, primarily in the context of appointment-related claims and authorizations. Public Health Agencies and Research Organizations are not directly involved. Government Agencies have a minimal role, primarily related to auditing and security requirements.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 1,
+      "Payers": 0.4,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

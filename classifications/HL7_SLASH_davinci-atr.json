@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The DaVinci Member Attribution (ATR) IG is fundamentally based on FHIR, utilizing FHIR resources, profiles, operations, and the Bulk Data IG to define a standardized way to exchange Member Attribution Lists. It does not use or reference CDA, v2, or v3. While it doesn't explicitly integrate multiple HL7 paradigms, it leverages other FHIR-based standards, showing some cross-paradigm influence within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The DaVinci Member Attribution (ATR) Implementation Guide is primarily designed for the U.S. healthcare system. It references US Core, is relevant to CMS programs, and addresses the needs of U.S. payers and providers in the context of value-based care. Therefore, it is classified as a National Implementation Guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The DaVinci Member Attribution (ATR) IG primarily focuses on streamlining the exchange of member attribution lists between payers and providers to support value-based care. It leverages FHIR R4, US Core, and Bulk Data IG, emphasizing administrative and financial aspects related to patient attribution in risk-based contracts. While it touches upon clinical data through patient and coverage resources, its core purpose revolves around the administrative and financial workflows associated with managing attributed populations.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0.8,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The DaVinci Member Attribution (ATR) IG primarily focuses on the exchange of member attribution lists between payers and providers to support value-based care. Therefore, Payer and EHR systems are the core implementers. Other systems like Clinical Decision Support and PHR systems have minimal involvement, while Imaging and Lab systems are not involved.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The DaVinci Member Attribution (ATR) IG primarily serves to facilitate the exchange of member attribution lists between payers and providers. This exchange is crucial for value-based care arrangements. Therefore, Payers and Clinical Care Teams are the core users, with Healthcare Administrators playing a significant role in implementing and managing the process. Public Health Agencies, Research Organizations, and Government Agencies have a minimal role in this specific IG, as it focuses on the operational exchange of attribution lists rather than broader public health or research initiatives.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 1,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

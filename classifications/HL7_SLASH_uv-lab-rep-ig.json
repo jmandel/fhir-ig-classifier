@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on the exchange of laboratory reports using FHIR resources and RESTful interactions. It heavily relies on FHIR for its core structure and functionality, with minimal acknowledgment of other HL7 standards like v2, v3, or CDA. While it mentions a migration path from v2 and CDA, it doesn't actively support or integrate their features. Cross-paradigm integration is limited to acknowledging the existence of other standards and aiming for future harmonization.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on the universal exchange of laboratory reports, aiming for harmonization across different jurisdictions. It leverages standard terminologies like LOINC, SNOMED CT, and UCUM, and while it mentions alignment with regional efforts like the European eHDSI and the HL7 Europe Laboratory Report FHIR IG, it does not specify any national or regional adaptations as its primary scope.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on the exchange of laboratory reports, making **Clinical Data** its core domain. It heavily emphasizes the structure and content of diagnostic reports and observations, utilizing standard terminologies like LOINC and SNOMED CT. While it touches upon administrative aspects like patient and provider identification, its primary goal is to standardize the representation of lab results for interoperability. The IG also supports workflows related to report creation, storage, and retrieval, and touches upon public health and research use cases, but these are secondary to the core focus on clinical lab data exchange.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0.4,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on the exchange of laboratory reports. Therefore, EHR and Lab Systems are the core implementers. Public Health and Research Platforms will also utilize this data. PHR systems will provide patients access to their lab results. Clinical Decision Support systems will use lab results for alerts and guidance. Pharmacy and Imaging Systems have minimal involvement, while Payer Systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 1,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing laboratory report exchange. Therefore, the primary users are those involved in creating, exchanging, and consuming these reports. Clinical Care Teams are the core users as they rely heavily on lab results for patient care. Systems that create and manage these reports, often used by Healthcare Administrators, are also key. Public Health Agencies and Research Organizations have well-defined needs for aggregated and standardized lab data. Payers and Government Agencies have a more limited role, primarily in oversight and policy related to lab data exchange.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

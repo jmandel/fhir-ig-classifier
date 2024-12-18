@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The ITI mCSD Implementation Guide is fundamentally based on FHIR, defining RESTful interactions for care services discovery. It does not use CDA or v2, and while it acknowledges v3 concepts, they are not central to its design. It demonstrates cross-paradigm integration by leveraging FHIR to enhance IHE profiles, particularly in the context of Document Sharing.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The IHE ITI Mobile Care Services Discovery (mCSD) Implementation Guide is designed for a broad, international audience, focusing on federated discovery of care services resources. While it mentions specific programs like PEPFAR's DATIM and ONC TEFCA, these are presented as examples within a broader context. The guide does not define jurisdiction-specific rules or constraints beyond general applicability. Therefore, it is best classified as a Universal Realm guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The IHE ITI Mobile Care Services Discovery (mCSD) Implementation Guide primarily focuses on the discovery and querying of care services resources within a federated environment. It leverages FHIR to define profiles and transactions for finding organizations, locations, practitioners, and their relationships, with a strong emphasis on administrative aspects and supporting electronic communication, particularly within IHE Document Sharing environments. While it touches upon clinical data through references to healthcare services, its core purpose revolves around the administrative management and discovery of healthcare resources.",
+    "scores": {
+      "Administrative": 1,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI mCSD Implementation Guide focuses on the discovery and querying of care services resources in a federated environment. It's primarily designed for systems that need to find and access information about healthcare providers, organizations, locations, and services. EHR systems and systems involved in health information exchange will be the core implementers. Public health systems and research platforms may also have significant roles in consuming this information. Systems like Pharmacy and Payer have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The ITI mCSD Implementation Guide primarily focuses on enabling the discovery and querying of care services resources in a federated environment. It is designed to support interoperability between various healthcare systems, particularly in the context of IHE Document Sharing. Therefore, Clinical Care Teams and Healthcare Administrators are the core users, as they need to find providers, facilities, and understand service availability. Public Health Agencies and Government Agencies also have a significant role due to the IG's focus on cross-jurisdictional data management and national health information infrastructure. Payers and Research Organizations have a less direct but still important role, while Patients and Caregivers are the least directly involved.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

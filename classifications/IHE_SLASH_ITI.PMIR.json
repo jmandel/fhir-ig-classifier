@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide (ITI.PMIR) is heavily reliant on FHIR for its core functionality, using FHIR resources, messaging, and operations to manage patient identities. It does not use CDA, v2, or v3, focusing solely on a FHIR-based approach. While it integrates with other IHE profiles that might use different standards, the PMIR profile itself is strictly FHIR. It acknowledges other IHE profiles, which implies some level of cross-paradigm awareness, but the core implementation is FHIR-only.",
+    "summary": "This Implementation Guide (ITI.PMIR) is heavily reliant on FHIR for its core functionality, using FHIR resources, messaging, and operations to manage patient identities. It does not use CDA, v2, or v3, focusing solely on a FHIR-based approach. While it doesn't explicitly integrate across different HL7 paradigms, it does leverage other IHE profiles that might use different standards, thus showing some awareness of a broader HL7 ecosystem.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.2,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The ITI PMIR Implementation Guide focuses on creating a universal standard for managing patient identities, particularly in LMIC and OECD settings. While it mentions these specific contexts, it does not tailor the guide to any specific country or region's regulations or requirements. Therefore, it is best classified as a Universal Realm guide.",
+    "summary": "The ITI PMIR Implementation Guide is designed for international use, particularly in Low and Middle Income Countries (LMIC) and Organization for Economic Cooperation and Development (OECD) settings. It focuses on creating a universal standard for patient identity management using FHIR, without specific adaptations for a single country or region. Therefore, it is best classified as \"Universal Realm\".",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,48 +18,34 @@
     }
   },
   "Domain Focus": {
-    "summary": "This Implementation Guide focuses on establishing a Patient Master Identity Registry (PMIR) to manage and share a single \"golden record\" patient identity across disparate systems. It primarily addresses administrative aspects of patient identity management, including creation, updates, deprecation, and merging of patient identities. While it touches upon identity and security through audit events and authentication requirements, its core purpose revolves around patient identity data rather than clinical data or workflows. It has limited scope in other domains.",
+    "summary": "The ITI PMIR Implementation Guide focuses on establishing a FHIR-based patient identity registry, primarily addressing the management and sharing of a single \"golden record\" patient identity across disparate systems. It heavily emphasizes administrative aspects, particularly patient identity management, and incorporates identity and security considerations through audit events and authentication requirements. While it touches upon workflow through defined transactions, it does not delve into clinical data, care planning, or other clinical domains.",
     "scores": {
       "Administrative": 1,
       "Care Planning": 0,
-      "Clinical Data": 0.2,
+      "Clinical Data": 0,
       "Clinical Knowledge": 0,
       "Diagnostics": 0,
-      "Identity & Security": 0.6,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0.2,
       "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.2
-    }
-  },
-  "Implementation Approach": {
-    "summary": "This Implementation Guide (IG) defines a FHIR-based Patient Master Identity Registry (PMIR). It heavily relies on **Data Profiles** to define the structure of patient data and **Messaging** to communicate patient identity updates. **Subscriptions** are used to notify consumers of changes. **REST APIs** are used for querying patient data (via PIXm and PDQm). **Terminology** plays a supporting role, primarily using standard FHIR value sets. **Services** are used in the form of defined transactions (ITI-93, ITI-94). **Audit Events** are defined for security and tracking, which can be considered a form of specialized messaging. **Documents** and **Forms & UI** are not directly addressed in this IG. **Decision Support** is not a focus.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0.8,
-      "REST APIs": 0.6,
-      "Services": 0.6,
-      "Subscriptions": 0.8,
-      "Terminology": 0.4
+      "Workflow": 0.6
     }
   },
   "Implementers": {
-    "summary": "The ITI PMIR Implementation Guide focuses on establishing a centralized patient identity registry. EHR systems are central to this, acting as both sources and consumers of patient identity data.  Clinical Decision Support systems will rely on accurate patient identification. Public Health Systems, especially in LMIC/OECD contexts, will benefit from a unified patient view for population health management. Payer and PHR systems have minimal involvement, while Pharmacy, Lab, and Imaging systems have a defined but limited role in consuming patient identity information. Research platforms may utilize the registry for de-identified data, but their role is minimal in the core functionality.",
+    "summary": "This IG focuses on establishing a centralized patient identity registry. Therefore, EHR systems, as primary sources and consumers of patient data, are crucial. Systems involved in patient registration, such as civil registration and vital statistics systems, will also play a significant role. While not directly involved in managing patient identities, systems that consume patient data, like lab and pharmacy systems, will need to integrate with the registry to ensure they are working with the correct patient. Public health systems may also benefit from a unified patient identity for population-level analysis. Research platforms might utilize the registry for de-identification or linking research data to clinical records. Payer systems have minimal involvement, primarily needing to ensure correct patient identification for claims processing. PHR systems are not directly addressed but could potentially benefit from a consistent patient identity.",
     "scores": {
-      "EHR Systems": 1,
-      "PHR Systems": 0.2,
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
       "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.4,
-      "Lab Systems": 0.4,
-      "Imaging Systems": 0.4,
-      "Public Health Systems": 0.8,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.2
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
     }
   },
   "Users & Stakeholders": {

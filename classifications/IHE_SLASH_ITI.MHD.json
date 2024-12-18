@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The ITI MHD Implementation Guide primarily leverages FHIR to define a RESTful API for document sharing, tailored for mobile and resource-constrained environments. While it acknowledges and maps concepts from XDS (which uses ebRIM - an OASIS standard that HL7 v3 leverages), it does not directly utilize HL7 v2 or v3 messaging. It does show how to handle a CDA document, but only as an opaque document to be wrapped in FHIR resources. The guide demonstrates a deliberate effort to bridge the gap between FHIR and XDS, indicating a cross-paradigm approach.",
+    "scores": {
+      "CDA": 0.2,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The IHE ITI MHD Implementation Guide defines a RESTful API for document sharing using FHIR, specifically tailored for mobile and resource-constrained devices. It is designed to interoperate with existing IHE Document Sharing profiles and is part of the IHE IT Infrastructure domain. While it mentions relevance to any jurisdiction implementing health information exchange, it does not specify any particular country or region. Therefore, it is considered a universal standard.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The ITI.MHD Implementation Guide primarily focuses on enabling mobile and resource-constrained devices to participate in document sharing using a simplified, RESTful API based on FHIR. It leverages core FHIR resources like DocumentReference, List, Binary, and Bundle to represent documents and metadata. While it touches upon administrative aspects through document management and workflow through defined transactions, its core purpose is to facilitate the exchange of clinical documents in a mobile-friendly manner. Identity & Security is addressed through audit logging and potential integration with IUA, but not as a central focus. Other domains like Medications, Diagnostics, and Research are not directly addressed.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "The ITI MHD Implementation Guide focuses on enabling mobile and resource-constrained devices to participate in document sharing using a simplified, RESTful API based on FHIR. EHR systems are central to implementing this IG, as they will need to support the defined profiles and operations for document submission, discovery, and retrieval. Mobile PHR systems are also key, as they are a primary target for this IG. Other systems like Clinical Decision Support, Lab, Pharmacy, and Imaging have limited involvement, primarily in the context of document exchange. Payer systems are not directly involved. Public Health and Research systems might have minimal integration for document sharing purposes.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The ITI.MHD Implementation Guide primarily targets developers building applications for mobile and resource-constrained devices to access and exchange health documents. Clinical Care Teams are key users as they will utilize these applications. Public Health Agencies and Research Organizations may also benefit from the data exchange facilitated by MHD. Government Agencies have a role in setting standards and regulations that influence the IG. Payers and Healthcare Administrators have a minimal role in this specific IG, as it focuses on technical implementation rather than administrative or payment processes. Patients and Caregivers are indirect beneficiaries, but their needs are not a primary driver of the IG's design.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "The ITI PIXm Implementation Guide primarily leverages FHIR for its RESTful API and resource definitions, making it heavily dependent on the FHIR standard. It does not use CDA or v2, and while it acknowledges v3 through its relationship with PIXV3, it doesn't directly implement v3 concepts. Cross-paradigm integration is present but not central, as it bridges FHIR with other IHE profiles that may use different HL7 standards.",
+    "summary": "The ITI PIXm Implementation Guide primarily leverages FHIR for its RESTful API and resource definitions, making it heavily dependent on the FHIR standard. It does not use CDA or v2, and while it acknowledges v3 through its relationship with PIXV3, it doesn't directly utilize v3 models. Cross-paradigm integration is present in the sense that it offers a FHIR-based alternative to existing IHE profiles that might use other HL7 standards, but this integration is not a core aspect of the IG itself.",
     "scores": {
       "CDA": 0,
       "Cross-Paradigm": 0.4,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The IHE ITI Patient Identifier Cross-referencing for Mobile (PIXm) profile is designed for international use without jurisdiction-specific constraints. It focuses on providing a RESTful interface for querying and managing patient identifiers, particularly for mobile and lightweight applications. It is not tied to any specific country or region.",
+    "summary": "The IHE ITI Patient Identifier Cross-referencing for Mobile (PIXm) profile is designed for international use without jurisdiction-specific constraints. It is part of the IHE IT Infrastructure Technical Framework and does not mention any specific country or region. Therefore, it is classified as \"Universal Realm\".",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "The IHE ITI PIXm Implementation Guide primarily focuses on enabling patient identifier cross-referencing for mobile and lightweight applications. It leverages FHIR's RESTful capabilities to define a custom operation for querying a central manager, facilitating the resolution of patient identifiers across different healthcare systems. While it touches upon administrative aspects through patient identity management and updates, its core purpose revolves around establishing a standardized mechanism for identifier translation, thus impacting workflow and data exchange related to patient identity.",
+    "summary": "The ITI PIXm Implementation Guide primarily focuses on enabling mobile and lightweight applications to cross-reference patient identifiers across different healthcare systems. It achieves this through a RESTful interface and a custom FHIR operation, `$ihe-pix`. While it touches upon administrative aspects like patient identity management and updates, its core purpose is to facilitate accurate patient matching and data exchange by resolving identifiers. It has a strong emphasis on identity and security through audit logging and potential integration with ATNA and IUA. It does not directly address clinical data, care planning, or other domains beyond the scope of patient identifier management.",
     "scores": {
       "Administrative": 0.8,
       "Care Planning": 0,
-      "Clinical Data": 0.2,
+      "Clinical Data": 0,
       "Clinical Knowledge": 0,
       "Diagnostics": 0,
-      "Identity & Security": 0.6,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.6
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The ITI PIXm IG primarily focuses on defining a RESTful API for patient identifier cross-referencing, utilizing a custom FHIR operation (`$ihe-pix`) and leveraging Data Profiles for defining the structure of requests and responses. It also defines a RESTful Patient Identity Feed transaction (ITI-104). Terminology plays a supporting role, mainly relying on standard FHIR and IHE terminologies. While not explicitly using Messaging or Subscriptions, it acknowledges the potential use of other IHE profiles (like PIX, PIXV3, or PMIR) for patient identity feed and update notifications, which might involve these patterns. Decision Support, Documents, and Forms & UI are not central to this IG's scope.",
-    "scores": {
-      "Data Profiles": 0.8,
-      "Decision Support": 0,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0.2,
-      "REST APIs": 1,
-      "Services": 0.8,
-      "Subscriptions": 0.2,
-      "Terminology": 0.6
+      "Workflow": 0.4
     }
   },
   "Implementers": {
-    "summary": "The ITI PIXm Implementation Guide focuses on patient identifier cross-referencing, primarily for mobile and lightweight applications. EHR systems are central to this process, as they often manage patient records and need to resolve identifiers. Clinical Decision Support systems also play a key role, as they rely on accurate patient identification for providing relevant guidance. Lab and Imaging systems are important as they generate data associated with specific patients, requiring identifier mapping. Pharmacy systems have a moderate role, while PHR, Payer, Public Health, and Research systems have minimal involvement in the core functionality of PIXm.",
+    "summary": "The ITI PIXm IG focuses on patient identifier cross-referencing, primarily targeting EHR systems and systems that need to resolve patient identifiers. EHR systems are central to managing and accessing patient data, making them core implementers. Systems that need to query for patient identifiers, such as mobile health apps or other clinical systems, will also require extensive integration. While not directly involved in core functionality, Payer and Public Health systems might need to integrate for specific use cases like claims processing or population health analysis. Lab and Pharmacy systems may need to look up patient identifiers, but their involvement is less central. Research platforms and CDS systems have minimal involvement, and PHR systems are not directly addressed by this IG.",
     "scores": {
+      "Clinical Decision Support": 0.2,
       "EHR Systems": 1,
-      "PHR Systems": 0.2,
-      "Payer Systems": 0,
+      "Imaging Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0.6,
       "Pharmacy Systems": 0.4,
-      "Lab Systems": 0.6,
-      "Imaging Systems": 0.6,
-      "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.6,
       "Research Platforms": 0.2
     }
   },
   "Users & Stakeholders": {
-    "summary": "The ITI PIXm Implementation Guide primarily serves **Clinical Care Teams** and **Healthcare Administrators** by enabling efficient patient identifier cross-referencing, especially for mobile and lightweight applications. While **Patients and Caregivers** benefit indirectly from improved data accuracy and care coordination, their role is minimal. **Payers** and **Public Health Agencies** might have a limited interest in the standardized data exchange facilitated by PIXm. **Research Organizations** and **Government Agencies** are not the primary focus of this IG.",
+    "summary": "The ITI PIXm Implementation Guide primarily serves **Clinical Care Teams** and **Healthcare Administrators** by enabling efficient patient identifier cross-referencing, especially for mobile and lightweight applications. **Public Health Agencies** may also benefit from improved data aggregation. **Patients and Caregivers** indirectly benefit from more accurate patient matching and reduced medical errors. **Payers**, **Research Organizations**, and **Government Agencies** have minimal direct involvement.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.8,
-      "Patients and Caregivers": 0.2,
-      "Payers": 0.4,
-      "Public Health Agencies": 0.4,
-      "Research Organizations": 0,
-      "Government Agencies": 0
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.2
     }
   },
   "meta": {

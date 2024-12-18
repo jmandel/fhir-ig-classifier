@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of post-acute care orders, primarily for Durable Medical Equipment (DME) and Home Health Services. It heavily relies on FHIR R4 and leverages US Core profiles. The IG does not utilize HL7 v2, v3, or CDA, and its cross-paradigm support is limited to integrating FHIR RESTful interactions and messaging.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide is explicitly sponsored by the Centers for Medicare and Medicaid Services (CMS) in the United States and builds upon US Core profiles. It is designed to address the specific needs of the US healthcare system, particularly in the context of post-acute care orders for Durable Medical Equipment (DME) and Home Health Services. Therefore, it is classified as a National Implementation Guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on streamlining the ordering process for Durable Medical Equipment (DME) and Home Health Services in the post-acute care setting. It leverages FHIR resources, particularly the Task resource, to manage the order workflow and facilitate communication between ordering providers, rendering providers, and intermediaries. While it touches upon clinical data and medications related to DME, its core purpose is to standardize the administrative and workflow aspects of post-acute care orders.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0.6,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of post-acute care orders, specifically for Durable Medical Equipment (DME) and Home Health Services. It primarily targets EHR systems used by ordering and rendering providers, as well as intermediary systems that facilitate communication between them. Pharmacy systems dispensing DME-related medications also play a significant role. While payer systems are not directly involved in the order exchange, the IG's focus on prior authorization and medical necessity documentation suggests a need for integration with them. Public health and research platforms are not directly addressed by this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.8,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on streamlining the ordering process for Durable Medical Equipment (DME) and Home Health Services. It targets ordering and rendering providers, as well as intermediaries, to facilitate efficient exchange of orders and supporting documentation. While payers and government agencies have a stake in the process, their direct involvement in the IG's design is less prominent. Patients and caregivers are not directly addressed, and research organizations are not a primary focus.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0,
+      "Payers": 0.4,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

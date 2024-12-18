@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally built upon FHIR R4 to define a pseudonymization framework. It does not utilize HL7 v2 or v3 messaging or models directly, nor does it focus on CDA. While it mentions other standards like HL7 v3, SNOMED CT, and LOINC through aliases, it doesn't deeply integrate them, suggesting a minimal level of cross-paradigm support.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is specifically designed for the Belgian eHealth platform, focusing on pseudonymization techniques to comply with privacy regulations like GDPR. It defines Belgium-specific extensions, code systems, and value sets, and outlines procedures for content negotiation and data integrity within the Belgian healthcare context. The repeated references to \"Belgium\" and \"Belgian eHealth platform\" clearly indicate its national scope.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Belgium": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on establishing a standardized framework for pseudonymization within the Belgian healthcare context. Its core purpose is to enable secure data sharing while adhering to privacy regulations like GDPR. While it touches upon administrative aspects through its focus on the Belgian eHealth platform, its main emphasis is on identity and security, specifically data anonymization. It also has implications for clinical data integrity and potentially research, but these are secondary to its primary focus on secure pseudonymization.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.4,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 1,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0.2,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on pseudonymization within the Belgian eHealth context. It primarily impacts systems that handle patient data, especially those interacting with the Belgian eHealth platform's data vaults. EHR systems will need to implement the pseudonymization and data integrity features. Systems involved in data exchange, research, and public health will also need to support pseudonymization to varying degrees. Payer systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide focuses on pseudonymization within the Belgian eHealth context. The primary users are those involved in implementing and interacting with systems that handle sensitive patient data, particularly within the Belgian eHealth platform. Clinical care teams have a limited role, as the IG is more focused on the technical aspects of data handling. Patients have minimal direct involvement. Payers are not directly addressed. Public health and research organizations benefit from the ability to use pseudonymized data. Government agencies have a role in ensuring compliance with regulations like GDPR.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

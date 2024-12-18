@@ -1,6 +1,6 @@
 {
   "HL7 Standard": {
-    "summary": "The IPS IG is fundamentally based on FHIR, using it to define a document-centric patient summary for cross-border care. It acknowledges CDA as an alternative representation but doesn't integrate its structures. While it mentions v2 and v3, they are not relevant to its core purpose. Cross-paradigm considerations are present in the acknowledgment of the CDA IPS and the developing FHIR Clinical Documents IG, but the focus remains on FHIR.",
+    "summary": "The International Patient Summary (IPS) Implementation Guide is fundamentally based on FHIR, using it as its core framework for defining a standardized patient summary document. While it acknowledges and references the CDA IPS IG, it does not directly utilize CDA structures or patterns. The IG does not use v2 or v3 messaging or models. It demonstrates cross-paradigm awareness by referencing the CDA IPS IG and the developing FHIR Clinical Documents IG, indicating a consideration for interoperability across different HL7 approaches.",
     "scores": {
       "CDA": 0.2,
       "Cross-Paradigm": 0.4,
@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The FHIR Implementation Guide being analyzed is the International Patient Summary (IPS). It is designed for international use, focusing on sharing a minimal set of patient health information for unplanned, cross-border care. It uses international code systems like SNOMED CT, LOINC, and UCUM, and is explicitly designed to be jurisdiction-agnostic, making it suitable for global implementation.",
+    "summary": "The FHIR Implementation Guide being analyzed is the International Patient Summary (IPS). It is designed for international use, focusing on sharing a minimal set of patient health information for unplanned, cross-border care. It uses international code systems like SNOMED CT, LOINC, UCUM, EDQM, and ISO 3166. Therefore, it is classified as \"Universal Realm\".",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,59 +18,45 @@
     }
   },
   "Domain Focus": {
-    "summary": "The International Patient Summary (IPS) IG focuses on enabling the exchange of a standardized, minimal set of patient health information for unplanned, cross-border care. It defines a FHIR document structure using a Composition resource to organize core clinical data like allergies, problems, and medications, primarily using SNOMED CT terminology. While centered on clinical data exchange, it also touches upon administrative aspects for patient identification and organizational context. Identity and security are addressed through references to other IGs like IPA. The IG has limited focus on care planning, diagnostics, and medications beyond representing current status. It does not address payment, public health, quality reporting, or research specifically.",
+    "summary": "The International Patient Summary (IPS) Implementation Guide focuses on enabling the exchange of a standardized, minimal set of patient health information for unplanned, cross-border care. It primarily addresses the sharing of core clinical data, with a strong emphasis on representing this data in a structured and coded manner using FHIR. While it touches upon administrative aspects through patient identification and organizational details, its core purpose revolves around clinical data exchange to support direct patient care in international settings. The IG also references care planning, diagnostics, medications, and identity & security concepts, but these are secondary to the primary focus on core clinical data.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0.2,
       "Clinical Data": 1,
       "Clinical Knowledge": 0.2,
-      "Diagnostics": 0.4,
+      "Diagnostics": 0.6,
       "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0.8,
-      "Payment & Financial": 0,
       "Public Health": 0,
       "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.2
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The International Patient Summary (IPS) IG primarily uses a document-centric approach built on FHIR R4. It heavily relies on Data Profiles to define the structure and content of the IPS document and its constituent resources. Terminology plays a crucial role, with SNOMED CT as the primary terminology, along with LOINC, UCUM, and EDQM. While REST APIs are used, the focus is on the `$summary` and `$docref` operations for document generation. Messaging, Forms & UI, Decision Support, and Subscriptions are not central to this IG.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 1,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0.6,
-      "Subscriptions": 0,
-      "Terminology": 0.8
+      "Workflow": 0.4
     }
   },
   "Implementers": {
-    "summary": "The International Patient Summary (IPS) IG primarily targets EHR systems for generating and consuming patient summaries, especially in cross-border care scenarios. PHR systems also play a key role in patient engagement and data access. Clinical Decision Support systems benefit from the standardized data for providing relevant guidance. While not directly involved in core functionality, Lab, Imaging, and Pharmacy systems contribute data that feeds into the IPS. Payer systems have minimal involvement, and Public Health/Research systems have limited interaction with this specific IG.",
+    "summary": "The International Patient Summary (IPS) IG is primarily designed for EHR systems to facilitate the exchange of essential patient health information for unplanned, cross-border care. EHR systems are expected to fully implement the IG, generating and consuming IPS documents. PHR systems also play a key role in enabling patient access to their summaries. While not the primary focus, Clinical Decision Support systems can leverage IPS data, and Public Health systems may utilize aggregated IPS data for population health monitoring. Other systems like Lab, Imaging, and Pharmacy have limited but defined roles in providing data that feeds into the IPS.",
     "scores": {
+      "Clinical Decision Support": 0.4,
       "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
       "PHR Systems": 0.8,
-      "Payer Systems": 0.2,
-      "Pharmacy Systems": 0.6,
-      "Lab Systems": 0.6,
-      "Imaging Systems": 0.6,
-      "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0.2
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0
     }
   },
   "Users & Stakeholders": {
-    "summary": "The International Patient Summary (IPS) Implementation Guide is primarily designed to facilitate the sharing of essential patient health information for unplanned, cross-border care. Therefore, Clinical Care Teams are the core users, as they need this information to make informed decisions in emergency situations. Public Health Agencies and Government Agencies have a significant role in promoting and regulating its adoption for cross-border interoperability. Patients and Caregivers benefit from improved care coordination. Payers and Research Organizations have a minimal role in this specific IG, as it focuses on direct clinical care in unplanned scenarios.",
+    "summary": "The International Patient Summary (IPS) Implementation Guide is primarily designed to facilitate the sharing of essential patient health information for unplanned, cross-border care. Therefore, Clinical Care Teams are the core users, as they need this information to make informed decisions in emergency situations. Public Health Agencies and Government Agencies have a significant interest in standardization and interoperability for cross-border health data exchange. While Patients and Caregivers benefit indirectly, their direct involvement in the IG's design is minimal. Payers and Research Organizations have limited roles in this specific IG, as it focuses on a minimal dataset for immediate clinical needs rather than comprehensive data for billing or research.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.4,
-      "Patients and Caregivers": 0.6,
-      "Payers": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
       "Public Health Agencies": 0.8,
-      "Research Organizations": 0.2,
+      "Research Organizations": 0,
       "Government Agencies": 0.8
     }
   },

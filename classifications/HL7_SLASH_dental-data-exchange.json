@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on dental data exchange using FHIR R4. It heavily relies on FHIR and leverages C-CDA on FHIR for document structures. While it acknowledges v2 and v3 through its use of terminologies like SNOMED CT and LOINC, these standards are not central to its core functionality. The IG demonstrates a cross-paradigm approach by integrating FHIR with C-CDA and other relevant standards.",
+    "scores": {
+      "CDA": 0.8,
+      "Cross-Paradigm": 0.8,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0.4
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide is explicitly designed for the US Realm, as stated multiple times in the document. It builds upon US Core and C-CDA on FHIR, and focuses on dental data exchange within the United States healthcare system. Therefore, it is classified as a National guide for the USA.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the exchange of dental data between dental and medical providers, primarily through referral and consultation notes. It leverages existing FHIR profiles like US Core and C-CDA on FHIR, defining specialized profiles for dental conditions, findings, and procedures. The IG emphasizes the use of dental-specific terminologies like SNODENT and CDT alongside standard medical terminologies. While it touches upon administrative aspects and workflow, its core is the structured exchange of clinical dental data.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on enabling the exchange of dental data between dental and medical providers, primarily through EHR systems. It leverages US Core and C-CDA on FHIR, emphasizing dental-specific profiles like Dental Condition and Dental Finding. While payer systems have a role in processing this data, the core implementation lies within EHRs and EDRs used by dental and medical providers. Other systems like CDS, PHR, and Public Health have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.4,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling interoperability between dental and medical providers for improved care coordination. Clinical Care Teams, particularly dental providers, are the core users, driving the design with their need for standardized data exchange. Medical providers also have a significant role, as the IG facilitates communication between medical and dental domains. Payers are also a key user group, as the IG mentions their involvement in the ecosystem and the relevance to value-based care. Public Health Agencies and Research Organizations have a minimal role, as the IG doesn't explicitly address their needs. Government Agencies have a limited role, primarily related to the IG's focus on the US Realm and potential regulatory implications. Patients and Caregivers are not directly involved in the IG's design, but they are indirect beneficiaries of improved care coordination.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0.8,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

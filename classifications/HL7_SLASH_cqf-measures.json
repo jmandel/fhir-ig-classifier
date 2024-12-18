@@ -10,7 +10,7 @@
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide explicitly states its primary scope is within the US Realm, focusing on standardized representation of electronic Clinical Quality Measures (eCQMs). While acknowledging broader applicability, the guide is tailored to US-specific needs, including references to CMS quality reporting programs and relevance to US jurisdictions.",
+    "summary": "The Implementation Guide explicitly states its primary scope is within the US Realm, focusing on standardized representation of electronic Clinical Quality Measures (eCQMs). It mentions relevance to US jurisdictions and programs, such as CMS quality reporting programs. While acknowledging broader applicability, the focus remains on US-specific needs.",
     "scores": {
       "Universal Realm": 0.2,
       "National > United States": 0.8,
@@ -18,47 +18,33 @@
     }
   },
   "Domain Focus": {
-    "summary": "This FHIR Implementation Guide primarily focuses on defining and representing electronic Clinical Quality Measures (eCQMs) using FHIR, CQL, and QI-Core. It emphasizes the computable and shareable aspects of quality measures, enabling consistent definition and evaluation across different systems. While it touches upon clinical data through data requirements and QI-Core, its core purpose is to standardize the structure and logic of quality measures themselves, rather than broader clinical data exchange or care planning.",
+    "summary": "This FHIR Implementation Guide primarily focuses on the standardized representation and sharing of electronic Clinical Quality Measures (eCQMs). It leverages FHIR, CQL, and QI-Core to define computable quality measures, enabling automation and data exchange for quality reporting and improvement. While it touches upon clinical data and workflow aspects related to measure evaluation, its core purpose is centered around defining and structuring quality measures themselves.",
     "scores": {
       "Administrative": 0.2,
-      "Care Planning": 0,
+      "Care Planning": 0.2,
       "Clinical Data": 0.6,
       "Clinical Knowledge": 0.8,
       "Diagnostics": 0,
       "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0.2,
       "Medications": 0,
-      "Payment & Financial": 0.2,
       "Public Health": 0.4,
       "Quality & Reporting": 1,
-      "Research": 0.2,
+      "Research": 0,
       "Workflow": 0.4
     }
   },
-  "Implementation Approach": {
-    "summary": "This FHIR Implementation Guide defines a framework for representing electronic Clinical Quality Measures (eCQMs) using FHIR resources, CQL, and QI-Core profiles. It heavily relies on data profiles for `Measure` and `Library` resources, terminology for defining value sets, and decision support through CQL-based logic. REST APIs are used for operations like packaging measures, but the core focus is on defining the structure and content of eCQMs rather than specific API interactions. Messaging, documents, forms, and subscriptions are not central to this IG's purpose.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0.8,
-      "Documents": 0,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.4,
-      "Services": 0.6,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "This IG focuses on the standardized representation of eCQMs using FHIR, CQL, and QI-Core. It primarily targets systems involved in authoring, distributing, and evaluating quality measures. EHRs and Clinical Decision Support systems are key implementers, while research platforms and public health systems play important, albeit more specific, roles. Payer systems have a minimal role, primarily in receiving quality measure reports defined by the DEQM IG. PHR, Pharmacy, Lab, and Imaging systems are not directly involved in implementing this IG.",
+    "summary": "This IG focuses on the standardized representation of eCQMs using FHIR, CQL, and QI-Core. It primarily targets systems involved in authoring, distributing, and evaluating quality measures. EHRs will need to support measure evaluation and reporting, while Clinical Decision Support systems will leverage these measures for providing guidance. Payer and Public Health systems may utilize these measures for quality reporting and population health management, respectively. Research platforms can use this IG for defining and evaluating measures in research studies.",
     "scores": {
-      "EHR Systems": 0.8,
-      "PHR Systems": 0,
-      "Payer Systems": 0.2,
-      "Pharmacy Systems": 0,
-      "Lab Systems": 0,
-      "Imaging Systems": 0,
-      "Public Health Systems": 0.6,
       "Clinical Decision Support": 0.8,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.6,
       "Research Platforms": 0.6
     }
   },

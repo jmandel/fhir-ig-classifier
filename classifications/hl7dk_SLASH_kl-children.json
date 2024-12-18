@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, defining a comprehensive set of FHIR profiles for exchanging children's health data. It does not use CDA, v2, or v3, and while it integrates multiple terminologies and code systems, this does not constitute a cross-paradigm approach in the HL7 sense.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The KLChildren Implementation Guide is explicitly designed for the Danish healthcare context, specifically for reporting data from the Danish health promotion and disease prevention program for children to the FK Gateway. It references Danish core profiles, the FKI shared information model, Danish personal identification numbers (CPR-nummer), and the managing organization's SOR code. It also utilizes a municipality-owned code system (FBOE) specific to the children's database. Therefore, it is clearly a national guide for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The KLChildren IG focuses on standardizing the reporting of children's health data from Danish municipalities to a central gateway. It heavily emphasizes clinical data related to child health assessments, observations, and interventions within the context of a national health promotion program. While administrative elements are present for identifying patients and encounters, the core driver is the structured capture and exchange of clinical information.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.6,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.8,
+      "Quality & Reporting": 0.6,
+      "Research": 0.2,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "The KLChildren IG focuses on reporting children's health data from Danish municipalities to a central gateway. EHR systems used by health nurses will be the primary implementers, generating FHIR resources for reporting. The gateway itself will also need extensive integration. Public health systems will utilize the aggregated data. Other systems have limited or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The KLChildren IG primarily serves the needs of Public Health Agencies and Government Agencies by standardizing the reporting of children's health data from Danish municipalities to a central gateway. Clinical Care Teams are key users as they collect and input the data. Healthcare Administrators have a defined role in managing the systems involved. Research Organizations may utilize the data, and Patients and Caregivers are indirectly involved as the subjects of the data. Payers are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 1
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

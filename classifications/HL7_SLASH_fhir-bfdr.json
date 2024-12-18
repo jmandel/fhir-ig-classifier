@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the electronic exchange of birth and fetal death information using FHIR resources and profiles. It heavily relies on FHIR as its foundation and doesn't directly utilize other HL7 standards like CDA, v2, or v3. While it builds upon other FHIR IGs, it doesn't explicitly integrate across different HL7 paradigms.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is designed for birth and fetal death reporting in the United States, under the auspices of the National Center for Health Statistics (NCHS) and state vital records offices. It builds upon US Core and is designed to support birth and fetal death reporting in the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the electronic exchange of birth and fetal death information for vital records reporting in the United States. It leverages FHIR resources like Patient, Encounter, Observation, Condition, Procedure, Practitioner, Location, Coverage, and Bundle to represent and transmit this data. The primary drivers are public health reporting and administrative processes related to vital records, with a strong emphasis on clinical data relevant to births and fetal deaths.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.6,
+      "Research": 0.2,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the electronic exchange of birth and fetal death information. Therefore, EHR systems and Public Health Systems (specifically vital records systems) are the primary implementers. Other systems like Clinical Decision Support, Pharmacy, and Payer Systems have minimal to no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the electronic exchange of birth and fetal death information. The primary users are those involved in collecting, managing, and reporting this data, including healthcare providers, vital records offices, and public health agencies. While clinical care teams provide the initial data, the IG's design is driven by the needs of vital records offices and public health agencies for accurate and timely reporting. Payers and research organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

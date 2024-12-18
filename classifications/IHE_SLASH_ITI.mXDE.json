@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "This Implementation Guide (ITI.mXDE) primarily focuses on extending FHIR's capabilities to bridge document-based and data element-based access within the IHE ecosystem. It heavily relies on FHIR for data representation and Provenance, and leverages existing IHE profiles built on HL7 v2 and v3 concepts for document sharing and querying. While it acknowledges CDA as a potential source document format, it doesn't directly define CDA-specific mappings or transformations. Cross-paradigm integration is evident in its use of FHIR with IHE profiles that have roots in v2 and v3.",
+    "summary": "This Implementation Guide (ITI.mXDE) primarily leverages FHIR for its core functionality, defining a specific Provenance profile to link extracted data elements (FHIR resources) to their source documents. It heavily relies on other IHE profiles like QEDm (which itself is built on a mix of HL7 standards) for querying and MHD/XDS for document sharing, indicating a cross-paradigm approach. While it acknowledges the existence of structured documents, it doesn't directly utilize CDA's specific structures or exchange mechanisms. There's no mention or use of HL7 v2 or v3.",
     "scores": {
       "CDA": 0.2,
       "Cross-Paradigm": 0.8,
       "FHIR": 1,
-      "v2": 0.6,
-      "v3": 0.6
+      "v2": 0,
+      "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "This IHE Implementation Guide, ITI.mXDE, defines a method for extracting data elements from clinical documents and linking them back to their source. It leverages existing IHE profiles like QEDm, XDS, and MHD. The guide does not specify any particular jurisdiction, making it universally applicable.",
+    "summary": "This Implementation Guide is part of the IHE IT Infrastructure (ITI) domain and defines a profile for Mobile Cross-Enterprise Document Data Element Extraction (mXDE). It focuses on technical specifications for accessing and utilizing data elements extracted from clinical documents within a health information exchange. It leverages existing IHE profiles and does not specify any regional or national adaptations.",
     "scores": {
       "Universal Realm": 1,
       "National": 0,
@@ -18,7 +18,7 @@
     }
   },
   "Domain Focus": {
-    "summary": "The ITI mXDE Implementation Guide focuses on enabling access to fine-grained clinical data extracted from coarse-grained clinical documents shared within a health information exchange. It leverages existing IHE profiles like QEDm, XDS, and MHD, and defines a specific Provenance pattern to link extracted data elements to their source documents. This facilitates clinical decision support, improves data usability, and bridges the gap between document-level and data element-level access. While it touches upon administrative and security aspects, its core is driven by the need to manage and utilize clinical data within a workflow context.",
+    "summary": "The mXDE IG primarily focuses on enabling access to structured clinical data elements extracted from clinical documents within a health information exchange. It leverages existing IHE profiles for document sharing (XDS, MHD) and data element querying (QEDm) and defines a specific Provenance pattern to link extracted data elements back to their source documents. This facilitates clinical decision support, improves data usability, and enhances patient access to their health information. While it touches upon administrative aspects through its reliance on document sharing infrastructure, its core purpose is to bridge the gap between document-level and data element-level access in a clinical context.",
     "scores": {
       "Administrative": 0.4,
       "Care Planning": 0.2,
@@ -26,47 +26,33 @@
       "Clinical Knowledge": 0.2,
       "Diagnostics": 0.2,
       "Identity & Security": 0.6,
-      "Medications": 0.4,
-      "Payment & Financial": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
       "Public Health": 0.2,
-      "Quality & Reporting": 0.2,
+      "Quality & Reporting": 0.4,
       "Research": 0.4,
       "Workflow": 0.8
     }
   },
-  "Implementation Approach": {
-    "summary": "The ITI mXDE IG primarily focuses on linking extracted data elements to their source documents using a specific Provenance profile. It leverages existing IHE profiles like QEDm for querying data elements and MHD/XDS for document sharing. While it defines a custom Provenance profile, the core data modeling relies on existing FHIR resources. Terminology usage is limited but specific. The IG does not define new REST APIs or services beyond those provided by QEDm and MHD/XDS. Messaging and subscriptions are not central to its approach, and it does not address forms or UI specifications.",
-    "scores": {
-      "Data Profiles": 0.8,
-      "Decision Support": 0.4,
-      "Documents": 0.8,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.6
-    }
-  },
   "Implementers": {
-    "summary": "The mXDE IG focuses on extracting data elements from clinical documents and linking them back to their source. This primarily impacts systems involved in document sharing and data querying, such as EHRs and clinical data repositories. Clinical Decision Support systems will heavily rely on the extracted data. PHRs can leverage this for patient data access. Research platforms can benefit from the structured data access. Public health systems might use it for aggregated data analysis. Payer, Pharmacy, Lab, and Imaging systems have minimal direct involvement.",
+    "summary": "The mXDE IG focuses on enabling access to fine-grained data elements extracted from clinical documents shared within a health information exchange. It primarily targets EHR systems and systems that consume clinical data, such as Clinical Decision Support and PHR systems. It also has implications for research platforms that need access to structured data. The IG does not directly involve Payer, Pharmacy, Imaging, or Lab systems.",
     "scores": {
-      "EHR Systems": 1,
-      "PHR Systems": 0.6,
-      "Payer Systems": 0,
-      "Pharmacy Systems": 0.2,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0.2,
-      "Public Health Systems": 0.4,
       "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
       "Research Platforms": 0.6
     }
   },
   "Users & Stakeholders": {
-    "summary": "The ITI mXDE IG primarily targets systems and users involved in accessing and utilizing fine-grained data extracted from clinical documents within a health information exchange. Clinical Care Teams are the core users, as they directly benefit from improved access to specific data elements for clinical decision support. Research Organizations also have a significant stake, as they can leverage structured data for research purposes. Patients and Caregivers benefit indirectly through improved care and access to their information. Public Health Agencies may utilize the extracted data for population health analysis. Payers and Healthcare Administrators have a limited role, while Government Agencies have minimal involvement.",
+    "summary": "The ITI mXDE IG primarily targets systems and users involved in accessing and utilizing fine-grained data extracted from clinical documents within a health information exchange. Clinical Care Teams are the core users, as they need to query specific data elements and trace back to source documents for clinical decision support. Research Organizations also have a significant role, as they can leverage structured data elements for research purposes. Patients and Caregivers benefit indirectly through improved data access via PHRs. Public Health Agencies and Payers have limited involvement, while Government Agencies have minimal needs addressed by this IG.",
     "scores": {
       "Clinical Care Teams": 1,
-      "Healthcare Administrators": 0.2,
+      "Healthcare Administrators": 0.4,
       "Patients and Caregivers": 0.6,
       "Payers": 0.2,
       "Public Health Agencies": 0.4,

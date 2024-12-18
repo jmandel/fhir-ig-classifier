@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR, using it as the core standard for data representation and exchange. It does not utilize HL7 v2 or v3 messaging, nor does it directly leverage CDA. While it doesn't explicitly integrate across different HL7 paradigms, it does build upon and extend existing FHIR profiles and resources, demonstrating a degree of cross-paradigm influence within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide explicitly references US Core profiles, US-specific organizations (AHRQ, NQF), and US regulations (HIPAA, 42 CFR Part 2). It is designed to address the needs of the US healthcare system and aligns with US-based initiatives. Therefore, it is classified as a National guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of Social Determinants of Health (SDOH) data within clinical care settings. It leverages a Task-driven workflow and StructureMap for assessment data transformation, emphasizing the use of domain-specific value sets for precise coding. While it touches upon administrative aspects related to referrals and coordination, its core purpose is to facilitate the capture, exchange, and utilization of SDOH data to improve patient care and population health.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.8,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.4,
+      "Research": 0.4,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the exchange of Social Determinants of Health (SDOH) data within clinical care settings. It primarily targets EHR systems for capturing and sharing SDOH information, and systems used by Community-Based Organizations (CBOs) for referral management. Clinical Decision Support systems will play a key role in utilizing this data for alerts and recommendations. While not the primary focus, Public Health and Research Platforms can leverage the standardized data for population health analysis and research. Payer systems have minimal involvement as the IG explicitly excludes billing and prior authorization aspects.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of Social Determinants of Health (SDOH) data within clinical care settings. Therefore, Clinical Care Teams are the core users, as they are directly involved in collecting, using, and sharing this data. Community-Based Organizations (CBOs) are also key users, as they receive referrals and provide services based on SDOH needs. Patients and Caregivers are important as they are the subjects of the data and may interact with systems using this IG. Public Health Agencies and Research Organizations can leverage the standardized data for population health and research purposes, respectively. Payers and Government Agencies have a less direct role, primarily related to policy, regulation, and potential future use cases like quality measurement and value-based payment models.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

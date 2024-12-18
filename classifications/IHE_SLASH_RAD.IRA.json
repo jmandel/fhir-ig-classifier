@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The RAD.IRA Implementation Guide is fundamentally based on FHIR and FHIRcast for real-time synchronization of radiology reporting applications. It leverages FHIR resources for context and content sharing, and FHIRcast for publish-subscribe communication. While it acknowledges other HL7 standards like SMART App Launch and IHE profiles, it does not directly utilize CDA, v2, or v3.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The RAD.IRA Implementation Guide is built on top of FHIRcast and does not specify any particular jurisdiction. It references IHE profiles, which are used internationally. Therefore, it is classified as a Universal Realm guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The RAD.IRA Implementation Guide focuses on enabling real-time synchronization and content sharing among applications used during the radiology reporting process. It leverages FHIRcast and FHIR resources to facilitate communication and data exchange between systems like image viewers, reporting systems, and AI tools. The primary domain is Diagnostics, with a strong emphasis on Workflow and Clinical Data related to radiology reporting. Identity & Security is also important for secure communication and access control.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 1,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "RAD.IRA primarily targets systems involved in radiology reporting workflows, particularly those that need to share context and content during the reporting process. EHR systems play a crucial role as they often host reporting applications. Imaging systems are central, as the IG focuses on image display and analysis. Clinical decision support systems, especially AI tools integrated into the reporting workflow, are also key. Lab systems, payer systems, PHR systems, and public health systems have minimal to no involvement. Research platforms might utilize RAD.IRA for studies involving radiology reporting, but their role is limited.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 1,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The RAD.IRA Implementation Guide primarily focuses on streamlining the radiology reporting workflow by enabling real-time synchronization and content sharing among various applications used by radiologists. Therefore, Clinical Care Teams, specifically radiologists, are the core users. Other applications like PACS, RIS and AI tools are also key users. Public Health Agencies, Research Organizations, and Patients have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (ITI.MHDS) focuses on establishing a FHIR-based document sharing ecosystem. It heavily relies on FHIR resources and RESTful interactions, making FHIR the foundational standard. While it acknowledges and integrates with other HL7 standards through IHE profiles, these are secondary to the core FHIR approach. CDA and v2 are not directly relevant, and v3's influence is minimal, primarily through terminology and value sets.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.6,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide (ITI.MHDS) defines a FHIR-based document sharing ecosystem, leveraging and extending existing IHE profiles. It does not specify any particular jurisdiction and is designed for broad applicability, making it a universal guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on establishing a FHIR-based document sharing ecosystem, primarily driven by administrative and workflow needs for exchanging clinical documents. It leverages identity and security mechanisms for access control and patient privacy. While clinical data is exchanged, the IG's design is not centered around specific clinical domains but rather on the infrastructure for document management and exchange.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.8,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on FHIR-based document sharing, primarily impacting EHR systems and HIE platforms. EHRs will act as document sources and consumers. HIE platforms will likely host the Document Registry. PHRs will consume documents. Payer systems have minimal involvement. Public health systems could leverage the shared documents. Research platforms might utilize the data, but it's not a primary focus. Clinical decision support, imaging, lab, and pharmacy systems have limited direct interaction, although the documents shared could contain information relevant to them.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (ITI.MHDS) focuses on enabling interoperable document sharing using FHIR resources. Its primary users are those involved in implementing and utilizing the technical infrastructure for document exchange. Clinical care teams benefit from improved access to patient information, but the IG's design is primarily driven by the needs of system implementers and those managing the document sharing infrastructure. While patients benefit indirectly, they are not the core focus of the IG's design.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

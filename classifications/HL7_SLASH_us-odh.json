@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "This FHIR Implementation Guide (IG) focuses on representing Occupational Data for Health (ODH) using FHIR resources, primarily Observation. It's designed to be integrated into broader IGs and emphasizes clinical, population health, and public health use cases, excluding billing. While it acknowledges other HL7 standards, it's fundamentally built upon and deeply integrated with FHIR.",
+    "summary": "This FHIR Implementation Guide (IG) focuses on representing Occupational Data for Health (ODH) using FHIR resources, primarily Observation. It's designed to be integrated into broader IGs and doesn't utilize HL7 v2, v3, or CDA. While it doesn't explicitly mention cross-paradigm integration, its design for inclusion in other IGs suggests a degree of interoperability with other HL7 standards.",
     "scores": {
       "CDA": 0,
-      "Cross-Paradigm": 0.2,
+      "Cross-Paradigm": 0.4,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "The Implementation Guide is primarily designed for the US realm, as indicated by its development under the National Institute of Occupational Safety and Health (NIOSH), a US agency, and the use of US-specific value sets for occupation, industry, and supervisory level. However, it also acknowledges and supports international needs by incorporating international concepts for work schedule, employment status, and work classification. Therefore, it is classified as a National guide with some consideration for broader applicability.",
+    "summary": "This FHIR Implementation Guide focuses on Occupational Data for Health (ODH) and is explicitly designed for the US Realm, as indicated by its development under the National Institute of Occupational Safety and Health (NIOSH), a US agency. It also references US-specific value sets. While it acknowledges international needs and uses some international concepts, the primary governance and design are centered around US requirements.",
     "scores": {
       "Universal Realm": 0.2,
       "National > United States": 1,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "This FHIR Implementation Guide focuses on defining a standardized way to represent and exchange Occupational Data for Health (ODH). It primarily aims to improve clinical care, population health, and public health reporting by providing structured information about patients' work. While it touches upon administrative aspects by capturing employer information, its core purpose is not administrative. It emphasizes clinical data related to work and its impact on health, and it has a strong connection to public health by facilitating the reporting and analysis of occupational health trends. The IG is designed to be integrated into broader IGs and is not intended for billing or financial purposes.",
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation and exchange of Occupational Data for Health (ODH). It primarily addresses the clinical domain by enabling the capture of work-related information to inform patient care and diagnosis. It also significantly supports public health by providing structured data for analyzing work-related health trends and facilitating reporting. While not designed for billing, it touches upon administrative aspects by capturing employer information. The IG emphasizes structured data representation using FHIR profiles and value sets, with a focus on clinical and public health use cases.",
     "scores": {
-      "Administrative": 0.2,
-      "Care Planning": 0.4,
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
       "Clinical Data": 0.8,
       "Clinical Knowledge": 0.2,
-      "Diagnostics": 0,
+      "Diagnostics": 0.2,
       "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 0.8,
       "Quality & Reporting": 0.6,
       "Research": 0.6,
       "Workflow": 0.4
     }
   },
-  "Implementation Approach": {
-    "summary": "This FHIR Implementation Guide (IG) focuses on defining a standardized way to represent Occupational Data for Health (ODH) using FHIR. Its core technical approach relies heavily on defining data profiles for Observation resources to capture various aspects of occupational history. While it mentions the use of a composition, it's not intended as a standalone document. Terminology plays a significant role, with both US-specific and international value sets defined. The IG primarily supports RESTful interactions for retrieving ODH data, but doesn't define specific services or messaging patterns. It does not cover forms, UI, decision support, or subscriptions.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.2,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation and exchange of Occupational Data for Health (ODH). It's primarily designed for EHRs, Public Health Systems, and Clinical Decision Support systems to enhance clinical care, population health analysis, and public health reporting by incorporating structured work information. While EHRs are central, the IG also significantly impacts Public Health Systems and has a notable role for Clinical Decision Support. Other systems have limited or no involvement.",
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation and exchange of Occupational Data for Health (ODH). It's primarily designed for EHR systems to capture and share structured work information, which is crucial for clinical care, population health analysis, and public health reporting. While EHRs are the core systems, public health systems and research platforms will also play significant roles in utilizing this data. Clinical decision support systems will leverage this information to provide better care, and PHR systems may surface some of this data to patients. Payer systems are explicitly excluded from the scope of this IG.",
     "scores": {
+      "Clinical Decision Support": 0.6,
       "EHR Systems": 1,
-      "PHR Systems": 0,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 0,
       "Pharmacy Systems": 0,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0,
+      "PHR Systems": 0.4,
       "Public Health Systems": 0.8,
-      "Clinical Decision Support": 0.6,
-      "Research Platforms": 0.4
+      "Research Platforms": 0.6
     }
   },
   "Users & Stakeholders": {
-    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation and exchange of occupational data for health (ODH). Its primary users are clinical care teams who need this information for patient care, and public health agencies who use it for population health monitoring and reporting. Research organizations also have a significant stake in using this data. While the IG doesn't directly address the needs of payers or patients, it indirectly benefits them through improved care and public health initiatives. Government agencies have a role in oversight and regulation, and healthcare administrators have a limited role related to implementing the IG within their systems.",
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the representation and exchange of occupational data for health (ODH). Its primary users are clinical care teams and public health agencies, who leverage this data for patient care, population health monitoring, and reporting. Research organizations also play a significant role in utilizing this data for studies. While government agencies have a defined role in oversight and regulation, the IG is not designed for billing or administrative purposes, thus limiting the involvement of payers and healthcare administrators. Patients and caregivers have minimal direct interaction with the IG.",
     "scores": {
       "Clinical Care Teams": 1,
-      "Healthcare Administrators": 0.4,
+      "Healthcare Administrators": 0.2,
       "Patients and Caregivers": 0.2,
       "Payers": 0,
       "Public Health Agencies": 1,
       "Research Organizations": 0.8,
-      "Government Agencies": 0.6
+      "Government Agencies": 0.4
     }
   },
   "meta": {

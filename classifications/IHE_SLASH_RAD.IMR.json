@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on using FHIR to represent radiology reports with interactive multimedia content. It heavily relies on FHIR resources and operations, particularly DiagnosticReport and ImagingSelection. While it acknowledges DICOM for image retrieval, it doesn't directly involve HL7 v2, v3, or CDA. Cross-paradigm integration is minimal, as the focus is primarily on FHIR.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The IHE Radiology Interactive Multimedia Report (IMR) Implementation Guide is an international standard developed under the IHE Radiology domain. It focuses on the standardized encoding, communication, and presentation of diagnostic reports containing interactive multimedia content. It does not specify any national or regional adaptations, making it a universal standard.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The IHE Radiology Interactive Multimedia Report (IMR) Implementation Guide primarily focuses on enabling the standardized exchange and presentation of diagnostic reports containing interactive multimedia content, particularly within the radiology domain. It leverages FHIR resources, especially `DiagnosticReport`, to achieve this. While it touches upon administrative aspects like service requests and imaging studies, its core is the clinical data related to diagnostic imaging and the workflow surrounding the creation, storage, retrieval, and display of these reports.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 1,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling interactive multimedia radiology reports within FHIR. EHR systems will need to display these reports and handle interactions. Imaging systems are central, as they produce the images referenced in the reports. Clinical Decision Support systems might leverage these reports for richer context. Lab, Pharmacy, PHR, Public Health, and Research systems have minimal involvement. Payer systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 1,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The RAD.IMR Implementation Guide primarily focuses on enabling the creation, storage, retrieval, and display of interactive multimedia radiology reports. This directly benefits **Clinical Care Teams**, particularly radiologists, by enhancing diagnostic accuracy and efficiency through interactive reports. **Healthcare Administrators** may have some interest in the operational aspects, but their involvement is less direct. **Patients and Caregivers** may indirectly benefit from improved diagnostic accuracy, but they are not a primary focus. **Payers**, **Public Health Agencies**, **Research Organizations**, and **Government Agencies** have minimal to no direct involvement in the scope of this IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

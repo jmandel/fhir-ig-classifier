@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) is fundamentally based on FHIR, establishing a baseline for Canadian-specific FHIR profiles. It does not utilize HL7 v2, v3, or CDA directly, as its core purpose is to define a common set of FHIR resources and profiles. While it doesn't directly integrate across different HL7 paradigms, it acknowledges the broader HL7 ecosystem by building upon US Core and referencing existing Canadian IGs that may interact with other HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide explicitly states it is designed to provide a national baseline for Canada, addressing the lack of consistent FHIR implementations across Canadian jurisdictions. It references Canadian-specific code systems, value sets, and extensions, and aims to align vendor systems with Canadian requirements. It also mentions alignment with pan-Canadian standards and relevance to all Canadian provinces and territories, as well as Canada Health Infoway.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Canada": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The CA Baseline IG primarily focuses on establishing a foundational set of FHIR profiles for the Canadian healthcare context. It emphasizes minimal constraints and broad applicability, making it a core resource for administrative and clinical data exchange. While it touches upon other domains, its main purpose is to provide a common starting point for more specific IGs, rather than directly addressing complex workflows, clinical knowledge, or specialized areas like research or public health.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.4,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "The Canadian Baseline FHIR Implementation Guide primarily targets EHR systems and systems that will consume data from EHRs, establishing a foundational set of profiles for Canadian healthcare. It emphasizes minimal constraints and broad applicability, making EHR systems the core implementers. Other systems like CDS, Pharmacy, Lab, and Public Health will also interact with this IG, albeit to a lesser extent. Payer systems have minimal involvement, and research platforms are not directly addressed.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The CA Baseline IG primarily serves as a foundational guide for creating other, more specific, FHIR implementation guides within Canada. Its main users are IG authors and system implementers. Clinical care teams and patients are not direct users, but they benefit indirectly from the improved interoperability that this IG aims to facilitate. Payers and public health agencies have a minimal role, while research organizations and government agencies have a slightly more defined but still limited role.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.2,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

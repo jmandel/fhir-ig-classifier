@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR R4 for exchanging rehabilitation data within the Danish healthcare system. It does not utilize HL7 v2, v3, or CDA. While it leverages FHIR profiles and extensions, indicating some level of cross-paradigm thinking within the FHIR ecosystem, it doesn't integrate with other HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the Danish healthcare ecosystem, focusing on reporting §140 rehabilitation data from Danish municipalities to the KL Gateway. It references Danish-specific terminologies (e.g., CPR, SOR, SKS, FSIII), organizations (KL), and legislation (§140). Therefore, it is clearly a national guide for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on standardizing the reporting of §140 rehabilitation data from Danish municipalities to the KL Gateway using FHIR. It primarily deals with clinical data related to rehabilitation, care planning for rehabilitation services, and the administrative aspects of reporting this data. It also touches upon workflow aspects related to the reporting process and has a minor focus on identity and security through the use of CPR and SOR codes.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.8,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the reporting of §140 rehabilitation data from Danish municipalities to the KL Gateway using FHIR. The primary implementers are EHR systems within municipalities, with a strong emphasis on accurate data mapping and reporting. Other systems like Pharmacy and PHR are not directly involved. Public Health systems will have a limited role in consuming the aggregated data.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide (IG) primarily focuses on standardizing the reporting of rehabilitation data from Danish municipalities to the KL Gateway. The core users are the healthcare professionals and administrators within these municipalities who manage and report this data. Government agencies, specifically KL in this context, are also key stakeholders as they receive and utilize this standardized data. While clinical care teams are involved in generating the data, their role in the IG's design is less direct. Public health agencies may benefit from the aggregated data, but they are not the primary focus.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

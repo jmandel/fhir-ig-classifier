@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on defining AuditEvent profiles for FHIR RESTful interactions and related security events. It heavily relies on the FHIR standard for its core structure and functionality. While it acknowledges other HL7 standards like ATNA (which uses HL7 v3 messaging) for transport, it doesn't directly integrate with CDA, v2, or v3 models. Cross-paradigm integration is limited to referencing ATNA.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on defining standardized AuditEvent patterns for common FHIR interactions and security events. It does not specify any particular national or regional scope, and its design is intended for broad applicability across different jurisdictions. While it mentions regulations like HIPAA (USA) and GDPR (EU) as examples of privacy frameworks it supports, it does not tailor its content specifically to either. Therefore, it is best classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining standardized AuditEvent patterns for FHIR RESTful operations and security-related events. It emphasizes patient-centric auditing, security context, and privacy disclosures. While it touches upon administrative aspects through auditing of system interactions, its core purpose is to enhance security and privacy by providing a consistent framework for audit logging. It has limited relation to other domains like care planning, medications, or diagnostics.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 1,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing AuditEvent creation for FHIR RESTful operations, security token usage, and privacy-related events. Therefore, EHR systems and any system interacting with FHIR resources are central to its implementation. Systems involved in authorization and security, like those handling OAuth or SAML, also play a key role. While not directly focused on clinical decision support or specific clinical workflows, the audit trails generated are crucial for security and privacy, indirectly impacting these areas. Payer systems have minimal involvement, primarily related to potential auditing of claims data access. Public health and research platforms may need to implement these audit patterns if they handle patient data via FHIR.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.6,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (ITI.BasicAudit) primarily focuses on standardizing AuditEvent creation for FHIR RESTful operations and security events. It aims to improve audit logging consistency and completeness, supporting privacy, security, and compliance needs. Therefore, the core users are those responsible for implementing and consuming audit logs, such as system developers and security/privacy officers. Clinical care teams and patients have minimal direct involvement, while government agencies and payers have an indirect interest in the compliance aspects.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

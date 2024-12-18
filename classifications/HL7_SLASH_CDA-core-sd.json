@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally about bridging CDA and FHIR. It heavily relies on FHIR to represent CDA structures and enable FHIR-based validation. While it acknowledges v3 through data types, its primary focus is on translating CDA into the FHIR paradigm, making it a cross-paradigm effort.",
+    "scores": {
+      "CDA": 1,
+      "Cross-Paradigm": 0.8,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0.4
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This FHIR Implementation Guide focuses on representing the HL7 Clinical Document Architecture (CDA) R2.0 specification using FHIR resources. It does not specify any particular jurisdiction or region, and its primary goal is to bridge the gap between CDA and FHIR standards, making it applicable universally.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on representing HL7 CDA R2.0 documents using FHIR resources, primarily for validation and processing. It bridges the gap between CDA and FHIR, enabling interoperability and leveraging FHIR's capabilities for CDA content. While it touches upon clinical data representation, its core purpose is to facilitate the technical mapping and validation of CDA documents within the FHIR ecosystem, rather than defining new clinical workflows or care processes.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on bridging the gap between CDA and FHIR, primarily targeting systems that handle CDA documents. EHR systems are central, as they often create, consume, and manage CDA documents. Systems involved in health information exchange, including those that transform or validate CDA documents, also play a key role. While not directly focused on clinical decision support, the ability to represent CDA in FHIR could indirectly benefit CDS systems by enabling easier access to structured clinical data. Similarly, research platforms could leverage this IG to analyze CDA data using FHIR tools. Other system types have minimal or no direct involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on bridging the gap between HL7 CDA R2.0 and FHIR, primarily targeting developers and implementers who need to process or exchange CDA documents using FHIR tools. Clinical care teams and patients are not directly involved, while healthcare administrators and government agencies have a limited role. The IG's design is driven by the needs of developers and implementers working with both CDA and FHIR.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

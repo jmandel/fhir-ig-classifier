@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide focuses on representing military service history using FHIR resources, particularly Observation. It extends US Core and leverages terminology from ODH, LOINC, and SNOMED CT. It does not utilize CDA, v2, or v3, and its cross-paradigm support is limited to integrating FHIR with existing terminologies.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for the US realm, focusing on US Veteran Benefits and referencing US-specific standards and organizations like the VA. While it acknowledges extensibility to other jurisdictions, its primary scope and content are centered around US requirements.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on representing and exchanging military service history and veteran status, primarily within the US healthcare context. It leverages the Observation resource to capture details about service episodes, deployments, and occupations. While it touches upon administrative aspects related to veteran benefits and clinical data relevant to assessing health risks, its core purpose is to standardize the recording and sharing of military service information.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0.2,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0,
+      "Research": 0.2,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on representing and exchanging military service history and veteran status, primarily impacting EHR systems that need to record and share this information.  It also has implications for systems involved in veteran benefits administration and potentially for clinical decision support related to service-connected health risks. The IG's reliance on US Core and its focus on US veteran benefits administration further define the ecosystem of relevant systems.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.6,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the standardized exchange of military service history and veteran status information, primarily within the US healthcare system. The design is driven by the need to verify veteran status and support clinical care and administrative workflows related to veteran benefits. Therefore, Clinical Care Teams and Healthcare Administrators are the core users, with Government Agencies (specifically the VA) having significant influence. Patients and Caregivers benefit from improved care coordination, while Public Health Agencies and Research Organizations can leverage the standardized data for population health and research purposes.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.6,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

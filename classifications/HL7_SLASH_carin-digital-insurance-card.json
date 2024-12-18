@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, defining profiles and extensions to represent insurance card data within the FHIR framework. It acknowledges v2 for identifier types but doesn't deeply integrate with it. It doesn't use CDA or v3. Cross-paradigm integration is limited but present in its use of SMART Health Links and references to other IGs.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0.2,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it focuses on the US healthcare context and builds upon US Core. It also references the CARIN Alliance, a US-based organization. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on standardizing the representation of digital insurance card data within FHIR. Its primary goal is to enable the exchange and rendering of insurance information for consumer-facing applications. It heavily emphasizes insurance and financial aspects, with supporting elements for administrative and identity/security domains. Other clinical domains are not directly addressed.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 1,
+      "Medications": 0.2,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the digital representation of insurance card data, primarily for consumer-facing applications. Therefore, Payer Systems and PHR Systems are the most critical implementers. EHR Systems have a limited role in displaying this information, while other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 1,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.8,
+      "Public Health Systems": 0,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on standardizing the digital representation of insurance card data. Its primary goal is to empower patients and their representatives by providing them with digital access to their insurance information. Payers are key players as they are responsible for implementing the IG and making the data available. While clinical care teams might use the digital insurance card for verification, they are not the primary drivers. Public health and research organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 1,
+      "Payers": 0.8,
+      "Public Health Agencies": 0,
+      "Research Organizations": 0,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

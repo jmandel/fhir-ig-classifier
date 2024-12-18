@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally about using CQL with FHIR. It heavily relies on FHIR resources, profiles, and operations to define how CQL logic is represented, packaged, and evaluated within the FHIR ecosystem. It does not use CDA, v2, or v3 directly, but acknowledges the HL7 Cross-Paradigm Specification for Representing Negatives, indicating a minimal level of cross-paradigm awareness.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is a \"universal realm specification\" and is designed for broad applicability across various healthcare contexts using CQL with FHIR, without specific regional adaptations.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide primarily focuses on standardizing the use of Clinical Quality Language (CQL) with FHIR resources. Its core purpose is to enable the representation, evaluation, and exchange of clinical logic, making it central to clinical knowledge and its application in various healthcare domains. While it touches upon other areas like clinical data and workflow, these are secondary to the primary goal of enabling computable clinical knowledge.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0.4,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0.2,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.8,
+      "Research": 0.6,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing the use of CQL with FHIR, primarily impacting systems involved in clinical decision support, quality measurement, and research. EHR systems will need significant integration to support CQL evaluation and display results. Payer and public health systems may leverage CQL for quality reporting and population health analysis, respectively. Pharmacy and imaging systems have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 1,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG primarily targets developers and informaticists building systems that use CQL with FHIR for various healthcare applications. Clinical Care Teams and Research Organizations are important users as they will utilize the outputs of these systems. Public Health Agencies and Payers may also benefit from standardized quality reporting enabled by this IG. Government Agencies have a minimal role, primarily in setting standards that this IG helps implement. Patients and Healthcare Administrators are not directly involved.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0,
+      "Patients and Caregivers": 0,
+      "Payers": 0.4,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

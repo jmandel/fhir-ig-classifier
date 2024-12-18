@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "This IG is fundamentally about translating between C-CDA and FHIR. It heavily relies on FHIR and its resources to represent C-CDA documents. While it acknowledges C-CDA as the source format, it doesn't deeply integrate with CDA's structural elements beyond mapping them to FHIR. There's a deliberate effort to bridge the two standards, indicating a cross-paradigm approach. v2 and v3 are not relevant to the IG's core purpose.",
+    "summary": "This IG is fundamentally about translating between C-CDA and FHIR. It heavily relies on FHIR R4 and US Core to represent C-CDA documents and their clinical content. While it acknowledges C-CDA as the source format, it focuses on FHIR as the target representation. There's no mention of v2 or v3, and the cross-paradigm aspect is limited to the C-CDA to FHIR translation.",
     "scores": {
       "CDA": 0.8,
-      "Cross-Paradigm": 0.8,
+      "Cross-Paradigm": 0.6,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "This Implementation Guide focuses on bridging C-CDA and FHIR within the US healthcare system, utilizing US Core profiles and addressing US-specific interoperability challenges. Therefore, it is clearly a national guide for the United States.",
+    "summary": "This Implementation Guide focuses on bridging C-CDA and FHIR within the US healthcare system, leveraging US Core profiles and addressing US-specific interoperability challenges. Therefore, it is clearly a national guide for the United States.",
     "scores": {
       "Universal Realm": 0,
       "National > United States": 1,
@@ -18,52 +18,38 @@
     }
   },
   "Domain Focus": {
-    "summary": "This IG focuses on bridging the gap between C-CDA and FHIR, primarily by defining mappings and profiles to represent C-CDA documents and their clinical content in FHIR. It heavily emphasizes the representation of clinical data using US Core profiles and addresses administrative aspects related to document exchange. While it touches upon identity, security, and workflow, its core purpose revolves around clinical data interoperability between C-CDA and FHIR.",
+    "summary": "This IG focuses on bridging the gap between C-CDA and FHIR, primarily by defining mappings and profiles to represent C-CDA documents and their clinical content in FHIR. Therefore, it heavily emphasizes **Clinical Data** as its core domain. While it touches upon administrative aspects through document management and references US Core, the central goal is to facilitate the exchange and representation of clinical information. **Workflow** is also a key domain, as the IG addresses the process of transforming and exchanging documents. **Identity & Security** is addressed through extensions for elements like Authorization and Informant, but not as a central focus. Other domains like **Medications**, **Diagnostics**, and **Care Planning** are supported through mappings to relevant FHIR resources, but the IG's primary purpose is not to define new specifications in these areas, but rather to represent existing C-CDA content.",
     "scores": {
       "Administrative": 0.6,
       "Care Planning": 0.4,
       "Clinical Data": 1,
       "Clinical Knowledge": 0.2,
       "Diagnostics": 0.4,
-      "Identity & Security": 0.4,
-      "Medications": 0.8,
-      "Payment & Financial": 0,
+      "Identity & Security": 0.6,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.4,
       "Public Health": 0.2,
       "Quality & Reporting": 0,
       "Research": 0,
-      "Workflow": 0.4
-    }
-  },
-  "Implementation Approach": {
-    "summary": "This IG focuses on bridging C-CDA and FHIR by defining profiles for representing C-CDA documents as FHIR resources, particularly Composition resources within a Bundle. It heavily relies on Data Profiles and Terminology mappings to achieve this. While REST APIs are used for document retrieval, the core is not about defining new APIs but rather leveraging existing FHIR document operations. Messaging and Decision Support are not central to this IG's purpose.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.8,
-      "Forms & UI": 0,
-      "Messaging": 0,
-      "REST APIs": 0.6,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.8
+      "Workflow": 0.8
     }
   },
   "Implementers": {
-    "summary": "This IG focuses on bridging C-CDA and FHIR for document exchange, primarily impacting systems that produce or consume C-CDA documents. EHR systems are central, as they are the primary sources and consumers of clinical documents. Systems that facilitate data exchange, like HIEs (categorized under EHR Systems), are also crucial. Clinical Decision Support systems will need to understand the mapped FHIR resources for providing relevant guidance. While other systems have limited involvement, they might need to handle the transformed FHIR data in specific contexts.",
+    "summary": "This IG focuses on bridging C-CDA and FHIR for document exchange, primarily impacting EHRs and systems handling clinical documents. EHR systems are central to implementing the mappings and transformations. Systems that consume or produce C-CDA documents will need significant integration. Public health systems may have limited involvement in receiving transformed data. Research platforms might use this for data extraction, and PHR systems could benefit from receiving FHIR-formatted data.",
     "scores": {
+      "Clinical Decision Support": 0.2,
       "EHR Systems": 1,
-      "PHR Systems": 0.2,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.4,
       "Payer Systems": 0,
-      "Pharmacy Systems": 0.2,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0.2,
+      "Pharmacy Systems": 0.4,
+      "PHR Systems": 0.4,
       "Public Health Systems": 0.4,
-      "Clinical Decision Support": 0.8,
       "Research Platforms": 0.4
     }
   },
   "Users & Stakeholders": {
-    "summary": "This Implementation Guide (IG) focuses on enabling interoperability between C-CDA and FHIR for systems primarily within the US healthcare ecosystem. The core users are those involved in developing and implementing systems that exchange clinical documents. Clinical Care Teams benefit from improved data exchange, while Public Health Agencies and Government Agencies have a stake in the standardization and reporting aspects. Patients and Payers have minimal direct involvement.",
+    "summary": "This Implementation Guide (IG) focuses on enabling interoperability between C-CDA and FHIR for systems within the US healthcare ecosystem. The primary users are developers and implementers responsible for transforming and exchanging clinical documents. Clinical Care Teams benefit from improved data exchange, while Public Health Agencies and Government Agencies have a stake in the standardization and reporting aspects. Patients and Payers have minimal direct involvement.",
     "scores": {
       "Clinical Care Teams": 0.6,
       "Healthcare Administrators": 0.2,

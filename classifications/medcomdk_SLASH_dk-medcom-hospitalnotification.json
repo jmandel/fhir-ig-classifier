@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide defines a message-based exchange of hospital notifications using FHIR. It heavily relies on FHIR for its core structure and data representation, with no mention or use of CDA, v2, or v3. While it uses FHIR messaging, it doesn't explicitly integrate with other HL7 paradigms, making the Cross-Paradigm score low.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is specifically designed for the Danish healthcare system, as evidenced by its references to Danish CPR numbers, MedCom governance, and the use of Danish-specific terminology and value sets. It focuses on the exchange of hospital notifications between hospitals and municipalities within Denmark, making it a national guide.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The `dk-medcom-hospitalnotification` IG focuses on facilitating the exchange of hospital notifications between Danish hospitals and municipalities to ensure continuity of care during transitions. It leverages FHIR R4 and builds upon core profiles and extensions to define a message-based exchange of essential information related to patient admission, leave, and discharge. While it touches upon clinical data through the Encounter resource, its primary driver is the administrative and workflow aspects of coordinating care between different healthcare settings.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on hospital notification messages between Danish hospitals and municipalities. EHR systems in hospitals are central to generating these notifications, while systems in municipalities are key to receiving and processing them.  The IG has minimal relevance to other system types.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide, `dk-medcom-hospitalnotification`, primarily focuses on facilitating communication between Danish hospitals and municipalities regarding patient admissions, leaves, and discharges. Clinical Care Teams in both hospitals and municipalities are the core users, driving the design to ensure continuity of care. Healthcare Administrators in these organizations also have a significant influence, as they manage the systems involved. Public Health Agencies have a defined but limited role, potentially using aggregated data for monitoring. Government Agencies have a minimal role, primarily related to the regulation and oversight of the Danish healthcare system and MedCom. Patients, Payers, and Research Organizations are not meaningfully involved in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.8,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0,
+      "Government Agencies": 0.2
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

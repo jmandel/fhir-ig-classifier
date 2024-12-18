@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on defining SMART Health Cards and SMART Health Links, which are mechanisms for verifiable health data exchange. It heavily relies on FHIR for data representation and leverages FHIR operations for card issuance. While it acknowledges other HL7 standards, its core functionality is built around FHIR. It does not use v2, v3, or CDA directly.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide defines the specifications for SMART Health Cards and SMART Health Links, designed for international use without jurisdiction-specific constraints. It focuses on the technical framework for creating, issuing, storing, and verifying these cards and links, making it broadly applicable across different regions and healthcare systems.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This Implementation Guide focuses on enabling individuals to access, store, and share their health information securely using SMART Health Cards and SMART Health Links. It emphasizes verifiable and privacy-preserving data exchange, particularly for vaccination records, lab results, and insurance information. While it touches upon clinical data and identity, its core purpose is to establish a framework for secure data portability and interoperability, rather than deep clinical or administrative workflows.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0.4,
+      "Identity & Security": 1,
+      "Insurance, Payment & Financial": 0.4,
+      "Medications": 0.2,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on enabling individuals to access, store, and share their health information securely using SMART Health Cards and SMART Health Links. EHRs are key for issuing cards, PHRs are core for storing and managing them, and Public Health Systems are important for vaccination records. Payer Systems are relevant for insurance information. Pharmacy and Lab Systems are important sources of data for the cards. Clinical Decision Support has minimal involvement, while Research Platforms and Imaging Systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.6,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 1,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This Implementation Guide focuses on enabling individuals to access, store, and share their health information securely. It primarily targets developers of Health Wallet applications, issuers of health data (like labs and pharmacies), and verifiers of health information. Clinical Care Teams and Patients are key beneficiaries, while Public Health Agencies and Government Agencies have a significant role in oversight and adoption. Payers and Research Organizations have a more limited role in this specific IG, although they may be more central in related, use-case-specific IGs.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.8,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

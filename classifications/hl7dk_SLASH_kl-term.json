@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide primarily focuses on defining a terminology framework for Danish municipal health and social care using FHIR ValueSets. It heavily relies on FHIR for its structure and incorporates SNOMED CT for specific observations. While it bridges two existing Danish terminologies (FSIII and FFB), it doesn't directly support HL7 v2, v3, or CDA. The IG demonstrates a degree of cross-paradigm thinking by integrating FHIR with existing terminologies, but its primary focus is on FHIR-based terminology.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide is explicitly designed for use within Danish municipalities, focusing on standardizing the exchange of health and social care information. It defines CodeSystems and ValueSets specific to the needs of Local Government Denmark, incorporating existing Danish terminologies (FSIII and FFB) and referencing SNOMED CT. The IG's scope is clearly limited to the Danish municipal context, making it a national guide for Denmark.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > Denmark": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide focuses on establishing a unified terminology framework for Danish municipal health and social care by bridging the FSIII and FFB terminologies using FHIR ValueSets. It primarily addresses administrative and clinical data domains within the context of care coordination and service delivery in Danish municipalities. While it touches upon care planning and workflow through implied support for assessment, intervention planning, and observation recording, its core strength lies in standardizing the representation of clinical and administrative concepts.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.6,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.4,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing terminology for Danish municipal health and social care, bridging the FSIII and FFB terminologies. It primarily impacts EHR systems used within Danish municipalities for managing health and social care information. While it doesn't define specific profiles or operations, the extensive use of ValueSets for conditions, observations, interventions, and other concepts suggests a significant role for EHR systems in implementing the IG. Other systems like Pharmacy, Imaging, and Lab are not directly addressed. Payer systems are not in scope. Public Health systems may benefit from aggregated data, and Research Platforms could utilize the standardized terminology for data analysis. PHR systems could potentially leverage the citizen observation codes. Clinical Decision Support systems might use the standardized terminology for triggering rules, but the IG doesn't explicitly define CDS functionality.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide primarily targets the Danish municipal health and social care ecosystem. Its core purpose is to standardize terminology and facilitate data exchange between different systems and sectors within this context. Clinical Care Teams and Healthcare Administrators within Danish municipalities are the primary users, with Government Agencies having a significant role in oversight and policy. Public Health Agencies also benefit from the standardized data for population health analysis. Other groups have a more limited or indirect role.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 1,
+      "Patients and Caregivers": 0.4,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide (IG) focuses on standardizing Morphine Milligram Equivalent (MME) calculations for opioid medications using FHIR resources. It heavily relies on FHIR for its core structure and data representation, with no direct dependence on CDA, v2, or v3. While it utilizes external terminologies like RxNorm and UCUM, its primary focus is within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide primarily focuses on standardizing Morphine Milligram Equivalents (MME) calculations for opioid medications. It references CDC guidelines and uses RxNorm and UCUM terminologies, indicating a strong alignment with US practices. While the core logic could be adapted elsewhere, the explicit mention of CDC guidelines and the context of opioid use in the US make it most relevant to the United States.",
+    "scores": {
+      "Universal Realm": 0.2,
+      "National > United States": 0.8,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the calculation of Morphine Milligram Equivalents (MME) for opioid medications, primarily within the context of MedicationRequests. It leverages clinical data, specifically medication information, and utilizes clinical knowledge in the form of conversion factors to achieve this. While it touches upon workflow and quality reporting related to opioid use, its core purpose is to provide a consistent and accurate method for MME calculation.",
+    "scores": {
+      "Administrative": 0,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.8,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 1,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.6,
+      "Research": 0,
+      "Workflow": 0.4
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on standardizing Morphine Milligram Equivalent (MME) calculations for opioid medications, primarily impacting systems involved in prescribing, dispensing, and monitoring opioid use. EHRs and Pharmacy Systems are central to implementation, with Clinical Decision Support playing a key role in utilizing the calculated MME for alerts and guidance. Public Health Systems may use aggregated MME data for population-level monitoring, and Research Platforms might leverage it for studies on opioid use. Payer Systems have minimal involvement, primarily related to potential policy implications based on MME data.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 1,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing Morphine Milligram Equivalent (MME) calculations for opioid medications. Its core users are **Clinical Care Teams** who need accurate MME calculations for safe prescribing and monitoring. **Public Health Agencies** and **Research Organizations** are also key users, leveraging standardized MME data for population health monitoring and research. **Payers** and **Government Agencies** have a significant interest in the IG for quality measurement, reporting, and policy development related to opioid use. **Healthcare Administrators** have a defined but limited role, primarily in implementing systems that support the IG. **Patients and Caregivers** have minimal direct interaction with the IG but benefit indirectly from improved safety and quality of care.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.6,
+      "Public Health Agencies": 0.8,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

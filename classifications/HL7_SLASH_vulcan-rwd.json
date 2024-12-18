@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide is fundamentally based on FHIR, using it to define profiles and search parameters for extracting Real World Data from EHRs. It leverages other HL7 standards minimally, primarily for context and potential future integration, but not for its core functionality.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on extracting Real World Data (RWD) from EHRs for clinical research. While it references US Core for some extensions and acknowledges the potential for jurisdiction-specific versions, it primarily aims for a jurisdiction-agnostic approach, building upon the International Patient Access (IPA) profile. Therefore, it is best classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 0.8,
+      "National": 0.2,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on enabling the extraction and utilization of Real World Data (RWD) from Electronic Health Record (EHR) systems for clinical research purposes. It defines FHIR profiles and search parameters to facilitate cohort identification and data retrieval, emphasizing the use of standard FHIR search operations and building upon the International Patient Access (IPA) specification. While it touches upon clinical data and workflow, its core purpose is to support research by standardizing the representation of clinical data for secondary use.",
+    "scores": {
+      "Administrative": 0.2,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.6,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.6,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 1,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on extracting Real World Data (RWD) from EHR systems for clinical research. Therefore, EHR systems are the core implementers. Research platforms will heavily utilize the extracted data. Systems involved in clinical documentation like lab and pharmacy systems will have important roles in providing data. Public health systems might use aggregated RWD, and CDS systems could potentially leverage RWE generated from this data, but their involvement is less direct. Payer and PHR systems are not directly involved in the scope of this IG.",
+    "scores": {
+      "Clinical Decision Support": 0.4,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.8
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on enabling the extraction of Real World Data (RWD) from Electronic Health Records (EHRs) for clinical research. Therefore, Research Organizations are the core users, driving the IG's design. Clinical Care Teams have a limited role as their data is being used, and Government Agencies have a significant influence due to the potential use of RWE in regulatory submissions. Public Health Agencies may also benefit from the standardized data. Patients, Payers, and Healthcare Administrators have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 1,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

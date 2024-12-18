@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "The BSeR Implementation Guide primarily focuses on streamlining the referral process between healthcare providers and community-based organizations, emphasizing workflow management and care coordination. It leverages US Core profiles and defines specific profiles for referral requests and feedback, supporting both push and pull exchange paradigms. While it touches upon clinical data exchange, its core purpose is to facilitate a closed-loop referral system, particularly for chronic health conditions.",
+    "summary": "The Bidirectional Services eReferral (BSeR) IG primarily focuses on streamlining and standardizing the referral process between healthcare providers and community-based organizations, particularly for chronic health conditions. It emphasizes workflow management and care coordination through a closed-loop referral system, leveraging FHIR R4 and building upon US Core. While clinical data is exchanged, the focus is on the referral process itself, making workflow and care planning the core domains.",
     "scores": {
       "Administrative": 0.6,
-      "Care Planning": 0.8,
-      "Clinical Data": 0.6,
+      "Care Planning": 1,
+      "Clinical Data": 0.8,
       "Clinical Knowledge": 0.2,
       "Diagnostics": 0,
       "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
-      "Public Health": 0.4,
-      "Quality & Reporting": 0.2,
+      "Public Health": 0.6,
+      "Quality & Reporting": 0.4,
       "Research": 0,
       "Workflow": 1
     }
   },
-  "Implementation Approach": {
-    "summary": "The BSeR IG primarily focuses on defining data profiles and using messaging and REST APIs for referral exchange. It leverages terminology for coding and uses Task resources for workflow management, making it a document and messaging-centric guide with a strong emphasis on data modeling and RESTful interactions. Decision support is not a core focus, and while forms are mentioned, they are not central to the IG's approach.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.8,
-      "Forms & UI": 0.2,
-      "Messaging": 0.8,
-      "REST APIs": 0.8,
-      "Services": 0.4,
-      "Subscriptions": 0,
-      "Terminology": 0.8
-    }
-  },
   "Implementers": {
-    "summary": "The Bidirectional Services eReferral (BSeR) IG primarily targets systems involved in the referral process, particularly EHRs used by referral initiators and recipients.  It also heavily involves systems that facilitate the exchange of health information, such as HIEs and HINs, which may act as intermediaries. Clinical Decision Support systems are important for guiding referral decisions. PHR systems have a limited role in viewing referral information, while Payer, Pharmacy, Lab, Imaging, and Research systems have minimal to no direct involvement.",
+    "summary": "The Bidirectional Services eReferral (BSeR) IG primarily targets EHR systems and systems used by Community-Based Organizations (CBOs) for managing referrals. EHR systems will initiate and receive feedback on referrals, while CBO systems will receive and process referrals, providing feedback.  Clinical Decision Support systems may play a role in identifying patients needing referrals. Payer systems have minimal involvement, primarily related to potential authorization requirements. Public Health and Research systems may utilize aggregated data from these referrals for population health analysis and research purposes, respectively. Pharmacy and Imaging systems are not directly involved in the core referral process defined by this IG.",
     "scores": {
+      "Clinical Decision Support": 0.6,
       "EHR Systems": 1,
-      "PHR Systems": 0.4,
-      "Payer Systems": 0,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0.2,
       "Pharmacy Systems": 0,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0.2,
-      "Public Health Systems": 0.2,
-      "Clinical Decision Support": 0.8,
-      "Research Platforms": 0
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.4,
+      "Research Platforms": 0.4
     }
   },
   "Users & Stakeholders": {
-    "summary": "The Bidirectional Services eReferral (BSeR) IG primarily focuses on facilitating communication and coordination between healthcare providers and community-based organizations (CBOs) for chronic condition management. Clinical Care Teams are the core users, driving the design with their need for a closed-loop referral process. Healthcare Administrators and Public Health Agencies have significant influence due to their roles in managing referrals and monitoring population health, respectively. Payers and Research Organizations have specific needs related to reimbursement and data analysis. Patients and Caregivers have a limited role, primarily as the subjects of the referrals. Government Agencies have minimal involvement, mainly concerning regulatory compliance.",
+    "summary": "The Bidirectional Services eReferral (BSeR) IG primarily focuses on facilitating communication and coordination between healthcare providers and community-based organizations (CBOs) for chronic condition management. Clinical Care Teams are the core users, driving the design with their need for a closed-loop referral process. Healthcare Administrators and Public Health Agencies have significant influence due to their roles in managing referrals and monitoring population health, respectively. Payers and Government Agencies have a defined but limited role, primarily related to reimbursement and regulatory compliance. Research Organizations and Patients/Caregivers have minimal involvement in this specific IG.",
     "scores": {
       "Clinical Care Teams": 1,
       "Healthcare Administrators": 0.8,
-      "Patients and Caregivers": 0.4,
-      "Payers": 0.6,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.4,
       "Public Health Agencies": 0.8,
-      "Research Organizations": 0.6,
-      "Government Agencies": 0.2
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
     }
   },
   "meta": {

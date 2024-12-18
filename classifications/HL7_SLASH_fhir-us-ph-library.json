@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on defining reusable FHIR R4 profiles and extensions for US public health reporting. It heavily relies on FHIR and extends US Core, with no mention of CDA, v2, or v3. While it promotes interoperability, it doesn't explicitly address cross-paradigm integration.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The Implementation Guide explicitly states it is for the \"US Realm\" and focuses on US public health, referencing US Core and addressing interoperability challenges specific to the US. It defines profiles, extensions, and value sets tailored for US public health reporting, making it a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The US Public Health Profiles Library (USPHPL) IG primarily focuses on standardizing data representation and exchange for public health reporting in the US. It leverages FHIR R4 and extends US Core to define reusable profiles and extensions for capturing and sharing public health data. While it touches upon clinical data, its core purpose is to facilitate interoperability and reduce redundancy in public health reporting workflows, particularly for electronic case reporting (eCR).",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.4,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 1,
+      "Quality & Reporting": 0.6,
+      "Research": 0.4,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The US Public Health Profiles Library (USPHPL) IG is primarily designed for standardizing data exchange between EHR systems and Public Health Systems. It heavily relies on reusable FHIR profiles and extensions, focusing on electronic case reporting and public health surveillance. EHR systems are expected to extract and format data according to the IG, while Public Health Systems will receive, process, and potentially respond to these reports. Other systems like Pharmacy and Lab Systems play a supporting role in providing data that contributes to the reports. Payer and PHR systems have minimal involvement, and Clinical Decision Support systems may indirectly benefit from standardized data but are not a primary focus.",
+    "scores": {
+      "Clinical Decision Support": 0.2,
+      "EHR Systems": 1,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.4
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The US Public Health Profiles Library (USPHPL) primarily serves to standardize and streamline public health data exchange in the US. Its design is driven by the needs of Public Health Agencies and EHR vendors, with significant input from Clinical Care Teams and Government Agencies. While other groups have a role, their influence is less pronounced in this specific IG.",
+    "scores": {
+      "Clinical Care Teams": 0.8,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

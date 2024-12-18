@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This FHIR Implementation Guide (IG) for ophthalmology heavily relies on the FHIR standard for its core structure and functionality, defining profiles, extensions, and value sets based on FHIR resources. It does not utilize HL7 v2, v3, or CDA, focusing solely on a FHIR-based approach to data exchange. While it doesn't explicitly integrate across different HL7 paradigms, its reliance on FHIR and mention of potential integration with other FHIR profiles suggests a moderate level of cross-paradigm awareness.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.4,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The FHIR Implementation Guide for ophthalmology is explicitly designed for international use, without specific constraints or adaptations for a particular country or region. It aims to provide a universal standard for representing ophthalmic data in FHIR, as evidenced by its endorsements from organizations in multiple countries and its focus on addressing the lack of universal implementation guidance in the field.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide primarily focuses on standardizing the representation and exchange of clinical data within the ophthalmology domain. It defines profiles and extensions for observations, conditions, procedures, and diagnostic reports specific to eye care, with a strong emphasis on diagnostic testing and clinical findings. While it touches upon administrative aspects through patient references and workflow implications, its core purpose is to enable interoperability for clinical data exchange in ophthalmology.",
+    "scores": {
+      "Administrative": 0.4,
+      "Care Planning": 0.2,
+      "Clinical Data": 1,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.8,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.6,
+      "Research": 0.8,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide focuses on standardizing the representation and exchange of ophthalmic data. Therefore, EHR systems and Imaging Systems within the ophthalmology domain are the primary implementers. Systems involved in ophthalmic diagnostics, such as specialized Lab Systems, will also require significant integration. Clinical Decision Support systems tailored for ophthalmology will benefit from this standardization. While the IG has implications for research, the focus is primarily on clinical data exchange. Payer systems have minimal involvement, and PHR systems have a limited role in accessing specific ophthalmic data.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.8,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0.2,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.2,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the representation and exchange of ophthalmic data. Its design is driven by the needs of clinicians involved in eye care and researchers studying ophthalmic conditions. While other groups like patients and payers may benefit indirectly, their influence on the IG's specifications is less significant.",
+    "scores": {
+      "Clinical Care Teams": 1,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0.2,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.8,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

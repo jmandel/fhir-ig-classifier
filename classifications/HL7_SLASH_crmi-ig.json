@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "The CRMI IG is fundamentally based on FHIR, defining profiles, operations, and capability statements for managing FHIR knowledge artifacts. It does not directly utilize CDA, v2, or v3, but it does acknowledge the need for integration across different FHIR-based standards and approaches, hence a minimal score for Cross-Paradigm.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "The CRMI IG explicitly states it is \"universal-realm\", meaning it is designed for international use without jurisdiction-specific constraints. The guide focuses on the technical infrastructure for managing FHIR knowledge artifacts and does not include any regional or national adaptations.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "The CRMI IG primarily focuses on establishing a framework for managing the lifecycle of FHIR-based knowledge artifacts. It defines profiles, operations, and capability statements to facilitate artifact management, versioning, dependency tracing, and packaging. While it touches upon clinical knowledge through the management of artifacts like decision support rules and quality measures, its core purpose is to provide the infrastructure for managing these artifacts rather than defining their specific clinical content. Therefore, it scores highest in Clinical Knowledge and Workflow, with significant relevance to Administrative aspects and some connection to Quality & Reporting.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.2,
+      "Clinical Knowledge": 1,
+      "Diagnostics": 0,
+      "Identity & Security": 0,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0.6,
+      "Research": 0.2,
+      "Workflow": 0.8
+    }
+  },
+  "Implementers": {
+    "summary": "The CRMI IG focuses on the management and lifecycle of FHIR-based knowledge artifacts. Therefore, systems involved in creating, managing, distributing, and using these artifacts are most relevant. EHR systems will need to integrate with these artifacts, and clinical decision support systems will heavily rely on them. Research platforms may also utilize these artifacts for defining study criteria and data analysis. Public health systems might leverage these for population-level quality measures. Payer systems may use them for value-based care programs. Pharmacy and imaging systems have minimal direct involvement. PHR systems are not directly involved.",
+    "scores": {
+      "Clinical Decision Support": 1,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0,
+      "Lab Systems": 0.2,
+      "Payer Systems": 0.4,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "The CRMI IG primarily targets developers and implementers of systems that manage FHIR knowledge artifacts. Clinical care teams and patients have minimal direct involvement. The IG's focus on artifact management infrastructure makes it crucial for those building and maintaining the systems, with less direct impact on end-users like clinicians or patients.",
+    "scores": {
+      "Clinical Care Teams": 0.2,
+      "Healthcare Administrators": 0.4,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.4,
+      "Research Organizations": 0.6,
+      "Government Agencies": 0.6
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally based on FHIR, defining a library of FHIR resources for vital records. It does not use CDA, v2, or v3. While it doesn't explicitly integrate across different HL7 paradigms, it does leverage US Core, which itself is built on FHIR, demonstrating a degree of cross-paradigm awareness within the FHIR ecosystem.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on standardizing the exchange of vital records data between U.S. jurisdictions and the National Center for Health Statistics (NCHS). It defines a library of reusable FHIR resources for vital records data, specifically tailored to U.S. needs and referencing U.S. specific code systems and value sets. Therefore, it is clearly a national guide for the United States.",
+    "scores": {
+      "Universal Realm": 0,
+      "National > United States": 1,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on creating a standardized library of reusable FHIR resources for vital records data exchange, primarily between jurisdictions and the National Center for Health Statistics (NCHS). It emphasizes demographic and person-related data elements common across vital events like birth, death, and fetal death. While it touches upon administrative aspects related to vital records, its core purpose is to define the data structure and content, not the processes or workflows. Therefore, it heavily emphasizes clinical data related to vital events, with a strong connection to public health for population-level health monitoring through vital statistics.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 1,
+      "Quality & Reporting": 0.4,
+      "Research": 0.2,
+      "Workflow": 0.2
+    }
+  },
+  "Implementers": {
+    "summary": "The vr-common-library IG focuses on standardizing the exchange of vital records data between jurisdictions and the NCHS. It primarily impacts systems involved in collecting, managing, and reporting vital records, with a strong emphasis on public health systems. EHR systems play a supporting role in providing source data, while other systems have minimal or no involvement.",
+    "scores": {
+      "Clinical Decision Support": 0,
+      "EHR Systems": 0.4,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0,
+      "PHR Systems": 0,
+      "Public Health Systems": 1,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily focuses on standardizing the exchange of vital records data between jurisdictions and the National Center for Health Statistics (NCHS). Therefore, Public Health Agencies are the core users, as they rely on this standardized data for population health monitoring. Government Agencies also have a significant role in regulating and overseeing this data exchange. Clinical Care Teams, while interacting with some of this data, are not the primary drivers of the IG's design. Payers and Research Organizations have limited involvement, and Patients/Caregivers are not directly involved in the data exchange defined by this IG.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.8
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This IG is fundamentally built upon FHIR, specifically to extend and adapt its subscription mechanism for older versions. It does not utilize or reference CDA, v2, or v3. While it does not integrate different HL7 standards, it does adapt concepts from FHIR R5 for use in R4 and R4B, showing a form of cross-version compatibility within FHIR itself.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.2,
+      "FHIR": 1,
+      "v2": 0,
+      "v3": 0
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on backporting the R5 subscription model to FHIR R4 and R4B. It does not specify any particular jurisdiction or region, and its primary goal is to provide a standardized approach for topic-based subscriptions across different FHIR versions. Therefore, it is considered a universal guide.",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on enabling topic-based subscriptions in FHIR R4 and R4B, similar to the R5 Subscriptions framework. It primarily addresses the workflow of real-time data exchange and event-driven notifications. While it touches upon administrative aspects through subscription management and mentions potential use cases in public health and clinical data exchange, its core purpose is to define the technical mechanism for subscriptions and notifications. Therefore, Workflow is the primary domain, with Clinical Data and Administrative domains playing supporting roles.",
+    "scores": {
+      "Administrative": 0.6,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.6,
+      "Clinical Knowledge": 0,
+      "Diagnostics": 0,
+      "Identity & Security": 0.4,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0,
+      "Public Health": 0.2,
+      "Quality & Reporting": 0,
+      "Research": 0,
+      "Workflow": 1
+    }
+  },
+  "Implementers": {
+    "summary": "This FHIR Implementation Guide (IG) focuses on backporting R5's topic-based subscription mechanism to R4 and R4B. It primarily impacts systems that need to send or receive real-time notifications based on specific events. EHR systems are central, as they often manage the data being subscribed to and initiate subscriptions. Systems that consume these notifications, such as Clinical Decision Support and Public Health Systems, also play a significant role. While the IG doesn't directly involve Payer or Pharmacy systems, they might indirectly benefit from improved data flow. Research Platforms could leverage subscriptions for data collection. PHR systems could use it for patient notifications, but the focus is more on system-to-system communication.",
+    "scores": {
+      "Clinical Decision Support": 0.8,
+      "EHR Systems": 1,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.2,
+      "PHR Systems": 0.4,
+      "Public Health Systems": 0.8,
+      "Research Platforms": 0.6
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This FHIR Implementation Guide (IG) primarily targets developers building FHIR servers and clients that need to implement topic-based subscriptions in R4 and R4B environments. While clinical care teams and public health agencies may benefit from the improved data exchange enabled by this IG, they are not the primary drivers of its design. The IG focuses on the technical aspects of backporting R5 subscription functionality, making developers the core user group. Other groups like payers and research organizations have minimal involvement.",
+    "scores": {
+      "Clinical Care Teams": 0.6,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.2,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}

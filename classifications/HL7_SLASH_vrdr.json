@@ -1,16 +1,16 @@
 {
   "HL7 Standard": {
-    "summary": "The Vital Records Death Reporting (VRDR) FHIR IG is fundamentally based on FHIR, using it to define the structure and content of death records for exchange. It does not use CDA, v2, or v3 directly. While it doesn't explicitly integrate across different HL7 paradigms, it does leverage US Core profiles, which could be considered a form of cross-paradigm integration within the FHIR ecosystem.",
+    "summary": "The Vital Records Death Reporting (VRDR) FHIR IG is fundamentally based on FHIR, using it to define the structure and content of death records for exchange. It does not use CDA, v2, or v3 directly. While it doesn't explicitly integrate across different HL7 standards, its reliance on FHIR and potential future integration with other IGs suggests a moderate level of cross-paradigm awareness.",
     "scores": {
       "CDA": 0,
-      "Cross-Paradigm": 0.2,
+      "Cross-Paradigm": 0.4,
       "FHIR": 1,
       "v2": 0,
       "v3": 0
     }
   },
   "Geographic Scope": {
-    "summary": "The VRDR FHIR IG is explicitly designed for use within the United States, focusing on the exchange of mortality data between Jurisdictional Vital Records Offices and the U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS). It is based on the U.S. Standard Certificate of Death and is relevant to all U.S. jurisdictions participating in the Vital Statistics Cooperative Program (VSCP). Therefore, it is classified as a National IG for the United States.",
+    "summary": "The VRDR FHIR IG is explicitly designed for use within the United States, focusing on the exchange of mortality data between Jurisdictional Vital Records Offices and the U.S. Centers for Disease Control and Prevention (CDC)/National Center for Health Statistics (NCHS). It is based on the U.S. Standard Certificate of Death and is relevant to all U.S. jurisdictions participating in the Vital Statistics Cooperative Program (VSCP).",
     "scores": {
       "Universal Realm": 0,
       "National > United States": 1,
@@ -18,60 +18,46 @@
     }
   },
   "Domain Focus": {
-    "summary": "The Vital Records Death Reporting (VRDR) FHIR IG focuses on standardizing the exchange of mortality data between Jurisdictional Vital Records Offices (JVROs) and the National Center for Health Statistics (NCHS). It defines a FHIR-based representation of death records, primarily using a document-centric approach with a `DeathCertificateDocument` bundle. While it touches upon clinical data related to cause of death, its primary focus is on administrative and public health aspects of death reporting, with a strong emphasis on workflow and data exchange between vital records entities.",
+    "summary": "The Vital Records Death Reporting (VRDR) FHIR Implementation Guide focuses on standardizing the exchange of mortality data between Jurisdictional Vital Records Offices (JVROs) and the National Center for Health Statistics (NCHS). It defines FHIR profiles and extensions to represent death records, leveraging US Core profiles and standard terminologies. While primarily focused on public health reporting, it touches upon administrative, clinical data, and workflow aspects related to death registration and data exchange.",
     "scores": {
-      "Administrative": 0.8,
+      "Administrative": 0.6,
       "Care Planning": 0,
       "Clinical Data": 0.6,
       "Clinical Knowledge": 0.2,
       "Diagnostics": 0.2,
       "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
       "Medications": 0,
-      "Payment & Financial": 0,
       "Public Health": 1,
       "Quality & Reporting": 0.4,
       "Research": 0.2,
-      "Workflow": 0.8
-    }
-  },
-  "Implementation Approach": {
-    "summary": "The VRDR IG primarily focuses on defining data profiles for death records using a document-centric approach with FHIR Bundles and Composition resources. It heavily relies on terminology and value sets for coded data. While it implies the use of messaging for data exchange, it doesn't define specific REST APIs or services. Decision support and forms/UI are not addressed within the scope of this IG.",
-    "scores": {
-      "Data Profiles": 1,
-      "Decision Support": 0,
-      "Documents": 0.8,
-      "Forms & UI": 0,
-      "Messaging": 0.6,
-      "REST APIs": 0.2,
-      "Services": 0.2,
-      "Subscriptions": 0,
-      "Terminology": 0.8
+      "Workflow": 0.6
     }
   },
   "Implementers": {
-    "summary": "The VRDR IG primarily focuses on standardizing the exchange of mortality data between jurisdictional vital records offices and the CDC/NCHS. Therefore, Public Health Systems are central to its implementation. While EHRs and other clinical systems are not the primary focus, they may have limited involvement in providing data that feeds into the death reporting process. Clinical Decision Support and Research Platforms may utilize the standardized mortality data for their respective purposes.",
+    "summary": "The VRDR IG focuses on standardizing mortality data exchange between jurisdictional vital records offices and the CDC/NCHS. It primarily impacts systems involved in death registration, reporting, and public health surveillance. EHRs have a limited role, mainly in providing data to the vital records systems. Payer systems are not directly involved. Research platforms may utilize the standardized data for epidemiological studies.",
     "scores": {
+      "Clinical Decision Support": 0,
       "EHR Systems": 0.4,
-      "PHR Systems": 0,
+      "Imaging Systems": 0,
+      "Lab Systems": 0,
       "Payer Systems": 0,
       "Pharmacy Systems": 0,
-      "Lab Systems": 0.2,
-      "Imaging Systems": 0,
+      "PHR Systems": 0,
       "Public Health Systems": 1,
-      "Clinical Decision Support": 0.6,
       "Research Platforms": 0.6
     }
   },
   "Users & Stakeholders": {
-    "summary": "The VRDR IG primarily focuses on standardizing mortality data exchange between Jurisdictional Vital Records Offices (JVROs) and the CDC/NCHS. This drives the design, making these entities the core users. Public health agencies benefit significantly from improved data quality and timeliness. While clinical care teams, patients, and caregivers are not directly involved, the IG mentions future expansion to include them. Payers and research organizations have minimal involvement in this specific IG, although they may utilize the standardized data indirectly. Government agencies have a defined role in regulation and oversight.",
+    "summary": "The VRDR IG primarily focuses on standardizing mortality data exchange between Jurisdictional Vital Records Offices (JVROs) and the CDC/NCHS, with a secondary focus on inter-JVRO exchange. This makes Public Health Agencies and Government Agencies the core users. While Clinical Care Teams, Patients and Caregivers, and Research Organizations are mentioned as potential future contributors or users, their involvement is not central to the IG's current scope. Payers and Healthcare Administrators have minimal direct involvement.",
     "scores": {
       "Clinical Care Teams": 0.2,
-      "Healthcare Administrators": 0.4,
+      "Healthcare Administrators": 0,
       "Patients and Caregivers": 0.2,
       "Payers": 0,
-      "Public Health Agencies": 0.8,
-      "Research Organizations": 0.2,
-      "Government Agencies": 0.6
+      "Public Health Agencies": 1,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.8
     }
   },
   "meta": {

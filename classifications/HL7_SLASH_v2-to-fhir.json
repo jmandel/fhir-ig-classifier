@@ -1,0 +1,70 @@
+{
+  "HL7 Standard": {
+    "summary": "This Implementation Guide focuses on bridging HL7 v2 and FHIR, enabling the transformation of v2 messages into FHIR resources. It heavily relies on both v2 and FHIR standards, with a focus on mapping and transformation rather than document exchange or v3 models. The IG demonstrates a cross-paradigm approach by facilitating interoperability between these two distinct HL7 standards.",
+    "scores": {
+      "CDA": 0,
+      "Cross-Paradigm": 0.8,
+      "FHIR": 1,
+      "v2": 0.8,
+      "v3": 0.2
+    }
+  },
+  "Geographic Scope": {
+    "summary": "This Implementation Guide focuses on the transformation of HL7 v2 messages to FHIR resources. It provides a standardized approach to mapping v2 message structures, segments, data types, and vocabulary to their FHIR equivalents. The guide does not specify any particular jurisdiction and is designed for broad applicability in any context where HL7 v2 to FHIR conversion is needed. Therefore, it is classified as \"Universal Realm\".",
+    "scores": {
+      "Universal Realm": 1,
+      "National": 0,
+      "Regional": 0
+    }
+  },
+  "Domain Focus": {
+    "summary": "This IG focuses on bridging the gap between HL7 v2 and FHIR, enabling interoperability between legacy and modern systems. Its core purpose is to define mappings for transforming v2 messages into FHIR resources, primarily focusing on administrative and clinical data. While it touches upon various domains, its primary contribution is in facilitating data exchange and integration, rather than defining specific workflows or clinical knowledge within those domains.",
+    "scores": {
+      "Administrative": 0.8,
+      "Care Planning": 0.2,
+      "Clinical Data": 0.8,
+      "Clinical Knowledge": 0.2,
+      "Diagnostics": 0.4,
+      "Identity & Security": 0.2,
+      "Insurance, Payment & Financial": 0,
+      "Medications": 0.2,
+      "Public Health": 0.4,
+      "Quality & Reporting": 0.2,
+      "Research": 0,
+      "Workflow": 0.6
+    }
+  },
+  "Implementers": {
+    "summary": "This IG focuses on the transformation of HL7 v2 messages to FHIR resources. Therefore, systems involved in this transformation and those consuming the resulting FHIR data will be most impacted. EHR systems will need to consume and potentially generate FHIR data, while intermediary systems will handle the transformation. Clinical Decision Support, Lab, Pharmacy, and Public Health systems will benefit from the standardized FHIR data. Payer and Research systems have minimal involvement.",
+    "scores": {
+      "Clinical Decision Support": 0.6,
+      "EHR Systems": 0.8,
+      "Imaging Systems": 0.2,
+      "Lab Systems": 0.6,
+      "Payer Systems": 0,
+      "Pharmacy Systems": 0.6,
+      "PHR Systems": 0.2,
+      "Public Health Systems": 0.6,
+      "Research Platforms": 0.2
+    }
+  },
+  "Users & Stakeholders": {
+    "summary": "This IG is primarily focused on enabling the technical transformation of HL7 v2 messages into FHIR resources. Therefore, the core users are those involved in system integration and data exchange. Clinical care teams and other end-users are less directly involved in the IG's design, though they may benefit from the improved interoperability it enables. Public health agencies may have a slightly higher score due to the potential for using transformed data for reporting and surveillance.",
+    "scores": {
+      "Clinical Care Teams": 0.4,
+      "Healthcare Administrators": 0.2,
+      "Patients and Caregivers": 0,
+      "Payers": 0.2,
+      "Public Health Agencies": 0.6,
+      "Research Organizations": 0.4,
+      "Government Agencies": 0.4
+    }
+  },
+  "meta": {
+    "model": "gemini-exp-1206",
+    "generation_config": {
+      "temperature": 0
+    },
+    "workerCount": 3
+  }
+}
